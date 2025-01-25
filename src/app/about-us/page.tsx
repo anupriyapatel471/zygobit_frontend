@@ -9,6 +9,8 @@ import ContactForm from "@/component/ui/ContactForm/ContactForm";
 import { Testimonials } from "@/component/ui/Testimonials/Testimonials";
 import UiuxSlider from "@/component/ui/uiuxSlider/uiuxSlider";
 import { BoxReveals } from "@/component/ui/WebSales/WebSales";
+import RippleBg from "@/component/ui/Ripplebg/Ripplebg";
+import { MagicCardDemo } from "@/component/ui/Magiccard/Magiccard";
 
 const page = () => {
   useEffect(() => {
@@ -21,6 +23,58 @@ const page = () => {
 
       {/* about us */}
       <AboutUs />
+
+      <section className="w-full  bg-gradient-custom pt-11 sm:pt-52 pb-12 lg:pb-14 px-4 lg:px-24 overflow-hidden">
+        <div className="w-full  relative inline-block   rounded-lg">
+          <div className="w-full border border-[#09090B33] rounded-lg bg-[#fafafa12] ">
+            <div className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  max-w-sm mx-auto rounded-lg">
+              <RippleBg numCircles={8} />
+            </div>
+            <div className=" w-full py-16 px-4">
+              <MagicCardDemo />
+            </div>
+          </div>
+        </div>
+        <div className="w-full mt-5 sm:mt-0 flex flex-wrap sm:flex-nowrap items-center justify-between ">
+          <div
+            className="w-full sm:w-auto sm:max-w-4xl pr-4 lg:pr-0"
+            data-aos="fade-up"
+          >
+            <span className="mb-2 block font-semibold text-base">
+              Trusted Across the Galaxy
+            </span>
+            <p className="sm:font-semibold text-base sm:text-xl lg:text-2xl tracking-tighter">
+              We've partnered with forward-thinking brands across multiple
+              industries, delivering innovative solutions through a diverse
+              range of services.
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
+            className="border-t sm:border-t-0 sm:border-l  border-white mt-6 sm:mt-0 pt-6 sm:py-12  sm:px-12"
+          >
+            <h3 className="text-lg sm:text-xl lg:text-2xl uppercase sm:text-center font-semibold max-w-80">
+              Breaking Barriers Since Day One
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      {/* web app sales */}
+      <section className="w-full relative px-4 lg:px-24 py-12 lg:py-20">
+        <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap items-center gap-5 sm:gap-8">
+          <div className="w-full lg:w-1/2">
+            <BoxReveals />
+          </div>
+          <div className="w-full lg:w-1/2">
+            <img
+              className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
+              src="/images/together.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
 
       {/* slider */}
       <section className="w-full sm:pt-10 pb-12 lg:pb-16 lg:pt-16">
@@ -45,7 +99,7 @@ const page = () => {
           <div className="w-full lg:w-1/2">
             <img
               className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
-              src="/images/sales.png"
+              src="/images/meeting.png"
               alt=""
             />
           </div>
@@ -73,6 +127,25 @@ const page = () => {
           <div className="pointer-events-none absolute z-[1] -top-8 sm:-top-12 rounded-[50%] right-0 w-full h-16 sm:h-20 lg:h-24 bg-[#09090B]"></div>
           <UiuxSlider />
           <div className="pointer-events-none absolute -bottom-8 sm:-bottom-12 rounded-[50%] right-0 w-full h-16 sm:h-20 lg:h-24 bg-[#09090B]"></div>
+        </div>
+      </section>
+
+      <section className="w-full">
+        <div
+          className="w-full px-4 sm:px-0  sm:text-center"
+          data-aos="fade-right"
+        >
+          <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
+            Our Values
+          </h2>
+          <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
+            Choose Zygobit for innovative, reliable, and high-quality solutions
+            that drive your business forward with cutting-edge technology and
+            expert support!
+          </p>
+        </div>
+        <div className="w-full">
+
         </div>
       </section>
 
