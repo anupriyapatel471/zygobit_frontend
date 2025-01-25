@@ -11,6 +11,8 @@ import UiuxSlider from "@/component/ui/uiuxSlider/uiuxSlider";
 import { BoxReveals } from "@/component/ui/WebSales/WebSales";
 import RippleBg from "@/component/ui/Ripplebg/Ripplebg";
 import { MagicCardDemo } from "@/component/ui/Magiccard/Magiccard";
+import AboutMagicCards from "@/component/ui/AboutValueCards/AboutValueCards";
+import { AboutBgParticles } from "@/component/ui/AboutBgParticles/AboutBgParticles";
 
 const page = () => {
   useEffect(() => {
@@ -24,41 +26,45 @@ const page = () => {
       {/* about us */}
       <AboutUs />
 
-      <section className="w-full  bg-gradient-custom pt-11 sm:pt-52 pb-12 lg:pb-14 px-4 lg:px-24 overflow-hidden">
-        <div className="w-full  relative inline-block   rounded-lg">
+      <div className="w-full relative">
+        <AboutBgParticles />
+        <div className="w-full mb-14 sm:mb-0 px-4 lg:px-24 relative sm:absolute sm:top-10 sm:left-1/2 sm:-translate-x-1/2 inline-block   rounded-lg">
           <div className="w-full border border-[#09090B33] rounded-lg bg-[#fafafa12] ">
             <div className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  max-w-sm mx-auto rounded-lg">
               <RippleBg numCircles={8} />
             </div>
-            <div className=" w-full py-16 px-4">
+            <div className=" w-full py-4 sm:py-10 lg:py-16 px-4">
               <MagicCardDemo />
             </div>
           </div>
         </div>
-        <div className="w-full mt-5 sm:mt-0 flex flex-wrap sm:flex-nowrap items-center justify-between ">
-          <div
-            className="w-full sm:w-auto sm:max-w-4xl pr-4 lg:pr-0"
-            data-aos="fade-up"
-          >
-            <span className="mb-2 block font-semibold text-base">
-              Trusted Across the Galaxy
-            </span>
-            <p className="sm:font-semibold text-base sm:text-xl lg:text-2xl tracking-tighter">
-              We've partnered with forward-thinking brands across multiple
-              industries, delivering innovative solutions through a diverse
-              range of services.
-            </p>
+
+        <section className="w-full  bg-gradient-custom pt-11 sm:pt-52 pb-12 lg:pb-14 px-4 lg:px-24 overflow-hidden">
+          <div className="w-full mt-0 sm:mt-0 flex flex-wrap sm:flex-nowrap items-center justify-between ">
+            <div
+              className="w-full sm:w-auto sm:max-w-4xl pr-4 lg:pr-0"
+              data-aos="fade-up"
+            >
+              <span className="mb-2 block font-semibold text-base">
+                Trusted Across the Galaxy
+              </span>
+              <p className="sm:font-semibold text-base sm:text-xl lg:text-2xl tracking-tighter">
+                We've partnered with forward-thinking brands across multiple
+                industries, delivering innovative solutions through a diverse
+                range of services.
+              </p>
+            </div>
+            <div
+              data-aos="fade-up"
+              className="border-t sm:border-t-0 sm:border-l  border-white mt-6 sm:mt-0 pt-6 sm:py-12  sm:px-12"
+            >
+              <h3 className="text-lg sm:text-xl lg:text-2xl uppercase sm:text-center font-semibold max-w-80">
+                Breaking Barriers Since Day One
+              </h3>
+            </div>
           </div>
-          <div
-            data-aos="fade-up"
-            className="border-t sm:border-t-0 sm:border-l  border-white mt-6 sm:mt-0 pt-6 sm:py-12  sm:px-12"
-          >
-            <h3 className="text-lg sm:text-xl lg:text-2xl uppercase sm:text-center font-semibold max-w-80">
-              Breaking Barriers Since Day One
-            </h3>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* web app sales */}
       <section className="w-full relative px-4 lg:px-24 py-12 lg:py-20">
@@ -130,9 +136,9 @@ const page = () => {
         </div>
       </section>
 
-      <section className="w-full">
+      <section className="w-full px-4 sm:px-0 ">
         <div
-          className="w-full px-4 sm:px-0  sm:text-center"
+          className="w-full  sm:text-center"
           data-aos="fade-right"
         >
           <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
@@ -144,8 +150,8 @@ const page = () => {
             expert support!
           </p>
         </div>
-        <div className="w-full">
-
+        <div className="w-full  max-w-6xl mx-auto">
+          <AboutMagicCards />
         </div>
       </section>
 

@@ -69,7 +69,7 @@ export default function NavigationMenuDemo() {
           <NavigationMenuTrigger>Services</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid grid-cols-1 gap-3 p-4 sm:p-6 items-center w-full md:w-[400px] lg:w-[900px] lg:grid-cols-3">
-              <div className="w-auto grid grid-cols-2 gap-3 col-span-2">
+              <div className="w-auto grid grid-cols-1 lg:grid-cols-2 gap-3 col-span-2">
                 <ListItem
                   className="text-white hover:text-white hover:bg-gradient-to-b from-accent-foreground/50 to-accent-foreground"
                   href="/services/mobile-app-development"
@@ -127,7 +127,7 @@ export default function NavigationMenuDemo() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/Blog" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Blogs
             </NavigationMenuLink>
