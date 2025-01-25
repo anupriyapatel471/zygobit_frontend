@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: var(--primary-text);
+  background: var(--primary-bg);
+  font-family: "Poppins", serif;
+}
+
+/* Hide up and down arrows in input[type="number"] */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+@import "../assets/css/buttonStyle.css";
+
+.bg-gradient-custom {
+  background: linear-gradient(
+    to right,
+    var(--custom-gradient-start),
+    var(--custom-gradient-end)
+  );
+}
+
+.bg-gradient-cta {
+  background: linear-gradient(
+    to right,
+    var(--cta-gradient-start),
+    var(--cta-gradient-end)
+  );
+}
+
+.text-gradiant-custom {
+  background-image: linear-gradient(
+    to right,
+    #ffffff,
+    #959595
+  ); /* Your gradient colors */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Makes the original text color transparent */
+}
+
+.text-shadow-2xl {
+  text-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+:root {
+  --primary-bg: #09090b;
+  --secondary-bg: #333;
+  --primary-text: #fff;
+  --secondary-text: #71717a;
+  --theme-primary-bg: #ea580c;
+  --theme-primary-text: #ea580c;
+  --cta-gradient-start: #2d2e34;
+  --cta-gradient-end: #43403f;
+  --custom-gradient-start: #843207;
+  --custom-gradient-end: #ea580c;
+  --accent: #ff5722;
+  --success: #4caf50;
+  --error: #f44336;
+  --warning: #ff9800;
+  --info: #2196f3;
+  --font-family-poppins: "Poppins", serif;
+  --Btnduration: 3s;
+  --Btneasing: ease-in-out;
+  --Btndelay: 0s;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+/* @layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+} */
+
+.no-scroll::-webkit-scrollbar {
+  width: 0 !important;
+  opacity: 0 !important;
+}
+
+@keyframes shine {
+  20%,
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+
+.shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 25%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 75%
+  );
+  transform: skewX(-20deg) translateX(-100%);
+  animation: var(--Btnduration) var(--Btneasing) var(--Btndelay) infinite forwards shine;
+}
+
+
+/* .second-live {
+  position: relative !important;
+  top: 100px !important;
+} */
+
+.custom-pre {
+  background-color: white !important;
+  bottom: -100px !important;
+  left: 47% !important;
+  transform: translateX(-50%);
+  top: auto !important;
+}
+.custom-left {
+  background-color: white !important;
+  bottom: -100px !important;
+  left: 54% !important;
+  transform: translateX(-50%);
+  top: auto !important;
+}
+
+.bg-shape {
+  width: 100vw !important;
+  max-width: 100% !important;
+}
