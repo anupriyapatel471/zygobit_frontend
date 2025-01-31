@@ -1,25 +1,24 @@
 "use client";
 
-import Blog from "@/component/ui/Blog/Blog";
-import ContactForm from "@/component/ui/ContactForm/ContactForm";
-import FaqSection from "@/component/ui/FaqSection/FaqSection";
+import Blog from "@/component/common/Blog/Blog";
+import ContactForm from "@/component/common/ContactForm/ContactForm";
+import FaqSection from "@/component/sevices/Common/FaqSection/FaqSection";
 import React, { useEffect } from "react";
 import Aos from "aos";
-import HeroBanner from "@/component/ui/HeroBanner/HeroBanner";
-import AboutUs from "@/component/ui/AboutUs/AboutUs";
-import { MobileAppGrid } from "@/component/ui/MobileAppGrid/MobileAppGrid";
-import TechnologyStack from "@/component/ui/TechnologyStack/TechnologyStack";
-import Cta from "@/component/ui/Cta/Cta";
-import FeaturedSlider from "@/component/ui/Featuredslider/Featuredslider";
+import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
+import WeDeliver from "@/component/common/WeDeliver/WeDeliver";
+import { MobileAppGrid } from "@/component/common/MobileAppGrid/MobileAppGrid";
+import TechnologyStack from "@/component/common/TechnologyStack/TechnologyStack";
+import Cta from "@/component/common/Cta/Cta";
+import FeaturedSlider from "@/component/common/Featuredslider/Featuredslider";
 import { ChevronRight } from "lucide-react";
-import { BackgroundGradientCard } from "@/component/ui/BgGradientCard/BgGradientCard";
-import WebDevProcess from "@/component/ui/WebDevProcess/WebDevProcess";
-import UiuxSlider from "@/component/ui/uiuxSlider/uiuxSlider";
-import UiuxTimeline from "@/component/ui/uiuxTimeline/uiuxTimeline";
-import { ParticlesCards } from "@/component/ui/ParticlesCards/ParticlesCards";
-import { UiuxTeams } from "@/component/ui/uiuxTeam/uiuxTeam";
+import { BackgroundGradientCard } from "@/component/uiUxWebDesign/BgGradientCard/BgGradientCard";
+import UiuxSlider from "@/component/common/uiuxSlider/uiuxSlider";
+import UiuxTimeline from "@/component/uiUxWebDesign/uiuxTimeline/uiuxTimeline";
+import { ParticlesCards } from "@/component/uiUxWebDesign/ParticlesCards/ParticlesCards";
+import { UiuxTeams } from "@/component/uiUxWebDesign/uiuxTeam/uiuxTeam";
 
-const uiuxWebDesign = () => {
+const UiuxWebDesign = () => {
   useEffect(() => {
     Aos.init({});
   }, []);
@@ -30,7 +29,7 @@ const uiuxWebDesign = () => {
       <HeroBanner />
 
       {/* about us */}
-      <AboutUs />
+      <WeDeliver />
 
       {/* boost bussiness  */}
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pb-14 lg:pb-24">
@@ -39,9 +38,10 @@ const uiuxWebDesign = () => {
             Enhance experiences with user-centric UI/UX services
           </h2>
           <p className=" sm:font-medium text-sm sm:text-lg lg:text-xl mt-2 px-0 lg:px-20">
-            Leverage our UI and UX services dedicated to making your brand's
-            vision a reality. We ensure your project designs are not only
-            intuitive but also provide users with a seamless user experience.
+            Leverage our UI and UX services dedicated to making your
+            brand&apos;s vision a reality. We ensure your project designs are
+            not only intuitive but also provide users with a seamless user
+            experience.
           </p>
         </div>
         <div className="w-full max-w-6xl mx-auto">
@@ -88,7 +88,10 @@ const uiuxWebDesign = () => {
 
       {/* Industries We Serve: Unmatched Experiences */}
       <section className="w-full pt-5   sm:pt-10 lg:pt-16">
-        <div className="w-full px-4 sm:px-0  sm:text-center" data-aos="fade-right">
+        <div
+          className="w-full px-4 sm:px-0  sm:text-center"
+          data-aos="fade-right"
+        >
           <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
             Industries We Serve: Unmatched Experiences
           </h2>
@@ -106,7 +109,10 @@ const uiuxWebDesign = () => {
 
       {/* Unlock Efficiency with Expert UI/UX Design */}
       <section className="w-full bg-black overflow-y-auto sm:h-[760px] no-scroll py-12 sm:py-16">
-        <div className="w-full px-4 sm:px-0 sm:text-center" data-aos="fade-right">
+        <div
+          className="w-full px-4 sm:px-0 sm:text-center"
+          data-aos="fade-right"
+        >
           <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
             Unlock Efficiency with Expert UI/UX Design
           </h2>
@@ -172,4 +178,4 @@ const uiuxWebDesign = () => {
   );
 };
 
-export default uiuxWebDesign;
+export default UiuxWebDesign;

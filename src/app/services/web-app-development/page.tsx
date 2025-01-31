@@ -1,36 +1,40 @@
 "use client";
 
-import AboutUs from "@/component/ui/AboutUs/AboutUs";
-import Blog from "@/component/ui/Blog/Blog";
-import ContactForm from "@/component/ui/ContactForm/ContactForm";
-import FaqSection from "@/component/ui/FaqSection/FaqSection";
-import HeroBanner from "@/component/ui/HeroBanner/HeroBanner";
-import TechnologyStack from "@/component/ui/TechnologyStack/TechnologyStack";
+import WeDeliver from "@/component/common/WeDeliver/WeDeliver";
+import Blog from "@/component/common/Blog/Blog";
+import ContactForm from "@/component/common/ContactForm/ContactForm";
+import FaqSection from "@/component/sevices/Common/FaqSection/FaqSection";
+import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
+import TechnologyStack from "@/component/common/TechnologyStack/TechnologyStack";
 import { ChevronRight } from "lucide-react";
 import React, { useEffect } from "react";
 import Aos from "aos";
-import ScrollTriggered from "@/component/ui/WebScrollTriggered/WebScrollTriggered";
-import Cta from "@/component/ui/Cta/Cta";
-import WebAppParallax from "@/component/ui/WebAppParallax/WebAppParallax";
-import { CustomWebCards } from "@/component/ui/CustomWebCards/CustomWebCards";
-import { CardSpotlights } from "@/component/ui/RobustWebCards/RobustWebCards";
-import ScrollLinked from "@/component/ui/WebScrollAnimation/WebScrollAnimation";
-import WebDevProcess from "@/component/ui/WebDevProcess/WebDevProcess";
-import { Testimonials } from "@/component/ui/Testimonials/Testimonials";
-import { BoxReveals } from "@/component/ui/WebSales/WebSales";
+import ScrollTriggered from "@/component/WebAppDevelopment/WebScrollTriggered/WebScrollTriggered";
+import Cta from "@/component/common/Cta/Cta";
+import { CustomWebCards } from "@/component/WebAppDevelopment/CustomWebCards/CustomWebCards";
+import { CardSpotlights } from "@/component/WebAppDevelopment/RobustWebCards/RobustWebCards";
+import ScrollLinked from "@/component/WebAppDevelopment/WebScrollAnimation/WebScrollAnimation";
+import WebDevProcess from "@/component/sevices/Common/WebDevProcess/WebDevProcess";
+import { BoxReveals } from "@/component/common/WebSales/WebSales";
+import ClientSays from "@/component/common/ClientSays/ClientSays";
+import Image from "next/image";
 
-const webAppDevelopment = () => {
+const WebAppDevelopment = () => {
+  const clientSaysHeading = "We Are a Trusted Web App Development Company";
+  const clientSaysDetails =
+    "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions.";
+
   useEffect(() => {
     Aos.init({});
   }, []);
 
   return (
     <>
-      {/* Hero banner */}
+      Hero banner
       <HeroBanner />
 
-      {/* about us */}
-      <AboutUs />
+      {/* about us We deliver*/}
+      <WeDeliver />
 
       <section className="w-full pt-10 sm:pt-16 pb-12 lg:pb-40 bg-gradient-to-b via-black from-orange-600 to-black">
         <div className="w-full px-4 lg:px-0 sm:text-center">
@@ -57,10 +61,18 @@ const webAppDevelopment = () => {
       {/* web application */}
       <section className="w-full relative py-12 sm:py-16">
         <div className="absolute top-0 left-0 -z-10 w-full h-full">
-          <img
+          {/* <img
             className="w-full h-full object-cover"
             src="/images/stars_bg.png"
             alt=""
+          /> */}
+          <Image
+            className="w-full h-full object-cover"
+            src="/images/stars_bg.png"
+            alt="stars"
+            // layout="responsive"
+            width={1440}
+            height={979}
           />
         </div>
         <div className="w-full px-4 sm:px-0 sm:text-center mb-12">
@@ -84,10 +96,18 @@ const webAppDevelopment = () => {
       <section className="w-full relative px-4 lg:px-24 py-12 lg:py-20">
         <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap items-center gap-5 sm:gap-8">
           <div className="w-full lg:w-1/2">
-            <img
+            {/* <img
               className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
               src="/images/sales.png"
               alt=""
+            /> */}
+            <Image
+              className="w-full object-cover rounded-xl"
+              src="/images/sales.png"
+              alt="Sales"
+              // layout="responsive"
+              width={590}
+              height={753}
             />
           </div>
           <div className="w-full lg:w-1/2">
@@ -127,19 +147,34 @@ const webAppDevelopment = () => {
               data-aos="fade-left"
               className="w-full order-1 lg:order-none lg:w-2/5"
             >
-              <img
+              {/* <img
                 className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
                 src="/images/process.png"
                 alt=""
+              /> */}
+              <Image
+                className="w-full object-cover rounded-2xl"
+                src="/images/process.png"
+                alt="Process"
+                // layout="responsive"
+                width={471}
+                height={528}
               />
             </div>
           </div>
           <div className="w-full flex flex-wrap lg:flex-nowrap gap-4 sm:gap-7 items-center">
             <div data-aos="fade-right" className="w-full lg:w-2/5">
-              <img
+              {/* <img
                 className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
                 src="/images/process.png"
                 alt=""
+              /> */}
+              <Image
+                className="w-full object-cover rounded-2xl"
+                src="/images/process.png"
+                alt="Process"
+                width={471}
+                height={528}
               />
             </div>
             <div data-aos="fade-left" className="w-full lg:w-3/5">
@@ -171,10 +206,18 @@ const webAppDevelopment = () => {
               data-aos="fade-left"
               className="w-full order-1 lg:order-none lg:w-2/5"
             >
-              <img
+              {/* <img
                 className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
                 src="/images/process.png"
                 alt=""
+              /> */}
+              <Image
+                className="w-full object-cover rounded-2xl"
+                src="/images/process.png"
+                alt="Process"
+                // layout="responsive"
+                width={471}
+                height={528}
               />
             </div>
           </div>
@@ -187,7 +230,13 @@ const webAppDevelopment = () => {
       {/* robust web dev */}
       <section className="w-full py-10 sm:py-16 z-10 bg-black relative overflow-hidden">
         <div className="absolute -bottom-[168%] -right-[98%] -z-10">
-          <img className="w-full h-full" src="/images/bg_circle.jfif" alt="" />
+          {/* <img className="w-full h-full" src="/images/bg_circle.jfif" alt="" /> */}
+          <Image
+            className="object-cover"
+            src="/images/bg_circle.jfif"
+            alt="Background Circle"
+            // layout="fill"
+          />
         </div>
         <div className="w-full px-4 sm:px-0 text-sm sm:text-center">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom font-bold">
@@ -197,7 +246,7 @@ const webAppDevelopment = () => {
             Here are the key strategies we follow for building robust web
             solutions. Whether you’re looking for custom web application
             developers or an enterprise web application development company,
-            we've got you covered.
+            we&apos;ve got you covered.
           </p>
         </div>
         <div className="w-full mx-auto max-w-5xl my-10 sm:my-12">
@@ -251,10 +300,18 @@ const webAppDevelopment = () => {
       <section className="w-full relative px-4 lg:px-24 pb-12 lg:py-20">
         <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap items-center gap-5 sm:gap-8">
           <div className="w-full lg:w-1/2">
-            <img
+            {/* <img
               className="w-full h-[350px] sm:h-[500px] lg:h-full rounded-xl"
               src="/images/web_custom.png"
               alt=""
+            /> */}
+            <Image
+              className="w-full object-cover rounded-xl"
+              src="/images/web_custom.png"
+              alt="web_custom"
+              // layout="responsive"
+              width={590}
+              height={753}
             />
           </div>
           <div className="w-full lg:w-1/2">
@@ -277,22 +334,10 @@ const webAppDevelopment = () => {
       </section>
 
       {/* client says */}
-      <section className="w-full px-4 sm:px-5 lg:px-14 mt-4 sm:mt-16   lg:mt-24 mb-12 sm:mb-16 lg:mb-20 overflow-hidden">
-        <div data-aos="fade-left" className="w-full sm:text-center">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradient-custom">
-            We Are a Trusted Web App Development Company
-          </h2>
-          <p className="font-medium max-w-6xl mx-auto text-sm sm:text-lg lg:text-xl my-3">
-            Hear from our satisfied clients who have transformed their ideas
-            into successful businesses with Apptunix's expert web development
-            services and solutions
-          </p>
-        </div>
-        <div className="w-full sm:px-4 lg:px-12">
-          <Testimonials />
-        </div>
-      </section>
-
+      <ClientSays
+        clientHeading={clientSaysHeading}
+        clientSaysDetails={clientSaysDetails}
+      />
       {/* Cta section */}
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
 
@@ -308,4 +353,4 @@ const webAppDevelopment = () => {
   );
 };
 
-export default webAppDevelopment;
+export default WebAppDevelopment;

@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/component/ui/alertpop"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/component/ui/alertpop", "src/component/common/Layout/ScrollBar", "src/component/common/TechnologyStack/Backgroundbeams"],
   "exclude": ["node_modules"]
 }

@@ -1,15 +1,14 @@
 "use client";
 
-import AboutUs from "@/component/ui/AboutUs/AboutUs";
+import WeDeliver from "@/component/common/WeDeliver/WeDeliver";
 import React, { useEffect } from "react";
 import Aos from "aos";
-import { Testimonials } from "@/component/ui/Testimonials/Testimonials";
-import { HeroHighlightDemo } from "@/component/ui/Partnersbg/Partnersbg";
-import PartnerSlider from "@/component/ui/Partnerslider/Partnerslider";
-import ContactForm from "@/component/ui/ContactForm/ContactForm";
-import { ContactParticles } from "@/component/ui/contactParticles/contactParticles";
+import { Testimonials } from "@/component/common/Testimonials/Testimonials";
+import { HeroHighlightDemo } from "@/component/common/Partnersbg/Partnersbg";
+import PartnerSlider from "@/component/common/Partnerslider/Partnerslider";
+import { ContactParticles } from "@/component/contact/contactParticles/contactParticles";
 
-const page = () => {
+const Contact = () => {
   useEffect(() => {
     Aos.init({});
   }, []);
@@ -22,7 +21,7 @@ const page = () => {
       </div>
 
       {/* about us */}
-      <AboutUs />
+      <WeDeliver />
 
       {/* client says */}
       <section className="w-full px-4 sm:px-5 lg:px-14 mt-12 sm:mt-16   lg:mt-24 mb-12 sm:mb-16 lg:mb-20 overflow-hidden">
@@ -58,4 +57,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Contact;

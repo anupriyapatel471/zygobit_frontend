@@ -157,7 +157,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
         .showAtmosphere(defaultProps.showAtmosphere)
         .atmosphereColor(defaultProps.atmosphereColor)
         .atmosphereAltitude(defaultProps.atmosphereAltitude)
-        .hexPolygonColor((e) => {
+        .hexPolygonColor(() => {
           return defaultProps.polygonColor;
         });
       startAnimation();

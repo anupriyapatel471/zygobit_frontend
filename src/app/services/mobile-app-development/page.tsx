@@ -1,34 +1,24 @@
 "use client";
 
-import AboutUs from "@/component/ui/AboutUs/AboutUs";
-import AppleCardsCarousel from "@/component/ui/AppleCardsCarousel/AppleCardsCarousel";
-import { BannerGridBg } from "@/component/ui/BannerGridBg/BannerGridBg";
-import Cta from "@/component/ui/Cta/Cta";
-import MarqueeSlider from "@/component/ui/Marque/Marqueslider";
-import { WorldMapMap } from "@/component/ui/worldMap/worldMap";
+import WeDeliver from "@/component/common/WeDeliver/WeDeliver";
+import AppleCardsCarousel from "@/component/sevices/MobileAppDevelopment/AppleCardsCarousel/AppleCardsCarousel";
+import Cta from "@/component/common/Cta/Cta";
 import { ChevronRight } from "lucide-react";
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { ThreeDCards } from "@/component/ui/ThreedCards/ThreedCards";
-import { EvervaultCards } from "@/component/ui/EvervaultCards/EvervaultCards";
-import MobileAppSlider from "@/component/ui/MobileAppSlider/MobileAppSlider";
-import WhychooseUs from "@/component/ui/Whychooseus/Whychooseus";
-import HeroParalax from "@/component/ui/HeroParallax/HeroParallax";
-import MobiledevSlider from "@/component/ui/MobileDevSlider/MobileDevSlider";
-import FeaturedSlider from "@/component/ui/Featuredslider/Featuredslider";
-import { BackgroundBeam } from "@/component/ui/Backgroundbeams.tsx/Backgroundbeams";
-import { OrbitingCircle } from "@/component/ui/Orbitingcircle/Orbitingcircle";
-import { Testimonials } from "@/component/ui/Testimonials/Testimonials";
-import FeaturedBlog from "@/component/ui/Featuredblog/Featuredblog";
-import ContactForm from "@/component/ui/ContactForm/ContactForm";
-import Faq from "@/component/ui/Faq/Faq";
-import TechnologyStack from "@/component/ui/TechnologyStack/TechnologyStack";
-import HeroBanner from "@/component/ui/HeroBanner/HeroBanner";
-import Blog from "@/component/ui/Blog/Blog";
-import FaqSection from "@/component/ui/FaqSection/FaqSection";
-import { MobileAppGrid } from "@/component/ui/MobileAppGrid/MobileAppGrid";
-import SharedLayoutAnimation from "@/component/ui/MobileDevTab/MobileDevTab";
+import { ThreeDCards } from "@/component/sevices/MobileAppDevelopment/ThreedCards/ThreedCards";
+import MobileAppSlider from "@/component/sevices/MobileAppDevelopment/MobileAppSlider/MobileAppSlider";
+import HeroParalax from "@/component/common/HeroParallax/HeroParallax";
+import FeaturedSlider from "@/component/common/Featuredslider/Featuredslider";
+import { Testimonials } from "@/component/common/Testimonials/Testimonials";
+import ContactForm from "@/component/common/ContactForm/ContactForm";
+import TechnologyStack from "@/component/common/TechnologyStack/TechnologyStack";
+import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
+import Blog from "@/component/common/Blog/Blog";
+import FaqSection from "@/component/sevices/Common/FaqSection/FaqSection";
+import { MobileAppGrid } from "@/component/common/MobileAppGrid/MobileAppGrid";
+import SharedLayoutAnimation from "@/component/sevices/MobileAppDevelopment/MobileDevTab/MobileDevTab";
 
 const MobileAppDevelopment = () => {
   useEffect(() => {
@@ -41,7 +31,7 @@ const MobileAppDevelopment = () => {
       <HeroBanner />
 
       {/* about us */}
-      <AboutUs />
+      <WeDeliver />
 
       {/* boost bussiness  */}
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pb-14 lg:pb-24">
@@ -135,7 +125,7 @@ const MobileAppDevelopment = () => {
           </p>
         </div>
         <div className="w-full px-4 lg:px-0">
-        <SharedLayoutAnimation/>
+          <SharedLayoutAnimation />
         </div>
       </section>
 
@@ -154,6 +144,7 @@ const MobileAppDevelopment = () => {
       <Cta Aurora={"Aurora"} vortex={""} content={""} />
 
       {/* slider */}
+
       <section className="w-full sm:pt-10 pb-32 lg:pb-40 bg-black">
         <div className="w-full px-4 lg:px-20 sm:text-center mb-8 sm:mb-12 lg:mb-12">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradiant-custom">
@@ -168,8 +159,6 @@ const MobileAppDevelopment = () => {
           <MobileAppGrid />
         </div>
       </section>
-
-    
 
       {/* Featured Projects */}
       <section className="w-full px-4 lg:px-11 py-10 sm:py-14 overflow-hidden">

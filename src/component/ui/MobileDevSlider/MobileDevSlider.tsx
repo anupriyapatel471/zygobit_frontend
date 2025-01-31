@@ -8,7 +8,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { MobileAppCards } from "../mobileAppCard/mobileAppCard";
+import { MobileAppCards } from "../../common/mobileAppCard/mobileAppCard";
+import Image from "next/image";
 
 export default function MobiledevSlider() {
   return (
@@ -34,10 +35,24 @@ export default function MobiledevSlider() {
                       </p>
                       <div className="w-full grid gap-5 lg:gap-11 grid-cols-1 sm:grid-cols-2 mt-5 lg:mt-12">
                         <div className="w-full">
-                          <img className="w-full rounded-2xl h-[250px] sm:h-[300px] lg:h-[350px]" src="/images/laptop.png" alt="" />
+                          {/* <img className="w-full rounded-2xl h-[250px] sm:h-[300px] lg:h-[350px]" src="/images/laptop.png" alt="" /> */}
                         </div>
+                        <Image
+                              className="rounded-2xl"
+                              src="/images/laptop.png"
+                              alt="Laptop Image"
+                              // height={}
+                              // width={}
+                               />
                         <div className="w-full">
-                          <img className="w-full rounded-2xl h-[250px] sm:h-[300px] lg:h-[350px]" src="/images/laptop_two.png" alt="" />
+                          {/* <img className="w-full rounded-2xl h-[250px] sm:h-[300px] lg:h-[350px]" src="/images/laptop_two.png" alt="" /> */}
+                          <Image
+                              className="rounded-2xl"
+                              src="/images/laptop_two.png"
+                              alt="Laptop Two Image"
+                              // height={}
+                              // width={}
+                            />
                         </div>
                       </div>
                     </div>
