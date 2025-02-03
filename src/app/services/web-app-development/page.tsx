@@ -232,7 +232,7 @@ const webAppDevelopment = () => {
         </div>
       </section>
 
-      <section className="w-full pb-16">
+      <section className="w-full pb-16 overflow-hidden">
         <div className="w-full px-4 lg:px-0 sm:text-center">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom font-bold">
             Select from Our Flexible Custom Web App Models

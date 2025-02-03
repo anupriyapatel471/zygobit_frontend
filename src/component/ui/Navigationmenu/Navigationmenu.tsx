@@ -98,6 +98,13 @@ export default function NavigationMenuDemo() {
                 >
                   Styles for headings, paragraphs, lists...etc
                 </ListItem>
+                <ListItem
+                  className="text-white hover:text-white hover:bg-gradient-to-b from-accent-foreground/50 to-accent-foreground"
+                  href="/services/Ecommerce"
+                  title="Ecommerce"
+                >
+                  Styles for headings, paragraphs, lists...etc
+                </ListItem>
               </div>
               <li className="row-span-1">
                 <NavigationMenuLink asChild>
