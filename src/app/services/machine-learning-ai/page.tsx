@@ -16,6 +16,7 @@ import { ChevronRight } from "lucide-react";
 import { AwareHoverCards } from "@/component/ui/AwareHoverCards/AwareHoverCards";
 import { MobileAppGrid } from "@/component/ui/MobileAppGrid/MobileAppGrid";
 import TechnologyStack from "@/component/ui/TechnologyStack/TechnologyStack";
+import { WebSlider } from "@/component/ui/WebSlider/WebSlider";
 
 const page = () => {
   useEffect(() => {
@@ -114,6 +115,30 @@ const page = () => {
         </div>
         <div className="w-full sm:px-4 lg:px-12">
           <Testimonials />
+        </div>
+      </section>
+
+      {/* Cta section */}
+      <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
+
+      <section className="w-full pb-12 overflow-hidden">
+        <div className="w-full px-4 lg:px-0 sm:text-center">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom font-bold">
+            Select from Our Flexible Custom Web App Models
+          </h2>
+          <p className="sm:font-medium max-w-7xl mx-auto text-sm sm:text-lg lg:text-xl mt-3">
+            Being a top custom web application development services provider, we
+            offer multiple hiring models that best suit your needs
+          </p>
+        </div>
+        <div className="w-full mt-7 sm:mt-12 lg:mt-16">
+          <WebSlider />
+        </div>
+        <div className="w-full px-4 lg:px-32 mt-10 sm:mt-0 lg:mt-10 flex  justify-center sm:justify-normal">
+          <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+            Hire Web Application Developers{" "}
+            <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+          </button>
         </div>
       </section>
 

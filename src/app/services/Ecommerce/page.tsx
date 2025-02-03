@@ -18,6 +18,7 @@ import Cta from "@/component/ui/Cta/Cta";
 import UiuxSlider from "@/component/ui/uiuxSlider/uiuxSlider";
 import FeaturedSlider from "@/component/ui/Featuredslider/Featuredslider";
 import { EcommerceShineCards } from "@/component/ui/EcommerceShineCards/EcomoerceShineCards";
+import { WebSlider } from "@/component/ui/WebSlider/WebSlider";
 
 const page = () => {
   useEffect(() => {
@@ -31,6 +32,22 @@ const page = () => {
       {/* about us */}
       <AboutUs />
 
+      <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pt-16 pb-[8rem] overflow-hidden">
+        <div className="w-full px-4 lg:px-0 sm:text-center">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl  font-bold">
+            Drive Success with AI Ecommerce Solutions
+          </h2>
+          <p className="sm:font-medium max-w-7xl mx-auto text-sm sm:text-lg lg:text-xl mt-3">
+            Boost your eCommerce store with our tailored app development
+            solutions. Connect with our experts to build a robust platform that
+            drives engagement and sales.
+          </p>
+        </div>
+        <div className="w-full mt-7 sm:mt-12 lg:mt-16">
+          <WebSlider />
+        </div>
+      </section>
+
       <section className="w-full bg-[url(/images/stars_bg.png)] bg-cover bg-no-repeat bg-center py-16 px-4 sm:px-0 ">
         <div className="w-full  sm:text-center" data-aos="fade-right">
           <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl mb-8 sm:mb-12 lg:mb-16">
@@ -42,7 +59,7 @@ const page = () => {
         </div>
         <div className="flex justify-center mt-10 lg:mt-14">
           <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-          Schedule a Call{" "}
+            Schedule a Call{" "}
             <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
           </button>
         </div>

@@ -190,3 +190,17 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 100vw !important;
   max-width: 100% !important;
 }
+
+.web_previous_btn {
+  bottom: -100px !important;
+  top: auto !important;
+  right: 190px  !important;
+  left: auto  !important;
+}
+
+.web_next_btn {
+  bottom: -100px !important;
+  top: auto !important;
+  right: 109px  !important;
+  left: auto  !important;
+}

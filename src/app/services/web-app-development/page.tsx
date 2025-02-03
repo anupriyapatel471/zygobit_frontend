@@ -18,6 +18,8 @@ import ScrollLinked from "@/component/ui/WebScrollAnimation/WebScrollAnimation";
 import WebDevProcess from "@/component/ui/WebDevProcess/WebDevProcess";
 import { Testimonials } from "@/component/ui/Testimonials/Testimonials";
 import { BoxReveals } from "@/component/ui/WebSales/WebSales";
+import HeroParalax from "@/component/ui/HeroParallax/HeroParallax";
+import { WebSlider } from "@/component/ui/WebSlider/WebSlider";
 
 const webAppDevelopment = () => {
   useEffect(() => {
@@ -55,29 +57,11 @@ const webAppDevelopment = () => {
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
 
       {/* web application */}
-      <section className="w-full relative py-12 sm:py-16">
-        <div className="absolute top-0 left-0 -z-10 w-full h-full">
-          <img
-            className="w-full h-full object-cover"
-            src="/images/stars_bg.png"
-            alt=""
-          />
-        </div>
-        <div className="w-full px-4 sm:px-0 sm:text-center mb-12">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold">
-            Education Web App Development
-          </h2>
-          <p className="font-medium max-w-6xl mx-auto text-base sm:text-lg lg:text-xl mt-3">
-            Our web app developers offer educational web app development
-            services that provide interactive e-learning platforms and
-            communication systems for educational institutions
-          </p>
-        </div>
-        <div className="w-full px-4 lg:px-24 ">
-          <div className="w-full h-96 border border-white rounded-lg">
-            {/* <WebAppParallax /> */}
-          </div>
-        </div>
+      <section
+        data-aos="fade-up"
+        className="w-full relative  py-0 sm:py-0 lg:py-0 overflow-hidden "
+      >
+        <HeroParalax />
       </section>
 
       {/* web app sales */}
@@ -232,7 +216,7 @@ const webAppDevelopment = () => {
         </div>
       </section>
 
-      <section className="w-full pb-16 overflow-hidden">
+      <section className="w-full pb-12 overflow-hidden">
         <div className="w-full px-4 lg:px-0 sm:text-center">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom font-bold">
             Select from Our Flexible Custom Web App Models
@@ -242,8 +226,14 @@ const webAppDevelopment = () => {
             offer multiple hiring models that best suit your needs
           </p>
         </div>
-        <div className="w-full mt-12 lg:mt-32">
-          <ScrollLinked />
+        <div className="w-full mt-7 sm:mt-12 lg:mt-16">
+          <WebSlider />
+        </div>
+        <div className="w-full px-4 lg:px-32 mt-10 sm:mt-0 lg:mt-10 flex  justify-center sm:justify-normal">
+          <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+          Hire Web Application Developers{" "}
+            <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+          </button>
         </div>
       </section>
 
