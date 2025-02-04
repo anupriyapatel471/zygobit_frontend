@@ -726,8 +726,7 @@ const page = () => {
 
       <section
         data-aos="fade-up"
-        className="w-full relative  py-0 px-0 overflow-hidden"
-      >
+        className="w-full relative  py-0 px-0 overflow-hidden">
         <div className="w-full h-full">
           <BackgroundBeamNew />
         </div>

@@ -153,13 +153,11 @@ const webAppDevelopment = () => {
             </div>
             <div
               data-aos="fade-left"
-              className="w-full order-1 lg:order-none lg:w-2/5"
-            >
+              className="w-full order-1 lg:order-none lg:w-2/5">
               <img
                 className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
                 src="/images/process.png"
-                alt=""
-              />
+                alt=""/>
             </div>
           </div>
         </div>

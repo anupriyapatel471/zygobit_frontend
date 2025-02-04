@@ -3,7 +3,7 @@
 .container {
     width: 1320px;
     margin: 0 auto;
-    /* background-color: #D9D9D91A; */
+    background-color:transparent;
     height: auto;
     max-height: auto;
     border-radius: 20px;
@@ -66,6 +66,7 @@
     min-width: 0;
     user-select: none;
     color: #fff;  
+    flex: auto;
 }
 
 .underline {
