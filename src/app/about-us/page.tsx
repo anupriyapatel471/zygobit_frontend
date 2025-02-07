@@ -1,18 +1,32 @@
 "use client";
 
-import WeDeliver from "@/component/common/WeDeliver/WeDeliver";
-import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
-import React, { useEffect } from "react";
+import dynamic from "next/dynamic";
+import { useEffect } from "react";
 import Aos from "aos";
-import ContactForm from "@/component/common/ContactForm/ContactForm";
-import UiuxSlider from "@/component/common/uiuxSlider/uiuxSlider";
-import { BoxReveals } from "@/component/common/WebSales/WebSales";
-import TrustedAcross from "@/component/common/TrustedAcross/TrustedAcross";
-import ClientSays from "@/component/common/ClientSays/ClientSays";
+import "aos/dist/aos.css";
 import Image from "next/image";
-import Slider from "@/component/common/Slider/Slider";
+
+// Critical components that should be loaded immediately (above the fold)
+import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
+import WeDeliver from "@/component/common/WeDeliver/WeDeliver";
+import TrustedAcross from "@/component/common/TrustedAcross/TrustedAcross";
+
+// Dynamically load non-critical or heavier components
+const ContactForm = dynamic(() => import("@/component/common/ContactForm/ContactForm"));
+const UiuxSlider = dynamic(() => import("@/component/common/uiuxSlider/uiuxSlider"));
+const BoxReveals = dynamic(() =>
+  import("@/component/common/WebSales/WebSales").then((mod) => mod.BoxReveals)
+);
+const ClientSays = dynamic(() => import("@/component/common/ClientSays/ClientSays"));
+const Slider = dynamic(() => import("@/component/common/Slider/Slider"));
+
 
 const About = () => {
+
+  useEffect(() => {
+    Aos.init({});
+  }, []);
+
   const clientSaysHeading = "We Are a Trusted Web App Development Company";
   const clientSaysDetails =
     "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions.";
@@ -20,10 +34,6 @@ const About = () => {
   const sliderHeading = "Why Choose Zygobit?";
   const sliderDetail =
     "Choose Zygobit for innovative, reliable, and high-quality solutions that drive your business forward with cutting-edge technology and expert support!";
-
-  useEffect(() => {
-    Aos.init({});
-  }, []);
 
   return (
     <>

@@ -40,8 +40,8 @@ export default function ScrollLinked() {
                 <Image
                   src="/images/fire.png"
                   alt="Fire Background"
-                  // height={}
-                  // width={}
+                  height={30}
+                  width={30}
                   // priority
                 />
               </div>

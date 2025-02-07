@@ -235,6 +235,8 @@ const WebAppDevelopment = () => {
             className="object-cover"
             src="/images/bg_circle.jfif"
             alt="Background Circle"
+            width={40}
+            height={40}
             // layout="fill"
           />
         </div>

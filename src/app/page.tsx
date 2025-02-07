@@ -1,23 +1,27 @@
 "use client";
 
-import React, { useEffect } from "react";
-import BusinessCards from "@/component/homePage/Businesscards/Businesscards";
-import { SparklesHeading } from "@/component/homePage/Sparkleheading/Sparkleheading";
-import PartnerSlider from "@/component/common/Partnerslider/Partnerslider";
-import { HeroHighlightDemo } from "@/component/common/Partnersbg/Partnersbg";
-import WhychooseUs from "@/component/homePage/Whychooseus/Whychooseus";
-import BackgroundBeamNew from "@/component/homePage/Bgbeam/Bgbeam";
+import dynamic from "next/dynamic";
+import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import HeroParalax from "@/component/common/HeroParallax/HeroParallax";
-import Cta from "@/component/common/Cta/Cta";
-import ContactForm from "@/component/common/ContactForm/ContactForm";
-import TechnologyStack from "@/component/common/TechnologyStack/TechnologyStack";
-import Blog from "@/component/common/Blog/Blog";
-import HomeBanner from "@/component/homePage/HomeBanner";
-import FeaturedProjects from "@/component/homePage/FeaturedProjects";
 import { ourExpertiseData } from "../component/homePage/OurExpertise";
-import ClientSays from "@/component/common/ClientSays/ClientSays";
+
+// Dynamically import non-critical or heavy components
+const HomeBanner = dynamic(() => import("@/component/homePage/HomeBanner"));
+const FeaturedProjects = dynamic(() => import("@/component/homePage/FeaturedProjects"));
+const BusinessCards = dynamic(() => import("@/component/homePage/Businesscards/Businesscards"));
+const BackgroundBeamNew = dynamic(() => import("@/component/homePage/Bgbeam/Bgbeam"));
+const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
+const PartnerSlider = dynamic(() => import("@/component/common/Partnerslider/Partnerslider"));
+const WhychooseUs = dynamic(() => import("@/component/homePage/Whychooseus/Whychooseus"));
+const HeroParalax = dynamic(() => import("@/component/common/HeroParallax/HeroParallax"));
+const TechnologyStack = dynamic(() => import("@/component/common/TechnologyStack/TechnologyStack"));
+const Blog = dynamic(() => import("@/component/common/Blog/Blog"));
+const ContactForm = dynamic(() => import("@/component/common/ContactForm/ContactForm"));
+const ClientSays = dynamic(() => import("@/component/common/ClientSays/ClientSays"));
+import { SparklesHeading } from "@/component/homePage/Sparkleheading/Sparkleheading";
+import { HeroHighlightDemo } from "@/component/common/Partnersbg/Partnersbg";
+
 
 const Home = () => {
   useEffect(() => {

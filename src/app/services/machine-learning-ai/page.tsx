@@ -18,6 +18,11 @@ import ClientSays from "@/component/common/ClientSays/ClientSays";
 import Slider from "@/component/common/Slider/Slider";
 
 const MachineLearning = () => {
+  
+  useEffect(() => {
+    Aos.init({});
+  }, []);
+
   const clientSaysHeading = "We Are a Trusted Web App Development Company";
   const clientSaysDetails =
     "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions.";
@@ -25,10 +30,6 @@ const MachineLearning = () => {
   const sliderHeading = "Why Zygobit for UI/UX Design?";
   const sliderDetail =
     " Here’s a selection of state-of-the-art design tools that empower our UI UX design company. With these resources at their fingertips, we deliver exceptional user experiences that resonate with audiences.";
-
-  useEffect(() => {
-    Aos.init({});
-  }, []);
 
   return (
     <>

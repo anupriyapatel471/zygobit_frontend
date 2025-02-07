@@ -15,7 +15,7 @@ export const HoverEffect = ({
   }[];
   className?: string;
 }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <div
@@ -91,8 +91,8 @@ export const Card = ({
           className="w-full h-full object-cover"
           src="/images/gray_stars_bg.png"
           alt="Stars Background"
-          // height={}
-          // width={}
+          height={40}
+          width={40}
         />
         </div>
 

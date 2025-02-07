@@ -66,8 +66,8 @@ export function UiuxTeams() {
                   src={team.background}
                   alt="Background"
                   className="rounded-lg"
-                  // height={}
-                  // width={}
+                  height={40}
+                  width={40}
                   // priority
                 />
             </div>

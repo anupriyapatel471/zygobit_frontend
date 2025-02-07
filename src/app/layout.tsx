@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from "next";
-// import localFont from "next/font/local";
 import "./globals.css";
 import "./Responsive.css";
 import Script from 'next/script'
