@@ -27,18 +27,16 @@ function Card({ emoji, hueA, hueB, i }: CardProps) {
       className={`cardContainer card-container-${i}`}
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ amount: 0.8 }}
-    >
+      viewport={{ amount: 0.8 }}>
       <div className="absolute bottom-0 left-0 w-full">
         <img className="w-full" src="/images/rectangle.png" alt="" />
       </div>
       <motion.div  variants={cardVariants} className="card z-10">
         <div className="w-full relative overflow-hidden rounded-lg">
           <img
-            className="w-full h-[20rem] sm:h-[26rem] object-cover "
+            className="w-full h-[20rem] sm:h-[26rem] object-cover"
             src="/images/code.png"
-            alt=""
-          />
+            alt=""/>
           <div className="w-full  absolute bottom-0 left-0 p-6">
             <h3 className="font-semibold text-xl">Web App Consulting Services</h3>
             <p className="text-base mt-4">

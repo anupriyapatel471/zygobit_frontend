@@ -7,7 +7,7 @@ import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 export default function BusinessCards() {
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex flex-row items-center justify-center  w-full gap-4 mx-auto px-4 lg:px-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex flex-row items-center justify-center  w-full gap-4 mx-auto px-4 lg:px-0">
         <Card title="Strategic Business Solutions" data-aos="flip-left">
           <CanvasRevealEffect
             animationSpeed={5.1}

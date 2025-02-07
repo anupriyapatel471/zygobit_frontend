@@ -18,8 +18,7 @@ export function ThreeDCard({img}:any) {
         <div className="max-w-3xl py-12 pl-14">
           <CardItem
             translateZ="50"
-            className="text-5xl text-gradiant-custom font-bold"
-          >
+            className="text-5xl text-gradiant-custom font-bold">
             <span className="text-themetext">Let’s Build</span> the Future of
             Technology Together
           </CardItem>

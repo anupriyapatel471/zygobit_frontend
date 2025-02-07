@@ -44,10 +44,10 @@ export const BentoGridItem = ({
         <p className="border w-fit border-orange-500  bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Blog
         </p>
-        <div className="font-sans font-bold  text-neutral-200 mb-2 mt-2">
+        <div className="font-sans font-bold   text-neutral-200 mb-2 mt-2">
           {title}
         </div>
-        <div className="font-sans font-normal text-xs text-neutral-300">
+        <div className="font-sans font-normal lg:min-h-11 text-xs text-neutral-300">
           {description}
         </div>
       </div>

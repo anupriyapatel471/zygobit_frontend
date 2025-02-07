@@ -17,9 +17,9 @@ export default function FeaturedSlider() {
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
             <div>
-              <Card className="border-none rounded-xl ">
+              <Card className="border-none rounded-xl">
                 <CardContent className="p-0">
-                  <div className="w-full bg-gradient-to-r from-[#EA580C] to-[#09090B] rounded-[20px] mt-9  sm:mt-11">
+                  <div className="w-full bg-[linear-gradient(to_right,#EA580C_0%,#09090B_60%,#09090B_100%)] rounded-[20px] mt-9  sm:mt-11">
                     <div className="w-full flex justify-between items-center pl-4 sm:pl-16 lg:pl-24 pr-4 sm:pr-12 py-8">
                       <div className="w-auto max-w-md text-white">
                         <img className="w-28 sm:w-auto" src="/images/featured_slick.svg" alt="" />

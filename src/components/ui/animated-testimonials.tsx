@@ -46,7 +46,7 @@ export const AnimatedTestimonials = ({
     <div className=" mx-auto antialiased mt-10 sm:mt-24">
       <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-7 sm:gap-20">
         <div>
-          <div className="relative h-96 lg:h-[450px] w-full">
+          <div className="relative h-96 lg:h-[500px] w-full">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -149,13 +149,19 @@ export const AnimatedTestimonials = ({
               onClick={handlePrev}
               className="w-10 h-10 sm:h-12 sm:w-12 rounded-full bg-gray-100  flex items-center justify-center group/button"
             >
-              <IconArrowLeft className="h-5 w-5  text-themetext group-hover/button:rotate-12 transition-transform duration-300" />
+              <img
+                className="h-5 w-5  text-themetext group-hover/button:rotate-12 transition-transform duration-300"
+                src="/images/arrow_left.svg"
+              />
             </button>
             <button
               onClick={handleNext}
               className="w-10 h-10 sm:h-12 sm:w-12 rounded-full bg-gray-100  flex items-center justify-center group/button"
             >
-              <IconArrowRight className="h-5 w-5  text-themetext group-hover/button:-rotate-12 transition-transform duration-300" />
+              <img
+                className="h-5 w-5  text-themetext group-hover/button:-rotate-12 transition-transform duration-300"
+                src="/images/arrow_right.svg"
+              />
             </button>
           </div>
         </div>

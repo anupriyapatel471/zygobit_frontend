@@ -135,7 +135,7 @@ const MobileAppDevelopment = () => {
           </p>
         </div>
         <div className="w-full px-4 lg:px-0">
-        <SharedLayoutAnimation/>
+          <SharedLayoutAnimation/>
         </div>
       </section>
 

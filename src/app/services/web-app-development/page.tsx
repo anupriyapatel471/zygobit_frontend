@@ -55,7 +55,6 @@ const webAppDevelopment = () => {
 
       {/* Cta section */}
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
-
       {/* web application */}
       <section
         data-aos="fade-up"

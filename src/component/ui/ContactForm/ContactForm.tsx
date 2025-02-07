@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
-import { Input } from "../../../components/ui/contactInput";
+import { Input, TextArea } from "../../../components/ui/contactInput";
 import { cn } from "@/lib/utils";
-
 
 export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -61,12 +60,10 @@ export default function ContactForm() {
                 <Input placeholder="Budget :" type="text" />
               </div>
               <div className="w-full">
-                <textarea
+                <TextArea
                   className="resize-none w-full text-sm sm:text-base h-16 md:h-20 lg:h-32 border border-white/20 bg-zinc-800 p-3 rounded-md outline-none"
                   placeholder="About Project"
-                  name=""
-                  id=""
-                ></textarea>
+                ></TextArea>
               </div>
               <button className="group bg-gradient-custom overflow-hidden font-medium transition-all duration-500 btn-primary text-white relative">
                 Let’s Build

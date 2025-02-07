@@ -615,8 +615,8 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-6 w-full sm:w-1/4 lg:w-[44%] lg:mt-10 text-right">
-              <div className="w-full sm:w-auto sm:max-w-[157px] ml-auto grid grid-cols-2 sm:grid-cols-1 gap-y-5 sm:gap-y-12">
+            <div className="mt-6 w-full sm:w-1/4 lg:w-[44%] lg:mt-5 text-right">
+              <div className="w-full sm:w-auto sm:max-w-[157px] ml-auto grid grid-cols-2 sm:grid-cols-1 gap-y-5 sm:gap-y-10">
                 <div className="w-full text-center">
                   <b className="font-extrabold text-xl sm:text-3xl text-themetext block">
                     <Count endValue={2} /> +
@@ -654,9 +654,9 @@ const page = () => {
           </div>
         </div>
         <div className="w-full hidden sm:inline px-4 lg:px-24 absolute -bottom-[170px] left-1/2 -translate-x-1/2 rounded-lg">
-          <div className="w-full border border-[#09090B33] rounded-lg bg-[#fafafa12] px-24  ">
+          <div className="w-full border border-[#09090B33] overflow-hidden rounded-lg bg-[#fafafa12] px-24  ">
             <div className="w-full  z-[1111]  max-w-sm mx-auto rounded-lg">
-              <RippleBg numCircles={8} />
+              <RippleBg numCircles={10} />
             </div>
             <div className=" w-full px-6 lg:px-32 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <MagicCardDemo />
@@ -678,13 +678,13 @@ const page = () => {
         </div>
         <div className="w-full mt-5 sm:mt-0 flex flex-wrap sm:flex-nowrap items-center justify-between ">
           <div
-            className="w-full sm:w-auto sm:max-w-4xl pr-4 lg:pr-0"
+            className="w-full sm:w-auto sm:max-w-3xl 2xl:max-w-4xl pr-4 lg:pr-0"
             data-aos="fade-up"
           >
             <span className="mb-2 block font-semibold text-base">
               Trusted Across the Galaxy
             </span>
-            <p className="sm:font-semibold text-base sm:text-xl lg:text-2xl tracking-tighter">
+            <p className="sm:font-semibold text-base sm:text-xl lg:text-xl 2xl:text-2xl lg:pr-5 tracking-tighter">
               We've partnered with forward-thinking brands across multiple
               industries, delivering innovative solutions through a diverse
               range of services.
@@ -692,9 +692,9 @@ const page = () => {
           </div>
           <div
             data-aos="fade-up"
-            className="border-t sm:border-t-0 sm:border-l  border-white mt-6 sm:mt-0 pt-6 sm:py-12  sm:px-12"
+            className="border-t sm:border-t-0 sm:border-l  border-white mt-6 sm:mt-0 pt-6 sm:py-12 sm:px-12 lg:px-10 2xl:px-12"
           >
-            <h3 className="text-lg sm:text-xl lg:text-2xl uppercase sm:text-center font-semibold max-w-80">
+            <h3 className="text-lg sm:text-xl lg:text-xl 2xl:text-2xl uppercase sm:text-center font-semibold max-w-80">
               Breaking Barriers Since Day One
             </h3>
           </div>
@@ -702,12 +702,12 @@ const page = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="w-full px-4 lg:px-11 py-10 sm:py-14 overflow-hidden">
+      <section className="w-full px-4 lg:px-11 py-10 sm:py-14 lg:py-16 overflow-hidden">
         <div className="w-full  sm:text-center" data-aos="fade-right">
           <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
             Featured Projects
           </h2>
-          <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
+          <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-5xl sm:mx-auto">
             We specialize in developing high-quality Android and iOS
             applications that deliver exceptional user experiences and drive
             business growth
@@ -732,7 +732,7 @@ const page = () => {
         </div>
         <div className="w-full absolute top-3 sm:top-6 left-1/2 -translate-x-1/2 ">
           <div className="w-full px-4 sm:px-0 sm:text-center mb-6 sm:mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold">
+            <h2 className="text-2xl sm:text-4xl lg:text-[45px] 2xl:text-5xl font-bold">
               Revolutionizing Businesses with Excellence & Expertise
             </h2>
           </div>
