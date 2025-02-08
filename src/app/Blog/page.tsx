@@ -1,12 +1,12 @@
 "use client";
 
-import ContactForm from "@/component/ui/ContactForm/ContactForm";
 import EcommerceTabbing from "@/component/ui/EcommerceTabbing/EcommerceTabbing";
 import React, { useEffect } from "react";
 import Aos from "aos";
+import ContactForm from "@/component/common/ContactForm/ContactForm";
 
 
-const page = () => {
+const BlogPage = () => {
    useEffect(() => {
       Aos.init({});
     }, []);
@@ -118,4 +118,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default BlogPage;

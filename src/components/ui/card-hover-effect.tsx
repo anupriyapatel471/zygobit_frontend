@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -14,7 +15,7 @@ export const HoverEffect = ({
   }[];
   className?: string;
 }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <div
@@ -73,10 +74,27 @@ export const Card = ({
       )}
     >
       <div className="relative z-50 overflow-hidden">
-        <span><img src="/images/dollar_icon.svg" alt="" /></span>
+        <span>
+          {/* <img src="/images/dollar_icon.svg" alt="" /> */}
+        <Image
+          src="/images/dollar_icon.svg"
+          alt="Dollar Icon"
+          width={50}  // Set the width of the image
+          height={50} // Set the height of the image
+        />
+        </span>
         <div className="px-4">{children}</div>
       </div>
-      <div className="absolute top-0 left-0 w-full h-full"><img className="w-full h-full" src="/images/gray_stars_bg.png" alt="" /></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        {/* <img className="w-full h-full" src="/images/gray_stars_bg.png" alt="" /> */}
+        <Image
+          className="w-full h-full object-cover"
+          src="/images/gray_stars_bg.png"
+          alt="Stars Background"
+          height={40}
+          width={40}
+        />
+        </div>
 
     </div>
   );

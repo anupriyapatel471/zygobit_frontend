@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
-import { EvervaultCards } from "@/component/ui/EvervaultCards/EvervaultCards";
+import { EvervaultCards } from "@/component/common/EvervaultCards/EvervaultCards";
 
 interface CarouselProps {
   items: JSX.Element[];

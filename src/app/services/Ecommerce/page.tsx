@@ -1,26 +1,28 @@
 "use client";
 
-import AboutUs from "@/component/ui/AboutUs/AboutUs";
-import Blog from "@/component/ui/Blog/Blog";
-import ContactForm from "@/component/ui/ContactForm/ContactForm";
-import FaqSection from "@/component/ui/FaqSection/FaqSection";
-import HeroBanner from "@/component/ui/HeroBanner/HeroBanner";
 import React, { useEffect } from "react";
 import Aos from "aos";
-import { HeroHighlightDemo } from "@/component/ui/Partnersbg/Partnersbg";
-import PartnerSlider from "@/component/ui/Partnerslider/Partnerslider";
-import { Testimonials } from "@/component/ui/Testimonials/Testimonials";
-import TechnologyStack from "@/component/ui/TechnologyStack/TechnologyStack";
-import { MobileAppGrid } from "@/component/ui/MobileAppGrid/MobileAppGrid";
-import { ThreeDCards } from "@/component/ui/ThreedCards/ThreedCards";
+
 import { ChevronRight } from "lucide-react";
-import Cta from "@/component/ui/Cta/Cta";
-import UiuxSlider from "@/component/ui/uiuxSlider/uiuxSlider";
-import FeaturedSlider from "@/component/ui/Featuredslider/Featuredslider";
 import { EcommerceShineCards } from "@/component/ui/EcommerceShineCards/EcomoerceShineCards";
 import { WebSlider } from "@/component/ui/WebSlider/WebSlider";
+import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
+import WeDeliver from "@/component/common/WeDeliver/WeDeliver";
+import Cta from "@/component/common/Cta/Cta";
+import FeaturedSlider from "@/component/common/Featuredslider/Featuredslider";
+import UiuxSlider from "@/component/common/uiuxSlider/uiuxSlider";
+import { ThreeDCards } from "@/component/sevices/MobileAppDevelopment/ThreedCards/ThreedCards";
+import { Testimonials } from "@/component/common/Testimonials/Testimonials";
+import { HeroHighlightDemo } from "@/component/common/Partnersbg/Partnersbg";
+import PartnerSlider from "@/component/common/Partnerslider/Partnerslider";
+import Blog from "@/component/common/Blog/Blog";
+import FaqSection from "@/component/sevices/Common/FaqSection/FaqSection";
+import ContactForm from "@/component/common/ContactForm/ContactForm";
+import { MobileAppGrid } from "@/component/common/MobileAppGrid/MobileAppGrid";
+import TechnologyStack from "@/component/common/TechnologyStack/TechnologyStack";
 
-const page = () => {
+const Ecommerce = () => {
+
   useEffect(() => {
     Aos.init({});
   }, []);
@@ -30,7 +32,7 @@ const page = () => {
       <HeroBanner />
 
       {/* about us */}
-      <AboutUs />
+      <WeDeliver/>
 
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pt-16 pb-[8rem] overflow-hidden">
         <div className="w-full px-4 lg:px-0 sm:text-center">
@@ -75,7 +77,7 @@ const page = () => {
             Zygobit: Ecommerce App Experts
           </h2>
           <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
-            Don't just choose an ecommerce app developer. Choose a collaborator.
+            Don&apos;t just choose an ecommerce app developer. Choose a collaborator.
             Let Zygobit co-create your e-commerce app masterpiece.
           </p>
         </div>
@@ -92,7 +94,7 @@ const page = () => {
           </h2>
           <p className="sm:font-medium max-w-6xl mx-auto text-sm sm:text-lg lg:text-xl mt-3">
             We integrate AR/VR into eCommerce apps to deliver immersive,
-            realistic shopping experiences and enhance your business's user
+            realistic shopping experiences and enhance your business&apos;s user
             engagement.
           </p>
         </div>
@@ -237,7 +239,7 @@ const page = () => {
           </h2>
           <p className="font-medium max-w-6xl mx-auto text-sm sm:text-lg lg:text-xl my-3">
             Hear from our satisfied clients who have transformed their ideas
-            into successful businesses with Apptunix's expert web development
+            into successful businesses with Apptunix&apos;s expert web development
             services and solutions
           </p>
         </div>
@@ -272,4 +274,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Ecommerce;

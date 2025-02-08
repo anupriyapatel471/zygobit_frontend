@@ -1,30 +1,54 @@
 "use client";
 
-import AboutUs from "@/component/ui/AboutUs/AboutUs";
-import HeroBanner from "@/component/ui/HeroBanner/HeroBanner";
-import React, { useEffect } from "react";
+import dynamic from "next/dynamic";
+import { useEffect } from "react";
 import Aos from "aos";
-import { MobileAppGrid } from "@/component/ui/MobileAppGrid/MobileAppGrid";
-import ContactForm from "@/component/ui/ContactForm/ContactForm";
-import { Testimonials } from "@/component/ui/Testimonials/Testimonials";
-import UiuxSlider from "@/component/ui/uiuxSlider/uiuxSlider";
-import { BoxReveals } from "@/component/ui/WebSales/WebSales";
-import RippleBg from "@/component/ui/Ripplebg/Ripplebg";
-import { MagicCardDemo } from "@/component/ui/Magiccard/Magiccard";
-import AboutMagicCards from "@/component/ui/AboutValueCards/AboutValueCards";
-import { AboutBgParticles } from "@/component/ui/AboutBgParticles/AboutBgParticles";
+import "aos/dist/aos.css";
+import Image from "next/image";
 
-const page = () => {
+// Critical components that should be loaded immediately (above the fold)
+import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
+import WeDeliver from "@/component/common/WeDeliver/WeDeliver";
+import { AboutBgParticles } from "@/component/ui/AboutBgParticles/AboutBgParticles";
+import RippleBg from "@/component/common/Ripplebg/Ripplebg";
+import { MagicCardDemo } from "@/component/common/Magiccard/Magiccard";
+import GridBoxes from "@/component/common/GridBoxes/GridBoxes";
+import AboutValueCards from "@/components/ui/aboutValueCards";
+
+// Dynamically load non-critical or heavier components
+const ContactForm = dynamic(
+  () => import("@/component/common/ContactForm/ContactForm")
+);
+const UiuxSlider = dynamic(
+  () => import("@/component/common/uiuxSlider/uiuxSlider")
+);
+const BoxReveals = dynamic(() =>
+  import("@/component/common/WebSales/WebSales").then((mod) => mod.BoxReveals)
+);
+const ClientSays = dynamic(
+  () => import("@/component/common/ClientSays/ClientSays")
+);
+
+const About = () => {
   useEffect(() => {
     Aos.init({});
   }, []);
+
+  const clientSaysHeading = "We Are a Trusted Web App Development Company";
+  const clientSaysDetails =
+    "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions.";
+
+  const GridBoxesHeading = "Why Choose Zygobit?";
+  const GridBoxesDetail =
+    "Choose Zygobit for innovative, reliable, and high-quality solutions that drive your business forward with cutting-edge technology and expert support!";
+
   return (
     <>
       {/* Hero banner */}
       <HeroBanner />
 
       {/* about us */}
-      <AboutUs />
+      <WeDeliver />
 
       <div className="w-full relative">
         <AboutBgParticles />
@@ -49,9 +73,9 @@ const page = () => {
                 Trusted Across the Galaxy
               </span>
               <p className="sm:font-semibold text-base sm:text-xl lg:text-2xl tracking-tighter">
-                We've partnered with forward-thinking brands across multiple
-                industries, delivering innovative solutions through a diverse
-                range of services.
+                We&apos;ve partnered with forward-thinking brands across
+                multiple industries, delivering innovative solutions through a
+                diverse range of services.
               </p>
             </div>
             <div
@@ -73,40 +97,42 @@ const page = () => {
             <BoxReveals />
           </div>
           <div className="w-full lg:w-1/2">
-            <img
+            {/* <img
               className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
               src="/images/together.png"
               alt=""
+            /> */}
+            <Image
+              className="w-full object-cover rounded-xl"
+              src="/images/together.png"
+              alt="Together"
+              // layout="responsive"
+              width={590} // Define the aspect ratio width
+              height={753} // Define the aspect ratio height
             />
           </div>
         </div>
       </section>
 
-      {/* slider */}
-      <section className="w-full sm:pt-10 pb-12 lg:pb-16 lg:pt-16">
-        <div className="w-full px-4 lg:px-20 sm:text-center mb-8 sm:mb-12 lg:mb-12">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradiant-custom">
-            Why Choose Zygobit?
-          </h2>
-          <p className="sm:font-medium text-sm sm:text-lg lg:text-xl max-w-7xl mx-auto mt-2">
-            Choose Zygobit for innovative, reliable, and high-quality solutions
-            that drive your business forward with cutting-edge technology and
-            expert support!
-          </p>
-        </div>
-        <div className="w-full px-5 lg:px-24">
-          <MobileAppGrid />
-        </div>
-      </section>
+      {/* GridBxes */}
+      <GridBoxes GridBoxesHeading={GridBoxesHeading} GridBoxesDetail={GridBoxesDetail} />
 
       {/* web app sales */}
       <section className="w-full relative px-4 lg:px-24 py-12 lg:py-20">
         <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap items-center gap-5 sm:gap-8">
           <div className="w-full lg:w-1/2">
-            <img
+            {/* <img
               className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
               src="/images/meeting.png"
               alt=""
+            /> */}
+            <Image
+              className="w-full object-cover rounded-xl"
+              src="/images/meeting.png"
+              alt="meating"
+              // layout="responsive"
+              width={590} // Define the aspect ratio width
+              height={753} // Define the aspect ratio height
             />
           </div>
           <div className="w-full lg:w-1/2">
@@ -137,10 +163,7 @@ const page = () => {
       </section>
 
       <section className="w-full px-4 sm:px-0 ">
-        <div
-          className="w-full  sm:text-center"
-          data-aos="fade-right"
-        >
+        <div className="w-full  sm:text-center" data-aos="fade-right">
           <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
             Our Values
           </h2>
@@ -151,26 +174,15 @@ const page = () => {
           </p>
         </div>
         <div className="w-full  max-w-6xl mx-auto">
-          <AboutMagicCards />
+          <AboutValueCards />
         </div>
       </section>
 
       {/* client says */}
-      <section className="w-full px-4 sm:px-5 lg:px-14 mt-12 sm:mt-16   lg:mt-24 mb-12 sm:mb-16 lg:mb-20 overflow-hidden">
-        <div data-aos="fade-left" className="w-full sm:text-center">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradient-custom">
-            We Are a Trusted Web App Development Company
-          </h2>
-          <p className="font-medium max-w-6xl mx-auto text-sm sm:text-lg lg:text-xl my-3">
-            Hear from our satisfied clients who have transformed their ideas
-            into successful businesses with Apptunix's expert web development
-            services and solutions
-          </p>
-        </div>
-        <div className="w-full sm:px-4 lg:px-12">
-          <Testimonials />
-        </div>
-      </section>
+      <ClientSays
+        clientHeading={clientSaysHeading}
+        clientSaysDetails={clientSaysDetails}
+      />
 
       {/* contact form */}
       <ContactForm />
@@ -178,4 +190,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default About;

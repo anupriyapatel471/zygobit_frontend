@@ -23,6 +23,16 @@ function Image({ id }: { id: number }) {
     <section className="img-container">
       <div className="p-11 bg-transparent" ref={ref}>
         {/* <img src={`/photos/cityscape/${id}.jpg`} alt="A London skyscraper" /> */}
+
+        <Image
+          src={`/photos/cityscape/${id}.jpg`}
+          alt="A London skyscraper"
+          width={300}
+          height={400}
+          className="object-cover"
+          priority
+        />
+        
         <h3 className="text-4xl font-semibold">Education Web App Development</h3>
         <p className="text-xl my-12 max-w-3xl">
           Our web app developers offer educational web app development services
