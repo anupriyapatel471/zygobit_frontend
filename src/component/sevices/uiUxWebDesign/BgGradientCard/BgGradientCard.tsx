@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import { BackgroundGradient } from "../../../components/ui/background-gradient";
 import Image from "next/image";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
 // import Image from "next/image";
 
 const cardData = [

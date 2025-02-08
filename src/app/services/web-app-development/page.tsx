@@ -12,15 +12,15 @@ import Aos from "aos";
 
 
 import { WebSlider } from "@/component/ui/WebSlider/WebSlider";
-import ScrollTriggered from "@/component/WebAppDevelopment/WebScrollTriggered/WebScrollTriggered";
 import Cta from "@/component/common/Cta/Cta";
-import { CardSpotlights } from "@/component/WebAppDevelopment/RobustWebCards/RobustWebCards";
 import WebDevProcess from "@/component/sevices/Common/WebDevProcess/WebDevProcess";
 import ClientSays from "@/component/common/ClientSays/ClientSays";
 import Image from "next/image";
 import HeroParalax from "@/component/common/HeroParallax/HeroParallax";
-import { CustomWebCards } from "@/component/WebAppDevelopment/CustomWebCards/CustomWebCards";
 import { BoxReveals } from "@/component/common/WebSales/WebSales";
+import { CardSpotlights } from "@/component/sevices/WebAppDevelopment/RobustWebCards/RobustWebCards";
+import { CustomWebCards } from "@/component/sevices/WebAppDevelopment/CustomWebCards/CustomWebCards";
+import ScrollTriggered from "@/component/sevices/WebAppDevelopment/WebScrollTriggered/WebScrollTriggered";
 
 const WebAppDevelopment = () => {
   const clientSaysHeading = "We Are a Trusted Web App Development Company";

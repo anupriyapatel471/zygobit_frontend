@@ -12,11 +12,11 @@ import TechnologyStack from "@/component/common/TechnologyStack/TechnologyStack"
 import Cta from "@/component/common/Cta/Cta";
 import FeaturedSlider from "@/component/common/Featuredslider/Featuredslider";
 import { ChevronRight } from "lucide-react";
-import { BackgroundGradientCard } from "@/component/uiUxWebDesign/BgGradientCard/BgGradientCard";
 import UiuxSlider from "@/component/common/uiuxSlider/uiuxSlider";
-import UiuxTimeline from "@/component/uiUxWebDesign/uiuxTimeline/uiuxTimeline";
-import { ParticlesCards } from "@/component/uiUxWebDesign/ParticlesCards/ParticlesCards";
-import { UiuxTeams } from "@/component/uiUxWebDesign/uiuxTeam/uiuxTeam";
+import { BackgroundGradientCard } from "@/component/sevices/uiUxWebDesign/BgGradientCard/BgGradientCard";
+import UiuxTimeline from "@/component/sevices/uiUxWebDesign/uiuxTimeline/uiuxTimeline";
+import { ParticlesCards } from "@/component/sevices/uiUxWebDesign/ParticlesCards/ParticlesCards";
+import { UiuxTeams } from "@/component/sevices/uiUxWebDesign/uiuxTeam/uiuxTeam";
 
 const UiuxWebDesign = () => {
   useEffect(() => {
