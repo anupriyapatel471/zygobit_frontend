@@ -58,13 +58,11 @@ export function UiuxTeams() {
         <CardContainer key={team.id} className="inter-var">
           <CardBody className="relative group/card w-full h-auto rounded-lg p-4 sm:py-5 sm:px-6">
             <div className="absolute top-0 left-0 size-full">
-              {/* <img className="size-full" src={team.background} alt="" /> */}
               <Image
                   src={team.background}
                   alt="Background"
                   className="rounded-lg"
-                  height={40}
-                  width={40}
+                  fill
                   // priority
                 />
             </div>

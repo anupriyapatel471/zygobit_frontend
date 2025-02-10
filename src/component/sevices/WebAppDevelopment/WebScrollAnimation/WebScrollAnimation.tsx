@@ -3,6 +3,7 @@
 import { motion, useScroll } from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
+import fire from "../../../../../public/images/fire.png"
 
 export default function ScrollLinked() {
   const ref = useRef(null);
@@ -38,7 +39,7 @@ export default function ScrollLinked() {
               <div className="absolute top-0 left-0 w-full h-full -z-10">
                 {/* <img className="w-full h-full" src="/images/fire.png" alt="" /> */}
                 <Image
-                  src="/images/fire.png"
+                  src={fire}
                   alt="Fire Background"
                   height={30}
                   width={30}

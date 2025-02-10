@@ -5,6 +5,7 @@ import * as motion from "motion/react-client";
 import { useState } from "react";
 import './mobiledevstyle.css'
 import Image from "next/image";
+import plan from "../../../../../public/images/plan.png"
 
 export default function SharedLayoutAnimation() {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
@@ -54,7 +55,7 @@ export default function SharedLayoutAnimation() {
                 /> */}
                  <Image
                   className="w-full h-full max-h-72 object-cover rounded-2xl"
-                  src="/images/plan.png" 
+                  src={plan}
                   alt=""
                   width={500} 
                   height={500}

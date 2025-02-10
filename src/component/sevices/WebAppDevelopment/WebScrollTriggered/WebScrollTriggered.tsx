@@ -2,6 +2,8 @@ import * as motion from "motion/react-client";
 import type { Variants } from "motion/react";
 import  "./WebScrollTriggered.css";
 import Image from "next/image";
+import rectangle from "../../../../../public/images/rectangle.png"
+import code from "../../../../../public/images/code.png"
 
 export default function ScrollTriggered() {
   return (
@@ -33,7 +35,7 @@ function Card({ emoji, hueA, hueB, i }: CardProps) {
         {/* <img className="w-full" src="/images/rectangle.png" alt="" /> */}
         <Image
           className="w-full"
-          src="/images/rectangle.png"
+          src={rectangle}
           alt="Background"
           width={1200}  // Add a width for Next.js to calculate the aspect ratio
           height={800}  // Add a height for Next.js to calculate the aspect ratio
@@ -48,7 +50,7 @@ function Card({ emoji, hueA, hueB, i }: CardProps) {
           /> */}
           <Image
             className="w-full h-[20rem] sm:h-[26rem] object-cover"
-            src="/images/code.png"
+            src={code}
             alt="Code"
             width={1200}
             height={800}
@@ -72,7 +74,7 @@ function Card({ emoji, hueA, hueB, i }: CardProps) {
           /> */}
            <Image
             className="w-full h-[26rem] object-cover"
-            src="/images/code.png"
+            src={code}
             alt="Code"
             width={1200}
             height={800}

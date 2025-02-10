@@ -14,6 +14,8 @@ import RippleBg from "@/component/common/Ripplebg/Ripplebg";
 import { MagicCardDemo } from "@/component/common/Magiccard/Magiccard";
 import GridBoxes from "@/component/common/GridBoxes/GridBoxes";
 import AboutValueCards from "@/components/ui/aboutValueCards";
+import Together from "../../../public/images/together.png"
+import meeting from "../../../public/images/meeting.png"
 
 // Dynamically load non-critical or heavier components
 const ContactForm = dynamic(
@@ -97,14 +99,9 @@ const About = () => {
             <BoxReveals />
           </div>
           <div className="w-full lg:w-1/2">
-            {/* <img
-              className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
-              src="/images/together.png"
-              alt=""
-            /> */}
             <Image
-              className="w-full object-cover rounded-xl"
-              src="/images/together.png"
+              className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
+              src={Together}
               alt="Together"
               // layout="responsive"
               width={590} // Define the aspect ratio width
@@ -121,14 +118,9 @@ const About = () => {
       <section className="w-full relative px-4 lg:px-24 py-12 lg:py-20">
         <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap items-center gap-5 sm:gap-8">
           <div className="w-full lg:w-1/2">
-            {/* <img
-              className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
-              src="/images/meeting.png"
-              alt=""
-            /> */}
             <Image
-              className="w-full object-cover rounded-xl"
-              src="/images/meeting.png"
+              className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
+              src={meeting}
               alt="meating"
               // layout="responsive"
               width={590} // Define the aspect ratio width

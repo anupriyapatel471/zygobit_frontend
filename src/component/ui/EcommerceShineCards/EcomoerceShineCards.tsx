@@ -1,4 +1,6 @@
 import { ShineBorder } from "@/components/ui/shine-border";
+import Image from "next/image";
+import innovation from "../../../../public/images/inovation.svg";
 
 export function EcommerceShineCards() {
   return (
@@ -9,7 +11,7 @@ export function EcommerceShineCards() {
       >
         <div className="cursor-pointer relative rounded-lg overflow-hidden py-4 sm:py-6 px-0 sm:px-4 lg:px-8 bg-cover bg-center bg-no-repeat bg-[url(/images/new_moon.png)] ">
           <span>
-            <img src="/images/inovation.svg" alt="" />
+          <Image src={innovation} width={66} height={66} alt="Innovation image" />
           </span>
           <div className="w-full px-4">
             <h3 className="font-semibold text-base sm:text-lg lg:text-xl my-2">
@@ -29,7 +31,7 @@ export function EcommerceShineCards() {
       >
         <div className="cursor-pointer relative rounded-lg overflow-hidden py-4 sm:py-6 px-0 sm:px-4 lg:px-8 bg-cover bg-center bg-no-repeat bg-[url(/images/new_moon.png)] ">
           <span>
-            <img src="/images/inovation.svg" alt="" />
+          <Image src={innovation} width={66} height={66} alt="Innovation image" />
           </span>
           <div className="w-full px-4">
             <h3 className="font-semibold text-base sm:text-lg lg:text-xl my-2">
@@ -49,7 +51,7 @@ export function EcommerceShineCards() {
       >
         <div className="cursor-pointer relative rounded-lg overflow-hidden py-4 sm:py-6 px-0 sm:px-4 lg:px-8 bg-cover bg-center bg-no-repeat bg-[url(/images/new_moon.png)] ">
           <span>
-            <img src="/images/inovation.svg" alt="" />
+          <Image src={innovation} width={66} height={66} alt="Innovation image" />
           </span>
           <div className="w-full px-4">
             <h3 className="font-semibold text-base sm:text-lg lg:text-xl my-2">
@@ -69,7 +71,7 @@ export function EcommerceShineCards() {
       >
         <div className="cursor-pointer relative rounded-lg overflow-hidden py-4 sm:py-6 px-0 sm:px-4 lg:px-8 bg-cover bg-center bg-no-repeat bg-[url(/images/new_moon.png)] ">
           <span>
-            <img src="/images/inovation.svg" alt="" />
+          <Image src={innovation} width={66} height={66} alt="Innovation image" />
           </span>
           <div className="w-full px-4">
             <h3 className="font-semibold text-base sm:text-lg lg:text-xl my-2">

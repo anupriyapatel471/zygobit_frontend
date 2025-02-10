@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/ui/timelineSecond";
+import whyTwo from "../../../../../public/images/why_two.svg"
+import whyThree from "../../../../../public/images/why_three.svg"
 
 export default function WebDevProcess() {
   const data = [
@@ -15,7 +17,7 @@ export default function WebDevProcess() {
           </p>
           <div className="flex">
             <Image
-              src="/images/why_two.svg"
+              src={whyTwo}
               alt="hero template"
               width={500}
               height={500}
@@ -37,7 +39,7 @@ export default function WebDevProcess() {
           </p>
           <div className="flex">
             <Image
-              src="/images/why_two.svg"
+              src={whyTwo}
               alt="hero template"
               width={500}
               height={500}
@@ -59,7 +61,7 @@ export default function WebDevProcess() {
           </p>
           <div className="flex">
             <Image
-              src="/images/why_three.svg"
+              src={whyThree}
               alt="hero template"
               width={500}
               height={500}

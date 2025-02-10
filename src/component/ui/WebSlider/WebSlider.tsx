@@ -8,6 +8,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
+import fireImg from "../../../../public/images/fire.png"
 
 export function WebSlider() {
   return (
@@ -20,11 +22,7 @@ export function WebSlider() {
                 <CardContent className=" px-4 lg:p-0 flex  items-center justify-center">
                   <div className="w-full text-white max-w-4xl relative p-4 sm:py-10 sm:px-16 overflow-hidden rounded-2xl">
                     <div className="absolute top-0 left-0 w-full h-full p-1">
-                      <img
-                        className="w-full h-full"
-                        src="/images/fire.png"
-                        alt=""
-                      />
+                      <Image fill src={fireImg} alt="Fire image" />
                     </div>
                     <h3 className="relative z-10 font-semibold text-2xl sm:text-2xl">
                       1. Time and Material Model

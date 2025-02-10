@@ -6,6 +6,7 @@ import { Particles } from "@/components/ui/particles";
 import ConnectForm from "@/component/common/ConnectForm";
 import Image from "next/image";
 // import Image from "next/image";
+import spacex from "../../../../public/images/space_x.png"
 
 export function ContactParticles() {
   const [color, setColor] = useState("#fff"); // Default color
@@ -35,7 +36,7 @@ export function ContactParticles() {
 
             <Image
               className="rounded-2xl object-cover"
-              src="/images/space_x.png"
+              src={spacex}
               alt="Space X"
               width={590}
               height={885}

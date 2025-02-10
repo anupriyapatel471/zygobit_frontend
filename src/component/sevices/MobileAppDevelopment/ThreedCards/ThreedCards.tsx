@@ -7,6 +7,12 @@ import {
   CardContainer,
   CardItem,
 } from "../../../../components/ui/3d-card";
+import aiImg from "../../../../../public/images/ai_img.png"
+import machine from "../../../../../public/images/machine.png"
+import generateAi from "../../../../../public/images/generate_ai.png"
+import iot from "../../../../../public/images/iot.png"
+import blockChain from "../../../../../public/images/blockchain.png"
+import arVr from "../../../../../public/images/ar_vr.png"
 
 export function ThreeDCards() {
   return (
@@ -16,7 +22,7 @@ export function ThreeDCards() {
           <CardBody className=" relative group/card  bg-black border-white/15 w-full h-auto rounded-xl  border  ">
             <CardItem translateZ="50" className="w-full">
               <Image
-                src="/images/ai_img.png"
+                src={aiImg}
                 height="1000"
                 width="1000"
                 className="h-[350px] sm:h-[400px] lg:h-[500px] w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -46,7 +52,7 @@ export function ThreeDCards() {
           <CardBody className=" relative group/card  bg-black border-white/15 w-full h-auto rounded-xl  border  ">
             <CardItem translateZ="50" className="w-full">
               <Image
-                src="/images/machine.png"
+                src={machine}
                 height="1000"
                 width="1000"
                 className="h-[350px] sm:h-[400px] lg:h-[500px] w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -75,7 +81,7 @@ export function ThreeDCards() {
           <CardBody className=" relative group/card  bg-black border-white/15 w-full h-auto rounded-xl  border  ">
             <CardItem translateZ="50" className="w-full">
               <Image
-                src="/images/generate_ai.png"
+                src={generateAi}
                 height="1000"
                 width="1000"
                 className="h-[350px] sm:h-[400px] lg:h-[500px] w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -104,7 +110,7 @@ export function ThreeDCards() {
           <CardBody className=" relative group/card  bg-black border-white/15 w-full h-auto rounded-xl  border  ">
             <CardItem translateZ="50" className="w-full">
               <Image
-                src="/images/iot.png"
+                src={iot}
                 height="1000"
                 width="1000"
                 className="h-[350px] sm:h-[400px] lg:h-[500px] w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -133,7 +139,7 @@ export function ThreeDCards() {
           <CardBody className=" relative group/card  bg-black border-white/15 w-full h-auto rounded-xl  border  ">
             <CardItem translateZ="50" className="w-full">
               <Image
-                src="/images/blockchain.png"
+                src={blockChain}
                 height="1000"
                 width="1000"
                 className="h-[350px] sm:h-[400px] lg:h-[500px] w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -162,7 +168,7 @@ export function ThreeDCards() {
           <CardBody className=" relative group/card  bg-black border-white/15 w-full h-auto rounded-xl  border  ">
             <CardItem translateZ="50" className="w-full">
               <Image
-                src="/images/ar_vr.png"
+                src={arVr}
                 height="1000"
                 width="1000"
                 className="h-[350px] sm:h-[400px] lg:h-[500px] w-full object-cover rounded-xl group-hover/card:shadow-xl"

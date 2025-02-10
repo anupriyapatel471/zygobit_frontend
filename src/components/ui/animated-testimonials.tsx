@@ -4,6 +4,8 @@ import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import arrowLeft from "../../../public/images/arrow_left.svg";
+import arrowRight from "../../../public/images/arrow_right.svg";
 
 type Testimonial = {
   quote: string;
@@ -149,18 +151,24 @@ export const AnimatedTestimonials = ({
               onClick={handlePrev}
               className="w-10 h-10 sm:h-12 sm:w-12 rounded-full bg-gray-100  flex items-center justify-center group/button"
             >
-              <img
-                className="h-5 w-5  text-themetext group-hover/button:rotate-12 transition-transform duration-300"
-                src="/images/arrow_left.svg"
+              <Image
+                src={arrowLeft}
+                width={20}
+                height={20}
+                className="text-themetext group-hover/button:rotate-12 transition-transform duration-300"
+                alt="Icon"
               />
             </button>
             <button
               onClick={handleNext}
               className="w-10 h-10 sm:h-12 sm:w-12 rounded-full bg-gray-100  flex items-center justify-center group/button"
             >
-              <img
-                className="h-5 w-5  text-themetext group-hover/button:-rotate-12 transition-transform duration-300"
-                src="/images/arrow_right.svg"
+               <Image
+                src={arrowRight}
+                width={20}
+                height={20}
+                className="text-themetext group-hover/button:-rotate-12 transition-transform duration-300"
+                alt="Icon"
               />
             </button>
           </div>

@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 
 import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 import { EcommerceShineCards } from "@/component/ui/EcommerceShineCards/EcomoerceShineCards";
 import { WebSlider } from "@/component/ui/WebSlider/WebSlider";
 import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
@@ -20,9 +21,9 @@ import FaqSection from "@/component/sevices/Common/FaqSection/FaqSection";
 import ContactForm from "@/component/common/ContactForm/ContactForm";
 import { MobileAppGrid } from "@/component/common/MobileAppGrid/MobileAppGrid";
 import TechnologyStack from "@/component/common/TechnologyStack/TechnologyStack";
+import ProcessImg from "../../../../public/images/process.png";
 
 const Ecommerce = () => {
-
   useEffect(() => {
     Aos.init({});
   }, []);
@@ -32,7 +33,7 @@ const Ecommerce = () => {
       <HeroBanner />
 
       {/* about us */}
-      <WeDeliver/>
+      <WeDeliver />
 
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pt-16 pb-[8rem] overflow-hidden">
         <div className="w-full px-4 lg:px-0 sm:text-center">
@@ -77,8 +78,8 @@ const Ecommerce = () => {
             Zygobit: Ecommerce App Experts
           </h2>
           <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
-            Don&apos;t just choose an ecommerce app developer. Choose a collaborator.
-            Let Zygobit co-create your e-commerce app masterpiece.
+            Don&apos;t just choose an ecommerce app developer. Choose a
+            collaborator. Let Zygobit co-create your e-commerce app masterpiece.
           </p>
         </div>
         <div data-aos="fade-up">
@@ -117,20 +118,26 @@ const Ecommerce = () => {
               data-aos="fade-left"
               className="w-full order-1 lg:order-none lg:w-2/5"
             >
-              <img
-                className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
-                src="/images/process.png"
-                alt=""
-              />
+              <div className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl overflow-hidden relative ">
+                <Image
+                  src={ProcessImg}
+                  className="object-cover rounded-2xl"
+                  fill
+                  alt="process img"
+                />
+              </div>
             </div>
           </div>
           <div className="w-full flex flex-wrap lg:flex-nowrap gap-4 sm:gap-7 items-center">
             <div data-aos="fade-right" className="w-full lg:w-2/5">
-              <img
-                className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
-                src="/images/process.png"
-                alt=""
-              />
+              <div className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl overflow-hidden relative ">
+                <Image
+                  src={ProcessImg}
+                  className="object-cover rounded-2xl"
+                  fill
+                  alt="process img"
+                />
+              </div>
             </div>
             <div data-aos="fade-left" className="w-full lg:w-3/5">
               <h3 className="font-semibold text-xl sm:text-3xl lg:text-4xl">
@@ -161,11 +168,14 @@ const Ecommerce = () => {
               data-aos="fade-left"
               className="w-full order-1 lg:order-none lg:w-2/5"
             >
-              <img
-                className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
-                src="/images/process.png"
-                alt=""
-              />
+              <div className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl overflow-hidden relative ">
+                <Image
+                  src={ProcessImg}
+                  className="object-cover rounded-2xl"
+                  fill
+                  alt="process img"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -239,8 +249,8 @@ const Ecommerce = () => {
           </h2>
           <p className="font-medium max-w-6xl mx-auto text-sm sm:text-lg lg:text-xl my-3">
             Hear from our satisfied clients who have transformed their ideas
-            into successful businesses with Apptunix&apos;s expert web development
-            services and solutions
+            into successful businesses with Apptunix&apos;s expert web
+            development services and solutions
           </p>
         </div>
         <div className="w-full sm:px-4 lg:px-12">

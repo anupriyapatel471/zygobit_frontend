@@ -62,8 +62,8 @@ export function BackgroundGradientCard() {
               src={card.imgSrc}
               alt={card.alt}
               // layout="intrinsic"
-              width={325} 
-              height={381}
+              width={70} 
+              height={70}
               className="object-contain" // Ensures no distortion
             />
             {/* <img src={card.imgSrc} alt={card.alt} /> */}

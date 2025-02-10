@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import NavigationMenuDemo from "./Navigationmenu/Navigationmenu";
 import Link from "next/link";
 import Image from "next/image";
+import Logo from "../../../../../public/images/Logo.png"
 
 const Header = () => {
   // State to track whether the mobile menu is open or closed
@@ -39,7 +40,7 @@ const Header = () => {
                     alt=""
                   /> */}
                    <Image
-                    src="/images/Logo.png"
+                    src={Logo}
                     alt="Logo"
                     width={128} // Set width and height for responsiveness
                     height={40} // Set height to maintain aspect ratio
@@ -109,7 +110,7 @@ const Header = () => {
                   alt=""
                 /> */}
                   <Image
-                  src="/images/logo.png"
+                  src={Logo}
                   alt="Logo"
                   width={128} // Set width and height for responsiveness
                   height={40} // Set height to maintain aspect ratio

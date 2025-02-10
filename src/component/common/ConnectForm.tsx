@@ -1,6 +1,7 @@
 // import Image from "next/image";
 import Image from "next/image";
 import { Input, TextArea } from "../../components/ui/contactInput";
+import Rocket from "../../../public/images/rocket.svg"
 
 const ConnectForm = () => {
   return (
@@ -43,14 +44,9 @@ const ConnectForm = () => {
               </div>
           <button className="group bg-gradient-custom overflow-hidden font-medium transition-all duration-500 btn-primary text-white relative">
             Let’s Build
-            {/* <img
-                  className="group-hover:translate-x-64 transition-all duration-1000"
-                  src="images/rocket.svg"
-                  alt=""
-                /> */}
             <Image
               className="group-hover:translate-x-64 transition-all duration-1000"
-              src="/images/rocket.svg"
+              src={Rocket}
               alt="Rocket Icon"
               // layout="responsive" // Use intrinsic to maintain aspect ratio
               width={13.73} // Set the width for the image (adjust as needed)

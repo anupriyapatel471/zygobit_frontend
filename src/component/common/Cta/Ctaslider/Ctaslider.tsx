@@ -64,15 +64,12 @@ const ReviewCard = ({
         "relative h-20 w-20 cursor-pointer overflow-hidden rounded-xl border-4 border-white/20",
       )}
     >
-      <div className="flex w-full h-full flex-row items-center justify-center">
-        {/* <img className="w-full h-full"  alt="" src={img} /> */}
+      <div className="flex w-full h-full flex-row items-center relative justify-center">
         <Image
           className="w-full h-full object-cover"
           src={img}
           alt={name}
-          // layout="responsive"
-          width={100}  // Adjust width as needed for your design
-          height={100} // Adjust height as needed for your design
+          fill
         />
       </div>
     </figure>

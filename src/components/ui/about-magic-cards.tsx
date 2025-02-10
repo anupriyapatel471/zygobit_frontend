@@ -4,6 +4,9 @@ import { motion, useMotionTemplate, useMotionValue } from "motion/react";
 import React, { useCallback, useEffect, useRef } from "react";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import newMoon from "../../../public/images/new_moon.png";
+
 
 interface MagicCardProps extends React.HTMLAttributes<HTMLDivElement> {
   gradientSize?: number;
@@ -80,7 +83,7 @@ export default function MagicCard({
     >
       <div className="absolute inset-px z-10 rounded-xl bg-black" />
       <div className="absolute top-0 left-0 size-full z-[11] p-[2px]">
-          <img className="size-full rounded-lg object-cover" src="/images/new_moon.png" alt="" />
+        <Image src={newMoon} fill className="rounded-lg object-cover" alt="New Moon" />
         </div>
       <div className="relative z-[111]">{children}</div>
       <motion.div

@@ -5,6 +5,10 @@ import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
+import Image from "next/image";
+import arrowLeft from "../../../public/images/arrow_left.svg";
+import arrowRight from "../../../public/images/arrow_right.svg";
+
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -216,7 +220,7 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <img className="h-4 w-4 sm:w-5 sm:h-5 text-themetext" src="/images/arrow_left.svg" />
+      <Image src={arrowLeft} className="h-4 w-4 sm:w-5 sm:h-5 text-themetext" width={20} height={20} alt="Icon" />
       <span className="sr-only">Previous slide</span>
     </Button>
   )
@@ -245,7 +249,7 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <img className="h-4 w-4 sm:w-5 sm:h-5 text-themetext" src="/images/arrow_right.svg" />
+      <Image src={arrowRight} className="h-4 w-4 sm:w-5 sm:h-5 text-themetext" width={20} height={20} alt="Icon" />
       <span className="sr-only">Next slide</span>
     </Button>
   )

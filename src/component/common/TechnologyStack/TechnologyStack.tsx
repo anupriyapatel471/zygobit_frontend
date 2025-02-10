@@ -2,6 +2,7 @@ import React from "react";
 import { BackgroundBeam } from "./Backgroundbeams/Backgroundbeams";
 import { OrbitingCircle } from "./Orbitingcircle/Orbitingcircle";
 import Image from "next/image";
+import planet from "../../../../public/images/planet.svg"
 
 const TechnologyStack = () => {
   return (
@@ -21,19 +22,18 @@ const TechnologyStack = () => {
         </div>
         <div className="w-full">
           <OrbitingCircle />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
+          <div className="w-[740px] h-[515px] max-w-[400px] sm:max-w-full sm:h-[430px] lg:h-auto absolute bottom-0 left-1/2 -translate-x-1/2">
             {/* <img
-              className="h-[515px] max-w-[400px] sm:max-w-full sm:h-[430px] lg:h-auto mx-auto relative sm:right-5"
+              className=" mx-auto relative sm:right-5"
               src="/images/planet.svg"
               alt=""
             /> */}
               <Image
-              src="/images/planet.svg"
+              src={planet}
               alt="Planet"
-              width={400}  // Set a base width
+              width={740}  // Set a base width
               height={515} // Set a base height
-              className="mx-auto relative sm:right-5"
-              sizes="(max-width: 640px) 100vw, 400px"  // Makes it responsive
+              className="mx-auto object-contain relative sm:right-5"
               priority // Optional: if it's an important image for page load
             />
           </div>

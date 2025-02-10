@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-
+import Logo from "../../../../../public/images/Logo.png"
 const Footer = () => {
   const productLinks = [
     { name: "Changelog", url: "#" },
@@ -33,7 +33,7 @@ const Footer = () => {
             <a href="">
               {/* <img className="w-[110px] sm:w-[160px]" src="/images/Logo.png" alt="" /> */}
               <Image
-                src="/images/Logo.png"
+                src={Logo}
                 alt="Logo"
                 width={160}  // Width for the logo
                 height={40}  // Height for the logo

@@ -21,6 +21,9 @@ import { BoxReveals } from "@/component/common/WebSales/WebSales";
 import { CardSpotlights } from "@/component/sevices/WebAppDevelopment/RobustWebCards/RobustWebCards";
 import { CustomWebCards } from "@/component/sevices/WebAppDevelopment/CustomWebCards/CustomWebCards";
 import ScrollTriggered from "@/component/sevices/WebAppDevelopment/WebScrollTriggered/WebScrollTriggered";
+import Sales from "../../../../public/images/sales.png";
+import Process from "../../../../public/images/process.png";
+import WebCustom from "../../../../public/images/web_custom.png";
 
 const WebAppDevelopment = () => {
   const clientSaysHeading = "We Are a Trusted Web App Development Company";
@@ -73,14 +76,9 @@ const WebAppDevelopment = () => {
       <section className="w-full relative px-4 lg:px-24 py-12 lg:py-20">
         <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap items-center gap-5 sm:gap-8">
           <div className="w-full lg:w-1/2">
-            {/* <img
-              className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
-              src="/images/sales.png"
-              alt=""
-            /> */}
             <Image
-              className="w-full object-cover rounded-xl"
-              src="/images/sales.png"
+              className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
+              src={Sales}
               alt="Sales"
               // layout="responsive"
               width={590}
@@ -124,14 +122,9 @@ const WebAppDevelopment = () => {
               data-aos="fade-left"
               className="w-full order-1 lg:order-none lg:w-2/5"
             >
-              {/* <img
-                className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
-                src="/images/process.png"
-                alt=""
-              /> */}
               <Image
-                className="w-full object-cover rounded-2xl"
-                src="/images/process.png"
+                className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
+                src={Process}
                 alt="Process"
                 // layout="responsive"
                 width={471}
@@ -141,14 +134,9 @@ const WebAppDevelopment = () => {
           </div>
           <div className="w-full flex flex-wrap lg:flex-nowrap gap-4 sm:gap-7 items-center">
             <div data-aos="fade-right" className="w-full lg:w-2/5">
-              {/* <img
-                className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
-                src="/images/process.png"
-                alt=""
-              /> */}
               <Image
-                className="w-full object-cover rounded-2xl"
-                src="/images/process.png"
+                className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
+                src={Process}
                 alt="Process"
                 width={471}
                 height={528}
@@ -183,14 +171,9 @@ const WebAppDevelopment = () => {
               data-aos="fade-left"
               className="w-full order-1 lg:order-none lg:w-2/5"
             >
-              {/* <img
-                className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
-                src="/images/process.png"
-                alt=""
-              /> */}
               <Image
-                className="w-full object-cover rounded-2xl"
-                src="/images/process.png"
+                className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
+                src={Process}
                 alt="Process"
                 // layout="responsive"
                 width={471}
@@ -207,13 +190,11 @@ const WebAppDevelopment = () => {
       {/* robust web dev */}
       <section className="w-full py-10 sm:py-16 z-10 bg-black relative overflow-hidden">
         <div className="absolute -bottom-[168%] -right-[98%] -z-10">
-          {/* <img className="w-full h-full" src="/images/bg_circle.jfif" alt="" /> */}
           <Image
-            className="object-cover"
+            className=""
             src="/images/bg_circle.jfif"
             alt="Background Circle"
-            width={40}
-            height={40}
+            fill
             // layout="fill"
           />
         </div>
@@ -285,14 +266,9 @@ const WebAppDevelopment = () => {
       <section className="w-full relative px-4 lg:px-24 pb-12 lg:py-20">
         <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap items-center gap-5 sm:gap-8">
           <div className="w-full lg:w-1/2">
-            {/* <img
-              className="w-full h-[350px] sm:h-[500px] lg:h-full rounded-xl"
-              src="/images/web_custom.png"
-              alt=""
-            /> */}
             <Image
-              className="w-full object-cover rounded-xl"
-              src="/images/web_custom.png"
+              className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
+              src={WebCustom}
               alt="web_custom"
               // layout="responsive"
               width={590}

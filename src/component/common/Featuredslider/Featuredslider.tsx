@@ -10,6 +10,11 @@ import {
 } from "@/components/ui/carousel";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+import featured from "../../../../public/images/featured_slick.svg";
+import playStore from "../../../../public/images/playstore.svg";
+import appleStore from "../../../../public/images/applestore.svg";
+import featuredMobile from "../../../../public/images/featured_mobile.png";
+
 
 export default function FeaturedSlider() {
   return (
@@ -20,13 +25,12 @@ export default function FeaturedSlider() {
             <div>
               <Card className="border-none rounded-xl">
                 <CardContent className="p-0">
-                  <div className="w-full bg-[linear-gradient(to_right,#EA580C_0%,#09090B_60%,#09090B_100%)] rounded-[20px] mt-9  sm:mt-11">
+                  <div className="w-full bg-gradient-to-r from-orange-600 to-[#09090B] lg:bg-[linear-gradient(to_right,#EA580C_0%,#09090B_60%,#09090B_100%)] rounded-[20px] mt-9  sm:mt-11">
                     <div className="w-full flex justify-between items-center pl-4 sm:pl-16 lg:pl-24 pr-4 sm:pr-12 py-8">
                       <div className="w-auto max-w-md text-white">
-                        {/* <img className="w-28 sm:w-auto" src="/images/featured_slick.svg" alt="" /> */}
                         <Image
                           className="w-28 sm:w-auto"
-                          src="/images/featured_slick.svg"
+                          src={featured}
                           alt="Featured Slick"
                           width={150} // Width for the image
                           height={50} // Height for the image
@@ -78,7 +82,7 @@ export default function FeaturedSlider() {
                             <a href="">
                               {/* <img src="/images/playstore.svg" alt="" /> */}
                               <Image
-                                src="/images/playstore.svg"
+                                src={playStore}
                                 alt="Playstore"
                                 width={100}  // Width for the image
                                 height={30}  // Height for the image
@@ -89,7 +93,7 @@ export default function FeaturedSlider() {
                             <a href="">
                               {/* <img src="/images/applestore.svg" alt="" /> */}
                               <Image
-                                src="/images/applestore.svg"
+                                src={appleStore}
                                 alt="AppStore"
                                 width={100}  // Width for the image
                                 height={30}  // Height for the image
@@ -110,7 +114,7 @@ export default function FeaturedSlider() {
                         /> */}
                          <Image
                           className="w-full"
-                          src="/images/featured_mobile.png"
+                          src={featuredMobile}
                           alt="Featured Mobile"
                           width={500}  // Width for the image
                           height={800}  // Height for the image

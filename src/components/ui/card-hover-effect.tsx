@@ -3,6 +3,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import dollarIcon from "../../../public/images/dollar_icon.svg"
+import grayStar from "../../../public/images/gray_stars_bg.png"
 
 export const HoverEffect = ({
   items,
@@ -77,7 +79,7 @@ export const Card = ({
         <span>
           {/* <img src="/images/dollar_icon.svg" alt="" /> */}
         <Image
-          src="/images/dollar_icon.svg"
+          src={dollarIcon}
           alt="Dollar Icon"
           width={50}  // Set the width of the image
           height={50} // Set the height of the image
@@ -89,7 +91,7 @@ export const Card = ({
         {/* <img className="w-full h-full" src="/images/gray_stars_bg.png" alt="" /> */}
         <Image
           className="w-full h-full object-cover"
-          src="/images/gray_stars_bg.png"
+          src={grayStar}
           alt="Stars Background"
           height={40}
           width={40}

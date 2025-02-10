@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/carousel";
 import { MobileAppCards } from "../../common/mobileAppCard/mobileAppCard";
 import Image from "next/image";
+import laptop from "../../../../public/images/laptop.png";
+import laptopTwo from "../../../../public/images/laptop_two.png";
 
 export default function MobiledevSlider() {
   return (
@@ -39,7 +41,7 @@ export default function MobiledevSlider() {
                         </div>
                         <Image
                               className="rounded-2xl"
-                              src="/images/laptop.png"
+                              src={laptop}
                               alt="Laptop Image"
                               // height={}
                               // width={}
@@ -48,7 +50,7 @@ export default function MobiledevSlider() {
                           {/* <img className="w-full rounded-2xl h-[250px] sm:h-[300px] lg:h-[350px]" src="/images/laptop_two.png" alt="" /> */}
                           <Image
                               className="rounded-2xl"
-                              src="/images/laptop_two.png"
+                              src={laptopTwo}
                               alt="Laptop Two Image"
                               // height={}
                               // width={}

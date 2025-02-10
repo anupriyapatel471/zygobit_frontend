@@ -1,41 +1,47 @@
 import { cn } from "@/lib/utils";
-import  Marquee  from "../../../components/ui/marquee";
+import Marquee from "../../../components/ui/marquee";
 import Image from "next/image";
 
 const reviews = [
   {
     name: "Education and E-Learning",
-    username: "We specialize in UI/UX design audits for educational platforms, creating interactive and engaging user experiences. Our designs keep students engaged with easy navigation and content accessibility",
+    username:
+      "We specialize in UI/UX design audits for educational platforms, creating interactive and engaging user experiences. Our designs keep students engaged with easy navigation and content accessibility",
     body: "I've never seen anything like this before. It's amazing. I love it.",
     img: "/images/education.png",
   },
   {
     name: "Education and E-Learning",
-    username: "We specialize in UI/UX design audits for educational platforms, creating interactive and engaging user experiences. Our designs keep students engaged with easy navigation and content accessibility",
+    username:
+      "We specialize in UI/UX design audits for educational platforms, creating interactive and engaging user experiences. Our designs keep students engaged with easy navigation and content accessibility",
     body: "I don't know what to say. I'm speechless. This is amazing.",
     img: "/images/education.png",
   },
   {
     name: "Education and E-Learning",
-    username: "We specialize in UI/UX design audits for educational platforms, creating interactive and engaging user experiences. Our designs keep students engaged with easy navigation and content accessibility",
+    username:
+      "We specialize in UI/UX design audits for educational platforms, creating interactive and engaging user experiences. Our designs keep students engaged with easy navigation and content accessibility",
     body: "I'm at a loss for words. This is amazing. I love it.",
     img: "/images/education.png",
   },
   {
     name: "Education and E-Learning",
-    username: "We specialize in UI/UX design audits for educational platforms, creating interactive and engaging user experiences. Our designs keep students engaged with easy navigation and content accessibility",
+    username:
+      "We specialize in UI/UX design audits for educational platforms, creating interactive and engaging user experiences. Our designs keep students engaged with easy navigation and content accessibility",
     body: "I'm at a loss for words. This is amazing. I love it.",
     img: "/images/education.png",
   },
   {
     name: "Education and E-Learning",
-    username: "We specialize in UI/UX design audits for educational platforms, creating interactive and engaging user experiences. Our designs keep students engaged with easy navigation and content accessibility",
+    username:
+      "We specialize in UI/UX design audits for educational platforms, creating interactive and engaging user experiences. Our designs keep students engaged with easy navigation and content accessibility",
     body: "I'm at a loss for words. This is amazing. I love it.",
     img: "/images/education.png",
   },
   {
     name: "Education and E-Learning",
-    username: "We specialize in UI/UX design audits for educational platforms, creating interactive and engaging user experiences. Our designs keep students engaged with easy navigation and content accessibility",
+    username:
+      "We specialize in UI/UX design audits for educational platforms, creating interactive and engaging user experiences. Our designs keep students engaged with easy navigation and content accessibility",
     body: "I'm at a loss for words. This is amazing. I love it.",
     img: "/images/education.png",
   },
@@ -48,8 +54,8 @@ const ReviewCard = ({
   img,
   name,
   username,
-  // body,
-}: {
+}: // body,
+{
   img: string;
   name: string;
   username: string;
@@ -60,26 +66,27 @@ const ReviewCard = ({
       className={cn(
         "relative max-w-[290px] sm:max-w-sm lg:max-w-[450px] cursor-pointer overflow-hidden  border",
         // dark styles
-        "border-gray-50/[.1] bg-gray-50/[.10] hover:bg-gray-50/[.15]",
+        "border-gray-50/[.1] bg-gray-50/[.10] hover:bg-gray-50/[.15]"
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        {/* <img className="w-full h-[300px] sm:h-[400px] lg:h-[450px] object-cover" width="32" height="32" alt="" src={img} /> */}
-        <Image
+        {/* <img className="w-full  object-cover" width="32" height="32" alt="" src={img} /> */}
+        <div className="w-[400px] h-[300px] sm:h-[400px] lg:h-[450px]">
+          <Image
             className="object-cover"
             src={img}
             alt={name}
-            height={300}
-            width={400}
+            fill
           />
-        <div className="absolute top-0 left-0 size-full bg-black/50">
-
         </div>
+        <div className="absolute top-0 left-0 size-full bg-black/50"></div>
         <div className="flex px-4 sm:px-10  absolute top-1/2 -translate-y-1/2 left-0 flex-col">
           <figcaption className="text-lg sm:text-xl lg:text-2xl font-semibold text-white">
             {name}
           </figcaption>
-          <p className="text-sm sm:text-lg lg:text-xl mt-2 sm:mt-5 lg:mt-10 ">{username}</p>
+          <p className="text-sm sm:text-lg lg:text-xl mt-2 sm:mt-5 lg:mt-10 ">
+            {username}
+          </p>
         </div>
       </div>
     </figure>

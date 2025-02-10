@@ -1,4 +1,6 @@
 import MagicCard from "@/components/ui/about-magic-cards";
+import Image from "next/image";
+import Innovation from "../../../public/images/inovation.svg";
  
 export default function AboutValueCards() {
   return (
@@ -12,7 +14,7 @@ export default function AboutValueCards() {
         gradientColor="#D9D9D955"
       >
         <span>
-          <img src="/images/inovation.svg" alt="" />
+          <Image src={Innovation} width={66} height={66} alt="icon" />
         </span>
         <div className="w-full px-4">
           <h3 className="font-semibold text-base sm:text-lg lg:text-xl my-2">
@@ -30,7 +32,7 @@ export default function AboutValueCards() {
         gradientColor="#D9D9D955"
       >
         <span>
-          <img src="/images/inovation.svg" alt="" />
+        <Image src={Innovation} width={66} height={66} alt="icon" />
         </span>
         <div className="w-full px-4">
           <h3 className="font-semibold text-base sm:text-lg lg:text-xl my-2">
@@ -48,7 +50,7 @@ export default function AboutValueCards() {
         gradientColor="#D9D9D955"
       >
         <span>
-          <img src="/images/inovation.svg" alt="" />
+        <Image src={Innovation} width={66} height={66} alt="icon" />
         </span>
         <div className="w-full px-4">
           <h3 className="font-semibold text-base sm:text-lg lg:text-xl my-2">
@@ -66,7 +68,7 @@ export default function AboutValueCards() {
         gradientColor="#D9D9D955"
       >
         <span>
-          <img src="/images/inovation.svg" alt="" />
+        <Image src={Innovation} width={66} height={66} alt="icon" />
         </span>
         <div className="w-full px-4">
           <h3 className="font-semibold text-base sm:text-lg lg:text-xl my-2">

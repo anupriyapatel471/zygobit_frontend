@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import { TracingBeam } from "../../../components/ui/tracing-beam";
+import calendarIcon from "../../../../public/images/calendar_icon.svg";
 
 export function TracingBeams() {
   return (
@@ -13,11 +14,19 @@ export function TracingBeams() {
             <h2 className=" text-white font-bold text-2xl sm:text-4xl w-fit mb-2  sm:mb-4">
               {item.badge}
             </h2>
-            <b className="font-semibold text-sm block my-3">Tag: #Technology, #MobileApps</b>
+            <b className="font-semibold text-sm block my-3">
+              Tag: #Technology, #MobileApps
+            </b>
             <span className="flex items-center gap-2 text-xs ">
-                <img src="/images/calendar_icon.svg" alt="" />
-                Published on January 22, 2025
-              </span>
+              <Image
+                className=" object-cover"
+                src={calendarIcon}
+                alt="icon"
+                width={18}
+                height={18}
+              />
+              Published on January 22, 2025
+            </span>
 
             <div className="text-sm sm:text-lg lg:text-xl  prose prose-sm dark:prose-invert">
               {item?.image && (
@@ -31,9 +40,7 @@ export function TracingBeams() {
               )}
               {item.description}
             </div>
-            <p className="text-sm sm:text-lg lg:text-xl"> 
-              {item.title}
-            </p>
+            <p className="text-sm sm:text-lg lg:text-xl">{item.title}</p>
           </div>
         ))}
       </div>

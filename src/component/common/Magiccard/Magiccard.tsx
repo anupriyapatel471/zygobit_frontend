@@ -1,5 +1,7 @@
 import MagicCard from "@/components/ui/magic-card";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import arrowRight from "../../../../public/images/arrow_right.svg";
 
 export function MagicCardDemo() {
   return (
@@ -17,9 +19,12 @@ export function MagicCardDemo() {
             Custom Solution Architects
           </h3>
           <button className="order-1 sm:order-none mb-0 w-[52px] text-white btn-primary bg-gradient-custom">
-            <img
+            <Image
               className="brightness-0 invert"
-              src="/images/arrow_right.svg"
+              width={20}
+              height={10}
+              src={arrowRight}
+              alt="Arrow right"
             />
           </button>
         </div>
@@ -34,9 +39,12 @@ export function MagicCardDemo() {
             Application Innovators
           </h3>
           <button className="order-1 sm:order-none mb-0 w-[52px] text-white btn-primary bg-gradient-custom">
-            <img
+            <Image
               className="brightness-0 invert"
-              src="/images/arrow_right.svg"
+              width={20}
+              height={10}
+              src={arrowRight}
+              alt="Arrow right"
             />
           </button>
         </div>
@@ -54,9 +62,12 @@ export function MagicCardDemo() {
             Performance Optimization Experts
           </h3>
           <button className="order-1 sm:order-none mb-0 w-[52px] text-white btn-primary bg-gradient-custom">
-            <img
+            <Image
               className="brightness-0 invert"
-              src="/images/arrow_right.svg"
+              width={20}
+              height={10}
+              src={arrowRight}
+              alt="Arrow right"
             />
           </button>
         </div>

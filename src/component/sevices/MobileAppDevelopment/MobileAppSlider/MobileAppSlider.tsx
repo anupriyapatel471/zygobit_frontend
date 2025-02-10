@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 // import Image from "next/image";
+import mobileApp from "../../../../../public/images/mobile_app.png"
 
 export default function MobileAppSlider() {
   return (
@@ -23,7 +24,7 @@ export default function MobileAppSlider() {
                   <div className="w-full bg-[#D9D9D90D] flex flex-wrap lg:flex-nowrap items-center rounded-2xl overflow-hidden">
                     <div className="w-full lg:w-2/5">
                     <Image
-                        src="/images/mobile_app.png" // Your image source
+                        src={mobileApp} // Your image source
                         alt="Mobile App"
                         width={500}  // Set a fixed width
                         height={300} // Set a fixed height
