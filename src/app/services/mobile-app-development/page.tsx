@@ -1,52 +1,41 @@
-"use client";
 
-import WeDeliver from "@/component/common/WeDeliver/WeDeliver";
-import AppleCardsCarousel from "@/component/sevices/MobileAppDevelopment/AppleCardsCarousel/AppleCardsCarousel";
-import Cta from "@/component/common/Cta/Cta";
+import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
-import React, { useEffect } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { ThreeDCards } from "@/component/sevices/MobileAppDevelopment/ThreedCards/ThreedCards";
-import MobileAppSlider from "@/component/sevices/MobileAppDevelopment/MobileAppSlider/MobileAppSlider";
-import HeroParalax from "@/component/common/HeroParallax/HeroParallax";
-import FeaturedSlider from "@/component/common/Featuredslider/Featuredslider";
-import { Testimonials } from "@/component/common/Testimonials/Testimonials";
-import ContactForm from "@/component/common/ContactForm/ContactForm";
-import TechnologyStack from "@/component/common/TechnologyStack/TechnologyStack";
-import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
-import Blog from "@/component/common/Blog/Blog";
-import FaqSection from "@/component/sevices/Common/FaqSection/FaqSection";
-import { MobileAppGrid } from "@/component/common/MobileAppGrid/MobileAppGrid";
-import SharedLayoutAnimation from "@/component/sevices/MobileAppDevelopment/MobileDevTab/MobileDevTab";
+import BoostBussiness from "@/component/sevices/Common/BoostBussiness/BoostBussiness";
+import ClientSays from "@/component/common/ClientSays/ClientSays";
+import AOSInitializer from "@/component/common/AOSInitializer";
+
+const WeDeliver = dynamic(() => import("@/component/common/WeDeliver/WeDeliver") );
+const AppleCardsCarousel = dynamic(() =>import("@/component/sevices/MobileAppDevelopment/AppleCardsCarousel/AppleCardsCarousel") );
+const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
+const ThreeDCards = dynamic(() =>import("@/component/sevices/MobileAppDevelopment/ThreedCards/ThreedCards").then((mod) => mod.ThreeDCards) );
+const MobileAppSlider = dynamic(() =>import("@/component/sevices/MobileAppDevelopment/MobileAppSlider/MobileAppSlider") );
+const HeroParalax = dynamic(() => import("@/component/common/HeroParallax/HeroParallax") );
+const FeaturedSlider = dynamic(() => import("@/component/common/Featuredslider/Featuredslider") );
+const ContactForm = dynamic(() => import("@/component/common/ContactForm/ContactForm") );
+const TechnologyStack = dynamic(() => import("@/component/common/TechnologyStack/TechnologyStack") );
+const HeroBanner = dynamic(() => import("@/component/common/HeroBanner/HeroBanner") );
+const Blog = dynamic(() => import("@/component/common/Blog/Blog") );
+const FaqSection = dynamic(() => import("@/component/sevices/Common/FaqSection/FaqSection") );
+const MobileAppGrid = dynamic(() =>import("@/component/common/MobileAppGrid/MobileAppGrid").then((mod) => mod.MobileAppGrid) );
+const SharedLayoutAnimation = dynamic(() =>import("@/component/sevices/MobileAppDevelopment/MobileDevTab/MobileDevTab") );
 
 const MobileAppDevelopment = () => {
-  useEffect(() => {
-    Aos.init({});
-  }, []);
 
+  const heading ="Boost Business Growth with Custom App Solutions"
+  const paragraph= "Our team is passionate about experimenting with next-gen tech that flawlessly aligns with your brand, vision and target audience. As a custom mobile application development services provider we use a design sprint-centric methodology to identify opportunities to drive growth outside your core business."
+  const clientHeading ="Hear It from Our Happy Clients!"
+  const clientSaysDetails ="See how our custom app development services have transformed businesses and driven success for our happy clients"
   return (
     <>
-      {/* Hero banner */}
+    <AOSInitializer />
+         <main>
       <HeroBanner />
-
-      {/* about us */}
       <WeDeliver />
-
-      {/* boost bussiness  */}
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pb-14 lg:pb-24">
-        <div className="w-full px-4 lg:px-24 mt-10 lg:mt-16 mb-8 sm:mb-12 lg:mb-20 sm:text-center inline-block">
-          <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl">
-            Boost Business Growth with Custom App Solutions
-          </h2>
-          <p className=" sm:font-medium text-sm sm:text-lg lg:text-xl mt-2 px-0 lg:px-20">
-            Our team is passionate about experimenting with next-gen tech that
-            flawlessly aligns with your brand, vision and target audience. As a
-            custom mobile application development services provider we use a
-            design sprint-centric methodology to identify opportunities to drive
-            growth outside your core business.
-          </p>
-        </div>
+        
+      <BoostBussiness heading={heading} paragraph={paragraph} />
+
         <div className="w-full">
           <AppleCardsCarousel />
         </div>
@@ -58,10 +47,8 @@ const MobileAppDevelopment = () => {
         </div>
       </section>
 
-      {/* Cta section */}
       <Cta Aurora={"Aurora"} />
 
-      {/* advance tech */}
       <section className="w-full lg:mt-10 inline-block">
         <div className="w-full px-4 lg:px-0 sm:text-center mb-8 sm:mb-16">
           <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl ">
@@ -83,10 +70,8 @@ const MobileAppDevelopment = () => {
         </div>
       </section>
 
-      {/* Cta section */}
       <Cta Aurora={"Aurora"} vortex={""} content={"Globe"} />
 
-      {/* slider */}
       <section className="w-full lg:pb-10">
         <div className="w-full px-4 lg:px-20 sm:text-center mb-9">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradiant-custom">
@@ -109,7 +94,6 @@ const MobileAppDevelopment = () => {
         </div>
       </section>
 
-      {/* Cta section */}
       <Cta Aurora={"Aurora"} vortex={""} content={""} />
 
       <section className="w-full">
@@ -129,10 +113,8 @@ const MobileAppDevelopment = () => {
         </div>
       </section>
 
-      {/* Cta section */}
       <Cta Aurora={"Aurora"} vortex={""} content={""} />
 
-      {/* Revolutionizing business */}
       <section
         data-aos="fade-up"
         className="w-full relative  py-0 sm:py-0 lg:py-0 overflow-hidden "
@@ -140,10 +122,7 @@ const MobileAppDevelopment = () => {
         <HeroParalax />
       </section>
 
-      {/* Cta section */}
       <Cta Aurora={"Aurora"} vortex={""} content={""} />
-
-      {/* slider */}
 
       <section className="w-full sm:pt-10 pb-32 lg:pb-40 bg-black">
         <div className="w-full px-4 lg:px-20 sm:text-center mb-8 sm:mb-12 lg:mb-12">
@@ -160,7 +139,6 @@ const MobileAppDevelopment = () => {
         </div>
       </section>
 
-      {/* Featured Projects */}
       <section className="w-full px-4 lg:px-11 py-10 sm:py-14 overflow-hidden">
         <div className="w-full  sm:text-center" data-aos="fade-right">
           <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
@@ -176,33 +154,16 @@ const MobileAppDevelopment = () => {
         </div>
       </section>
 
-      {/* Technology stack */}
       <TechnologyStack />
 
-      {/* client says */}
-      <section className="w-full px-4 sm:px-5 lg:px-14 mt-4 sm:mt-16   lg:mt-24 mb-12 sm:mb-16 lg:mb-20 overflow-hidden">
-        <div data-aos="fade-left" className="w-full sm:text-center">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradient-custom">
-            Hear It from Our Happy Clients!
-          </h2>
-          <p className="font-medium max-w-6xl mx-auto text-sm sm:text-lg lg:text-xl my-3">
-            See how our custom app development services have
-            transformed businesses and driven success for our happy clients
-          </p>
-        </div>
-        <div className="w-full sm:px-4 lg:px-12">
-          <Testimonials />
-        </div>
-      </section>
+      <ClientSays clientHeading={clientHeading} clientSaysDetails={clientSaysDetails}/>
 
-      {/* Featured Blogs section */}
       <Blog />
 
-      {/* Faq */}
       <FaqSection />
 
-      {/* contact form */}
       <ContactForm />
+      </main>
     </>
   );
 };

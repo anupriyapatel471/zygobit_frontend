@@ -1,27 +1,56 @@
-"use client";
-
-import WeDeliver from "@/component/common/WeDeliver/WeDeliver";
-import Blog from "@/component/common/Blog/Blog";
-import ContactForm from "@/component/common/ContactForm/ContactForm";
-import Cta from "@/component/common/Cta/Cta";
-import FaqSection from "@/component/sevices/Common/FaqSection/FaqSection";
-import FeaturedSlider from "@/component/common/Featuredslider/Featuredslider";
-import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
-import WebDevProcess from "@/component/sevices/Common/WebDevProcess/WebDevProcess";
-import React, { useEffect } from "react";
-import Aos from "aos";
-import { ShineBorderCards } from "@/component/sevices/MachineLearning/ShineBorderCards/ShineBorderCards";
+import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
-import { AwareHoverCards } from "@/component/sevices/MachineLearning/AwareHoverCards/AwareHoverCards";
-import TechnologyStack from "@/component/common/TechnologyStack/TechnologyStack";
-import ClientSays from "@/component/common/ClientSays/ClientSays";
-import { WebSlider } from "@/component/ui/WebSlider/WebSlider";
-import GridBoxes from "@/component/common/GridBoxes/GridBoxes";
+import AOSInitializer from "@/component/common/AOSInitializer";
 
+const WeDeliver = dynamic(() =>
+  import("@/component/common/WeDeliver/WeDeliver") 
+);
+const Blog = dynamic(() =>
+  import("@/component/common/Blog/Blog") 
+);
+const ContactForm = dynamic(() =>
+  import("@/component/common/ContactForm/ContactForm") 
+);
+const Cta = dynamic(() =>
+  import("@/component/common/Cta/Cta") 
+);
+const FaqSection = dynamic(() =>
+  import("@/component/sevices/Common/FaqSection/FaqSection") 
+);
+const FeaturedSlider = dynamic(() =>
+  import("@/component/common/Featuredslider/Featuredslider") 
+);
+const HeroBanner = dynamic(() =>
+  import("@/component/common/HeroBanner/HeroBanner") 
+);
+const WebDevProcess = dynamic(() =>
+  import("@/component/sevices/Common/WebDevProcess/WebDevProcess") 
+);
+const ShineBorderCards = dynamic(() =>
+  import("@/component/sevices/MachineLearning/ShineBorderCards/ShineBorderCards").then(
+    (mod) => mod.ShineBorderCards
+  ) 
+);
+const AwareHoverCards = dynamic(() =>
+  import("@/component/sevices/MachineLearning/AwareHoverCards/AwareHoverCards").then(
+    (mod) => mod.AwareHoverCards
+  ) 
+);
+const TechnologyStack = dynamic(() =>
+  import("@/component/common/TechnologyStack/TechnologyStack") 
+);
+const ClientSays = dynamic(() =>
+  import("@/component/common/ClientSays/ClientSays") 
+);
+const WebSlider = dynamic(() =>
+  import("@/component/sevices/Common/WebSlider/WebSlider").then(
+    (mod) => mod.WebSlider
+  ) 
+);
+const GridBoxes = dynamic(() =>
+  import("@/component/common/GridBoxes/GridBoxes") 
+);
 const MachineLearning = () => {
-  useEffect(() => {
-    Aos.init({});
-  }, []);
 
   const clientSaysHeading = "We Are a Trusted Web App Development Company";
   const clientSaysDetails =
@@ -33,10 +62,9 @@ const MachineLearning = () => {
 
   return (
     <>
-      {/* Hero banner */}
+       <AOSInitializer />
+           <main>
       <HeroBanner />
-
-      {/* about us */}
       <WeDeliver />
 
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pb-14 lg:pb-24">
@@ -62,10 +90,8 @@ const MachineLearning = () => {
         </div>
       </section>
 
-      {/* Cta section */}
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
 
-      {/* why choose us  */}
       <section
         data-aos="fade-up"
         className="w-full pt-10 sm:pt-16 bg-black relative"
@@ -75,7 +101,6 @@ const MachineLearning = () => {
         </div>
       </section>
 
-      {/* Featured Projects */}
       <section className="w-full px-4 lg:px-11 pb-10 sm:pb-0 pt-10  lg:py-14 overflow-hidden">
         <div className="w-full  sm:text-center" data-aos="fade-right">
           <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
@@ -109,13 +134,11 @@ const MachineLearning = () => {
         </div>
       </section>
 
-      {/* client says */}
       <ClientSays
         clientHeading={clientSaysHeading}
         clientSaysDetails={clientSaysDetails}
       />
 
-      {/* Cta section */}
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
 
       <section className="w-full pb-12 overflow-hidden">
@@ -139,23 +162,21 @@ const MachineLearning = () => {
         </div>
       </section>
 
-      {/* Cta section */}
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
 
-      {/* technology stack */}
       <TechnologyStack />
 
-      {/* slider */}
-      <GridBoxes GridBoxesDetail={GridBoxesDetail} GridBoxesHeading={GridBoxesHeading} />
+      <GridBoxes
+        GridBoxesDetail={GridBoxesDetail}
+        GridBoxesHeading={GridBoxesHeading}
+      />
 
-      {/* featured blog */}
       <Blog />
 
-      {/* Faq */}
       <FaqSection />
 
-      {/* contact form */}
       <ContactForm />
+      </main>
     </>
   );
 };

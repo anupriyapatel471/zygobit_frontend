@@ -1,3 +1,4 @@
+"use client"
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
 import { useEffect, useState } from "react";
@@ -88,9 +89,7 @@ export default function MarqueeVertical() {
     const checkMobileScreen = () => {
       setVertical(!window.matchMedia("(max-width: 768px)").matches);
     };
- 
-    // Initial check
-    checkMobileScreen();
+     checkMobileScreen();
  
     // Add event listener for screen resizing
     window.addEventListener("resize", checkMobileScreen);

@@ -6,15 +6,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Header = () => {
-  // State to track whether the mobile menu is open or closed
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Function to toggle the mobile menu
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
-  // Function to close the mobile menu
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
@@ -92,7 +89,7 @@ const Header = () => {
 
         <div
           x-show="open"
-          className={`${isMenuOpen ? "active" : "hidden"} mobile-view`} // Toggle 'hidden' class based on state
+          className={`${isMenuOpen ? "active" : "hidden"} mobile-view`}
           role="dialog"
           aria-modal="true"
         >

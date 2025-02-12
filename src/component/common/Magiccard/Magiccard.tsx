@@ -1,5 +1,4 @@
 import MagicCard from "@/components/ui/magic-card";
-import { ArrowRight } from "lucide-react";
 
 export function MagicCardDemo() {
   return (

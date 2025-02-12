@@ -32,7 +32,7 @@ export function WebSlider() {
                     <p className="relative z-10 text-sm sm:text-base my-5">
                       Being a leading custom web development company, we clearly
                       defined the scope. This model offers a set budget and
-                      timeline. It's the perfect fit for businesses that focus
+                      timeline. It&apos;s the perfect fit for businesses that focus
                       on small to mid-sized projects with minimal changes in
                       requirements.
                     </p>

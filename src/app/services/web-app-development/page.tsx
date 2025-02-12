@@ -1,44 +1,110 @@
-"use client";
-
-import WeDeliver from "@/component/common/WeDeliver/WeDeliver";
-import Blog from "@/component/common/Blog/Blog";
-import ContactForm from "@/component/common/ContactForm/ContactForm";
-import FaqSection from "@/component/sevices/Common/FaqSection/FaqSection";
-import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
-import TechnologyStack from "@/component/common/TechnologyStack/TechnologyStack";
+import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
-import React, { useEffect } from "react";
-import Aos from "aos";
-
-
-import { WebSlider } from "@/component/ui/WebSlider/WebSlider";
-import Cta from "@/component/common/Cta/Cta";
-import WebDevProcess from "@/component/sevices/Common/WebDevProcess/WebDevProcess";
-import ClientSays from "@/component/common/ClientSays/ClientSays";
 import Image from "next/image";
-import HeroParalax from "@/component/common/HeroParallax/HeroParallax";
-import { BoxReveals } from "@/component/common/WebSales/WebSales";
-import { CardSpotlights } from "@/component/sevices/WebAppDevelopment/RobustWebCards/RobustWebCards";
-import { CustomWebCards } from "@/component/sevices/WebAppDevelopment/CustomWebCards/CustomWebCards";
-import ScrollTriggered from "@/component/sevices/WebAppDevelopment/WebScrollTriggered/WebScrollTriggered";
+import ApplicationAgeny from "@/component/sevices/Common/ApplicationAgeny/ApplicationAgeny";
+import AOSInitializer from "@/component/common/AOSInitializer";
+
+const WeDeliver = dynamic(
+  () => import("@/component/common/WeDeliver/WeDeliver"),
+  { ssr: false }
+);
+
+const Blog = dynamic(
+  () => import("@/component/common/Blog/Blog"),
+  { ssr: false }
+);
+
+const ContactForm = dynamic(
+  () => import("@/component/common/ContactForm/ContactForm"),
+  { ssr: false }
+);
+
+const FaqSection = dynamic(
+  () => import("@/component/sevices/Common/FaqSection/FaqSection"),
+  { ssr: false }
+);
+
+const HeroBanner = dynamic(
+  () => import("@/component/common/HeroBanner/HeroBanner"),
+  { ssr: false }
+);
+
+const TechnologyStack = dynamic(
+  () => import("@/component/common/TechnologyStack/TechnologyStack"),
+  { ssr: false }
+);
+const WebSlider = dynamic(
+  () =>
+    import("@/component/sevices/Common/WebSlider/WebSlider").then(
+      (mod) => mod.WebSlider
+    ),
+  { ssr: false }
+);
+
+const Cta = dynamic(
+  () => import("@/component/common/Cta/Cta"),
+  { ssr: false }
+);
+
+const WebDevProcess = dynamic(
+  () => import("@/component/sevices/Common/WebDevProcess/WebDevProcess"),
+  { ssr: false }
+);
+
+const ClientSays = dynamic(
+  () => import("@/component/common/ClientSays/ClientSays"),
+  { ssr: false }
+);
+
+const HeroParalax = dynamic(
+  () => import("@/component/common/HeroParallax/HeroParallax"),
+  { ssr: false }
+);
+const BoxReveals = dynamic(
+  () =>
+    import("@/component/common/WebSales/WebSales").then(
+      (mod) => mod.BoxReveals
+    ),
+  { ssr: false }
+);
+
+const CardSpotlights = dynamic(
+  () =>
+    import("@/component/sevices/WebAppDevelopment/RobustWebCards/RobustWebCards").then(
+      (mod) => mod.CardSpotlights
+    ),
+  { ssr: false }
+);
+
+const CustomWebCards = dynamic(
+  () =>
+    import("@/component/sevices/WebAppDevelopment/CustomWebCards/CustomWebCards").then(
+      (mod) => mod.CustomWebCards
+    ),
+  { ssr: false }
+);
+
+const ScrollTriggered = dynamic(
+  () =>
+    import("@/component/sevices/WebAppDevelopment/WebScrollTriggered/WebScrollTriggered"),
+  { ssr: false }
+);
 
 const WebAppDevelopment = () => {
   const clientSaysHeading = "We Are a Trusted Web App Development Company";
   const clientSaysDetails =
     "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions.";
 
-  useEffect(() => {
-    Aos.init({});
-  }, []);
+  const applicationHeading ="Why Partner with Our Web Application Agency?"
+  const applicationDetails = "Partnering with our custom web application development company in USA unlocks greater profitability, fosters continuous innovation, and accelerates your business growth globally."
 
   return (
     <>
-      Hero banner
+     <AOSInitializer />
+     <main>
+
       <HeroBanner />
-
-      {/* about us We deliver*/}
       <WeDeliver />
-
       <section className="w-full pt-10 sm:pt-16 pb-12 lg:pb-40 bg-gradient-to-b via-black from-orange-600 to-black">
         <div className="w-full px-4 lg:px-0 sm:text-center">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold">
@@ -57,11 +123,8 @@ const WebAppDevelopment = () => {
           </div>
         </div>
       </section>
-
-      {/* Cta section */}
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
-      {/* web application */}
-     
+
       <section
         data-aos="fade-up"
         className="w-full relative  py-0 sm:py-0 lg:py-0 overflow-hidden "
@@ -69,7 +132,6 @@ const WebAppDevelopment = () => {
         <HeroParalax />
       </section>
 
-      {/* web app sales */}
       <section className="w-full relative px-4 lg:px-24 py-12 lg:py-20">
         <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap items-center gap-5 sm:gap-8">
           <div className="w-full lg:w-1/2">
@@ -92,119 +154,9 @@ const WebAppDevelopment = () => {
           </div>
         </div>
       </section>
-
-      {/* web application  ageny*/}
-      <section className="w-full relative pb-10 sm:py-12 lg:py-16 overflow-hidden">
-        <div className="w-full px-4 lg:px-0 sm:text-center">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom font-bold">
-            Why Partner with Our Web Application Agency?
-          </h2>
-          <p className="sm:font-medium max-w-6xl mx-auto text-sm sm:text-lg lg:text-xl mt-3">
-            Partnering with our custom web application development company in
-            USA unlocks greater profitability, fosters continuous innovation,
-            and accelerates your business growth globally.
-          </p>
-        </div>
-        <div className="w-full  grid grid-cols-1 gap-10 sm:gap-14 lg:gap-10 px-4 lg:px-24 mt-10 sm:mt-12 lg:mt-24">
-          <div className="w-full flex flex-wrap lg:flex-nowrap gap-4 sm:gap-7 items-center">
-            <div
-              data-aos="fade-right"
-              className="w-full order-2 lg:order-none lg:w-3/5"
-            >
-              <h3 className="font-semibold text-xl sm:text-3xl lg:text-4xl">
-                Streamline Business Process
-              </h3>
-              <p className="text-sm sm:text-xl lg:text-2xl mt-2 sm:mt-3 lg:mt-10">
-                Our custom web application development firm streamlines your
-                business processes and simplifies complex operations for
-                enhanced productivity.
-              </p>
-            </div>
-            <div
-              data-aos="fade-left"
-              className="w-full order-1 lg:order-none lg:w-2/5"
-            >
-              {/* <img
-                className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
-                src="/images/process.png"
-                alt=""
-              /> */}
-              <Image
-                className="w-full object-cover rounded-2xl"
-                src="/images/process.png"
-                alt="Process"
-                // layout="responsive"
-                width={471}
-                height={528}
-              />
-            </div>
-          </div>
-          <div className="w-full flex flex-wrap lg:flex-nowrap gap-4 sm:gap-7 items-center">
-            <div data-aos="fade-right" className="w-full lg:w-2/5">
-              {/* <img
-                className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
-                src="/images/process.png"
-                alt=""
-              /> */}
-              <Image
-                className="w-full object-cover rounded-2xl"
-                src="/images/process.png"
-                alt="Process"
-                width={471}
-                height={528}
-              />
-            </div>
-            <div data-aos="fade-left" className="w-full lg:w-3/5">
-              <h3 className="font-semibold text-xl sm:text-3xl lg:text-4xl">
-                Streamline Business Process
-              </h3>
-              <p className="text-sm sm:text-xl lg:text-2xl mt-2 sm:mt-3 lg:mt-10">
-                Our custom web application development firm streamlines your
-                business processes and simplifies complex operations for
-                enhanced productivity.
-              </p>
-            </div>
-          </div>
-          <div className="w-full flex flex-wrap lg:flex-nowrap gap-4 sm:gap-7 items-center">
-            <div
-              data-aos="fade-right"
-              className="w-full order-2 lg:order-none lg:w-3/5"
-            >
-              <h3 className="font-semibold text-xl sm:text-3xl lg:text-4xl">
-                Streamline Business Process
-              </h3>
-              <p className="text-sm sm:text-xl lg:text-2xl mt-2 sm:mt-3 lg:mt-10">
-                Our custom web application development firm streamlines your
-                business processes and simplifies complex operations for
-                enhanced productivity.
-              </p>
-            </div>
-            <div
-              data-aos="fade-left"
-              className="w-full order-1 lg:order-none lg:w-2/5"
-            >
-              {/* <img
-                className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
-                src="/images/process.png"
-                alt=""
-              /> */}
-              <Image
-                className="w-full object-cover rounded-2xl"
-                src="/images/process.png"
-                alt="Process"
-                // layout="responsive"
-                width={471}
-                height={528}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Cta section */}
+      <ApplicationAgeny applicationHeading ={applicationHeading} applicationDetails={applicationDetails} />
+      
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
-
-      {/* robust web dev */}
       <section className="w-full py-10 sm:py-16 z-10 bg-black relative overflow-hidden">
         <div className="absolute -bottom-[168%] -right-[98%] -z-10">
           {/* <img className="w-full h-full" src="/images/bg_circle.jfif" alt="" /> */}
@@ -238,11 +190,8 @@ const WebAppDevelopment = () => {
           </button>
         </div>
       </section>
-
-      {/* Cta section */}
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
 
-      {/* custom web development */}
       <section className="w-full pb-10 sm:py-12 lg:py-16">
         <div className="w-full px-4 sm:px-0 sm:text-center">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom font-bold">
@@ -259,7 +208,6 @@ const WebAppDevelopment = () => {
           <CustomWebCards />
         </div>
       </section>
-
       <section className="w-full pb-12 overflow-hidden">
         <div className="w-full px-4 lg:px-0 sm:text-center">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom font-bold">
@@ -275,13 +223,11 @@ const WebAppDevelopment = () => {
         </div>
         <div className="w-full px-4 lg:px-32 mt-10 sm:mt-0 lg:mt-10 flex  justify-center sm:justify-normal">
           <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-          Hire Web Application Developers{" "}
+            Hire Web Application Developers{" "}
             <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
           </button>
         </div>
       </section>
-
-      {/* web app sales */}
       <section className="w-full relative px-4 lg:px-24 pb-12 lg:py-20">
         <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap items-center gap-5 sm:gap-8">
           <div className="w-full lg:w-1/2">
@@ -304,11 +250,8 @@ const WebAppDevelopment = () => {
           </div>
         </div>
       </section>
-
-      {/* technology stack */}
       <TechnologyStack />
 
-      {/* why choose us  */}
       <section
         data-aos="fade-up"
         className="w-full pt-10 sm:pt-16 bg-black relative"
@@ -318,22 +261,15 @@ const WebAppDevelopment = () => {
         </div>
       </section>
 
-      {/* client says */}
       <ClientSays
         clientHeading={clientSaysHeading}
         clientSaysDetails={clientSaysDetails}
       />
-      {/* Cta section */}
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
-
-      {/* featured blog */}
       <Blog />
-
-      {/* Faq */}
       <FaqSection />
-
-      {/* contact form */}
       <ContactForm />
+      </main>
     </>
   );
 };

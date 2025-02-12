@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -30,16 +31,16 @@ const Footer = () => {
       <div className="w-full">
         <div className="w-full flex gap-y-7 sm:gap-5 flex-wrap lg:flex-nowrap mt-10 lg:mt-20 mb-10 sm:mb-14 lg:mb-24 justify-between">
           <div className="w-full lg:w-1/4 mb-0 sm:mb-6 lg:mb-0">
-            <a href="">
+            <Link href="/">
               {/* <img className="w-[110px] sm:w-[160px]" src="/images/Logo.png" alt="" /> */}
               <Image
                 src="/images/Logo.png"
                 alt="Logo"
-                width={160}  // Width for the logo
-                height={40}  // Height for the logo
-                className="w-[110px] sm:w-[160px]"  // Tailwind classes for responsiveness
+                width={160}
+                height={40}  
+                className="w-[110px] sm:w-[160px]"
               />
-            </a>
+            </Link>
           </div>
 
           {footerLinks.map((section) => (
