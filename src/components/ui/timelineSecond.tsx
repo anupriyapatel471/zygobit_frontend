@@ -1,6 +1,5 @@
 "use client";
 import {
-  useMotionValueEvent,
   useScroll,
   useTransform,
   motion,
@@ -54,9 +53,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       >
         {data.map((item, index) => (
             <>
-          <div className="flex justify-end">
+          <div  key={index} className="flex justify-end">
             <div
-              key={index}
               className="flex lg:w-1/2 justify-start pt-8 sm:pt-20 md:pt-20 md:gap-2"
             >
               <div className="sticky flex flex-col md:flex-row z-40 items-center top-24 sm:top-40 self-start max-w-xs lg:max-w-sm md:w-full">
@@ -78,7 +76,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           </div>
           <div className="flex lg:justify-start">
             <div
-              key={index}
               className="flex lg:w-1/2 justify-start pt-8 sm:pt-20 md:pt-20 md:gap-2"
             >
               <div className="order-2 lg:order-none relative pl-20 sm:pr-4 md:pl-4 w-full">

@@ -11,7 +11,7 @@ const BackgroundBeamNew = dynamic(() => import("@/component/homePage/Bgbeam/Bgbe
 const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
 const WhychooseUs = dynamic(() => import("@/component/homePage/Whychooseus/Whychooseus"));
 const HeroParalax = dynamic(() => import("@/component/common/HeroParallax/HeroParallax"));
-// const TechnologyStack = dynamic(() => import("@/component/common/TechnologyStack/TechnologyStack"));
+const TechnologyStack = dynamic(() => import("@/component/common/TechnologyStack/TechnologyStack"));
 const Blog = dynamic(() => import("@/component/common/Blog/Blog"));
 const ContactForm = dynamic(() => import("@/component/common/ContactForm/ContactForm"));
 const ClientSays = dynamic(() => import("@/component/common/ClientSays/ClientSays"));
@@ -65,7 +65,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* <TechnologyStack /> */}
+      <TechnologyStack />
 
       <section
         data-aos="fade-up"

@@ -1,6 +1,6 @@
 import { ShineBorder } from "@/components/ui/shine-border";
 import Image from "next/image";
-import innovation from "../../../../public/images/inovation.svg";
+import innovation from "../../../../../public/images/inovation.svg";
 
 export function EcommerceShineCards() {
   return (

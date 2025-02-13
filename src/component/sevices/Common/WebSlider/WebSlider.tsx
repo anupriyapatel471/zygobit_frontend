@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
-import fireImg from "../../../../public/images/fire.png"
+import fireImg from "../../../../../public/images/fire.png"
 
 export function WebSlider() {
   return (

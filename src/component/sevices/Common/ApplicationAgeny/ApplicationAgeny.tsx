@@ -1,3 +1,6 @@
+import Image from "next/image";
+import ProcessImg from "../../../../../public/images/process.png"
+
 interface ApplicationAgencyProps {
   applicationHeading: string;
   applicationDetails: string;
@@ -9,16 +12,16 @@ const ApplicationAgeny: React.FC<ApplicationAgencyProps> = ({
   applicationDetails,
 }) => {  
 return(<>
-    <section className="w-full relative pb-10 sm:py-12 lg:py-16 overflow-hidden">
+      <section className="w-full relative pb-10 sm:py-12 lg:py-16 overflow-hidden">
         <div className="w-full px-4 lg:px-0 sm:text-center">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom font-bold">
-           {applicationHeading}
+          {applicationHeading}
           </h2>
           <p className="sm:font-medium max-w-6xl mx-auto text-sm sm:text-lg lg:text-xl mt-3">
-            {applicationDetails}
+          {applicationDetails}
           </p>
         </div>
-        <div className="w-full grid grid-cols-1 gap-10 sm:gap-14 lg:gap-10 px-4 lg:px-24 mt-10 sm:mt-12 lg:mt-24">
+        <div className="w-full  grid grid-cols-1 gap-10 sm:gap-14 lg:gap-10 px-4 lg:px-24 mt-10 sm:mt-12 lg:mt-24">
           <div className="w-full flex flex-wrap lg:flex-nowrap gap-4 sm:gap-7 items-center">
             <div
               data-aos="fade-right"
@@ -37,20 +40,26 @@ return(<>
               data-aos="fade-left"
               className="w-full order-1 lg:order-none lg:w-2/5"
             >
-              <img
-                className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
-                src="/images/process.png"
-                alt=""
-              />
+              <div className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl overflow-hidden relative ">
+                <Image
+                  src={ProcessImg}
+                  className="object-cover rounded-2xl"
+                  fill
+                  alt="process img"
+                />
+              </div>
             </div>
           </div>
           <div className="w-full flex flex-wrap lg:flex-nowrap gap-4 sm:gap-7 items-center">
             <div data-aos="fade-right" className="w-full lg:w-2/5">
-              <img
-                className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
-                src="/images/process.png"
-                alt=""
-              />
+              <div className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl overflow-hidden relative ">
+                <Image
+                  src={ProcessImg}
+                  className="object-cover rounded-2xl"
+                  fill
+                  alt="process img"
+                />
+              </div>
             </div>
             <div data-aos="fade-left" className="w-full lg:w-3/5">
               <h3 className="font-semibold text-xl sm:text-3xl lg:text-4xl">
@@ -81,11 +90,14 @@ return(<>
               data-aos="fade-left"
               className="w-full order-1 lg:order-none lg:w-2/5"
             >
-              <img
-                className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl"
-                src="/images/process.png"
-                alt=""
-              />
+              <div className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl overflow-hidden relative ">
+                <Image
+                  src={ProcessImg}
+                  className="object-cover rounded-2xl"
+                  fill
+                  alt="process img"
+                />
+              </div>
             </div>
           </div>
         </div>

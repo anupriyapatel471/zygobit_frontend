@@ -1,3 +1,8 @@
+import Image from "next/image";
+import latestBlog from "../../../public/images/latest_blog.png";
+import calendarIcon from "../../../public/images/calendar_icon.svg";
+import BlogPost from "../../../public/images/blogPost.png";
+
 const BlogSection=()=>{
   const blogPosts = [
     {
@@ -7,7 +12,6 @@ const BlogSection=()=>{
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium",
       date: "December 2021",
       category: "Technology",
-      image: "/images/blogPost.png",
     },
     {
       id: 2,
@@ -16,7 +20,6 @@ const BlogSection=()=>{
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium",
       date: "December 2021",
       category: "Technology",
-      image: "/images/blogPost.png",
     },
     {
       id: 3,
@@ -25,7 +28,6 @@ const BlogSection=()=>{
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium",
       date: "December 2021",
       category: "Technology",
-      image: "/images/blogPost.png",
     },
   ];
   return (<>
@@ -33,11 +35,12 @@ const BlogSection=()=>{
         <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-6 sm:gap-4 xl:gap-12">
           <div className="w-auto cursor-pointer relative rounded-2xl overflow-hidden">
             <div className="size-full absolute top-0 left-0 bg-black/50"></div>
-            <img
-              className="h-96 xl:h-auto object-cover size-full"
-              src="/images/latest_blog.png"
-              alt="Latest Blog"
-            />
+            <Image
+              className=" object-cover"
+              src={latestBlog}
+              alt="BlogImg"
+              fill
+              />
             <div className="w-full absolute bottom-5 left-0 px-4 xl:px-14">
               <span className="block w-fit py-1 px-2 rounded-sm bg-gradient-to-b from-orange-600 to-orange-800 text-white font-medium text-[10px]">
                 Technology
@@ -52,7 +55,13 @@ const BlogSection=()=>{
                 of the auspicious occasion and festive season.
               </p>
               <span className="flex items-center gap-2 text-xs">
-                <img src="/images/calendar_icon.svg" alt="Calendar" />
+              <Image
+                  className=" object-cover"
+                  src={calendarIcon}
+                  alt="icon"
+                  width={18}
+                  height={18}
+                />
                 Joined December 2021
               </span>
             </div>
@@ -64,9 +73,14 @@ const BlogSection=()=>{
                 key={post.id}
                 className="w-full cursor-pointer flex flex-wrap sm:flex-nowrap gap-4 items-center"
               >
-                <div className="w-28 h-28 object-cover sm:w-40 sm:h-40 rounded-sm overflow-hidden">
-                  <img className="size-full" src={post.image} alt={post.title} />
-                </div>
+                 <div className="w-28 h-28 object-cover sm:w-40 sm:h-40 rounded-sm overflow-hidden relative">
+                <Image
+                  className=" object-cover"
+                  src={BlogPost}
+                  alt="BlogPost"
+                  fill
+                />
+              </div>
                 <div className="w-full sm:w-[calc(100%-10rem)]">
                   <span className="block w-fit py-1 px-2 rounded-sm bg-gradient-to-b from-orange-600 to-orange-800 text-white font-medium text-[10px]">
                     {post.category}
@@ -76,7 +90,13 @@ const BlogSection=()=>{
                   </h3>
                   <p className="text-sm sm:text-base my-2">{post.description}</p>
                   <span className="flex items-center gap-2 text-xs">
-                    <img src="/images/calendar_icon.svg" alt="Calendar" />
+                  <Image
+                    className=""
+                    src={calendarIcon}
+                    alt="icon"
+                    width={18}
+                    height={18}
+                  />
                     {post.date}
                   </span>
                 </div>
