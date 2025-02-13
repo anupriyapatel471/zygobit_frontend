@@ -49,9 +49,9 @@ const Footer = () => {
               <ul className="grid grid-cols-1 space-y-4">
                 {section.links.map((link) => (
                   <li key={link.name}>
-                    <a href={link.url} className="text-sm text-secondaryText hover:text-white">
+                    <Link href={link.url} className="text-sm text-secondaryText hover:text-white">
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -65,14 +65,14 @@ const Footer = () => {
           </p>
           <ul className="w-full sm:w-auto flex gap-5 items-center">
             <li>
-              <a href="#" className="text-secondaryText hover:text-white text-xs">
+              <Link href="#" className="text-secondaryText hover:text-white text-xs">
                 Privacy Policy
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-secondaryText hover:text-white text-xs">
+              <Link href="#" className="text-secondaryText hover:text-white text-xs">
                 Terms of service
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

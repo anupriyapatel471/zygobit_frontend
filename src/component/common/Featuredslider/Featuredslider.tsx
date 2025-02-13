@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FeaturedSlider() {
   return (
@@ -75,7 +76,7 @@ export default function FeaturedSlider() {
                         </div>
                         <ul className="flex gap-3 mb-4">
                           <li>
-                            <a href="">
+                            <Link href="">
                               {/* <img src="/images/playstore.svg" alt="" /> */}
                               <Image
                                 src="/images/playstore.svg"
@@ -83,10 +84,10 @@ export default function FeaturedSlider() {
                                 width={100}  // Width for the image
                                 height={30}  // Height for the image
                               />
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="">
+                            <Link href="">
                               {/* <img src="/images/applestore.svg" alt="" /> */}
                               <Image
                                 src="/images/applestore.svg"
@@ -94,7 +95,7 @@ export default function FeaturedSlider() {
                                 width={100}  // Width for the image
                                 height={30}  // Height for the image
                               />
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                         <button className=" btn-primary text-themetext font-normal  group bg-white duration-500 transition-all">
