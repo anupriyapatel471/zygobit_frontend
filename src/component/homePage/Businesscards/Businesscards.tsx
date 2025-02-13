@@ -7,6 +7,13 @@ import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 export default function BusinessCards() {
   return (
     <>
+    <div className="w-full absolute top-3 sm:top-6 left-1/2 -translate-x-1/2 ">
+          <div className="w-full px-4 sm:px-0 sm:text-center mb-6 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-4xl lg:text-[45px] 2xl:text-5xl font-bold">
+              Revolutionizing Businesses with Excellence & Expertise
+            </h2>
+          </div>
+          <div className="w-full px-4 lg:px-24">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex flex-row items-center justify-center  w-full gap-4 mx-auto px-4 lg:px-0">
         <Card title="Strategic Business Solutions" data-aos="flip-left">
           <CanvasRevealEffect
@@ -40,6 +47,8 @@ export default function BusinessCards() {
             colors={[[251, 146, 60]]}
           />
         </Card>
+      </div>
+      </div>
       </div>
     </>
   );

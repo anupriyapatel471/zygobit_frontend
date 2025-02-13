@@ -29,7 +29,9 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
         />
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></Script>
+        <Script 
+        strategy="lazyOnload"
+         src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></Script>
       </head>
       <body>
         <Header />

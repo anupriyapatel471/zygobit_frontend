@@ -1,21 +1,17 @@
-"use client"
 
-import React, { useEffect } from "react";
-import Aos from "aos";
-import { TracingBeams } from "@/component/ui/TracingBeam/TracingBeam";
-import ContactForm from "@/component/common/ContactForm/ContactForm";
+import { TracingBeams } from "@/component/blog/TracingBeam/TracingBeam";
+import dynamic from "next/dynamic";
+const ContactForm = dynamic(() => import("@/component/common/ContactForm/ContactForm"));
+const AOSInitializer = dynamic(() => import("@/component/common/AOSInitializer"));
 
 const Page = () => {
-  useEffect(() => {
-    Aos.init({});
-  }, []);
-
   return (
     <>
+     <AOSInitializer />
+     <main>
     <TracingBeams/>
-
-      {/* contact form */}
       <ContactForm />
+      </main>
     </>
   );
 };

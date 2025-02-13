@@ -1,19 +1,13 @@
 "use client";
 import React from "react";
-// import { cn } from "@/lib/utils";
 import ConnectForm from "@/component/common/ConnectForm";
 import Image from "next/image";
 // import Image from "next/image";
 import spaceX from "../../../../public/images/space_x.png";
 
 export default function ContactForm() {
-  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   console.log("Form submitted");
-  // };
   return (
     <>
-      {/* contact form */}
       <section className="w-full px-4 lg:px-24 relative overflow-hidden">
         <div className="w-full grid items-center   bg-white/5 rounded-2xl grid-cols-1 lg:grid-cols-2 gap-8 p-4 sm:p-5">
           <div data-aos="fade-right" className="w-auto relative h-[415px] sm:h-[800px]">

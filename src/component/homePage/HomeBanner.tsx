@@ -24,13 +24,13 @@ const HomeBanner = () => {
               className="w-full h-[715px] sm:h-[775px] lg:h-[900px]"
               frameBorder="0"
               allowFullScreen
-              mozAllowFullScreen="true"
-              webkitAllowFullScreen="true"
+              // mozAllowFullScreen="true"
+              // webkitAllowFullScreen="true"
               allow="autoplay; fullscreen; xr-spatial-tracking"
-              xrSpatialTracking
-              execution-while-out-of-viewport
-              execution-while-not-rendered
-              web-share
+              // xrSpatialTracking
+              execution-while-out-of-viewport="true"
+              execution-while-not-rendered='true'
+              web-share='true'
               src="https://sketchfab.com/models/d6521362b37b48e3a82bce4911409303/embed?autostart=1&ui_animations=0&ui_infos=0&ui_stop=0&ui_inspector=0&ui_watermark_link=0&ui_watermark=0&ui_hint=0&ui_ar=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&ui_theme=dark&ui_loader=0"
             ></iframe>
           </div>

@@ -3,15 +3,15 @@
 import { AnimatePresence } from "motion/react";
 import * as motion from "motion/react-client";
 import { useState } from "react";
-import './EcommerceTabStyle.css';
-import { MovingBorders } from "../MovingBorder/MovingBorder";
+import "./EcommerceTabStyle.css";
+import { MovingBorders } from "../../ui/MovingBorder/MovingBorder";
 
 export default function EcommerceTabbing() {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
   return (
-    <div  className="container" >
-      <nav  className="nav">
+    <div className="container">
+      <nav className="nav">
         <ul className="tabsContainer">
           {tabs.map((item) => (
             <motion.li
@@ -26,7 +26,7 @@ export default function EcommerceTabbing() {
               {`${item.icon} ${item.label}`}
               {item === selectedTab ? (
                 <motion.div
-                className="underline"
+                  className="underline"
                   layoutId="underline"
                   id="underline"
                 />
@@ -45,9 +45,11 @@ export default function EcommerceTabbing() {
             transition={{ duration: 0.2 }}
           >
             {selectedTab ? selectedTab.icon : "😋"}
-            <h2 className="font-bold text-2xl sm:text-4xl mt-7 text-white text-center">All</h2>
+            <h2 className="font-bold text-2xl sm:text-4xl mt-7 text-white text-center">
+              All
+            </h2>
             <div className="w-full px-4 xl:px-24 mt-8 lg:mt-10 mb-10 sm:mb-12 lg:mb-20">
-                <MovingBorders/>
+              <MovingBorders />
             </div>
           </motion.div>
         </AnimatePresence>
@@ -55,27 +57,6 @@ export default function EcommerceTabbing() {
     </div>
   );
 }
-
-/**
- * ==============   Styles   ================
- */
-
-
-
-
-const tabsStyles: React.CSSProperties = {
-  listStyle: "none",
-  padding: 0,
-  margin: 0,
-  fontWeight: 600,
-  fontSize: 20,
-};
-
-
-
-/**
- * ==============   Data   ================
- */
 
 const allIngredients = [
   { icon: "", label: "All" },
@@ -89,5 +70,6 @@ const allIngredients = [
   { icon: "", label: "e-Guide" },
 ];
 
-const [First, Second, Three, Four, Five ,Six, Seven, Eight, Nine] = allIngredients;
-const tabs = [First, Second, Three, Four, Five,Six, Seven, Eight, Nine];
+const [First, Second, Three, Four, Five, Six, Seven, Eight, Nine] =
+  allIngredients;
+const tabs = [First, Second, Three, Four, Five, Six, Seven, Eight, Nine];

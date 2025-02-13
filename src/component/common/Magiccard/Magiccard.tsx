@@ -1,5 +1,4 @@
 import MagicCard from "@/components/ui/magic-card";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import arrowRight from "../../../../public/images/arrow_right.svg";
 

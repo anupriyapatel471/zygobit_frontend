@@ -1,58 +1,60 @@
-"use client";
 
-import Blog from "@/component/common/Blog/Blog";
-import ContactForm from "@/component/common/ContactForm/ContactForm";
-import FaqSection from "@/component/sevices/Common/FaqSection/FaqSection";
-import React, { useEffect } from "react";
-import Aos from "aos";
-import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
-import WeDeliver from "@/component/common/WeDeliver/WeDeliver";
-import { MobileAppGrid } from "@/component/common/MobileAppGrid/MobileAppGrid";
-import TechnologyStack from "@/component/common/TechnologyStack/TechnologyStack";
-import Cta from "@/component/common/Cta/Cta";
-import FeaturedSlider from "@/component/common/Featuredslider/Featuredslider";
+import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
-import UiuxSlider from "@/component/common/uiuxSlider/uiuxSlider";
-import { BackgroundGradientCard } from "@/component/sevices/uiUxWebDesign/BgGradientCard/BgGradientCard";
-import UiuxTimeline from "@/component/sevices/uiUxWebDesign/uiuxTimeline/uiuxTimeline";
-import { ParticlesCards } from "@/component/sevices/uiUxWebDesign/ParticlesCards/ParticlesCards";
-import { UiuxTeams } from "@/component/sevices/uiUxWebDesign/uiuxTeam/uiuxTeam";
+import BoostBussiness from "@/component/sevices/Common/BoostBussiness/BoostBussiness";
+import AOSInitializer from "@/component/common/AOSInitializer";
+
+const Blog = dynamic(() => import("@/component/common/Blog/Blog") );
+const ContactForm = dynamic(() => import("@/component/common/ContactForm/ContactForm") );
+const FaqSection = dynamic(() => import("@/component/sevices/Common/FaqSection/FaqSection") );
+const HeroBanner = dynamic(() => import("@/component/common/HeroBanner/HeroBanner") );
+const WeDeliver = dynamic(() => import("@/component/common/WeDeliver/WeDeliver") );
+const MobileAppGrid = dynamic(() =>
+  import("@/component/common/MobileAppGrid/MobileAppGrid").then((mod) => mod.MobileAppGrid) 
+);
+const TechnologyStack = dynamic(() => import("@/component/common/TechnologyStack/TechnologyStack") );
+const Cta = dynamic(() => import("@/component/common/Cta/Cta") );
+const FeaturedSlider = dynamic(() =>
+  import("@/component/common/Featuredslider/Featuredslider") 
+);
+const UiuxSlider = dynamic(() => import("@/component/common/uiuxSlider/uiuxSlider") );
+const BackgroundGradientCard = dynamic(() =>
+  import("@/component/sevices/uiUxWebDesign/BgGradientCard/BgGradientCard").then(
+    (mod) => mod.BackgroundGradientCard
+  ) 
+);
+const UiuxTimeline = dynamic(() =>
+  import("@/component/sevices/uiUxWebDesign/uiuxTimeline/uiuxTimeline") 
+);
+const ParticlesCards = dynamic(() =>
+  import("@/component/sevices/uiUxWebDesign/ParticlesCards/ParticlesCards").then(
+    (mod) => mod.ParticlesCards
+  ) 
+);
+const UiuxTeams = dynamic(() =>
+  import("@/component/sevices/uiUxWebDesign/uiuxTeam/uiuxTeam").then(
+    (mod) => mod.UiuxTeams
+  ) 
+);
 
 const UiuxWebDesign = () => {
-  useEffect(() => {
-    Aos.init({});
-  }, []);
-
+  const heading ="Enhance experiences with user-centric UI/UX services"
+  const paragraph= "Leverage our UI and UX services dedicated to making your brand&apos;s vision a reality. We ensure your project designs are not only intuitive but also provide users with a seamless user experience."
+  
   return (
-    <>
-      {/* Hero banner */}
+    <>  
+    <AOSInitializer /><main>
       <HeroBanner />
-
-      {/* about us */}
       <WeDeliver />
-
-      {/* boost bussiness  */}
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pb-14 lg:pb-24">
-        <div className="w-full px-4 lg:px-24 mt-10 lg:mt-16 mb-8 sm:mb-12 lg:mb-20 sm:text-center inline-block">
-          <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl">
-            Enhance experiences with user-centric UI/UX services
-          </h2>
-          <p className=" sm:font-medium text-sm sm:text-lg lg:text-xl mt-2 px-0 lg:px-20">
-            Leverage our UI and UX services dedicated to making your
-            brand&apos;s vision a reality. We ensure your project designs are
-            not only intuitive but also provide users with a seamless user
-            experience.
-          </p>
-        </div>
+       
+        <BoostBussiness heading={heading} paragraph={paragraph} />
+
         <div className="w-full max-w-6xl mx-auto">
           <BackgroundGradientCard />
         </div>
       </section>
-
-      {/* Cta section */}
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
-
-      {/* why choose us  */}
       <section
         data-aos="fade-up"
         className="w-full pt-10 sm:pt-16 bg-black relative"
@@ -68,10 +70,7 @@ const UiuxWebDesign = () => {
         </div>
       </section>
 
-      {/* Cta section */}
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
-
-      {/* Featured Projects */}
       <section className="w-full px-4 lg:px-11 pb-10 sm:pb-0 pt-0 lg:py-14 overflow-hidden">
         <div className="w-full  sm:text-center" data-aos="fade-right">
           <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
@@ -86,7 +85,6 @@ const UiuxWebDesign = () => {
         </div>
       </section>
 
-      {/* Industries We Serve: Unmatched Experiences */}
       <section className="w-full pt-5   sm:pt-10 lg:pt-16">
         <div
           className="w-full px-4 sm:px-0  sm:text-center"
@@ -107,7 +105,6 @@ const UiuxWebDesign = () => {
         </div>
       </section>
 
-      {/* Unlock Efficiency with Expert UI/UX Design */}
       <section className="w-full bg-black overflow-y-auto sm:h-[760px] no-scroll py-12 sm:py-16">
         <div
           className="w-full px-4 sm:px-0 sm:text-center"
@@ -127,7 +124,6 @@ const UiuxWebDesign = () => {
         </div>
       </section>
 
-      {/* Meet Our Team! */}
       <section className="w-full pt-12 lg:pt-16 pb-16 sm:pb-20">
         <div className="w-full px-4 sm:px-0  sm:text-center" data-aos="fade-up">
           <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
@@ -143,10 +139,8 @@ const UiuxWebDesign = () => {
         </div>
       </section>
 
-      {/* technology stack */}
       <TechnologyStack />
 
-      {/* slider */}
       <section className="w-full sm:pt-10 pb-20 lg:pb-40 bg-black">
         <div className="w-full px-4 lg:px-20 sm:text-center mb-8 sm:mb-12 lg:mb-12">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradiant-custom">
@@ -163,17 +157,15 @@ const UiuxWebDesign = () => {
         </div>
       </section>
 
-      {/* Cta section */}
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
 
-      {/* featured blog */}
       <Blog />
 
-      {/* Faq */}
       <FaqSection />
 
-      {/* contact form */}
       <ContactForm />
+      </main>
+
     </>
   );
 };

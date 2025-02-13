@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import Logo from "../../../../../public/images/Logo.png"
 const Footer = () => {
@@ -30,16 +31,16 @@ const Footer = () => {
       <div className="w-full">
         <div className="w-full flex gap-y-7 sm:gap-5 flex-wrap lg:flex-nowrap mt-10 lg:mt-20 mb-10 sm:mb-14 lg:mb-24 justify-between">
           <div className="w-full lg:w-1/4 mb-0 sm:mb-6 lg:mb-0">
-            <a href="">
+            <Link href="/">
               {/* <img className="w-[110px] sm:w-[160px]" src="/images/Logo.png" alt="" /> */}
               <Image
                 src={Logo}
                 alt="Logo"
-                width={160}  // Width for the logo
-                height={40}  // Height for the logo
-                className="w-[110px] sm:w-[160px]"  // Tailwind classes for responsiveness
+                width={160}
+                height={40}  
+                className="w-[110px] sm:w-[160px]"
               />
-            </a>
+            </Link>
           </div>
 
           {footerLinks.map((section) => (
@@ -48,9 +49,9 @@ const Footer = () => {
               <ul className="grid grid-cols-1 space-y-4">
                 {section.links.map((link) => (
                   <li key={link.name}>
-                    <a href={link.url} className="text-sm text-secondaryText hover:text-white">
+                    <Link href={link.url} className="text-sm text-secondaryText hover:text-white">
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -64,14 +65,14 @@ const Footer = () => {
           </p>
           <ul className="w-full sm:w-auto flex gap-5 items-center">
             <li>
-              <a href="#" className="text-secondaryText hover:text-white text-xs">
+              <Link href="#" className="text-secondaryText hover:text-white text-xs">
                 Privacy Policy
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-secondaryText hover:text-white text-xs">
+              <Link href="#" className="text-secondaryText hover:text-white text-xs">
                 Terms of service
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -14,7 +14,7 @@ import featured from "../../../../public/images/featured_slick.svg";
 import playStore from "../../../../public/images/playstore.svg";
 import appleStore from "../../../../public/images/applestore.svg";
 import featuredMobile from "../../../../public/images/featured_mobile.png";
-
+import Link from "next/link";
 
 export default function FeaturedSlider() {
   return (
@@ -32,8 +32,8 @@ export default function FeaturedSlider() {
                           className="w-28 sm:w-auto"
                           src={featured}
                           alt="Featured Slick"
-                          width={150} // Width for the image
-                          height={50} // Height for the image
+                          width={150}
+                          height={50} 
                         />
                         <h3 className="font-semibold text-2xl sm:text-3xl lg:text-4xl mt-4 ">
                           Food Delivery App
@@ -79,26 +79,24 @@ export default function FeaturedSlider() {
                         </div>
                         <ul className="flex gap-3 mb-4">
                           <li>
-                            <a href="">
-                              {/* <img src="/images/playstore.svg" alt="" /> */}
+                            <Link href="">
                               <Image
                                 src={playStore}
                                 alt="Playstore"
-                                width={100}  // Width for the image
-                                height={30}  // Height for the image
+                                width={100} 
+                                height={30}
                               />
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="">
-                              {/* <img src="/images/applestore.svg" alt="" /> */}
+                            <Link href="">
                               <Image
                                 src={appleStore}
                                 alt="AppStore"
-                                width={100}  // Width for the image
-                                height={30}  // Height for the image
+                                width={100}
+                                height={30}
                               />
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                         <button className=" btn-primary text-themetext font-normal  group bg-white duration-500 transition-all">
@@ -107,17 +105,12 @@ export default function FeaturedSlider() {
                         </button>
                       </div>
                       <div className="hidden sm:inline w-auto max-w-xl">
-                        {/* <img
-                          className="w-full"
-                          src="/images/featured_mobile.png"
-                          alt=""
-                        /> */}
                          <Image
                           className="w-full"
                           src={featuredMobile}
                           alt="Featured Mobile"
-                          width={500}  // Width for the image
-                          height={800}  // Height for the image
+                          width={500}  
+                          height={800}
                         />
                       </div>
                     </div>

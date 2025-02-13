@@ -1,40 +1,67 @@
-"use client";
-
-import React, { useEffect } from "react";
-import Aos from "aos";
-
+import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
-import Image from "next/image";
-import { EcommerceShineCards } from "@/component/ui/EcommerceShineCards/EcomoerceShineCards";
-import { WebSlider } from "@/component/ui/WebSlider/WebSlider";
-import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
-import WeDeliver from "@/component/common/WeDeliver/WeDeliver";
-import Cta from "@/component/common/Cta/Cta";
-import FeaturedSlider from "@/component/common/Featuredslider/Featuredslider";
-import UiuxSlider from "@/component/common/uiuxSlider/uiuxSlider";
+import { EcommerceShineCards } from "@/component/sevices/Ecommerce/EcommerceShineCards/EcomoerceShineCards";
 import { ThreeDCards } from "@/component/sevices/MobileAppDevelopment/ThreedCards/ThreedCards";
-import { Testimonials } from "@/component/common/Testimonials/Testimonials";
-import { HeroHighlightDemo } from "@/component/common/Partnersbg/Partnersbg";
-import PartnerSlider from "@/component/common/Partnerslider/Partnerslider";
-import Blog from "@/component/common/Blog/Blog";
-import FaqSection from "@/component/sevices/Common/FaqSection/FaqSection";
-import ContactForm from "@/component/common/ContactForm/ContactForm";
 import { MobileAppGrid } from "@/component/common/MobileAppGrid/MobileAppGrid";
-import TechnologyStack from "@/component/common/TechnologyStack/TechnologyStack";
-import ProcessImg from "../../../../public/images/process.png";
+import { WebSlider } from "@/component/sevices/Common/WebSlider/WebSlider";
+import AOSInitializer from "@/component/common/AOSInitializer";
+const FaqSection = dynamic(
+  () => import("@/component/sevices/Common/FaqSection/FaqSection"),
+);
+const ClientSays = dynamic(
+  () => import("@/component/common/ClientSays/ClientSays"),
+  
+);
+const ApplicationAgeny = dynamic(
+  () => import("@/component/sevices/Common/ApplicationAgeny/ApplicationAgeny"),
+  
+);
+const DeliveringTailored = dynamic(
+  () => import("@/component/common/DeliveringTailored/DeliveringTailored"),
+  
+);
+const HeroBanner = dynamic(
+  () => import("@/component/common/HeroBanner/HeroBanner"),
+);
 
+const WeDeliver = dynamic(
+  () => import("@/component/common/WeDeliver/WeDeliver"),
+  
+);
+const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
+const FeaturedSlider = dynamic(
+  () => import("@/component/common/Featuredslider/Featuredslider"),
+  
+);
+const OurPartners = dynamic(
+  () => import("@/component/common/OurPartners/OurPartners"),
+  
+);
+
+const Blog = dynamic(() => import("@/component/common/Blog/Blog"), {
+  ssr: false,
+});
+const ContactForm = dynamic(
+  () => import("@/component/common/ContactForm/ContactForm"),
+  
+);
+const TechnologyStack = dynamic(
+  () => import("@/component/common/TechnologyStack/TechnologyStack"),
+  
+);
 const Ecommerce = () => {
-  useEffect(() => {
-    Aos.init({});
-  }, []);
+  const clientHeading="We Are a Trusted Web App Development Company"
+  const clientSaysDetails="Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions"
+  const applicationHeading ="Build Your AR/VR eCommerce Store"
+  const applicationDetails = " We integrate AR/VR into eCommerce apps to deliver immersive, realistic shopping experiences and enhance your business&apos;s user engagement."
+  const deliveringHeading="Industries We Serve: Unmatched Experiences"
+  const deliveringPara="Transforming Ideas into Exceptional User Experiences Across Various Sectors"
   return (
     <>
-      {/* Hero banner */}
+    <AOSInitializer />
+         <main>
       <HeroBanner />
-
-      {/* about us */}
       <WeDeliver />
-
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pt-16 pb-[8rem] overflow-hidden">
         <div className="w-full px-4 lg:px-0 sm:text-center">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl  font-bold">
@@ -68,10 +95,8 @@ const Ecommerce = () => {
         </div>
       </section>
 
-      {/* Cta section */}
       <Cta Aurora={"Aurora"} vortex={""} content={"Globe"} />
 
-      {/* Featured Projects */}
       <section className="w-full px-4 lg:px-11 py-10 sm:py-14 overflow-hidden">
         <div className="w-full  sm:text-center" data-aos="fade-right">
           <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
@@ -87,125 +112,12 @@ const Ecommerce = () => {
         </div>
       </section>
 
-      {/* web application  ageny*/}
-      <section className="w-full relative pb-10 sm:py-12 lg:py-16 overflow-hidden">
-        <div className="w-full px-4 lg:px-0 sm:text-center">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom font-bold">
-            Build Your AR/VR eCommerce Store
-          </h2>
-          <p className="sm:font-medium max-w-6xl mx-auto text-sm sm:text-lg lg:text-xl mt-3">
-            We integrate AR/VR into eCommerce apps to deliver immersive,
-            realistic shopping experiences and enhance your business&apos;s user
-            engagement.
-          </p>
-        </div>
-        <div className="w-full  grid grid-cols-1 gap-10 sm:gap-14 lg:gap-10 px-4 lg:px-24 mt-10 sm:mt-12 lg:mt-24">
-          <div className="w-full flex flex-wrap lg:flex-nowrap gap-4 sm:gap-7 items-center">
-            <div
-              data-aos="fade-right"
-              className="w-full order-2 lg:order-none lg:w-3/5"
-            >
-              <h3 className="font-semibold text-xl sm:text-3xl lg:text-4xl">
-                Streamline Business Process
-              </h3>
-              <p className="text-sm sm:text-xl lg:text-2xl mt-2 sm:mt-3 lg:mt-10">
-                Our custom web application development firm streamlines your
-                business processes and simplifies complex operations for
-                enhanced productivity.
-              </p>
-            </div>
-            <div
-              data-aos="fade-left"
-              className="w-full order-1 lg:order-none lg:w-2/5"
-            >
-              <div className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl overflow-hidden relative ">
-                <Image
-                  src={ProcessImg}
-                  className="object-cover rounded-2xl"
-                  fill
-                  alt="process img"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="w-full flex flex-wrap lg:flex-nowrap gap-4 sm:gap-7 items-center">
-            <div data-aos="fade-right" className="w-full lg:w-2/5">
-              <div className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl overflow-hidden relative ">
-                <Image
-                  src={ProcessImg}
-                  className="object-cover rounded-2xl"
-                  fill
-                  alt="process img"
-                />
-              </div>
-            </div>
-            <div data-aos="fade-left" className="w-full lg:w-3/5">
-              <h3 className="font-semibold text-xl sm:text-3xl lg:text-4xl">
-                Streamline Business Process
-              </h3>
-              <p className="text-sm sm:text-xl lg:text-2xl mt-2 sm:mt-3 lg:mt-10">
-                Our custom web application development firm streamlines your
-                business processes and simplifies complex operations for
-                enhanced productivity.
-              </p>
-            </div>
-          </div>
-          <div className="w-full flex flex-wrap lg:flex-nowrap gap-4 sm:gap-7 items-center">
-            <div
-              data-aos="fade-right"
-              className="w-full order-2 lg:order-none lg:w-3/5"
-            >
-              <h3 className="font-semibold text-xl sm:text-3xl lg:text-4xl">
-                Streamline Business Process
-              </h3>
-              <p className="text-sm sm:text-xl lg:text-2xl mt-2 sm:mt-3 lg:mt-10">
-                Our custom web application development firm streamlines your
-                business processes and simplifies complex operations for
-                enhanced productivity.
-              </p>
-            </div>
-            <div
-              data-aos="fade-left"
-              className="w-full order-1 lg:order-none lg:w-2/5"
-            >
-              <div className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl overflow-hidden relative ">
-                <Image
-                  src={ProcessImg}
-                  className="object-cover rounded-2xl"
-                  fill
-                  alt="process img"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <ApplicationAgeny applicationHeading ={applicationHeading} applicationDetails={applicationDetails} />
 
-      {/* Delivering Tailored Excellence */}
-      <section className="w-full pt-0  sm:pt-0 lg:pt-5">
-        <div
-          className="w-full px-4 sm:px-0  sm:text-center"
-          data-aos="fade-right"
-        >
-          <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
-            Industries We Serve: Unmatched Experiences
-          </h2>
-          <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
-            Transforming Ideas into Exceptional User Experiences Across Various
-            Sectors
-          </p>
-        </div>
-        <div className="w-full relative  mt-8 sm:mt-12 mb-12 sm:mb-24 lg:mb-32">
-          <div className="pointer-events-none absolute z-[1] -top-8 sm:-top-12 rounded-[50%] right-0 w-full h-16 sm:h-20 lg:h-24 bg-[#09090B]"></div>
-          <UiuxSlider />
-          <div className="pointer-events-none absolute -bottom-8 sm:-bottom-12 rounded-[50%] right-0 w-full h-16 sm:h-20 lg:h-24 bg-[#09090B]"></div>
-        </div>
-      </section>
+      <DeliveringTailored deliveringHeading={deliveringHeading} deliveringPara={deliveringPara}/>
 
-      {/* Cta section */}
       <Cta Aurora={"Aurora"} vortex={""} content={"Globe"} />
 
-      {/* advance tech */}
       <section className="w-full lg:mt-10 inline-block">
         <div className="w-full px-4 lg:px-0 sm:text-center mb-8 sm:mb-16">
           <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl ">
@@ -221,7 +133,6 @@ const Ecommerce = () => {
         </div>
       </section>
 
-      {/* slider */}
       <section className="w-full sm:pt-10 pb-12 lg:pb-16 lg:pt-16">
         <div className="w-full px-4 lg:px-20 sm:text-center mb-8 sm:mb-12 lg:mb-12">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradiant-custom">
@@ -238,48 +149,18 @@ const Ecommerce = () => {
         </div>
       </section>
 
-      {/* Technology stack */}
       <TechnologyStack />
 
-      {/* client says */}
-      <section className="w-full px-4 sm:px-5 lg:px-14 mt-10 sm:mt-16   lg:mt-24 mb-12 sm:mb-16 lg:mb-20 overflow-hidden">
-        <div data-aos="fade-left" className="w-full sm:text-center">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradient-custom">
-            We Are a Trusted Web App Development Company
-          </h2>
-          <p className="font-medium max-w-6xl mx-auto text-sm sm:text-lg lg:text-xl my-3">
-            Hear from our satisfied clients who have transformed their ideas
-            into successful businesses with Apptunix&apos;s expert web
-            development services and solutions
-          </p>
-        </div>
-        <div className="w-full sm:px-4 lg:px-12">
-          <Testimonials />
-        </div>
-      </section>
+      <ClientSays clientHeading={clientHeading} clientSaysDetails={clientSaysDetails} />
+  
+      <OurPartners/>
 
-      {/* our partners */}
-      <section
-        data-aos="fade-up"
-        className="w-full relative inline-block pt-48 pb-16 sm:py-24 overflow-hidden"
-      >
-        <div className="absolute top-0 left-0 w-full h-full z-10">
-          <HeroHighlightDemo />
-        </div>
-
-        <div className="w-full mt-0 sm:mt-16 lg:mt-[172px] relative z-20">
-          <PartnerSlider />
-        </div>
-      </section>
-
-      {/* featured blog */}
       <Blog />
 
-      {/* Faq */}
       <FaqSection />
 
-      {/* contact form */}
       <ContactForm />
+      </main>
     </>
   );
 };
