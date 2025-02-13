@@ -6,60 +6,60 @@ import { MobileAppGrid } from "@/component/common/MobileAppGrid/MobileAppGrid";
 import { WebSlider } from "@/component/sevices/Common/WebSlider/WebSlider";
 import AOSInitializer from "@/component/common/AOSInitializer";
 const FaqSection = dynamic(
-  () => import("@/component/sevices/Common/FaqSection/FaqSection"),
+  () => import("@/component/sevices/Common/FaqSection/FaqSection")
 );
 const ClientSays = dynamic(
-  () => import("@/component/common/ClientSays/ClientSays"),
-  
+  () => import("@/component/common/ClientSays/ClientSays")
 );
 const ApplicationAgeny = dynamic(
-  () => import("@/component/sevices/Common/ApplicationAgeny/ApplicationAgeny"),
-  
+  () => import("@/component/sevices/Common/ApplicationAgeny/ApplicationAgeny")
 );
 const DeliveringTailored = dynamic(
-  () => import("@/component/common/DeliveringTailored/DeliveringTailored"),
-  
+  () => import("@/component/common/DeliveringTailored/DeliveringTailored")
 );
 const HeroBanner = dynamic(
-  () => import("@/component/common/HeroBanner/HeroBanner"),
+  () => import("@/component/common/HeroBanner/HeroBanner")
 );
 
 const WeDeliver = dynamic(
-  () => import("@/component/common/WeDeliver/WeDeliver"),
-  
+  () => import("@/component/common/WeDeliver/WeDeliver")
 );
 const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
 const FeaturedSlider = dynamic(
-  () => import("@/component/common/Featuredslider/Featuredslider"),
-  
+  () => import("@/component/common/Featuredslider/Featuredslider")
 );
 const OurPartners = dynamic(
-  () => import("@/component/common/OurPartners/OurPartners"),
-  
+  () => import("@/component/common/OurPartners/OurPartners")
 );
 
-const Blog = dynamic(() => import("@/component/common/Blog/Blog"), {
-  ssr: false,
-});
+const Blog = dynamic(() => import("@/component/common/Blog/Blog"));
 const ContactForm = dynamic(
-  () => import("@/component/common/ContactForm/ContactForm"),
-  
+  () => import("@/component/common/ContactForm/ContactForm")
 );
 const TechnologyStack = dynamic(
-  () => import("@/component/common/TechnologyStack/TechnologyStack"),
-  
+  () => import("@/component/common/TechnologyStack/TechnologyStack")
 );
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ecommerce",
+  description: "Zygibit Website Ecommerce Page",
+};
+
 const Ecommerce = () => {
-  const clientHeading="We Are a Trusted Web App Development Company"
-  const clientSaysDetails="Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions"
-  const applicationHeading ="Build Your AR/VR eCommerce Store"
-  const applicationDetails = " We integrate AR/VR into eCommerce apps to deliver immersive, realistic shopping experiences and enhance your business&apos;s user engagement."
-  const deliveringHeading="Industries We Serve: Unmatched Experiences"
-  const deliveringPara="Transforming Ideas into Exceptional User Experiences Across Various Sectors"
+  const clientHeading = "We Are a Trusted Web App Development Company";
+  const clientSaysDetails =
+    "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions";
+  const applicationHeading = "Build Your AR/VR eCommerce Store";
+  const applicationDetails =
+    " We integrate AR/VR into eCommerce apps to deliver immersive, realistic shopping experiences and enhance your business&apos;s user engagement.";
+  const deliveringHeading = "Industries We Serve: Unmatched Experiences";
+  const deliveringPara =
+    "Transforming Ideas into Exceptional User Experiences Across Various Sectors";
   return (
     <>
-    <AOSInitializer />
-         <main>
+      <AOSInitializer />
+
       <HeroBanner />
       <WeDeliver />
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pt-16 pb-[8rem] overflow-hidden">
@@ -112,9 +112,15 @@ const Ecommerce = () => {
         </div>
       </section>
 
-  <ApplicationAgeny applicationHeading ={applicationHeading} applicationDetails={applicationDetails} />
+      <ApplicationAgeny
+        applicationHeading={applicationHeading}
+        applicationDetails={applicationDetails}
+      />
 
-      <DeliveringTailored deliveringHeading={deliveringHeading} deliveringPara={deliveringPara}/>
+      <DeliveringTailored
+        deliveringHeading={deliveringHeading}
+        deliveringPara={deliveringPara}
+      />
 
       <Cta Aurora={"Aurora"} vortex={""} content={"Globe"} />
 
@@ -151,16 +157,18 @@ const Ecommerce = () => {
 
       <TechnologyStack />
 
-      <ClientSays clientHeading={clientHeading} clientSaysDetails={clientSaysDetails} />
-  
-      <OurPartners/>
+      <ClientSays
+        clientHeading={clientHeading}
+        clientSaysDetails={clientSaysDetails}
+      />
+
+      <OurPartners />
 
       <Blog />
 
       <FaqSection />
 
       <ContactForm />
-      </main>
     </>
   );
 };

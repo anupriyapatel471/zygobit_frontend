@@ -7,103 +7,85 @@ import Sales from "../../../../public/images/sales.png";
 import WebCustom from "../../../../public/images/web_custom.png";
 
 const WeDeliver = dynamic(
-  () => import("@/component/common/WeDeliver/WeDeliver"),
-  { ssr: false }
+  () => import("@/component/common/WeDeliver/WeDeliver")
 );
 
-const Blog = dynamic(
-  () => import("@/component/common/Blog/Blog"),
-  { ssr: false }
-);
+const Blog = dynamic(() => import("@/component/common/Blog/Blog"));
 
 const ContactForm = dynamic(
-  () => import("@/component/common/ContactForm/ContactForm"),
-  { ssr: false }
+  () => import("@/component/common/ContactForm/ContactForm")
 );
 
 const FaqSection = dynamic(
-  () => import("@/component/sevices/Common/FaqSection/FaqSection"),
-  { ssr: false }
+  () => import("@/component/sevices/Common/FaqSection/FaqSection")
 );
 
 const HeroBanner = dynamic(
-  () => import("@/component/common/HeroBanner/HeroBanner"),
-  { ssr: false }
+  () => import("@/component/common/HeroBanner/HeroBanner")
 );
 
 const TechnologyStack = dynamic(
-  () => import("@/component/common/TechnologyStack/TechnologyStack"),
-  { ssr: false }
+  () => import("@/component/common/TechnologyStack/TechnologyStack")
 );
-const WebSlider = dynamic(
-  () =>
-    import("@/component/sevices/Common/WebSlider/WebSlider").then(
-      (mod) => mod.WebSlider
-    ),
-  { ssr: false }
+const WebSlider = dynamic(() =>
+  import("@/component/sevices/Common/WebSlider/WebSlider").then(
+    (mod) => mod.WebSlider
+  )
 );
 
-const Cta = dynamic(
-  () => import("@/component/common/Cta/Cta"),
-  { ssr: false }
-);
+const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
 
 const WebDevProcess = dynamic(
-  () => import("@/component/sevices/Common/WebDevProcess/WebDevProcess"),
-  { ssr: false }
+  () => import("@/component/sevices/Common/WebDevProcess/WebDevProcess")
 );
 
 const ClientSays = dynamic(
-  () => import("@/component/common/ClientSays/ClientSays"),
-  { ssr: false }
+  () => import("@/component/common/ClientSays/ClientSays")
 );
 
 const HeroParalax = dynamic(
-  () => import("@/component/common/HeroParallax/HeroParallax"),
-  { ssr: false }
+  () => import("@/component/common/HeroParallax/HeroParallax")
 );
-const BoxReveals = dynamic(
-  () =>
-    import("@/component/common/WebSales/WebSales").then(
-      (mod) => mod.BoxReveals
-    ),
-  { ssr: false }
+const BoxReveals = dynamic(() =>
+  import("@/component/common/WebSales/WebSales").then((mod) => mod.BoxReveals)
 );
 
-const CardSpotlights = dynamic(
-  () =>
-    import("@/component/sevices/WebAppDevelopment/RobustWebCards/RobustWebCards").then(
-      (mod) => mod.CardSpotlights
-    ),
-  { ssr: false }
+const CardSpotlights = dynamic(() =>
+  import(
+    "@/component/sevices/WebAppDevelopment/RobustWebCards/RobustWebCards"
+  ).then((mod) => mod.CardSpotlights)
 );
 
-const CustomWebCards = dynamic(
-  () =>
-    import("@/component/sevices/WebAppDevelopment/CustomWebCards/CustomWebCards").then(
-      (mod) => mod.CustomWebCards
-    ),
-  { ssr: false }
+const CustomWebCards = dynamic(() =>
+  import(
+    "@/component/sevices/WebAppDevelopment/CustomWebCards/CustomWebCards"
+  ).then((mod) => mod.CustomWebCards)
 );
 
 const ScrollTriggered = dynamic(
   () =>
-    import("@/component/sevices/WebAppDevelopment/WebScrollTriggered/WebScrollTriggered"),
-  { ssr: false }
+    import(
+      "@/component/sevices/WebAppDevelopment/WebScrollTriggered/WebScrollTriggered"
+    )
 );
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Web Development",
+  description: "Zygibit Website Web Development Page",
+};
 const WebAppDevelopment = () => {
   const clientSaysHeading = "We Are a Trusted Web App Development Company";
   const clientSaysDetails =
     "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions.";
 
-  const applicationHeading ="Why Partner with Our Web Application Agency?"
-  const applicationDetails = "Partnering with our custom web application development company in USA unlocks greater profitability, fosters continuous innovation, and accelerates your business growth globally."
+  const applicationHeading = "Why Partner with Our Web Application Agency?";
+  const applicationDetails =
+    "Partnering with our custom web application development company in USA unlocks greater profitability, fosters continuous innovation, and accelerates your business growth globally.";
 
   return (
     <>
-     <AOSInitializer />
-     <main>
+      <AOSInitializer />
 
       <HeroBanner />
       <WeDeliver />
@@ -151,8 +133,11 @@ const WebAppDevelopment = () => {
           </div>
         </div>
       </section>
-      <ApplicationAgeny applicationHeading ={applicationHeading} applicationDetails={applicationDetails} />
-      
+      <ApplicationAgeny
+        applicationHeading={applicationHeading}
+        applicationDetails={applicationDetails}
+      />
+
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
       <section className="w-full py-10 sm:py-16 z-10 bg-black relative overflow-hidden">
         <div className="absolute -bottom-[168%] -right-[98%] -z-10">
@@ -258,7 +243,6 @@ const WebAppDevelopment = () => {
       <Blog />
       <FaqSection />
       <ContactForm />
-      </main>
     </>
   );
 };

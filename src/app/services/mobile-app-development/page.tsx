@@ -1,40 +1,79 @@
-
 import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
 import BoostBussiness from "@/component/sevices/Common/BoostBussiness/BoostBussiness";
 import ClientSays from "@/component/common/ClientSays/ClientSays";
 import AOSInitializer from "@/component/common/AOSInitializer";
 
-const WeDeliver = dynamic(() => import("@/component/common/WeDeliver/WeDeliver") );
-const AppleCardsCarousel = dynamic(() =>import("@/component/sevices/MobileAppDevelopment/AppleCardsCarousel/AppleCardsCarousel") );
+const WeDeliver = dynamic(
+  () => import("@/component/common/WeDeliver/WeDeliver")
+);
+const AppleCardsCarousel = dynamic(
+  () =>
+    import(
+      "@/component/sevices/MobileAppDevelopment/AppleCardsCarousel/AppleCardsCarousel"
+    )
+);
 const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
-const ThreeDCards = dynamic(() =>import("@/component/sevices/MobileAppDevelopment/ThreedCards/ThreedCards").then((mod) => mod.ThreeDCards) );
-const MobileAppSlider = dynamic(() =>import("@/component/sevices/MobileAppDevelopment/MobileAppSlider/MobileAppSlider") );
-const HeroParalax = dynamic(() => import("@/component/common/HeroParallax/HeroParallax") );
-const FeaturedSlider = dynamic(() => import("@/component/common/Featuredslider/Featuredslider") );
-const ContactForm = dynamic(() => import("@/component/common/ContactForm/ContactForm") );
-const TechnologyStack = dynamic(() => import("@/component/common/TechnologyStack/TechnologyStack") );
-const HeroBanner = dynamic(() => import("@/component/common/HeroBanner/HeroBanner") );
-const Blog = dynamic(() => import("@/component/common/Blog/Blog") );
-const FaqSection = dynamic(() => import("@/component/sevices/Common/FaqSection/FaqSection") );
-const MobileAppGrid = dynamic(() =>import("@/component/common/MobileAppGrid/MobileAppGrid").then((mod) => mod.MobileAppGrid) );
-const SharedLayoutAnimation = dynamic(() =>import("@/component/sevices/MobileAppDevelopment/MobileDevTab/MobileDevTab") );
+const ThreeDCards = dynamic(() =>
+  import(
+    "@/component/sevices/MobileAppDevelopment/ThreedCards/ThreedCards"
+  ).then((mod) => mod.ThreeDCards)
+);
+const MobileAppSlider = dynamic(
+  () =>
+    import(
+      "@/component/sevices/MobileAppDevelopment/MobileAppSlider/MobileAppSlider"
+    )
+);
+const HeroParalax = dynamic(
+  () => import("@/component/common/HeroParallax/HeroParallax")
+);
+const FeaturedSlider = dynamic(
+  () => import("@/component/common/Featuredslider/Featuredslider")
+);
+const ContactForm = dynamic(
+  () => import("@/component/common/ContactForm/ContactForm")
+);
+const TechnologyStack = dynamic(
+  () => import("@/component/common/TechnologyStack/TechnologyStack")
+);
+const HeroBanner = dynamic(
+  () => import("@/component/common/HeroBanner/HeroBanner")
+);
+const Blog = dynamic(() => import("@/component/common/Blog/Blog"));
+const FaqSection = dynamic(
+  () => import("@/component/sevices/Common/FaqSection/FaqSection")
+);
+const MobileAppGrid = dynamic(() =>
+  import("@/component/common/MobileAppGrid/MobileAppGrid").then(
+    (mod) => mod.MobileAppGrid
+  )
+);
+const SharedLayoutAnimation = dynamic(
+  () =>
+    import("@/component/sevices/MobileAppDevelopment/MobileDevTab/MobileDevTab")
+);
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Mobile App Development",
+  description: "Zygibit Website Mobile App Development Page",
+};
 const MobileAppDevelopment = () => {
-
-  const heading ="Boost Business Growth with Custom App Solutions"
-  const paragraph= "Our team is passionate about experimenting with next-gen tech that flawlessly aligns with your brand, vision and target audience. As a custom mobile application development services provider we use a design sprint-centric methodology to identify opportunities to drive growth outside your core business."
-  const clientHeading ="Hear It from Our Happy Clients!"
-  const clientSaysDetails ="See how our custom app development services have transformed businesses and driven success for our happy clients"
+  const heading = "Boost Business Growth with Custom App Solutions";
+  const paragraph =
+    "Our team is passionate about experimenting with next-gen tech that flawlessly aligns with your brand, vision and target audience. As a custom mobile application development services provider we use a design sprint-centric methodology to identify opportunities to drive growth outside your core business.";
+  const clientHeading = "Hear It from Our Happy Clients!";
+  const clientSaysDetails =
+    "See how our custom app development services have transformed businesses and driven success for our happy clients";
   return (
     <>
-    <AOSInitializer />
-         <main>
+      <AOSInitializer />
+
       <HeroBanner />
       <WeDeliver />
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pb-14 lg:pb-24">
-        
-      <BoostBussiness heading={heading} paragraph={paragraph} />
+        <BoostBussiness heading={heading} paragraph={paragraph} />
 
         <div className="w-full">
           <AppleCardsCarousel />
@@ -156,14 +195,16 @@ const MobileAppDevelopment = () => {
 
       <TechnologyStack />
 
-      <ClientSays clientHeading={clientHeading} clientSaysDetails={clientSaysDetails}/>
+      <ClientSays
+        clientHeading={clientHeading}
+        clientSaysDetails={clientSaysDetails}
+      />
 
       <Blog />
 
       <FaqSection />
 
       <ContactForm />
-      </main>
     </>
   );
 };

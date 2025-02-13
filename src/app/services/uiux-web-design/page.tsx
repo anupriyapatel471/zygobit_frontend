@@ -1,53 +1,71 @@
-
 import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
 import BoostBussiness from "@/component/sevices/Common/BoostBussiness/BoostBussiness";
 import AOSInitializer from "@/component/common/AOSInitializer";
 
-const Blog = dynamic(() => import("@/component/common/Blog/Blog") );
-const ContactForm = dynamic(() => import("@/component/common/ContactForm/ContactForm") );
-const FaqSection = dynamic(() => import("@/component/sevices/Common/FaqSection/FaqSection") );
-const HeroBanner = dynamic(() => import("@/component/common/HeroBanner/HeroBanner") );
-const WeDeliver = dynamic(() => import("@/component/common/WeDeliver/WeDeliver") );
+const Blog = dynamic(() => import("@/component/common/Blog/Blog"));
+const ContactForm = dynamic(
+  () => import("@/component/common/ContactForm/ContactForm")
+);
+const FaqSection = dynamic(
+  () => import("@/component/sevices/Common/FaqSection/FaqSection")
+);
+const HeroBanner = dynamic(
+  () => import("@/component/common/HeroBanner/HeroBanner")
+);
+const WeDeliver = dynamic(
+  () => import("@/component/common/WeDeliver/WeDeliver")
+);
 const MobileAppGrid = dynamic(() =>
-  import("@/component/common/MobileAppGrid/MobileAppGrid").then((mod) => mod.MobileAppGrid) 
+  import("@/component/common/MobileAppGrid/MobileAppGrid").then(
+    (mod) => mod.MobileAppGrid
+  )
 );
-const TechnologyStack = dynamic(() => import("@/component/common/TechnologyStack/TechnologyStack") );
-const Cta = dynamic(() => import("@/component/common/Cta/Cta") );
-const FeaturedSlider = dynamic(() =>
-  import("@/component/common/Featuredslider/Featuredslider") 
+const TechnologyStack = dynamic(
+  () => import("@/component/common/TechnologyStack/TechnologyStack")
 );
-const UiuxSlider = dynamic(() => import("@/component/common/uiuxSlider/uiuxSlider") );
+const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
+const FeaturedSlider = dynamic(
+  () => import("@/component/common/Featuredslider/Featuredslider")
+);
+const UiuxSlider = dynamic(
+  () => import("@/component/common/uiuxSlider/uiuxSlider")
+);
 const BackgroundGradientCard = dynamic(() =>
-  import("@/component/sevices/uiUxWebDesign/BgGradientCard/BgGradientCard").then(
-    (mod) => mod.BackgroundGradientCard
-  ) 
+  import(
+    "@/component/sevices/uiUxWebDesign/BgGradientCard/BgGradientCard"
+  ).then((mod) => mod.BackgroundGradientCard)
 );
-const UiuxTimeline = dynamic(() =>
-  import("@/component/sevices/uiUxWebDesign/uiuxTimeline/uiuxTimeline") 
+const UiuxTimeline = dynamic(
+  () => import("@/component/sevices/uiUxWebDesign/uiuxTimeline/uiuxTimeline")
 );
 const ParticlesCards = dynamic(() =>
-  import("@/component/sevices/uiUxWebDesign/ParticlesCards/ParticlesCards").then(
-    (mod) => mod.ParticlesCards
-  ) 
+  import(
+    "@/component/sevices/uiUxWebDesign/ParticlesCards/ParticlesCards"
+  ).then((mod) => mod.ParticlesCards)
 );
 const UiuxTeams = dynamic(() =>
   import("@/component/sevices/uiUxWebDesign/uiuxTeam/uiuxTeam").then(
     (mod) => mod.UiuxTeams
-  ) 
+  )
 );
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "UI UX Design",
+  description: "Zygibit Website Uiux Web Design Page",
+};
 const UiuxWebDesign = () => {
-  const heading ="Enhance experiences with user-centric UI/UX services"
-  const paragraph= "Leverage our UI and UX services dedicated to making your brand&apos;s vision a reality. We ensure your project designs are not only intuitive but also provide users with a seamless user experience."
-  
+  const heading = "Enhance experiences with user-centric UI/UX services";
+  const paragraph =
+    "Leverage our UI and UX services dedicated to making your brand&apos;s vision a reality. We ensure your project designs are not only intuitive but also provide users with a seamless user experience.";
+
   return (
-    <>  
-    <AOSInitializer /><main>
+    <>
+      <AOSInitializer />
       <HeroBanner />
       <WeDeliver />
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pb-14 lg:pb-24">
-       
         <BoostBussiness heading={heading} paragraph={paragraph} />
 
         <div className="w-full max-w-6xl mx-auto">
@@ -164,8 +182,6 @@ const UiuxWebDesign = () => {
       <FaqSection />
 
       <ContactForm />
-      </main>
-
     </>
   );
 };

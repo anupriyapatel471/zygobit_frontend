@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Particles } from "@/components/ui/particles";
 
 export function AboutBgParticles() {
-  const [color] = useState("#fff"); // Set your desired default color here
+  const [color] = useState("#fff");
 
   return (
     <div className="relative hidden sm:flex h-[250px] w-full flex-col items-center justify-center overflow-hidden">

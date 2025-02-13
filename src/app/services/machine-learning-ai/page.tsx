@@ -2,56 +2,58 @@ import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
 import AOSInitializer from "@/component/common/AOSInitializer";
 
-const WeDeliver = dynamic(() =>
-  import("@/component/common/WeDeliver/WeDeliver") 
+const WeDeliver = dynamic(
+  () => import("@/component/common/WeDeliver/WeDeliver")
 );
-const Blog = dynamic(() =>
-  import("@/component/common/Blog/Blog") 
+const Blog = dynamic(() => import("@/component/common/Blog/Blog"));
+const ContactForm = dynamic(
+  () => import("@/component/common/ContactForm/ContactForm")
 );
-const ContactForm = dynamic(() =>
-  import("@/component/common/ContactForm/ContactForm") 
+const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
+const FaqSection = dynamic(
+  () => import("@/component/sevices/Common/FaqSection/FaqSection")
 );
-const Cta = dynamic(() =>
-  import("@/component/common/Cta/Cta") 
+const FeaturedSlider = dynamic(
+  () => import("@/component/common/Featuredslider/Featuredslider")
 );
-const FaqSection = dynamic(() =>
-  import("@/component/sevices/Common/FaqSection/FaqSection") 
+const HeroBanner = dynamic(
+  () => import("@/component/common/HeroBanner/HeroBanner")
 );
-const FeaturedSlider = dynamic(() =>
-  import("@/component/common/Featuredslider/Featuredslider") 
-);
-const HeroBanner = dynamic(() =>
-  import("@/component/common/HeroBanner/HeroBanner") 
-);
-const WebDevProcess = dynamic(() =>
-  import("@/component/sevices/Common/WebDevProcess/WebDevProcess") 
+const WebDevProcess = dynamic(
+  () => import("@/component/sevices/Common/WebDevProcess/WebDevProcess")
 );
 const ShineBorderCards = dynamic(() =>
-  import("@/component/sevices/MachineLearning/ShineBorderCards/ShineBorderCards").then(
-    (mod) => mod.ShineBorderCards
-  ) 
+  import(
+    "@/component/sevices/MachineLearning/ShineBorderCards/ShineBorderCards"
+  ).then((mod) => mod.ShineBorderCards)
 );
 const AwareHoverCards = dynamic(() =>
-  import("@/component/sevices/MachineLearning/AwareHoverCards/AwareHoverCards").then(
-    (mod) => mod.AwareHoverCards
-  ) 
+  import(
+    "@/component/sevices/MachineLearning/AwareHoverCards/AwareHoverCards"
+  ).then((mod) => mod.AwareHoverCards)
 );
-const TechnologyStack = dynamic(() =>
-  import("@/component/common/TechnologyStack/TechnologyStack") 
+const TechnologyStack = dynamic(
+  () => import("@/component/common/TechnologyStack/TechnologyStack")
 );
-const ClientSays = dynamic(() =>
-  import("@/component/common/ClientSays/ClientSays") 
+const ClientSays = dynamic(
+  () => import("@/component/common/ClientSays/ClientSays")
 );
 const WebSlider = dynamic(() =>
   import("@/component/sevices/Common/WebSlider/WebSlider").then(
     (mod) => mod.WebSlider
-  ) 
+  )
 );
-const GridBoxes = dynamic(() =>
-  import("@/component/common/GridBoxes/GridBoxes") 
+const GridBoxes = dynamic(
+  () => import("@/component/common/GridBoxes/GridBoxes")
 );
-const MachineLearning = () => {
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Machine Learning AI",
+  description: "Zygibit Website Machine Learning AI Page",
+};
+
+const MachineLearning = () => {
   const clientSaysHeading = "We Are a Trusted Web App Development Company";
   const clientSaysDetails =
     "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions.";
@@ -62,8 +64,8 @@ const MachineLearning = () => {
 
   return (
     <>
-       <AOSInitializer />
-           <main>
+      <AOSInitializer />
+
       <HeroBanner />
       <WeDeliver />
 
@@ -176,7 +178,6 @@ const MachineLearning = () => {
       <FaqSection />
 
       <ContactForm />
-      </main>
     </>
   );
 };

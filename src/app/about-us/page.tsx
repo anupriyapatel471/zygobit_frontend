@@ -5,14 +5,13 @@ import RippleBg from "@/component/common/Ripplebg/Ripplebg";
 import { MagicCardDemo } from "@/component/common/Magiccard/Magiccard";
 import GridBoxes from "@/component/common/GridBoxes/GridBoxes";
 import AboutValueCards from "@/components/ui/aboutValueCards";
-import Together from "../../../public/images/together.png"
-import meeting from "../../../public/images/meeting.png"
-
-// Dynamically load non-critical or heavier components
+import Together from "../../../public/images/together.png";
+import meeting from "../../../public/images/meeting.png";
 import { AboutBgParticles } from "./AboutBgParticles/AboutBgParticles";
 import DeliveringTailored from "@/component/common/DeliveringTailored/DeliveringTailored";
 import AOSInitializer from "@/component/common/AOSInitializer";
 import dynamic from "next/dynamic";
+import { Metadata } from "next";
 const ContactForm = dynamic(
   () => import("@/component/common/ContactForm/ContactForm")
 );
@@ -23,6 +22,10 @@ const BoxReveals = dynamic(() =>
 const ClientSays = dynamic(
   () => import("@/component/common/ClientSays/ClientSays")
 );
+export const metadata: Metadata = {
+  title: "About us",
+  description: "Zygibit Website About Us Page",
+};
 
 const About = () => {
   const clientSaysHeading = "We Are a Trusted Web App Development Company";
@@ -32,15 +35,14 @@ const About = () => {
   const GridBoxesHeading = "Why Choose Zygobit?";
   const GridBoxesDetail =
     "Choose Zygobit for innovative, reliable, and high-quality solutions that drive your business forward with cutting-edge technology and expert support!";
-const deliveringHeading="Delivering Tailored Excellence"
-const deliveringPara="At Zygobit, we turn your vision into reality with creative, innovative solutions that deliver quality and results."
+  const deliveringHeading = "Delivering Tailored Excellence";
+  const deliveringPara =
+    "At Zygobit, we turn your vision into reality with creative, innovative solutions that deliver quality and results.";
   return (
     <>
-    <AOSInitializer />
-        <main>
-=      <HeroBanner />
+      <AOSInitializer />
+      <HeroBanner />
       <WeDeliver />
-
       <div className="w-full relative">
         <AboutBgParticles />
         <div className="w-full mb-14 sm:mb-0 px-4 lg:px-24 relative sm:absolute sm:top-10 sm:left-1/2 sm:-translate-x-1/2 inline-block   rounded-lg">
@@ -97,8 +99,10 @@ const deliveringPara="At Zygobit, we turn your vision into reality with creative
           </div>
         </div>
       </section>
-      <GridBoxes GridBoxesHeading={GridBoxesHeading} GridBoxesDetail={GridBoxesDetail} />
-
+      <GridBoxes
+        GridBoxesHeading={GridBoxesHeading}
+        GridBoxesDetail={GridBoxesDetail}
+      />
       {/* web app sales */}
       <section className="w-full relative px-4 lg:px-24 py-12 lg:py-20">
         <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap items-center gap-5 sm:gap-8">
@@ -117,9 +121,10 @@ const deliveringPara="At Zygobit, we turn your vision into reality with creative
           </div>
         </div>
       </section>
-
-      <DeliveringTailored deliveringHeading={deliveringHeading} deliveringPara={deliveringPara}/>
-
+      <DeliveringTailored
+        deliveringHeading={deliveringHeading}
+        deliveringPara={deliveringPara}
+      />
       <section className="w-full px-4 sm:px-0 ">
         <div className="w-full  sm:text-center" data-aos="fade-right">
           <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
@@ -135,13 +140,11 @@ const deliveringPara="At Zygobit, we turn your vision into reality with creative
           <AboutValueCards />
         </div>
       </section>
-
       <ClientSays
         clientHeading={clientSaysHeading}
         clientSaysDetails={clientSaysDetails}
       />
       <ContactForm />
-      </main>
     </>
   );
 };
