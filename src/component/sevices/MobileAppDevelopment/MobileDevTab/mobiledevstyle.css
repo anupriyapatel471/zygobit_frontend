@@ -1,0 +1,100 @@
+
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #D9D9D91A;
+    height: auto;
+    max-height: auto;
+    border-radius: 20px;
+    background: #D9D9D91A;
+    overflow: hidden;
+    box-shadow:
+      "0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075)";
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(35px);
+}
+
+.nav {
+    background: transparent;
+    padding:  0;
+    border-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius:  0;
+    border-bottom: none;
+    height: auto;  
+}
+
+.tabsStyles {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;  
+}
+
+.tabsContainer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;  
+    display: flex;
+    width: 100%;
+}
+
+.tab {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;  
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    padding: 10px 15px;
+    position: relative;
+    background: white;
+    cursor: pointer;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    user-select: none;
+    color: #fff;  
+}
+
+.underline {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2;
+    background: var(--accent),  
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;  
+}
+
+@media screen and (max-width:991px) {
+    .container {
+        width: 100%;
+    }
+    .tabsContainer {
+        flex-wrap: wrap;
+    }
+    .tabsContainer .tab {
+        width: 100%;
+        min-width: 100%;
+        font-size: 16px;
+        height: 50px;
+    }
+}

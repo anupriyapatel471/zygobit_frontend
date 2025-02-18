@@ -1,0 +1,212 @@
+import dynamic from "next/dynamic";
+import { ChevronRight } from "lucide-react";
+import BoostBussiness from "@/component/sevices/Common/BoostBussiness/BoostBussiness";
+import ClientSays from "@/component/common/ClientSays/ClientSays";
+import AOSInitializer from "@/component/common/AOSInitializer";
+
+const WeDeliver = dynamic(
+  () => import("@/component/common/WeDeliver/WeDeliver")
+);
+const AppleCardsCarousel = dynamic(
+  () =>
+    import(
+      "@/component/sevices/MobileAppDevelopment/AppleCardsCarousel/AppleCardsCarousel"
+    )
+);
+const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
+const ThreeDCards = dynamic(() =>
+  import(
+    "@/component/sevices/MobileAppDevelopment/ThreedCards/ThreedCards"
+  ).then((mod) => mod.ThreeDCards)
+);
+const MobileAppSlider = dynamic(
+  () =>
+    import(
+      "@/component/sevices/MobileAppDevelopment/MobileAppSlider/MobileAppSlider"
+    )
+);
+const HeroParalax = dynamic(
+  () => import("@/component/common/HeroParallax/HeroParallax")
+);
+const FeaturedSlider = dynamic(
+  () => import("@/component/common/Featuredslider/Featuredslider")
+);
+const ContactForm = dynamic(
+  () => import("@/component/common/ContactForm/ContactForm")
+);
+const TechnologyStack = dynamic(
+  () => import("@/component/common/TechnologyStack/TechnologyStack")
+);
+const HeroBanner = dynamic(
+  () => import("@/component/common/HeroBanner/HeroBanner")
+);
+const Blog = dynamic(() => import("@/component/common/Blog/Blog"));
+const FaqSection = dynamic(
+  () => import("@/component/sevices/Common/FaqSection/FaqSection")
+);
+const MobileAppGrid = dynamic(() =>
+  import("@/component/common/MobileAppGrid/MobileAppGrid").then(
+    (mod) => mod.MobileAppGrid
+  )
+);
+const SharedLayoutAnimation = dynamic(
+  () =>
+    import("@/component/sevices/MobileAppDevelopment/MobileDevTab/MobileDevTab")
+);
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Mobile App Development",
+  description: "Zygibit Website Mobile App Development Page",
+};
+const MobileAppDevelopment = () => {
+  const heading = "Boost Business Growth with Custom App Solutions";
+  const paragraph =
+    "Our team is passionate about experimenting with next-gen tech that flawlessly aligns with your brand, vision and target audience. As a custom mobile application development services provider we use a design sprint-centric methodology to identify opportunities to drive growth outside your core business.";
+  const clientHeading = "Hear It from Our Happy Clients!";
+  const clientSaysDetails =
+    "See how our custom app development services have transformed businesses and driven success for our happy clients";
+  return (
+    <>
+      <AOSInitializer />
+
+      <HeroBanner />
+      <WeDeliver />
+      <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pb-14 lg:pb-24">
+        <BoostBussiness heading={heading} paragraph={paragraph} />
+
+        <div className="w-full">
+          <AppleCardsCarousel />
+        </div>
+        <div className="w-full flex justify-center mt-8 sm:mt-12 lg:mt-16">
+          <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+            Get Assistance{" "}
+            <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+          </button>
+        </div>
+      </section>
+
+      <Cta Aurora={"Aurora"} />
+
+      <section className="w-full lg:mt-10 inline-block">
+        <div className="w-full px-4 lg:px-0 sm:text-center mb-8 sm:mb-16">
+          <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl ">
+            Next-Gen Mobile Apps Powered by Advanced Tech
+          </h2>
+          <p className="text-sm sm:text-lg lg:text-xl sm:font-medium mt-2">
+            Empowering your business with custom mobile applicaiton development
+            and cutting-edge technology solutions.
+          </p>
+        </div>
+        <div className="w-full px-4 lg:px-[167px]">
+          <ThreeDCards />
+        </div>
+        <div className="w-full flex justify-center mt-5 sm:mt-12">
+          <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+            Build Your App Today!{" "}
+            <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+          </button>
+        </div>
+      </section>
+
+      <Cta Aurora={"Aurora"} vortex={""} content={"Globe"} />
+
+      <section className="w-full lg:pb-10">
+        <div className="w-full px-4 lg:px-20 sm:text-center mb-9">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradiant-custom">
+            Innovative Custom Apps for a Digital-First Future
+          </h2>
+          <p className="sm:font-medium text-sm sm:text-lg lg:text-xl lg:max-w-6xl mx-auto mt-2">
+            Our mobile app development experts create robust, scalable, and
+            user-centric solutions that accelerate business growth, keeping you
+            at the forefront of the rapidly evolving digital landscape.
+          </p>
+        </div>
+        <div className="w-full">
+          <MobileAppSlider />
+        </div>
+        <div className="w-full flex justify-center mt-16 sm:mt-24 lg:mt-40">
+          <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+            Discuss Your Business Requirements{" "}
+            <ChevronRight className="group-hover:left-2 w-5 sm:w-auto left-0 relative duration-500 transition-all" />
+          </button>
+        </div>
+      </section>
+
+      <Cta Aurora={"Aurora"} vortex={""} content={""} />
+
+      <section className="w-full">
+        <div className="w-full px-4 lg:px-20 sm:text-center mb-5 sm:mb-9">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradiant-custom">
+            Elite Custom App Development for Your Business
+          </h2>
+          <p className="sm:font-medium text-sm sm:text-lg lg:text-xl lg:max-w-6xl mx-auto mt-2">
+            We deliver end-to-end custom mobile app development services
+            provider to help businesses thrive in the digital era. Our process
+            is designed to create innovative, user-centric applications tailored
+            to your needs.
+          </p>
+        </div>
+        <div className="w-full px-4 lg:px-0">
+          <SharedLayoutAnimation />
+        </div>
+      </section>
+
+      <Cta Aurora={"Aurora"} vortex={""} content={""} />
+
+      <section
+        data-aos="fade-up"
+        className="w-full relative  py-0 sm:py-0 lg:py-0 overflow-hidden "
+      >
+        <HeroParalax />
+      </section>
+
+      <Cta Aurora={"Aurora"} vortex={""} content={""} />
+
+      <section className="w-full sm:pt-10 pb-32 lg:pb-40 bg-black">
+        <div className="w-full px-4 lg:px-20 sm:text-center mb-8 sm:mb-12 lg:mb-12">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradiant-custom">
+            Why Zygobit for Mobile Apps ?
+          </h2>
+          <p className="sm:font-medium text-sm sm:text-lg lg:text-xl max-w-4xl mx-auto mt-2">
+            Partner with Zygobit for innovative, secure, and scalable mobile app
+            development solutions tailored to your unique business needs.
+          </p>
+        </div>
+        <div className="w-full px-5 lg:px-24">
+          <MobileAppGrid />
+        </div>
+      </section>
+
+      <section className="w-full px-4 lg:px-11 py-10 sm:py-14 overflow-hidden">
+        <div className="w-full  sm:text-center" data-aos="fade-right">
+          <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
+            Our Projects
+          </h2>
+          <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-4xl sm:mx-auto">
+            Partner with Zygobit for innovative, secure, and scalable mobile app
+            development solutions tailored to your unique business needs.
+          </p>
+        </div>
+        <div data-aos="fade-up">
+          <FeaturedSlider />
+        </div>
+      </section>
+
+      <TechnologyStack />
+
+      <ClientSays
+        clientHeading={clientHeading}
+        clientSaysDetails={clientSaysDetails}
+      />
+
+      <Blog />
+
+      <FaqSection />
+
+      <ContactForm />
+    </>
+  );
+};
+
+export default MobileAppDevelopment;
