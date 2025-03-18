@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./Responsive.css";
-import Script from 'next/script'
+import Script from "next/script";
 
 import Header from "@/component/common/Layout/Header/Header";
 import Footer from "@/component/common/Layout/Footer/Footer";
@@ -29,9 +29,10 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
         />
-        <Script 
-        strategy="lazyOnload"
-         src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></Script>
+        <Script
+          strategy="lazyOnload"
+          src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        ></Script>
       </head>
       <body>
         <Header />

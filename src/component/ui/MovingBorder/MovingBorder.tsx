@@ -47,7 +47,7 @@ export function MovingBorders() {
               Technology
             </span>
             <span className="flex items-center gap-2 text-xs ">
-            <Image
+              <Image
                 className=""
                 src={calendarIcon}
                 alt="icon"
@@ -76,7 +76,7 @@ export function MovingBorders() {
               Technology
             </span>
             <span className="flex items-center gap-2 text-xs ">
-            <Image
+              <Image
                 className=""
                 src={calendarIcon}
                 alt="icon"
@@ -105,7 +105,7 @@ export function MovingBorders() {
               Technology
             </span>
             <span className="flex items-center gap-2 text-xs ">
-            <Image
+              <Image
                 className=""
                 src={calendarIcon}
                 alt="icon"
@@ -134,7 +134,7 @@ export function MovingBorders() {
               Technology
             </span>
             <span className="flex items-center gap-2 text-xs ">
-            <Image
+              <Image
                 className=""
                 src={calendarIcon}
                 alt="icon"
@@ -163,7 +163,7 @@ export function MovingBorders() {
               Technology
             </span>
             <span className="flex items-center gap-2 text-xs ">
-            <Image
+              <Image
                 className=""
                 src={calendarIcon}
                 alt="icon"
@@ -192,7 +192,7 @@ export function MovingBorders() {
               Technology
             </span>
             <span className="flex items-center gap-2 text-xs ">
-            <Image
+              <Image
                 className=""
                 src={calendarIcon}
                 alt="icon"
@@ -221,7 +221,7 @@ export function MovingBorders() {
               Technology
             </span>
             <span className="flex items-center gap-2 text-xs ">
-            <Image
+              <Image
                 className=""
                 src={calendarIcon}
                 alt="icon"
@@ -250,7 +250,7 @@ export function MovingBorders() {
               Technology
             </span>
             <span className="flex items-center gap-2 text-xs ">
-            <Image
+              <Image
                 className=""
                 src={calendarIcon}
                 alt="icon"
