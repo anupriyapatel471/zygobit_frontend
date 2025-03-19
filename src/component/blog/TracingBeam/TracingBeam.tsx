@@ -6,7 +6,7 @@ import calendarIcon from "../../../../public/images/calendar_icon.svg";
 import { generateClient } from "aws-amplify/data";
 import type { Schema } from "../../../../../zygobit_website_backend/amplify/data/resource";
 import useAmplifyConfig from "@/hooks/useAmplify";
-// type
+
 interface BlogPost {
   id: string;
   title: string;
