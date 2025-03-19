@@ -1,35 +1,41 @@
+"use client";
 import Image from "next/image";
 import latestBlog from "../../../public/images/latest_blog.png";
 import calendarIcon from "../../../public/images/calendar_icon.svg";
-import BlogPost from "../../../public/images/blogPost.png";
+import { generateClient } from "aws-amplify/data";
+import type { Schema } from "../../../../zygobit_website_backend/amplify/data/resource";
+import { useEffect, useState } from "react";
+import useAmplifyConfig from "@/hooks/useAmplify";
+
+interface BlogPost {
+  createdAt: string;
+  description: string;
+  id: string;
+  image: string;
+  publishedDate: string;
+  tags: string[];
+  title: string;
+  updatedAt: string;
+}
+const client = generateClient<Schema>();
 
 const BlogSection = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Uber (UBER) Q3 Results: Uber share price rally on strong",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium",
-      date: "December 2021",
-      category: "Technology",
-    },
-    {
-      id: 2,
-      title: "Uber (UBER) Q3 Results: Uber share price rally on strong",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium",
-      date: "December 2021",
-      category: "Technology",
-    },
-    {
-      id: 3,
-      title: "Uber (UBER) Q3 Results: Uber share price rally on strong",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium",
-      date: "December 2021",
-      category: "Technology",
-    },
-  ];
+  const [blogs, setBlogs] = useState<BlogPost[]>([]);
+
+  useAmplifyConfig();
+  const fetchBlogs = async () => {
+    try {
+      const res = await client.models.Blog.list();
+      setBlogs(res.data as BlogPost[]);
+    } catch (error) {
+      console.log("error", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
+
   return (
     <>
       <section className="w-full bg-black px-4 xl:px-24 py-8 mt-16">
@@ -69,7 +75,7 @@ const BlogSection = () => {
           </div>
 
           <div className="w-full grid grid-cols-1 gap-8 sm:gap-4">
-            {blogPosts.map((post) => (
+            {blogs.map((post) => (
               <div
                 key={post.id}
                 className="w-full cursor-pointer flex flex-wrap sm:flex-nowrap gap-4 items-center"
@@ -77,14 +83,14 @@ const BlogSection = () => {
                 <div className="w-28 h-28 object-cover sm:w-40 sm:h-40 rounded-sm overflow-hidden relative">
                   <Image
                     className=" object-cover"
-                    src={BlogPost}
+                    src={post.image}
                     alt="BlogPost"
                     fill
                   />
                 </div>
                 <div className="w-full sm:w-[calc(100%-10rem)]">
                   <span className="block w-fit py-1 px-2 rounded-sm bg-gradient-to-b from-orange-600 to-orange-800 text-white font-medium text-[10px]">
-                    {post.category}
+                    {post.tags ? post.tags.join(", ") : "No Tag"}
                   </span>
                   <h3 className="sm:font-bold text-base mt-3 sm:mt-1">
                     {post.title}
@@ -100,7 +106,7 @@ const BlogSection = () => {
                       width={18}
                       height={18}
                     />
-                    {post.date}
+                    {post.publishedDate}
                   </span>
                 </div>
               </div>
