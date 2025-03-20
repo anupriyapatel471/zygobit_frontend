@@ -6,6 +6,7 @@ import calendarIcon from "../../../../public/images/calendar_icon.svg";
 import { generateClient } from "aws-amplify/data";
 import type { Schema } from "../../../../../zygobit_website_backend/amplify/data/resource";
 import useAmplifyConfig from "@/hooks/useAmplify";
+import { useParams } from "next/navigation";
 
 interface BlogPost {
   id: string;
@@ -19,12 +20,16 @@ interface BlogPost {
 const client = generateClient<Schema>();
 
 export function TracingBeams() {
+  const { Id } = useParams();
+
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
   useAmplifyConfig();
 
-  const fetchBlogs = async () => {
+  const fetchBlogs = async (blogId: string) => {
     try {
-      const res = await client.models.Blog.list();
+      const res = await client.models.Blog.list({
+        filter: { id: { eq: blogId } },
+      });
       setBlogs(res.data as BlogPost[]);
     } catch (error) {
       console.error("Error fetching blogs", error);
@@ -32,8 +37,10 @@ export function TracingBeams() {
   };
 
   useEffect(() => {
-    fetchBlogs();
-  }, []);
+    if (Id && typeof Id === "string") {
+      fetchBlogs(Id);
+    }
+  }, [Id]);
   return (
     <TracingBeam className="mt-24 sm:mt-32 mb-16 sm:mb-20">
       <div className="w-full antialiased sm:pt-4 relative">

@@ -46,10 +46,10 @@ export default function EcommerceTabbing() {
           >
             {selectedTab ? selectedTab.icon : "😋"}
             <h2 className="font-bold text-2xl sm:text-4xl mt-7 text-white text-center">
-              All
+              {selectedTab.label}
             </h2>
             <div className="w-full px-4 xl:px-24 mt-8 lg:mt-10 mb-10 sm:mb-12 lg:mb-20">
-              <MovingBorders />
+              <MovingBorders selectedCategory={selectedTab.label} />
             </div>
           </motion.div>
         </AnimatePresence>

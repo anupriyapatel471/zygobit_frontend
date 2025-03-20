@@ -2,20 +2,18 @@
 
 import { useState } from "react";
 import { Particles } from "@/components/ui/particles";
-// import { Input } from "@/components/ui/contactInput";
 import ConnectForm from "@/component/common/ConnectForm";
 import Image from "next/image";
-// import Image from "next/image";
-import spacex from "../../../../public/images/space_x.png"
+import spacex from "../../../../public/images/space_x.png";
 
 export function ContactParticles() {
-  const [color, setColor] = useState("#fff"); // Default color
+  const [color] = useState("#fff");
 
   return (
     <>
       {/* contact form */}
       <section className="w-full px-4 lg:px-24 relative overflow-hidden">
-        <div className="w-full absolute top-0 left-0 size-full">
+        <div className="w-full absolute top-0 left-0 size-full -z-10">
           <Particles
             className="absolute size-full inset-0 z-0"
             quantity={200}
@@ -24,16 +22,10 @@ export function ContactParticles() {
             refresh
           />
         </div>
-        <div className="w-full grid items-center   bg-white/5 rounded-2xl grid-cols-1 lg:grid-cols-2 gap-8 p-4 sm:p-5">
+        <div className="w-full grid items-center bg-white/5 rounded-2xl grid-cols-1 lg:grid-cols-2 gap-8 p-4 sm:p-5">
           <ConnectForm />
 
           <div data-aos="fade-left" className="w-auto relative">
-            {/* <img
-              className="w-full rounded-2xl h-[415px] sm:h-[800px] object-cover"
-              src="/images/space_x.png"
-              alt=""
-            /> */}
-
             <Image
               className="rounded-2xl object-cover"
               src={spacex}

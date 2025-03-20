@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import useAmplifyConfig from "@/hooks/useAmplify";
 
 interface BlogPost {
+  category: string;
   createdAt: string;
   description: string;
   id: string;
@@ -90,7 +91,7 @@ const BlogSection = () => {
                 </div>
                 <div className="w-full sm:w-[calc(100%-10rem)]">
                   <span className="block w-fit py-1 px-2 rounded-sm bg-gradient-to-b from-orange-600 to-orange-800 text-white font-medium text-[10px]">
-                    {post.tags ? post.tags.join(", ") : "No Tag"}
+                    {post.category}
                   </span>
                   <h3 className="sm:font-bold text-base mt-3 sm:mt-1">
                     {post.title}

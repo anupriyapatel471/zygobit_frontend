@@ -11,6 +11,7 @@ type EagerBlog = {
     identifier: ManagedIdentifier<Blog, 'id'>;
   };
   readonly id: string;
+  readonly category?: string | null;
   readonly title?: string | null;
   readonly publishedDate?: string | null;
   readonly tags?: (string | null)[] | null;
@@ -25,6 +26,7 @@ type LazyBlog = {
     identifier: ManagedIdentifier<Blog, 'id'>;
   };
   readonly id: string;
+  readonly category?: string | null;
   readonly title?: string | null;
   readonly publishedDate?: string | null;
   readonly tags?: (string | null)[] | null;
