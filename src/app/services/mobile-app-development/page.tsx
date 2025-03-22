@@ -60,9 +60,9 @@ export const metadata: Metadata = {
   description: "Zygibit Website Mobile App Development Page",
 };
 const MobileAppDevelopment = () => {
-  const heading = "Boost Business Growth with Custom App Solutions";
+  const heading = "Accelerate Your Business with Tailored Mobile App Solutions";
   const paragraph =
-    "Our team is passionate about experimenting with next-gen tech that flawlessly aligns with your brand, vision and target audience. As a custom mobile application development services provider we use a design sprint-centric methodology to identify opportunities to drive growth outside your core business.";
+    "we specialize in crafting custom mobile applications that empower businesses to thrive in today’s digital-first world. Our innovative solutions are designed to align with your unique goals, helping you unlock new opportunities, engage your audience, and drive sustainable growth.";
   const clientHeading = "Hear It from Our Happy Clients!";
   const clientSaysDetails =
     "See how our custom app development services have transformed businesses and driven success for our happy clients";
@@ -91,11 +91,11 @@ const MobileAppDevelopment = () => {
       <section className="w-full lg:mt-10 inline-block">
         <div className="w-full px-4 lg:px-0 sm:text-center mb-8 sm:mb-16">
           <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl ">
-            Next-Gen Mobile Apps Powered by Advanced Tech
+            Revolutionizing Mobile Apps with Cutting-Edge Technology
           </h2>
           <p className="text-sm sm:text-lg lg:text-xl sm:font-medium mt-2">
-            Empowering your business with custom mobile applicaiton development
-            and cutting-edge technology solutions.
+            Transforming businesses through innovative mobile solutions powered
+            by AI, machine learning, and automation.
           </p>
         </div>
         <div className="w-full px-4 lg:px-[167px]">
@@ -114,12 +114,14 @@ const MobileAppDevelopment = () => {
       <section className="w-full lg:pb-10">
         <div className="w-full px-4 lg:px-20 sm:text-center mb-9">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradiant-custom">
-            Innovative Custom Apps for a Digital-First Future
+            End-to-End Mobile App Development
           </h2>
           <p className="sm:font-medium text-sm sm:text-lg lg:text-xl lg:max-w-6xl mx-auto mt-2">
-            Our mobile app development experts create robust, scalable, and
-            user-centric solutions that accelerate business growth, keeping you
-            at the forefront of the rapidly evolving digital landscape.
+            We create dynamic, feature-rich mobile applications using the latest
+            technologies, ensuring seamless performance across all devices.
+            Whether you need native development for optimal performance or
+            cross-platform solutions for cost efficiency, we deliver robust
+            applications tailored to your needs.
           </p>
         </div>
         <div className="w-full">
