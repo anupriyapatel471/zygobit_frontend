@@ -18,12 +18,11 @@ const HeroBanner = () => {
                 Custom Mobile App Development Services
               </h1>
               <p className="text-sm sm:text-base relative z-10 max-w-2xl mx-auto sm:font-semibold mt-5">
-                Turn your ideas into innovative mobile experiences with our
-                AI-driven and blockchain-secured mobile app development
+              We transform your ideas into innovative mobile experiences with our cutting-edge AI-driven and blockchain-secured mobile app development services. Our team is dedicated to creating mobile applications that not only meet but exceed your expectations, ensuring a seamless and secure user experience.
               </p>
               <div className="lg:max-w-sm mx-auto relative z-10">
                 <button className="lg:w-full mt-9  btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                  Book your free consultance
+                  Book your free consultation
                   <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                 </button>
               </div>

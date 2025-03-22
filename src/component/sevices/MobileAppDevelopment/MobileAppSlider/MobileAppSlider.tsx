@@ -33,13 +33,9 @@ export default function MobileAppSlider() {
                       {/* <img className="w-full h-[300px] sm:h-[400px] object-cover lg:h-full" src="/images/mobile_app.png" alt="" /> */}
                     </div>
                     <div className="w-full lg:w-3/5  p-4 lg:pl-9">
-                      <h3 className="font-semibold text-2xl sm:text-4xl text-white tracking-tighter">Android App Development</h3>
+                      <h3 className="font-semibold text-2xl sm:text-4xl text-white tracking-tighter">Flutter App Development </h3>
                       <p className="text-sm sm:text-lg lg:text-2xl text-white mt-3 lg:mt-4">
-                        We specialize in Android app development using Java or
-                        Kotlin, creating high-performance, feature-rich apps
-                        optimized for Android devices. Our apps ensure seamless
-                        compatibility and user experience across various Android
-                        devices.
+                      Flutter enables us to build visually stunning, high-performance apps from a single codebase for both Android and iOS. With fast development cycles, expressive UI, and native performance, our Flutter apps deliver a seamless experience across platforms while reducing time-to-market.
                       </p>
                     </div>
                   </div>

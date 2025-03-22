@@ -75,51 +75,48 @@ export default function NavigationMenuDemo() {
                   href="/services/mobile-app-development"
                   title="Mobile App Development"
                 >
-                  Re-usable components built using Radix UI and Tailwind CSS.
+                  Create high-performance mobile apps for iOS and Android.
                 </ListItem>
                 <ListItem
                   className="text-white hover:text-white hover:bg-gradient-to-b from-accent-foreground/50 to-accent-foreground"
                   href="/services/web-app-development"
                   title="Web Development"
                 >
-                  How to install dependencies and structure your app.
+                  Develop fast, responsive, and optimized websites.
                 </ListItem>
                 <ListItem
                   className="text-white hover:text-white hover:bg-gradient-to-b from-accent-foreground/50 to-accent-foreground"
                   href="/services/uiux-web-design"
-                  title="UI UX Design"
+                  title="UI/UX Design"
                 >
-                  Styles for headings, paragraphs, lists...etc
+                  Craft intuitive and engaging user experiences.
                 </ListItem>
                 <ListItem
                   className="text-white hover:text-white hover:bg-gradient-to-b from-accent-foreground/50 to-accent-foreground"
                   href="/services/machine-learning-ai"
                   title="Machine Learning and AI"
                 >
-                  Styles for headings, paragraphs, lists...etc
+                  Leverage AI for automation, insights, and smarter solutions.
                 </ListItem>
                 <ListItem
                   className="text-white hover:text-white hover:bg-gradient-to-b from-accent-foreground/50 to-accent-foreground"
                   href="/services/Ecommerce"
-                  title="Ecommerce"
+                  title="E-Commerce"
                 >
-                  Styles for headings, paragraphs, lists...etc
+                  Build secure online stores with easy payments.
                 </ListItem>
               </div>
-              <li className="row-span-1">
+              <li className="row-span-1 h-full">
                 <NavigationMenuLink asChild>
                   <Link
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-accent-foreground/50 to-accent-foreground p-3 sm:p-6 no-underline outline-none focus:shadow-md"
+                    className="flex h-full w-full select-none flex-col justify-center items-center rounded-md bg-gradient-to-b from-accent-foreground/50 to-accent-foreground p-3 sm:p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
                     <div className="mb-2 mt-0 sm:mt-4 text-lg text-white font-medium">
-                      ZYgobit Ui
+                      Zygobit Tech
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components that you can copy and
-                      paste into your apps. Accessible. Customizable. Open
-                      Source.
-                    </p>
+                    Scalable and feature-rich ecommerce platforms designed to enhance business growth, ensure robust security, streamline operations, and provide a seamless shopping experience for users.                    </p>
                   </Link>
                 </NavigationMenuLink>
               </li>

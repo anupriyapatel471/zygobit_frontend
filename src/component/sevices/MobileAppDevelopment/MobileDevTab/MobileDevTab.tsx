@@ -63,13 +63,10 @@ export default function SharedLayoutAnimation() {
               </div>
               <div className="w-full sm:w-3/5">
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-                  Planning Phase
+                Discovery Phase
                 </h3>
                 <p className="text-sm sm:text-lg lg:text-xl mt-2 sm:mt-5 lg:mt-10">
-                  In The phase, we collaborate to understand your business goals
-                  target audience, and app requirements. By conducting market
-                  research and feasibility analysis, we lay a strong foundation
-                  for your custom mobile app development.
+                We begin by understanding your vision, business objectives, and target audience. This phase involves brainstorming, competitor analysis, and gathering key insights to lay a strategic roadmap for your app development journey.
                 </p>
               </div>
             </div>

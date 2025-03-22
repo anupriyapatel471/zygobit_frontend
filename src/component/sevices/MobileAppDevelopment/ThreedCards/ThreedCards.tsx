@@ -41,9 +41,7 @@ export function ThreeDCards() {
                 translateZ="60"
                 className=" text-sm max-w-sm mt-2 text-white"
               >
-                We integrate AI into your mobile apps, offering features like
-                face recognition, text scanning, barcodes, and predictive
-                modeling for smarter user experiences.
+                Enhance your mobile applications with AI-driven capabilities, including facial recognition, smart text scanning, barcode detection, and predictive analytics, delivering seamless and intelligent user interactions.
               </CardItem>
             </CardItem>
           </CardBody>
@@ -71,8 +69,7 @@ export function ThreeDCards() {
                 translateZ="60"
                 className=" text-sm max-w-sm mt-2 text-white"
               >
-                Our scalable machine learning app solutions grow with your
-                business, offering competitive costs and maximum value.
+                Our AI-powered machine learning models adapt to your business needs, optimizing efficiency, automating key processes, and ensuring cost-effective, scalable solutions for long-term success.
               </CardItem>
             </div>
           </CardBody>
@@ -100,8 +97,7 @@ export function ThreeDCards() {
                 translateZ="60"
                 className=" text-sm max-w-sm mt-2 text-white"
               >
-                We build AI-powered mobile apps that create dynamic content,
-                automate workflows, and boost user engagement.
+                Leverage the power of generative AI to create dynamic content, automate complex workflows, and drive deeper engagement, making your applications smarter and more user-centric.
               </CardItem>
             </div>
           </CardBody>
@@ -129,8 +125,7 @@ export function ThreeDCards() {
                 translateZ="60"
                 className=" text-sm max-w-sm mt-2 text-white"
               >
-                We create IoT apps for seamless device connectivity, real-time
-                monitoring, and smart automation.
+                We develop IoT applications that enable seamless device connectivity, real-time monitoring, and advanced automation. Our solutions help businesses optimize operations, enhance efficiency, and create smarter environments.
               </CardItem>
             </div>
           </CardBody>
@@ -158,8 +153,7 @@ export function ThreeDCards() {
                 translateZ="60"
                 className=" text-sm max-w-sm mt-2 text-white"
               >
-                We develop blockchain-powered apps that are secure,
-                decentralized, and web3-ready for modern businesses.
+                We build secure and decentralized blockchain applications designed for modern businesses. From digital transactions to smart contracts and web3 integration, our solutions ensure transparency, reliability, and innovation in every process.
               </CardItem>
             </div>
           </CardBody>
@@ -187,8 +181,9 @@ export function ThreeDCards() {
                 translateZ="60"
                 className=" text-sm max-w-sm mt-2 text-white"
               >
-                We create AR/VR apps for interactive and engaging user
-                experiences like never before.
+               We craft immersive AR/VR applications that transform digital interactions. Whether it's for gaming, training, or enterprise solutions, our apps deliver highly engaging and interactive experiences that redefine user engagement.
+
+
               </CardItem>
             </div>
           </CardBody>
