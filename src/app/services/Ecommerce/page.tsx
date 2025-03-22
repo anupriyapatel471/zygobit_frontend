@@ -40,6 +40,7 @@ const TechnologyStack = dynamic(
   () => import("@/component/common/TechnologyStack/TechnologyStack")
 );
 import { Metadata } from "next";
+import { faqData } from "@/lib/faqs/faqs";
 
 export const metadata: Metadata = {
   title: "Ecommerce",
@@ -166,7 +167,7 @@ const Ecommerce = () => {
 
       <Blog />
 
-      <FaqSection />
+      <FaqSection faqData={faqData} />
 
       <ContactForm />
     </>

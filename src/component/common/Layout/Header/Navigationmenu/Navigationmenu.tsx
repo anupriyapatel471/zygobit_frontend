@@ -116,7 +116,11 @@ export default function NavigationMenuDemo() {
                       Zygobit Tech
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                    Scalable and feature-rich ecommerce platforms designed to enhance business growth, ensure robust security, streamline operations, and provide a seamless shopping experience for users.                    </p>
+                      Scalable and feature-rich ecommerce platforms designed to
+                      enhance business growth, ensure robust security,
+                      streamline operations, and provide a seamless shopping
+                      experience for users.{" "}
+                    </p>
                   </Link>
                 </NavigationMenuLink>
               </li>
@@ -131,7 +135,7 @@ export default function NavigationMenuDemo() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/Blog" legacyBehavior passHref>
+          <Link href="/blog" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Blogs
             </NavigationMenuLink>

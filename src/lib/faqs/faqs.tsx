@@ -1,0 +1,81 @@
+export const faqMobileApp = [
+  {
+    question: "What types of mobile apps do you develop?",
+    answer:
+      "We specialize in developing native, hybrid, and cross-platform apps for iOS and Android, tailored to various industries.",
+  },
+  {
+    question: "How long does it take to develop a mobile app?",
+    answer:
+      "The timeline varies based on the complexity, features, and integrations required. On average, it takes 3–6 months to develop a fully functional app.",
+  },
+  {
+    question: "What technologies do you use for mobile app development?",
+    answer:
+      "We use Flutter, React Native, Swift, Kotlin, and Golang for backend development, ensuring high performance and scalability.",
+  },
+  {
+    question: "Can you help with app store submission and approvals?",
+    answer:
+      "Yes! We handle the entire process, including App Store (iOS) and Google Play (Android) submission, ensuring compliance with guidelines.",
+  },
+  {
+    question: "Do you provide post-launch support and maintenance?",
+    answer:
+      "Absolutely! We offer ongoing maintenance, updates, bug fixes, and feature enhancements to keep your app optimized.",
+  },
+  {
+    question: "How much does mobile app development cost?",
+    answer:
+      "The cost depends on the app’s complexity, features, and platform. Contact us for a custom quote based on your project requirements.",
+  },
+  {
+    question: "Can you integrate third-party APIs and payment gateways?",
+    answer:
+      "Yes, we integrate APIs, payment gateways (Stripe, PayPal, etc.), analytics, and other third-party services seamlessly.",
+  },
+  {
+    question: "Will my app be secure?",
+    answer:
+      "Security is our priority! We implement end-to-end encryption, secure authentication, and compliance with industry standards to protect user data.",
+  },
+  {
+    question: "Can you scale the app as my business grows?",
+    answer:
+      "Yes, we build scalable architectures that allow your app to handle increased users, features, and data as your business expands.",
+  },
+  {
+    question: "Why should I choose Zygobit for mobile app development?",
+    answer:
+      "With proven expertise, cutting-edge technology, and a user-focused approach, we deliver high-quality apps tailored to your business needs.",
+  },
+];
+
+export const faqData = [
+  {
+    question: "Why choose Zygobit mobile app development services?",
+    answer: "Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {
+    question: "What is the cost of mobile app development in 2024?",
+    answer:
+      "Yes. It comes with default styles that matches the other components' aesthetic.",
+  },
+  {
+    question: "How to choose a mobile app development platform?",
+    answer:
+      "Yes. It's animated by default, but you can disable it if you prefer.",
+  },
+  {
+    question:
+      "How to manage product development & mobile application services?",
+    answer:
+      "Yes. It's animated by default, but you can disable it if you prefer.",
+  },
+  {
+    question:
+      "What is the difference between cross-platform app development and hybrid mobile app development?",
+    answer:
+      "Yes. It's animated by default, but you can disable it if you prefer.",
+  },
+];

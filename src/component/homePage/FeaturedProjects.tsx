@@ -1,4 +1,4 @@
-import { ChevronRight } from "lucide-react";
+// import { ChevronRight } from "lucide-react";
 import FeaturedSlider from "@/component/common/Featuredslider/Featuredslider";
 
 const FeaturedProjects = () => {
@@ -18,12 +18,12 @@ const FeaturedProjects = () => {
         <div data-aos="fade-up">
           <FeaturedSlider />
         </div>
-        <div className="w-full mt-5 sm:mt-10 flex justify-center">
+        {/* <div className="w-full mt-5 sm:mt-10 flex justify-center">
           <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
             View More{" "}
             <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
           </button>
-        </div>
+        </div> */}
       </section>
     </>
   );

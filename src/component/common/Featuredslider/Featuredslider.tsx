@@ -32,7 +32,7 @@ export default function FeaturedSlider() {
     router.push(`/case-study/${id}`);
   };
 
-  console.log("error", error);
+  // console.log("error", error);
 
   return loading ? (
     <Loader />

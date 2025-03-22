@@ -50,6 +50,7 @@ const UiuxTeams = dynamic(() =>
   )
 );
 import { Metadata } from "next";
+import { faqData } from "@/lib/faqs/faqs";
 
 export const metadata: Metadata = {
   title: "UI UX Design",
@@ -179,7 +180,7 @@ const UiuxWebDesign = () => {
 
       <Blog />
 
-      <FaqSection />
+      <FaqSection faqData={faqData} />
 
       <ContactForm />
     </>

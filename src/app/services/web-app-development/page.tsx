@@ -69,6 +69,7 @@ const ScrollTriggered = dynamic(
     )
 );
 import { Metadata } from "next";
+import { faqData } from "@/lib/faqs/faqs";
 
 export const metadata: Metadata = {
   title: "Web Development",
@@ -123,7 +124,6 @@ const WebAppDevelopment = () => {
               className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
               src={Sales}
               alt="Sales"
-              // layout="responsive"
               width={590}
               height={753}
             />
@@ -214,7 +214,6 @@ const WebAppDevelopment = () => {
               className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
               src={WebCustom}
               alt="web_custom"
-              // layout="responsive"
               width={590}
               height={753}
             />
@@ -241,7 +240,7 @@ const WebAppDevelopment = () => {
       />
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
       <Blog />
-      <FaqSection />
+      <FaqSection faqData={faqData} />
       <ContactForm />
     </>
   );

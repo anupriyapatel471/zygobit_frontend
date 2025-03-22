@@ -47,6 +47,7 @@ const GridBoxes = dynamic(
   () => import("@/component/common/GridBoxes/GridBoxes")
 );
 import { Metadata } from "next";
+import { faqData } from "@/lib/faqs/faqs";
 
 export const metadata: Metadata = {
   title: "Machine Learning AI",
@@ -175,7 +176,7 @@ const MachineLearning = () => {
 
       <Blog />
 
-      <FaqSection />
+      <FaqSection faqData={faqData} />
 
       <ContactForm />
     </>

@@ -1,7 +1,15 @@
 import React from "react";
 import Faq from "./Faq/Faq";
 
-const FaqSection = () => {
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface FaqProps {
+  faqData: FAQ[];
+}
+const FaqSection = ({ faqData }: FaqProps) => {
   return (
     <>
       <section className="w-full bg-gradient-to-b from-black via-black to-orange-600 mb-14 sm:mb-20 pb-12 sm:pb-20">
@@ -11,7 +19,7 @@ const FaqSection = () => {
           </h2>
         </div>
         <div className="w-full mx-auto max-w-4xl  bg-white/5 p-4 sm:p-6">
-          <Faq />
+          <Faq faqData={faqData} />
         </div>
       </section>
     </>

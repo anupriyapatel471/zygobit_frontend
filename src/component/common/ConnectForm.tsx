@@ -5,6 +5,7 @@ import { generateClient } from "aws-amplify/data";
 import type { Schema } from "../../../../zygobit_website_backend/amplify/data/resource";
 import { useState } from "react";
 import useAmplifyConfig from "@/hooks/useAmplify";
+import { v4 } from "uuid";
 
 const client = generateClient<Schema>();
 
@@ -39,6 +40,7 @@ const ConnectForm = () => {
     try {
       const savedRecord = await client.models.ContactRequest.create({
         ...formData,
+        id: v4(),
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       });

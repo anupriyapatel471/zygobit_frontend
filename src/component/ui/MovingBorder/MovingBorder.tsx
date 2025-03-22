@@ -38,7 +38,7 @@ export function MovingBorders({ selectedCategory }: MovingBordersProps) {
             className="flex justify-center mx-auto md:basis-1/2 lg:basis-1/3"
           >
             <Button
-              onClick={() => router.push(`/Blog/${card.id}`)}
+              onClick={() => router.push(`/blog/${card.id}`)}
               className="bg-white/5 cursor-pointer rounded-2xl overflow-hidden backdrop-blur-lg text-white border border-[#7C2D12]"
             >
               <div className="w-full overflow-hidden relative h-[184px]">

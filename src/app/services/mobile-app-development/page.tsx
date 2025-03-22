@@ -3,6 +3,7 @@ import { ChevronRight } from "lucide-react";
 import BoostBussiness from "@/component/sevices/Common/BoostBussiness/BoostBussiness";
 import ClientSays from "@/component/common/ClientSays/ClientSays";
 import AOSInitializer from "@/component/common/AOSInitializer";
+import { faqMobileApp } from "@/lib/faqs/faqs";
 
 const WeDeliver = dynamic(
   () => import("@/component/common/WeDeliver/WeDeliver")
@@ -66,6 +67,8 @@ const MobileAppDevelopment = () => {
   const clientHeading = "Hear It from Our Happy Clients!";
   const clientSaysDetails =
     "See how our custom app development services have transformed businesses and driven success for our happy clients";
+
+  console.log("faqMobileApp", faqMobileApp);
   return (
     <>
       <AOSInitializer />
@@ -204,7 +207,7 @@ const MobileAppDevelopment = () => {
 
       <Blog />
 
-      <FaqSection />
+      <FaqSection faqData={faqMobileApp} />
 
       <ContactForm />
     </>

@@ -8,7 +8,7 @@ const Blog = () => {
   const router = useRouter();
 
   const handleViewAll = () => {
-    router.push("/Blog");
+    router.push("/blog");
   };
   return (
     <>
