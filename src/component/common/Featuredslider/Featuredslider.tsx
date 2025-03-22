@@ -24,6 +24,7 @@ import type { Schema } from "../../../../../zygobit_website_backend/amplify/data
 const client = generateClient<Schema>();
 
 import useAmplifyConfig from "@/hooks/useAmplify";
+import { truncateText } from "@/lib/utils";
 
 interface Project {
   readonly id: string;
@@ -72,7 +73,7 @@ export default function FeaturedSlider() {
 
   return (
     <Carousel className="w-full">
-      <CarouselContent>
+      <CarouselContent className="flex">
         {projects.length > 0 &&
           projects.map((project) => (
             <CarouselItem key={project.id}>
@@ -93,7 +94,8 @@ export default function FeaturedSlider() {
                             {project.title}
                           </h3>
                           <p className="text-sm sm:text-base sm:font-medium mt-3 sm:pr-5">
-                            {project.description}
+                            {project.description &&
+                              truncateText(project.description)}
                           </p>
                           <div className="w-64 my-4 grid grid-cols-2 gap-x-14 gap-y-4">
                             <div className="w-auto">

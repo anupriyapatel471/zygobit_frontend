@@ -2,7 +2,7 @@
 import React from "react";
 import ConnectForm from "@/component/common/ConnectForm";
 import Image from "next/image";
-import spaceX from "../../../../public/images/space_x.png";
+import contactImage from "../../../../public/images/contact_Image.png";
 
 export default function ContactForm() {
   return (
@@ -15,7 +15,7 @@ export default function ContactForm() {
           >
             <Image
               className="w-full rounded-2xl object-cover"
-              src={spaceX}
+              src={contactImage}
               alt="Space X"
               fill
             />

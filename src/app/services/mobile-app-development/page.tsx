@@ -138,13 +138,13 @@ const MobileAppDevelopment = () => {
       <section className="w-full">
         <div className="w-full px-4 lg:px-20 sm:text-center mb-5 sm:mb-9">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradiant-custom">
-            Elite Custom App Development for Your Business
+            Transforming Ideas into Scalable, High-Performance Applications
           </h2>
           <p className="sm:font-medium text-sm sm:text-lg lg:text-xl lg:max-w-6xl mx-auto mt-2">
-            We deliver end-to-end custom mobile app development services
-            provider to help businesses thrive in the digital era. Our process
-            is designed to create innovative, user-centric applications tailored
-            to your needs.
+            We offer end-to-end custom mobile app development services to help
+            businesses innovate and succeed in the digital era. Our structured
+            process ensures the creation of user-centric, high-quality
+            applications tailored to your unique needs.
           </p>
         </div>
         <div className="w-full px-4 lg:px-0">

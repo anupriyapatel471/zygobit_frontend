@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Particles } from "@/components/ui/particles";
 import ConnectForm from "@/component/common/ConnectForm";
 import Image from "next/image";
-import spacex from "../../../../public/images/space_x.png";
+import contactImage from "../../../../public/images/contact_Image.png";
 
 export function ContactParticles() {
   const [color] = useState("#fff");
@@ -28,8 +28,8 @@ export function ContactParticles() {
           <div data-aos="fade-left" className="w-auto relative">
             <Image
               className="rounded-2xl object-cover"
-              src={spacex}
-              alt="Space X"
+              src={contactImage}
+              alt="image"
               width={590}
               height={885}
             />

@@ -1,12 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import {
-  motion,
-  useTransform,
-  useScroll,
-  useVelocity,
-  useSpring,
-} from "framer-motion";
+import { motion, useTransform, useScroll, useSpring } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const TracingBeam = ({
@@ -49,7 +43,10 @@ export const TracingBeam = ({
   return (
     <motion.div
       ref={ref}
-      className={cn("relative w-full pl-16 sm:pl-20 lg:pl-[12rem] pr-4 lg:pr-24 h-full", className)}
+      className={cn(
+        "relative w-full pl-16 sm:pl-20 lg:pl-[12rem] pr-4 lg:pr-24 h-full",
+        className
+      )}
     >
       <div className="absolute  left-0 lg:left-[72px] top-3">
         <motion.div
@@ -73,8 +70,7 @@ export const TracingBeam = ({
             animate={{
               backgroundColor:
                 scrollYProgress.get() > 0 ? "#EA580C" : "#EA580C",
-              borderColor:
-                scrollYProgress.get() > 0 ? "#EA580C" : "#EA580C",
+              borderColor: scrollYProgress.get() > 0 ? "#EA580C" : "#EA580C",
             }}
             className="h-3 w-3  rounded-full border border-neutral-300 bg-white"
           />

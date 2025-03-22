@@ -4,7 +4,6 @@ import * as React from "react";
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import arrowLeft from "../../../public/images/arrow_left.svg";
 import arrowRight from "../../../public/images/arrow_right.svg";

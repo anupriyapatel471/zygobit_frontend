@@ -3,16 +3,16 @@
 import { AnimatePresence } from "motion/react";
 import * as motion from "motion/react-client";
 import { useState } from "react";
-import './mobiledevstyle.css'
+import "./mobiledevstyle.css";
 import Image from "next/image";
-import plan from "../../../../../public/images/plan.png"
+import plan from "../../../../../public/images/plan.png";
 
 export default function SharedLayoutAnimation() {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
   return (
-    <div  className="container" >
-      <nav  className="nav">
+    <div className="container">
+      <nav className="nav">
         <ul className="tabsContainer">
           {tabs.map((item) => (
             <motion.li
@@ -27,7 +27,7 @@ export default function SharedLayoutAnimation() {
               {`${item.icon} ${item.label}`}
               {item === selectedTab ? (
                 <motion.div
-                className="underline"
+                  className="underline"
                   layoutId="underline"
                   id="underline"
                 />
@@ -48,28 +48,20 @@ export default function SharedLayoutAnimation() {
             {selectedTab ? selectedTab.icon : "😋"}
             <div className="w-full px-4 lg:px-0 mt-12 lg:mt-36 mb-12 lg:mb-20 max-w-5xl mx-auto flex flex-wrap sm:flex-nowrap gap-5 sm:gap-10 lg:gap-16">
               <div className="w-full sm:w-2/5">
-                {/* <img
-                  className="w-full h-full max-h-72 object-cover rounded-2xl"
-                  src="/images/plan.png"
-                  alt=""
-                /> */}
-                 <Image
+                <Image
                   className="w-full h-full max-h-72 object-cover rounded-2xl"
                   src={plan}
                   alt=""
-                  width={500} 
+                  width={500}
                   height={500}
                 />
               </div>
               <div className="w-full sm:w-3/5">
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-                  Planning Phase
+                  {selectedTab.title}
                 </h3>
                 <p className="text-sm sm:text-lg lg:text-xl mt-2 sm:mt-5 lg:mt-10">
-                  In The phase, we collaborate to understand your business goals
-                  target audience, and app requirements. By conducting market
-                  research and feasibility analysis, we lay a strong foundation
-                  for your custom mobile app development.
+                  {selectedTab.description}
                 </p>
               </div>
             </div>
@@ -80,33 +72,45 @@ export default function SharedLayoutAnimation() {
   );
 }
 
-/**
- * ==============   Styles   ================
- */
-
-
-
-// const tabsStyles: React.CSSProperties = {
-//   listStyle: "none",
-//   padding: 0,
-//   margin: 0,
-//   fontWeight: 600,
-//   fontSize: 20,
-// };
-
-
-
-/**
- * ==============   Data   ================
- */
-
-const allIngredients = [
-  { icon: "", label: "Step 1" },
-  { icon: "", label: "Step 2" },
-  { icon: "", label: "Step 3" },
-  { icon: "", label: "Step 4" },
-  { icon: "", label: "Step 5" },
+const tabs = [
+  {
+    id: 1,
+    label: "Step 1",
+    title: "Discovery Phase",
+    description:
+      "We begin by understanding your vision, business objectives, and target audience. This phase involves brainstorming, competitor analysis, and gathering key insights to lay a strategic roadmap for your app development journey.",
+    icon: "",
+  },
+  {
+    id: 2,
+    label: "Step 2",
+    title: "Planning Phase",
+    description:
+      "In this phase, we define the app’s core functionality, wireframes, and technical requirements. Market research and feasibility analysis ensure that the development process aligns with your business goals.",
+    icon: "",
+  },
+  {
+    id: 3,
+    label: "Step 3",
+    title: "Design & Prototyping",
+    description:
+      "Our UI/UX experts craft intuitive, visually engaging designs that enhance user experience. Interactive prototypes allow stakeholders to visualize the app’s flow before development begins.",
+    icon: "",
+  },
+  {
+    id: 4,
+    label: "Step 4",
+    title: "Development & Testing",
+    description:
+      "Using the latest technologies, we build a robust, scalable application with seamless performance. Rigorous testing ensures smooth functionality, security, and an error-free user experience.",
+    icon: "",
+  },
+  {
+    id: 5,
+    label: "Step 5",
+    title: "Deployment & Maintenance",
+    description:
+      "Once your app is live, we continue to optimize its performance with updates, security patches, and ongoing support. Our team ensures your app stays ahead with evolving market trends.",
+    icon: "",
+  },
 ];
-
-const [First, Second, Three, Four, Five] = allIngredients;
-const tabs = [First, Second, Three, Four, Five];
