@@ -1,20 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
 import { generateClient } from "aws-amplify/data";
+import { Schema } from "../../../../zygobit_website_backend/amplify/data/resource";
 import useAmplifyConfig from "@/hooks/useAmplify";
-import { Schema } from "../../../zygobit_website_backend/amplify/data/resource";
 
-export interface Blog {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  publishedDate: string;
-  tags: string[];
-}
+const client = generateClient<Schema>();
 
-export interface Project {
-  id: string;
+interface Project {
+  id?: string | null;
   title: string | null;
   description: string | null;
   projectName: string | null;
@@ -34,33 +27,33 @@ export interface Project {
   evaluationImage: string | null;
 }
 
-const client = generateClient<Schema>();
-
-export const useFetchDynamoData = () => {
-  const [blogs, setBlogs] = useState<Blog[]>([]);
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-
+export const useProjects = (id?: string) => {
   useAmplifyConfig();
+  const [data, setData] = useState<Project | Project[] | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [blogRes, projectRes] = await Promise.all([
-          client.models.Blog.list(),
-          client.models.Projects.list(),
-        ]);
-        setBlogs(blogRes.data as Blog[]);
-        setProjects(projectRes.data as Project[]);
-      } catch (error) {
-        console.error("Error fetching data:", error);
+        if (id) {
+          const response = await client.models.Projects.get({ id });
+          if (response?.data) {
+            setData(response.data);
+          }
+        } else {
+          const response = await client.models.Projects.list();
+          setData(response.data);
+        }
+      } catch (err) {
+        setError(err as Error);
       } finally {
         setLoading(false);
       }
     };
 
     fetchData();
-  }, []);
+  }, [id]);
 
-  return { blogs, projects, loading };
+  return { data, loading, error };
 };

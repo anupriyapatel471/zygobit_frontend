@@ -18,60 +18,25 @@ import appleStore from "../../../../public/images/applestore.svg";
 import featuredMobile from "../../../../public/images/featured_mobile.png";
 import Link from "next/link";
 
-import { useState, useEffect } from "react";
-import { generateClient } from "aws-amplify/data";
-import type { Schema } from "../../../../../zygobit_website_backend/amplify/data/resource";
-const client = generateClient<Schema>();
-
-import useAmplifyConfig from "@/hooks/useAmplify";
 import { truncateText } from "@/lib/utils";
-
-interface Project {
-  readonly id: string;
-  title: string | null;
-  description: string | null;
-  projectName: string | null;
-  mobileImage: string | null;
-  androidDownloads: number | null;
-  iosDownloads: number | null;
-  createdAt: string | null;
-  updatedAt: string | null;
-  clientLocation: string | null;
-  developmentTime: string | null;
-  targetUsers: string | null;
-  subDescription: string | null;
-  subTitle: string | null;
-  technologyDescription: string | null;
-  developmentDescription: string | null;
-  evaluationDescription: string | null;
-  evaluationImage: string | null;
-}
+import { useProjects } from "@/hooks/dynamoDb/useProjects";
+import Loader from "../Loader/Loader";
 
 export default function FeaturedSlider() {
   const router = useRouter();
-  useAmplifyConfig();
-  const [projects, setProjects] = useState<Project[]>([]);
+  const { data, loading, error } = useProjects();
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const response = await client.models.Projects.list();
-        setProjects(response.data);
-      } catch (err) {
-        console.error("Error fetching projects:", err);
-      } finally {
-        // setLoading(false);
-      }
-    };
+  const projects = Array.isArray(data) ? data.slice(0, 5) : [];
 
-    fetchProjects();
-  }, []);
-
-  const handleCaseBtn = (id: string) => {
+  const handleCaseBtn = (id: string | null | undefined) => {
     router.push(`/case-study/${id}`);
   };
 
-  return (
+  console.log("error", error);
+
+  return loading ? (
+    <Loader />
+  ) : (
     <Carousel className="w-full">
       <CarouselContent className="flex">
         {projects.length > 0 &&

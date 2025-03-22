@@ -1,46 +1,19 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { TracingBeam } from "../../../components/ui/tracing-beam";
 import calendarIcon from "../../../../public/images/calendar_icon.svg";
-import { generateClient } from "aws-amplify/data";
-import type { Schema } from "../../../../../zygobit_website_backend/amplify/data/resource";
-import useAmplifyConfig from "@/hooks/useAmplify";
 import { useParams } from "next/navigation";
-
-interface BlogPost {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  publishedDate: string;
-  tags: string[];
-}
-const client = generateClient<Schema>();
+import { useBlog } from "@/hooks/dynamoDb/useBlog";
+import Loader from "@/component/common/Loader/Loader";
 
 export function TracingBeams() {
   const { Id } = useParams();
-
-  const [blogs, setBlogs] = useState<BlogPost[]>([]);
-  useAmplifyConfig();
-
-  const fetchBlogs = async (blogId: string) => {
-    try {
-      const res = await client.models.Blog.list({
-        filter: { id: { eq: blogId } },
-      });
-      setBlogs(res.data as BlogPost[]);
-    } catch (error) {
-      console.error("Error fetching blogs", error);
-    }
-  };
-
-  useEffect(() => {
-    if (Id && typeof Id === "string") {
-      fetchBlogs(Id);
-    }
-  }, [Id]);
-  return (
+  const filter = Id ? { id: { eq: Id } } : {};
+  const { blogs, loading } = useBlog(filter);
+  return loading ? (
+    <Loader />
+  ) : (
     <>
       {blogs.length > 0 && (
         <TracingBeam className="mt-24 sm:mt-32 mb-16 sm:mb-20">

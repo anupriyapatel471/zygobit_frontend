@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Button } from "../../../components/ui/moving-border";
 import Image from "next/image";
 import calendarIcon from "../../../../public/images/calendar_icon.svg";
@@ -11,59 +11,21 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import { generateClient } from "aws-amplify/data";
-import type { Schema } from "../../../../../zygobit_website_backend/amplify/data/resource";
-import useAmplifyConfig from "@/hooks/useAmplify";
 import { useRouter } from "next/navigation";
 import { truncateText } from "@/lib/utils";
 import Loader from "@/component/common/Loader/Loader";
-const client = generateClient<Schema>();
+import { useBlog } from "@/hooks/dynamoDb/useBlog";
 
-interface BlogPost {
-  category: string;
-  createdAt: string;
-  description: string;
-  id: string;
-  image: string;
-  publishedDate: string;
-  tags: string[];
-  title: string;
-  updatedAt: string;
-}
 interface MovingBordersProps {
   selectedCategory: string;
 }
 
 export function MovingBorders({ selectedCategory }: MovingBordersProps) {
-  const [blogs, setBlogs] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(false);
   const router = useRouter();
+  const filter =
+    selectedCategory === "All" ? {} : { category: { eq: selectedCategory } };
 
-  useAmplifyConfig();
-
-  const fetchBlogs = async () => {
-    setLoading(true);
-    try {
-      let res;
-      if (selectedCategory === "All") {
-        res = await client.models.Blog.list();
-      } else {
-        res = await client.models.Blog.list({
-          filter: { category: { eq: selectedCategory } },
-        });
-      }
-      setBlogs(res.data as BlogPost[]);
-    } catch (error) {
-      console.log("error", error);
-      setLoading(false);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchBlogs();
-  }, [selectedCategory]);
+  const { blogs, loading } = useBlog(filter);
 
   return loading ? (
     <Loader />

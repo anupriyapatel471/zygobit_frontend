@@ -5,9 +5,7 @@ import * as motion from "motion/react-client";
 import { useEffect, useState } from "react";
 import "./EcommerceTabStyle.css";
 import { MovingBorders } from "../../ui/MovingBorder/MovingBorder";
-import { generateClient } from "aws-amplify/data";
-import useAmplifyConfig from "@/hooks/useAmplify";
-import { Schema } from "../../../../../zygobit_website_backend/amplify/data/resource";
+import { useBlog } from "@/hooks/dynamoDb/useBlog";
 
 interface TabItem {
   label: string;
@@ -15,38 +13,27 @@ interface TabItem {
 }
 
 export default function EcommerceTabbing() {
+  const { blogs } = useBlog();
+
   const [tabs, setTabs] = useState<TabItem[]>([]);
   const [selectedTab, setSelectedTab] = useState<TabItem | null>(null);
-  const client = generateClient<Schema>();
-  useAmplifyConfig();
-
-  const fetchCategories = async () => {
-    try {
-      const res = await client.models.Blog.list();
-      const blogs = res.data;
-      const uniqueCategories = Array.from(
-        new Set(
-          blogs
-            .map((blog) => blog.category)
-            .filter((category): category is string => category !== null)
-        )
-      );
-      const categoryTabs = uniqueCategories.map((category) => ({
-        label: category,
-        icon: "",
-      }));
-      const allTab: TabItem = { label: "All", icon: "" };
-      const allTabs = [allTab, ...categoryTabs];
-      setTabs(allTabs);
-      setSelectedTab(allTab);
-    } catch (error) {
-      console.error("Error fetching categories:", error);
-    }
-  };
 
   useEffect(() => {
-    fetchCategories();
-  }, []);
+    const uniqueCategories = Array.from(
+      new Set(
+        blogs
+          .map((blog) => blog.category)
+          .filter((category): category is string => category !== null)
+      )
+    );
+    const categoryTabs = uniqueCategories.map((category) => ({
+      label: category,
+      icon: "",
+    }));
+    const allTab: TabItem = { label: "All", icon: "" };
+    setTabs([allTab, ...categoryTabs]);
+    setSelectedTab(allTab);
+  }, [blogs]);
 
   return (
     <>

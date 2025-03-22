@@ -1,63 +1,22 @@
 "use client";
-import { useEffect, useState } from "react";
+import Loader from "@/component/common/Loader/Loader";
+import { useProjects } from "@/hooks/dynamoDb/useProjects";
 import { useParams } from "next/navigation";
-import { generateClient } from "aws-amplify/data";
-import type { Schema } from "../../../../../zygobit_website_backend/amplify/data/resource";
-import useAmplifyConfig from "@/hooks/useAmplify";
-
-const client = generateClient<Schema>();
-
-interface Project {
-  id?: string | null;
-  title: string | null;
-  description: string | null;
-  projectName: string | null;
-  mobileImage: string | null;
-  androidDownloads: number | null;
-  iosDownloads: number | null;
-  createdAt: string | null;
-  updatedAt: string | null;
-  clientLocation: string | null;
-  developmentTime: string | null;
-  targetUsers: string | null;
-  subDescription: string | null;
-  subTitle: string | null;
-  technologyDescription: string | null;
-  developmentDescription: string | null;
-  evaluationDescription: string | null;
-  evaluationImage: string | null;
-}
 
 const CaseStudy = () => {
-  useAmplifyConfig();
-
   const { id } = useParams();
   const projectId = Array.isArray(id) ? id[0] : id;
 
-  const [project, setProject] = useState<Project | null>(null);
+  const { data: projectData, loading, error } = useProjects(projectId);
 
-  useEffect(() => {
-    if (projectId) {
-      fetchProjectData(projectId);
-    }
-  }, [projectId]);
+  const project = Array.isArray(projectData) ? projectData[0] : projectData;
 
-  const fetchProjectData = async (id: string) => {
-    try {
-      const response = await client.models.Projects.get({ id });
-      if (response && response.data) {
-        setProject(response.data);
-      } else {
-        console.warn("No project data found for id:", id);
-      }
-    } catch (error) {
-      console.error("Error fetching project data:", error);
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      {project ? (
+  console.log("error", error);
+  return loading ? (
+    <Loader />
+  ) : (
+    <div className="min-h-screen bg-gray-100 p-6 mt-20">
+      {project && (
         <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
           <div className="p-6">
             <h1 className="text-3xl font-bold text-gray-900">
@@ -121,10 +80,6 @@ const CaseStudy = () => {
               </p>
             </div>
           </div>
-        </div>
-      ) : (
-        <div className="flex justify-center items-center h-full">
-          <p className="text-gray-700">Loading project data...</p>
         </div>
       )}
     </div>

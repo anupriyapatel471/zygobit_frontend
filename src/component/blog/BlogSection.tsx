@@ -1,59 +1,25 @@
 "use client";
 import Image from "next/image";
 import calendarIcon from "../../../public/images/calendar_icon.svg";
-import { generateClient } from "aws-amplify/data";
-import type { Schema } from "../../../../zygobit_website_backend/amplify/data/resource";
-import { useEffect, useState } from "react";
-import useAmplifyConfig from "@/hooks/useAmplify";
 import { truncateText } from "@/lib/utils";
 import Loader from "../common/Loader/Loader";
-
-interface BlogPost {
-  category: string;
-  createdAt: string;
-  description: string;
-  id: string;
-  image: string;
-  publishedDate: string;
-  tags: string[];
-  title: string;
-  updatedAt: string;
-}
-const client = generateClient<Schema>();
+import { useBlog } from "@/hooks/dynamoDb/useBlog";
 
 const BlogSection = () => {
-  const [blogs, setBlogs] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(false);
+  const { blogs, loading } = useBlog();
+  const now = new Date();
+  const publishedBlogs = blogs.filter(
+    (blog) => new Date(blog.publishedDate) <= now
+  );
 
-  useAmplifyConfig();
-  const fetchBlogs = async () => {
-    setLoading(true);
-    try {
-      const res = await client.models.Blog.list();
-      const now = new Date();
-      const filteredBlogs = (res.data as BlogPost[]).filter((blog) => {
-        return new Date(blog.publishedDate) <= now;
-      });
-      const sortedBlogs = filteredBlogs.sort(
-        (a, b) =>
-          new Date(b.publishedDate).getTime() -
-          new Date(a.publishedDate).getTime()
-      );
-      setBlogs(sortedBlogs.slice(0, 4));
-    } catch (error) {
-      setLoading(false);
-      console.log("error", error);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const sortedBlogs = publishedBlogs.sort(
+    (a, b) =>
+      new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
+  );
 
-  useEffect(() => {
-    fetchBlogs();
-  }, []);
-
-  const featuredBlog = blogs[0];
-  const otherBlogs = blogs.slice(1, 4);
+  // Select the featured blog and the next three
+  const featuredBlog = sortedBlogs[0];
+  const otherBlogs = sortedBlogs.slice(1, 4);
 
   return (
     <>
