@@ -383,6 +383,14 @@
               "type": "String",
               "isRequired": false,
               "attributes": []
+            },
+            "technologyImages": {
+              "name": "technologyImages",
+              "isArray": true,
+              "type": "String",
+              "isRequired": false,
+              "attributes": [],
+              "isArrayNullable": true
             }
           },
           "syncable": true,
@@ -413,7 +421,71 @@
         }
       },
       "enums": {},
-      "nonModels": {}
+      "nonModels": {},
+      "queries": {
+        "sendEmailContactForm": {
+          "name": "sendEmailContactForm",
+          "isArray": false,
+          "type": "String",
+          "isRequired": false,
+          "arguments": {
+            "firstName": {
+              "name": "firstName",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false
+            },
+            "lastName": {
+              "name": "lastName",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false
+            },
+            "phoneNumber": {
+              "name": "phoneNumber",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false
+            },
+            "jobTitle": {
+              "name": "jobTitle",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false
+            },
+            "companyName": {
+              "name": "companyName",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false
+            },
+            "companyEmail": {
+              "name": "companyEmail",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false
+            },
+            "launchDate": {
+              "name": "launchDate",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false
+            },
+            "budget": {
+              "name": "budget",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false
+            },
+            "projectDetails": {
+              "name": "projectDetails",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false
+            }
+          }
+        }
+      }
     }
   },
   "version": "1.3"

@@ -5,7 +5,8 @@ import { generateClient } from "aws-amplify/data";
 import type { Schema } from "../../../../zygobit_website_backend/amplify/data/resource";
 import { useState } from "react";
 import useAmplifyConfig from "@/hooks/useAmplify";
-import { v4 } from "uuid";
+import toast from "react-hot-toast";
+import { validateEmail } from "@/lib/utils";
 
 const client = generateClient<Schema>();
 
@@ -14,7 +15,7 @@ const ConnectForm = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const [formData, setFormData] = useState({
+  const initialState = {
     firstName: "",
     lastName: "",
     phoneNumber: "",
@@ -24,7 +25,9 @@ const ConnectForm = () => {
     launchDate: "",
     budget: "",
     projectDetails: "",
-  });
+  };
+
+  const [formData, setFormData] = useState(initialState);
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -33,33 +36,80 @@ const ConnectForm = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const validate = () => {
+    const {
+      firstName,
+      lastName,
+      phoneNumber,
+      jobTitle,
+      companyName,
+      companyEmail,
+      launchDate,
+      budget,
+      projectDetails,
+    } = formData;
+
+    if (
+      !firstName ||
+      !lastName ||
+      !companyEmail ||
+      !phoneNumber ||
+      !jobTitle ||
+      !companyName ||
+      !launchDate ||
+      !budget ||
+      !projectDetails
+    ) {
+      toast.error("Please fill in all fields.");
+      return false;
+    }
+
+    if (!validateEmail(companyEmail)) {
+      toast.error("Invalid Email address");
+      return false;
+    }
+
+    if (phoneNumber.length < 10) {
+      toast.error("Phone number must be at least 10 digits long.");
+      return false;
+    }
+
+    return true;
+  };
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setLoading(true);
 
+    if (!validate()) {
+      return;
+    }
+    setLoading(true);
     try {
-      const savedRecord = await client.models.ContactRequest.create({
-        ...formData,
-        id: v4(),
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+      const res = await client.queries.sendEmailContactForm({
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        phoneNumber: formData.phoneNumber,
+        jobTitle: formData.jobTitle,
+        companyName: formData.companyName,
+        companyEmail: formData.companyEmail,
+        launchDate: formData.launchDate,
+        budget: formData.budget,
+        projectDetails: formData.projectDetails,
       });
-      console.log("Saved record:", savedRecord);
+      console.log("res", res);
+      // const savedRecord = await client.models.ContactRequest.create({
+      //   ...formData,
+      //   id: v4(),
+      //   createdAt: new Date().toISOString(),
+      //   updatedAt: new Date().toISOString(),
+      // });
+      // console.log("Saved record:", savedRecord);
+      toast.success("Saved record");
     } catch (error) {
       console.error("Error saving data to DynamoDB:", error);
     } finally {
       setLoading(false);
-      setFormData({
-        firstName: "",
-        lastName: "",
-        phoneNumber: "",
-        jobTitle: "",
-        companyName: "",
-        companyEmail: "",
-        launchDate: "",
-        budget: "",
-        projectDetails: "",
-      });
+      setFormData(initialState);
     }
   };
 

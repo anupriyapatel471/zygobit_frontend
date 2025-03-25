@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./Responsive.css";
 import Script from "next/script";
+import { Toaster } from "react-hot-toast";
 
 import Header from "@/component/common/Layout/Header/Header";
 import Footer from "@/component/common/Layout/Footer/Footer";
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Header />
         <ScrollProgressBar />
         {children}
+        <Toaster />
         <Footer />
       </body>
     </html>
