@@ -36,7 +36,7 @@ const CaseStudy = () => {
             <div className="w-full flex flex-wrap lg:flex-nowrap justify-between items-center">
               <div className="w-full sm:w-full lg:w-[60%]">
                 <div className="w-auto max-w-2xl">
-                  <h1 className="font-bold text-3xl sm:text-4xl lg:text-6xl text-shadow-2xl  text-gradiant-custom">
+                  <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl text-shadow-2xl  text-gradiant-custom">
                     {project.title}
                   </h1>
                   <p className="text-sm sm:text-lg lg:text-xl mt-2.5">

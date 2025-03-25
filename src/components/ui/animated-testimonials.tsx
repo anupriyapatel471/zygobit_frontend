@@ -154,7 +154,7 @@ export const AnimatedTestimonials = ({
                 src={arrowLeft}
                 width={20}
                 height={20}
-                className="text-themetext group-hover/button:rotate-12 transition-transform duration-300"
+                className="text-themetext  transition-transform duration-300"
                 alt="Icon"
               />
             </button>
@@ -166,7 +166,7 @@ export const AnimatedTestimonials = ({
                 src={arrowRight}
                 width={20}
                 height={20}
-                className="text-themetext group-hover/button:-rotate-12 transition-transform duration-300"
+                className="text-themetext  transition-transform duration-300"
                 alt="Icon"
               />
             </button>

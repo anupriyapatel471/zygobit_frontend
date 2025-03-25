@@ -5,7 +5,7 @@ import { useBlog } from "@/hooks/dynamoDb/useBlog";
 export default function FeaturedBlog() {
   const { blogs } = useBlog();
   return (
-    <BentoGrid className=" mx-auto md:auto-rows-[20rem]">
+    <BentoGrid className=" mx-auto md:auto-rows-[21rem]">
       {blogs.slice(0, 6).map((item, i) => (
         <BentoGridItem
           key={i}
