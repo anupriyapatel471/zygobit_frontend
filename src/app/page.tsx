@@ -74,7 +74,7 @@ const Home = () => {
           {ourExpertiseData?.map((data, index) => (
             <div
               key={index}
-              className="border border-[#EA580C] p-4 pl-0 sm:pl-0 sm:p-0 rounded-lg sm:rounded-none sm:border-none w-auto group"
+              className="border border-[#EA580C] cursor-context-menu p-4 pl-0 sm:pl-0 sm:p-0 rounded-lg sm:rounded-none sm:border-none w-auto group"
             >
               <span>{data?.image}</span>
               <h5 className="pl-4 group-hover:text-themetext font-semibold text-lg my-2">
@@ -101,6 +101,7 @@ const Home = () => {
         clientHeading={clientHeading}
         clientSaysDetails={clientSaysDetails}
       />
+      
       <OurPartners />
       <Cta vortex={"VortexBg"} Aurora={""} content={"Marquee"} />
 
