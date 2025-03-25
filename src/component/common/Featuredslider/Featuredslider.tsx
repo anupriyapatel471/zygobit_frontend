@@ -24,15 +24,13 @@ import Loader from "../Loader/Loader";
 
 export default function FeaturedSlider() {
   const router = useRouter();
-  const { data, loading, error } = useProjects();
+  const { data, loading } = useProjects();
 
   const projects = Array.isArray(data) ? data.slice(0, 5) : [];
 
   const handleCaseBtn = (id: string | null | undefined) => {
     router.push(`/case-study/${id}`);
   };
-
-  // console.log("error", error);
 
   return loading ? (
     <Loader />
@@ -118,13 +116,12 @@ export default function FeaturedSlider() {
                               </Link>
                             </li>
                           </ul>
-                          <button
-                            onClick={() => handleCaseBtn(project.id)}
-                            className=" btn-primary text-themetext font-normal  group bg-white duration-500 transition-all"
-                          >
-                            View Case Study
-                            <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                          </button>
+                          <Link href={`/case-study/${project.id}`}>
+                            <button className=" btn-primary text-themetext font-normal  group bg-white duration-500 transition-all">
+                              View Case Study
+                              <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                            </button>
+                          </Link>
                         </div>
                         <div className="hidden sm:inline w-auto max-w-xl">
                           <Image

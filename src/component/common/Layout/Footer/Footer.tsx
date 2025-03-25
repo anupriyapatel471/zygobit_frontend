@@ -1,29 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Logo from "../../../../../public/images/Logo.png"
+import Logo from "../../../../../public/images/Logo.png";
 const Footer = () => {
   const productLinks = [
     { name: "Changelog", url: "#" },
-    { name: "Documentation", url: "#" }
+    { name: "Documentation", url: "#" },
   ];
 
   const companyLinks = [
-    { name: "About", url: "#" },
+    { name: "About", url: "/about-us" },
     { name: "Careers", url: "#" },
-    { name: "Blog", url: "#" }
+    { name: "Blog", url: "/blog" },
   ];
 
   const contactLinks = [
     { name: "Github", url: "#" },
     { name: "Discord", url: "#" },
-    { name: "Twitter", url: "#" }
+    { name: "Twitter", url: "#" },
   ];
 
   const footerLinks = [
     { title: "Product", links: productLinks },
     { title: "Company", links: companyLinks },
-    { title: "Contact", links: contactLinks }
+    { title: "Contact", links: contactLinks },
   ];
 
   return (
@@ -32,12 +32,11 @@ const Footer = () => {
         <div className="w-full flex gap-y-7 sm:gap-5 flex-wrap lg:flex-nowrap mt-10 lg:mt-20 mb-10 sm:mb-14 lg:mb-24 justify-between">
           <div className="w-full lg:w-1/4 mb-0 sm:mb-6 lg:mb-0">
             <Link href="/">
-              {/* <img className="w-[110px] sm:w-[160px]" src="/images/Logo.png" alt="" /> */}
               <Image
                 src={Logo}
                 alt="Logo"
                 width={160}
-                height={40}  
+                height={40}
                 className="w-[110px] sm:w-[160px]"
               />
             </Link>
@@ -49,7 +48,10 @@ const Footer = () => {
               <ul className="grid grid-cols-1 space-y-4">
                 {section.links.map((link) => (
                   <li key={link.name}>
-                    <Link href={link.url} className="text-sm text-secondaryText hover:text-white">
+                    <Link
+                      href={link.url}
+                      className="text-sm text-secondaryText hover:text-white"
+                    >
                       {link.name}
                     </Link>
                   </li>
@@ -65,12 +67,18 @@ const Footer = () => {
           </p>
           <ul className="w-full sm:w-auto flex gap-5 items-center">
             <li>
-              <Link href="#" className="text-secondaryText hover:text-white text-xs">
+              <Link
+                href="#"
+                className="text-secondaryText hover:text-white text-xs"
+              >
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link href="#" className="text-secondaryText hover:text-white text-xs">
+              <Link
+                href="#"
+                className="text-secondaryText hover:text-white text-xs"
+              >
                 Terms of service
               </Link>
             </li>
