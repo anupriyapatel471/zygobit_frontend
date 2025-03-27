@@ -1,10 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useState, useEffect } from "react";
 import { generateClient } from "aws-amplify/data";
-import { Schema } from "../../../../zygobit_website_backend/amplify/data/resource";
 import useAmplifyConfig from "@/hooks/useAmplify";
 
-const client = generateClient<Schema>();
+const client = generateClient();
 
 interface Project {
   id?: string | null;
@@ -37,12 +37,12 @@ export const useProjects = (id?: string) => {
     const fetchData = async () => {
       try {
         if (id) {
-          const response = await client.models.Projects.get({ id });
+          const response = await (client.models as any).Projects.get({ id });
           if (response?.data) {
             setData(response.data);
           }
         } else {
-          const response = await client.models.Projects.list();
+          const response = await (client.models as any).Projects.list();
           setData(response.data);
         }
       } catch (err) {

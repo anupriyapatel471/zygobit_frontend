@@ -1,9 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import { useState, useEffect } from "react";
 import { generateClient } from "aws-amplify/data";
 import useAmplifyConfig from "@/hooks/useAmplify";
-import { Schema } from "../../../../zygobit_website_backend/amplify/data/resource";
 
 export interface BlogPost {
   id: string;
@@ -22,13 +22,13 @@ export const useBlog = (initialFilter: Filter = {}) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
 
-  const client = generateClient<Schema>();
+  const client = generateClient();
   useAmplifyConfig();
 
   const fetchBlogs = async (filter: Filter = {}) => {
     setLoading(true);
     try {
-      const res = await client.models.Blog.list(
+      const res = await (client.models as any).Blog.list(
         Object.keys(filter).length ? { filter } : {}
       );
       setBlogs(res.data as BlogPost[]);

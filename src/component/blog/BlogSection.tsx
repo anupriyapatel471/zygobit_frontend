@@ -50,7 +50,7 @@ const BlogSection = () => {
                   <span className="flex items-center gap-2 text-xs">
                     <Image
                       className=" object-cover"
-                      src={calendarIcon}
+                      src={"/images/calendar_icon.svg"}
                       alt="icon"
                       width={18}
                       height={18}
@@ -87,7 +87,7 @@ const BlogSection = () => {
                     <span className="flex items-center gap-2 text-xs">
                       <Image
                         className=""
-                        src={calendarIcon}
+                        src={"/images/calendar_icon.svg"}
                         alt="icon"
                         width={18}
                         height={18}

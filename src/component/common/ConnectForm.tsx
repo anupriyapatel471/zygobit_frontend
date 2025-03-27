@@ -1,14 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
 import { Input, TextArea } from "../../components/ui/contactInput";
 import Rocket from "../../../public/images/rocket.svg";
 import { generateClient } from "aws-amplify/data";
-import type { Schema } from "../../../../zygobit_website_backend/amplify/data/resource";
 import { useState } from "react";
 import useAmplifyConfig from "@/hooks/useAmplify";
 import toast from "react-hot-toast";
 import { validateEmail } from "@/lib/utils";
 
-const client = generateClient<Schema>();
+const client = generateClient();
 
 const ConnectForm = () => {
   useAmplifyConfig();
@@ -85,7 +85,7 @@ const ConnectForm = () => {
     }
     setLoading(true);
     try {
-      const res = await client.queries.sendEmailContactForm({
+      const res = await (client.queries as any).sendEmailContactForm({
         firstName: formData.firstName,
         lastName: formData.lastName,
         phoneNumber: formData.phoneNumber,
