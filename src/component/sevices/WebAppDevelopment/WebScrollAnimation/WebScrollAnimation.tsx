@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { motion, useScroll } from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
-import fire from "../../../../../public/images/fire.png"
+import fire from "../../../../../public/images/fire.png";
 
 export default function ScrollLinked() {
   const ref = useRef(null);
@@ -16,11 +17,11 @@ export default function ScrollLinked() {
     features: [
       "Best For Project With Fixed Features",
       "Clear timeline and cost upfront.",
-      "Minimal risk of budget overruns"
-    ]
+      "Minimal risk of budget overruns",
+    ],
   });
   return (
-        <div id="example" className="no-scroll">
+    <div id="example" className="no-scroll">
       <svg id="progress" width="90" height="90" viewBox="0 0 100 100">
         <circle cx="50" cy="50" r="30" pathLength="1" className="bg" />
         <motion.circle
@@ -49,7 +50,7 @@ export default function ScrollLinked() {
               <h3 className="font-semibold text-2xl">{item.title}</h3>
               <p className="text-base my-5">{item.description}</p>
               <ul className="list-disc h-auto inline-block overflow-x-hidden bg-transparent pl-5 text-base space-y-2">
-                {item.features.map((feature, featureIndex) => (
+                {item.features.map((feature: any, featureIndex: any) => (
                   <li key={featureIndex}>{feature}</li>
                 ))}
               </ul>
@@ -129,6 +130,3 @@ function StyleSheet() {
     `}</style>
   );
 }
-
-
-

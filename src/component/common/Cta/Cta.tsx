@@ -5,11 +5,15 @@ import TypewriterEffect from "./Typewriter/Typewriter";
 import VortexBg from "./Vortexbg/Vortexbg";
 import MarqueeVertical from "./Ctaslider/Ctaslider";
 import { AuroraBg } from "./AuroraBg/AuroraBg";
+interface ctaProp {
+  content: string;
+  Aurora: string;
+  vortex: string;
+}
 
-const Cta = ({ content, Aurora, vortex }: any) => {
+const Cta = ({ content, Aurora, vortex }: ctaProp) => {
   return (
     <>
-      {/* Cta section */}
       <section className="w-full relative px-4 sm:px-8 lg:px-24 my-14 sm:my-16 overflow-hidden">
         {vortex === "VortexBg" && (
           <div className="absolute top-0 left-0 w-full h-full -z-10">

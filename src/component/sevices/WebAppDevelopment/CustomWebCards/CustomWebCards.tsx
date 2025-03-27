@@ -11,37 +11,37 @@ export const projects = [
   {
     title: "Cost-Effective Process",
     description:
-      "At Zygobit, our custom web app development solutions are designed for cost-effectiveness, ensuring your project is executed efficiently without compromising quality",
+      "We deliver high-quality web applications while ensuring cost efficiency, so you get maximum value without compromising on performance.",
     link: "https://stripe.com",
   },
   {
     title: "All Under One Roof",
     description:
-      "We are a one-stop web application development company, offering a comprehensive range of services, from concept to deployment, all conveniently available under one roof.",
+      "From ideation to deployment, our end-to-end web app development services cover everything you need, simplifying your journey.",
     link: "https://netflix.com",
   },
   {
     title: "Creative Team",
     description:
-      "Creative web app developers at Zygobit are committed to turning your vision into innovative web solutions, infusing creativity into every aspect of your project.",
+      "Our skilled developers and designers bring your ideas to life with innovation, ensuring a unique and engaging web experience.",
     link: "https://google.com",
   },
   {
-    title: "24/7 Help Desk",
+    title: "Scalability & Performance",
     description:
-      "With a commitment to assistance, our website application development company ensures that you have support whenever you need it, guaranteeing a seamless development experience.",
+      "We build web applications with future growth in mind, ensuring seamless scalability and top-notch performance.",
     link: "https://meta.com",
   },
   {
-    title: "New Technology Integration",
+    title: "Security-Driven Development",
     description:
-      "Being one of the top web application development companies Zygobit stays at the forefront of technology, integrating new advancements into your web apps, keeping you ahead of the curve.",
+      "We prioritize robust security measures, implementing industry best practices to safeguard your data and user information.",
     link: "https://amazon.com",
   },
   {
-    title: "Post-Deployment Services",
+    title: "Seamless Integration",
     description:
-      "Our web development services go beyond launch by ensuring the ongoing success of your web application with regular updates, maintenance, and support.",
+      "Our web solutions integrate effortlessly with your existing systems, streamlining operations and boosting efficiency.",
     link: "https://microsoft.com",
   },
 ];

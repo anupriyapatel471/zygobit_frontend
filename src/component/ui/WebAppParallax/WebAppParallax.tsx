@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
+import { useRef } from "react";
 import { ChevronRight } from "lucide-react";
 import {
   motion,
@@ -8,13 +10,13 @@ import {
   useSpring,
   useTransform,
 } from "motion/react";
-import { useRef } from "react";
+import NextImage from "next/image";
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-function Image({ id }: { id: number }) {
+function ParallaxImage({ id }: { id: number }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
@@ -24,7 +26,7 @@ function Image({ id }: { id: number }) {
       <div className="p-11 bg-transparent" ref={ref}>
         {/* <img src={`/photos/cityscape/${id}.jpg`} alt="A London skyscraper" /> */}
 
-        <Image
+        <NextImage
           src={`/photos/cityscape/${id}.jpg`}
           alt="A London skyscraper"
           width={300}
@@ -32,8 +34,10 @@ function Image({ id }: { id: number }) {
           className="object-cover"
           priority
         />
-        
-        <h3 className="text-4xl font-semibold">Education Web App Development</h3>
+
+        <h3 className="text-4xl font-semibold">
+          Education Web App Development
+        </h3>
         <p className="text-xl my-12 max-w-3xl">
           Our web app developers offer educational web app development services
           that provide interactive e-learning platforms and communication
@@ -65,7 +69,7 @@ export default function WebAppParallax() {
   return (
     <div id="example">
       {[1, 2, 3, 4, 5].map((image) => (
-        <Image key={image} id={image} />
+        <ParallaxImage key={image} id={image} />
       ))}
       <motion.div className="progress" style={{ scaleX }} />
       <StyleSheet />

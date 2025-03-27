@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import React from "react";
 import {
@@ -11,14 +12,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const HeroParallax = ({
-  products, headingText
+  products,
+  headingText,
 }: {
   products: {
     title: string;
     link: string;
     thumbnail: string;
   }[];
-  headingText:string
+  headingText: string;
 }) => {
   const firstRow = products.slice(0, 5);
   const secondRow = products.slice(5, 10);
@@ -60,7 +62,7 @@ export const HeroParallax = ({
       ref={ref}
       className="h-[1352px] sm:h-[260vh] py-0 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
-      <Header headingText= {headingText} />
+      <Header headingText={headingText} />
       <motion.div
         style={{
           rotateX,
@@ -102,7 +104,7 @@ export const HeroParallax = ({
   );
 };
 
-export const Header = ({headingText}:{headingText:string}) => {
+export const Header = ({ headingText }: { headingText: string }) => {
   return (
     <div className="px-4 lg:px-24 relative mx-auto pt-20 sm:pt-28 lg:pt-52 w-full  left-0 top-0">
       <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white">

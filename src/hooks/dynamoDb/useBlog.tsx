@@ -1,8 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import { useState, useEffect } from "react";
 import { generateClient } from "aws-amplify/data";
 import useAmplifyConfig from "@/hooks/useAmplify";
-// import { Schema } from "../../../../zygobit_website_backend/amplify/data/resource";
+import { Schema } from "../../../../zygobit_website_backend/amplify/data/resource";
 
 export interface BlogPost {
   id: string;
@@ -21,7 +22,7 @@ export const useBlog = (initialFilter: Filter = {}) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
 
-  const client = generateClient();
+  const client = generateClient<Schema>();
   useAmplifyConfig();
 
   const fetchBlogs = async (filter: Filter = {}) => {

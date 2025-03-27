@@ -11,7 +11,9 @@ const WeDeliver = () => {
         <div className="w-full pt-16 lg:pt-24 pb-16 sm:pb-24 lg:pb-36">
           <div className="w-full px-4 sm:px-0 sm:text-center mb-10 sm:mb-16 lg:mb-24">
             <h2 className="font-bold text-2xl sm:text-4xl text-gradiant-custom max-w-4xl mx-auto">
-            We provide cutting-edge mobile app development services and IT solutions designed to keep your business ahead in the digital era."
+              We provide cutting-edge mobile app development services and IT
+              solutions designed to keep your business ahead in the digital
+              era.&quot;
             </h2>
           </div>
           <div className="w-full px-4 lg:px-0 max-w-6xl mx-auto grid gap-5 sm:gap-8 lg:gap-14 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">

@@ -1,12 +1,22 @@
 import { MobileAppGrid } from "@/component/common/MobileAppGrid/MobileAppGrid";
 
+interface MobileAppGridProps {
+  GridBoxesHeading: string;
+  GridBoxesDetail: string;
+  cards: {
+    id: number;
+    content: React.ReactNode;
+    className: string;
+    title: string;
+    thumbnail: string;
+  }[];
+}
+
 const GridBoxes = ({
   GridBoxesHeading,
   GridBoxesDetail,
-}: {
-  GridBoxesHeading: string;
-  GridBoxesDetail: string;
-}) => {
+  cards,
+}: MobileAppGridProps) => {
   return (
     <>
       <section className="w-full sm:pt-10 pb-12 lg:pb-16 lg:pt-16">
@@ -19,7 +29,7 @@ const GridBoxes = ({
           </p>
         </div>
         <div className="w-full px-5 lg:px-24">
-          <MobileAppGrid />
+          <MobileAppGrid cards={cards} />
         </div>
       </section>
     </>

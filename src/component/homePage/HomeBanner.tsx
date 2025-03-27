@@ -10,11 +10,11 @@ const HomeBanner = () => {
     { value: 2, label: "Years of Experience" },
     { value: 25, label: "Countries Served" },
     { value: 25, label: "Tech Enthusiast" },
-    { value: 300, label: "Products Delivered" }
+    { value: 300, label: "Products Delivered" },
   ];
   return (
     <>
-       <section className="w-full relative">
+      <section className="w-full relative">
         {/* bg overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
         {/* galaxy */}
@@ -29,8 +29,8 @@ const HomeBanner = () => {
               allow="autoplay; fullscreen; xr-spatial-tracking"
               // xrSpatialTracking
               execution-while-out-of-viewport="true"
-              execution-while-not-rendered='true'
-              web-share='true'
+              execution-while-not-rendered="true"
+              web-share="true"
               src="https://sketchfab.com/models/d6521362b37b48e3a82bce4911409303/embed?autostart=1&ui_animations=0&ui_infos=0&ui_stop=0&ui_inspector=0&ui_watermark_link=0&ui_watermark=0&ui_hint=0&ui_ar=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&ui_theme=dark&ui_loader=0"
             ></iframe>
           </div>
@@ -59,12 +59,14 @@ const HomeBanner = () => {
             </div>
             <div className="mt-6 w-full sm:w-1/4 lg:w-[44%] lg:mt-5 text-right">
               <div className="w-full sm:w-auto sm:max-w-[157px] ml-auto grid grid-cols-2 sm:grid-cols-1 gap-y-5 sm:gap-y-10">
-              {stats.map((stat, index) => (
+                {stats.map((stat, index) => (
                   <div key={index} className="w-full text-center">
                     <b className="font-extrabold text-xl sm:text-3xl text-themetext block">
                       <Count endValue={stat.value} /> +
                     </b>
-                    <span className="font-medium text-sm sm:text-base">{stat.label}</span>
+                    <span className="font-medium text-sm sm:text-base">
+                      {stat.label}
+                    </span>
                   </div>
                 ))}
               </div>

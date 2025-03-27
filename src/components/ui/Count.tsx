@@ -1,9 +1,10 @@
-"use client"
+/* eslint-disable @typescript-eslint/no-explicit-any */
+"use client";
 import React, { useState, useEffect } from "react";
- 
-const Count = ({ endValue }:any) => {
+
+const Count = ({ endValue }: any) => {
   const [count, setCount] = useState(0);
- 
+
   useEffect(() => {
     let start = 0;
     const duration = 2000;
@@ -17,8 +18,8 @@ const Count = ({ endValue }:any) => {
     }, incrementTime);
     return () => clearInterval(interval);
   }, [endValue]);
- 
+
   return <span>{count}</span>;
 };
- 
-export default Count
+
+export default Count;

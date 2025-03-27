@@ -1,5 +1,5 @@
-"use client"
-
+/* eslint-disable @typescript-eslint/no-unused-vars */
+"use client";
 
 // import { motion, useMotionTemplate, useMotionValue } from "motion/react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
@@ -38,7 +38,7 @@ export default function MagicCard({
         mouseY.set(clientY - top);
       }
     },
-    [mouseX, mouseY],
+    [mouseX, mouseY]
   );
 
   const handleMouseOut = useCallback(
@@ -49,7 +49,7 @@ export default function MagicCard({
         mouseY.set(-gradientSize);
       }
     },
-    [handleMouseMove, mouseX, gradientSize, mouseY],
+    [handleMouseMove, mouseX, gradientSize, mouseY]
   );
 
   const handleMouseEnter = useCallback(() => {

@@ -5,26 +5,26 @@ const cardData = [
   {
     id: 1,
     imageSrc: "/images/scope_icon.svg",
-    alt: "Scoping Icon",
-    title: "Scoping",
+    alt: "Planning Icon",
+    title: "Planning",
     description:
-      "As a top web app development company, we begin with detailed scoping to align your vision with strategic planning, ensuring a strong foundation for success.",
+      "As a leading web development agency, we begin with in-depth planning to align your goals with a structured development roadmap, ensuring a seamless and effective execution.",
   },
   {
     id: 2,
     imageSrc: "/images/calculator.svg",
-    alt: "Cost Estimation Icon",
-    title: "Cost Estimation",
+    alt: "Budget Transparency Icon",
+    title: "Budget Transparency",
     description:
-      "Our web app development agency ensures transparent cost estimates, guaranteeing no budget surprises for any project.",
+      "Our web development team provides clear cost breakdowns, guaranteeing no hidden fees or unexpected expenses while delivering high-quality solutions.",
   },
   {
     id: 3,
     imageSrc: "/images/manage.svg",
-    alt: "Quality Management Icon",
-    title: "Quality Management",
+    alt: "Quality Assurance Icon",
+    title: "Quality Assurance",
     description:
-      "As a leading web app development firm in the USA, we deliver flawless, efficient online solutions through strict quality practices.",
+      "As an experienced web development firm, we ensure flawless and optimized websites with rigorous testing and best coding practices.",
   },
   {
     id: 4,
@@ -32,48 +32,53 @@ const cardData = [
     alt: "Collaboration Icon",
     title: "Collaboration",
     description:
-      "We ensure seamless collaboration, incorporating your feedback to create custom web apps and portals for the best results.",
+      "We foster transparent communication, integrating your feedback at every stage to create custom websites that meet your business needs.",
   },
   {
     id: 5,
     imageSrc: "/images/security.svg",
-    alt: "Security Management Icon",
-    title: "Security Management",
+    alt: "Security Implementation Icon",
+    title: "Security Implementation",
     description:
-      "Security is central to our web development, ensuring user data is always protected in enterprise or custom web apps.",
+      "Security is at the core of our web solutions, protecting user data and ensuring compliance with industry standards to prevent vulnerabilities.",
   },
   {
     id: 6,
     imageSrc: "/images/idea.svg",
-    alt: "Knowledge Management Icon",
-    title: "Knowledge Management",
+    alt: "Innovation & Trends Icon",
+    title: "Innovation & Trends",
     description:
-      "As a leading web development provider, we stay updated with the latest trends, delivering expert support and maintenance for your web applications.",
+      "As a top web development provider, we stay ahead of industry trends, levera",
   },
 ];
 
 export function CardSpotlights() {
   return (
     <>
-   <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-4 lg:px-0 gap-6">
-      {cardData.map((card) => (
-        <CardSpotlight key={card.id} className="w-full text-left border border-white rounded-xl bg-white/5 p-4">
-          <span className="relative z-20">
-            {/* <img src={card.imageSrc} alt={card.alt} /> */}
-            <Image
-              src={card.imageSrc}
-              alt={card.alt}
-              width={48} // You can set a specific width
-              height={48} // You can set a specific height
-            />
-          </span>
-          <h3 className="text-base sm:text-lg lg:text-xl font-semibold relative z-20 mt-2 mb-3 text-white">
-            {card.title}
-          </h3>
-          <p className="text-white relative z-20 text-sm sm:text-base">{card.description}</p>
-        </CardSpotlight>
-      ))}
-    </div>
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-4 lg:px-0 gap-6">
+        {cardData.map((card) => (
+          <CardSpotlight
+            key={card.id}
+            className="w-full text-left border border-white rounded-xl bg-white/5 p-4"
+          >
+            <span className="relative z-20">
+              {/* <img src={card.imageSrc} alt={card.alt} /> */}
+              <Image
+                src={card.imageSrc}
+                alt={card.alt}
+                width={48} // You can set a specific width
+                height={48} // You can set a specific height
+              />
+            </span>
+            <h3 className="text-base sm:text-lg lg:text-xl font-semibold relative z-20 mt-2 mb-3 text-white">
+              {card.title}
+            </h3>
+            <p className="text-white relative z-20 text-sm sm:text-base">
+              {card.description}
+            </p>
+          </CardSpotlight>
+        ))}
+      </div>
     </>
   );
 }

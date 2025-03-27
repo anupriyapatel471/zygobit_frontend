@@ -11,8 +11,6 @@ import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
@@ -20,7 +18,6 @@ type Checked = DropdownMenuCheckboxItemProps["checked"];
 
 export default function AmountInput() {
   const [showStatusBar, setShowStatusBar] = React.useState<Checked>(true);
-  const [showActivityBar, setShowActivityBar] = React.useState<Checked>(false);
   const [showPanel, setShowPanel] = React.useState<Checked>(false);
 
   return (
@@ -47,7 +44,8 @@ export default function AmountInput() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="p-2">
-                <DropdownMenuCheckboxItem className=""
+                <DropdownMenuCheckboxItem
+                  className=""
                   checked={showStatusBar}
                   onCheckedChange={setShowStatusBar}
                 >

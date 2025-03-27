@@ -1,13 +1,13 @@
 import * as motion from "motion/react-client";
 import type { Variants } from "motion/react";
-import  "./WebScrollTriggered.css";
+import "./WebScrollTriggered.css";
 import Image from "next/image";
-import rectangle from "../../../../../public/images/rectangle.png"
-import code from "../../../../../public/images/code.png"
+import rectangle from "../../../../../public/images/rectangle.png";
+import code from "../../../../../public/images/code.png";
 
 export default function ScrollTriggered() {
   return (
-    <div  className="container">
+    <div className="container">
       {food.map(([emoji, hueA, hueB], i) => (
         <Card i={i} emoji={emoji} hueA={hueA} hueB={hueB} key={emoji} />
       ))}
@@ -22,32 +22,25 @@ interface CardProps {
   i: number;
 }
 
-function Card({ emoji, hueA, hueB, i }: CardProps) {
-  // const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`;
-
+function Card({ i }: CardProps) {
   return (
     <motion.div
       className={`cardContainer card-container-${i}`}
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ amount: 0.8 }}>
+      viewport={{ amount: 0.8 }}
+    >
       <div className="absolute bottom-0 left-0 w-full">
-        {/* <img className="w-full" src="/images/rectangle.png" alt="" /> */}
         <Image
           className="w-full"
           src={rectangle}
           alt="Background"
-          width={1200}  // Add a width for Next.js to calculate the aspect ratio
-          height={800}  // Add a height for Next.js to calculate the aspect ratio
+          width={1200}
+          height={800}
         />
       </div>
-      <motion.div  variants={cardVariants} className="card z-10">
+      <motion.div variants={cardVariants} className="card z-10">
         <div className="w-full relative overflow-hidden rounded-lg">
-          {/* <img
-            className="w-full h-[20rem] sm:h-[26rem] object-cover "
-            src="/images/code.png"
-            alt=""
-          /> */}
           <Image
             className="w-full h-[20rem] sm:h-[26rem] object-cover"
             src={code}
@@ -56,7 +49,9 @@ function Card({ emoji, hueA, hueB, i }: CardProps) {
             height={800}
           />
           <div className="w-full  absolute bottom-0 left-0 p-6">
-            <h3 className="font-semibold text-xl">Web App Consulting Services</h3>
+            <h3 className="font-semibold text-xl">
+              Web App Consulting Services
+            </h3>
             <p className="text-base mt-4">
               At Zygobit, our web app consults offer comprehensive web app
               consulting services to help businesses navigate the complexities
@@ -65,14 +60,9 @@ function Card({ emoji, hueA, hueB, i }: CardProps) {
           </div>
         </div>
       </motion.div>
-      <motion.div  variants={cardVariants} className="card z-10">
+      <motion.div variants={cardVariants} className="card z-10">
         <div className="w-full hidden sm:inline-block relative overflow-hidden rounded-lg">
-          {/* <img
-            className="w-full h-[26rem] object-cover "
-            src="/images/code.png"
-            alt=""
-          /> */}
-           <Image
+          <Image
             className="w-full h-[26rem] object-cover"
             src={code}
             alt="Code"
@@ -80,7 +70,9 @@ function Card({ emoji, hueA, hueB, i }: CardProps) {
             height={800}
           />
           <div className="w-full  absolute bottom-0 left-0 p-6">
-            <h3 className="font-semibold text-xl">Web App Consulting Services</h3>
+            <h3 className="font-semibold text-xl">
+              Web App Consulting Services
+            </h3>
             <p className="text-base mt-4">
               At Zygobit, our web app consults offer comprehensive web app
               consulting services to help businesses navigate the complexities
@@ -107,29 +99,6 @@ const cardVariants: Variants = {
     },
   },
 };
-
-// const hue = (h: number) => `hsl(${h}, 100%, 50%)`;
-
-/**
- * ==============   Styles   ================
- */
-
-
-// const splash: React.CSSProperties = {
-//   position: "absolute",
-//   top: 0,
-//   left: 0,
-//   right: 0,
-//   bottom: 0,
-//   width: "100%",
-//   clipPath: `path("M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z")`,
-// };
-
-
-
-/**
- * ==============   Data   ================
- */
 
 const food: [string, number, number][] = [
   ["🍅", 340, 10],

@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react";
 import BoostBussiness from "@/component/sevices/Common/BoostBussiness/BoostBussiness";
 import ClientSays from "@/component/common/ClientSays/ClientSays";
 import AOSInitializer from "@/component/common/AOSInitializer";
-import { faqMobileApp } from "@/lib/faqs/faqs";
+import faqMobileApp from "../../../utils/content/faq/faqMobileApp.json";
 
 const WeDeliver = dynamic(
   () => import("@/component/common/WeDeliver/WeDeliver")
@@ -68,12 +68,109 @@ const MobileAppDevelopment = () => {
   const clientSaysDetails =
     "See how our custom app development services have transformed businesses and driven success for our happy clients";
 
-  console.log("faqMobileApp", faqMobileApp);
+  const heroHeading = "";
+  const heroParagraph = "";
+
+  const SkeletonOne = () => {
+    return (
+      <div>
+        <p className="font-bold md:text-4xl text-xl text-white">
+          Proven Expertise
+        </p>
+        <p className="font-normal text-base text-white"></p>
+        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+          Years of experience delivering high-quality UI/UX designs that enhance
+          user engagement and satisfaction.
+        </p>
+      </div>
+    );
+  };
+
+  const SkeletonTwo = () => {
+    return (
+      <div>
+        <p className="font-bold md:text-4xl text-xl text-white">
+          Scalable Solutions
+        </p>
+        <p className="font-normal text-base text-white"></p>
+        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+          Designs that grow with your business, ensuring a seamless experience
+          across all user touchpoints.
+        </p>
+      </div>
+    );
+  };
+  const SkeletonThree = () => {
+    return (
+      <div>
+        <p className="font-bold md:text-4xl text-xl text-white">
+          User-Centric Design
+        </p>
+        <p className="font-normal text-base text-white"></p>
+        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+          A human-first approach that prioritizes usability, accessibility, and
+          intuitive navigation.
+        </p>
+      </div>
+    );
+  };
+  const SkeletonFour = () => {
+    return (
+      <div>
+        <p className="font-bold md:text-4xl text-xl text-white">
+          Seamless Interactions
+        </p>
+        <p className="font-normal text-base text-white"></p>
+        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+          Smooth, responsive, and engaging experiences that keep users connected
+          and satisfied.
+        </p>
+      </div>
+    );
+  };
+
+  const cards = [
+    {
+      id: 1,
+      content: <SkeletonOne />,
+      className: "md:col-span-2 cursor-pointer",
+      title: "Proven Expertise",
+      thumbnail:
+        "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id: 2,
+      content: <SkeletonTwo />,
+      className: "col-span-1 cursor-pointer",
+      title: "Scalable Solutions",
+
+      thumbnail:
+        "https://images.unsplash.com/photo-1464457312035-3d7d0e0c058e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id: 3,
+      content: <SkeletonThree />,
+      className: "col-span-1 cursor-pointer",
+      title: "User-Centric Design",
+
+      thumbnail:
+        "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id: 4,
+      content: <SkeletonFour />,
+      className: "md:col-span-2 cursor-pointer",
+      title: "Seamless Interactions",
+      thumbnail:
+        "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+  ];
+
   return (
     <>
       <AOSInitializer />
 
-      <HeroBanner />
+      <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
       <WeDeliver />
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pb-14 lg:pb-24">
         <BoostBussiness heading={heading} paragraph={paragraph} />
@@ -89,7 +186,7 @@ const MobileAppDevelopment = () => {
         </div>
       </section>
 
-      <Cta Aurora={"Aurora"} />
+      <Cta Aurora={"Aurora"} vortex={""} content={""} />
 
       <section className="w-full lg:mt-10 inline-block">
         <div className="w-full px-4 lg:px-0 sm:text-center mb-8 sm:mb-16">
@@ -179,7 +276,7 @@ const MobileAppDevelopment = () => {
           </p>
         </div>
         <div className="w-full px-5 lg:px-24">
-          <MobileAppGrid />
+          <MobileAppGrid cards={cards} />
         </div>
       </section>
 

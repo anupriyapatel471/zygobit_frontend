@@ -44,27 +44,127 @@ const ParticlesCards = dynamic(() =>
     "@/component/sevices/uiUxWebDesign/ParticlesCards/ParticlesCards"
   ).then((mod) => mod.ParticlesCards)
 );
-const UiuxTeams = dynamic(() =>
-  import("@/component/sevices/uiUxWebDesign/uiuxTeam/uiuxTeam").then(
-    (mod) => mod.UiuxTeams
-  )
-);
+// const UiuxTeams = dynamic(() =>
+//   import("@/component/sevices/uiUxWebDesign/uiuxTeam/uiuxTeam").then(
+//     (mod) => mod.UiuxTeams
+//   )
+// );
 import { Metadata } from "next";
-import { faqData } from "@/lib/faqs/faqs";
+import faqUiUx from "../../../utils/content/faq/faqUiUx.json";
+import uiuxSliderData from "../../../utils/content/uiUxSlider/uiUx.json";
 
 export const metadata: Metadata = {
   title: "UI UX Design",
   description: "Zygibit Website Uiux Web Design Page",
 };
 const UiuxWebDesign = () => {
-  const heading = "Enhance experiences with user-centric UI/UX services";
+  const heading = "Craft Exceptional User Experiences with UI/UX Design";
   const paragraph =
-    "Leverage our UI and UX services dedicated to making your brand&apos;s vision a reality. We ensure your project designs are not only intuitive but also provide users with a seamless user experience.";
+    "We create visually stunning and intuitive UI/UX designs that enhance usability, engagement, and brand identity. Our expertise ensures a seamless digital experience tailored to your audience.";
+  const heroHeading = "Custom UI/UX Design Services";
+  const heroParagraph =
+    "We craft visually stunning and user-centric experiences with our cutting-edge, research-driven UI/UX design services. Our team specializes in creating intuitive, engaging, and accessible interfaces that not only meet but exceed user expectations, ensuring a seamless and impactful digital experience.";
+
+  const SkeletonOne = () => {
+    return (
+      <div>
+        <p className="font-bold md:text-4xl text-xl text-white">
+          Proven Expertise
+        </p>
+        <p className="font-normal text-base text-white"></p>
+        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+          Years of experience delivering high-quality UI/UX designs that enhance
+          user engagement and satisfaction.
+        </p>
+      </div>
+    );
+  };
+
+  const SkeletonTwo = () => {
+    return (
+      <div>
+        <p className="font-bold md:text-4xl text-xl text-white">
+          Scalable Solutions
+        </p>
+        <p className="font-normal text-base text-white"></p>
+        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+          Designs that grow with your business, ensuring a seamless experience
+          across all user touchpoints.
+        </p>
+      </div>
+    );
+  };
+  const SkeletonThree = () => {
+    return (
+      <div>
+        <p className="font-bold md:text-4xl text-xl text-white">
+          User-Centric Design
+        </p>
+        <p className="font-normal text-base text-white"></p>
+        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+          A human-first approach that prioritizes usability, accessibility, and
+          intuitive navigation.
+        </p>
+      </div>
+    );
+  };
+  const SkeletonFour = () => {
+    return (
+      <div>
+        <p className="font-bold md:text-4xl text-xl text-white">
+          Seamless Interactions
+        </p>
+        <p className="font-normal text-base text-white"></p>
+        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+          Smooth, responsive, and engaging experiences that keep users connected
+          and satisfied.
+        </p>
+      </div>
+    );
+  };
+
+  const cards = [
+    {
+      id: 1,
+      content: <SkeletonOne />,
+      className: "md:col-span-2 cursor-pointer",
+      title: "Proven Expertise",
+      thumbnail:
+        "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id: 2,
+      content: <SkeletonTwo />,
+      className: "col-span-1 cursor-pointer",
+      title: "Scalable Solutions",
+
+      thumbnail:
+        "https://images.unsplash.com/photo-1464457312035-3d7d0e0c058e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id: 3,
+      content: <SkeletonThree />,
+      className: "col-span-1 cursor-pointer",
+      title: "User-Centric Design",
+
+      thumbnail:
+        "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id: 4,
+      content: <SkeletonFour />,
+      className: "md:col-span-2 cursor-pointer",
+      title: "Seamless Interactions",
+      thumbnail:
+        "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+  ];
+  const firstRow = uiuxSliderData.slice(0, uiuxSliderData.length / 2);
 
   return (
     <>
       <AOSInitializer />
-      <HeroBanner />
+      <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
       <WeDeliver />
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pb-14 lg:pb-24">
         <BoostBussiness heading={heading} paragraph={paragraph} />
@@ -119,7 +219,7 @@ const UiuxWebDesign = () => {
         </div>
         <div className="w-full relative  mt-8 sm:mt-12 mb-12 sm:mb-24 lg:mb-32">
           <div className="pointer-events-none absolute z-[1] -top-8 sm:-top-12 rounded-[50%] right-0 w-full h-16 sm:h-20 lg:h-24 bg-[#09090B]"></div>
-          <UiuxSlider />
+          <UiuxSlider firstRow={firstRow} />
           <div className="pointer-events-none absolute -bottom-8 sm:-bottom-12 rounded-[50%] right-0 w-full h-16 sm:h-20 lg:h-24 bg-[#09090B]"></div>
         </div>
       </section>
@@ -143,7 +243,7 @@ const UiuxWebDesign = () => {
         </div>
       </section>
 
-      <section className="w-full pt-12 lg:pt-16 pb-16 sm:pb-20">
+      {/* <section className="w-full pt-12 lg:pt-16 pb-16 sm:pb-20">
         <div className="w-full px-4 sm:px-0  sm:text-center" data-aos="fade-up">
           <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
             Meet Our Team!
@@ -156,7 +256,7 @@ const UiuxWebDesign = () => {
         <div className="w-full max-w-4xl mx-auto mt-8 sm:mt-12 lg:mt-16">
           <UiuxTeams />
         </div>
-      </section>
+      </section> */}
 
       <TechnologyStack />
 
@@ -166,13 +266,14 @@ const UiuxWebDesign = () => {
             Why Zygobit for UI/UX Design?
           </h2>
           <p className="sm:font-medium text-sm sm:text-lg lg:text-xl max-w-7xl mx-auto mt-2">
-            Here’s a selection of state-of-the-art design tools that empower our
-            UI UX design company. With these resources at their fingertips, we
-            deliver exceptional user experiences that resonate with audiences.
+            Empowering businesses with intuitive, aesthetically pleasing, and
+            user-friendly experiences. Our expert UI/UX designers leverage
+            cutting-edge tools to craft seamless digital journeys that captivate
+            and convert.
           </p>
         </div>
         <div className="w-full px-5 lg:px-24">
-          <MobileAppGrid />
+          <MobileAppGrid cards={cards} />
         </div>
       </section>
 
@@ -180,7 +281,7 @@ const UiuxWebDesign = () => {
 
       <Blog />
 
-      <FaqSection faqData={faqData} />
+      <FaqSection faqData={faqUiUx} />
 
       <ContactForm />
     </>

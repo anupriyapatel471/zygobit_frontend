@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Time and Material Model",
+    "description": "For businesses looking for flexibility with clear scope and budget.",
+    "points": [
+      "Best for projects with fixed features",
+      "Clear timeline and cost upfront",
+      "Minimal risk of budget overruns"
+    ]
+  },
+  {
+    "title": "Dedicated Team Model",
+    "description": "Ideal for long-term projects requiring continuous development and enhancements.",
+    "points": [
+      "Full-time skilled developers for your project",
+      "Seamless integration with your in-house team",
+      "Scalable and cost-effective"
+    ]
+  },
+  {
+    "title": "Fixed Cost Model",
+    "description": "Perfect for projects with well-defined requirements and deliverables.",
+    "points": [
+      "Predictable budget with no hidden costs",
+      "Defined scope, timeline, and outcomes",
+      "Best suited for startups and SMEs"
+    ]
+  },
+  {
+    "title": "Hybrid Model",
+    "description": "A mix of flexibility and fixed pricing, offering the best of both worlds.",
+    "points": [
+      "Combines time and material with fixed cost elements",
+      "Adapts to evolving project needs",
+      "Cost-efficient and scalable"
+    ]
+  }
+]

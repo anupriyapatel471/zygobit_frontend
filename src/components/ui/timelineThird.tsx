@@ -1,9 +1,5 @@
 "use client";
-import {
-  useScroll,
-  useTransform,
-  motion,
-} from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
@@ -11,7 +7,13 @@ interface TimelineEntry {
   content: React.ReactNode;
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+export const Timeline = ({
+  data,
+  data2,
+}: {
+  data: TimelineEntry[];
+  data2: TimelineEntry[];
+}) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -38,10 +40,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           We Follow a Comprehensive UI UX Design Process
         </h2>
         <p className="sm:font-medium  text-base sm:text-xl my-3">
-          As a leading mobile UI UX design services company we meticulously
-          follow the steps to fine-tune every aspect of your project, ensuring
-          that the user experience is finely crafted to meet your business goals
-          and exceed expectations.
+          As a leading mobile UI/UX design services company, we meticulously
+          fine-tune every aspect of your project to ensure an exceptional user
+          experience that meets business goals and exceeds expectations.
         </p>
       </div>
 
@@ -61,16 +62,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         >
           {data.map((item, index) => (
             <>
-              <div key={index}className="flex justify-start">
-                <div
-                  className="flex lg:w-full justify-start pt-8 sm:pt-20 md:pt-20 md:gap-2">
+              <div key={index} className="flex justify-start">
+                <div className="flex lg:w-full justify-start pt-8 sm:pt-20 md:pt-20 md:gap-2">
                   <div className="sticky flex flex-col md:flex-row z-40 items-center top-24 sm:top-40 self-start">
                     <h3 className="hidden md:block text-base sm:pl-16 lg:pl-auto lg:pr-20 md:text-lg lg:text-xl font-semibold w-[253px] text-white ">
                       {item.title}
                     </h3>
-                    <div className="w-8 h-8 sm:h-10 absolute left-0 sm:left-3  lg:left-[180px] sm:w-10 rounded-full bg-primaryBg border border-white flex items-center justify-center">
-                      {/* <div className="h-4 w-4 rounded-fullbg-neutral-800 border border-neutral-700 p-2" /> */}
-                    </div>
+                    <div className="w-8 h-8 sm:h-10 absolute left-0 sm:left-3  lg:left-[180px] sm:w-10 rounded-full bg-primaryBg border border-white flex items-center justify-center"></div>
                   </div>
                   <div className="relative pl-11 sm:pl-0 pr-0 sm:pr-5 lg:pr-8 w-full">
                     <h3 className="md:hidden block text-xl mb-4 text-left font-semibold ">
@@ -107,12 +105,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           ref={ref}
           className="relative  w-full px-4 lg:px-[41px] mx-auto pb-20"
         >
-          {data.map((item, index) => (
+          {data2.map((item, index) => (
             <>
               <div key={index} className="flex justify-end">
-                <div
-                  className="flex lg:w-full justify-start pt-8 sm:pt-20 md:pt-20 md:gap-2"
-                >
+                <div className="flex lg:w-full justify-start pt-8 sm:pt-20 md:pt-20 md:gap-2">
                   <div className="relative order-2 lg:order-none pl-11 sm:pl-0 pr-0 sm:pr-5 lg:pr-14 w-full">
                     <h3 className="md:hidden block text-xl mb-4 text-left font-semibold ">
                       {item.title}

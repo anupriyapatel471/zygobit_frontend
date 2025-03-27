@@ -7,12 +7,12 @@ import {
   CardContainer,
   CardItem,
 } from "../../../../components/ui/3d-card";
-import aiImg from "../../../../../public/images/ai_img.png"
-import machine from "../../../../../public/images/machine.png"
-import generateAi from "../../../../../public/images/generate_ai.png"
-import iot from "../../../../../public/images/iot.png"
-import blockChain from "../../../../../public/images/blockchain.png"
-import arVr from "../../../../../public/images/ar_vr.png"
+import aiImg from "../../../../../public/images/ai_img.png";
+import machine from "../../../../../public/images/machine.png";
+import generateAi from "../../../../../public/images/generate_ai.png";
+import iot from "../../../../../public/images/iot.png";
+import blockChain from "../../../../../public/images/blockchain.png";
+import arVr from "../../../../../public/images/ar_vr.png";
 
 export function ThreeDCards() {
   return (
@@ -41,7 +41,10 @@ export function ThreeDCards() {
                 translateZ="60"
                 className=" text-sm max-w-sm mt-2 text-white"
               >
-                Enhance your mobile applications with AI-driven capabilities, including facial recognition, smart text scanning, barcode detection, and predictive analytics, delivering seamless and intelligent user interactions.
+                Enhance your mobile applications with AI-driven capabilities,
+                including facial recognition, smart text scanning, barcode
+                detection, and predictive analytics, delivering seamless and
+                intelligent user interactions.
               </CardItem>
             </CardItem>
           </CardBody>
@@ -69,7 +72,10 @@ export function ThreeDCards() {
                 translateZ="60"
                 className=" text-sm max-w-sm mt-2 text-white"
               >
-                Our AI-powered machine learning models adapt to your business needs, optimizing efficiency, automating key processes, and ensuring cost-effective, scalable solutions for long-term success.
+                Our AI-powered machine learning models adapt to your business
+                needs, optimizing efficiency, automating key processes, and
+                ensuring cost-effective, scalable solutions for long-term
+                success.
               </CardItem>
             </div>
           </CardBody>
@@ -97,7 +103,9 @@ export function ThreeDCards() {
                 translateZ="60"
                 className=" text-sm max-w-sm mt-2 text-white"
               >
-                Leverage the power of generative AI to create dynamic content, automate complex workflows, and drive deeper engagement, making your applications smarter and more user-centric.
+                Leverage the power of generative AI to create dynamic content,
+                automate complex workflows, and drive deeper engagement, making
+                your applications smarter and more user-centric.
               </CardItem>
             </div>
           </CardBody>
@@ -125,7 +133,10 @@ export function ThreeDCards() {
                 translateZ="60"
                 className=" text-sm max-w-sm mt-2 text-white"
               >
-                We develop IoT applications that enable seamless device connectivity, real-time monitoring, and advanced automation. Our solutions help businesses optimize operations, enhance efficiency, and create smarter environments.
+                We develop IoT applications that enable seamless device
+                connectivity, real-time monitoring, and advanced automation. Our
+                solutions help businesses optimize operations, enhance
+                efficiency, and create smarter environments.
               </CardItem>
             </div>
           </CardBody>
@@ -153,7 +164,10 @@ export function ThreeDCards() {
                 translateZ="60"
                 className=" text-sm max-w-sm mt-2 text-white"
               >
-                We build secure and decentralized blockchain applications designed for modern businesses. From digital transactions to smart contracts and web3 integration, our solutions ensure transparency, reliability, and innovation in every process.
+                We build secure and decentralized blockchain applications
+                designed for modern businesses. From digital transactions to
+                smart contracts and web3 integration, our solutions ensure
+                transparency, reliability, and innovation in every process.
               </CardItem>
             </div>
           </CardBody>
@@ -181,9 +195,10 @@ export function ThreeDCards() {
                 translateZ="60"
                 className=" text-sm max-w-sm mt-2 text-white"
               >
-               We craft immersive AR/VR applications that transform digital interactions. Whether it's for gaming, training, or enterprise solutions, our apps deliver highly engaging and interactive experiences that redefine user engagement.
-
-
+                We craft immersive AR/VR applications that transform digital
+                interactions. Whether it&apos;s for gaming, training, or
+                enterprise solutions, our apps deliver highly engaging and
+                interactive experiences that redefine user engagement.
               </CardItem>
             </div>
           </CardBody>

@@ -1,6 +1,5 @@
 "use client";
 import * as React from "react";
-import { useRouter } from "next/navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -12,7 +11,6 @@ import {
 import { ChevronRight } from "lucide-react";
 
 import Image from "next/image";
-import featured from "../../../../public/images/featured_slick.svg";
 import playStore from "../../../../public/images/playstore.svg";
 import appleStore from "../../../../public/images/applestore.svg";
 import featuredMobile from "../../../../public/images/featured_mobile.png";
@@ -23,15 +21,9 @@ import { useProjects } from "@/hooks/dynamoDb/useProjects";
 import Loader from "../Loader/Loader";
 
 export default function FeaturedSlider() {
-  const router = useRouter();
   const { data, loading } = useProjects();
 
   const projects = Array.isArray(data) ? data.slice(0, 5) : [];
-
-  const handleCaseBtn = (id: string | null | undefined) => {
-    router.push(`/case-study/${id}`);
-  };
-
   return loading ? (
     <Loader />
   ) : (
@@ -46,13 +38,17 @@ export default function FeaturedSlider() {
                     <div className="w-full bg-gradient-to-r from-orange-600 to-[#09090B] lg:bg-[linear-gradient(to_right,#EA580C_0%,#09090B_60%,#09090B_100%)] rounded-[20px] mt-9  sm:mt-11">
                       <div className="w-full flex justify-between items-center pl-4 sm:pl-16 lg:pl-24 pr-4 sm:pr-12 py-8">
                         <div className="w-auto max-w-md text-white">
-                          <Image
+                          {/* <Image
                             className="w-28 sm:w-auto"
                             src={featured}
                             alt="Featured Slick"
                             width={150}
                             height={50}
-                          />
+                          /> */}
+                          <h2 className="font-extrabold text-4xl sm:text-5xl tracking-wide">
+                            {project.projectName}
+                          </h2>
+
                           <h3 className="font-semibold text-2xl sm:text-3xl lg:text-4xl mt-4 ">
                             {project.title}
                           </h3>
@@ -123,7 +119,14 @@ export default function FeaturedSlider() {
                             </button>
                           </Link>
                         </div>
-                        <div className="hidden sm:inline w-auto max-w-xl">
+                        <div className="hidden sm:inline w-auto max-w-md">
+                          {/* <Image
+                            className="w-full h-auto object-contain"
+                            src={imageMap[project.projectName]}
+                            alt={`Featured for ${project.projectName}`}
+                            width={500}
+                            height={800}
+                          /> */}
                           <Image
                             className="w-full"
                             src={featuredMobile}

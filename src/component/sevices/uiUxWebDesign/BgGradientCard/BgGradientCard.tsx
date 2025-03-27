@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
-// import Image from "next/image";
 
 const cardData = [
   {
@@ -10,42 +9,42 @@ const cardData = [
     alt: "Responsive Design",
     title: "UI/UX Consulting",
     description:
-      "We guide you through every step of the UI UX design process. Whether it's mobile app UI design or web design, our UI UX design consultants assist you with the best expertise.",
+      "We guide you through the entire UI/UX design process, from research to implementation, ensuring a strategic and user-friendly experience tailored to your needs.",
   },
   {
     imgSrc: "/images/prototyping.svg",
-    alt: "Prototyping",
-    title: "Prototyping",
+    alt: "User Research & Analysis",
+    title: "User Research & Analysis",
     description:
-      "Our UI UX design agency creates prototypes to ensure usability, where we meticulously optimize page layouts, strategically arranging elements for a responsive digital experience.",
+      "We conduct in-depth research to understand user behavior, pain points, and expectations, enabling data-driven design decisions for optimal engagement.",
   },
   {
     imgSrc: "/images/figma_two.svg",
-    alt: "Figma Design",
-    title: "Web UI/UX Design",
+    alt: "Wireframing & Prototyping",
+    title: "Wireframing & Prototyping",
     description:
-      "With our responsive web design services, we transform your online presence, ensuring that your web UI UX design is visually stunning, highly functional, and user-friendly.",
+      "Our team crafts interactive wireframes and prototypes to visualize user journeys and refine functionality before development.",
   },
   {
     imgSrc: "/images/mobile_app_two.svg",
-    alt: "Mobile App Design",
-    title: "Mobile App Design",
+    alt: "Mobile & Web UI/UX Design",
+    title: "Mobile & Web UI/UX Design",
     description:
-      "Our expertise extends to mobile UI UX design for both iOS and Android platforms, ensuring that your applications deliver exceptional usability to retain users.",
+      "We design responsive, engaging, and conversion-driven UI/UX solutions for websites and mobile applications, enhancing accessibility and usability.",
   },
   {
     imgSrc: "/images/wireframe.svg",
-    alt: "Wireframing",
-    title: "Wireframing",
+    alt: "Interaction & Motion Design",
+    title: "Interaction & Motion Design",
     description:
-      "Wireframing is a crucial element of UI UX design and development services, mapping out the structure and content of your applications, and providing a clear blueprint for development.",
+      "We create dynamic, intuitive animations and interactions that improve engagement and provide a seamless, enjoyable user experience.",
   },
   {
     imgSrc: "/images/service.svg",
-    alt: "UX/UI Design Services",
-    title: "UX UI Design Services",
+    alt: "Usability Testing & Optimization",
+    title: "Usability Testing & Optimization",
     description:
-      "Zygobit specializes in UX UI design and UX UI services, making sure that the user interface and user experience of your applications are designed for an efficient and enjoyable user experience.",
+      "Our usability testing ensures that your product delivers an intuitive and frictionless experience, identifying and refining areas for improvement.",
   },
 ];
 
@@ -62,7 +61,7 @@ export function BackgroundGradientCard() {
               src={card.imgSrc}
               alt={card.alt}
               // layout="intrinsic"
-              width={70} 
+              width={70}
               height={70}
               className="object-contain" // Ensures no distortion
             />

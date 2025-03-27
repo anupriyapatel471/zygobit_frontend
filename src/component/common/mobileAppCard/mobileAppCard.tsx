@@ -1,7 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
 import { animate, motion } from "framer-motion";
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { GoCopilot } from "react-icons/go";
 
@@ -164,12 +165,7 @@ export const CardTitle = ({
   className?: string;
 }) => {
   return (
-    <h3
-      className={cn(
-        "text-lg font-semibold  text-white py-2",
-        className
-      )}
-    >
+    <h3 className={cn("text-lg font-semibold  text-white py-2", className)}>
       {children}
     </h3>
   );
@@ -184,10 +180,7 @@ export const CardDescription = ({
 }) => {
   return (
     <p
-      className={cn(
-        "text-sm font-normal text-neutral-400 max-w-sm",
-        className
-      )}
+      className={cn("text-sm font-normal text-neutral-400 max-w-sm", className)}
     >
       {children}
     </p>

@@ -1,8 +1,7 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 
 type Card = {
   id: number;
@@ -64,7 +63,9 @@ const ImageComponent = ({ card }: { card: Card }) => {
   return (
     <>
       <div className="p-6 w-full h-full flex items-end">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl relative z-10">{card.title}</h2>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl relative z-10">
+          {card.title}
+        </h2>
       </div>
       <motion.img
         layoutId={`image-${card.id}-image`}

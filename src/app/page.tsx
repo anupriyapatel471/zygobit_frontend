@@ -17,9 +17,9 @@ const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
 const WhychooseUs = dynamic(
   () => import("@/component/homePage/Whychooseus/Whychooseus")
 );
-const HeroParalax = dynamic(
-  () => import("@/component/common/HeroParallax/HeroParallax")
-);
+// const HeroParalax = dynamic(
+//   () => import("@/component/common/HeroParallax/HeroParallax")
+// );
 const TechnologyStack = dynamic(
   () => import("@/component/common/TechnologyStack/TechnologyStack")
 );
@@ -90,18 +90,18 @@ const Home = () => {
 
       <TechnologyStack />
 
-      <section
+      {/* <section
         data-aos="fade-up"
         className="w-full relative  py-0 sm:py-0 lg:py-0 overflow-hidden "
       >
         <HeroParalax />
-      </section>
+      </section> */}
 
       <ClientSays
         clientHeading={clientHeading}
         clientSaysDetails={clientSaysDetails}
       />
-      
+
       <OurPartners />
       <Cta vortex={"VortexBg"} Aurora={""} content={"Marquee"} />
 

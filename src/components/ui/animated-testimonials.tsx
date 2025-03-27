@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -162,7 +163,7 @@ export const AnimatedTestimonials = ({
               onClick={handleNext}
               className="w-10 h-10 sm:h-12 sm:w-12 rounded-full bg-gray-100  flex items-center justify-center group/button"
             >
-               <Image
+              <Image
                 src={arrowRight}
                 width={20}
                 height={20}

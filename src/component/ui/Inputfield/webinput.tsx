@@ -1,27 +1,16 @@
 "use client";
 
 import * as React from "react";
-import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
-import { ChevronDownIcon } from "@radix-ui/react-icons";
+// import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-
-type Checked = DropdownMenuCheckboxItemProps["checked"];
+// type Checked = DropdownMenuCheckboxItemProps["checked"];
 
 export default function WebInput() {
-  const [showStatusBar, setShowStatusBar] = React.useState<Checked>(true);
-  const [showActivityBar, setShowActivityBar] = React.useState<Checked>(false);
-  const [showPanel, setShowPanel] = React.useState<Checked>(false);
+  // const [showStatusBar, setShowStatusBar] = React.useState<Checked>(true);
+  // const [showActivityBar, setShowActivityBar] = React.useState<Checked>(false);
+  // const [showPanel, setShowPanel] = React.useState<Checked>(false);
 
   return (
     <>
@@ -30,7 +19,9 @@ export default function WebInput() {
           Website <span className="text-red-500 text-lg">*</span>
         </Label>
         <div className="relative flex items-center rounded-md border border-primary bg-transparent">
-          <div className="w-auto border-0  border-r-[1px] cursor-no-drop border-r-primary h-full border-t-none p-3 bg-transparent text-muted-foreground">http://</div>
+          <div className="w-auto border-0  border-r-[1px] cursor-no-drop border-r-primary h-full border-t-none p-3 bg-transparent text-muted-foreground">
+            http://
+          </div>
           <Input
             type="text"
             id="text"

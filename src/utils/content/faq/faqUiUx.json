@@ -1,0 +1,26 @@
+[
+  {
+    "question": "What is the difference between UI and UX design?",
+    "answer": "UI (User Interface) focuses on the visual aspects of a product, including colors, typography, and layout, while UX (User Experience) is about how a user interacts with the product and how seamless and enjoyable the experience is."
+  },
+  {
+    "question": "Why is UI/UX design important for my business?",
+    "answer": "A well-designed UI/UX improves user satisfaction, increases engagement, and boosts conversions by making products easy to use and visually appealing."
+  },
+  {
+    "question": "What tools do UI/UX designers use?",
+    "answer": "Popular UI/UX tools include Figma, Adobe XD, Sketch, InVision, and Axure for design and prototyping, as well as usability testing tools like Hotjar and Google Analytics."
+  },
+  {
+    "question": "How long does it take to design a UI/UX for a website or app?",
+    "answer": "The timeline depends on the complexity of the project, but on average, UI/UX design can take anywhere from a few weeks to a few months, including research, wireframing, prototyping, and user testing."
+  },
+  {
+    "question": "How do you ensure a good user experience in design?",
+    "answer": "By conducting user research, usability testing, iterative prototyping, and focusing on accessibility, clarity, and responsiveness, we ensure a smooth and engaging user experience."
+  },
+  {
+    "question": "Can UI/UX design improve website/app performance?",
+    "answer": "Yes! A well-structured UI/UX reduces bounce rates, improves user retention, and enhances overall functionality, leading to higher engagement and better business outcomes."
+  }
+]

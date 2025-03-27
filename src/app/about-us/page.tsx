@@ -12,6 +12,8 @@ import DeliveringTailored from "@/component/common/DeliveringTailored/Delivering
 import AOSInitializer from "@/component/common/AOSInitializer";
 import dynamic from "next/dynamic";
 import { Metadata } from "next";
+import boxData1 from "../../utils/content/boxreveals/aboutUsOne.json";
+import boxData2 from "../../utils/content/boxreveals/aboutUsTwo.json";
 const ContactForm = dynamic(
   () => import("@/component/common/ContactForm/ContactForm")
 );
@@ -38,10 +40,110 @@ const About = () => {
   const deliveringHeading = "Delivering Tailored Excellence";
   const deliveringPara =
     "At Zygobit, we turn your vision into reality with creative, innovative solutions that deliver quality and results.";
+  const heroHeading = "";
+  const heroParagraph = "";
+
+  const SkeletonOne = () => {
+    return (
+      <div>
+        <p className="font-bold md:text-4xl text-xl text-white">
+          Proven AI Expertise
+        </p>
+        <p className="font-normal text-base text-white"></p>
+        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+          Harness the power of AI-driven solutions tailored to optimize your
+          business operations, enhance decision-making, and drive innovation.
+        </p>
+      </div>
+    );
+  };
+
+  const SkeletonTwo = () => {
+    return (
+      <div>
+        <p className="font-bold md:text-4xl text-xl text-white">
+          Scalable AI Solutions
+        </p>
+        <p className="font-normal text-base text-white"></p>
+        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+          Deploy AI models that grow with your business, ensuring efficiency,
+          automation, and seamless adaptability to changing demands.
+        </p>
+      </div>
+    );
+  };
+  const SkeletonThree = () => {
+    return (
+      <div>
+        <p className="font-bold md:text-4xl text-xl text-white">
+          Intelligent User Experience
+        </p>
+        <p className="font-normal text-base text-white"></p>
+        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+          Enhance customer interactions with AI-powered personalization,
+          predictive analytics, and smart automation for a seamless digital
+          experience.
+        </p>
+      </div>
+    );
+  };
+  const SkeletonFour = () => {
+    return (
+      <div>
+        <p className="font-bold md:text-4xl text-xl text-white">
+          Seamless AI Integration
+        </p>
+        <p className="font-normal text-base text-white"></p>
+        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+          Integrate cutting-edge AI and ML models into your existing systems,
+          enabling real-time data processing, automation, and intelligent
+          insights.
+        </p>
+      </div>
+    );
+  };
+
+  const cards = [
+    {
+      id: 1,
+      content: <SkeletonOne />,
+      className: "md:col-span-2 cursor-pointer",
+      title: "Proven AI Expertise",
+      thumbnail:
+        "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id: 2,
+      content: <SkeletonTwo />,
+      className: "col-span-1 cursor-pointer",
+      title: "Scalable AI Solutions",
+
+      thumbnail:
+        "https://images.unsplash.com/photo-1464457312035-3d7d0e0c058e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id: 3,
+      content: <SkeletonThree />,
+      className: "col-span-1 cursor-pointer",
+      title: "Intelligent User Experience",
+
+      thumbnail:
+        "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id: 4,
+      content: <SkeletonFour />,
+      className: "md:col-span-2 cursor-pointer",
+      title: "Seamless AI Integration",
+      thumbnail:
+        "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+  ];
+
   return (
     <>
       <AOSInitializer />
-      <HeroBanner />
+      <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
       <WeDeliver />
       <div className="w-full relative">
         <AboutBgParticles />
@@ -85,7 +187,7 @@ const About = () => {
       <section className="w-full relative px-4 lg:px-24 py-12 lg:py-20">
         <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap items-center gap-5 sm:gap-8">
           <div className="w-full lg:w-1/2">
-            <BoxReveals />
+            <BoxReveals data={boxData1} />
           </div>
           <div className="w-full lg:w-1/2">
             <Image
@@ -102,6 +204,7 @@ const About = () => {
       <GridBoxes
         GridBoxesHeading={GridBoxesHeading}
         GridBoxesDetail={GridBoxesDetail}
+        cards={cards}
       />
       {/* web app sales */}
       <section className="w-full relative px-4 lg:px-24 py-12 lg:py-20">
@@ -117,7 +220,7 @@ const About = () => {
             />
           </div>
           <div className="w-full lg:w-1/2">
-            <BoxReveals />
+            <BoxReveals data={boxData2} />
           </div>
         </div>
       </section>

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -54,10 +55,7 @@ export const TypewriterEffect = ({
                 <motion.span
                   initial={{}}
                   key={`char-${index}`}
-                  className={cn(
-                    `text-white  opacity-0 hidden`,
-                    word.className
-                  )}
+                  className={cn(`text-white  opacity-0 hidden`, word.className)}
                 >
                   {char}
                 </motion.span>
@@ -140,7 +138,9 @@ export const TypewriterEffectSmooth = ({
   };
 
   return (
-    <div className={cn("flex items-end sm:items-start space-x-1 mt-0", className)}>
+    <div
+      className={cn("flex items-end sm:items-start space-x-1 mt-0", className)}
+    >
       <motion.div
         className="overflow-hidden pb-0"
         initial={{
@@ -155,8 +155,7 @@ export const TypewriterEffectSmooth = ({
           delay: 1,
         }}
       >
-        <div
-          className="whitespace-normal sm:whitespace-nowrap font-bold">
+        <div className="whitespace-normal sm:whitespace-nowrap font-bold">
           {renderWords()}{" "}
         </div>{" "}
       </motion.div>

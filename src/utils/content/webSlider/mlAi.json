@@ -1,0 +1,38 @@
+[
+  {
+    "title": "AI-Augmented Development Model",
+    "description": "For businesses looking to leverage AI for enhanced efficiency and automation.",
+    "points": [
+      "AI-assisted coding for faster development cycles",
+      "Predictive analytics for optimized decision-making",
+      "Automated testing and bug detection"
+    ]
+  },
+  {
+    "title": "Machine Learning Integration Model",
+    "description": "Ideal for projects requiring ML-driven insights and automation.",
+    "points": [
+      "Custom ML algorithms for real-time data processing",
+      "Personalized user experience with AI-driven recommendations",
+      "Continuous learning models for adaptive solutions"
+    ]
+  },
+  {
+    "title": "AI-Powered Data Analytics Model",
+    "description": "Best for businesses focused on data-driven strategies and decision-making.",
+    "points": [
+      "Advanced AI models for deep data analysis",
+      "Real-time trend detection and forecasting",
+      "Secure and scalable data pipelines"
+    ]
+  },
+  {
+    "title": "AI & ML-Driven Automation Model",
+    "description": "For businesses looking to streamline operations with AI-powered automation.",
+    "points": [
+      "Intelligent process automation for increased productivity",
+      "Smart chatbot and virtual assistant integration",
+      "AI-based risk assessment and fraud detection"
+    ]
+  }
+]
