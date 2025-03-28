@@ -121,7 +121,7 @@ export default function FeaturedSlider() {
                         <div className="hidden sm:inline w-auto max-w-md">
                           {project.mobileImage && (
                             <Image
-                              className="w-full"
+                              className="h-[450px] w-[450px]"
                               src={project.mobileImage}
                               alt="Featured Mobile"
                               width={500}
