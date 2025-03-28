@@ -38,7 +38,7 @@ export function MovingBorders({ selectedCategory }: MovingBordersProps) {
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-7">
         {currentBlogs.map((card) => (
           <>
-            <Link href={`/blog/${card.id}`}>
+            <Link href={`/blogs/${card.id}`}>
               <Button
                 key={card.id}
                 className="bg-white/5 cursor-pointer rounded-2xl overflow-hidden backdrop-blur-lg text-white border  border-[#7C2D12]"

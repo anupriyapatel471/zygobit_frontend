@@ -11,7 +11,7 @@ const Footer = () => {
   const companyLinks = [
     { name: "About", url: "/about-us" },
     { name: "Careers", url: "#" },
-    { name: "Blog", url: "/blog" },
+    { name: "Blog", url: "/blogs" },
   ];
 
   const contactLinks = [
