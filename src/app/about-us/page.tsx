@@ -40,8 +40,9 @@ const About = () => {
   const deliveringHeading = "Delivering Tailored Excellence";
   const deliveringPara =
     "At Zygobit, we turn your vision into reality with creative, innovative solutions that deliver quality and results.";
-  const heroHeading = "";
-  const heroParagraph = "";
+  const heroHeading = "Innovatinng the Digital Future";
+  const heroParagraph =
+    "We are a tech-driven company passionate about building cutting-edge mobile and web solutions, helping businesses thrive in a digital-first world.";
 
   const SkeletonOne = () => {
     return (
@@ -194,9 +195,8 @@ const About = () => {
               className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
               src={Together}
               alt="Together"
-              // layout="responsive"
-              width={590} // Define the aspect ratio width
-              height={753} // Define the aspect ratio height
+              width={590}
+              height={753}
             />
           </div>
         </div>
@@ -214,9 +214,8 @@ const About = () => {
               className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
               src={meeting}
               alt="meating"
-              // layout="responsive"
-              width={590} // Define the aspect ratio width
-              height={753} // Define the aspect ratio height
+              width={590}
+              height={753}
             />
           </div>
           <div className="w-full lg:w-1/2">

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
 import BoostBussiness from "@/component/sevices/Common/BoostBussiness/BoostBussiness";
@@ -68,8 +69,9 @@ const MobileAppDevelopment = () => {
   const clientSaysDetails =
     "See how our custom app development services have transformed businesses and driven success for our happy clients";
 
-  const heroHeading = "";
-  const heroParagraph = "";
+  const heroHeading = "Mobile App Development That Drives Success";
+  const heroParagraph =
+    "Custom iOS & Android solutions designed for performance, security, and scalability—empowering businesses with innovative mobile experiences.";
 
   const SkeletonOne = () => {
     return (
@@ -256,14 +258,14 @@ const MobileAppDevelopment = () => {
 
       <Cta Aurora={"Aurora"} vortex={""} content={""} />
 
-      <section
+      {/* <section
         data-aos="fade-up"
         className="w-full relative  py-0 sm:py-0 lg:py-0 overflow-hidden "
       >
         <HeroParalax />
-      </section>
+      </section> */}
 
-      <Cta Aurora={"Aurora"} vortex={""} content={""} />
+      {/* <Cta Aurora={"Aurora"} vortex={""} content={""} /> */}
 
       <section className="w-full sm:pt-10 pb-32 lg:pb-40 bg-black">
         <div className="w-full px-4 lg:px-20 sm:text-center mb-8 sm:mb-12 lg:mb-12">

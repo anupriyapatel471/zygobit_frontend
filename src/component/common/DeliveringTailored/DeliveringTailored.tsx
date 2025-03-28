@@ -14,7 +14,7 @@ const DeliveringTailored: React.FC<DeliveringTailoredProps> = ({
   deliveringHeading,
   deliveringPara,
 }) => {
-  const firstRow = uiuxSliderData.slice(0, uiuxSliderData.length / 2);
+  // const firstRow = uiuxSliderData.slice(0, uiuxSliderData.length / 2);
   return (
     <>
       <section className="w-full pt-0  sm:pt-0 lg:pt-5">
@@ -31,8 +31,7 @@ const DeliveringTailored: React.FC<DeliveringTailoredProps> = ({
         </div>
         <div className="w-full relative  mt-8 sm:mt-12 mb-12 sm:mb-24 lg:mb-32">
           <div className="pointer-events-none absolute z-[1] -top-8 sm:-top-12 rounded-[50%] right-0 w-full h-16 sm:h-20 lg:h-24 bg-[#09090B]"></div>
-          {/* <UiuxSlider /> */}
-          <UiuxSlider firstRow={firstRow} />
+          <UiuxSlider firstRow={uiuxSliderData} />
           <div className="pointer-events-none absolute -bottom-8 sm:-bottom-12 rounded-[50%] right-0 w-full h-16 sm:h-20 lg:h-24 bg-[#09090B]"></div>
         </div>
       </section>

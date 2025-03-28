@@ -5,7 +5,6 @@ import * as motion from "motion/react-client";
 import { useState } from "react";
 import "./mobiledevstyle.css";
 import Image from "next/image";
-import plan from "../../../../../public/images/plan.png";
 
 export default function SharedLayoutAnimation() {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
@@ -50,7 +49,7 @@ export default function SharedLayoutAnimation() {
               <div className="w-full sm:w-2/5">
                 <Image
                   className="w-full h-full max-h-72 object-cover rounded-2xl"
-                  src={plan}
+                  src={selectedTab.image}
                   alt=""
                   width={500}
                   height={500}
@@ -80,6 +79,7 @@ const tabs = [
     description:
       "We begin by understanding your vision, business objectives, and target audience. This phase involves brainstorming, competitor analysis, and gathering key insights to lay a strategic roadmap for your app development journey.",
     icon: "",
+    image: "/images/discovery_img.png",
   },
   {
     id: 2,
@@ -88,6 +88,7 @@ const tabs = [
     description:
       "In this phase, we define the app’s core functionality, wireframes, and technical requirements. Market research and feasibility analysis ensure that the development process aligns with your business goals.",
     icon: "",
+    image: "/images/planning_img.png",
   },
   {
     id: 3,
@@ -96,6 +97,7 @@ const tabs = [
     description:
       "Our UI/UX experts craft intuitive, visually engaging designs that enhance user experience. Interactive prototypes allow stakeholders to visualize the app’s flow before development begins.",
     icon: "",
+    image: "/images/design_img.png",
   },
   {
     id: 4,
@@ -104,6 +106,7 @@ const tabs = [
     description:
       "Using the latest technologies, we build a robust, scalable application with seamless performance. Rigorous testing ensures smooth functionality, security, and an error-free user experience.",
     icon: "",
+    image: "/images/devAndTesting_img.png",
   },
   {
     id: 5,
@@ -112,5 +115,6 @@ const tabs = [
     description:
       "Once your app is live, we continue to optimize its performance with updates, security patches, and ongoing support. Our team ensures your app stays ahead with evolving market trends.",
     icon: "",
+    image: "/images/devAndMaintainance.jpg",
   },
 ];

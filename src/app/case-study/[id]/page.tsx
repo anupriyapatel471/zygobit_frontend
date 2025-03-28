@@ -9,7 +9,7 @@ const TrustedAcross = dynamic(
 import { useProjects } from "@/hooks/dynamoDb/useProjects";
 import { useParams } from "next/navigation";
 import dynamic from "next/dynamic";
-import { MagicCardDemo } from "@/component/common/Magiccard/Magiccard";
+import MagicCard from "@/components/ui/magic-card";
 import Loader from "@/component/common/Loader/Loader";
 
 const CaseStudy = () => {
@@ -66,7 +66,47 @@ const CaseStudy = () => {
                 <RippleBg numCircles={10} />
               </div>
               <div className=" w-full px-6 lg:px-32 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <MagicCardDemo />
+                <div className=" grid grid-cols-1 sm:grid-cols-3  w-full flex-col gap-4  lg:flex-row">
+                  <MagicCard
+                    data-aos="fade-right"
+                    className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg"
+                  >
+                    <div className="flex flex-wrap sm:flex-nowrap items-center justify-between">
+                      <h3 className="w-full order-2 sm:order-none sm:w-[calc(100%-65px)] 2xl:w-[calc(100%-125px)] text-xl lg:text-xl 2xl:text-2xl font-semibold tracking-tighter">
+                        Client Location
+                      </h3>
+                    </div>
+                    <p className="text-sm sm:text-base mt-3">
+                      {project.clientLocation}
+                    </p>
+                  </MagicCard>
+                  <MagicCard
+                    data-aos="fade-right"
+                    className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg"
+                  >
+                    <div className="flex flex-wrap sm:flex-nowrap items-center justify-between">
+                      <h3 className="w-full order-2 sm:order-none sm:w-[calc(100%-65px)] 2xl:w-[calc(100%-125px)] text-xl lg:text-xl 2xl:text-2xl font-semibold tracking-tighter">
+                        Development Time
+                      </h3>
+                    </div>
+                    <p className="text-sm sm:text-base mt-3">
+                      {project.developmentTime}
+                    </p>
+                  </MagicCard>
+                  <MagicCard
+                    data-aos="fade-right"
+                    className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg"
+                  >
+                    <div className="flex flex-wrap sm:flex-nowrap items-center justify-between">
+                      <h3 className="w-full order-2 sm:order-none sm:w-[calc(100%-65px)] 2xl:w-[calc(100%-125px)] text-xl lg:text-xl 2xl:text-2xl font-semibold tracking-tighter">
+                        Target Users
+                      </h3>
+                    </div>
+                    <p className="text-sm sm:text-base mt-3">
+                      {project.targetUsers}
+                    </p>
+                  </MagicCard>
+                </div>
               </div>
             </div>
           </div>

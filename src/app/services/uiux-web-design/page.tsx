@@ -159,7 +159,7 @@ const UiuxWebDesign = () => {
         "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
-  const firstRow = uiuxSliderData.slice(0, uiuxSliderData.length / 2);
+  // const firstRow = uiuxSliderData.slice(0, uiuxSliderData.length / 2);
 
   return (
     <>
@@ -219,7 +219,7 @@ const UiuxWebDesign = () => {
         </div>
         <div className="w-full relative  mt-8 sm:mt-12 mb-12 sm:mb-24 lg:mb-32">
           <div className="pointer-events-none absolute z-[1] -top-8 sm:-top-12 rounded-[50%] right-0 w-full h-16 sm:h-20 lg:h-24 bg-[#09090B]"></div>
-          <UiuxSlider firstRow={firstRow} />
+          <UiuxSlider firstRow={uiuxSliderData} />
           <div className="pointer-events-none absolute -bottom-8 sm:-bottom-12 rounded-[50%] right-0 w-full h-16 sm:h-20 lg:h-24 bg-[#09090B]"></div>
         </div>
       </section>

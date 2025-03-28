@@ -15,7 +15,7 @@ import playStore from "../../../../public/images/playstore.svg";
 import appleStore from "../../../../public/images/applestore.svg";
 import Link from "next/link";
 
-import { truncateText } from "@/lib/utils";
+import { formatDownloads, truncateText } from "@/lib/utils";
 import { useProjects } from "@/hooks/dynamoDb/useProjects";
 import Loader from "../Loader/Loader";
 
@@ -56,38 +56,26 @@ export default function FeaturedSlider() {
                               truncateText(project.description)}
                           </p>
                           <div className="w-64 my-4 grid grid-cols-2 gap-x-14 gap-y-4">
-                            <div className="w-auto">
-                              <span className="block text-sm sm:text-base mb-1">
-                                Downloads
-                              </span>
-                              <b className="font-semibold tracking-tighter text-xl sm:text-2xl">
-                                {project.androidDownloads}
-                              </b>
-                            </div>
-                            <div className="w-auto">
-                              <span className="block text-sm sm:text-base mb-1">
-                                Downloads
-                              </span>
-                              <b className="font-semibold tracking-tighter text-xl sm:text-2xl">
-                                {project.androidDownloads}
-                              </b>
-                            </div>
-                            <div className="w-auto">
-                              <span className="block text-sm sm:text-base mb-1">
-                                Downloads
-                              </span>
-                              <b className="font-semibold tracking-tighter text-xl sm:text-2xl">
-                                {project.iosDownloads}
-                              </b>
-                            </div>
-                            <div className="w-auto">
-                              <span className="block text-sm sm:text-base mb-1">
-                                Downloads
-                              </span>
-                              <b className="font-semibold tracking-tighter text-xl sm:text-2xl">
-                                {project.iosDownloads}
-                              </b>
-                            </div>
+                            {project.androidDownloads && (
+                              <div className="w-auto">
+                                <span className="block text-sm sm:text-base mb-1">
+                                  Android Downloads
+                                </span>
+                                <b className="font-semibold tracking-tighter text-xl sm:text-2xl">
+                                  {formatDownloads(project.androidDownloads)}
+                                </b>
+                              </div>
+                            )}
+                            {project.iosDownloads && (
+                              <div className="w-auto">
+                                <span className="block text-sm sm:text-base mb-1">
+                                  iOS Downloads
+                                </span>
+                                <b className="font-semibold tracking-tighter text-xl sm:text-2xl">
+                                  {formatDownloads(project.iosDownloads)}
+                                </b>
+                              </div>
+                            )}
                           </div>
                           <ul className="flex gap-3 mb-4">
                             <li>
