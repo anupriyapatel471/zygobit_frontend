@@ -5,6 +5,7 @@ import TypewriterEffect from "./Typewriter/Typewriter";
 import VortexBg from "./Vortexbg/Vortexbg";
 import MarqueeVertical from "./Ctaslider/Ctaslider";
 import { AuroraBg } from "./AuroraBg/AuroraBg";
+import Link from "next/link";
 interface ctaProp {
   content: string;
   Aurora: string;
@@ -41,10 +42,12 @@ const Cta = ({ content, Aurora, vortex }: ctaProp) => {
                   next enterprise custom project.
                 </div>
                 <div>
-                  <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                    Our Engagement Model{" "}
-                    <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                  </button>
+                  <Link href={"/contact"}>
+                    <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                      Our Engagement Model{" "}
+                      <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                    </button>
+                  </Link>
                 </div>
               </div>
               <div

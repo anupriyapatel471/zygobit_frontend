@@ -8,6 +8,7 @@ import {
   CardItem,
 } from "../../../components/ui/3d-card";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 interface ThreeDCardProp {
   img: string;
 }
@@ -29,10 +30,12 @@ export function ThreeDCard({ img }: ThreeDCardProp) {
             proposal for your next enterprise custom project.
           </CardItem>
           <CardItem translateZ="60">
-            <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-              Our Engagement Model{" "}
-              <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-            </button>
+            <Link href={"/contact"}>
+              <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                Our Engagement Model{" "}
+                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+              </button>
+            </Link>
           </CardItem>
         </div>
         <CardItem
