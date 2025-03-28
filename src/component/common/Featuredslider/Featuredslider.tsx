@@ -13,7 +13,6 @@ import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import playStore from "../../../../public/images/playstore.svg";
 import appleStore from "../../../../public/images/applestore.svg";
-import featuredMobile from "../../../../public/images/featured_mobile.png";
 import Link from "next/link";
 
 import { truncateText } from "@/lib/utils";
@@ -120,20 +119,15 @@ export default function FeaturedSlider() {
                           </Link>
                         </div>
                         <div className="hidden sm:inline w-auto max-w-md">
-                          {/* <Image
-                            className="w-full h-auto object-contain"
-                            src={imageMap[project.projectName]}
-                            alt={`Featured for ${project.projectName}`}
-                            width={500}
-                            height={800}
-                          /> */}
-                          <Image
-                            className="w-full"
-                            src={featuredMobile}
-                            alt="Featured Mobile"
-                            width={500}
-                            height={800}
-                          />
+                          {project.mobileImage && (
+                            <Image
+                              className="w-full"
+                              src={project.mobileImage}
+                              alt="Featured Mobile"
+                              width={500}
+                              height={800}
+                            />
+                          )}
                         </div>
                       </div>
                     </div>

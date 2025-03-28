@@ -15,6 +15,7 @@ const nextConfig = {
       "assets.aceternity.com",
       "pbs.twimg.com",
       "aceternity.com",
+      "zygobit-images.s3.ap-south-1.amazonaws.com",
     ],
   },
 };

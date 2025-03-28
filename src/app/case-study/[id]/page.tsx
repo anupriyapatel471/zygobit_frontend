@@ -48,13 +48,15 @@ const CaseStudy = () => {
                 </div>
               </div>
               <div className="mt-6 w-full sm:w-full lg:w-[44%] lg:mt-5 hidden lg:inline text-right">
-                <Image
-                  className="ml-auto"
-                  src="/images/case_banner.png"
-                  alt="case_banner"
-                  width={500}
-                  height={500}
-                />
+                {project.mobileImage && (
+                  <Image
+                    className="ml-auto"
+                    src={project.mobileImage}
+                    alt="case_banner"
+                    width={500}
+                    height={500}
+                  />
+                )}
               </div>
             </div>
           </div>
@@ -81,22 +83,15 @@ const CaseStudy = () => {
               {project.technologyDescription}
             </p>
             <div className="w-full mt-8 lg:mt-14 grid grid-cols-2 sm:flex justify-center items-center gap-5 sm:gap-24">
-              <div className="w-full sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-0 rounded-3xl flex items-center justify-center border-[5px] border-white/20 relative">
-                <Image
-                  src="/images/case_flutter.png"
-                  alt=""
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <div className="w-full sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-0 rounded-3xl flex items-center justify-center border-[5px] border-white/20 relative">
-                <Image
-                  src="/images/case_go.png"
-                  alt=""
-                  fill
-                  className="object-contain"
-                />
-              </div>
+              {project.technologyImages &&
+                project.technologyImages.map((image: string, i: number) => (
+                  <div
+                    key={i}
+                    className="w-full sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-0 rounded-3xl flex items-center justify-center border-[5px] border-white/20 relative"
+                  >
+                    <Image src={image} alt="" fill className="object-contain" />
+                  </div>
+                ))}
             </div>
           </div>
         </section>
@@ -115,12 +110,15 @@ const CaseStudy = () => {
             </div>
             <div className="w-full lg:w-1/2">
               <div className="w-full sm:w-[496px] mx-auto relative  bg-[#EA580C] h-[350px] sm:h-[440px] rounded-2xl">
-                <Image
-                  className="w-full h-full object-cover rounded-2xl relative z-[11]"
-                  src="/images/tia_img.png"
-                  alt=""
-                  fill
-                />
+                {project.evaluationImage && (
+                  <Image
+                    className="w-full h-full object-cover rounded-2xl relative z-[11]"
+                    src={project.evaluationImage}
+                    alt=""
+                    fill
+                  />
+                )}
+
                 <div className="absolute hidden sm:inline top-10 opacity-70 -rotate-[15deg] z-10 left-0 w-[355px] h-[400px] bg-[#EA580C] rounded-2xl shadow-[0_0_48px_0_#EA580C99]"></div>
               </div>
             </div>
