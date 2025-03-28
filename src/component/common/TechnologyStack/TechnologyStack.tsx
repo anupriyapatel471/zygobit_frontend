@@ -33,7 +33,7 @@ const TechnologyStack = () => {
               alt="Planet"
               width={740}  // Set a base width
               height={515} // Set a base height
-              className="mx-auto object-contain relative sm:right-5"
+              className="mx-auto h-[570px] sm:h-auto sm:object-contain relative sm:right-5"
               priority // Optional: if it's an important image for page load
             />
           </div>

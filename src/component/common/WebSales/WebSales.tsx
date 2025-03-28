@@ -25,7 +25,7 @@ export function BoxReveals({ data }: BoxRevealsProps) {
   if (!isClient) return null;
 
   return (
-    <div className="size-full  items-center justify-center overflow-hidden pt-8">
+    <div className="size-full  items-center justify-center overflow-hidden pt-0">
       {/* <BoxReveal boxColor={"#EA580C"} duration={0.5}>
         <span className="sm:font-medium text-base sm:text-xl lg:text-2xl ">
           10X Your eCommerce Sales Growth!
@@ -33,7 +33,7 @@ export function BoxReveals({ data }: BoxRevealsProps) {
       </BoxReveal> */}
 
       <BoxReveal boxColor={"#EA580C"} duration={0.5}>
-        <h2 className="text-gradient-custom text-2xl sm:text-4xl lg:text-5xl font-bold my-3 sm:my-5 pr-5">
+        <h2 className="text-gradient-custom text-2xl sm:text-4xl lg:text-5xl font-bold my-3 sm:mb-5 sm:mt-0 pr-5">
           {data.title1}
           <span className="text-orange-600">{data.title2}</span>
         </h2>

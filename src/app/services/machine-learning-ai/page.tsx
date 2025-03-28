@@ -308,7 +308,7 @@ const MachineLearning = () => {
         </div>
       </section>
 
-      <section className="w-full pt-5 sm:pt-16">
+      <section className="w-full mb-14 sm:mb-0 pt-5 sm:pt-16">
         <div
           className="w-full  sm:text-center px-4 lg:px-0"
           data-aos="fade-right"

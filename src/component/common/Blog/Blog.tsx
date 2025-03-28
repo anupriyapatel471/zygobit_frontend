@@ -21,7 +21,7 @@ const Blog = () => {
             and user experience.
           </p>
         </div>
-        <div className="w-full px-4 lg:px-24 mt-10">
+        <div className="w-full px-4 lg:px-24 mt-5 sm:mt-10">
           <FeaturedBlog />
         </div>
         <div className="w-full flex justify-center mt-7 sm:mt-10">

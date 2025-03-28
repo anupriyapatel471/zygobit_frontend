@@ -21,7 +21,7 @@ const HomeBanner = () => {
         <div className="w-full">
           <div className="sketchfab-embed-wrapper">
             <iframe
-              className="w-full h-[715px] sm:h-[775px] lg:h-[900px]"
+              className="w-full h-[650px] sm:h-[775px] lg:h-[900px]"
               frameBorder="0"
               allowFullScreen
               // mozAllowFullScreen="true"

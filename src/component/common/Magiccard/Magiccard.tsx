@@ -13,7 +13,7 @@ export function MagicCardDemo() {
         data-aos="fade-right"
         className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg"
       >
-        <div className="flex flex-wrap sm:flex-nowrap items-center justify-between">
+        <div className="flex flex-wrap sm:flex-nowrap gap-y-3 items-center justify-between">
           <h3 className="w-full order-2 sm:order-none sm:w-[calc(100%-65px)] 2xl:w-[calc(100%-125px)] text-xl lg:text-xl 2xl:text-2xl font-semibold tracking-tighter">
             Custom Solution Architects
           </h3>
@@ -33,7 +33,7 @@ export function MagicCardDemo() {
         </p>
       </MagicCard>
       <MagicCard className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg">
-        <div className="flex flex-wrap sm:flex-nowrap items-center justify-between">
+        <div className="flex flex-wrap sm:flex-nowrap gap-y-3 items-center justify-between">
           <h3 className="w-full order-2 sm:order-none sm:w-[calc(100%-65px)] xl:w-[calc(100%-125px)] text-xl lg:text-xl 2xl:text-2xl font-semibold tracking-tighter">
             Application Innovators
           </h3>
@@ -56,7 +56,7 @@ export function MagicCardDemo() {
         data-aos="fade-left"
         className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg"
       >
-        <div className="flex flex-wrap sm:flex-nowrap items-center justify-between">
+        <div className="flex flex-wrap sm:flex-nowrap gap-y-3 items-center justify-between">
           <h3 className="w-full order-2 sm:order-none sm:w-[calc(100%-65px)] 2xl:w-[calc(100%-125px)] text-xl lg:text-xl 2xl:text-2xl font-semibold tracking-tighter">
             Performance Optimization Experts
           </h3>

@@ -29,15 +29,15 @@ const BlogSection = () => {
         <section className="w-full bg-black px-4 xl:px-24 py-8 mt-16">
           <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-6 sm:gap-4 xl:gap-12">
             {featuredBlog && (
-              <div className="w-auto cursor-pointer relative rounded-2xl overflow-hidden">
+              <div className="w-full sm:w-auto h-[400px] sm:h-auto cursor-pointer relative rounded-2xl overflow-hidden">
                 <div className="size-full absolute top-0 left-0 bg-black/50"></div>
                 <Image
-                  className=" object-cover"
+                  className=" object-cover  w-auto"
                   src={featuredBlog.image}
                   alt="BlogImg"
                   fill
                 />
-                <div className="w-full absolute bottom-5 left-0 px-4 xl:px-14">
+                <div className="w-full absolute bottom-5 left-0 px-4 xl:px-4">
                   <span className="block w-fit py-1 px-2 rounded-sm bg-gradient-to-b from-orange-600 to-orange-800 text-white font-medium text-[10px]">
                     {featuredBlog.category}
                   </span>
