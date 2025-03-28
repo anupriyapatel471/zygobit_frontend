@@ -62,8 +62,8 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 const ImageComponent = ({ card }: { card: Card }) => {
   return (
     <>
-      <div className="p-6 w-full h-full flex items-end">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl relative z-10">
+      <div className="p-4 sm:p-6 w-full h-full flex items-end">
+        <h2 className="text-xl sm:text-3xl lg:text-4xl relative z-10">
           {card.title}
         </h2>
       </div>

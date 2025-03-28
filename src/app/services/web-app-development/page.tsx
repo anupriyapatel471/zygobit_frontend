@@ -129,7 +129,7 @@ const WebAppDevelopment = () => {
       </section> */}
 
       <section className="w-full relative px-4 lg:px-24 py-12 lg:py-20">
-        <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap items-center gap-5 sm:gap-8">
+        <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap  gap-5 sm:gap-8">
           <div className="w-full lg:w-1/2">
             <Image
               className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
@@ -170,7 +170,7 @@ const WebAppDevelopment = () => {
         <div className="w-full mx-auto max-w-5xl my-10 sm:my-12">
           <CardSpotlights />
         </div>
-        <div className="w-full flex justify-center mt-14">
+        <div className="w-full flex justify-center mt-10 sm:mt-14">
           <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
             Develop a Custom Web App Today{" "}
             <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
@@ -190,7 +190,7 @@ const WebAppDevelopment = () => {
             scalability, and profitability.
           </p>
         </div>
-        <div className="w-full px-4 lg:px-32">
+        <div className="w-full mt-4 sm:mt-0 px-4 lg:px-32">
           <CustomWebCards />
         </div>
       </section>

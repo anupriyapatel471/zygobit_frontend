@@ -76,7 +76,7 @@ export function ParticlesCards() {
             <div className="z-10 whitespace-pre-wrap sm:text-center w-full">
               <span>
                 <Image
-                  className="sm:mx-auto"
+                  className="w-12 relative sm:static -left-[15px] sm:w-auto sm:mx-auto"
                   src={card.imgSrc}
                   alt=""
                   width={100}

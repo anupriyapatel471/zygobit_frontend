@@ -162,7 +162,7 @@ const Ecommerce = () => {
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
       <WeDeliver />
-      <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pt-16 pb-[8rem] overflow-hidden">
+      <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pt-12 sm:pt-16 pb-[5rem] sm:pb-[8rem] overflow-hidden">
         <div className="w-full px-4 lg:px-0 sm:text-center">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl  font-bold">
             Drive Success with AI Ecommerce Solutions
@@ -236,7 +236,7 @@ const Ecommerce = () => {
         </div>
       </section>
 
-      <section className="w-full sm:pt-10 pb-12 lg:pb-16 lg:pt-16">
+      <section className="w-full pt-12 sm:pt-10 pb-12 lg:pb-16 lg:pt-16">
         <div className="w-full px-4 lg:px-20 sm:text-center mb-8 sm:mb-12 lg:mb-12">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradiant-custom">
             How Zygobit Drives E-Commerce Success

@@ -267,7 +267,7 @@ const MobileAppDevelopment = () => {
 
       {/* <Cta Aurora={"Aurora"} vortex={""} content={""} /> */}
 
-      <section className="w-full sm:pt-10 pb-32 lg:pb-40 bg-black">
+      <section className="w-full pt-10 sm:pt-10 pb-14 sm:pb-32 lg:pb-40 bg-black">
         <div className="w-full px-4 lg:px-20 sm:text-center mb-8 sm:mb-12 lg:mb-12">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradiant-custom">
             Why Zygobit for Mobile Apps ?
