@@ -71,7 +71,7 @@ const CaseStudy = () => {
                     data-aos="fade-right"
                     className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg"
                   >
-                    <div className="flex flex-wrap sm:flex-nowrap items-center justify-between">
+                    <div className="w-full block pb-4 border-b-2 border-[#EA580C]">
                       <h3 className="w-full order-2 sm:order-none sm:w-[calc(100%-65px)] 2xl:w-[calc(100%-125px)] text-xl lg:text-xl 2xl:text-2xl font-semibold tracking-tighter">
                         Client Location
                       </h3>
@@ -84,7 +84,7 @@ const CaseStudy = () => {
                     data-aos="fade-right"
                     className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg"
                   >
-                    <div className="flex flex-wrap sm:flex-nowrap items-center justify-between">
+                    <div className="w-full block pb-4 border-b-2 border-[#EA580C]">
                       <h3 className="w-full order-2 sm:order-none sm:w-[calc(100%-65px)] 2xl:w-[calc(100%-125px)] text-xl lg:text-xl 2xl:text-2xl font-semibold tracking-tighter">
                         Development Time
                       </h3>
@@ -97,7 +97,7 @@ const CaseStudy = () => {
                     data-aos="fade-right"
                     className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg"
                   >
-                    <div className="flex flex-wrap sm:flex-nowrap items-center justify-between">
+                    <div className="w-full block pb-4 border-b-2 border-[#EA580C]">
                       <h3 className="w-full order-2 sm:order-none sm:w-[calc(100%-65px)] 2xl:w-[calc(100%-125px)] text-xl lg:text-xl 2xl:text-2xl font-semibold tracking-tighter">
                         Target Users
                       </h3>
