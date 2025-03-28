@@ -11,7 +11,7 @@ import { useParams } from "next/navigation";
 import dynamic from "next/dynamic";
 import MagicCard from "@/components/ui/magic-card";
 import Loader from "@/component/common/Loader/Loader";
-
+//
 const CaseStudy = () => {
   const { id } = useParams();
   const projectId = Array.isArray(id) ? id[0] : id;
