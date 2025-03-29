@@ -8,8 +8,8 @@ import { useBlog } from "@/hooks/dynamoDb/useBlog";
 import Loader from "@/component/common/Loader/Loader";
 
 export function TracingBeams() {
-  const { Id } = useParams();
-  const filter = Id ? { id: { eq: Id } } : {};
+  const { id } = useParams();
+  const filter = id ? { id: { eq: id } } : {};
   const { blogs, loading } = useBlog(filter);
   return loading ? (
     <Loader />
@@ -50,6 +50,19 @@ export function TracingBeams() {
                   {item.description}
                 </div>
                 <p className="text-sm sm:text-lg lg:text-xl">{item.title}</p>
+                {Array.isArray(item.projectInfo) &&
+                  item.projectInfo.length > 0 && (
+                    <div className="mt-6">
+                      {item.projectInfo.map((project, projIndex) => (
+                        <div key={`project-${projIndex}`} className="mb-4">
+                          <h3 className="text-lg font-semibold">
+                            {project.SubTitle}
+                          </h3>
+                          <p className="text-sm">{project.SubDescription}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
               </div>
             ))}
           </div>

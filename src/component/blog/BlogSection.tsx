@@ -17,7 +17,6 @@ const BlogSection = () => {
       new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
   );
 
-  // Select the featured blog and the next three
   const featuredBlog = sortedBlogs[0];
   const otherBlogs = sortedBlogs.slice(1, 4);
 

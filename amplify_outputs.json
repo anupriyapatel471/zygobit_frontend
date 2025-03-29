@@ -213,6 +213,16 @@
               "type": "AWSDateTime",
               "isRequired": false,
               "attributes": []
+            },
+            "projectInfo": {
+              "name": "projectInfo",
+              "isArray": true,
+              "type": {
+                "nonModel": "ProjectRecords"
+              },
+              "isRequired": false,
+              "attributes": [],
+              "isArrayNullable": true
             }
           },
           "syncable": true,
@@ -421,7 +431,27 @@
         }
       },
       "enums": {},
-      "nonModels": {},
+      "nonModels": {
+        "ProjectRecords": {
+          "name": "ProjectRecords",
+          "fields": {
+            "SubTitle": {
+              "name": "SubTitle",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "SubDescription": {
+              "name": "SubDescription",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            }
+          }
+        }
+      },
       "queries": {
         "sendEmailContactForm": {
           "name": "sendEmailContactForm",
