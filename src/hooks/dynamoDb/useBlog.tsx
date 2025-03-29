@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react-hooks/exhaustive-deps */
+//
 "use client";
 import { useState, useEffect, ReactNode } from "react";
 import { generateClient } from "aws-amplify/data";
