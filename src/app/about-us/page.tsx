@@ -43,7 +43,7 @@ const About = () => {
   const heroHeading = "Innovatinng the Digital Future";
   const heroParagraph =
     "We are a tech-driven company passionate about building cutting-edge mobile and web solutions, helping businesses thrive in a digital-first world.";
-
+  //
   const SkeletonOne = () => {
     return (
       <div>
