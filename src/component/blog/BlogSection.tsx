@@ -44,7 +44,7 @@ const BlogSection = () => {
                     {featuredBlog.title}
                   </h3>
                   <p className="text-sm sm:text-base my-3 sm:my-6">
-                    {truncateText(featuredBlog.description)}
+                    {truncateText(featuredBlog.description, 100)}
                   </p>
                   <span className="flex items-center gap-2 text-xs">
                     <Image
@@ -81,7 +81,7 @@ const BlogSection = () => {
                       {post.title}
                     </h3>
                     <p className="text-sm sm:text-base my-2">
-                      {truncateText(post.description)}
+                      {truncateText(post.description, 100)}
                     </p>
                     <span className="flex items-center gap-2 text-xs">
                       <Image

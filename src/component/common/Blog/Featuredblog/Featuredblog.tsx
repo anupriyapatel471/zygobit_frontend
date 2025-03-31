@@ -10,7 +10,7 @@ export default function FeaturedBlog() {
         <BentoGridItem
           key={i}
           title={item.title}
-          description={truncateText(item.description)}
+          description={truncateText(item.description, 100)}
           image={item.image}
           category={item.category}
         />

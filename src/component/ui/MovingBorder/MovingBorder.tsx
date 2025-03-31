@@ -63,9 +63,11 @@ export function MovingBorders({ selectedCategory }: MovingBordersProps) {
                     </span>
                   </div>
                   <h3 className="sm:font-bold text-base mt-2 sm:mt-3 mb-2 sm:mb-4">
-                    {card.title}
+                    {truncateText(card.title, 70)}
                   </h3>
-                  <p className="text-sm">{truncateText(card.description)}</p>
+                  <p className="text-sm">
+                    {truncateText(card.description, 100)}
+                  </p>
                 </div>
               </Button>
             </Link>

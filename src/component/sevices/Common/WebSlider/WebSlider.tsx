@@ -15,7 +15,7 @@ interface EngagementModel {
   title: string;
   description: string;
   points: string[];
-  image: string;
+  image?: string;
 }
 
 export function WebSlider({

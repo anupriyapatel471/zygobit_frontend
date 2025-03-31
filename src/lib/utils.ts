@@ -5,8 +5,8 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function truncateText(text: string) {
-  return text.length > 200 ? text.slice(0, 200) + "..." : text;
+export function truncateText(text: string,len: number) {
+  return text.length > len ? text.slice(0, len) + "..." : text;
 }
 
 export const validateEmail = (email: string) => {

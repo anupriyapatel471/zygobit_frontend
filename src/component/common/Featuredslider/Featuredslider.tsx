@@ -53,7 +53,7 @@ export default function FeaturedSlider() {
                           </h3>
                           <p className="text-sm sm:text-base sm:font-medium mt-3 sm:pr-5">
                             {project.description &&
-                              truncateText(project.description)}
+                              truncateText(project.description, 100)}
                           </p>
                           <div className="w-64 my-4 grid grid-cols-2 gap-x-14 gap-y-4">
                             {project.androidDownloads && (
