@@ -125,8 +125,7 @@ const Ecommerce = () => {
       content: <SkeletonOne />,
       className: "md:col-span-2 cursor-pointer",
       title: "Proven Expertise",
-      thumbnail:
-        "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      thumbnail: "/images/Proven_expertise.png",
     },
     {
       id: 2,
@@ -134,8 +133,7 @@ const Ecommerce = () => {
       className: "col-span-1 cursor-pointer",
       title: "Scalable Solutions",
 
-      thumbnail:
-        "https://images.unsplash.com/photo-1464457312035-3d7d0e0c058e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      thumbnail: "/images/Scalable_solution.png",
     },
     {
       id: 3,
@@ -143,16 +141,14 @@ const Ecommerce = () => {
       className: "col-span-1 cursor-pointer",
       title: "User-Centric Design",
 
-      thumbnail:
-        "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      thumbnail: "/images/User_centric.png",
     },
     {
       id: 4,
       content: <SkeletonFour />,
       className: "md:col-span-2 cursor-pointer",
       title: "Seamless Interactions",
-      thumbnail:
-        "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      thumbnail: "/images/seamless_interaction.jpg",
     },
   ];
 

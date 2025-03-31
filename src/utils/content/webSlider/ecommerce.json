@@ -6,7 +6,8 @@
       "Best for projects with fixed features",
       "Clear timeline and cost upfront",
       "Minimal risk of budget overruns"
-    ]
+    ],
+    "image": "/images/time_material.jpg"
   },
   {
     "title": "Dedicated Team Model",
@@ -15,7 +16,8 @@
       "Full-time skilled developers for your project",
       "Seamless integration with your in-house team",
       "Scalable and cost-effective"
-    ]
+    ],
+    "image": "/images/dedicated_team.jpg"
   },
   {
     "title": "Fixed Cost Model",
@@ -24,7 +26,8 @@
       "Predictable budget with no hidden costs",
       "Defined scope, timeline, and outcomes",
       "Best suited for startups and SMEs"
-    ]
+    ],
+    "image": "/images/fixed_cost_model.jpg"
   },
   {
     "title": "Hybrid Model",
@@ -33,6 +36,7 @@
       "Combines time and material with fixed cost elements",
       "Adapts to evolving project needs",
       "Cost-efficient and scalable"
-    ]
+    ],
+    "image": "/images/hybrid_model.jpg"
   }
 ]

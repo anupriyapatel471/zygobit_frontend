@@ -24,7 +24,7 @@ export default function MobiledevSlider() {
                 <CardContent className="w-full flex  items-center justify-center p-0">
                   <div className="w-full bg-[#D9D9D90D] p-2 sm:py-5 lg:py-10 sm:px-5 lg:px-14 flex flex-wrap sm:flex-nowrap items-center rounded-2xl overflow-hidden">
                     <div className="w-full sm:w-2/5">
-                      <MobileAppCards/>
+                      <MobileAppCards />
                     </div>
                     <div className="w-full sm:w-3/5 p-2 sm:p-0 sm:pl-9">
                       <h3 className="font-semibold text-2xl sm:text-4xl text-white tracking-tighter">
@@ -40,21 +40,21 @@ export default function MobiledevSlider() {
                           {/* <img className="w-full rounded-2xl h-[250px] sm:h-[300px] lg:h-[350px]" src="/images/laptop.png" alt="" /> */}
                         </div>
                         <Image
-                              className="rounded-2xl"
-                              src={laptop}
-                              alt="Laptop Image"
-                              // height={}
-                              // width={}
-                               />
+                          className="rounded-2xl"
+                          src={laptop}
+                          alt="Laptop Image"
+                          // height={}
+                          // width={}
+                        />
                         <div className="w-full">
                           {/* <img className="w-full rounded-2xl h-[250px] sm:h-[300px] lg:h-[350px]" src="/images/laptop_two.png" alt="" /> */}
                           <Image
-                              className="rounded-2xl"
-                              src={laptopTwo}
-                              alt="Laptop Two Image"
-                              // height={}
-                              // width={}
-                            />
+                            className="rounded-2xl"
+                            src={laptopTwo}
+                            alt="Laptop Two Image"
+                            // height={}
+                            // width={}
+                          />
                         </div>
                       </div>
                     </div>

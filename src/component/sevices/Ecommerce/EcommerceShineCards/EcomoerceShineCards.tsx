@@ -11,7 +11,7 @@ export function EcommerceShineCards() {
           className="relative flex  w-full flex-col items-center justify-center overflow-hidden rounded-lg"
           color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
         >
-          <div className="cursor-pointer relative rounded-lg overflow-hidden py-4 sm:py-6 px-0 sm:px-4 lg:px-8 bg-cover bg-center bg-no-repeat bg-[url(/images/new_moon.png)] ">
+          <div className="cursor-pointer relative rounded-lg overflow-hidden py-4 sm:py-6 px-0 sm:px-4 lg:px-8 bg-cover bg-center bg-no-repeat bg-[url(/images/boost_img.jpg)] ">
             <span>
               <Image
                 src={innovation}

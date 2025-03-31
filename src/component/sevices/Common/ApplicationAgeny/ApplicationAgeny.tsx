@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ProcessImg from "../../../../../public/images/process.png";
 
 interface ApplicationAgencyProps {
   data: {
@@ -50,7 +49,7 @@ const ApplicationAgeny = ({ data }: ApplicationAgencyProps) => {
               >
                 <div className="w-full h-[22rem] sm:h-[25rem] lg:h-[32rem] object-cover rounded-2xl overflow-hidden relative ">
                   <Image
-                    src={ProcessImg}
+                    src={card.image}
                     className="object-cover rounded-2xl"
                     fill
                     alt="process img"
