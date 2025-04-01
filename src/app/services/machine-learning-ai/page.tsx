@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
 import AOSInitializer from "@/component/common/AOSInitializer";
@@ -49,8 +50,6 @@ const GridBoxes = dynamic(
 import { Metadata } from "next";
 import faqData from "../../../utils/content/faq/faqMachineLearning.json";
 import engagementModelsMlAi from "../../../utils/content/webSlider/mlAi.json";
-import { Suspense } from "react";
-import Loader from "@/component/common/Loader/Loader";
 
 export const metadata: Metadata = {
   title: "Machine Learning AI",
@@ -253,14 +252,12 @@ const MachineLearning = () => {
 
   return (
     <>
-      <AOSInitializer />
-      <Suspense fallback={<Loader />}>
-        <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
-      </Suspense>
-      <Suspense fallback={<Loader />}>
-        <WeDeliver />
-      </Suspense>
+      {/* <AOSInitializer /> */}
+      <div>machine learnning page </div>
 
+      {/* <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
+      <WeDeliver /> */}
+      {/* 
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pb-14 lg:pb-24">
         <div className="w-full px-4 lg:px-0 mt-10 lg:mt-16 mb-8 sm:mb-12 lg:mb-20 sm:text-center inline-block">
           <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl">
@@ -274,22 +271,17 @@ const MachineLearning = () => {
           </p>
         </div>
         <div className="w-full max-w-6xl mx-auto">
-          <Suspense fallback={<Loader />}>
-            <ShineBorderCards />
-          </Suspense>
+          <ShineBorderCards />
         </div>
         <div className="w-full flex justify-center mt-12">
           <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
             Get Started!{" "}
-            <Suspense fallback={<Loader />}>
-              <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-            </Suspense>
+            <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
           </button>
         </div>
       </section>
-      <Suspense fallback={<Loader />}>
-        <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
-      </Suspense>
+
+      <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} /> */}
 
       {/* <section
         data-aos="fade-up"
@@ -299,7 +291,7 @@ const MachineLearning = () => {
           <WebDevProcess data={webDevData} />
         </div>
       </section> */}
-
+      {/* 
       <section className="w-full px-4 lg:px-11 pb-10 sm:pb-0 pt-10  lg:py-14 overflow-hidden">
         <div className="w-full  sm:text-center" data-aos="fade-right">
           <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
@@ -310,9 +302,7 @@ const MachineLearning = () => {
           </p>
         </div>
         <div data-aos="fade-up">
-          <Suspense fallback={<Loader />}>
-            <FeaturedSlider />
-          </Suspense>
+          <FeaturedSlider />
         </div>
       </section>
 
@@ -331,20 +321,16 @@ const MachineLearning = () => {
           </p>
         </div>
         <div className="w-full max-w-5xl px-4 lg:px-0 mx-auto mt-8 sm:mt-12 lg:mt-16">
-          <Suspense fallback={<Loader />}>
-            <AwareHoverCards />
-          </Suspense>
+          <AwareHoverCards />
         </div>
       </section>
-      <Suspense fallback={<Loader />}>
-        <ClientSays
-          clientHeading={clientSaysHeading}
-          clientSaysDetails={clientSaysDetails}
-        />
-      </Suspense>
-      <Suspense fallback={<Loader />}>
-        <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
-      </Suspense>
+
+      <ClientSays
+        clientHeading={clientSaysHeading}
+        clientSaysDetails={clientSaysDetails}
+      />
+
+      <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
 
       <section className="w-full pb-12 overflow-hidden">
         <div className="w-full px-4 lg:px-0 sm:text-center">
@@ -357,40 +343,31 @@ const MachineLearning = () => {
           </p>
         </div>
         <div className="w-full mt-7 sm:mt-12 lg:mt-16">
-          <Suspense fallback={<Loader />}>
-            <WebSlider engagementModels={engagementModelsMlAi} />
-          </Suspense>
+          <WebSlider engagementModels={engagementModelsMlAi} />
         </div>
         <div className="w-full px-4 lg:px-32 mt-10 sm:mt-0 lg:mt-10 flex  justify-center sm:justify-normal">
           <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
             Hire Web Application Developers{" "}
-            <Suspense fallback={<Loader />}>
-              <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-            </Suspense>
+            <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
           </button>
         </div>
       </section>
-      <Suspense fallback={<Loader />}>
-        <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
-      </Suspense>
-      <Suspense fallback={<Loader />}>
-        <TechnologyStack />
-      </Suspense>
-      <Suspense fallback={<Loader />}>
-        <GridBoxes
-          GridBoxesDetail={GridBoxesDetail}
-          GridBoxesHeading={GridBoxesHeading}
-          cards={cards}
-        />
-      </Suspense>
-      <Suspense fallback={<Loader />}>
-        <Blog />
-      </Suspense>
+
+      <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
+
+      <TechnologyStack />
+
+      <GridBoxes
+        GridBoxesDetail={GridBoxesDetail}
+        GridBoxesHeading={GridBoxesHeading}
+        cards={cards}
+      />
+
+      <Blog />
 
       <FaqSection faqData={faqData} />
-      <Suspense fallback={<Loader />}>
-        <ContactForm />
-      </Suspense>
+
+      <ContactForm /> */}
     </>
   );
 };
