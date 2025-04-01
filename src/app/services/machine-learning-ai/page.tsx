@@ -49,6 +49,8 @@ const GridBoxes = dynamic(
 import { Metadata } from "next";
 import faqData from "../../../utils/content/faq/faqMachineLearning.json";
 import engagementModelsMlAi from "../../../utils/content/webSlider/mlAi.json";
+import { Suspense } from "react";
+import Loader from "@/component/common/Loader/Loader";
 
 export const metadata: Metadata = {
   title: "Machine Learning AI",
@@ -252,9 +254,12 @@ const MachineLearning = () => {
   return (
     <>
       <AOSInitializer />
-
-      <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
-      <WeDeliver />
+      <Suspense fallback={<Loader />}>
+        <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
+      </Suspense>
+      <Suspense fallback={<Loader />}>
+        <WeDeliver />
+      </Suspense>
 
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pb-14 lg:pb-24">
         <div className="w-full px-4 lg:px-0 mt-10 lg:mt-16 mb-8 sm:mb-12 lg:mb-20 sm:text-center inline-block">
@@ -269,17 +274,22 @@ const MachineLearning = () => {
           </p>
         </div>
         <div className="w-full max-w-6xl mx-auto">
-          <ShineBorderCards />
+          <Suspense fallback={<Loader />}>
+            <ShineBorderCards />
+          </Suspense>
         </div>
         <div className="w-full flex justify-center mt-12">
           <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
             Get Started!{" "}
-            <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+            <Suspense fallback={<Loader />}>
+              <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+            </Suspense>
           </button>
         </div>
       </section>
-
-      <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
+      <Suspense fallback={<Loader />}>
+        <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
+      </Suspense>
 
       {/* <section
         data-aos="fade-up"
@@ -300,7 +310,9 @@ const MachineLearning = () => {
           </p>
         </div>
         <div data-aos="fade-up">
-          <FeaturedSlider />
+          <Suspense fallback={<Loader />}>
+            <FeaturedSlider />
+          </Suspense>
         </div>
       </section>
 
@@ -319,16 +331,20 @@ const MachineLearning = () => {
           </p>
         </div>
         <div className="w-full max-w-5xl px-4 lg:px-0 mx-auto mt-8 sm:mt-12 lg:mt-16">
-          <AwareHoverCards />
+          <Suspense fallback={<Loader />}>
+            <AwareHoverCards />
+          </Suspense>
         </div>
       </section>
-
-      <ClientSays
-        clientHeading={clientSaysHeading}
-        clientSaysDetails={clientSaysDetails}
-      />
-
-      <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
+      <Suspense fallback={<Loader />}>
+        <ClientSays
+          clientHeading={clientSaysHeading}
+          clientSaysDetails={clientSaysDetails}
+        />
+      </Suspense>
+      <Suspense fallback={<Loader />}>
+        <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
+      </Suspense>
 
       <section className="w-full pb-12 overflow-hidden">
         <div className="w-full px-4 lg:px-0 sm:text-center">
@@ -341,31 +357,40 @@ const MachineLearning = () => {
           </p>
         </div>
         <div className="w-full mt-7 sm:mt-12 lg:mt-16">
-          <WebSlider engagementModels={engagementModelsMlAi} />
+          <Suspense fallback={<Loader />}>
+            <WebSlider engagementModels={engagementModelsMlAi} />
+          </Suspense>
         </div>
         <div className="w-full px-4 lg:px-32 mt-10 sm:mt-0 lg:mt-10 flex  justify-center sm:justify-normal">
           <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
             Hire Web Application Developers{" "}
-            <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+            <Suspense fallback={<Loader />}>
+              <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+            </Suspense>
           </button>
         </div>
       </section>
-
-      <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
-
-      <TechnologyStack />
-
-      <GridBoxes
-        GridBoxesDetail={GridBoxesDetail}
-        GridBoxesHeading={GridBoxesHeading}
-        cards={cards}
-      />
-
-      <Blog />
+      <Suspense fallback={<Loader />}>
+        <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
+      </Suspense>
+      <Suspense fallback={<Loader />}>
+        <TechnologyStack />
+      </Suspense>
+      <Suspense fallback={<Loader />}>
+        <GridBoxes
+          GridBoxesDetail={GridBoxesDetail}
+          GridBoxesHeading={GridBoxesHeading}
+          cards={cards}
+        />
+      </Suspense>
+      <Suspense fallback={<Loader />}>
+        <Blog />
+      </Suspense>
 
       <FaqSection faqData={faqData} />
-
-      <ContactForm />
+      <Suspense fallback={<Loader />}>
+        <ContactForm />
+      </Suspense>
     </>
   );
 };
