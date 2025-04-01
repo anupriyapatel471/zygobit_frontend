@@ -6,7 +6,8 @@
       "AI-assisted coding for faster development cycles",
       "Predictive analytics for optimized decision-making",
       "Automated testing and bug detection"
-    ]
+    ],
+    "image": "/images/development_model.jpg"
   },
   {
     "title": "Machine Learning Integration Model",
@@ -15,7 +16,8 @@
       "Custom ML algorithms for real-time data processing",
       "Personalized user experience with AI-driven recommendations",
       "Continuous learning models for adaptive solutions"
-    ]
+    ],
+    "image": "/images/integration_model.jpg"
   },
   {
     "title": "AI-Powered Data Analytics Model",
@@ -24,7 +26,8 @@
       "Advanced AI models for deep data analysis",
       "Real-time trend detection and forecasting",
       "Secure and scalable data pipelines"
-    ]
+    ],
+    "image": "/images/analytics_model.jpg"
   },
   {
     "title": "AI & ML-Driven Automation Model",
@@ -33,6 +36,7 @@
       "Intelligent process automation for increased productivity",
       "Smart chatbot and virtual assistant integration",
       "AI-based risk assessment and fraud detection"
-    ]
+    ],
+    "image": "/images/automation_model.jpg"
   }
 ]
