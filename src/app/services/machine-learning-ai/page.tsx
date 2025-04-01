@@ -1,51 +1,66 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
 import AOSInitializer from "@/component/common/AOSInitializer";
 
-const WeDeliver = dynamic(
-  () => import("@/component/common/WeDeliver/WeDeliver")
-);
-const Blog = dynamic(() => import("@/component/common/Blog/Blog"));
-const ContactForm = dynamic(
-  () => import("@/component/common/ContactForm/ContactForm")
-);
-const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
-const FaqSection = dynamic(
-  () => import("@/component/sevices/Common/FaqSection/FaqSection")
-);
-const FeaturedSlider = dynamic(
-  () => import("@/component/common/Featuredslider/Featuredslider")
-);
-const HeroBanner = dynamic(
-  () => import("@/component/common/HeroBanner/HeroBanner")
-);
 // const WebDevProcess = dynamic(
 //   () => import("@/component/sevices/Common/WebDevProcess/WebDevProcess")
 // );
-const ShineBorderCards = dynamic(() =>
-  import(
-    "@/component/sevices/MachineLearning/ShineBorderCards/ShineBorderCards"
-  ).then((mod) => mod.ShineBorderCards)
+const WeDeliver = dynamic(
+  () => import("@/component/common/WeDeliver/WeDeliver"),
+  { ssr: false }
 );
-const AwareHoverCards = dynamic(() =>
-  import(
-    "@/component/sevices/MachineLearning/AwareHoverCards/AwareHoverCards"
-  ).then((mod) => mod.AwareHoverCards)
+const Blog = dynamic(() => import("@/component/common/Blog/Blog"), {
+  ssr: false,
+});
+const ContactForm = dynamic(
+  () => import("@/component/common/ContactForm/ContactForm"),
+  { ssr: false }
+);
+const Cta = dynamic(() => import("@/component/common/Cta/Cta"), { ssr: false });
+const FaqSection = dynamic(
+  () => import("@/component/sevices/Common/FaqSection/FaqSection"),
+  { ssr: false }
+);
+const FeaturedSlider = dynamic(
+  () => import("@/component/common/Featuredslider/Featuredslider"),
+  { ssr: false }
+);
+const HeroBanner = dynamic(
+  () => import("@/component/common/HeroBanner/HeroBanner"),
+  { ssr: false }
+);
+const ShineBorderCards = dynamic(
+  () =>
+    import(
+      "@/component/sevices/MachineLearning/ShineBorderCards/ShineBorderCards"
+    ).then((mod) => mod.ShineBorderCards),
+  { ssr: false }
+);
+const AwareHoverCards = dynamic(
+  () =>
+    import(
+      "@/component/sevices/MachineLearning/AwareHoverCards/AwareHoverCards"
+    ).then((mod) => mod.AwareHoverCards),
+  { ssr: false }
 );
 const TechnologyStack = dynamic(
-  () => import("@/component/common/TechnologyStack/TechnologyStack")
+  () => import("@/component/common/TechnologyStack/TechnologyStack"),
+  { ssr: false }
 );
 const ClientSays = dynamic(
-  () => import("@/component/common/ClientSays/ClientSays")
+  () => import("@/component/common/ClientSays/ClientSays"),
+  { ssr: false }
 );
-const WebSlider = dynamic(() =>
-  import("@/component/sevices/Common/WebSlider/WebSlider").then(
-    (mod) => mod.WebSlider
-  )
+const WebSlider = dynamic(
+  () =>
+    import("@/component/sevices/Common/WebSlider/WebSlider").then(
+      (mod) => mod.WebSlider
+    ),
+  { ssr: false }
 );
 const GridBoxes = dynamic(
-  () => import("@/component/common/GridBoxes/GridBoxes")
+  () => import("@/component/common/GridBoxes/GridBoxes"),
+  { ssr: false }
 );
 import { Metadata } from "next";
 import faqData from "../../../utils/content/faq/faqMachineLearning.json";
@@ -252,12 +267,11 @@ const MachineLearning = () => {
 
   return (
     <>
-      {/* <AOSInitializer /> */}
-      <div>machine learnning page </div>
+      <AOSInitializer />
 
-      {/* <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
-      <WeDeliver /> */}
-      {/* 
+      <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
+      <WeDeliver />
+
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pb-14 lg:pb-24">
         <div className="w-full px-4 lg:px-0 mt-10 lg:mt-16 mb-8 sm:mb-12 lg:mb-20 sm:text-center inline-block">
           <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl">
@@ -281,7 +295,7 @@ const MachineLearning = () => {
         </div>
       </section>
 
-      <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} /> */}
+      <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
 
       {/* <section
         data-aos="fade-up"
@@ -291,7 +305,7 @@ const MachineLearning = () => {
           <WebDevProcess data={webDevData} />
         </div>
       </section> */}
-      {/* 
+
       <section className="w-full px-4 lg:px-11 pb-10 sm:pb-0 pt-10  lg:py-14 overflow-hidden">
         <div className="w-full  sm:text-center" data-aos="fade-right">
           <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
@@ -367,7 +381,7 @@ const MachineLearning = () => {
 
       <FaqSection faqData={faqData} />
 
-      <ContactForm /> */}
+      <ContactForm />
     </>
   );
 };
