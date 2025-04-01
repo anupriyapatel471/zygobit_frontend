@@ -2,65 +2,49 @@ import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
 import AOSInitializer from "@/component/common/AOSInitializer";
 
+const WeDeliver = dynamic(
+  () => import("@/component/common/WeDeliver/WeDeliver")
+);
+const Blog = dynamic(() => import("@/component/common/Blog/Blog"));
+const ContactForm = dynamic(
+  () => import("@/component/common/ContactForm/ContactForm")
+);
+const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
+const FaqSection = dynamic(
+  () => import("@/component/sevices/Common/FaqSection/FaqSection")
+);
+const FeaturedSlider = dynamic(
+  () => import("@/component/common/Featuredslider/Featuredslider")
+);
+const HeroBanner = dynamic(
+  () => import("@/component/common/HeroBanner/HeroBanner")
+);
 // const WebDevProcess = dynamic(
 //   () => import("@/component/sevices/Common/WebDevProcess/WebDevProcess")
 // );
-const WeDeliver = dynamic(
-  () => import("@/component/common/WeDeliver/WeDeliver"),
-  { ssr: false }
+const ShineBorderCards = dynamic(() =>
+  import(
+    "@/component/sevices/MachineLearning/ShineBorderCards/ShineBorderCards"
+  ).then((mod) => mod.ShineBorderCards)
 );
-const Blog = dynamic(() => import("@/component/common/Blog/Blog"), {
-  ssr: false,
-});
-const ContactForm = dynamic(
-  () => import("@/component/common/ContactForm/ContactForm"),
-  { ssr: false }
-);
-const Cta = dynamic(() => import("@/component/common/Cta/Cta"), { ssr: false });
-const FaqSection = dynamic(
-  () => import("@/component/sevices/Common/FaqSection/FaqSection"),
-  { ssr: false }
-);
-const FeaturedSlider = dynamic(
-  () => import("@/component/common/Featuredslider/Featuredslider"),
-  { ssr: false }
-);
-const HeroBanner = dynamic(
-  () => import("@/component/common/HeroBanner/HeroBanner"),
-  { ssr: false }
-);
-const ShineBorderCards = dynamic(
-  () =>
-    import(
-      "@/component/sevices/MachineLearning/ShineBorderCards/ShineBorderCards"
-    ).then((mod) => mod.ShineBorderCards),
-  { ssr: false }
-);
-const AwareHoverCards = dynamic(
-  () =>
-    import(
-      "@/component/sevices/MachineLearning/AwareHoverCards/AwareHoverCards"
-    ).then((mod) => mod.AwareHoverCards),
-  { ssr: false }
+const AwareHoverCards = dynamic(() =>
+  import(
+    "@/component/sevices/MachineLearning/AwareHoverCards/AwareHoverCards"
+  ).then((mod) => mod.AwareHoverCards)
 );
 const TechnologyStack = dynamic(
-  () => import("@/component/common/TechnologyStack/TechnologyStack"),
-  { ssr: false }
+  () => import("@/component/common/TechnologyStack/TechnologyStack")
 );
 const ClientSays = dynamic(
-  () => import("@/component/common/ClientSays/ClientSays"),
-  { ssr: false }
+  () => import("@/component/common/ClientSays/ClientSays")
 );
-const WebSlider = dynamic(
-  () =>
-    import("@/component/sevices/Common/WebSlider/WebSlider").then(
-      (mod) => mod.WebSlider
-    ),
-  { ssr: false }
+const WebSlider = dynamic(() =>
+  import("@/component/sevices/Common/WebSlider/WebSlider").then(
+    (mod) => mod.WebSlider
+  )
 );
 const GridBoxes = dynamic(
-  () => import("@/component/common/GridBoxes/GridBoxes"),
-  { ssr: false }
+  () => import("@/component/common/GridBoxes/GridBoxes")
 );
 import { Metadata } from "next";
 import faqData from "../../../utils/content/faq/faqMachineLearning.json";
