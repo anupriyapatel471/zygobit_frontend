@@ -1,5 +1,3 @@
-"use client";
-
 import { DirectionAwareHover } from "../../../../components/ui/direction-aware-hover";
 import cardsData from "../../../../utils/content/AwareHoverCards/mlAi.json";
 

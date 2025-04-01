@@ -49,6 +49,8 @@ const GridBoxes = dynamic(
 import { Metadata } from "next";
 import faqData from "../../../utils/content/faq/faqMachineLearning.json";
 import engagementModelsMlAi from "../../../utils/content/webSlider/mlAi.json";
+import { Suspense } from "react";
+import Loader from "@/component/common/Loader/Loader";
 
 export const metadata: Metadata = {
   title: "Machine Learning AI",
@@ -252,33 +254,34 @@ const MachineLearning = () => {
   return (
     <>
       <AOSInitializer />
-
-      <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
-      <WeDeliver />
-
-      <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pb-14 lg:pb-24">
-        <div className="w-full px-4 lg:px-0 mt-10 lg:mt-16 mb-8 sm:mb-12 lg:mb-20 sm:text-center inline-block">
-          <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl">
-            Full-Scale AI & Machine Learning Services.
-          </h2>
-          <p className=" sm:font-medium text-sm sm:text-lg lg:text-xl mt-2 sm:mt-3 lg:mt-5 px-0 lg:px-20">
-            Zygobit is a leading AI-driven software development company,
-            delivering cutting-edge machine learning solutions. Our innovative
-            technology enhances efficiency, automation, and decision-making,
-            providing users with a seamless experience.
-          </p>
-        </div>
-        <div className="w-full max-w-6xl mx-auto">
-          <ShineBorderCards />
-        </div>
-        <div className="w-full flex justify-center mt-12">
-          <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-            Get Started!{" "}
-            <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-          </button>
-        </div>
-      </section>
-
+      <Suspense fallback={<Loader />}>
+        <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
+        <WeDeliver />
+      </Suspense>
+      <Suspense fallback={<Loader />}>
+        <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pb-14 lg:pb-24">
+          <div className="w-full px-4 lg:px-0 mt-10 lg:mt-16 mb-8 sm:mb-12 lg:mb-20 sm:text-center inline-block">
+            <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl">
+              Full-Scale AI & Machine Learning Services.
+            </h2>
+            <p className=" sm:font-medium text-sm sm:text-lg lg:text-xl mt-2 sm:mt-3 lg:mt-5 px-0 lg:px-20">
+              Zygobit is a leading AI-driven software development company,
+              delivering cutting-edge machine learning solutions. Our innovative
+              technology enhances efficiency, automation, and decision-making,
+              providing users with a seamless experience.
+            </p>
+          </div>
+          <div className="w-full max-w-6xl mx-auto">
+            <ShineBorderCards />
+          </div>
+          <div className="w-full flex justify-center mt-12">
+            <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+              Get Started!{" "}
+              <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+            </button>
+          </div>
+        </section>
+      </Suspense>
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
 
       {/* <section
@@ -303,26 +306,26 @@ const MachineLearning = () => {
           <FeaturedSlider />
         </div>
       </section>
-
-      <section className="w-full mb-14 sm:mb-0 pt-5 sm:pt-16">
-        <div
-          className="w-full  sm:text-center px-4 lg:px-0"
-          data-aos="fade-right"
-        >
-          <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
-            Leverage AI & Machine Learning to Stay Ahead.
-          </h2>
-          <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
-            Our experienced developers offer all-inclusive exchange development
-            services with AI and Machine Learning features, enabling secure and
-            instant transactions.
-          </p>
-        </div>
-        <div className="w-full max-w-5xl px-4 lg:px-0 mx-auto mt-8 sm:mt-12 lg:mt-16">
-          <AwareHoverCards />
-        </div>
-      </section>
-
+      <Suspense fallback={<Loader />}>
+        <section className="w-full mb-14 sm:mb-0 pt-5 sm:pt-16">
+          <div
+            className="w-full  sm:text-center px-4 lg:px-0"
+            data-aos="fade-right"
+          >
+            <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
+              Leverage AI & Machine Learning to Stay Ahead.
+            </h2>
+            <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
+              Our experienced developers offer all-inclusive exchange
+              development services with AI and Machine Learning features,
+              enabling secure and instant transactions.
+            </p>
+          </div>
+          <div className="w-full max-w-5xl px-4 lg:px-0 mx-auto mt-8 sm:mt-12 lg:mt-16">
+            <AwareHoverCards />
+          </div>
+        </section>
+      </Suspense>
       <ClientSays
         clientHeading={clientSaysHeading}
         clientSaysDetails={clientSaysDetails}
