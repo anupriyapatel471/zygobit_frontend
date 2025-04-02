@@ -13,9 +13,9 @@ const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
 const FaqSection = dynamic(
   () => import("@/component/sevices/Common/FaqSection/FaqSection")
 );
-// const FeaturedSlider = dynamic(
-//   () => import("@/component/common/Featuredslider/Featuredslider")
-// );
+const FeaturedSlider = dynamic(
+  () => import("@/component/common/Featuredslider/Featuredslider")
+);
 const HeroBanner = dynamic(
   () => import("@/component/common/HeroBanner/HeroBanner")
 );
@@ -293,7 +293,7 @@ const MachineLearning = () => {
         </div>
       </section> */}
 
-      {/* <section className="w-full px-4 lg:px-11 pb-10 sm:pb-0 pt-10  lg:py-14 overflow-hidden">
+      <section className="w-full px-4 lg:px-11 pb-10 sm:pb-0 pt-10  lg:py-14 overflow-hidden">
         <div className="w-full  sm:text-center" data-aos="fade-right">
           <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
             Featured UI UX Design Case Studies
@@ -305,7 +305,7 @@ const MachineLearning = () => {
         <div data-aos="fade-up">
           <FeaturedSlider />
         </div>
-      </section> */}
+      </section>
       <Suspense fallback={<Loader />}>
         <section className="w-full mb-14 sm:mb-0 pt-5 sm:pt-16">
           <div
