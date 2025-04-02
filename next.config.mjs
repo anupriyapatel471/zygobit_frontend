@@ -17,7 +17,9 @@ const nextConfig = {
       "aceternity.com",
       "zygobit-images.s3.ap-south-1.amazonaws.com",
     ],
+    unoptimized: true,
   },
+  output: "export",
 };
 
 export default nextConfig;
