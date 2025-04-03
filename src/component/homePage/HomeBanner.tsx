@@ -14,38 +14,38 @@ const HomeBanner = () => {
   ];
   return (
     <>
-      <section className="w-full relative">
-        {/* bg overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
-        {/* galaxy */}
-        <div className="w-full">
-          <div className="sketchfab-embed-wrapper">
-            <div className="w-full h-[650px] sm:h-[775px] lg:h-[900px]"></div>
-            {/* <iframe
-              className="w-full h-[650px] sm:h-[775px] lg:h-[900px]"
-              frameBorder="0"
-              allowFullScreen
-              // mozAllowFullScreen="true"
-              // webkitAllowFullScreen="true"
-              allow="autoplay; fullscreen; xr-spatial-tracking"
-              // xrSpatialTracking
-              execution-while-out-of-viewport="true"
-              execution-while-not-rendered="true"
-              web-share="true"
-              src="https://sketchfab.com/models/d6521362b37b48e3a82bce4911409303/embed?autostart=1&ui_animations=0&ui_infos=0&ui_stop=0&ui_inspector=0&ui_watermark_link=0&ui_watermark=0&ui_hint=0&ui_ar=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&ui_theme=dark&ui_loader=0"
-            ></iframe> */}
+      <section className="w-full h-[650px] sm:h-[775px] lg:h-[900px] relative">
+        <div className="absolute top-0 left-0 w-full flex justify-between gap-24 z-10 h-full px-16">
+          <div className="w-1 h-full border-r border-[#515151] border-opacity-60 relative">
+            <div className="absolute top-[15%] left-0 w-2 h-2 rounded-full bg-[#515151]"></div>
+          </div>
+          <div className="w-1 h-full border-r border-[#515151] border-opacity-60 relative">
+            <div className="absolute top-[18%] left-0 w-2 h-2 rounded-full bg-[#515151]"></div>
+          </div>
+          <div className="w-1 h-full border-r border-[#515151] border-opacity-60 relative">
+            <div className="absolute top-[40%] left-0 w-2 h-2 rounded-full bg-[#515151]"></div>
+          </div>
+          <div className="w-1 h-full border-r border-[#515151] border-opacity-60 relative">
+            <div className="absolute top-[70%] left-0 w-2 h-2 rounded-full bg-[#515151]"></div>
+          </div>
+          <div className="w-1 h-full border-r border-[#515151] border-opacity-60 relative">
+            <div className="absolute top-[25%] left-0 w-2 h-2 rounded-full bg-[#515151]"></div>
+          </div>
+          <div className="w-1 h-full border-r border-[#515151] border-opacity-60 relative">
+            <div className="absolute top-[80%] left-0 w-2 h-2 rounded-full bg-[#515151]"></div>
           </div>
         </div>
-        <div className="w-full absolute top-20 sm:top-28 left-0 px-4 lg:px-24 py-5 lg:py-14">
+        {/* bg overlay */}
+        <div className="w-full absolute top-20 sm:top-28 left-0 px-4 lg:px-24 py-5 lg:py-14 z-10">
           <div className="w-full flex flex-wrap sm:flex-nowrap justify-between">
             <div className="w-full sm:w-3/4 lg:w-[60%]">
               <div className="w-auto">
-                <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl text-shadow-2xl  text-gradiant-custom">
-                  Exploring the Digital Galaxy: Innovative IT Solutions for Your{" "}
+                <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl text-shadow-2xl  text-gradiant-custom pr-10">
+                  Innovative IT Solutions for Your 
                   <span className="text-themetext"> Business Growth</span>
                 </h1>
                 <button className="mt-7 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                  Let&apos;s talk{" "}
+                  Talk to an expert!
                   <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                 </button>
               </div>
@@ -58,23 +58,21 @@ const HomeBanner = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-6 w-full sm:w-1/4 lg:w-[44%] lg:mt-5 text-right">
-              <div className="w-full sm:w-auto sm:max-w-[157px] ml-auto grid grid-cols-2 sm:grid-cols-1 gap-y-5 sm:gap-y-10">
-                {stats.map((stat, index) => (
-                  <div key={index} className="w-full text-center">
-                    <b className="font-extrabold text-xl sm:text-3xl text-themetext block">
-                      <Count endValue={stat.value} /> +
-                    </b>
-                    <span className="font-medium text-sm sm:text-base">
-                      {stat.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
+            <div className="sm:w-1/4 lg:w-[40%] relative">
+              <img
+                className="relative z-20"
+                src="/images/banner_img.png"
+                alt=""
+              />
+              <img
+                className="absolute top-1/2 -translate-y-1/2 -left-10 z-10"
+                src="/images/dotted_bg.svg"
+                alt=""
+              />
             </div>
           </div>
         </div>
-        <div className="w-full hidden sm:inline px-4 lg:px-24 absolute -bottom-[170px] left-1/2 -translate-x-1/2 rounded-lg">
+        <div className="w-full hidden sm:inline px-4 lg:px-24 absolute -bottom-[170px] left-1/2 -translate-x-1/2 rounded-lg z-10">
           <div className="w-full border border-[#09090B33] overflow-hidden rounded-lg bg-[#fafafa12] px-24  ">
             <div className="w-full  z-[1111]  max-w-sm mx-auto rounded-lg">
               <RippleBg numCircles={10} />

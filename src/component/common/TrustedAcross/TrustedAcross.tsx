@@ -15,27 +15,40 @@ const TrustedAcross = () => {
             </div>
           </div>
         </div>
-        <div className="w-full mt-5 sm:mt-0 flex flex-wrap sm:flex-nowrap items-center justify-between ">
-          <div
-            className="w-full sm:w-auto sm:max-w-3xl 2xl:max-w-4xl pr-4 lg:pr-0"
-            data-aos="fade-up"
-          >
-            <span className="mb-2 block font-semibold text-base">
-              Trusted Across the Galaxy
-            </span>
-            <p className="sm:font-semibold text-base sm:text-xl lg:text-xl 2xl:text-2xl lg:pr-5 tracking-tighter">
-              We&apos;ve partnered with forward-thinking brands across multiple
-              industries, delivering innovative solutions through a diverse
-              range of services.
-            </p>
-          </div>
-          <div
-            data-aos="fade-up"
-            className="border-t sm:border-t-0 sm:border-l  border-white mt-6 sm:mt-0 pt-6 sm:py-12 sm:px-12 lg:px-10 2xl:px-12"
-          >
-            <h3 className="text-lg sm:text-xl lg:text-xl 2xl:text-2xl uppercase sm:text-center font-semibold max-w-80">
-              Breaking Barriers Since Day One
-            </h3>
+        <div className="mt-6 w-full sm:w-full lg:w-full lg:mt-5 text-right">
+          <div className="w-full sm:w-auto  ml-auto grid grid-cols-2 sm:grid-cols-4 gap-y-5 sm:gap-y-10">
+            <div className="w-full text-center">
+              <b className="font-extrabold text-xl sm:text-3xl lg:text-5xl 2xl:text-6xl text-white block">
+                11+
+              </b>
+              <span className="font-medium text-sm sm:text-base">
+                Years of Experience
+              </span>
+            </div>
+            <div className="w-full text-center">
+              <b className="font-extrabold text-xl sm:text-3xl lg:text-5xl 2xl:text-6xl text-white block">
+                25+
+              </b>
+              <span className="font-medium text-sm sm:text-base">
+                Countries Served
+              </span>
+            </div>
+            <div className="w-full text-center">
+              <b className="font-extrabold text-xl sm:text-3xl lg:text-5xl 2xl:text-6xl text-white block">
+                250+
+              </b>
+              <span className="font-medium text-sm sm:text-base">
+                Tech Enthusiast
+              </span>
+            </div>
+            <div className="w-full text-center">
+              <b className="font-extrabold text-xl sm:text-3xl lg:text-5xl 2xl:text-6xl text-white block">
+                1000+
+              </b>
+              <span className="font-medium text-sm sm:text-base">
+                Products Delivered
+              </span>
+            </div>
           </div>
         </div>
       </section>

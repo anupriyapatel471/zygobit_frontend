@@ -68,7 +68,7 @@ const ReviewCard = ({
           alt="Partner Logo"
           width={120} 
           height={60} 
-          className="w-auto h-auto" 
+          className="w-auto h-auto opacity-40" 
         />
       </div>
     </figure>
@@ -85,11 +85,6 @@ export default function PartnerSlider() {
       </Marquee>
       <Marquee reverse pauseOnHover className="[--duration:20s]">
         {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <Marquee pauseOnHover className="[--duration:15s]">
-        {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>

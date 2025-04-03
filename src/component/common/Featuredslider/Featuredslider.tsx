@@ -27,7 +27,7 @@ export default function FeaturedSlider() {
     <Loader />
   ) : (
     <Carousel className="w-full">
-      <CarouselContent className="flex">
+      <CarouselContent className="flex lg:ml-0">
         {projects.length > 0 &&
           projects.map((project) => (
             <CarouselItem key={project.id}>
