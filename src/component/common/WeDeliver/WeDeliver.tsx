@@ -56,4 +56,4 @@ const WeDeliver = () => {
   );
 };
 
-export default WeDeliver;
+export default React.memo(WeDeliver);

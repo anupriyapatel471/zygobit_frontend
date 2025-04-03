@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
 import { EcommerceShineCards } from "@/component/sevices/Ecommerce/EcommerceShineCards/EcomoerceShineCards";
@@ -157,7 +158,7 @@ const Ecommerce = () => {
       <AOSInitializer />
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
-      <WeDeliver />
+      {/* <WeDeliver /> */}
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pt-12 sm:pt-16 pb-[5rem] sm:pb-[8rem] overflow-hidden">
         <div className="w-full px-4 lg:px-0 sm:text-center">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl  font-bold">

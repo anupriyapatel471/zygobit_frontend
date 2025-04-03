@@ -20,7 +20,8 @@ const HomeBanner = () => {
         {/* galaxy */}
         <div className="w-full">
           <div className="sketchfab-embed-wrapper">
-            <iframe
+            <div className="w-full h-[650px] sm:h-[775px] lg:h-[900px]"></div>
+            {/* <iframe
               className="w-full h-[650px] sm:h-[775px] lg:h-[900px]"
               frameBorder="0"
               allowFullScreen
@@ -32,7 +33,7 @@ const HomeBanner = () => {
               execution-while-not-rendered="true"
               web-share="true"
               src="https://sketchfab.com/models/d6521362b37b48e3a82bce4911409303/embed?autostart=1&ui_animations=0&ui_infos=0&ui_stop=0&ui_inspector=0&ui_watermark_link=0&ui_watermark=0&ui_hint=0&ui_ar=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&ui_theme=dark&ui_loader=0"
-            ></iframe>
+            ></iframe> */}
           </div>
         </div>
         <div className="w-full absolute top-20 sm:top-28 left-0 px-4 lg:px-24 py-5 lg:py-14">

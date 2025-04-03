@@ -1,19 +1,26 @@
 import Image from "next/image";
-import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
-import WeDeliver from "@/component/common/WeDeliver/WeDeliver";
-import RippleBg from "@/component/common/Ripplebg/Ripplebg";
-import { MagicCardDemo } from "@/component/common/Magiccard/Magiccard";
-import GridBoxes from "@/component/common/GridBoxes/GridBoxes";
-import AboutValueCards from "@/components/ui/aboutValueCards";
-import Together from "../../../public/images/together.png";
-import meeting from "../../../public/images/meeting.png";
-import { AboutBgParticles } from "./AboutBgParticles/AboutBgParticles";
-import DeliveringTailored from "@/component/common/DeliveringTailored/DeliveringTailored";
-import AOSInitializer from "@/component/common/AOSInitializer";
 import dynamic from "next/dynamic";
 import { Metadata } from "next";
+
+import { MagicCardDemo } from "@/component/common/Magiccard/Magiccard";
+import { AboutBgParticles } from "./AboutBgParticles/AboutBgParticles";
+import AOSInitializer from "@/component/common/AOSInitializer";
 import boxData1 from "../../utils/content/boxreveals/aboutUsOne.json";
 import boxData2 from "../../utils/content/boxreveals/aboutUsTwo.json";
+import Together from "../../../public/images/together.png";
+import meeting from "../../../public/images/meeting.png";
+import RippleBg from "@/component/common/Ripplebg/Ripplebg";
+import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
+import GridBoxes from "@/component/common/GridBoxes/GridBoxes";
+import DeliveringTailored from "@/component/common/DeliveringTailored/DeliveringTailored";
+import AboutValueCards from "@/components/ui/aboutValueCards";
+import Loader from "@/component/common/Loader/Loader";
+import { Suspense } from "react";
+
+const WeDeliver = dynamic(
+  () => import("@/component/common/WeDeliver/WeDeliver"),
+  { ssr: false }
+);
 const ContactForm = dynamic(
   () => import("@/component/common/ContactForm/ContactForm")
 );
@@ -145,7 +152,9 @@ const About = () => {
     <>
       <AOSInitializer />
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
-      <WeDeliver />
+      <Suspense fallback={<Loader />}>
+        <WeDeliver />
+      </Suspense>
       <div className="w-full relative">
         <AboutBgParticles />
         <div className="w-full mb-14 sm:mb-0 px-4 lg:px-24 relative sm:absolute sm:top-10 sm:left-1/2 sm:-translate-x-1/2 inline-block   rounded-lg">
