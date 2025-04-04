@@ -65,17 +65,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mobile App Development",
     description: "Zygibit Website Mobile App Development Page",
-    images: [
-      "https://developers.google.com/static/search/docs/images/licensable-images-callouts.png",
-    ],
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
   },
   twitter: {
     title: "Mobile App Development",
     description: "Zygibit Website Mobile App Development Page",
-    images: [
-      "https://developers.google.com/static/search/docs/images/licensable-images-callouts.png",
-    ],
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },

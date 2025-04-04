@@ -1,5 +1,6 @@
 import RippleBg from "@/component/common/Ripplebg/Ripplebg";
 import { MagicCardDemo } from "@/component/common/Magiccard/Magiccard";
+import Count from "@/components/ui/Count";
 
 const stats = [
   { id: 1, value: "11+", label: "Years of Experience" },
@@ -27,7 +28,7 @@ const TrustedAcross = () => {
               {stats.map((stat) => (
                 <div key={stat.id} className="w-full text-center">
                   <b className="font-extrabold text-xl sm:text-3xl lg:text-5xl 2xl:text-6xl text-white block">
-                    {stat.value}
+                    <Count endValue={stat.value} />+
                   </b>
                   <span className="font-medium text-sm sm:text-base">
                     {stat.label}

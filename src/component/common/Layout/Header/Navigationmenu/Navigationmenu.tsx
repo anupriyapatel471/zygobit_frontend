@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import * as React from "react";
@@ -35,7 +36,7 @@ export default function NavigationMenuDemo() {
                 <div className="w-auto grid grid-cols-1 lg:grid-cols-2 gap-7 col-span-2 p-10">
                   <div className="flex gap-4">
                     <div className="w-20 h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                      <img src="/images/mobile_icon.png" />
+                      <img src="/images/mobile_icon.png" alt="" />
                     </div>
                     <ListItem
                       className="text-white hover:text-white hover:bg-transparent p-0 w-[calc(100%-75px)]"
@@ -47,7 +48,7 @@ export default function NavigationMenuDemo() {
                   </div>
                   <div className="flex gap-4">
                     <div className="w-20 h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                      <img src="/images/webdev.png" />
+                      <img src="/images/webdev.png" alt="" />
                     </div>
                     <ListItem
                       className="text-white hover:text-white hover:bg-transparent p-0"
@@ -59,7 +60,7 @@ export default function NavigationMenuDemo() {
                   </div>
                   <div className="flex gap-4">
                     <div className="w-20 h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                      <img src="/images/uiux.png" />
+                      <img src="/images/uiux.png" alt="" />
                     </div>
                     <ListItem
                       className="text-white hover:text-white hover:bg-transparent p-0"
@@ -71,7 +72,7 @@ export default function NavigationMenuDemo() {
                   </div>
                   <div className="flex gap-4">
                     <div className="w-20 h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                      <img src="/images/machinel.png" />
+                      <img src="/images/machinel.png" alt="" />
                     </div>
                     <ListItem
                       className="text-white hover:text-white hover:bg-transparent p-0"
@@ -84,7 +85,7 @@ export default function NavigationMenuDemo() {
                   </div>
                   <div className="flex gap-4">
                     <div className="w-20 h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                      <img src="/images/ecommerce.png" />
+                      <img src="/images/ecommerce.png" alt="" />
                     </div>
                     <ListItem
                       className="text-white hover:text-white hover:bg-transparent p-0"
@@ -158,7 +159,7 @@ const ListItem = React.forwardRef<
           {...props}
         >
           <div className="flex items-center gap-2 text-base sm:text-lg lg:text-lg font-bold leading-none">
-            {title} <img src="/images/right_icon.png" />
+            {title} <img src="/images/right_icon.png" alt="" />
           </div>
           <p className="line-clamp-2 mt-2 text-sm  text-white">{children}</p>
         </Link>

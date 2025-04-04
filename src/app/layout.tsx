@@ -17,17 +17,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Zygobit",
     description: "Zygibit Website",
-    images: [
-      "https://developers.google.com/static/search/docs/images/licensable-images-callouts.png",
-    ],
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
   },
   twitter: {
     title: "Zygobit",
     description: "Zygibit Website",
-    images: [
-      "https://developers.google.com/static/search/docs/images/licensable-images-callouts.png",
-    ],
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },

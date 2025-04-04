@@ -3,7 +3,6 @@ import dynamic from "next/dynamic";
 import { Metadata } from "next";
 
 import { MagicCardDemo } from "@/component/common/Magiccard/Magiccard";
-import { AboutBgParticles } from "./AboutBgParticles/AboutBgParticles";
 import AOSInitializer from "@/component/common/AOSInitializer";
 import boxData1 from "../../utils/content/boxreveals/aboutUsOne.json";
 import boxData2 from "../../utils/content/boxreveals/aboutUsTwo.json";
@@ -16,6 +15,7 @@ import DeliveringTailored from "@/component/common/DeliveringTailored/Delivering
 import AboutValueCards from "@/components/ui/aboutValueCards";
 import Loader from "@/component/common/Loader/Loader";
 import { Suspense } from "react";
+import { AboutBgParticles } from "@/component/about/AboutBgParticles/AboutBgParticles";
 
 const WeDeliver = dynamic(
   () => import("@/component/common/WeDeliver/WeDeliver"),
@@ -40,17 +40,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About us",
     description: "Zygibit Website About Us Page",
-    images: [
-      "https://developers.google.com/static/search/docs/images/licensable-images-callouts.png",
-    ],
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
   },
   twitter: {
     title: "About us",
     description: "Zygibit Website About Us Page",
-    images: [
-      "https://developers.google.com/static/search/docs/images/licensable-images-callouts.png",
-    ],
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },

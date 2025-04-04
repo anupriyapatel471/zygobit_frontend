@@ -11,13 +11,9 @@ const FeaturedProjects = dynamic(
 const BusinessCards = dynamic(
   () => import("@/component/homePage/Businesscards/Businesscards")
 );
-const BackgroundBeamNew = dynamic(
-  () => import("@/component/homePage/Bgbeam/Bgbeam")
-);
+
 const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
-const WhychooseUs = dynamic(
-  () => import("@/component/homePage/Whychooseus/Whychooseus")
-);
+
 // const HeroParalax = dynamic(
 //   () => import("@/component/common/HeroParallax/HeroParallax")
 // );

@@ -1,17 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import { ChevronRight } from "lucide-react";
 import MarqueeSlider from "@/component/common/Marque/Marqueslider";
 import RippleBg from "@/component/common/Ripplebg/Ripplebg";
 import { MagicCardDemo } from "@/component/common/Magiccard/Magiccard";
-import Count from "@/components/ui/Count";
 import TrustedAcross from "../common/TrustedAcross/TrustedAcross";
 
 const HomeBanner = () => {
-  const stats = [
-    { value: 2, label: "Years of Experience" },
-    { value: 25, label: "Countries Served" },
-    { value: 25, label: "Tech Enthusiast" },
-    { value: 300, label: "Products Delivered" },
-  ];
   return (
     <>
       <section className="w-full h-[650px] sm:h-[775px] lg:h-[900px] relative">

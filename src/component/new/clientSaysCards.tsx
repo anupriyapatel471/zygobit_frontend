@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { CardContent } from "@/components/ui/card";
 import {
   Carousel,
