@@ -17,8 +17,8 @@ const TrustedAcross = () => {
             </div>
           </div>
           <div className="mt-6 w-full sm:w-full lg:w-full lg:mt-5 text-right">
-            <div className="w-full sm:w-auto  ml-auto grid grid-cols-2 sm:grid-cols-4 gap-y-5 sm:gap-y-10">
-              <div className="w-full text-center">
+            <div className="w-full sm:w-auto  ml-auto  flex gap-y-5 sm:gap-y-10">
+              <div className="w-1/4 text-center">
                 <b className="font-extrabold text-xl sm:text-3xl lg:text-5xl 2xl:text-6xl text-white block">
                   11+
                 </b>
@@ -26,7 +26,7 @@ const TrustedAcross = () => {
                   Years of Experience
                 </span>
               </div>
-              <div className="w-full text-center">
+              <div className="w-1/4 text-center">
                 <b className="font-extrabold text-xl sm:text-3xl lg:text-5xl 2xl:text-6xl text-white block">
                   25+
                 </b>
@@ -34,7 +34,7 @@ const TrustedAcross = () => {
                   Countries Served
                 </span>
               </div>
-              <div className="w-full text-center">
+              <div className="w-1/4 text-center">
                 <b className="font-extrabold text-xl sm:text-3xl lg:text-5xl 2xl:text-6xl text-white block">
                   250+
                 </b>
@@ -42,7 +42,7 @@ const TrustedAcross = () => {
                   Tech Enthusiast
                 </span>
               </div>
-              <div className="w-full text-center">
+              <div className="w-1/4 text-center">
                 <b className="font-extrabold text-xl sm:text-3xl lg:text-5xl 2xl:text-6xl text-white block">
                   1000+
                 </b>
