@@ -10,7 +10,7 @@ const ClientSays = ({
   return (
     <>
       <section className="w-full inline-block py-12 lg:pt-32 lg:pb-20 overflow-hidden">
-        <div className="container">
+        <div className="container remove-bg">
           <div className="w-full flex gap-16 items-center justify-between">
             <div className="w-1/2">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl text-gradiant-custom mb-2">

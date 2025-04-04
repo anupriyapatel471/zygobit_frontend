@@ -14,27 +14,27 @@ import cardsData from "../../../../utils/content/mobileAppSlider/mobileAppSlider
 export default function MobileAppSlider() {
   return (
     <Carousel className="w-full max-w-6xl mx-auto">
-      <CarouselContent>
+      <CarouselContent className="lg:ml-0">
         {cardsData.map((card, index: number) => (
           <CarouselItem key={index}>
             <div className="w-full">
-              <Card className="border-none rounded-xl">
-                <CardContent className="w-full flex   items-center justify-center px-4 lg:p-0">
-                  <div className="w-full bg-[#D9D9D90D] flex flex-wrap lg:flex-nowrap items-center rounded-2xl overflow-hidden">
-                    <div className="w-full lg:w-2/5">
+              <Card className="border-none rounded-xl bg-transparent">
+                <CardContent className="w-full flex bg-transparent  items-center justify-center p-0 lg:p-0">
+                  <div className="w-full  flex flex-col items-center justify-center sm:text-center  overflow-hidden">
+                    <div className="w-full lg:w-full">
                       <Image
                         src={card.image}
                         alt="Mobile App"
                         width={500}
                         height={300}
-                        className="w-full h-auto object-cover lg:h-full"
+                        className="w-[400x] mx-auto h-[270px] object-contain"
                       />
                     </div>
-                    <div className="w-full lg:w-3/5  p-4 lg:pl-9">
-                      <h3 className="font-semibold text-2xl sm:text-4xl text-white tracking-tighter">
+                    <div className="w-full lg:w-full  sm:text-center">
+                      <h3 className="font-semibold text-xl sm:text-2xl sm:leading-[55px] text-white tracking-tighter">
                         {card.title}
                       </h3>
-                      <p className="text-sm sm:text-lg lg:text-2xl text-white mt-3 lg:mt-4">
+                      <p className="text-sm text-white mt-2 line-clamp-4 lg:mt-2.5">
                         {card.description}
                       </p>
                     </div>
@@ -45,8 +45,8 @@ export default function MobileAppSlider() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="custom-pre" />
-      <CarouselNext className="custom-left" />
+      <CarouselPrevious className="lg:-left-[180px] lg:-bottom-6 lg:top-auto" />
+      <CarouselNext className="lg:-left-[110px] lg:-bottom-6 lg:top-auto" />
     </Carousel>
   );
 }

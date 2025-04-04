@@ -100,7 +100,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         >
           <div
             className={cn(
-              "flex flex-row justify-start gap-4 pl-4 lg:pl-24",
+              "flex flex-row justify-start gap-4 ",
               " mx-auto" // remove max-w-4xl if you want the carousel to span the full width of its container
             )}
           >
@@ -128,7 +128,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             ))}
           </div>
         </div>
-        <div className="flex justify-end gap-5 mr-5 sm:mr-10 lg:mr-[92px] mt-9">
+        <div className="flex justify-end gap-5 mr-5 sm:mr-10 lg:mr-0 mt-9">
           <button
             className="relative z-40 w-10 h-10 sm:h-12 sm:w-12 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
             onClick={scrollLeft}
@@ -238,7 +238,7 @@ export const Card = ({
         className="rounded-3xl bg-white bg-opacity-5  w-[18rem]  md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
         <div className="absolute hidden h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
-        <div className="w-full relative z-40 px-4 lg:px-6 py-4 sm:py-12 lg:py-16 border border-white/5 bg-white/5 text-left lg:h-96 cursor-default">
+        <div className="w-full relative z-40 px-4 lg:px-6 py-4 sm:py-12 lg:py-10 border border-white/5 bg-white/5 text-left lg:h-[349px] cursor-default">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
             className="font-semibold relative z-[1111] text-base sm:text-xl lg:text-2xl cursor-text tracking-tighter"

@@ -206,14 +206,21 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .container {
-  width: 100%;
+  width: 100% !important;
   max-width: 1248px;
-  margin: 0 auto;
+  margin: 0 auto !important;
   padding: 0 15px;
+  overflow: visible !important;
 }
 
 .custom-blur {
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px); /* Safari Support */
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(80px); /* Safari Support */
   background: rgba(0, 0, 0, 0.2); /* Ensure semi-transparent BG */
+}
+
+.remove-bg {
+  background-color: transparent !important;
+  background: transparent !important;
+  backdrop-filter: unset !important;
 }

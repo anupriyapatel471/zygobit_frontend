@@ -5,7 +5,7 @@ const TechnologyStack = () => {
   return (
     <>
       <section data-aos="fade-up" className="w-full relative overflow-hidden">
-        <div className="container">
+        <div className="container remove-bg">
           <div className="w-full text-center mb-5 sm:mb-10">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl text-gradiant-custom">
               Technology Stack
