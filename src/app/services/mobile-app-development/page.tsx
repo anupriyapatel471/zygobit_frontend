@@ -209,7 +209,7 @@ const MobileAppDevelopment = () => {
         </div>
       </section>
 
-      <CtaSecond />
+      <CtaSecond content={""} Aurora={""} vortex={""} />
 
       <section className="w-full lg:mt-10 inline-block">
         <div className="container remove-bg">

@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
@@ -39,7 +41,7 @@ const CtaSecond = ({ content, Aurora, vortex }: ctaProp) => {
                 // data-aos="fade-left"
                 className="order-1 lg:order-none w-auto mx-auto lg:mx-0"
               >
-                <img src="/images/cta_circle.png" />
+                <img src="/images/cta_circle.png" alt="" />
               </div>
             </div>
           </div>
