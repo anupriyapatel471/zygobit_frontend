@@ -25,9 +25,9 @@ const ReviewCard = ({ img }: { img: string }) => {
         <Image
           src={img}
           alt="Review Image"
-          width={120} 
-          height={80}
-          className="w-auto h-auto"
+          width={150} 
+          height={110}
+          className="w-[100px] h-[40px] object-contain"
           // layout="responsive "
         />
       </div>

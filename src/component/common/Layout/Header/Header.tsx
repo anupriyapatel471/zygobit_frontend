@@ -19,9 +19,9 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full mx-0 z-[9999]">
+      <header className="fixed top-0 left-0 w-full bg-[#09090B] backdrop-blur-xl bg-opacity-20 mx-0 z-[9999]">
         <nav
-          className="mx-auto bg-[#09090B] backdrop-blur-xl bg-opacity-20 py-4 px-4 xl:px-24 flex max-w-full items-center justify-between"
+          className="mx-auto max-w-[1248px]   py-4  flex  items-center justify-between"
           aria-label="Global"
         >
           <div className="w-auto flex gap-[100px] items-center">
