@@ -3,13 +3,11 @@ import React from "react";
 import Image from "next/image";
 import { TracingBeam } from "../../../components/ui/tracing-beam";
 import calendarIcon from "../../../../public/images/calendar_icon.svg";
-import { useParams } from "next/navigation";
 import { useBlog } from "@/hooks/dynamoDb/useBlog";
 import Loader from "@/component/common/Loader/Loader";
 
-export function TracingBeams() {
-  const { id } = useParams();
-  const filter = id ? { id: { eq: id } } : {};
+export function TracingBeams({ params }: { params: { id: string } }) {
+  const filter = params.id ? { id: { eq: params.id } } : {};
   const { blogs, loading } = useBlog(filter);
   return loading ? (
     <Loader />

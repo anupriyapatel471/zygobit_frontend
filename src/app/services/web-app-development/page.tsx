@@ -81,8 +81,26 @@ import boxData2 from "../../../utils/content/boxreveals/webAppTwo.json";
 export const metadata: Metadata = {
   title: "Web Development",
   description: "Zygibit Website Web Development Page",
+  keywords:
+    "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+  openGraph: {
+    title: "Web Development",
+    description: "Zygibit Website Web Development Page",
+    images: [
+      "https://developers.google.com/static/search/docs/images/licensable-images-callouts.png",
+    ],
+    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+  },
+  twitter: {
+    title: "Web Development",
+    description: "Zygibit Website Web Development Page",
+    images: [
+      "https://developers.google.com/static/search/docs/images/licensable-images-callouts.png",
+    ],
+    card: "summary_large_image",
+    creator: "Teqexpert",
+  },
 };
-
 const WebAppDevelopment = () => {
   const clientSaysHeading = "We Are a Trusted Web App Development Company";
   const clientSaysDetails =

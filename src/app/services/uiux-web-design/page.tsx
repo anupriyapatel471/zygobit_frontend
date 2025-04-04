@@ -56,6 +56,25 @@ import uiuxSliderData from "../../../utils/content/uiUxSlider/uiUx.json";
 export const metadata: Metadata = {
   title: "UI UX Design",
   description: "Zygibit Website Uiux Web Design Page",
+  keywords:
+    "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+  openGraph: {
+    title: "UI UX Design",
+    description: "Zygibit Website Uiux Web Design Page",
+    images: [
+      "https://developers.google.com/static/search/docs/images/licensable-images-callouts.png",
+    ],
+    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+  },
+  twitter: {
+    title: "UI UX Design",
+    description: "Zygibit Website Uiux Web Design Page",
+    images: [
+      "https://developers.google.com/static/search/docs/images/licensable-images-callouts.png",
+    ],
+    card: "summary_large_image",
+    creator: "Teqexpert",
+  },
 };
 const UiuxWebDesign = () => {
   const heading = "Craft Exceptional User Experiences with UI/UX Design";

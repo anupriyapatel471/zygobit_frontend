@@ -60,7 +60,27 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Mobile App Development",
   description: "Zygibit Website Mobile App Development Page",
+  keywords:
+    "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+  openGraph: {
+    title: "Mobile App Development",
+    description: "Zygibit Website Mobile App Development Page",
+    images: [
+      "https://developers.google.com/static/search/docs/images/licensable-images-callouts.png",
+    ],
+    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+  },
+  twitter: {
+    title: "Mobile App Development",
+    description: "Zygibit Website Mobile App Development Page",
+    images: [
+      "https://developers.google.com/static/search/docs/images/licensable-images-callouts.png",
+    ],
+    card: "summary_large_image",
+    creator: "Teqexpert",
+  },
 };
+
 const MobileAppDevelopment = () => {
   const heading = "Accelerate Your Business with Tailored Mobile App Solutions";
   const paragraph =

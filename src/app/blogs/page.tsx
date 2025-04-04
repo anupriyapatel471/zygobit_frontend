@@ -7,6 +7,25 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog",
   description: "Zygibit Website Blog Page",
+  keywords:
+    "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+  openGraph: {
+    title: "Blog",
+    description: "Zygibit Website Blog Page",
+    images: [
+      "https://developers.google.com/static/search/docs/images/licensable-images-callouts.png",
+    ],
+    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+  },
+  twitter: {
+    title: "Blog",
+    description: "Zygibit Website Blog Page",
+    images: [
+      "https://developers.google.com/static/search/docs/images/licensable-images-callouts.png",
+    ],
+    card: "summary_large_image",
+    creator: "Teqexpert",
+  },
 };
 
 const BlogPage = () => {

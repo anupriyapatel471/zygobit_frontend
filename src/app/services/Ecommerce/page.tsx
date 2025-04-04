@@ -46,11 +46,30 @@ import { Metadata } from "next";
 import engagementModelsEcomerce from "../../../utils/content/webSlider/ecommerce.json";
 
 import faqEcommerceData from "../../../utils/content/faq/faqEcommerce.json";
+
 export const metadata: Metadata = {
   title: "Ecommerce",
   description: "Zygibit Website Ecommerce Page",
+  keywords:
+    "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+  openGraph: {
+    title: "Ecommerce",
+    description: "Zygibit Website Ecommerce Page",
+    images: [
+      "https://developers.google.com/static/search/docs/images/licensable-images-callouts.png",
+    ],
+    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+  },
+  twitter: {
+    title: "Ecommerce",
+    description: "Zygibit Website Ecommerce Page",
+    images: [
+      "https://developers.google.com/static/search/docs/images/licensable-images-callouts.png",
+    ],
+    card: "summary_large_image",
+    creator: "Teqexpert",
+  },
 };
-
 const Ecommerce = () => {
   const clientHeading = "We Are a Trusted Web App Development Company";
   const clientSaysDetails =
@@ -158,7 +177,7 @@ const Ecommerce = () => {
       <AOSInitializer />
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
-      {/* <WeDeliver /> */}
+      <WeDeliver />
       <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pt-12 sm:pt-16 pb-[5rem] sm:pb-[8rem] overflow-hidden">
         <div className="w-full px-4 lg:px-0 sm:text-center">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl  font-bold">

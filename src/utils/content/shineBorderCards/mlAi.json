@@ -1,38 +1,47 @@
 [
   {
     "title": "AI-Powered Automation",
-    "description": "At Zygobit, our AI solutions streamline workflows, reducing manual effort and improving efficiency without compromising quality."
+    "description": "At Zygobit, our AI solutions streamline workflows, reducing manual effort and improving efficiency without compromising quality.",
+    "icon": "/images/.svg"
   },
   {
     "title": "Predictive Analytics",
-    "description": "Our AI-driven models analyze data trends, enabling businesses to make accurate, data-backed decisions in real time."
+    "description": "Our AI-driven models analyze data trends, enabling businesses to make accurate, data-backed decisions in real time.",
+    "icon": "/images/.svg"
   },
   {
     "title": "Natural Language Processing (NLP)",
-    "description": "We develop AI-powered NLP solutions that understand, interpret, and generate human language with high accuracy."
+    "description": "We develop AI-powered NLP solutions that understand, interpret, and generate human language with high accuracy.",
+    "icon": "/images/.svg"
   },
   {
     "title": "Computer Vision",
-    "description": "Zygobit’s AI models recognize objects, detect patterns, and analyze images, enhancing automation and decision-making."
+    "description": "Zygobit’s AI models recognize objects, detect patterns, and analyze images, enhancing automation and decision-making.",
+    "icon": "/images/.svg"
   },
   {
     "title": "Deep Learning & Neural Networks",
-    "description": "We leverage advanced deep learning techniques to build intelligent, high-performing AI applications for businesses."
+    "description": "We leverage advanced deep learning techniques to build intelligent, high-performing AI applications for businesses.",
+    "icon": "/images/.svg"
   },
   {
     "title": "Scalable Cloud AI",
-    "description": "Our AI solutions integrate seamlessly with cloud platforms, ensuring high availability and scalable deployment."
+    "description": "Our AI solutions integrate seamlessly with cloud platforms, ensuring high availability and scalable deployment.",
+    "icon": "/images/.svg"
   },
   {
     "title": "AI Chatbots & Virtual Assistants",
-    "description": "Enhance customer interactions with our AI-driven chatbots, providing intelligent, instant, and efficient responses."
+    "description": "Enhance customer interactions with our AI-driven chatbots, providing intelligent, instant, and efficient responses.",
+    "icon": "/images/.svg"
   },
   {
     "title": "Cost-Effective AI Solutions",
-    "description": "Zygobit delivers budget-friendly AI solutions, optimizing performance while maintaining cost efficiency."
+    "description": "Zygobit delivers budget-friendly AI solutions, optimizing performance while maintaining cost efficiency.",
+    "icon": "/images/.svg"
   },
   {
     "title": "Secure & Ethical AI",
-    "description": "Our AI solutions prioritize security, transparency, and ethical practices to ensure responsible AI implementation."
+    "description": "Our AI solutions prioritize security, transparency, and ethical practices to ensure responsible AI implementation.",
+    "icon": "/images/.svg"
   }
 ]
