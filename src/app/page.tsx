@@ -8,13 +8,14 @@ import React from "react";
 // import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-};
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const HomeBanner = dynamic(() => import("@/component/homePage/HomeBanner"));
 const FeaturedProjects = dynamic(
@@ -61,29 +62,6 @@ const Home = () => {
   return (
     <>
       <AOSInitializer />
-
-      <div className="mt-20">
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
-      </div>
 
       <HomeBanner />
       <FeaturedProjects />
@@ -217,9 +195,9 @@ const Home = () => {
         clientSaysDetails={clientSaysDetails}
       /> */}
 
-      <section className="w-full inline-block my-12 lg:my-20">
+      <section className="w-full inline-block py-12 lg:pt-32 lg:pb-20 overflow-hidden">
         <div className="container">
-          <div className="w-full flex items-center justify-between">
+          <div className="w-full flex gap-16 items-center justify-between">
             <div className="w-1/2">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl text-gradiant-custom mb-2">
                 Lets’s Hear What Our Clients Say
@@ -230,21 +208,54 @@ const Home = () => {
                 business and user experience.
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="w-1/2 relative">
               <div className="w-full relative">
-                <img
-                  className="w-full  max-h-[390px]"
-                  src="/images/bg_blur.png"
-                  alt=""
-                />
-                <div className="absolute top0 right-0">
+                <div className="w-full h-[400px] bg-[#FEF8FF36] backdrop-blur-2xl border-[12px] border-white/20 rounded-2xl relative"></div>
+                <div className="absolute top-20 -right-24 -z-20">
                   <img src="/images/square.png" alt="" />
                 </div>
-                <div className="absolute bottom-0 left-0">
+                <div className="absolute -bottom-14 -left-14 -z-20">
                   <img src="/images/circle.png" alt="" />
                 </div>
-                <div className="absolute top-0 left-12">
+                <div className="absolute -top-16 left-12 -z-20">
                   <img src="/images/ring.png" alt="" />
+                </div>
+                <div className="absolute top-0 left-0 w-full">
+                  <Carousel className="w-full">
+                    <CarouselContent>
+                      {Array.from({ length: 5 }).map((_, index) => (
+                        <CarouselItem key={index}>
+                          <div className="p-1">
+                            <CardContent className="mt-14 w-full h-full flex flex-col justify-center items-center  text-center  p-6 text-white">
+                              <div className="ml-12 w-fit mr-auto mb-3">
+                                <img className="" src="images/qoutus.png" alt="" />
+                              </div>
+                              <p className="text-sm sm:text-base mb-8 max-w-xs mx-auto">
+                                The scalability and performance have bee game
+                                changing for our organization. Highly recommend
+                                to any growing business.
+                              </p>
+                              <div className="w-12 h-12 mx-auto rounded-full overflow-hidden">
+                                <img
+                                  className="w-full h-full mx-auto "
+                                  src="/images/profile.png"
+                                  alt=""
+                                />
+                              </div>
+                              <h4 className="font-medium text-sm text-[#E0E0E0] mt-3 mb-1">
+                                john smith
+                              </h4>
+                              <span className="font-[300] text-sm">
+                                Founder of Awesomeux Technology
+                              </span>
+                            </CardContent>
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="bg-transparent hover:bg-transparent border-none sm:w-auto sm:h-auto sm:top-auto sm:bottom-[82px] sm:left-16 sm:right-auto" />
+                    <CarouselNext className="bg-transparent hover:bg-transparent border-none sm:w-auto sm:h-auto sm:left-auto lg:right-16 sm:top-auto sm:bottom-[82px]" />
+                  </Carousel>
                 </div>
               </div>
             </div>
