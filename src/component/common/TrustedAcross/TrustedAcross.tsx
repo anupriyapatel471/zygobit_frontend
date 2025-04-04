@@ -1,6 +1,12 @@
 import RippleBg from "@/component/common/Ripplebg/Ripplebg";
 import { MagicCardDemo } from "@/component/common/Magiccard/Magiccard";
 
+const stats = [
+  { id: 1, value: "11+", label: "Years of Experience" },
+  { id: 2, value: "25+", label: "Countries Served" },
+  { id: 3, value: "250+", label: "Tech Enthusiast" },
+  { id: 4, value: "1000+", label: "Products Delivered" },
+];
 const TrustedAcross = () => {
   return (
     <>
@@ -18,38 +24,16 @@ const TrustedAcross = () => {
           </div>
           <div className="mt-6 w-full sm:w-full lg:w-full lg:mt-5 text-right">
             <div className="w-full sm:w-auto  ml-auto grid grid-cols-2 sm:grid-cols-4 gap-y-5 sm:gap-y-10">
-              <div className="w-full text-center">
-                <b className="font-extrabold text-xl sm:text-3xl lg:text-5xl 2xl:text-6xl text-white block">
-                  11+
-                </b>
-                <span className="font-medium text-sm sm:text-base">
-                  Years of Experience
-                </span>
-              </div>
-              <div className="w-full text-center">
-                <b className="font-extrabold text-xl sm:text-3xl lg:text-5xl 2xl:text-6xl text-white block">
-                  25+
-                </b>
-                <span className="font-medium text-sm sm:text-base">
-                  Countries Served
-                </span>
-              </div>
-              <div className="w-full text-center">
-                <b className="font-extrabold text-xl sm:text-3xl lg:text-5xl 2xl:text-6xl text-white block">
-                  250+
-                </b>
-                <span className="font-medium text-sm sm:text-base">
-                  Tech Enthusiast
-                </span>
-              </div>
-              <div className="w-full text-center">
-                <b className="font-extrabold text-xl sm:text-3xl lg:text-5xl 2xl:text-6xl text-white block">
-                  1000+
-                </b>
-                <span className="font-medium text-sm sm:text-base">
-                  Products Delivered
-                </span>
-              </div>
+              {stats.map((stat) => (
+                <div key={stat.id} className="w-full text-center">
+                  <b className="font-extrabold text-xl sm:text-3xl lg:text-5xl 2xl:text-6xl text-white block">
+                    {stat.value}
+                  </b>
+                  <span className="font-medium text-sm sm:text-base">
+                    {stat.label}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
