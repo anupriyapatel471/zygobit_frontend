@@ -8,7 +8,7 @@ export default function ContactForm() {
   return (
     <>
       <section className="w-full px-4 lg:px-24 relative overflow-hidden">
-        <div className="container">
+        <div className="container remove-bg">
           <div className="w-full grid items-center   bg-white/5 rounded-2xl grid-cols-1 lg:grid-cols-2 gap-5 p-4 sm:p-5">
             <div
               data-aos="fade-right"

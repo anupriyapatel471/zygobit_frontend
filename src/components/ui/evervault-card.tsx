@@ -33,20 +33,20 @@ export const EvervaultCard = ({
   return (
     <div
       className={cn(
-        " border border-white/5  overflow-hidden rounded-3xl bg-white/5 flex items-center justify-center w-full h-full relative",
+        " border border-white/5  overflow-hidden rounded-3xl bg-transparent flex items-center justify-center w-full h-full relative",
         className
       )}
     >
       <div
         onMouseMove={onMouseMove}
-        className="group/card group  w-full relative overflow-hidden bg-transparent px-4 sm:px-6 py-4 sm:py-16 text-left  h-full sm:h-96 p-0.5"
+        className="group/card group  w-full relative overflow-hidden bg-transparent px-4 sm:px-6 py-4 sm:py-16 text-left  h-full sm:h-[349px] p-0.5"
       >
         <CardPattern
           mouseX={mouseX}
           mouseY={mouseY}
           randomString={randomString}
         />
-        <div className="absolute border group-hover:opacity-100 opacity-0 border-white/5  top-0 left-0 w-full h-full bg-black/60"></div>
+        <div className="absolute border group-hover:opacity-100 opacity-0 border-white/5  top-0 left-0 w-full h-full bg-transparent"></div>
       </div>
     </div>
   );

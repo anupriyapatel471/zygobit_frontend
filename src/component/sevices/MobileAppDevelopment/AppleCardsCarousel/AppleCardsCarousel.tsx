@@ -22,7 +22,7 @@ const DummyContent = () => {
         return (
           <div
             key={"dummy-content" + index}
-            className="border border-white rounded-lg bg-white bg-opacity-5"
+            className="border border-white rounded-lg bg-transparent"
           >
             <h3 className="font-semibold text-2xl tracking-tighter">
               Power Management, Notification and Geofencing

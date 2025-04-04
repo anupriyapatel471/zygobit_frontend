@@ -29,8 +29,8 @@ export default function NavigationMenuDemo() {
           className="  text-white"
         >
           <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-          <NavigationMenuContent className="  custom-blur  border-none">
-            <div className="w-full ">
+          <NavigationMenuContent className="  border-none relative z-50">
+            <div className="w-full  backdrop-blur-2xl">
               <ul className="grid grid-cols-1 gap-3 items-center w-screen mx-auto lg:grid-cols-3">
                 <div className="w-auto grid grid-cols-1 lg:grid-cols-2 gap-7 col-span-2 p-10">
                   <div className="flex gap-4">
@@ -95,7 +95,7 @@ export default function NavigationMenuDemo() {
                     </ListItem>
                   </div>
                 </div>
-                <li className="row-span-1 h-full bg-white/10 backdrop-blur-xl text-center bg-opacity-25 py-12">
+                <li className="row-span-1 h-full bg-[#09090B] backdrop-blur-xl bg-opacity-20 text-center py-12">
                   <NavigationMenuLink asChild>
                     <Link
                       className="flex h-full w-full select-none flex-col justify-center items-center rounded-md  no-underline outline-none focus:shadow-md"

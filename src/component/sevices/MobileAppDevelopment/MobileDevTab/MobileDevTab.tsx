@@ -10,7 +10,7 @@ export default function SharedLayoutAnimation() {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
   return (
-    <div className="container">
+    <div className="container px-0" style={{padding:"0"}}>
       <nav className="nav">
         <ul className="tabsContainer">
           {tabs.map((item) => (
@@ -45,10 +45,10 @@ export default function SharedLayoutAnimation() {
             transition={{ duration: 0.2 }}
           >
             {selectedTab ? selectedTab.icon : "😋"}
-            <div className="w-full px-4 lg:px-0 mt-12 lg:mt-36 mb-12 lg:mb-20 max-w-5xl mx-auto flex flex-wrap sm:flex-nowrap gap-5 sm:gap-10 lg:gap-16">
-              <div className="w-full sm:w-2/5">
+            <div className="w-full px-4 lg:px-0 mt-7 lg:mt-10 mb-7 lg:mb-10 max-w-5xl mx-auto flex flex-wrap sm:flex-nowrap gap-4 sm:gap-7 lg:gap-10">
+              <div className="w-full sm:w-auto">
                 <Image
-                  className="w-full h-full max-h-72 object-cover rounded-2xl"
+                  className="w-[318px] h-auto object-contain rounded-2xl"
                   src={selectedTab.image}
                   alt=""
                   width={500}
@@ -56,10 +56,10 @@ export default function SharedLayoutAnimation() {
                 />
               </div>
               <div className="w-full sm:w-3/5">
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
+                <h3 className="text-2xl sm:text-3xl lg:text-[32px] font-semibold">
                   {selectedTab.title}
                 </h3>
-                <p className="text-sm sm:text-lg lg:text-xl mt-2 sm:mt-5 lg:mt-10">
+                <p className="text-sm sm:text-base lg:text-lg mt-2 sm:mt-4 lg:mt-5">
                   {selectedTab.description}
                 </p>
               </div>

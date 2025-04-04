@@ -8,7 +8,7 @@ const Blog = () => {
   return (
     <>
       <section className="w-full mt-5 sm:mt-0  mb-12 sm:mb-16 overflow-hidden">
-        <div className="container">
+        <div className="container remove-bg">
           <div
             data-aos="fade-left"
             className="w-full  sm:text-center px-4 lg:px-0"
