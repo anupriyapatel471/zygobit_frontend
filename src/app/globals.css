@@ -194,20 +194,20 @@ input[type="number"]::-webkit-outer-spin-button {
 .web_previous_btn {
   bottom: -100px !important;
   top: auto !important;
-  right: 190px  !important;
+  right: 80px  !important;
   left: auto  !important;
 }
 
 .web_next_btn {
   bottom: -100px !important;
   top: auto !important;
-  right: 109px  !important;
+  right: 6px  !important;
   left: auto  !important;
 }
 
 .container {
   width: 100% !important;
-  max-width: 1248px;
+  max-width: 1248px !important;
   margin: 0 auto !important;
   padding: 0 15px;
   overflow: visible !important;

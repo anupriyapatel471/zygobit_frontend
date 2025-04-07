@@ -59,7 +59,7 @@ export function CardSpotlights() {
         {cardData.map((card) => (
           <CardSpotlight
             key={card.id}
-            className="w-full text-left border border-white rounded-xl bg-white/5 p-4"
+            className="w-full text-left  rounded-xl bg-white/5 p-5"
           >
             <span className="relative z-20">
               {/* <img src={card.imageSrc} alt={card.alt} /> */}

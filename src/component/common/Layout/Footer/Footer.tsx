@@ -28,7 +28,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full inline-block px-4 lg:px-24">
-      <div className="w-full">
+      <div className="w-full container remove-bg">
         <div className="w-full flex gap-y-7 sm:gap-5 flex-wrap lg:flex-nowrap mt-10 lg:mt-20 mb-10 sm:mb-14 lg:mb-24 justify-between">
           <div className="w-full lg:w-1/4 mb-0 sm:mb-6 lg:mb-0">
             <Link href="/">

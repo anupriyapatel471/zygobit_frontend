@@ -52,6 +52,8 @@ import faqData from "../../../utils/content/faq/faqMachineLearning.json";
 import engagementModelsMlAi from "../../../utils/content/webSlider/mlAi.json";
 import { Suspense } from "react";
 import Loader from "@/component/common/Loader/Loader";
+import AppleCardsCarousel from "@/component/sevices/MobileAppDevelopment/AppleCardsCarousel/AppleCardsCarousel";
+import CtaSecond from "@/component/new/CtaSecond";
 
 export const metadata: Metadata = {
   title: "Machine Learning AI",
@@ -150,14 +152,14 @@ const MachineLearning = () => {
     {
       id: 1,
       content: <SkeletonOne />,
-      className: "md:col-span-2 cursor-pointer",
+      className: "md:col-span-3 cursor-pointer",
       title: "Proven AI Expertise",
       thumbnail: "/images/Proven_expertise.png",
     },
     {
       id: 2,
       content: <SkeletonTwo />,
-      className: "col-span-1 cursor-pointer",
+      className: "col-span-2 cursor-pointer",
       title: "Scalable AI Solutions",
 
       thumbnail: "/images/Scalable_solution.png",
@@ -165,7 +167,7 @@ const MachineLearning = () => {
     {
       id: 3,
       content: <SkeletonThree />,
-      className: "col-span-1 cursor-pointer",
+      className: "col-span-2 cursor-pointer",
       title: "Intelligent User Experience",
 
       thumbnail: "/images/User_centric.png",
@@ -173,7 +175,7 @@ const MachineLearning = () => {
     {
       id: 4,
       content: <SkeletonFour />,
-      className: "md:col-span-2 cursor-pointer",
+      className: "md:col-span-3 cursor-pointer",
       title: "Seamless AI Integration",
       thumbnail: "/images/seamless_interaction.jpg",
     },
@@ -270,35 +272,42 @@ const MachineLearning = () => {
   return (
     <>
       <AOSInitializer />
+
       <Suspense fallback={<Loader />}>
         <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
         <WeDeliver />
       </Suspense>
+
       <Suspense fallback={<Loader />}>
-        <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pb-14 lg:pb-24">
-          <div className="w-full px-4 lg:px-0 mt-10 lg:mt-16 mb-8 sm:mb-12 lg:mb-20 sm:text-center inline-block">
-            <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl">
-              Full-Scale AI & Machine Learning Services.
-            </h2>
-            <p className=" sm:font-medium text-sm sm:text-lg lg:text-xl mt-2 sm:mt-3 lg:mt-5 px-0 lg:px-20">
-              Zygobit is a leading AI-driven software development company,
-              delivering cutting-edge machine learning solutions. Our innovative
-              technology enhances efficiency, automation, and decision-making,
-              providing users with a seamless experience.
-            </p>
-          </div>
-          <div className="w-full max-w-6xl mx-auto">
-            <ShineBorderCards />
-          </div>
-          <div className="w-full flex justify-center mt-12">
-            <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-              Get Started!{" "}
-              <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-            </button>
+        <section className="w-full bg-gradient-to-b from-orange-950  to-black py-12 sm:py-14 lg:py-20">
+          <div className="container remove-bg">
+            <div className="w-full flex gap-5">
+              <div className="w-[45%]">
+                <div className="w-full   inline-block">
+                  <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] lg:leading-[50px]">
+                    Full-Scale AI & Machine Learning Services.
+                  </h2>
+                  <p className=" sm:font-medium text-sm sm:text-base sm:leading-8 mt-4">
+                    Zygobit is a leading AI-driven software development company,
+                    delivering cutting-edge machine learning solutions. Our
+                    innovative technology enhances efficiency, automation, and
+                    decision-making, providing users with a seamless experience.
+                  </p>
+                </div>
+                <button className="mt-10 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                  Get Assistance{" "}
+                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                </button>
+              </div>
+              <div className="w-[55%]">
+                <div className="w-full">
+                  <AppleCardsCarousel />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </Suspense>
-      <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
 
       {/* <section
         data-aos="fade-up"
@@ -310,35 +319,33 @@ const MachineLearning = () => {
       </section> */}
 
       <section className="w-full px-4 lg:px-11 pb-10 sm:pb-0 pt-10  lg:py-14 overflow-hidden">
-        <div className="w-full  sm:text-center" data-aos="fade-right">
-          <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
-            Featured UI UX Design Case Studies
-          </h2>
-          <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
-            Our Success Stories
-          </p>
-        </div>
-        <div data-aos="fade-up">
-          <FeaturedSlider />
+        <div className="container remove-bg">
+          <div className="w-full  sm:text-center" data-aos="fade-right">
+            <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
+              Featured UI UX Design Case Studies
+            </h2>
+          </div>
+          <div data-aos="fade-up">
+            <FeaturedSlider />
+          </div>
         </div>
       </section>
       <Suspense fallback={<Loader />}>
         <section className="w-full mb-14 sm:mb-0 pt-5 sm:pt-16">
-          <div
-            className="w-full  sm:text-center px-4 lg:px-0"
-            data-aos="fade-right"
-          >
-            <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
-              Leverage AI & Machine Learning to Stay Ahead.
-            </h2>
-            <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
-              Our experienced developers offer all-inclusive exchange
-              development services with AI and Machine Learning features,
-              enabling secure and instant transactions.
-            </p>
-          </div>
-          <div className="w-full max-w-5xl px-4 lg:px-0 mx-auto mt-8 sm:mt-12 lg:mt-16">
-            <AwareHoverCards />
+          <div className="container remove-bg">
+            <div className="w-full  sm:text-center " data-aos="fade-right">
+              <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
+                Leverage AI & Machine Learning to Stay Ahead.
+              </h2>
+              <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium">
+                Our experienced developers offer all-inclusive exchange
+                development services with AI and Machine Learning features,
+                enabling secure and instant transactions.
+              </p>
+            </div>
+            <div className="w-full  mt-8 sm:mt-12 lg:mt-16">
+              <AwareHoverCards />
+            </div>
           </div>
         </section>
       </Suspense>
@@ -347,30 +354,31 @@ const MachineLearning = () => {
         clientSaysDetails={clientSaysDetails}
       />
 
-      <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
+      <CtaSecond content={""} Aurora={""} vortex={""} />
 
-      <section className="w-full pb-12 overflow-hidden">
-        <div className="w-full px-4 lg:px-0 sm:text-center">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom font-bold">
-            Select from Our AI & ML-Powered Development Models
-          </h2>
-          <p className="sm:font-medium max-w-7xl mx-auto text-sm sm:text-lg lg:text-xl mt-3">
-            Being a leading AI & ML-driven web application development provider,
-            we offer multiple hiring models tailored to your needs.
-          </p>
-        </div>
-        <div className="w-full mt-7 sm:mt-12 lg:mt-16">
-          <WebSlider engagementModels={engagementModelsMlAi} />
-        </div>
-        <div className="w-full px-4 lg:px-32 mt-10 sm:mt-0 lg:mt-10 flex  justify-center sm:justify-normal">
-          <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-            Hire Web Application Developers{" "}
-            <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-          </button>
+      <section className="w-full pb-12 sm:pb-14 lg:pb-20 overflow-hidden">
+        <div className="container remove-bg">
+          <div className="flex justify-between gap-5">
+            <div className="w-full lg:w-1/2 ">
+              <h2 className="text-2xl sm:text-3xl lg:text-[35px] lg:leading-[50px] text-gradiant-custom font-bold">
+                Select from Our AI & ML-Powered Development Models
+              </h2>
+              <p className="sm:font-medium  text-sm sm:text-lg lg:text-xl mt-4 mb-7">
+                Being a leading AI & ML-driven web application development
+                provider, we offer multiple hiring models tailored to your
+                needs.
+              </p>
+              <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                Hire Web Application Developers{" "}
+                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+              </button>
+            </div>
+            <div className="w-full lg:w-1/2 ">
+              <WebSlider engagementModels={engagementModelsMlAi} />
+            </div>
+          </div>
         </div>
       </section>
-
-      <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
 
       <Suspense fallback={<Loader />}>
         <TechnologyStack />
@@ -380,6 +388,11 @@ const MachineLearning = () => {
         GridBoxesDetail={GridBoxesDetail}
         GridBoxesHeading={GridBoxesHeading}
         cards={cards}
+      />
+
+      <ClientSays
+        clientHeading={clientSaysHeading}
+        clientSaysDetails={clientSaysDetails}
       />
 
       <Blog />

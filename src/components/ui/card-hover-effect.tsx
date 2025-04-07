@@ -31,14 +31,14 @@ export const HoverEffect = ({
         <Link
           href={item?.link}
           key={item?.link}
-          className="relative group  block  h-full w-full"
+          className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-orange-300 block  rounded-xl"
+                className="absolute inset-0 h-full w-full bg-orange-950 block  rounded-xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -72,33 +72,13 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-xl h-full w-full p-5 lg:p-10 overflow-hidden  border  border-white  relative z-20",
+        "rounded-xl h-full w-full p-4 overflow-hidden bg-[#09090B]  border  border-[#404040] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
       <div className="relative z-50 overflow-hidden">
-        <span>
-          {/* <img src="/images/dollar_icon.svg" alt="" /> */}
-        <Image
-          src={dollarIcon}
-          alt="Dollar Icon"
-          width={50}  // Set the width of the image
-          height={50} // Set the height of the image
-        />
-        </span>
-        <div className="px-4">{children}</div>
+        <div className="p-4">{children}</div>
       </div>
-      <div className="absolute top-0 left-0 w-full h-full">
-        {/* <img className="w-full h-full" src="/images/gray_stars_bg.png" alt="" /> */}
-        <Image
-          className="w-full h-full object-cover"
-          src={grayStar}
-          alt="Stars Background"
-          height={40}
-          width={40}
-        />
-        </div>
-
     </div>
   );
 };

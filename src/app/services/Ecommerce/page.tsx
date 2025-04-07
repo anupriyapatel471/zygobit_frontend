@@ -46,6 +46,7 @@ import { Metadata } from "next";
 import engagementModelsEcomerce from "../../../utils/content/webSlider/ecommerce.json";
 
 import faqEcommerceData from "../../../utils/content/faq/faqEcommerce.json";
+import CtaSecond from "@/component/new/CtaSecond";
 
 export const metadata: Metadata = {
   title: "Ecommerce",
@@ -139,14 +140,14 @@ const Ecommerce = () => {
     {
       id: 1,
       content: <SkeletonOne />,
-      className: "md:col-span-2 cursor-pointer",
+      className: "md:col-span-3 cursor-pointer",
       title: "Proven Expertise",
       thumbnail: "/images/Proven_expertise.png",
     },
     {
       id: 2,
       content: <SkeletonTwo />,
-      className: "col-span-1 cursor-pointer",
+      className: "col-span-2 cursor-pointer",
       title: "Scalable Solutions",
 
       thumbnail: "/images/Scalable_solution.png",
@@ -154,7 +155,7 @@ const Ecommerce = () => {
     {
       id: 3,
       content: <SkeletonThree />,
-      className: "col-span-1 cursor-pointer",
+      className: "col-span-2 cursor-pointer",
       title: "User-Centric Design",
 
       thumbnail: "/images/User_centric.png",
@@ -162,7 +163,7 @@ const Ecommerce = () => {
     {
       id: 4,
       content: <SkeletonFour />,
-      className: "md:col-span-2 cursor-pointer",
+      className: "md:col-span-3 cursor-pointer",
       title: "Seamless Interactions",
       thumbnail: "/images/seamless_interaction.jpg",
     },
@@ -174,57 +175,86 @@ const Ecommerce = () => {
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
       <WeDeliver />
-      <section className="w-full bg-gradient-to-b from-orange-600 via-black to-black pt-12 sm:pt-16 pb-[5rem] sm:pb-[8rem] overflow-hidden">
-        <div className="w-full px-4 lg:px-0 sm:text-center">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl  font-bold">
-            Drive Success with AI Ecommerce Solutions
-          </h2>
-          <p className="sm:font-medium max-w-7xl mx-auto text-sm sm:text-lg lg:text-xl mt-3">
-            Boost your eCommerce store with our tailored app development
-            solutions. Connect with our experts to build a robust platform that
-            drives engagement and sales.
-          </p>
-        </div>
-        <div className="w-full mt-7 sm:mt-12 lg:mt-16">
-          <WebSlider engagementModels={engagementModelsEcomerce} />
+
+      <section className="w-full pb-12 sm:pb-14 lg:pb-20 lg:pt-12 overflow-hidden">
+        <div className="container remove-bg">
+          <div className="flex justify-between gap-5">
+            <div className="w-full lg:w-1/2 ">
+              <h2 className="text-2xl sm:text-3xl lg:text-[35px] lg:leading-[50px] text-gradiant-custom font-bold">
+                Drive Success with AI Ecommerce Solutions
+              </h2>
+              <p className="sm:font-medium  text-sm sm:text-lg lg:text-xl mt-4 mb-7">
+                Boost your eCommerce store with our tailored app development
+                solutions. Connect with our experts to build a robust platform
+                that drives engagement and sales.
+              </p>
+              <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                Hire Web Application Developers{" "}
+                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+              </button>
+            </div>
+            <div className="w-full lg:w-1/2 ">
+              <WebSlider engagementModels={engagementModelsEcomerce} />
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="w-full bg-[url(/images/stars_bg.png)] bg-cover bg-no-repeat bg-center py-16 px-4 sm:px-0 ">
-        <div className="w-full  sm:text-center" data-aos="fade-right">
-          <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl mb-8 sm:mb-12 lg:mb-16">
-            Boost your business with AI & ML eCommerce.
-          </h2>
-        </div>
-        <div className="w-full px-0 sm:px-4  max-w-6xl mx-auto">
-          <EcommerceShineCards />
-        </div>
-        <div className="flex justify-center mt-10 lg:mt-14">
-          <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-            Schedule a Call{" "}
-            <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-          </button>
-        </div>
-      </section>
-
-      <Cta Aurora={"Aurora"} vortex={""} content={"Globe"} />
-
-      <section className="w-full px-4 lg:px-11 py-10 sm:py-14 overflow-hidden">
-        <div className="w-full  sm:text-center" data-aos="fade-right">
-          <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
-            Zygobit: Ecommerce App Experts
-          </h2>
-          <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
-            Don&apos;t just choose an ecommerce app developer. Choose a
-            collaborator. Let Zygobit co-create your e-commerce app masterpiece.
-          </p>
-        </div>
-        <div data-aos="fade-up">
-          <FeaturedSlider />
+      <section className="w-full bg-[url(/images/cta_bg.png)] bg-cover bg-no-repeat bg-center py-16 ">
+        <div className="container remove-bg">
+          <div className="w-full  sm:text-center" data-aos="fade-right">
+            <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl mb-8 sm:mb-12 lg:mb-16">
+              Boost your business with AI & ML eCommerce.
+            </h2>
+          </div>
+          <div className="w-full">
+            <EcommerceShineCards />
+          </div>
+          <div className="flex justify-center mt-10 lg:mt-14">
+            <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+              Schedule a Call{" "}
+              <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+            </button>
+          </div>
         </div>
       </section>
 
-      <ApplicationAgeny data={applicationAgencyData} />
+      <CtaSecond content={""} Aurora={""} vortex={""} />
+
+      <section className="w-full  py-10 sm:py-14 overflow-hidden">
+        <div className="container remove-bg">
+          <div className="w-full  sm:text-center" data-aos="fade-right">
+            <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
+              Zygobit: Ecommerce App Experts
+            </h2>
+            <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
+              Don&apos;t just choose an ecommerce app developer. Choose a
+              collaborator. Let Zygobit co-create your e-commerce app
+              masterpiece.
+            </p>
+          </div>
+          <div data-aos="fade-up">
+            <FeaturedSlider />
+          </div>
+        </div>
+      </section>
+
+      <OurPartners />
+
+      <Blog />
+
+      <TechnologyStack />
+
+      <ClientSays
+        clientHeading={clientHeading}
+        clientSaysDetails={clientSaysDetails}
+      />
+
+      <FaqSection faqData={faqEcommerceData} />
+
+      <ContactForm />
+
+      {/* <ApplicationAgeny data={applicationAgencyData} />
 
       <DeliveringTailored
         deliveringHeading={deliveringHeading}
@@ -262,22 +292,7 @@ const Ecommerce = () => {
         <div className="w-full px-5 lg:px-24">
           <MobileAppGrid cards={cards} />
         </div>
-      </section>
-
-      <TechnologyStack />
-
-      <ClientSays
-        clientHeading={clientHeading}
-        clientSaysDetails={clientSaysDetails}
-      />
-
-      <OurPartners />
-
-      <Blog />
-
-      <FaqSection faqData={faqEcommerceData} />
-
-      <ContactForm />
+      </section> */}
     </>
   );
 };

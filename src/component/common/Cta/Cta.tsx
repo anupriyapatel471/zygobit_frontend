@@ -53,7 +53,7 @@ const Cta = ({ content, Aurora, vortex }: ctaProp) => {
                 </div>
                 <div
                   data-aos="fade-left"
-                  className="order-1 lg:order-none w-[575px] mx-auto lg:mx-0"
+                  className="order-1 lg:order-none lg:w-[575px] mx-auto lg:mx-0"
                 >
                   {content === "Globe" && <GlobeDemo />}
                   {content === "Marquee" && <MarqueeVertical />}

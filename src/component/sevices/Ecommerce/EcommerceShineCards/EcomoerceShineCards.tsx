@@ -8,13 +8,14 @@ export function EcommerceShineCards() {
       {pillers.map((pilller, i) => (
         <ShineBorder
           key={i}
-          className="relative flex  w-full flex-col items-center justify-center overflow-hidden rounded-lg"
-          color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+          className="relative  w-full  items-center justify-center overflow-hidden rounded-lg"
+          // color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
         >
-          <div className="cursor-pointer relative rounded-lg overflow-hidden py-4 sm:py-6 px-0 sm:px-4 lg:px-8 bg-cover bg-center bg-no-repeat bg-[url(/images/boost_img.jpg)] ">
+          <div className="cursor-pointer h-full bg-[#D9D9D91A] backdrop-blur-md relative rounded-lg overflow-hidden py-4 sm:py-6 px-0 sm:px-4 lg:px-8 sm:text-center ">
             <span>
               <Image
                 src={innovation}
+                className="mx-auto"
                 width={66}
                 height={66}
                 alt="Innovation image"

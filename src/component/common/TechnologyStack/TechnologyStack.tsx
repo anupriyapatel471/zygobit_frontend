@@ -5,15 +5,15 @@ import React from "react";
 const TechnologyStack = () => {
   return (
     <>
-      <section data-aos="fade-up" className="w-full relative overflow-hidden">
+      <section data-aos="fade-up" className="w-full relative overflow-hidden pb-32 lg:pb-0">
         <div className="container remove-bg">
-          <div className="w-full text-center mb-5 sm:mb-10">
+          <div className="w-full text-center mb-5 sm:mb-36 lg:mb-10">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl text-gradiant-custom">
               Technology Stack
             </h2>
           </div>
-          <div className="w-full flex  justify-between">
-            <div className="relative  flex items-center h-[300px]">
+          <div className="w-full gap-y-[205px] grid grid-cols-3 lg:flex  justify-between">
+            <div className=" relative flex justify-center lg:justify-normal  items-center  lg:h-[300px]">
               <span className="absolute  -z-10 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
                 <img src="/images/line.png" alt="" />
               </span>
@@ -25,7 +25,7 @@ const TechnologyStack = () => {
                 />
               </div>
             </div>
-            <div className="relative flex items-center h-[300px] mt-[200px]">
+            <div className=" relative flex justify-center lg:justify-normal items-center  lg:h-[300px] mt-24 lg:mt-[200px]">
               <span className="absolute  -z-10 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
                 <img src="/images/line.png" alt="" />
               </span>
@@ -37,7 +37,7 @@ const TechnologyStack = () => {
                 />
               </div>
             </div>
-            <div className="relative flex items-center h-[300px]">
+            <div className=" relative flex justify-center lg:justify-normal items-center  lg:h-[300px]">
               <span className="absolute  -z-10 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
                 <img src="/images/line.png" alt="" />
               </span>
@@ -49,7 +49,7 @@ const TechnologyStack = () => {
                 />
               </div>
             </div>
-            <div className="relative flex items-center h-[300px] mt-[200px]">
+            <div className=" relative flex justify-center lg:justify-normal items-center  lg:h-[300px] lg:mt-[200px]">
               <span className="absolute  -z-10 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
                 <img src="/images/line.png" alt="" />
               </span>
@@ -61,7 +61,7 @@ const TechnologyStack = () => {
                 />
               </div>
             </div>
-            <div className="relative flex items-center h-[300px] ">
+            <div className=" relative flex justify-center lg:justify-normal items-center mt-24 lg:h-[300px] ">
               <span className="absolute  -z-10 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
                 <img src="/images/line.png" alt="" />
               </span>
@@ -73,7 +73,7 @@ const TechnologyStack = () => {
                 />
               </div>
             </div>
-            <div className="relative flex items-center h-[300px] mt-[200px]">
+            <div className=" relative flex justify-center lg:justify-normal items-center  lg:h-[300px] lg:mt-[200px]">
               <span className="absolute  -z-10 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
                 <img src="/images/line.png" alt="" />
               </span>
@@ -85,7 +85,7 @@ const TechnologyStack = () => {
                 />
               </div>
             </div>
-            <div className="relative flex items-center h-[300px]">
+            <div className=" relative flex justify-center lg:justify-normal items-center lg:h-[300px]">
               <span className="absolute  -z-10 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
                 <img src="/images/line.png" alt="" />
               </span>
@@ -97,7 +97,7 @@ const TechnologyStack = () => {
                 />
               </div>
             </div>
-            <div className="relative flex items-center h-[300px] mt-[200px]">
+            <div className=" relative flex justify-center lg:justify-normal items-center  lg:h-[300px]  mt-24 lg:mt-[200px]">
               <span className="absolute  -z-10 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
                 <img src="/images/line.png" alt="" />
               </span>

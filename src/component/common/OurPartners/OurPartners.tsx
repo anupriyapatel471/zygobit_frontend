@@ -11,7 +11,7 @@ const OurPartners=()=>{
             <HeroHighlightDemo />
           </div>
   
-          <div className="w-full mt-0 sm:mt-16 lg:mt-[172px] relative z-20">
+          <div className="w-full mt-0 sm:mt-40 lg:mt-[172px] relative z-20">
             <PartnerSlider />
           </div>
         </section>

@@ -34,7 +34,7 @@ export function MagicCardDemo() {
       </MagicCard>
       <MagicCard className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg">
         <div className="flex flex-wrap sm:flex-nowrap gap-y-3 items-center justify-between">
-          <h3 className="w-full order-2 sm:order-none sm:w-[calc(100%-65px)] xl:w-[calc(100%-80px)] text-xl lg:text-xl 2xl:text-2xl font-semibold tracking-tighter">
+          <h3 className="w-full min-h-24 lg:min-h-fit order-2 sm:order-none sm:w-[calc(100%-65px)] xl:w-[calc(100%-80px)] text-xl lg:text-xl 2xl:text-2xl font-semibold tracking-tighter">
             Application Innovators
           </h3>
           <button className="order-1 sm:order-none mb-0 w-[52px] text-white btn-primary bg-gradient-custom">

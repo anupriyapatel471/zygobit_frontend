@@ -8,7 +8,7 @@ import TrustedAcross from "../common/TrustedAcross/TrustedAcross";
 const HomeBanner = () => {
   return (
     <>
-      <section className="w-full h-[650px] sm:h-[775px] lg:h-[900px] relative">
+      <section className="w-full h-[650px] sm:h-[720px] lg:h-[900px] relative">
         <div className="container">
           <div className="absolute top-0 left-0 w-full flex justify-between gap-24 z-10 h-full px-16">
             <div className="w-1 h-full border-r border-[#515151] border-opacity-60 relative">
@@ -32,7 +32,7 @@ const HomeBanner = () => {
           </div>
           {/* bg overlay */}
           <div className="w-full absolute top-20 sm:top-28 left-1/2 -translate-x-1/2  py-5 lg:py-14 z-10 max-w-[1248px] mx-auto">
-            <div className="w-full flex flex-wrap sm:flex-nowrap justify-between">
+            <div className="w-full  px-4 lg:px-0 flex flex-wrap sm:flex-nowrap justify-between">
               <div className="w-full sm:w-3/4 lg:w-[60%]">
                 <div className="w-auto">
                   <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl text-shadow-2xl  text-gradiant-custom pr-10">
@@ -53,7 +53,7 @@ const HomeBanner = () => {
                   </div>
                 </div>
               </div>
-              <div className="sm:w-1/4 lg:w-[60%] absolute top-[90px] right-0">
+              <div className="hidden  lg:inline sm:w-1/4 lg:w-[60%] absolute top-[90px] right-0">
                 <img
                   className="w-[550px]  relative ml-auto object-contain z-20"
                   src="/images/banner_img.png"

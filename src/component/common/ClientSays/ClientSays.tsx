@@ -11,7 +11,7 @@ const ClientSays = ({
     <>
       <section className="w-full inline-block py-12 lg:pt-32 lg:pb-20 overflow-hidden">
         <div className="container remove-bg">
-          <div className="w-full flex gap-16 items-center justify-between">
+          <div className="w-full flex gap-5 lg:gap-16 items-center justify-between">
             <div className="w-1/2">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl text-gradiant-custom mb-2">
                 {clientHeading}
@@ -26,10 +26,10 @@ const ClientSays = ({
                 <div className="absolute top-20 -right-24 -z-20">
                   <img src="/images/square.png" alt="" />
                 </div>
-                <div className="absolute -bottom-14 -left-14 -z-20">
+                <div className="absolute -bottom-4 lg:-bottom-14 -left-14 -z-20">
                   <img src="/images/circle.png" alt="" />
                 </div>
-                <div className="absolute -top-16 left-12 -z-20">
+                <div className="absolute -top-12 lg:-top-16 left-12 -z-20">
                   <img src="/images/ring.png" alt="" />
                 </div>
                 <ClientSaysCards />

@@ -58,7 +58,7 @@ const BusinessCards = () => {
             Revolutionizing Businesses with Excellence & Expertise
           </h2>
         </div>
-        <div className="w-full grid grid-cols-4 gap-5">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:gap-5">
           {solutions.map((solution) => (
             <div
               key={solution.id}

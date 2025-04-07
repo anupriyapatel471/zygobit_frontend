@@ -71,7 +71,7 @@ export function ParticlesCards() {
         {cardData.map((card) => (
           <div
             key={card.id}
-            className="relative px-4 py-4 sm:px-11 sm:py-6 border border-white rounded-lg flex w-full flex-col items-center justify-center overflow-hidden"
+            className="relative bg-[#D9D9D91A] backdrop-blur-md px-4 py-4 sm:px-11 sm:py-6  rounded-lg flex w-full flex-col items-center justify-center overflow-hidden"
           >
             <div className="z-10 whitespace-pre-wrap sm:text-center w-full">
               <span>
@@ -88,13 +88,13 @@ export function ParticlesCards() {
               </h3>
               <p className="text-sm sm:text-base">{card.description}</p>
             </div>
-            <Particles
+            {/* <Particles
               className="absolute size-full inset-0 z-0"
               quantity={100}
               ease={10}
               color={color}
               refresh
-            />
+            /> */}
           </div>
         ))}
       </div>

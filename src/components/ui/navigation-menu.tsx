@@ -69,7 +69,7 @@ const NavigationMenuContent = React.forwardRef<
   <NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
-      "left-0 top-0 bg-[#09090B]/10 backdrop-blur-xl  shadow-lg lg:shadow-none text-popover-foreground lg:text-muted-foreground  w-full  rounded-md lg:rounded-none   md:fixed md:w-screen ",
+      "left-0 top-0 bg-[#09090B] backdrop-blur-2xl  shadow-lg lg:shadow-none text-popover-foreground lg:text-muted-foreground  w-full  rounded-md lg:rounded-none   md:fixed md:w-screen ",
       className
     )}
     {...props}
@@ -109,7 +109,7 @@ const NavigationMenuIndicator = React.forwardRef<
     )}
     {...props}
   >
-    <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border backdrop-blur-2xl shadow-md" />
+    <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-black backdrop-blur-2xl shadow-md" />
   </NavigationMenuPrimitive.Indicator>
 ))
 NavigationMenuIndicator.displayName =
