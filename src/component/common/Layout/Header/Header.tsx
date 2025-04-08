@@ -21,7 +21,7 @@ const Header = () => {
     <>
       <header className="fixed top-0 left-0 w-full bg-[#09090B] backdrop-blur-xl bg-opacity-20 mx-0 z-[9999]">
         <nav
-          className="mx-auto max-w-[1248px] px-4 lg:px-0   py-4  flex  items-center justify-between"
+          className="mx-auto max-w-[1248px] px-4   py-4  flex  items-center justify-between"
           aria-label="Global"
         >
           <div className="w-auto flex gap-[100px] items-center">

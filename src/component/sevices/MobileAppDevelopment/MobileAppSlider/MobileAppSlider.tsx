@@ -45,8 +45,8 @@ export default function MobileAppSlider() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="lg:-left-[180px] lg:-bottom-6 lg:top-auto" />
-      <CarouselNext className="lg:-left-[110px] lg:-bottom-6 lg:top-auto" />
+      <CarouselPrevious className="left-0 sm:-left-[180px] lg:-left-[180px] bottom-auto sm:-bottom-6 lg:-bottom-6 top-1/2 sm:top-auto lg:top-auto" />
+      <CarouselNext className="left-auto right-0 sm:right-auto sm:-left-[110px] lg:-left-[110px] bottom-auto top-1/2 sm:-bottom-6 lg:-bottom-6 sm:top-auto lg:top-auto" />
     </Carousel>
   );
 }

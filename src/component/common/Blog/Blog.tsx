@@ -11,7 +11,7 @@ const Blog = () => {
         <div className="container remove-bg">
           <div
             data-aos="fade-left"
-            className="w-full  sm:text-center px-4 lg:px-0"
+            className="w-full  sm:text-center"
           >
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradient-custom">
               Featured Blogs
@@ -22,7 +22,7 @@ const Blog = () => {
               business and user experience.
             </p>
           </div>
-          <div className="w-full  mt-5 sm:mt-10">
+          <div className="w-full  mt-5 sm:mt-5 lg:mt-10">
             <FeaturedBlog />
           </div>
           <div className="w-full flex justify-center mt-7 sm:mt-10">

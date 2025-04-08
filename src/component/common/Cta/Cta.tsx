@@ -31,7 +31,7 @@ const Cta = ({ content, Aurora, vortex }: ctaProp) => {
             )}
 
             <div className="inter-var py-0 w-full">
-              <div className="w-full pb-5 sm:pb-0 relative bg-[#2D2E34] bg-opacity-20 backdrop-blur-md group/card justify-between items-center border-[#FFFFFF26]  rounded-xl flex-wrap lg:flex-nowrap flex border-2  ">
+              <div className= "overflow-hidden w-full pb-5 sm:pb-0 relative bg-[#2D2E34] bg-opacity-20 backdrop-blur-md group/card justify-between items-center border-[#FFFFFF26]  rounded-xl flex-wrap lg:flex-nowrap flex border-2  ">
                 <div
                   data-aos="fade-right"
                   className="w-full order-2 lg:order-none lg:max-w-3xl p-4  sm:p-5 lg:pr-0 lg:py-12 lg:pl-8"

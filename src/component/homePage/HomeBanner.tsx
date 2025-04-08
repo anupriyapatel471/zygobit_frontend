@@ -8,7 +8,7 @@ import TrustedAcross from "../common/TrustedAcross/TrustedAcross";
 const HomeBanner = () => {
   return (
     <>
-      <section className="w-full h-[650px] sm:h-[720px] lg:h-[900px] relative">
+      <section className="w-full h-[460px] sm:h-[720px] lg:h-[900px] relative">
         <div className="container">
           <div className="absolute top-0 left-0 w-full flex justify-between gap-24 z-10 h-full px-16">
             <div className="w-1 h-full border-r border-[#515151] border-opacity-60 relative">
@@ -23,10 +23,10 @@ const HomeBanner = () => {
             <div className="w-1 h-full border-r border-[#515151] border-opacity-60 relative">
               <div className="absolute top-[70%] left-0 w-2 h-2 rounded-full bg-[#515151]"></div>
             </div>
-            <div className="w-1 h-full border-r border-[#515151] border-opacity-60 relative">
+            <div className="hidden sm:inline  w-1 h-full border-r border-[#515151] border-opacity-60 relative">
               <div className="absolute top-[25%] left-0 w-2 h-2 rounded-full bg-[#515151]"></div>
             </div>
-            <div className="w-1 h-full border-r border-[#515151] border-opacity-60 relative">
+            <div className="hidden sm:inline w-1 h-full border-r border-[#515151] border-opacity-60 relative">
               <div className="absolute top-[80%] left-0 w-2 h-2 rounded-full bg-[#515151]"></div>
             </div>
           </div>
@@ -53,7 +53,7 @@ const HomeBanner = () => {
                   </div>
                 </div>
               </div>
-              <div className="hidden  lg:inline sm:w-1/4 lg:w-[60%] absolute top-[90px] right-0">
+              <div className="hidden lg:inline sm:w-1/4 lg:w-[60%] absolute top-[90px] right-0 order-1 sm:order-n">
                 <img
                   className="w-[550px]  relative ml-auto object-contain z-20"
                   src="/images/banner_img.png"

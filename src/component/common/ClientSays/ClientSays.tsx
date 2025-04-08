@@ -11,16 +11,16 @@ const ClientSays = ({
     <>
       <section className="w-full inline-block py-12 lg:pt-32 lg:pb-20 overflow-hidden">
         <div className="container remove-bg">
-          <div className="w-full flex gap-5 lg:gap-16 items-center justify-between">
-            <div className="w-1/2">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl text-gradiant-custom mb-2">
+          <div className="w-full flex flex-wrap sm:flex-nowrap gap-y-10 sm:gap-5 lg:gap-16 items-center justify-between">
+            <div className="w-full sm:w-1/2">
+              <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom mb-2">
                 {clientHeading}
               </h2>
-              <p className="font-medium text-base lg:text-lg 2xl:text-xl">
+              <p className="sm:font-medium text-sm sm:text-base lg:text-lg 2xl:text-xl">
                 {clientSaysDetails}
               </p>
             </div>
-            <div className="w-1/2 relative">
+            <div className="w-full sm:w-1/2 relative lg:pr-20">
               <div className="w-full relative">
                 <div className="w-full h-[400px] bg-[#FEF8FF36] backdrop-blur-2xl border-[12px] border-white/20 rounded-2xl relative"></div>
                 <div className="absolute top-20 -right-24 -z-20">
@@ -29,7 +29,7 @@ const ClientSays = ({
                 <div className="absolute -bottom-4 lg:-bottom-14 -left-14 -z-20">
                   <img src="/images/circle.png" alt="" />
                 </div>
-                <div className="absolute -top-12 lg:-top-16 left-12 -z-20">
+                <div className="absolute -top-10 sm:-top-12 lg:-top-16 left-12 -z-20">
                   <img src="/images/ring.png" alt="" />
                 </div>
                 <ClientSaysCards />

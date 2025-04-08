@@ -147,7 +147,7 @@ const Ecommerce = () => {
     {
       id: 2,
       content: <SkeletonTwo />,
-      className: "col-span-2 cursor-pointer",
+      className: "md:col-span-2 cursor-pointer",
       title: "Scalable Solutions",
 
       thumbnail: "/images/Scalable_solution.png",
@@ -155,7 +155,7 @@ const Ecommerce = () => {
     {
       id: 3,
       content: <SkeletonThree />,
-      className: "col-span-2 cursor-pointer",
+      className: "md:col-span-2 cursor-pointer",
       title: "User-Centric Design",
 
       thumbnail: "/images/User_centric.png",
@@ -176,9 +176,9 @@ const Ecommerce = () => {
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
       <WeDeliver />
 
-      <section className="w-full pb-12 sm:pb-14 lg:pb-20 lg:pt-12 overflow-hidden">
+      <section className="w-full pb-12 sm:pb-20 lg:pb-20 lg:pt-12 overflow-hidden">
         <div className="container remove-bg">
-          <div className="flex justify-between gap-5">
+          <div className="flex flex-wrap lg:flex-nowrap justify-between gap-5">
             <div className="w-full lg:w-1/2 ">
               <h2 className="text-2xl sm:text-3xl lg:text-[35px] lg:leading-[50px] text-gradiant-custom font-bold">
                 Drive Success with AI Ecommerce Solutions
@@ -200,10 +200,10 @@ const Ecommerce = () => {
         </div>
       </section>
 
-      <section className="w-full bg-[url(/images/cta_bg.png)] bg-cover bg-no-repeat bg-center py-16 ">
+      <section className="w-full bg-[url(/images/cta_bg.png)] bg-cover bg-no-repeat bg-center py-12 sm:py-16 ">
         <div className="container remove-bg">
           <div className="w-full  sm:text-center" data-aos="fade-right">
-            <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl mb-5 sm:mb-12 lg:mb-16">
               Boost your business with AI & ML eCommerce.
             </h2>
           </div>
@@ -221,7 +221,7 @@ const Ecommerce = () => {
 
       <CtaSecond content={""} Aurora={""} vortex={""} />
 
-      <section className="w-full  py-10 sm:py-14 overflow-hidden">
+      <section className="w-full  pt-0 pb-10 lg:py-14 overflow-hidden">
         <div className="container remove-bg">
           <div className="w-full  sm:text-center" data-aos="fade-right">
             <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">

@@ -238,7 +238,7 @@ export const Card = ({
         className="rounded-3xl bg-white bg-opacity-5  w-[18rem]  md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
         <div className="absolute hidden h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
-        <div className="w-full relative z-40 px-4 lg:px-6 py-4 sm:py-12 lg:py-10 border border-white/5 bg-white/5 text-left lg:h-[349px] cursor-default">
+        <div className="w-full relative z-40 px-4 lg:px-6 py-4 sm:py-12 lg:py-10 border border-white/5 bg-white/5 text-left h-[275px] sm:h-auto lg:h-[349px] cursor-default">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
             className="font-semibold relative z-[1111] text-base sm:text-xl lg:text-2xl cursor-text tracking-tighter"

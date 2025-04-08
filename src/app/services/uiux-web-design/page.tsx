@@ -14,7 +14,6 @@ const HeroBanner = dynamic(
   () => import("@/component/common/HeroBanner/HeroBanner")
 );
 
-
 const ClientSays = dynamic(
   () => import("@/component/common/ClientSays/ClientSays")
 );
@@ -157,7 +156,7 @@ const UiuxWebDesign = () => {
     {
       id: 2,
       content: <SkeletonTwo />,
-      className: "col-span-2 cursor-pointer",
+      className: "md:col-span-2 cursor-pointer",
       title: "Scalable Solutions",
 
       thumbnail: "/images/Scalable_solution.png",
@@ -165,7 +164,7 @@ const UiuxWebDesign = () => {
     {
       id: 3,
       content: <SkeletonThree />,
-      className: "col-span-2 cursor-pointer",
+      className: "md:col-span-2 cursor-pointer",
       title: "User-Centric Design",
 
       thumbnail: "/images/User_centric.png",
@@ -189,15 +188,15 @@ const UiuxWebDesign = () => {
 
       <section className="w-full bg-gradient-to-b from-orange-950  to-black py-12 sm:py-14 lg:py-20">
         <div className="container remove-bg">
-          <div className="w-full flex gap-5">
-            <div className="w-[45%]">
+          <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
+            <div className="w-full lg:w-[45%]">
               <BoostBussiness heading={heading} paragraph={paragraph} />
-              <button className="mt-10 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+              <button className="mt-5 lg:mt-10 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
                 Get Assistance{" "}
                 <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
               </button>
             </div>
-            <div className="w-[55%]">
+            <div className="w-full lg:w-[55%]">
               <div className="w-full">
                 <AppleCardsCarousel />
               </div>
@@ -212,20 +211,20 @@ const UiuxWebDesign = () => {
             <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradient-custom">
               We Follow a Comprehensive UI UX Design Process
             </h2>
-            <p className="sm:font-medium  text-base sm:text-xl my-3">
+            <p className="sm:font-medium  text-sm sm:text-xl my-3">
               As a leading mobile UI/UX design services company, we meticulously
               fine-tune every aspect of your project to ensure an exceptional
               user experience that meets business goals and exceeds
               expectations.
             </p>
           </div>
-          <div className=" w-full flex items-center gap-10">
-            <div className="w-32">
-              <h3 className="font-bold text-[32px] text-gradient-custom">
+          <div className=" w-full flex flex-wrap lg:flex-nowrap items-center gap-5 lg:gap-10">
+            <div className="w-full lg:w-32">
+              <h3 className="font-bold text-xl sm:text-2xl lg:text-[32px] text-gradient-custom">
                 UI Design Process
               </h3>
             </div>
-            <div className="w-full grid grid-cols-2 gap-5 mb-8 pb-8 sm:mb-12 sm:pb-12 border-b border-white">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8 pb-8 sm:mb-12 sm:pb-12 border-b border-white">
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
                   <img src="/images/setting_design_icon.svg" alt="" />
@@ -277,13 +276,13 @@ const UiuxWebDesign = () => {
               </div>
             </div>
           </div>
-          <div className=" w-full flex items-center gap-10">
-            <div className="w-32">
-              <h3 className="font-bold text-[32px] text-gradient-custom">
+          <div className=" w-full flex flex-wrap lg:flex-nowrap items-center gap-4 sm:gap-5 lg:gap-10">
+            <div className="w-full lg:w-32">
+              <h3 className="font-bold text-xl sm:text-2xl lg:text-[32px] text-gradient-custom">
                 UX Design Process
               </h3>
             </div>
-            <div className="w-full grid grid-cols-2 gap-5 ">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 ">
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
                   <img src="/images/setting_design_icon.svg" alt="" />
@@ -352,7 +351,7 @@ const UiuxWebDesign = () => {
         </div>
       </section> */}
 
-      <section className="w-full pt-5   sm:pt-10 lg:pt-16">
+      <section className="w-full pt-12 sm:pt-14 lg:pt-16">
         <div
           className="w-full px-4 sm:px-0  sm:text-center"
           data-aos="fade-right"
@@ -416,24 +415,26 @@ const UiuxWebDesign = () => {
 
       <TechnologyStack />
 
-      <section className="w-full sm:pt-10 lg:mt-16 pb-20 lg:pb-32 bg-black">
-        <div className="w-full px-4 lg:px-20 sm:text-center mb-8 sm:mb-12 lg:mb-12">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradiant-custom">
-            Why Zygobit for UI/UX Design?
-          </h2>
-          <p className="sm:font-medium text-sm sm:text-lg lg:text-xl max-w-7xl mx-auto mt-2">
-            Empowering businesses with intuitive, aesthetically pleasing, and
-            user-friendly experiences. Our expert UI/UX designers leverage
-            cutting-edge tools to craft seamless digital journeys that captivate
-            and convert.
-          </p>
-        </div>
-        <div className="w-full px-5 lg:px-24">
-          <MobileAppGrid cards={cards} />
+      <section className="w-full pt-10 sm:pt-10 lg:mt-16 pb-12 sm:pb-20 lg:pb-32 bg-black">
+        <div className="container remove-bg">
+          <div className="w-full  sm:text-center mb-8 sm:mb-12 lg:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom">
+              Why Zygobit for UI/UX Design?
+            </h2>
+            <p className="sm:font-medium text-sm sm:text-lg lg:text-xl max-w-7xl mx-auto mt-2">
+              Empowering businesses with intuitive, aesthetically pleasing, and
+              user-friendly experiences. Our expert UI/UX designers leverage
+              cutting-edge tools to craft seamless digital journeys that
+              captivate and convert.
+            </p>
+          </div>
+          <div className="w-full">
+            <MobileAppGrid cards={cards} />
+          </div>
         </div>
       </section>
 
-      <div className="mt-10 sm:mt-12">
+      <div className="mt-5 sm:mt-12">
         <Blog />
       </div>
 

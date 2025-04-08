@@ -159,7 +159,7 @@ const MachineLearning = () => {
     {
       id: 2,
       content: <SkeletonTwo />,
-      className: "col-span-2 cursor-pointer",
+      className: "md:col-span-2 cursor-pointer",
       title: "Scalable AI Solutions",
 
       thumbnail: "/images/Scalable_solution.png",
@@ -167,7 +167,7 @@ const MachineLearning = () => {
     {
       id: 3,
       content: <SkeletonThree />,
-      className: "col-span-2 cursor-pointer",
+      className: "md:col-span-2 cursor-pointer",
       title: "Intelligent User Experience",
 
       thumbnail: "/images/User_centric.png",
@@ -281,8 +281,8 @@ const MachineLearning = () => {
       <Suspense fallback={<Loader />}>
         <section className="w-full bg-gradient-to-b from-orange-950  to-black py-12 sm:py-14 lg:py-20">
           <div className="container remove-bg">
-            <div className="w-full flex gap-5">
-              <div className="w-[45%]">
+            <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
+              <div className="w-full lg:w-[45%]">
                 <div className="w-full   inline-block">
                   <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] lg:leading-[50px]">
                     Full-Scale AI & Machine Learning Services.
@@ -294,12 +294,12 @@ const MachineLearning = () => {
                     decision-making, providing users with a seamless experience.
                   </p>
                 </div>
-                <button className="mt-10 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                <button className="mt-5 lg:mt-10 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
                   Get Assistance{" "}
                   <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                 </button>
               </div>
-              <div className="w-[55%]">
+              <div className="w-full lg:w-[55%]">
                 <div className="w-full">
                   <AppleCardsCarousel />
                 </div>
@@ -318,7 +318,7 @@ const MachineLearning = () => {
         </div>
       </section> */}
 
-      <section className="w-full px-4 lg:px-11 pb-10 sm:pb-0 pt-10  lg:py-14 overflow-hidden">
+      <section className="w-full  pb-10 sm:pb-0 pt-10  lg:py-14 overflow-hidden">
         <div className="container remove-bg">
           <div className="w-full  sm:text-center" data-aos="fade-right">
             <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
@@ -331,7 +331,7 @@ const MachineLearning = () => {
         </div>
       </section>
       <Suspense fallback={<Loader />}>
-        <section className="w-full mb-14 sm:mb-0 pt-5 sm:pt-16">
+        <section className="w-full mb-0 sm:mb-0 pt-5 sm:pt-16">
           <div className="container remove-bg">
             <div className="w-full  sm:text-center " data-aos="fade-right">
               <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
@@ -349,6 +349,7 @@ const MachineLearning = () => {
           </div>
         </section>
       </Suspense>
+
       <ClientSays
         clientHeading={clientSaysHeading}
         clientSaysDetails={clientSaysDetails}
@@ -356,9 +357,9 @@ const MachineLearning = () => {
 
       <CtaSecond content={""} Aurora={""} vortex={""} />
 
-      <section className="w-full pb-12 sm:pb-14 lg:pb-20 overflow-hidden">
+      <section className="w-full pb-12 sm:pb-16 lg:pb-20 mb-12 lg:mb-0 overflow-hidden">
         <div className="container remove-bg">
-          <div className="flex justify-between gap-5">
+          <div className="flex flex-wrap lg:flex-nowrap justify-between gap-5">
             <div className="w-full lg:w-1/2 ">
               <h2 className="text-2xl sm:text-3xl lg:text-[35px] lg:leading-[50px] text-gradiant-custom font-bold">
                 Select from Our AI & ML-Powered Development Models
@@ -384,16 +385,20 @@ const MachineLearning = () => {
         <TechnologyStack />
       </Suspense>
 
-      <GridBoxes
-        GridBoxesDetail={GridBoxesDetail}
-        GridBoxesHeading={GridBoxesHeading}
-        cards={cards}
-      />
+      <div className="mt-12 sm:mt-0">
+        <GridBoxes
+          GridBoxesDetail={GridBoxesDetail}
+          GridBoxesHeading={GridBoxesHeading}
+          cards={cards}
+        />
+      </div>
 
-      <ClientSays
-        clientHeading={clientSaysHeading}
-        clientSaysDetails={clientSaysDetails}
-      />
+      <div className="-mt-9 sm:-mt-0">
+        <ClientSays
+          clientHeading={clientSaysHeading}
+          clientSaysDetails={clientSaysDetails}
+        />
+      </div>
 
       <Blog />
 

@@ -11,7 +11,7 @@ const stats = [
 const TrustedAcross = () => {
   return (
     <>
-      <section className="w-full  bg-gradient-custom pt-11 sm:pt-52 pb-12 lg:pb-14 px-4 lg:px-24 overflow-hidden">
+      <section className="w-full  bg-gradient-custom pt-11 sm:pt-52 pb-12 lg:pb-14  overflow-hidden">
         <div className="container">
           <div className="w-full  relative inline-block sm:hidden  rounded-lg">
             <div className="w-full border border-[#09090B33] rounded-lg bg-[#fafafa12] ">

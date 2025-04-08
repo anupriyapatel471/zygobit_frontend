@@ -42,8 +42,8 @@ const ClientSaysCards = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="bg-transparent hover:bg-transparent border-none sm:w-auto sm:h-auto sm:top-auto sm:bottom-[82px] sm:left-12 lg:left-16 sm:right-auto" />
-        <CarouselNext className="bg-transparent hover:bg-transparent border-none sm:w-auto sm:h-auto sm:left-auto sm:right-12 lg:right-16 sm:top-auto sm:bottom-[82px]" />
+        <CarouselPrevious className="bg-transparent hover:bg-transparent border-none sm:w-auto sm:h-auto top-auto sm:top-auto bottom-20 sm:bottom-[82px] left-10 sm:left-12 lg:left-16 right-auto sm:right-auto" />
+        <CarouselNext className="bg-transparent hover:bg-transparent border-none sm:w-auto sm:h-auto left-auto sm:left-auto right-10 sm:right-12 lg:right-16 top-auto sm:top-auto bottom-20 sm:bottom-[82px]" />
       </Carousel>
     </div>
   );
