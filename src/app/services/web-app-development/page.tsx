@@ -65,12 +65,12 @@ const CustomWebCards = dynamic(() =>
   ).then((mod) => mod.CustomWebCards)
 );
 
-const ScrollTriggered = dynamic(
-  () =>
-    import(
-      "@/component/sevices/WebAppDevelopment/WebScrollTriggered/WebScrollTriggered"
-    )
-);
+// const ScrollTriggered = dynamic(
+//   () =>
+//     import(
+//       "@/component/sevices/WebAppDevelopment/WebScrollTriggered/WebScrollTriggered"
+//     )
+// );
 import { Metadata } from "next";
 import applicationAgencyData from "../../../utils/content/applicationAgency/webApp.json";
 
