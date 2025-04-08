@@ -32,7 +32,7 @@ export const HoverEffect = ({
         <Link
           href={item?.link}
           key={item?.link}
-          className="relative group  block p-2 h-full w-full"
+          className="relative group  block sm:p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -78,7 +78,7 @@ export const Card = ({
       )}
     >
       <div className="relative z-50 overflow-hidden">
-        <div className="p-4">{children}</div>
+        <div className="sm:p-4">{children}</div>
       </div>
     </div>
   );

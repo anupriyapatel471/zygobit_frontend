@@ -7,15 +7,15 @@ import contactImage from "../../../../public/images/contact_new.png";
 export default function ContactForm() {
   return (
     <>
-      <section className="w-full px-4 lg:px-24 relative overflow-hidden">
+      <section className="w-full  relative overflow-hidden">
         <div className="container remove-bg">
-          <div className="w-full grid items-center   bg-white/5 rounded-2xl grid-cols-1 lg:grid-cols-2 gap-5 p-4 sm:p-5">
+          <div className="w-full grid items-center   bg-white/5 rounded-[40px] grid-cols-1 lg:grid-cols-2 gap-5 p-4 sm:p-5">
             <div
               data-aos="fade-right"
               className="w-auto relative h-[415px] sm:h-[800px]"
             >
               <Image
-                className="w-full rounded-2xl object-cover"
+                className="w-full r rounded-[40px] object-cover"
                 src={contactImage}
                 alt="Space X"
                 fill

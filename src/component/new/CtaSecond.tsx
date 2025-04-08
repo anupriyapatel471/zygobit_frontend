@@ -39,7 +39,7 @@ const CtaSecond = ({ content, Aurora, vortex }: ctaProp) => {
               </div>
               <div
                 // data-aos="fade-left"
-                className="order-1 lg:order-none w-auto mx-auto lg:mx-0"
+                className="hidden lg:inline order-1 lg:order-none w-auto mx-auto lg:mx-0"
               >
                 <img src="/images/cta_circle.png" alt="" />
               </div>

@@ -160,7 +160,7 @@ const MobileAppDevelopment = () => {
     {
       id: 2,
       content: <SkeletonTwo />,
-      className: "col-span-2 cursor-pointer",
+      className: "md:col-span-2 cursor-pointer",
       title: "Scalable Solutions",
 
       thumbnail: "/images/Scalable_solution.png",
@@ -168,7 +168,7 @@ const MobileAppDevelopment = () => {
     {
       id: 3,
       content: <SkeletonThree />,
-      className: "col-span-2 cursor-pointer",
+      className: "md:col-span-2 cursor-pointer",
       title: "User-Centric Design",
 
       thumbnail: "/images/User_centric.png",
@@ -192,15 +192,15 @@ const MobileAppDevelopment = () => {
 
       <section className="w-full bg-gradient-to-b from-orange-950  to-black py-12 sm:py-14 lg:py-20">
         <div className="container remove-bg">
-          <div className="w-full flex gap-5">
-            <div className="w-[45%]">
+          <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
+            <div className="w-full lg:w-[45%]">
               <BoostBussiness heading={heading} paragraph={paragraph} />
               <button className="mt-4 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
                 Get Assistance{" "}
                 <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
               </button>
             </div>
-            <div className="w-[55%]">
+            <div className="w-full lg:w-[55%]">
               <div className="w-full">
                 <AppleCardsCarousel />
               </div>
@@ -225,7 +225,7 @@ const MobileAppDevelopment = () => {
           <div className="w-full">
             <MobileTechnology />
           </div>
-          <div className="w-full flex justify-center mt-5 sm:mt-12">
+          <div className="w-full flex sm:justify-center mt-5 lg:mt-12">
             <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
               Build Your App Today!{" "}
               <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
@@ -236,12 +236,12 @@ const MobileAppDevelopment = () => {
 
       <section className="w-full py-12 sm:py-14 lg:py-20">
         <div className="container remove-bg">
-          <div className="w-full flex gap-10">
-            <div className="w-1/2  mb-9">
+          <div className="w-full flex flex-wrap lg:flex-nowrap gap-6 lg:gap-10">
+            <div className="w-full lg:w-1/2  lg:mb-9">
               <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom">
                 End-to-End Mobile App Development
               </h2>
-              <p className="sm:font-medium text-sm sm:text-base lg:text-xl  mx-auto mt-12 mb-14">
+              <p className="sm:font-medium text-sm sm:text-base lg:text-xl  mx-auto mt-3 sm:mt-5 lg:mt-12 mb-5 lg:mb-14">
                 We create dynamic, feature-rich mobile applications using the
                 latest technologies, ensuring seamless performance across all
                 devices. Whether you need native development for optimal
@@ -253,7 +253,7 @@ const MobileAppDevelopment = () => {
                 <ChevronRight className="group-hover:left-2 w-5 sm:w-auto left-0 relative duration-500 transition-all" />
               </button>
             </div>
-            <div className="w-1/2 bg-[#D9D9D90D] rounded-xl p-5">
+            <div className="w-full lg:w-1/2 bg-[#D9D9D90D] rounded-xl p-5">
               <MobileAppSlider />
             </div>
           </div>

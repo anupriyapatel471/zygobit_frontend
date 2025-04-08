@@ -8,16 +8,40 @@
     bottom: -70px !important;
   }
   .web_next_btn {
-    bottom: -70px !important;
+    bottom: -90px !important;
     right: 44px  !important;
 }
 .web_previous_btn {
-  bottom: -70px  !important;
+  bottom: -90px  !important;
   right: 105px !important;
+}
+.tabsContainer {
+  flex-wrap: nowrap  !important;
+}
+.tabsContainer .tab {
+  width: auto !important;
+  min-width: auto !important;
 }
 }
 
 @media screen and (max-width: 575px) {
+  .web_previous_btn {
+    bottom: -50px  !important;
+    right: 60px !important;
+}
+  
+  .web_next_btn {
+    bottom: -50px !important;
+    right: 0  !important;
+}
+  
+  .tabsContainer {
+    flex-wrap: wrap !important;
+  }
+  .tabsContainer .tab {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
   .no-rotate {
     transform: translateX(0) rotate(0deg) !important;
   }
@@ -32,12 +56,5 @@
   .previous-btn ,.next-btn {
     bottom: -75px !important;
   }
-  .web_next_btn {
-    bottom: -45px !important;
-    right: 30px  !important;
-}
-.web_previous_btn {
-  bottom: -45px  !important;
-  right: 80px !important;
-}
+
 }

@@ -15,7 +15,7 @@ export function EcommerceShineCards() {
             <span>
               <Image
                 src={innovation}
-                className="mx-auto"
+                className="sm:mx-auto"
                 width={66}
                 height={66}
                 alt="Innovation image"

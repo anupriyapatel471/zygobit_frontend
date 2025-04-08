@@ -8,26 +8,25 @@ const Footer = () => {
     { name: "Documentation", url: "#" },
   ];
 
-  const companyLinks = [
-    { name: "About", url: "/about-us" },
-    { name: "Careers", url: "#" },
-    { name: "Blog", url: "/blogs" },
-  ];
+  // const companyLinks = [
+  //   { name: "About", url: "/about-us" },
+  //   { name: "Careers", url: "#" },
+  //   { name: "Blog", url: "/blogs" },
+  // ];
 
-  const contactLinks = [
-    { name: "Github", url: "#" },
-    { name: "Discord", url: "#" },
-    { name: "Twitter", url: "#" },
-  ];
+  // const contactLinks = [
+  //   { name: "Github", url: "#" },
+  //   { name: "Discord", url: "#" },
+  //   { name: "Twitter", url: "#" },
+  // ];
 
   const footerLinks = [
     { title: "Product", links: productLinks },
-    { title: "Company", links: companyLinks },
-    { title: "Contact", links: contactLinks },
+    // { title: "Company", links: companyLinks },
   ];
 
   return (
-    <footer className="w-full inline-block px-4 lg:px-24">
+    <footer className="w-full inline-block">
       <div className="w-full container remove-bg">
         <div className="w-full flex gap-y-7 sm:gap-5 flex-wrap lg:flex-nowrap mt-10 lg:mt-20 mb-10 sm:mb-14 lg:mb-24 justify-between">
           <div className="w-full lg:w-1/4 mb-0 sm:mb-6 lg:mb-0">
@@ -59,6 +58,64 @@ const Footer = () => {
               </ul>
             </div>
           ))}
+          <div className="w-full sm:w-1/4 lg:pl-20">
+            <h6 className="font-semibold text-sm mb-4">Company</h6>
+            <ul className="grid grid-cols-1 space-y-4">
+              <li>
+                <Link
+                  href="/about-us"
+                  className="text-sm text-secondaryText hover:text-white"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="text-sm text-secondaryText hover:text-white"
+                >
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blogs"
+                  className="text-sm text-secondaryText hover:text-white"
+                >
+                  Blog
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="w-full sm:w-1/4 lg:pl-[200px]">
+            <h6 className="font-semibold text-sm mb-4">Contact</h6>
+            <ul className="grid grid-cols-1 space-y-4">
+              <li>
+                <Link
+                  href="#"
+                  className="text-sm text-secondaryText hover:text-white"
+                >
+                  Githu
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="text-sm text-secondaryText hover:text-white"
+                >
+                  Discord
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="text-sm text-secondaryText hover:text-white"
+                >
+                  Twitter
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="w-full pt-4 pb-8 flex flex-wrap gap-y-5 sm:flex-nowrap border-t border-[#2D2E34] sm:border-none justify-between items-center">

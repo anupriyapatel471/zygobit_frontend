@@ -21,24 +21,24 @@ const reasons = [
 ];
 const WhyChooseUs = () => {
   return (
-    <section data-aos="fade-up" className="w-full mb-20">
+    <section data-aos="fade-up" className="w-full mb-12 sm:mb-20">
       <div className="container">
-        <div className="w-full text-center mb-10">
-          <h2 className="font-medium text-4xl">Why Choose Us</h2>
-          <p className="font-medium text-xl mt-5 max-w-3xl mx-auto">
+        <div className="w-full sm:text-center mb-5 sm:mb-10">
+          <h2 className="font-medium text-2xl sm:text-4xl">Why Choose Us</h2>
+          <p className="sm:font-medium text-base sm:text-lg lg:text-xl mt-2 sm:mt-5 max-w-3xl mx-auto">
             More the years, the better the solutions! We have been partnering
             with brands and offering our expertise for more than a decade.
           </p>
         </div>
-        <div className="w-full flex gap-10 items-center">
-          <div className="w-2/5">
+        <div className="w-full flex flex-wrap lg:flex-nowrap gap-5 lg:gap-10 items-center">
+          <div className="w-full lg:w-2/5">
             <img
-              className="w-full max-h-[560px] object-cover"
+              className="w-full max-h-[450px] lg:max-h-[560px] rounded-xl object-cover"
               src="/images/why_choose_us.png"
               alt=""
             />
           </div>
-          <div className="w-3/5">
+          <div className="w-full lg:w-3/5">
             <div className="grid gap-5">
               {reasons.map((reason) => (
                 <div

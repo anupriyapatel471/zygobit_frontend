@@ -136,6 +136,13 @@ export default function NavigationMenuDemo() {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/portfolio" legacyBehavior passHref prefetch>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Portfolio
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );
