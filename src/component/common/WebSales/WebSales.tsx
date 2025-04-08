@@ -33,27 +33,27 @@ export function BoxReveals({ data }: BoxRevealsProps) {
       </BoxReveal> */}
 
       <BoxReveal boxColor={"#EA580C"} duration={0.5}>
-        <h2 className="text-gradient-custom text-2xl sm:text-4xl lg:text-5xl font-bold my-3 sm:mb-5 sm:mt-0 pr-5">
+        <h2 className="text-gradient-custom text-2xl sm:text-3xl lg:text-[38px] lg:leading-[55px] font-bold my-3 sm:mb-5 sm:mt-0 pr-20">
           {data.title1}
           <span className="text-orange-600">{data.title2}</span>
         </h2>
       </BoxReveal>
 
       <BoxReveal boxColor={"#EA580C"} duration={0.5}>
-        <p className="text-sm sm:text-lg lg:text-xl sm:font-medium">
+        <p className="text-sm sm:text-base sm:font-medium">
           {data.description}
         </p>
       </BoxReveal>
 
       <BoxReveal boxColor={"#EA580C"} duration={0.5}>
-        <p className="text-sm sm:text-lg lg:text-xl sm:font-medium">
+        <p className="text-sm sm:text-base sm:font-medium">
           {data.title1}
           {data.subTitle}
         </p>
       </BoxReveal>
 
       <BoxReveal boxColor={"#EA580C"} duration={0.5}>
-        <ul className="list-decimal pl-6 my-4 sm:my-7 space-y-3 sm:font-medium text-sm sm:text-lg lg:text-xl">
+        <ul className="list-decimal pl-6 my-4 sm:my-7 space-y-3 text-sm sm:text-base sm:font-medium">
           {data.features.map((feature: string, index: number) => (
             <li key={index}>{feature}</li>
           ))}

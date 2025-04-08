@@ -6,7 +6,7 @@ import { MagicCardDemo } from "@/component/common/Magiccard/Magiccard";
 import AOSInitializer from "@/component/common/AOSInitializer";
 import boxData1 from "../../utils/content/boxreveals/aboutUsOne.json";
 import boxData2 from "../../utils/content/boxreveals/aboutUsTwo.json";
-import Together from "../../../public/images/together.png";
+import Together from "../../../public/images/about_img.png";
 import meeting from "../../../public/images/meeting.png";
 import RippleBg from "@/component/common/Ripplebg/Ripplebg";
 import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
@@ -16,6 +16,7 @@ import AboutValueCards from "@/components/ui/aboutValueCards";
 import Loader from "@/component/common/Loader/Loader";
 import { Suspense } from "react";
 import { AboutBgParticles } from "@/component/about/AboutBgParticles/AboutBgParticles";
+import { EcommerceShineCards } from "@/component/sevices/Ecommerce/EcommerceShineCards/EcomoerceShineCards";
 
 const WeDeliver = dynamic(
   () => import("@/component/common/WeDeliver/WeDeliver"),
@@ -131,7 +132,7 @@ const About = () => {
     {
       id: 1,
       content: <SkeletonOne />,
-      className: "md:col-span-2 cursor-pointer",
+      className: "md:col-span-3 cursor-pointer",
       title: "Proven AI Expertise",
       thumbnail:
         "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -139,7 +140,7 @@ const About = () => {
     {
       id: 2,
       content: <SkeletonTwo />,
-      className: "col-span-1 cursor-pointer",
+      className: "md:col-span-2 cursor-pointer",
       title: "Scalable AI Solutions",
 
       thumbnail:
@@ -148,16 +149,15 @@ const About = () => {
     {
       id: 3,
       content: <SkeletonThree />,
-      className: "col-span-1 cursor-pointer",
+      className: "md:col-span-2 cursor-pointer",
       title: "Intelligent User Experience",
-
       thumbnail:
         "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       id: 4,
       content: <SkeletonFour />,
-      className: "md:col-span-2 cursor-pointer",
+      className: "md:col-span-3 cursor-pointer",
       title: "Seamless AI Integration",
       thumbnail:
         "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -171,69 +171,77 @@ const About = () => {
       <Suspense fallback={<Loader />}>
         <WeDeliver />
       </Suspense>
+
       <div className="w-full relative">
         <AboutBgParticles />
-        <div className="w-full mb-14 sm:mb-0 px-4 lg:px-24 relative sm:absolute sm:top-10 sm:left-1/2 sm:-translate-x-1/2 inline-block   rounded-lg">
+        <div className="w-full mb-14 sm:mb-0 max-w-[1248px] mx-auto px-4 relative sm:absolute sm:top-10 sm:left-1/2 sm:-translate-x-1/2 inline-block   rounded-lg">
           <div className="w-full border border-[#09090B33] rounded-lg bg-[#fafafa12] ">
             <div className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  max-w-sm mx-auto rounded-lg">
               <RippleBg numCircles={8} />
             </div>
-            <div className=" w-full py-4 sm:py-10 lg:py-16 px-4">
+            <div className=" w-full py-4 sm:py-8 lg:py-16 px-4 lg:px-10">
               <MagicCardDemo />
             </div>
           </div>
         </div>
 
-        <section className="w-full  bg-gradient-custom pt-11 sm:pt-52 pb-12 lg:pb-14 px-4 lg:px-24 overflow-hidden">
-          <div className="w-full mt-0 sm:mt-0 flex flex-wrap sm:flex-nowrap items-center justify-between ">
-            <div
-              className="w-full sm:w-auto sm:max-w-4xl pr-4 lg:pr-0"
-              data-aos="fade-up"
-            >
-              <span className="mb-2 block font-semibold text-base">
-                Trusted Across the Galaxy
-              </span>
-              <p className="sm:font-semibold text-base sm:text-xl lg:text-2xl tracking-tighter">
-                We&apos;ve partnered with forward-thinking brands across
-                multiple industries, delivering innovative solutions through a
-                diverse range of services.
-              </p>
-            </div>
-            <div
-              data-aos="fade-up"
-              className="border-t sm:border-t-0 sm:border-l  border-white mt-6 sm:mt-0 pt-6 sm:py-12  sm:px-12"
-            >
-              <h3 className="text-lg sm:text-xl lg:text-2xl uppercase sm:text-center font-semibold max-w-80">
-                Breaking Barriers Since Day One
-              </h3>
+        <section className="w-full  bg-gradient-custom pt-11 sm:pt-44 lg:pt-52 pb-12 lg:pb-14  overflow-hidden">
+          <div className="container remove-bg">
+            <div className="w-full mt-0 sm:mt-0 flex flex-wrap lg:flex-nowrap gap-5 lg:gap-0 items-center justify-between ">
+              <div
+                className="w-full sm:w-auto sm:max-w-3xl pr-4 lg:pr-0"
+                data-aos="fade-up"
+              >
+                <span className="mb-2 block font-semibold text-base">
+                  Trusted Across the Galaxy
+                </span>
+                <p className="sm:font-semibold text-base sm:text-xl lg:text-2xl tracking-tighter">
+                  We&apos;ve partnered with forward-thinking brands across
+                  multiple industries, delivering innovative solutions through a
+                  diverse range of services.
+                </p>
+              </div>
+              <div
+                data-aos="fade-up"
+                className="w-full lg:w-auto border-t  lg:border-t-0 lg:border-l  border-white mt-0 sm:mt-0 pt-6 lg:py-12  lg:px-12"
+              >
+                <h3 className="text-lg sm:text-xl lg:text-2xl uppercase lg:text-center font-semibold max-w-80">
+                  Breaking Barriers Since Day One
+                </h3>
+              </div>
             </div>
           </div>
         </section>
       </div>
-      <section className="w-full relative px-4 lg:px-24 py-12 lg:py-20">
-        <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap  gap-5 sm:gap-8">
-          <div className="w-full lg:w-1/2">
-            <BoxReveals data={boxData1} />
-          </div>
-          <div className="w-full lg:w-1/2">
-            <Image
-              className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
-              src={Together}
-              alt="Together"
-              width={590}
-              height={753}
-            />
+
+      <section className="w-full relative py-12 lg:py-20">
+        <div className="container remove-bg">
+          <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex items-center flex-wrap lg:flex-nowrap  gap-5 sm:gap-8">
+            <div className="w-full lg:w-1/2">
+              <BoxReveals data={boxData1} />
+            </div>
+            <div className="w-full lg:w-1/2">
+              <Image
+                className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
+                src={Together}
+                alt="Together"
+                width={590}
+                height={753}
+              />
+            </div>
           </div>
         </div>
       </section>
+
       <GridBoxes
         GridBoxesHeading={GridBoxesHeading}
         GridBoxesDetail={GridBoxesDetail}
         cards={cards}
       />
+
       {/* web app sales */}
       <section className="w-full relative px-4 lg:px-24 pb-12 pt-5 sm:py-12 lg:py-20">
-        <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap  gap-5 sm:gap-8">
+        <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex items-center flex-wrap lg:flex-nowrap  gap-5 sm:gap-8">
           <div className="w-full lg:w-1/2">
             <Image
               className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
@@ -243,30 +251,38 @@ const About = () => {
               height={753}
             />
           </div>
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 lg:pl-10">
             <BoxReveals data={boxData2} />
           </div>
         </div>
       </section>
+
       <DeliveringTailored
         deliveringHeading={deliveringHeading}
         deliveringPara={deliveringPara}
       />
-      <section className="w-full px-4 sm:px-0 mb-12 sm:mb-0">
-        <div className="w-full  sm:text-center" data-aos="fade-right">
-          <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
-            Our Values
-          </h2>
-          <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
-            Choose Zygobit for innovative, reliable, and high-quality solutions
-            that drive your business forward with cutting-edge technology and
-            expert support!
-          </p>
+
+      <section className="w-full  mb-0 sm:mb-10 lg:mb-0 pt-10 pb-0 sm:py-12 lg:py-20 relative">
+        <div className="absolute top-0 left-0 w-full h-full -z-10">
+          <img className="w-full h-full object-cover" src="/images/cta_bg.png" alt="" />
         </div>
-        <div className="w-full  max-w-6xl mx-auto">
-          <AboutValueCards />
+        <div className="container remove-bg">
+          <div className="w-full  sm:text-center mb-5 sm:mb-10" data-aos="fade-right">
+            <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
+              Our Values
+            </h2>
+            <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
+              Choose Zygobit for innovative, reliable, and high-quality
+              solutions that drive your business forward with cutting-edge
+              technology and expert support!
+            </p>
+          </div>
+          <div className="w-full">
+            <EcommerceShineCards />
+          </div>
         </div>
       </section>
+
       <ClientSays
         clientHeading={clientSaysHeading}
         clientSaysDetails={clientSaysDetails}

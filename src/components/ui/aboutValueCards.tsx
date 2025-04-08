@@ -20,7 +20,7 @@ export default function AboutValueCards() {
       {cardsData.map((card: CardData, i: number) => (
         <MagicCard
           key={i}
-          className="cursor-pointer relative overflow-hidden py-4 sm:py-6 px-0 sm:px-8 bg-black"
+          className="cursor-pointer relative overflow-hidden py-4 sm:py-6 px-0 sm:px-8 bg-[#D9D9D91A] backdrop-blur-xl"
           gradientColor="#D9D9D955"
         >
           <span>

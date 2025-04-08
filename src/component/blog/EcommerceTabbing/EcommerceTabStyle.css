@@ -43,7 +43,30 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    min-width: 768px;
+    overflow-x: auto;
 }
+
+
+/* Chrome, Safari, Edge */
+.tabsContainer::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tabsContainer::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tabsContainer::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.tabsContainer::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+}
+
 .tab:first-child {
     padding: 8px 30px;
 }
@@ -54,12 +77,12 @@
     margin: 0;
     font-weight: 400;
     font-size: 16px;  
-    border-radius: 20px;
+    border-radius: 10px;
     width: fit-content;
     padding: 8px 15px;
     position: relative;
     cursor: pointer;
-    height: 40px;
+    height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,6 +90,7 @@
     user-select: none;
     color: #fff;  
     flex: auto;
+    min-width: 245px;
 }
 
 .underline {
@@ -83,9 +107,8 @@
     justify-content: center;
     align-items: center;
     flex: 1;  
-    margin: 70px 0 0;
-    border-radius: 40px;
-    background: linear-gradient(to right , #4A1900 , #EA580C);
+    margin: 40px 0 0;
+    border-radius: 0;
 }
 
 @media screen and (max-width:1280px) {
@@ -101,12 +124,17 @@
     .container {
         width: 100%;
     }
+    .nav {
+        overflow-x: auto;
+    }
     .tabsContainer {
         flex-wrap: wrap;
+        min-width: 1965px;
+        overflow-x: auto;
     }
     .tabsContainer .tab {
         width: auto;
-        min-width: auto;
+        min-width: 230px  !important;
         font-size: 16px;
     }
     .iconContainer {
@@ -115,7 +143,19 @@
 }
 
 @media screen and (max-width:575px) {
+    .tabsContainer .tab {
+        min-width: 180px !important;
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    
     .iconContainer {
         border-radius: 20px;
+    }
+    .tabsContainer {
+        flex-wrap: nowrap !important;
+        min-width: 1500px;
+        overflow-y: hidden;
     }
 }

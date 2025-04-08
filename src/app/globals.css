@@ -224,3 +224,19 @@ input[type="number"]::-webkit-outer-spin-button {
   background: transparent !important;
   backdrop-filter: unset !important;
 }
+
+.custom-radius {
+   border-radius: 15px !important;
+}
+
+/* .custom-bg-remove {
+  background-color: #00000014 !important;
+  background: #00000014 !important;
+  backdrop-filter: blur(35px) !important;
+  -webkit-backdrop-filter: blur(35px) !important;
+} */
+/* 
+.backdrop-blur-xl {
+  --tw-backdrop-blur: blur(35px) !important;
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast);
+} */
