@@ -25,25 +25,25 @@ import { Metadata } from "next";
 import { BannerGridBg } from "@/component/common/HeroBanner/BannerGridBg/BannerGridBg";
 
 export const metadata: Metadata = {
-  title: "Ecommerce",
-  description: "Zygibit Website Ecommerce Page",
+  title: "",
+  description: "Zygibit Website Portfolio page",
   keywords:
-    "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development , Portfolio",
   openGraph: {
-    title: "Ecommerce",
-    description: "Zygibit Website Ecommerce Page",
+    title: "Portfolio",
+    description: "Zygibit Website Portfolio Page",
     images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
   },
   twitter: {
-    title: "Ecommerce",
+    title: "Portfolio",
     description: "Zygibit Website Ecommerce Page",
     images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },
 };
-const Ecommerce = () => {
+const Portfolio = () => {
   const heroHeading = "Our Portfolio";
 
   return (
@@ -343,4 +343,4 @@ const Ecommerce = () => {
   );
 };
 
-export default Ecommerce;
+export default Portfolio;

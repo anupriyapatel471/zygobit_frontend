@@ -9,10 +9,7 @@ const Blog = () => {
     <>
       <section className="w-full mt-5 sm:mt-0  mb-12 sm:mb-16 overflow-hidden">
         <div className="container remove-bg">
-          <div
-            data-aos="fade-left"
-            className="w-full  sm:text-center"
-          >
+          <div data-aos="fade-left" className="w-full  sm:text-center">
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradient-custom">
               Featured Blogs
             </h2>

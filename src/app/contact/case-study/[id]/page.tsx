@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Amplify } from "aws-amplify";
-import outputs from "../../../../amplify_outputs.json";
+import outputs from "../../../../../amplify_outputs.json";
 import { generateClient } from "aws-amplify/data";
 import ClientCaseStudy from "@/component/clientCaseStudy/ClientCaseStudy";
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 export const revalidate = 60;
 
 Amplify.configure(outputs);

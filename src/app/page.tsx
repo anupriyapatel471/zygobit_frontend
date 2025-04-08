@@ -1,42 +1,83 @@
-import dynamic from "next/dynamic";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export const dynamic = "force-static";
+
+import dynamicImp from "next/dynamic";
 import AOSInitializer from "@/component/common/AOSInitializer";
 import { SparklesHeading } from "@/component/homePage/Sparkleheading/Sparkleheading";
 import { ourExpertiseData } from "../component/homePage/OurExpertise";
 import React from "react";
 
-const HomeBanner = dynamic(() => import("@/component/homePage/HomeBanner"));
-const FeaturedProjects = dynamic(
+const HomeBanner = dynamicImp(() => import("@/component/homePage/HomeBanner"));
+const FeaturedProjects = dynamicImp(
   () => import("@/component/homePage/FeaturedProjects")
 );
-const BusinessCards = dynamic(
+const BusinessCards = dynamicImp(
   () => import("@/component/homePage/Businesscards/Businesscards")
 );
 
-const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
+const Cta = dynamicImp(() => import("@/component/common/Cta/Cta"));
 
-// const HeroParalax = dynamic(
+// const HeroParalax = dynamicImp(
 //   () => import("@/component/common/HeroParallax/HeroParallax")
 // );
-const TechnologyStack = dynamic(
+const TechnologyStack = dynamicImp(
   () => import("@/component/common/TechnologyStack/TechnologyStack")
 );
-const Blog = dynamic(() => import("@/component/common/Blog/Blog"));
-const ContactForm = dynamic(
+const Blog = dynamicImp(() => import("@/component/common/Blog/Blog"));
+const ContactForm = dynamicImp(
   () => import("@/component/common/ContactForm/ContactForm")
 );
-const ClientSays = dynamic(
+const ClientSays = dynamicImp(
   () => import("@/component/common/ClientSays/ClientSays")
 );
-const OurPartners = dynamic(
+const OurPartners = dynamicImp(
   () => import("@/component/common/OurPartners/OurPartners")
 );
 import { Metadata } from "next";
 import WhyChooseUs from "@/component/new/WhyChooseUs";
+import { generateClient } from "aws-amplify/data";
 
 export const metadata: Metadata = {
   title: "Home",
   description: "Zygibit Website Home Page",
+  keywords:
+    "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+  openGraph: {
+    title: "Home",
+    description: "Zygibit Website Home Page",
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
+    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+  },
+  twitter: {
+    title: "Home",
+    description: "Zygibit Website Home Page",
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
+    card: "summary_large_image",
+    creator: "Teqexpert",
+  },
 };
+
+async function fetchFeaturedProjects(id?: string) {
+  const client = generateClient();
+  try {
+    const filter = id ? { filter: { id: { eq: id } } } : {};
+    const res = await (client.models as any).Projects.list(filter);
+    console.log("res", res);
+    if (id) {
+      return res.data && res.data.length > 0 ? res.data[0] : null;
+    }
+    return res.data || [];
+  } catch (error) {
+    console.error("Error fetching featured projects:", error);
+    throw error;
+  }
+}
+
+export async function generateStaticParams() {
+  const projects = await fetchFeaturedProjects();
+  console.log("projects", projects);
+  return projects.map((project: any) => ({ id: project.id.toString() }));
+}
 
 const Home = () => {
   const clientHeading = "Lets’s Hear What Our Clients Say";
