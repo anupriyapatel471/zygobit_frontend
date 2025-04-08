@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
       description: project?.description || "Zygobit Featured Projects",
       images:
         project?.image ||
-        "https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png",
+        "https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg",
       url: `https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/case-study/${params.id}`,
     },
     twitter: {
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
       description: project?.description || "Zygobit Featured Projects",
       images:
         project?.image ||
-        "https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png",
+        "https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg",
       card: "summary_large_image",
       creator: "Teqexpert",
     },
