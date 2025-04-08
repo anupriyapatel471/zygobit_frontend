@@ -41,12 +41,12 @@ export function MovingBorders({ selectedCategory }: MovingBordersProps) {
             <Link href={`/blogs/${card.id}`}>
               <Button
                 key={card.id}
-                className="bg-white/5 cursor-pointer rounded-2xl overflow-hidden backdrop-blur-lg text-white border  border-[#7C2D12]"
+                className="bg-white/5 cursor-pointer rounded-2xl overflow-hidden backdrop-blur-lg text-white border-2  border-[#444444] custom-radius"
               >
                 <div className="w-full overflow-hidden relative h-[184px]">
-                  <Image src={card.image} alt="BlogCard" fill />
+                  <Image src={card.image} className="object-cover" alt="BlogCard" fill />
                 </div>
-                <div className="w-full text-left p-4 sm:px-6 sm:py-5">
+                <div className="w-full text-left p-4 sm:px-4 sm:py-5">
                   <div className="w-full flex justify-between">
                     <span className="block w-fit py-1 px-2 rounded-sm bg-white  text-[#431407] font-medium text-[10px]">
                       {card.category}
@@ -65,7 +65,7 @@ export function MovingBorders({ selectedCategory }: MovingBordersProps) {
                   <h3 className="sm:font-bold text-base mt-2 sm:mt-3 mb-2 sm:mb-4">
                     {truncateText(card.title, 70)}
                   </h3>
-                  <p className="text-sm">
+                  <p className="text-sm line-clamp-2">
                     {truncateText(card.description, 100)}
                   </p>
                 </div>

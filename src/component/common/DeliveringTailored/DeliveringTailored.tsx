@@ -22,7 +22,7 @@ const DeliveringTailored: React.FC<DeliveringTailoredProps> = ({
           className="w-full px-4 sm:px-0  sm:text-center"
           data-aos="fade-right"
         >
-          <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
+          <h2 className="text-gradiant-custom font-bold text-2xl sm:text-3xl lg:text-[38px] mb-2 sm:mb-6">
             {deliveringHeading}
           </h2>
           <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">

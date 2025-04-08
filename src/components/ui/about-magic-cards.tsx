@@ -81,10 +81,10 @@ export default function MagicCard({
       ref={cardRef}
       className={cn("group relative bg-black flex size-full rounded-xl", className)}
     >
-      <div className="absolute inset-px z-10 rounded-xl bg-black" />
-      <div className="absolute top-0 left-0 size-full z-[11] p-[2px]">
+      <div className="absolute  z-10 rounded-xl" />
+      {/* <div className="absolute top-0 left-0 size-full z-[11] p-[2px]">
         <Image src={newMoon} fill className="rounded-lg object-cover" alt="New Moon" />
-        </div>
+        </div> */}
       <div className="relative z-[111]">{children}</div>
       <motion.div
         className="pointer-events-none absolute inset-px z-[111] rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -96,7 +96,7 @@ export default function MagicCard({
         }}
       />
       <motion.div
-        className="pointer-events-none absolute inset-0 rounded-xl bg-border duration-300 group-hover:opacity-100"
+        className="pointer-events-none absolute inset-0 rounded-xl bg-[#D9D9D91A] backdrop-blur-xl duration-300 group-hover:opacity-100"
         style={{
           background: useMotionTemplate`
             radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px,

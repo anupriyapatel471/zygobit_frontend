@@ -31,7 +31,7 @@ const BlogPage = () => {
       <AOSInitializer />
       <BlogSection />
       <section className="w-full mt-9 mb-16">
-        <div className="w-full px-4 lg:px-0">
+        <div className="w-full">
           <EcommerceTabbing />
         </div>
       </section>

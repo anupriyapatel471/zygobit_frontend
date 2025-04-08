@@ -90,12 +90,12 @@ const Header = () => {
 
         <div
           x-show="open"
-          className={`${isMenuOpen ? "active" : "hidden"} mobile-view`}
+          className={`${isMenuOpen ? "active" : "hidden"} mobile-view h-screen`}
           role="dialog"
           aria-modal="true"
         >
           <div className="fixed overlay inset-0 z-30 bg-white/70"></div>
-          <div className="side-content w-full fixed inset-y-0 left-0 z-30  overflow-y-auto bg-black p-4 sm:px-6 sm:py-6  sm:ring-1 sm:ring-gray-900/10">
+          <div className="side-content overflow-hidden w-full fixed inset-y-0 left-0 z-30  overflow-y-auto bg-black p-4 sm:px-4 sm:py-4  sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <Link
                 href="/"
