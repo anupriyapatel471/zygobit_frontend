@@ -26,12 +26,6 @@ export function BoxReveals({ data }: BoxRevealsProps) {
 
   return (
     <div className="size-full  items-center justify-center overflow-hidden pt-0">
-      {/* <BoxReveal boxColor={"#EA580C"} duration={0.5}>
-        <span className="sm:font-medium text-base sm:text-xl lg:text-2xl ">
-          10X Your eCommerce Sales Growth!
-        </span>
-      </BoxReveal> */}
-
       <BoxReveal boxColor={"#EA580C"} duration={0.5}>
         <h2 className="text-gradient-custom text-2xl sm:text-3xl lg:text-[38px] lg:leading-[55px] font-bold my-3 sm:mb-5 sm:mt-0 pr-20">
           {data.title1}

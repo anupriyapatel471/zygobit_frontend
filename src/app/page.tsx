@@ -43,26 +43,78 @@ export interface BlogPost {
   tags: string[];
 }
 
+// export const metadata: Metadata = {
+//   title: "Home",
+//   description: "Zygibit Website Home Page",
+//   keywords:
+//     "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+//   openGraph: {
+//     title: "Home",
+//     description: "Zygibit Website Home Page",
+//     images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
+//     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+//   },
+//   twitter: {
+//     title: "Home",
+//     description: "Zygibit Website Home Page",
+//     images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
+//     card: "summary_large_image",
+//     creator: "Teqexpert",
+//   },
+// };
+
 export const metadata: Metadata = {
-  title: "Home",
-  description: "Zygibit Website Home Page",
+  title: "Zygibit - Software Development & IT Solutions",
+  description:
+    "Zygibit offers professional web and mobile app development, UI/UX design, and AI solutions. Transform your business with our expert IT services.",
   keywords:
-    "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "Web Development, Mobile Apps, UI/UX Design, AI Solutions, Software Development, IT Services",
   openGraph: {
-    title: "Home",
-    description: "Zygibit Website Home Page",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
+    type: "website",
+    title: "Zygibit - Software Development & IT Solutions",
+    description:
+      "Professional software development and IT solutions for businesses",
     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+    siteName: "Zygibit",
+    images: [
+      {
+        url: "https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Zygibit Logo",
+      },
+    ],
+    locale: "en_US",
   },
   twitter: {
-    title: "Home",
-    description: "Zygibit Website Home Page",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     card: "summary_large_image",
-    creator: "Teqexpert",
+    title: "Zygibit - Software Development & IT Solutions",
+    description:
+      "Professional software development and IT solutions for businesses",
+    images: [
+      {
+        url: "https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Zygibit Logo",
+      },
+    ],
+    creator: "@zygibit",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
   },
 };
-
 async function fetchFeaturedProjects(id?: string) {
   const client = generateClient();
   try {

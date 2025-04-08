@@ -19,20 +19,19 @@ const reviews = [
 
 const ReviewCard = ({ img }: { img: string }) => {
   return (
-    <figure className={cn("relative w-auto cursor-pointer overflow-hidden mr-10")}>
+    <figure
+      className={cn("relative w-auto cursor-pointer overflow-hidden mr-10")}
+    >
       <div className="flex flex-row items-center gap-2">
-        {/* <img className="w-auto" alt="" src={img} /> */}
         <Image
           src={img}
           alt="Review Image"
-          width={150} 
+          width={150}
           height={110}
           className="w-[100px] h-[40px] object-contain"
-          // layout="responsive "
         />
       </div>
     </figure>
-    
   );
 };
 

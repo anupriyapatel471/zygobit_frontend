@@ -38,13 +38,11 @@ export default function ScrollLinked() {
           <li key={index} style={{ background: "transparent" }}>
             <div className="w-full relative py-10 px-16 border border-white overflow-hidden rounded-2xl">
               <div className="absolute top-0 left-0 w-full h-full -z-10">
-                {/* <img className="w-full h-full" src="/images/fire.png" alt="" /> */}
                 <Image
                   src={fire}
                   alt="Fire Background"
                   height={30}
                   width={30}
-                  // priority
                 />
               </div>
               <h3 className="font-semibold text-2xl">{item.title}</h3>

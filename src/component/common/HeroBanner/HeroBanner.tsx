@@ -12,7 +12,6 @@ const HeroBanner = ({
 }) => {
   return (
     <>
-      {/* Hero banner */}
       <section className="w-full relative pt-16 sm:pt-32">
         <div className="container remove-bg">
           <div className="w-full h-full absolute z-10 top-0 left-0 ">

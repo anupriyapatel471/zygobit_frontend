@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
 import { useEffect, useState } from "react";
@@ -46,13 +46,9 @@ const reviews = [
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
-
-
 const ReviewCard = ({
   img,
   name,
-  // username,
-  // body,
 }: {
   img: string;
   name: string;
@@ -62,7 +58,7 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative h-20 w-20 cursor-pointer overflow-hidden rounded-xl border-4 border-white/20",
+        "relative h-20 w-20 cursor-pointer overflow-hidden rounded-xl border-4 border-white/20"
       )}
     >
       <div className="flex w-full h-full flex-row items-center relative justify-center">
@@ -78,20 +74,15 @@ const ReviewCard = ({
 };
 
 export default function MarqueeVertical() {
-
-  const [vertical,setVertical] = useState(true)
+  const [vertical, setVertical] = useState(true);
 
   useEffect(() => {
-    // Function to check if the screen width matches mobile screen sizes
     const checkMobileScreen = () => {
       setVertical(!window.matchMedia("(max-width: 768px)").matches);
     };
-     checkMobileScreen();
- 
-    // Add event listener for screen resizing
+    checkMobileScreen();
     window.addEventListener("resize", checkMobileScreen);
- 
-    // Cleanup listener on component unmount
+
     return () => {
       window.removeEventListener("resize", checkMobileScreen);
     };
@@ -99,22 +90,32 @@ export default function MarqueeVertical() {
 
   return (
     <div className="relative lg:flex h-[380px] w-full flex-row items-center justify-center overflow-hidden ">
-      <Marquee pauseOnHover vertical = {vertical} className="[--duration:10s]">
+      <Marquee pauseOnHover vertical={vertical} className="[--duration:10s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover vertical = {vertical} className="[--duration:10s]">
+      <Marquee
+        reverse
+        pauseOnHover
+        vertical={vertical}
+        className="[--duration:10s]"
+      >
         {secondRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <Marquee pauseOnHover vertical = {vertical} className="[--duration:10s]">
+      <Marquee pauseOnHover vertical={vertical} className="[--duration:10s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover vertical = {vertical} className="[--duration:10s]">
+      <Marquee
+        reverse
+        pauseOnHover
+        vertical={vertical}
+        className="[--duration:10s]"
+      >
         {secondRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}

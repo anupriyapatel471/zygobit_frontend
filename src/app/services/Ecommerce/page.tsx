@@ -1,9 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
 import { EcommerceShineCards } from "@/component/sevices/Ecommerce/EcommerceShineCards/EcomoerceShineCards";
-import { ThreeDCards } from "@/component/sevices/MobileAppDevelopment/ThreedCards/ThreedCards";
-import { MobileAppGrid } from "@/component/common/MobileAppGrid/MobileAppGrid";
 import { WebSlider } from "@/component/sevices/Common/WebSlider/WebSlider";
 import AOSInitializer from "@/component/common/AOSInitializer";
 const FaqSection = dynamic(
@@ -11,12 +8,6 @@ const FaqSection = dynamic(
 );
 const ClientSays = dynamic(
   () => import("@/component/common/ClientSays/ClientSays")
-);
-const ApplicationAgeny = dynamic(
-  () => import("@/component/sevices/Common/ApplicationAgeny/ApplicationAgeny")
-);
-const DeliveringTailored = dynamic(
-  () => import("@/component/common/DeliveringTailored/DeliveringTailored")
 );
 const HeroBanner = dynamic(
   () => import("@/component/common/HeroBanner/HeroBanner")
@@ -26,7 +17,6 @@ const WeDeliver = dynamic(
   () => import("@/component/common/WeDeliver/WeDeliver"),
   { ssr: false }
 );
-const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
 const FeaturedSlider = dynamic(
   () => import("@/component/common/Featuredslider/Featuredslider")
 );
@@ -41,14 +31,13 @@ const ContactForm = dynamic(
 const TechnologyStack = dynamic(
   () => import("@/component/common/TechnologyStack/TechnologyStack")
 );
-import applicationAgencyData from "../../../utils/content/applicationAgency/ecommerce.json";
-
 import { Metadata } from "next";
 import engagementModelsEcomerce from "../../../utils/content/webSlider/ecommerce.json";
 
 import faqEcommerceData from "../../../utils/content/faq/faqEcommerce.json";
 import CtaSecond from "@/component/new/CtaSecond";
 import { Suspense } from "react";
+import Loader from "@/component/common/Loader/Loader";
 
 export const metadata: Metadata = {
   title: "Ecommerce",
@@ -77,103 +66,12 @@ const Ecommerce = () => {
   const heroParagraph =
     "We build powerful and scalable e-commerce solutions tailored to your business needs. From custom store development to seamless integrations, our team ensures your online store is optimized for performance, conversions, and user experience.";
 
-  const SkeletonOne = () => {
-    return (
-      <div>
-        <p className="font-bold md:text-4xl text-xl text-white">
-          Proven Expertise
-        </p>
-        <p className="font-normal text-base text-white"></p>
-        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          Years of experience delivering high-quality UI/UX designs that enhance
-          user engagement and satisfaction.
-        </p>
-      </div>
-    );
-  };
-
-  const SkeletonTwo = () => {
-    return (
-      <div>
-        <p className="font-bold md:text-4xl text-xl text-white">
-          Scalable Solutions
-        </p>
-        <p className="font-normal text-base text-white"></p>
-        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          Designs that grow with your business, ensuring a seamless experience
-          across all user touchpoints.
-        </p>
-      </div>
-    );
-  };
-  const SkeletonThree = () => {
-    return (
-      <div>
-        <p className="font-bold md:text-4xl text-xl text-white">
-          User-Centric Design
-        </p>
-        <p className="font-normal text-base text-white"></p>
-        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          A human-first approach that prioritizes usability, accessibility, and
-          intuitive navigation.
-        </p>
-      </div>
-    );
-  };
-  const SkeletonFour = () => {
-    return (
-      <div>
-        <p className="font-bold md:text-4xl text-xl text-white">
-          Seamless Interactions
-        </p>
-        <p className="font-normal text-base text-white"></p>
-        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          Smooth, responsive, and engaging experiences that keep users connected
-          and satisfied.
-        </p>
-      </div>
-    );
-  };
-
-  const cards = [
-    {
-      id: 1,
-      content: <SkeletonOne />,
-      className: "md:col-span-3 cursor-pointer",
-      title: "Proven Expertise",
-      thumbnail: "/images/Proven_expertise.png",
-    },
-    {
-      id: 2,
-      content: <SkeletonTwo />,
-      className: "md:col-span-2 cursor-pointer",
-      title: "Scalable Solutions",
-
-      thumbnail: "/images/Scalable_solution.png",
-    },
-    {
-      id: 3,
-      content: <SkeletonThree />,
-      className: "md:col-span-2 cursor-pointer",
-      title: "User-Centric Design",
-
-      thumbnail: "/images/User_centric.png",
-    },
-    {
-      id: 4,
-      content: <SkeletonFour />,
-      className: "md:col-span-3 cursor-pointer",
-      title: "Seamless Interactions",
-      thumbnail: "/images/seamless_interaction.jpg",
-    },
-  ];
-
   return (
     <>
       <AOSInitializer />
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
-      <Suspense fallback="Loading...">
+      <Suspense fallback={<Loader />}>
         <WeDeliver />
       </Suspense>
 
@@ -234,7 +132,7 @@ const Ecommerce = () => {
               masterpiece.
             </p>
           </div>
-          <Suspense fallback="Loading...">
+          <Suspense fallback={<Loader />}>
             <div data-aos="fade-up">
               <FeaturedSlider />
             </div>
@@ -243,10 +141,10 @@ const Ecommerce = () => {
       </section>
 
       <OurPartners />
-      <Suspense fallback="Loading...">
+      <Suspense fallback={<Loader />}>
         <Blog />
       </Suspense>
-      <Suspense fallback="Loading...">
+      <Suspense fallback={<Loader />}>
         <TechnologyStack />
 
         <ClientSays
@@ -258,46 +156,6 @@ const Ecommerce = () => {
       <FaqSection faqData={faqEcommerceData} />
 
       <ContactForm />
-
-      {/* <ApplicationAgeny data={applicationAgencyData} />
-
-      <DeliveringTailored
-        deliveringHeading={deliveringHeading}
-        deliveringPara={deliveringPara}
-      />
-
-      <Cta Aurora={"Aurora"} vortex={""} content={"Globe"} />
-
-      <section className="w-full lg:mt-10 inline-block">
-        <div className="w-full px-4 lg:px-0 sm:text-center mb-8 sm:mb-16">
-          <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl ">
-            E-Commerce App Development Success
-          </h2>
-          <p className="text-sm sm:text-lg lg:text-xl sm:font-medium mt-2">
-            Ideal for small to large businesses that need an ecommerce app
-            development solution to sell online!
-          </p>
-        </div>
-        <div className="w-full px-4 lg:px-[167px]">
-          <ThreeDCards />
-        </div>
-      </section>
-
-      <section className="w-full pt-12 sm:pt-10 pb-12 lg:pb-16 lg:pt-16">
-        <div className="w-full px-4 lg:px-20 sm:text-center mb-8 sm:mb-12 lg:mb-12">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradiant-custom">
-            How Zygobit Drives E-Commerce Success
-          </h2>
-          <p className="sm:font-medium text-sm sm:text-lg lg:text-xl max-w-7xl mx-auto mt-2">
-            Zygobit delivers expert app development, integrating innovative
-            features to enhance user experience, boost sales, and ensure
-            seamless performance for your e-commerce business.
-          </p>
-        </div>
-        <div className="w-full px-5 lg:px-24">
-          <MobileAppGrid cards={cards} />
-        </div>
-      </section> */}
     </>
   );
 };

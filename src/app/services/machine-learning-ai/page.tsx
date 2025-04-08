@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
 import AOSInitializer from "@/component/common/AOSInitializer";
@@ -10,7 +9,6 @@ const Blog = dynamic(() => import("@/component/common/Blog/Blog"));
 const ContactForm = dynamic(
   () => import("@/component/common/ContactForm/ContactForm")
 );
-const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
 const FaqSection = dynamic(
   () => import("@/component/sevices/Common/FaqSection/FaqSection")
 );
@@ -19,14 +17,6 @@ const FeaturedSlider = dynamic(
 );
 const HeroBanner = dynamic(
   () => import("@/component/common/HeroBanner/HeroBanner")
-);
-// const WebDevProcess = dynamic(
-//   () => import("@/component/sevices/Common/WebDevProcess/WebDevProcess")
-// );
-const ShineBorderCards = dynamic(() =>
-  import(
-    "@/component/sevices/MachineLearning/ShineBorderCards/ShineBorderCards"
-  ).then((mod) => mod.ShineBorderCards)
 );
 const AwareHoverCards = dynamic(() =>
   import(
@@ -180,98 +170,10 @@ const MachineLearning = () => {
       thumbnail: "/images/seamless_interaction.jpg",
     },
   ];
-
-  // const webDevData = [
-  //   {
-  //     title: "Ideation",
-  //     content: (
-  //       <div>
-  //         <p className="text-white text-xs md:text-sm lg:text-xl font-semibold mb-6">
-  //           At Zygobit, our web application development journey starts with
-  //           creative idea generation, brainstorming sessions, and thorough
-  //           validation to ensure the application aligns with innovative
-  //           concepts.
-  //         </p>
-  //         <div className="flex">
-  //           <Image
-  //             src={"/images/why_two.svg"}
-  //             alt="hero template"
-  //             width={500}
-  //             height={500}
-  //             className="rounded-lg object-cover h-20 md:h-44 lg:h-[340px]  ml-auto w-full lg:w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-  //           />
-  //         </div>{" "}
-  //       </div>
-  //     ),
-  //   },
-  //   {
-  //     title: "Competitive Analysis",
-  //     content: (
-  //       <div>
-  //         <p className="text-white text-xs md:text-sm lg:text-xl font-semibold mb-6">
-  //           In this stage, our team conducts a well-structured strategy, gathers
-  //           market insights, and performs a comprehensive competitive analysis
-  //           to position your app effectively.
-  //         </p>
-  //         <div className="flex">
-  //           <Image
-  //             src={"/images/why_two.svg"}
-  //             alt="hero template"
-  //             width={500}
-  //             height={500}
-  //             className="rounded-lg object-cover h-20 md:h-44 lg:h-[340px]  ml-auto w-full lg:w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-  //           />
-  //         </div>
-  //       </div>
-  //     ),
-  //   },
-  //   {
-  //     title: "Development & Integration",
-  //     content: (
-  //       <div>
-  //         <p className=" text-xs md:text-sm lg:text-xl  font-semibold mb-6">
-  //           Our expert developers implement scalable architectures, AI-driven
-  //           features, and seamless integrations, ensuring an efficient and
-  //           high-performing application.
-  //         </p>
-  //         <div className="flex">
-  //           <Image
-  //             src={"/images/why_three.svg"}
-  //             alt="hero template"
-  //             width={500}
-  //             height={500}
-  //             className="rounded-lg object-cover h-20 md:h-44 lg:h-[340px] w-full lg:w-full ml-auto shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-  //           />
-  //         </div>
-  //       </div>
-  //     ),
-  //   },
-  //   {
-  //     title: "Deployment & Optimization",
-  //     content: (
-  //       <div>
-  //         <p className=" text-xs md:text-sm lg:text-xl  font-semibold mb-6">
-  //           Once developed, we conduct rigorous testing, optimize performance,
-  //           and deploy the application, ensuring it delivers seamless user
-  //           experiences and scalability.
-  //         </p>
-  //         <div className="flex">
-  //           <Image
-  //             src={"/images/why_three.svg"}
-  //             alt="hero template"
-  //             width={500}
-  //             height={500}
-  //             className="rounded-lg object-cover h-20 md:h-44 lg:h-[340px] w-full lg:w-full ml-auto shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-  //           />
-  //         </div>
-  //       </div>
-  //     ),
-  //   },
-  // ];
-
   return (
     <>
       <AOSInitializer />
+
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
       <Suspense fallback={<Loader />}>
         <WeDeliver />
@@ -307,28 +209,20 @@ const MachineLearning = () => {
           </div>
         </section>
       </Suspense>
-
-      {/* <section
-        data-aos="fade-up"
-        className="w-full pt-10 sm:pt-16 bg-black relative"
-      >
-        <div className="w-full">
-          <WebDevProcess data={webDevData} />
-        </div>
-      </section> */}
-
-      <section className="w-full  pb-10 sm:pb-0 pt-10  lg:py-14 overflow-hidden">
-        <div className="container remove-bg">
-          <div className="w-full  sm:text-center" data-aos="fade-right">
-            <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
-              Featured UI UX Design Case Studies
-            </h2>
+      <Suspense fallback={<Loader />}>
+        <section className="w-full  pb-10 sm:pb-0 pt-10  lg:py-14 overflow-hidden">
+          <div className="container remove-bg">
+            <div className="w-full  sm:text-center" data-aos="fade-right">
+              <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
+                Featured UI UX Design Case Studies
+              </h2>
+            </div>
+            <div data-aos="fade-up">
+              <FeaturedSlider />
+            </div>
           </div>
-          <div data-aos="fade-up">
-            <FeaturedSlider />
-          </div>
-        </div>
-      </section>
+        </section>
+      </Suspense>
       <Suspense fallback={<Loader />}>
         <section className="w-full mb-0 sm:mb-0 pt-5 sm:pt-16">
           <div className="container remove-bg">
@@ -383,23 +277,25 @@ const MachineLearning = () => {
       <Suspense fallback={<Loader />}>
         <TechnologyStack />
       </Suspense>
+      <Suspense fallback={<Loader />}>
+        <div className="mt-12 sm:mt-0">
+          <GridBoxes
+            GridBoxesDetail={GridBoxesDetail}
+            GridBoxesHeading={GridBoxesHeading}
+            cards={cards}
+          />
+        </div>
 
-      <div className="mt-12 sm:mt-0">
-        <GridBoxes
-          GridBoxesDetail={GridBoxesDetail}
-          GridBoxesHeading={GridBoxesHeading}
-          cards={cards}
-        />
-      </div>
-
-      <div className="-mt-9 sm:-mt-0">
-        <ClientSays
-          clientHeading={clientSaysHeading}
-          clientSaysDetails={clientSaysDetails}
-        />
-      </div>
-
-      <Blog />
+        <div className="-mt-9 sm:-mt-0">
+          <ClientSays
+            clientHeading={clientSaysHeading}
+            clientSaysDetails={clientSaysDetails}
+          />
+        </div>
+      </Suspense>
+      <Suspense fallback={<Loader />}>
+        <Blog />
+      </Suspense>
 
       <FaqSection faqData={faqData} />
 

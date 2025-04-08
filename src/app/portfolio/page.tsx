@@ -25,7 +25,7 @@ import { Metadata } from "next";
 import { BannerGridBg } from "@/component/common/HeroBanner/BannerGridBg/BannerGridBg";
 
 export const metadata: Metadata = {
-  title: "",
+  title: "Portfolio",
   description: "Zygibit Website Portfolio page",
   keywords:
     "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development , Portfolio",

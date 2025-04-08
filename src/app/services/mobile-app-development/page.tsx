@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
 import BoostBussiness from "@/component/sevices/Common/BoostBussiness/BoostBussiness";
@@ -15,20 +14,12 @@ const AppleCardsCarousel = dynamic(
       "@/component/sevices/MobileAppDevelopment/AppleCardsCarousel/AppleCardsCarousel"
     )
 );
-const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
-const ThreeDCards = dynamic(() =>
-  import(
-    "@/component/sevices/MobileAppDevelopment/ThreedCards/ThreedCards"
-  ).then((mod) => mod.ThreeDCards)
-);
+
 const MobileAppSlider = dynamic(
   () =>
     import(
       "@/component/sevices/MobileAppDevelopment/MobileAppSlider/MobileAppSlider"
     )
-);
-const HeroParalax = dynamic(
-  () => import("@/component/common/HeroParallax/HeroParallax")
 );
 const FeaturedSlider = dynamic(
   () => import("@/component/common/Featuredslider/Featuredslider")

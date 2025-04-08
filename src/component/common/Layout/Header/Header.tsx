@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import NavigationMenuDemo from "./Navigationmenu/Navigationmenu";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../../../../public/images/Logo.png"
+import Logo from "../../../../../public/images/Logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,12 +36,12 @@ const Header = () => {
                     src="/images/Logo.png"
                     alt=""
                   /> */}
-                   <Image
+                  <Image
                     src={Logo}
                     alt="Logo"
-                    width={128} // Set width and height for responsiveness
-                    height={40} // Set height to maintain aspect ratio
-                    className="w-[110px] sm:w-[128px]" // Tailwind classes for responsiveness
+                    width={128}
+                    height={40}
+                    className="w-[110px] sm:w-[128px]"
                   />
                 </Link>
               </div>
@@ -101,17 +101,12 @@ const Header = () => {
                 href="/"
                 className="-m-1.5 p-1.5 w-auto h-auto text-white uppercase font-semibold text-lg"
               >
-                {/* <img
-                  className="w-[110px] sm:w-[128px]"
-                  src="/images/logo.png"
-                  alt=""
-                /> */}
-                  <Image
+                <Image
                   src={Logo}
                   alt="Logo"
-                  width={128} // Set width and height for responsiveness
-                  height={40} // Set height to maintain aspect ratio
-                  className="w-[110px] sm:w-[128px]" // Tailwind classes for responsiveness
+                  width={128}
+                  height={40}
+                  className="w-[110px] sm:w-[128px]"
                 />
               </Link>
               <button

@@ -1,8 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-"use client";
-
-import { useState } from "react";
-import { Particles } from "@/components/ui/particles";
 import Image from "next/image";
 
 const cardData = [
@@ -64,8 +59,6 @@ for improvement.`,
   },
 ];
 export function ParticlesCards() {
-  const [color] = useState("#fff");
-
   return (
     <>
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -89,13 +82,6 @@ export function ParticlesCards() {
               </h3>
               <p className="text-sm sm:text-base">{card.description}</p>
             </div>
-            {/* <Particles
-              className="absolute size-full inset-0 z-0"
-              quantity={100}
-              ease={10}
-              color={color}
-              refresh
-            /> */}
           </div>
         ))}
       </div>

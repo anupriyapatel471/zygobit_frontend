@@ -181,7 +181,6 @@ const UiuxWebDesign = () => {
       thumbnail: "/images/seamless_interaction.jpg",
     },
   ];
-  // const firstRow = uiuxSliderData.slice(0, uiuxSliderData.length / 2);
 
   return (
     <>
@@ -341,20 +340,6 @@ const UiuxWebDesign = () => {
         </div>
       </section>
 
-      {/* <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
-      <section className="w-full px-4 lg:px-11 pb-10 sm:pb-0 pt-0 lg:py-14 overflow-hidden">
-        <div className="w-full  sm:text-center" data-aos="fade-right">
-          <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
-            Featured UI UX Design Case Studies
-          </h2>
-          <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
-            Our Success Stories
-          </p>
-        </div>
-        <div data-aos="fade-up">
-          <FeaturedSlider />
-        </div>
-      </section> */}
       <Suspense fallback={<Loader />}>
         <section className="w-full pt-12 sm:pt-14 lg:pt-16">
           <div
@@ -404,20 +389,6 @@ const UiuxWebDesign = () => {
 
       <CtaSecond content={""} Aurora={""} vortex={""} />
 
-      {/* <section className="w-full pt-12 lg:pt-16 pb-16 sm:pb-20">
-        <div className="w-full px-4 sm:px-0  sm:text-center" data-aos="fade-up">
-          <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
-            Meet Our Team!
-          </h2>
-          <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-5xl sm:mx-auto">
-            We are #1 UI UX Design Company with a Team of Highly Experienced
-            Designers
-          </p>
-        </div>
-        <div className="w-full max-w-4xl mx-auto mt-8 sm:mt-12 lg:mt-16">
-          <UiuxTeams />
-        </div>
-      </section> */}
       <Suspense fallback={<Loader />}>
         <TechnologyStack />
       </Suspense>
