@@ -8,8 +8,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Image from "next/image";
-import fireImg from "../../../../../public/images/fire.png";
 
 interface EngagementModel {
   title: string;

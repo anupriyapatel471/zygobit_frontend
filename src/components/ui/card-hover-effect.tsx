@@ -1,11 +1,12 @@
-"use client"
+/* eslint-disable @typescript-eslint/no-unused-vars */
+"use client";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import dollarIcon from "../../../public/images/dollar_icon.svg"
-import grayStar from "../../../public/images/gray_stars_bg.png"
+import dollarIcon from "../../../public/images/dollar_icon.svg";
+import grayStar from "../../../public/images/gray_stars_bg.png";
 
 export const HoverEffect = ({
   items,
@@ -90,7 +91,12 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-white font-semibold text-base sm:text-lg lg:text-xl tracking-wide my-4", className)}>
+    <h4
+      className={cn(
+        "text-white font-semibold text-base sm:text-lg lg:text-xl tracking-wide my-4",
+        className
+      )}
+    >
       {children}
     </h4>
   );

@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
 import BoostBussiness from "@/component/sevices/Common/BoostBussiness/BoostBussiness";
@@ -13,7 +15,6 @@ const FaqSection = dynamic(
 const HeroBanner = dynamic(
   () => import("@/component/common/HeroBanner/HeroBanner")
 );
-
 
 const ClientSays = dynamic(
   () => import("@/component/common/ClientSays/ClientSays")
