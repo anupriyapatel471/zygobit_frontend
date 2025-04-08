@@ -91,17 +91,26 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Web Development",
     description: "Zygibit Website Web Development Page",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+    type: "website",
+    url: "https://www.zygobit.com/web-development", // Replace with your actual live URL
+    images: [
+      {
+        url: "https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Zygibit Web Development",
+      },
+    ],
   },
   twitter: {
     title: "Web Development",
     description: "Zygibit Website Web Development Page",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     card: "summary_large_image",
-    creator: "Teqexpert",
+    creator: "@Zygobit",
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
   },
 };
+
 const WebAppDevelopment = () => {
   const clientSaysHeading = "We Are a Trusted Web App Development Company";
   const clientSaysDetails =
