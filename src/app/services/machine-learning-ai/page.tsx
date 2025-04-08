@@ -272,9 +272,8 @@ const MachineLearning = () => {
   return (
     <>
       <AOSInitializer />
-
+      <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
       <Suspense fallback={<Loader />}>
-        <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
         <WeDeliver />
       </Suspense>
 

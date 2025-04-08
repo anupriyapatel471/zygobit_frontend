@@ -73,9 +73,6 @@ const Ecommerce = () => {
   const clientHeading = "We Are a Trusted Web App Development Company";
   const clientSaysDetails =
     "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions";
-  const deliveringHeading = "Industries We Serve: Unmatched Experiences";
-  const deliveringPara =
-    "Transforming Ideas into Exceptional User Experiences Across Various Sectors";
   const heroHeading = "Expert E-Commerce Development Services";
   const heroParagraph =
     "We build powerful and scalable e-commerce solutions tailored to your business needs. From custom store development to seamless integrations, our team ensures your online store is optimized for performance, conversions, and user experience.";
@@ -176,7 +173,7 @@ const Ecommerce = () => {
       <AOSInitializer />
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback="Loading...">
         <WeDeliver />
       </Suspense>
 
@@ -237,22 +234,26 @@ const Ecommerce = () => {
               masterpiece.
             </p>
           </div>
-          <div data-aos="fade-up">
-            <FeaturedSlider />
-          </div>
+          <Suspense fallback="Loading...">
+            <div data-aos="fade-up">
+              <FeaturedSlider />
+            </div>
+          </Suspense>
         </div>
       </section>
 
       <OurPartners />
+      <Suspense fallback="Loading...">
+        <Blog />
+      </Suspense>
+      <Suspense fallback="Loading...">
+        <TechnologyStack />
 
-      <Blog />
-
-      <TechnologyStack />
-
-      <ClientSays
-        clientHeading={clientHeading}
-        clientSaysDetails={clientSaysDetails}
-      />
+        <ClientSays
+          clientHeading={clientHeading}
+          clientSaysDetails={clientSaysDetails}
+        />
+      </Suspense>
 
       <FaqSection faqData={faqEcommerceData} />
 

@@ -80,6 +80,8 @@ import boxData1 from "../../../utils/content/boxreveals/webAppOne.json";
 import boxData2 from "../../../utils/content/boxreveals/webAppTwo.json";
 import Link from "next/link";
 import CtaSecond from "@/component/new/CtaSecond";
+import { Suspense } from "react";
+import Loader from "@/component/common/Loader/Loader";
 
 export const metadata: Metadata = {
   title: "Web Development",
@@ -117,7 +119,9 @@ const WebAppDevelopment = () => {
       <AOSInitializer />
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
-      <WeDeliver />
+      <Suspense fallback={<Loader />}>
+        <WeDeliver />
+      </Suspense>
 
       {/* new cta */}
       <section className="w-full relative py-12 sm:py-16 overflow-hidden">
@@ -220,24 +224,25 @@ const WebAppDevelopment = () => {
       </section>
 
       <CtaSecond content={""} Aurora={""} vortex={""} />
-
-      <section className="w-full pb-0 pt-0 sm:py-12 lg:py-16">
-        <div className="container remove-bg">
-          <div className="w-full  sm:text-center">
-            <h2 className="text-2xl sm:text-3xl lg:text-[38px] text-gradiant-custom font-bold">
-              Zygobit: Pioneering Custom Web App Development
-            </h2>
-            <p className="sm:font-medium  text-sm sm:text-lg lg:text-xl mt-3">
-              Empowering businesses with innovative web applications, our expert
-              developers craft high-performance solutions to enhance efficiency,
-              scalability, and profitability.
-            </p>
+      <Suspense fallback={<Loader />}>
+        <section className="w-full pb-0 pt-0 sm:py-12 lg:py-16">
+          <div className="container remove-bg">
+            <div className="w-full  sm:text-center">
+              <h2 className="text-2xl sm:text-3xl lg:text-[38px] text-gradiant-custom font-bold">
+                Zygobit: Pioneering Custom Web App Development
+              </h2>
+              <p className="sm:font-medium  text-sm sm:text-lg lg:text-xl mt-3">
+                Empowering businesses with innovative web applications, our
+                expert developers craft high-performance solutions to enhance
+                efficiency, scalability, and profitability.
+              </p>
+            </div>
+            <div className="w-full mt-4 sm:mt-0">
+              <CustomWebCards />
+            </div>
           </div>
-          <div className="w-full mt-4 sm:mt-0">
-            <CustomWebCards />
-          </div>
-        </div>
-      </section>
+        </section>
+      </Suspense>
 
       <section className="w-full pt-14 sm:pt-0 pb-12 sm:pb-20 lg:pb-20 overflow-hidden">
         <div className="container remove-bg">
@@ -262,9 +267,9 @@ const WebAppDevelopment = () => {
           </div>
         </div>
       </section>
-
-      <TechnologyStack />
-
+      <Suspense fallback={<Loader />}>
+        <TechnologyStack />
+      </Suspense>
       {/* <section
         data-aos="fade-up"
         className="w-full pt-10 sm:pt-16 bg-black relative"
@@ -278,11 +283,11 @@ const WebAppDevelopment = () => {
         clientHeading={clientSaysHeading}
         clientSaysDetails={clientSaysDetails}
       />
-
-      <div className="mt-5 sm:mt-12">
-        <Blog />
-      </div>
-
+      <Suspense fallback={<Loader />}>
+        <div className="mt-5 sm:mt-12">
+          <Blog />
+        </div>
+      </Suspense>
       <FaqSection faqData={faqData} />
       <ContactForm />
     </>

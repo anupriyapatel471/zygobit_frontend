@@ -13,7 +13,6 @@ interface ThreeDCardProp {
   img: string;
 }
 export function ThreeDCard({ img }: ThreeDCardProp) {
-  console.log(img, "here is a ");
   return (
     <CardContainer className="inter-var py-0 w-full">
       <CardBody className="w-full relative bg-gradient-cta group/card justify-between  border-[#FFFFFF26]  rounded-xl flex border-2  ">

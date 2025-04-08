@@ -61,6 +61,8 @@ import faqUiUx from "../../../utils/content/faq/faqUiUx.json";
 import uiuxSliderData from "../../../utils/content/uiUxSlider/uiUx.json";
 import AppleCardsCarousel from "@/component/sevices/MobileAppDevelopment/AppleCardsCarousel/AppleCardsCarousel";
 import CtaSecond from "@/component/new/CtaSecond";
+import { Suspense } from "react";
+import Loader from "@/component/common/Loader/Loader";
 
 export const metadata: Metadata = {
   title: "UI UX Design",
@@ -185,8 +187,9 @@ const UiuxWebDesign = () => {
     <>
       <AOSInitializer />
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
-
-      <WeDeliver />
+      <Suspense fallback={<Loader />}>
+        <WeDeliver />
+      </Suspense>
 
       <section className="w-full bg-gradient-to-b from-orange-950  to-black py-12 sm:py-14 lg:py-20">
         <div className="container remove-bg">
@@ -352,26 +355,27 @@ const UiuxWebDesign = () => {
           <FeaturedSlider />
         </div>
       </section> */}
-
-      <section className="w-full pt-12 sm:pt-14 lg:pt-16">
-        <div
-          className="w-full px-4 sm:px-0  sm:text-center"
-          data-aos="fade-right"
-        >
-          <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
-            Industries We Serve: Unmatched Experiences
-          </h2>
-          <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
-            Transforming Ideas into Exceptional User Experiences Across Various
-            Sectors
-          </p>
-        </div>
-        <div className="w-full relative  mt-8 sm:mt-12 mb-12 sm:mb-24 lg:mb-32">
-          <div className="pointer-events-none absolute z-[1] -top-8 sm:-top-12 rounded-[50%] right-0 w-full h-16 sm:h-20 lg:h-24 bg-[#09090B]"></div>
-          <UiuxSlider firstRow={uiuxSliderData} />
-          <div className="pointer-events-none absolute -bottom-8 sm:-bottom-12 rounded-[50%] right-0 w-full h-16 sm:h-20 lg:h-24 bg-[#09090B]"></div>
-        </div>
-      </section>
+      <Suspense fallback={<Loader />}>
+        <section className="w-full pt-12 sm:pt-14 lg:pt-16">
+          <div
+            className="w-full px-4 sm:px-0  sm:text-center"
+            data-aos="fade-right"
+          >
+            <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
+              Industries We Serve: Unmatched Experiences
+            </h2>
+            <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
+              Transforming Ideas into Exceptional User Experiences Across
+              Various Sectors
+            </p>
+          </div>
+          <div className="w-full relative  mt-8 sm:mt-12 mb-12 sm:mb-24 lg:mb-32">
+            <div className="pointer-events-none absolute z-[1] -top-8 sm:-top-12 rounded-[50%] right-0 w-full h-16 sm:h-20 lg:h-24 bg-[#09090B]"></div>
+            <UiuxSlider firstRow={uiuxSliderData} />
+            <div className="pointer-events-none absolute -bottom-8 sm:-bottom-12 rounded-[50%] right-0 w-full h-16 sm:h-20 lg:h-24 bg-[#09090B]"></div>
+          </div>
+        </section>
+      </Suspense>
 
       <section className="w-full  overflow-hidden  py-12 sm:py-16 relative">
         <div className="absolute top-0 left-0 w-full h-full -z-10">
@@ -414,9 +418,9 @@ const UiuxWebDesign = () => {
           <UiuxTeams />
         </div>
       </section> */}
-
-      <TechnologyStack />
-
+      <Suspense fallback={<Loader />}>
+        <TechnologyStack />
+      </Suspense>
       <section className="w-full pt-10 sm:pt-10 lg:mt-16 pb-12 sm:pb-20 lg:pb-32 bg-black">
         <div className="container remove-bg">
           <div className="w-full  sm:text-center mb-8 sm:mb-12 lg:mb-12">
@@ -435,11 +439,11 @@ const UiuxWebDesign = () => {
           </div>
         </div>
       </section>
-
-      <div className="mt-5 sm:mt-12">
-        <Blog />
-      </div>
-
+      <Suspense fallback={<Loader />}>
+        <div className="mt-5 sm:mt-12">
+          <Blog />
+        </div>
+      </Suspense>
       <FaqSection faqData={faqUiUx} />
 
       <ContactForm />

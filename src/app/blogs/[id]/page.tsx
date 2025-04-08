@@ -42,19 +42,11 @@ export async function generateStaticParams() {
   return blogs.map((blog: any) => ({ id: blog.id.toString() }));
 }
 
-import type { Metadata } from "next";
-
-export async function generateMetadata({
-  params,
-}: {
-  params: { id: string };
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { id: string } }) {
   const blog = await fetchBlogs(params.id);
 
-  const title = blog?.title ?? DEFAULT_META.title;
-  const description = blog?.description ?? DEFAULT_META.description;
-  const image = blog?.image;
-  const url = `https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/blog/${params.id}`;
+  const title = blog?.title || DEFAULT_META.title;
+  const description = blog?.description || DEFAULT_META.description;
 
   return {
     title,
@@ -62,23 +54,14 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url,
-      type: "article", // <meta property="og:type" content="article"/>
-      siteName: "Zygobit", // <meta property="og:site_name" content="Zygobit"/>
-      images: [
-        {
-          url: image, // <meta property="og:image:url" content="…"/>
-          width: 1200, // <meta property="og:image:width" content="1200"/>
-          height: 630, // <meta property="og:image:height" content="630"/>
-          alt: title, // <meta property="og:image:alt" content="{title}"/>
-        },
-      ],
+      images: blog?.image,
+      url: `https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/blog/${params.id}`,
     },
     twitter: {
-      card: "summary_large_image",
       title,
       description,
-      images: [image],
+      images: blog?.image,
+      card: "summary_large_image",
       creator: DEFAULT_META.creator,
     },
   };

@@ -210,22 +210,25 @@ const About = () => {
           </div>
         </section>
       </div>
-      <section className="w-full relative px-4 lg:px-24 py-12 lg:py-20">
-        <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap  gap-5 sm:gap-8">
-          <div className="w-full lg:w-1/2">
-            <BoxReveals data={boxData1} />
+      <Suspense fallback={<Loader />}>
+        <section className="w-full relative px-4 lg:px-24 py-12 lg:py-20">
+          <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex flex-wrap lg:flex-nowrap  gap-5 sm:gap-8">
+            <div className="w-full lg:w-1/2">
+              <BoxReveals data={boxData1} />
+            </div>
+            <div className="w-full lg:w-1/2">
+              <Image
+                className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
+                src={Together}
+                alt="Together"
+                width={590}
+                height={753}
+              />
+            </div>
           </div>
-          <div className="w-full lg:w-1/2">
-            <Image
-              className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
-              src={Together}
-              alt="Together"
-              width={590}
-              height={753}
-            />
-          </div>
-        </div>
-      </section>
+        </section>
+      </Suspense>
+
       <GridBoxes
         GridBoxesHeading={GridBoxesHeading}
         GridBoxesDetail={GridBoxesDetail}
@@ -248,10 +251,14 @@ const About = () => {
           </div>
         </div>
       </section>
-      <DeliveringTailored
-        deliveringHeading={deliveringHeading}
-        deliveringPara={deliveringPara}
-      />
+
+      <Suspense fallback={<Loader />}>
+        <DeliveringTailored
+          deliveringHeading={deliveringHeading}
+          deliveringPara={deliveringPara}
+        />
+      </Suspense>
+
       <section className="w-full px-4 sm:px-0 mb-12 sm:mb-0">
         <div className="w-full  sm:text-center" data-aos="fade-right">
           <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">

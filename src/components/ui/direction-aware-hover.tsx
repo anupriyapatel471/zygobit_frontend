@@ -30,7 +30,6 @@ export const DirectionAwareHover = ({
     if (!ref.current) return;
 
     const direction = getDirection(event, ref.current);
-    console.log("direction", direction);
     switch (direction) {
       case 0:
         setDirection("top");
@@ -151,4 +150,3 @@ const textVariants = {
   left: {},
   right: {},
 };
-

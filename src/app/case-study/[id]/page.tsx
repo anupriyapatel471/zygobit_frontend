@@ -28,45 +28,26 @@ export async function generateStaticParams() {
   return projects.map((project: any) => ({ id: project.id.toString() }));
 }
 
-import type { Metadata } from "next";
-
-export async function generateMetadata({
-  params,
-}: {
-  params: { id: string };
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { id: string } }) {
   const project = await fetchFeaturedProjects(params.id);
-
-  const title = project?.title ?? "Zygobit Featured Projects";
-  const description = project?.description ?? "Zygobit Featured Projects";
-  const image =
-    project?.image ??
-    "https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png";
-  const url = `https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/case-study/${params.id}`;
-
   return {
-    title,
-    description,
+    title: project?.title || "Zygobit Featured Projects",
+    description: project?.description || "Zygobit Featured Projects",
     openGraph: {
-      title,
-      description,
-      url,
-      type: "website",
-      siteName: "Zygobit",
-      images: [
-        {
-          url: image,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
+      title: project?.title || "Zygobit Featured Projects",
+      description: project?.description || "Zygobit Featured Projects",
+      images:
+        project?.image ||
+        "https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png",
+      url: `https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/case-study/${params.id}`,
     },
     twitter: {
+      title: project?.title || "Zygobit Featured Projects",
+      description: project?.description || "Zygobit Featured Projects",
+      images:
+        project?.image ||
+        "https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png",
       card: "summary_large_image",
-      title,
-      description,
-      images: [image],
       creator: "Teqexpert",
     },
   };

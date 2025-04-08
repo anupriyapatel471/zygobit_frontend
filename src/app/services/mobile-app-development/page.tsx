@@ -58,6 +58,8 @@ const SharedLayoutAnimation = dynamic(
 import { Metadata } from "next";
 import CtaSecond from "@/component/new/CtaSecond";
 import { MobileTechnology } from "@/component/sevices/MobileAppDevelopment/MobileTechnology/MobileTechnology";
+import { Suspense } from "react";
+import Loader from "@/component/common/Loader/Loader";
 
 export const metadata: Metadata = {
   title: "Mobile App Development",
@@ -187,8 +189,9 @@ const MobileAppDevelopment = () => {
       <AOSInitializer />
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
-
-      <WeDeliver />
+      <Suspense fallback={<Loader />}>
+        <WeDeliver />
+      </Suspense>
 
       <section className="w-full bg-gradient-to-b from-orange-950  to-black py-12 sm:py-14 lg:py-20">
         <div className="container remove-bg">
@@ -295,33 +298,35 @@ const MobileAppDevelopment = () => {
           </div>
         </div>
       </section>
-
-      <section className="w-full  py-10 sm:py-14  overflow-hidden">
-        <div className="container remove-bg">
-          <div className="w-full  sm:text-center" data-aos="fade-right">
-            <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
-              Our Projects
-            </h2>
-            <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-4xl sm:mx-auto">
-              Partner with Zygobit for innovative, secure, and scalable mobile
-              app development solutions tailored to your unique business needs.
-            </p>
+      <Suspense fallback={<Loader />}>
+        <section className="w-full  py-10 sm:py-14  overflow-hidden">
+          <div className="container remove-bg">
+            <div className="w-full  sm:text-center" data-aos="fade-right">
+              <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
+                Our Projects
+              </h2>
+              <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-4xl sm:mx-auto">
+                Partner with Zygobit for innovative, secure, and scalable mobile
+                app development solutions tailored to your unique business
+                needs.
+              </p>
+            </div>
+            <div data-aos="fade-up">
+              <FeaturedSlider />
+            </div>
           </div>
-          <div data-aos="fade-up">
-            <FeaturedSlider />
-          </div>
-        </div>
-      </section>
-
-      <TechnologyStack />
-
+        </section>
+      </Suspense>
+      <Suspense fallback={<Loader />}>
+        <TechnologyStack />
+      </Suspense>
       <ClientSays
         clientHeading={clientHeading}
         clientSaysDetails={clientSaysDetails}
       />
-
-      <Blog />
-
+      <Suspense fallback={<Loader />}>
+        <Blog />
+      </Suspense>
       <FaqSection faqData={faqMobileApp} />
 
       <ContactForm />

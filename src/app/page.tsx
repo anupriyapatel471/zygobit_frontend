@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export const dynamic = "force-static";
 
 import dynamicImp from "next/dynamic";
 import AOSInitializer from "@/component/common/AOSInitializer";
@@ -62,7 +61,6 @@ async function fetchFeaturedProjects(id?: string) {
   try {
     const filter = id ? { filter: { id: { eq: id } } } : {};
     const res = await (client.models as any).Projects.list(filter);
-    console.log("res", res);
     if (id) {
       return res.data && res.data.length > 0 ? res.data[0] : null;
     }
@@ -75,7 +73,6 @@ async function fetchFeaturedProjects(id?: string) {
 
 export async function generateStaticParams() {
   const projects = await fetchFeaturedProjects();
-  console.log("projects", projects);
   return projects.map((project: any) => ({ id: project.id.toString() }));
 }
 
