@@ -3,9 +3,7 @@ import React from "react";
 import Image from "next/image";
 const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
 const RippleBg = dynamic(() => import("@/component/common/Ripplebg/Ripplebg"));
-const TrustedAcross = dynamic(
-  () => import("@/component/common/TrustedAcross/TrustedAcross")
-);
+
 import dynamic from "next/dynamic";
 import MagicCard from "@/components/ui/magic-card";
 import { ChevronRight } from "lucide-react";

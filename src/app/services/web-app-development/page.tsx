@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     title: "Web Development",
     description: "Zygibit Website Web Development Page",
     type: "website",
-    url: "https://www.zygobit.com/web-development", // Replace with your actual live URL
+    url: "https://www.zygobit.com/web-development",
     images: [
       {
         url: "https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png",

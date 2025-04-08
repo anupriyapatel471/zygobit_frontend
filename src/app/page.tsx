@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-
 import dynamicImp from "next/dynamic";
 import AOSInitializer from "@/component/common/AOSInitializer";
 import { SparklesHeading } from "@/component/homePage/Sparkleheading/Sparkleheading";
 import { ourExpertiseData } from "../component/homePage/OurExpertise";
-import React from "react";
+import React, { ReactNode } from "react";
 
 const HomeBanner = dynamicImp(() => import("@/component/homePage/HomeBanner"));
 const FeaturedProjects = dynamicImp(
@@ -16,9 +15,6 @@ const BusinessCards = dynamicImp(
 
 const Cta = dynamicImp(() => import("@/component/common/Cta/Cta"));
 
-// const HeroParalax = dynamicImp(
-//   () => import("@/component/common/HeroParallax/HeroParallax")
-// );
 const TechnologyStack = dynamicImp(
   () => import("@/component/common/TechnologyStack/TechnologyStack")
 );
@@ -35,6 +31,17 @@ const OurPartners = dynamicImp(
 import { Metadata } from "next";
 import WhyChooseUs from "@/component/new/WhyChooseUs";
 import { generateClient } from "aws-amplify/data";
+
+export interface BlogPost {
+  projectInfo: ReactNode;
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  image: string;
+  publishedDate: string;
+  tags: string[];
+}
 
 export const metadata: Metadata = {
   title: "Home",
@@ -73,7 +80,7 @@ async function fetchFeaturedProjects(id?: string) {
 
 export async function generateStaticParams() {
   const projects = await fetchFeaturedProjects();
-  return projects.map((project: any) => ({ id: project.id.toString() }));
+  return projects.map((project: BlogPost) => ({ id: project.id.toString() }));
 }
 
 const Home = () => {
@@ -118,13 +125,6 @@ const Home = () => {
       </section>
 
       <TechnologyStack />
-
-      {/* <section
-        data-aos="fade-up"
-        className="w-full relative  py-0 sm:py-0 lg:py-0 overflow-hidden "
-      >
-        <HeroParalax />
-      </section> */}
 
       <ClientSays
         clientHeading={clientHeading}

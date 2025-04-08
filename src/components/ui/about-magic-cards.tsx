@@ -4,9 +4,6 @@ import { motion, useMotionTemplate, useMotionValue } from "motion/react";
 import React, { useCallback, useEffect, useRef } from "react";
 
 import { cn } from "@/lib/utils";
-import Image from "next/image";
-import newMoon from "../../../public/images/new_moon.png";
-
 
 interface MagicCardProps extends React.HTMLAttributes<HTMLDivElement> {
   gradientSize?: number;
@@ -39,7 +36,7 @@ export default function MagicCard({
         mouseY.set(clientY - top);
       }
     },
-    [mouseX, mouseY],
+    [mouseX, mouseY]
   );
 
   const handleMouseOut = useCallback(
@@ -50,7 +47,7 @@ export default function MagicCard({
         mouseY.set(-gradientSize);
       }
     },
-    [handleMouseMove, mouseX, gradientSize, mouseY],
+    [handleMouseMove, mouseX, gradientSize, mouseY]
   );
 
   const handleMouseEnter = useCallback(() => {
@@ -79,7 +76,10 @@ export default function MagicCard({
   return (
     <div
       ref={cardRef}
-      className={cn("group relative bg-black flex size-full rounded-xl", className)}
+      className={cn(
+        "group relative bg-black flex size-full rounded-xl",
+        className
+      )}
     >
       <div className="absolute  z-10 rounded-xl" />
       {/* <div className="absolute top-0 left-0 size-full z-[11] p-[2px]">
