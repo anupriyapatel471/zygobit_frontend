@@ -1,12 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Amplify } from "aws-amplify";
 import outputs from "../../../../amplify_outputs.json";
-// Switch to the data client for static generation:
 import { generateClient } from "aws-amplify/data";
 import ClientCaseStudy from "@/component/clientCaseStudy/ClientCaseStudy";
 export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
-// Configure Amplify normally:
 Amplify.configure(outputs);
 
 async function fetchFeaturedProjects(id?: string) {
@@ -24,7 +23,6 @@ async function fetchFeaturedProjects(id?: string) {
   }
 }
 
-// Pre-generate all project paths at build time.
 export async function generateStaticParams() {
   const projects = await fetchFeaturedProjects();
   return projects.map((project: any) => ({ id: project.id.toString() }));

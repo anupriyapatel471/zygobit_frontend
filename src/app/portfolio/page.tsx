@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import dynamic from "next/dynamic";
 import AOSInitializer from "@/component/common/AOSInitializer";
@@ -100,7 +102,11 @@ const Ecommerce = () => {
                       </div>
                     </div>
                     <div className="w-[325px]">
-                      <img className="object-contain" src="/images/her_calendar.png" alt="" />
+                      <img
+                        className="object-contain"
+                        src="/images/her_calendar.png"
+                        alt=""
+                      />
                     </div>
                     <div className="w-[425px] h-[425px] bg-[#F15722] rounded-full absolute top-1/2 -translate-y-1/2 -z-10 -right-40"></div>
                   </div>
@@ -121,7 +127,11 @@ const Ecommerce = () => {
                       </div>
                     </div>
                     <div className="w-[325px]">
-                      <img className="object-contain" src="/images/mh_ride.png" alt="" />
+                      <img
+                        className="object-contain"
+                        src="/images/mh_ride.png"
+                        alt=""
+                      />
                     </div>
                     <div className="w-[425px] h-[425px] bg-[#F15722] rounded-full absolute top-1/2 -translate-y-1/2 -z-10 -right-40"></div>
                   </div>
@@ -142,7 +152,11 @@ const Ecommerce = () => {
                       </div>
                     </div>
                     <div className="w-[325px]">
-                      <img className="object-contain" src="/images/sed.png" alt="" />
+                      <img
+                        className="object-contain"
+                        src="/images/sed.png"
+                        alt=""
+                      />
                     </div>
                     <div className="w-[425px] h-[425px] bg-[#F15722] rounded-full absolute top-1/2 -translate-y-1/2 -z-10 -right-40"></div>
                   </div>
@@ -163,7 +177,11 @@ const Ecommerce = () => {
                       </div>
                     </div>
                     <div className="w-[325px]">
-                      <img className="object-contain" src="/images/sed.png" alt="" />
+                      <img
+                        className="object-contain"
+                        src="/images/sed.png"
+                        alt=""
+                      />
                     </div>
                     <div className="w-[425px] h-[425px] bg-[#F15722] rounded-full absolute top-1/2 -translate-y-1/2 -z-10 -right-40"></div>
                   </div>
@@ -184,7 +202,11 @@ const Ecommerce = () => {
                       </div>
                     </div>
                     <div className="w-[325px]">
-                      <img className="object-contain" src="/images/sed.png" alt="" />
+                      <img
+                        className="object-contain"
+                        src="/images/sed.png"
+                        alt=""
+                      />
                     </div>
                     <div className="w-[425px] h-[425px] bg-[#F15722] rounded-full absolute top-1/2 -translate-y-1/2 -z-10 -right-40"></div>
                   </div>
@@ -205,7 +227,11 @@ const Ecommerce = () => {
                       </div>
                     </div>
                     <div className="w-[325px]">
-                      <img className="object-contain" src="/images/sed.png" alt="" />
+                      <img
+                        className="object-contain"
+                        src="/images/sed.png"
+                        alt=""
+                      />
                     </div>
                     <div className="w-[425px] h-[425px] bg-[#F15722] rounded-full absolute top-1/2 -translate-y-1/2 -z-10 -right-40"></div>
                   </div>

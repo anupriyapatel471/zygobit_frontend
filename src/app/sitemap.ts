@@ -5,32 +5,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: 'https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/',
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: 'https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com//blogs',
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
       url: 'https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com//about-us',
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.5,
+      priority: 0.8,
     },
     {
       url: 'https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/mobile-app-development',
       lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
+      changeFrequency: 'weekly',
+      priority: 0.5,
     },
     {
       url: 'https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/web-app-development',
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      changeFrequency: 'weekly',
+      priority: 0.5,
     },
     {
       url: 'https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/uiux-web-design',
@@ -49,6 +49,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.5,
+    },
+    {
+      url: 'https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/contact',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/portfolio',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
   ]
 }

@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
+export const revalidate = 60;
 
 import { generateClient } from "aws-amplify/data";
 import { TracingBeams } from "@/component/blog/TracingBeam/TracingBeam";
@@ -35,8 +36,6 @@ async function fetchBlogs(id?: string) {
   }
 }
 
-export const revalidate = 60;
-
 export async function generateStaticParams() {
   const blogs = await fetchBlogs();
   return blogs.map((blog: any) => ({ id: blog.id.toString() }));
@@ -54,13 +53,13 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     openGraph: {
       title,
       description,
-      images: DEFAULT_META.images,
+      images: blog?.image,
       url: `https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/blog/${params.id}`,
     },
     twitter: {
       title,
       description,
-      images: DEFAULT_META.images,
+      images: blog?.image,
       card: "summary_large_image",
       creator: DEFAULT_META.creator,
     },

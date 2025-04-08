@@ -23,7 +23,8 @@ const HeroBanner = dynamic(
 );
 
 const WeDeliver = dynamic(
-  () => import("@/component/common/WeDeliver/WeDeliver")
+  () => import("@/component/common/WeDeliver/WeDeliver"),
+  { ssr: false }
 );
 const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
 const FeaturedSlider = dynamic(
@@ -47,6 +48,7 @@ import engagementModelsEcomerce from "../../../utils/content/webSlider/ecommerce
 
 import faqEcommerceData from "../../../utils/content/faq/faqEcommerce.json";
 import CtaSecond from "@/component/new/CtaSecond";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Ecommerce",
@@ -174,7 +176,9 @@ const Ecommerce = () => {
       <AOSInitializer />
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
-      <WeDeliver />
+      <Suspense fallback={<div>Loading...</div>}>
+        <WeDeliver />
+      </Suspense>
 
       <section className="w-full pb-12 sm:pb-20 lg:pb-20 lg:pt-12 overflow-hidden">
         <div className="container remove-bg">
