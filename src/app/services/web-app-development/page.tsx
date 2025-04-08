@@ -61,29 +61,29 @@ import Loader from "@/component/common/Loader/Loader";
 
 export const metadata: Metadata = {
   title: "Web Development",
-  description: "Zygibit Website Web Development Page",
+  description: "Zygobit Website Web Development Page",
   keywords:
-    "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
   openGraph: {
     title: "Web Development",
-    description: "Zygibit Website Web Development Page",
+    description: "Zygobit Website Web Development Page",
     type: "website",
     url: "https://www.zygobit.com/web-development",
     images: [
       {
-        url: "https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg",
+        url: "https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png",
         width: 1200,
         height: 630,
-        alt: "Zygibit Web Development",
+        alt: "Zygobit Web Development",
       },
     ],
   },
   twitter: {
     title: "Web Development",
-    description: "Zygibit Website Web Development Page",
+    description: "Zygobit Website Web Development Page",
     card: "summary_large_image",
     creator: "@Zygobit",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
   },
 };
 

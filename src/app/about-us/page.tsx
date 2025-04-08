@@ -35,19 +35,19 @@ const ClientSays = dynamic(
 
 export const metadata: Metadata = {
   title: "About us",
-  description: "Zygibit Website About Us Page",
+  description: "Zygobit Website About Us Page",
   keywords:
-    "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
   openGraph: {
     title: "About us",
-    description: "Zygibit Website About Us Page",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
+    description: "Zygobit Website About Us Page",
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
   },
   twitter: {
     title: "About us",
-    description: "Zygibit Website About Us Page",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
+    description: "Zygobit Website About Us Page",
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },

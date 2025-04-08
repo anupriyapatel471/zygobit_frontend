@@ -26,19 +26,19 @@ import { BannerGridBg } from "@/component/common/HeroBanner/BannerGridBg/BannerG
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Zygibit Website Portfolio page",
+  description: "Zygobit Website Portfolio page",
   keywords:
-    "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development , Portfolio",
+    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development , Portfolio",
   openGraph: {
     title: "Portfolio",
-    description: "Zygibit Website Portfolio Page",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
+    description: "Zygobit Website Portfolio Page",
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
   },
   twitter: {
     title: "Portfolio",
-    description: "Zygibit Website Ecommerce Page",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
+    description: "Zygobit Website Ecommerce Page",
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },

@@ -11,19 +11,19 @@ import ScrollProgressBar from "@/component/common/Layout/ScrollBar/ScrollBar";
 
 export const metadata: Metadata = {
   title: "Zygobit",
-  description: "Zygibit Website",
+  description: "Zygobit Website",
   keywords:
-    "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
   openGraph: {
     title: "Zygobit",
-    description: "Zygibit Website",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
+    description: "Zygobit Website",
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
   },
   twitter: {
     title: "Zygobit",
-    description: "Zygibit Website",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
+    description: "Zygobit Website",
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },

@@ -47,19 +47,19 @@ import CtaSecond from "@/component/new/CtaSecond";
 
 export const metadata: Metadata = {
   title: "Machine Learning AI",
-  description: "Zygibit Website Machine Learning AI Page",
+  description: "Zygobit Website Machine Learning AI Page",
   keywords:
-    "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
   openGraph: {
     title: "Machine Learning AI",
-    description: "Zygibit Website Machine Learning AI Page",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
+    description: "Zygobit Website Machine Learning AI Page",
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
   },
   twitter: {
     title: "Machine Learning AI",
-    description: "Zygibit Website Machine Learning AI Page",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
+    description: "Zygobit Website Machine Learning AI Page",
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },

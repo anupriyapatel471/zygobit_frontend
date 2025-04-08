@@ -54,19 +54,19 @@ import Loader from "@/component/common/Loader/Loader";
 
 export const metadata: Metadata = {
   title: "Mobile App Development",
-  description: "Zygibit Website Mobile App Development Page",
+  description: "Zygobit Website Mobile App Development Page",
   keywords:
-    "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
   openGraph: {
     title: "Mobile App Development",
-    description: "Zygibit Website Mobile App Development Page",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
+    description: "Zygobit Website Mobile App Development Page",
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
   },
   twitter: {
     title: "Mobile App Development",
-    description: "Zygibit Website Mobile App Development Page",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
+    description: "Zygobit Website Mobile App Development Page",
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },

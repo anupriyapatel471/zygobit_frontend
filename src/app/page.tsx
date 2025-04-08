@@ -45,18 +45,18 @@ export interface BlogPost {
 
 export const metadata: Metadata = {
   title: "Home",
-  description: "Zygibit Website Home Page",
+  description: "Zygobit Website Home Page",
   keywords:
-    "Zygibit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
   openGraph: {
     title: "Home",
-    description: "Zygibit Website Home Page",
+    description: "Zygobit Website Home Page",
     images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
   },
   twitter: {
     title: "Home",
-    description: "Zygibit Website Home Page",
+    description: "Zygobit Website Home Page",
     images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
