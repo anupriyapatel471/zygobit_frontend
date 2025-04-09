@@ -7,6 +7,7 @@ import { generateClient } from "aws-amplify/data";
 import useAmplifyConfig from "@/hooks/useAmplify";
 
 export interface BlogPost {
+  slug: any;
   projectInfo: ReactNode;
   id: string;
   title: string;

@@ -223,6 +223,13 @@
               "isRequired": false,
               "attributes": [],
               "isArrayNullable": true
+            },
+            "slug": {
+              "name": "slug",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
             }
           },
           "syncable": true,
@@ -401,6 +408,27 @@
               "isRequired": false,
               "attributes": [],
               "isArrayNullable": true
+            },
+            "category": {
+              "name": "category",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "slug": {
+              "name": "slug",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "projectIcon": {
+              "name": "projectIcon",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
             }
           },
           "syncable": true,

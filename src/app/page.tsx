@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+export const dynamic = "force-static";
+
 import dynamicImp from "next/dynamic";
 import AOSInitializer from "@/component/common/AOSInitializer";
 import { SparklesHeading } from "@/component/homePage/Sparkleheading/Sparkleheading";
@@ -32,7 +34,7 @@ import { Metadata } from "next";
 import WhyChooseUs from "@/component/new/WhyChooseUs";
 import { generateClient } from "aws-amplify/data";
 
-export interface BlogPost {
+export interface project {
   projectInfo: ReactNode;
   id: string;
   title: string;
@@ -66,8 +68,7 @@ export const metadata: Metadata = {
 async function fetchFeaturedProjects(id?: string) {
   const client = generateClient();
   try {
-    const filter = id ? { filter: { id: { eq: id } } } : {};
-    const res = await (client.models as any).Projects.list(filter);
+    const res = await (client.models as any).Projects.list();
     if (id) {
       return res.data && res.data.length > 0 ? res.data[0] : null;
     }
@@ -80,7 +81,7 @@ async function fetchFeaturedProjects(id?: string) {
 
 export async function generateStaticParams() {
   const projects = await fetchFeaturedProjects();
-  return projects.map((project: BlogPost) => ({ id: project.id.toString() }));
+  return projects.map((project: project) => ({ id: project.id.toString() }));
 }
 
 const Home = () => {
