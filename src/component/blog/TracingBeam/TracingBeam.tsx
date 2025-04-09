@@ -16,12 +16,13 @@ interface Blog {
     SubTitle: string;
     SubDescription: string;
   }[];
+  slug: string;
 }
 
 export function TracingBeams({ blog }: { blog: Blog }) {
   return (
     <>
-      <TracingBeam className="mt-24 sm:mt-32 mb-16 sm:mb-20 px-0 sm:px-0 lg:px-0 max-w-[1248px] mx-auto">
+      {blog && ( <TracingBeam className="mt-24 sm:mt-32 mb-16 sm:mb-20 px-0 sm:px-0 lg:px-0 max-w-[1248px] mx-auto">
         <div className="container remove-bg">
           <div className="w-full antialiased sm:pt-4 relative pl-[60px]">
             <div className="mb-10">
@@ -68,8 +69,9 @@ export function TracingBeams({ blog }: { blog: Blog }) {
                 )}
             </div>
           </div>
-        </div>
-      </TracingBeam>
+          </div>
+        </TracingBeam>
+      )}
     </>
   );
 }

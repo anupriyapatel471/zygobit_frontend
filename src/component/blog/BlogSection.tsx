@@ -5,6 +5,7 @@ import { truncateText } from "@/lib/utils";
 // import Loader from "../common/Loader/Loader";
 import { useBlog } from "@/hooks/dynamoDb/useBlog";
 import BlogHeaderSkelton from "../Loader/BlogHeaderSkelton";
+import Link from "next/link";
 
 const BlogSection = () => {
   const { blogs, loading } = useBlog();
@@ -29,6 +30,7 @@ const BlogSection = () => {
             {
               loading ?  <BlogHeaderSkelton /> :  <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-6 sm:gap-4 xl:gap-12">
               {featuredBlog && (
+                <Link href={`/blogs/${featuredBlog.slug}`}>
                 <div className="w-full sm:w-auto h-[400px] sm:h-[450px] lg:h-[520px] cursor-pointer relative rounded-2xl overflow-hidden">
                   <div className="size-full absolute top-0 left-0 bg-black/50"></div>
                   <Image
@@ -59,9 +61,11 @@ const BlogSection = () => {
                     </span>
                   </div>
                 </div>
+                </Link>
               )}
               <div className="w-full grid grid-cols-1 gap-8 sm:gap-4">
                 {otherBlogs.map((post) => (
+                  <Link href={`/blogs/${featuredBlog.slug}`}>
                   <div
                     key={post.id}
                     className="w-full cursor-pointer flex flex-wrap sm:flex-nowrap gap-4 items-start"
@@ -96,6 +100,7 @@ const BlogSection = () => {
                       </span>
                     </div>
                   </div>
+                  </Link>
                 ))}
               </div>
             </div>

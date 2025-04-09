@@ -19,31 +19,34 @@ const DEFAULT_META = {
   creator: "Teqexpert",
 };
 
-async function fetchBlogs(id?: string) {
+async function fetchBlogBySlug(slug: string) {
   const client = generateClient();
   try {
-    const filter = id ? { filter: { id: { eq: id } } } : {};
-    const res = await (client.models as any).Blog.list(filter);
+    const res = await (client.models as any).Blog.list({
+      filter: { slug: { eq: slug } },
+    });
     const blogs = res.data || [];
-
-    if (id) {
-      return blogs.length > 0 ? blogs[0] : null;
-    }
-
-    return blogs;
+    return blogs.length > 0 ? blogs[0] : null;
   } catch (error) {
-    console.error(`Error fetching blog${id ? ` with ID ${id}` : "s"}:`, error);
+    console.error(`Error fetching blog with slug "${slug}":`, error);
     throw error;
   }
 }
 
 export async function generateStaticParams() {
-  const blogs = await fetchBlogs();
-  return blogs.map((blog: any) => ({ id: blog.id.toString() }));
+  const client = generateClient();
+  const res = await (client.models as any).Blog.list();
+  const blogs = res.data || [];
+
+  return blogs.map((blog: any) => ({ slug: blog.slug }));
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const blog = await fetchBlogs(params.id);
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const blog = await fetchBlogBySlug(params.slug);
 
   const title = blog?.title || DEFAULT_META.title;
   const description = blog?.description || DEFAULT_META.description;
@@ -55,7 +58,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
       title,
       description,
       images: blog?.image,
-      url: `https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/blog/${params.id}`,
+      url: `https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/blog/${params.slug}`,
     },
     twitter: {
       title,
@@ -67,9 +70,8 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   };
 }
 
-const Page = async ({ params }: { params: { id: string } }) => {
-  const blog = await fetchBlogs(params.id);
-
+const Page = async ({ params }: { params: { slug: string } }) => {
+  const blog = await fetchBlogBySlug(params.slug);
   return (
     <>
       <AOSInitializer />

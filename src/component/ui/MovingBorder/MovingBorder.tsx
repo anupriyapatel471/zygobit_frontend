@@ -38,13 +38,18 @@ export function MovingBorders({ selectedCategory }: MovingBordersProps) {
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-7">
         {currentBlogs.map((card) => (
           <>
-            <Link href={`/blogs/${card.id}`}>
+            <Link href={`/blogs/${card.slug}`}>
               <Button
                 key={card.id}
                 className="bg-white/5 cursor-pointer rounded-2xl overflow-hidden backdrop-blur-lg text-white border-2  border-[#444444] custom-radius"
               >
                 <div className="w-full overflow-hidden relative h-[184px]">
-                  <Image src={card.image} className="object-cover" alt="BlogCard" fill />
+                  <Image
+                    src={card.image}
+                    className="object-cover"
+                    alt="BlogCard"
+                    fill
+                  />
                 </div>
                 <div className="w-full text-left p-4 sm:px-4 sm:py-5">
                   <div className="w-full flex justify-between">
