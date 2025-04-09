@@ -25,7 +25,7 @@ export default function TypewriterEffect() {
     },
   ];
   return (
-    <div className="text-2xl sm:text-[28px] lg:text-4xl  text-white font-bold ">
+    <div className="hidden sm:inline text-2xl sm:text-[28px] lg:text-4xl text-center sm:text-left text-white font-bold ">
       <TypewriterEffectSmooth words={words} />
     </div>
   );

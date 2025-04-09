@@ -24,8 +24,8 @@ const WhyChooseUs = () => {
     <section data-aos="fade-up" className="w-full mb-12 sm:mb-20">
       <div className="container">
         <div className="w-full sm:text-center mb-5 sm:mb-10">
-          <h2 className="font-medium text-2xl sm:text-4xl">Why Choose Us</h2>
-          <p className="sm:font-medium text-base sm:text-lg lg:text-xl mt-2 sm:mt-5 max-w-3xl mx-auto">
+          <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px]">Why Choose Us</h2>
+          <p className="font-light sm:font-medium text-sm sm:text-lg lg:text-xl mt-2 sm:mt-5 max-w-3xl mx-auto">
             More the years, the better the solutions! We have been partnering
             with brands and offering our expertise for more than a decade.
           </p>
@@ -45,10 +45,10 @@ const WhyChooseUs = () => {
                   key={reason.id}
                   className="w-full bg-[#2D2E34] rounded-2xl p-4 border border-white/20"
                 >
-                  <h3 className="font-semibold text-2xl mb-2.5">
+                  <h3 className="font-semibold text-lg sm:text-2xl mb-2 sm:mb-2.5">
                     {reason.title}
                   </h3>
-                  <p className="font-medium text-sm">{reason.description}</p>
+                  <p className="font-light sm:font-medium text-sm">{reason.description}</p>
                 </div>
               ))}
             </div>

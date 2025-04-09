@@ -15,7 +15,7 @@ interface ctaProp {
 const Cta = ({ content, Aurora, vortex }: ctaProp) => {
   return (
     <>
-      <section className="w-full relative my-14 sm:my-16 overflow-hidden">
+      <section className="w-full relative my-12 sm:my-14 lg:my-16 overflow-hidden">
         <div className="container">
           {vortex === "VortexBg" && (
             <div className="absolute top-0 left-0 w-full h-full -z-10">
@@ -31,13 +31,16 @@ const Cta = ({ content, Aurora, vortex }: ctaProp) => {
             )}
 
             <div className="inter-var py-0 w-full">
-              <div className= "overflow-hidden w-full pb-5 sm:pb-0 relative bg-[#2D2E34] bg-opacity-20 backdrop-blur-md group/card justify-between items-center border-[#FFFFFF26]  rounded-xl flex-wrap lg:flex-nowrap flex border-2  ">
+              <div className="overflow-hidden w-full pb-0 sm:pb-0 relative bg-[#2D2E34] bg-opacity-20 backdrop-blur-md group/card justify-between items-center border-[#FFFFFF26]  rounded-xl flex-wrap lg:flex-nowrap flex border-2  ">
                 <div
                   data-aos="fade-right"
-                  className="w-full order-2 lg:order-none lg:max-w-3xl p-4  sm:p-5 lg:pr-0 lg:py-12 lg:pl-8"
+                  className="w-full order-2 lg:order-none lg:max-w-3xl p-3 sm:p-5 lg:pr-0 lg:py-12 lg:pl-8 text-center sm:text-left"
                 >
                   <TypewriterEffect />
-                  <div className="sm:font-medium text-sm leading-6 sm:leading-normal sm:text-base lg:text-lg mt-2 mb-5">
+                  <div className="inline sm:hidden text-2xl sm:text-[28px] lg:text-4xl text-center sm:text-left text-white font-bold ">
+                    Shape the Future of <span className="text-themetext">Technology </span> with Us
+                  </div>
+                  <div className="text-center sm:text-left sm:font-medium text-sm leading-6 sm:leading-normal sm:text-base lg:text-lg mt-2 mb-5">
                     Shape the Future of Technology with Us Partner with our team
                     for a free, no-obligation technical proposal tailored to
                     your next enterprise custom project.

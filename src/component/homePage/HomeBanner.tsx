@@ -14,18 +14,18 @@ const HomeBanner = () => {
           <div className="w-full absolute top-20 sm:top-28 left-1/2 -translate-x-1/2  py-5 lg:py-14 z-10 max-w-[1248px] mx-auto">
             <div className="w-full  px-4 flex flex-wrap sm:flex-nowrap justify-between">
               <div className="w-full sm:w-3/4 lg:w-[60%]">
-                <div className="w-auto">
+                <div className="w-auto text-center sm:text-left">
                   <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl text-shadow-2xl  text-gradiant-custom">
                     Innovative IT Solutions for Your 
                     <span className="text-themetext"> Business Growth</span>
                   </h1>
-                  <button className="mt-7 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                  <button className="mt-5 sm:mt-7 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
                     Talk to an expert!
                     <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                   </button>
                 </div>
-                <div className="w-auto mt-6 sm:mt-16">
-                  <span className="block sm:font-bold text-lg mb-7">
+                <div className="w-auto text-center sm:text-left mt-6 sm:mt-16">
+                  <span className="block text-center sm:text-left sm:font-bold text-lg mb-7">
                     We are Trusted by
                   </span>
                   <div className="max-w-md">
@@ -47,8 +47,8 @@ const HomeBanner = () => {
               </div>
             </div>
           </div>
-          <div className="w-full hidden sm:inline max-w-[1248px] mx-auto px-4  absolute -bottom-[170px] left-1/2 -translate-x-1/2 rounded-lg z-10">
-            <div className="w-full border border-[#09090B33] overflow-hidden rounded-lg bg-[#fafafa12] px-24  ">
+          <div className="w-full hidden sm:inline max-w-[1248px] mx-auto px-4  absolute top-[555px] lg:top-[720px] bottom-auto left-1/2 -translate-x-1/2 rounded-lg z-10">
+            <div className="w-full sm:border border-[#09090B33] overflow-hidden rounded-lg sm:bg-[#fafafa12] px-24  ">
               <div className="w-full  z-[1111]  max-w-sm mx-auto rounded-lg">
                 <RippleBg numCircles={10} />
               </div>

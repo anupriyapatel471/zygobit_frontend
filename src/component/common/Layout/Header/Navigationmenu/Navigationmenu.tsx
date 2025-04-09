@@ -32,11 +32,11 @@ export default function NavigationMenuDemo() {
           <div className="backdrop-blur-xl bg-opacity-20 bg-[#09090B] w-full h-full">
             <NavigationMenuContent className="bg-transparent custom-bg-remove  border-none relative z-50">
               <div className="w-full">
-                <ul className="backdrop-blur-xl bg-opacity-80 bg-[#09090B]  grid grid-cols-1 gap-3 items-center w-screen mx-auto lg:grid-cols-3">
+                <ul className="backdrop-blur-xl bg-opacity-80 bg-[#09090B]  grid grid-cols-1 gap-3 items-center w-full sm:w-screen mx-auto lg:grid-cols-3">
                   <div className="w-auto grid grid-cols-1 lg:grid-cols-2 gap-7 col-span-2 p-4 lg:p-10">
-                    <div className="flex gap-4">
-                      <div className=" hidden  p-2 sm:p-0 w-12 sm:w-20 h-14 sm:h-[70px] sm:flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                        <img src="/images/mobile_icon.png" alt="" />
+                    <div className="flex items-center sm:items-start gap-4">
+                      <div className="   p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
+                        <img className="w-6 sm:w-auto" src="/images/mobile_icon.png" alt="" />
                       </div>
                       <ListItem
                         className="text-white text-sm sm:text-base hover:text-white hover:bg-transparent p-0 w-[calc(100%-75px)]"
@@ -46,9 +46,9 @@ export default function NavigationMenuDemo() {
                         Create high-performance mobile apps for iOS and Android.
                       </ListItem>
                     </div>
-                    <div className="flex gap-4">
-                      <div className="hidden  p-2 sm:p-0 w-12 sm:w-20 h-14 sm:h-[70px] sm:flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                        <img src="/images/webdev.png" alt="" />
+                    <div className="flex items-center sm:items-start gap-4">
+                      <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
+                        <img className="w-6 sm:w-auto" src="/images/webdev.png" alt="" />
                       </div>
                       <ListItem
                         className="text-white hover:text-white hover:bg-transparent p-0"
@@ -58,9 +58,9 @@ export default function NavigationMenuDemo() {
                         Develop fast, responsive, and optimized websites.
                       </ListItem>
                     </div>
-                    <div className="flex gap-4">
-                      <div className="hidden  p-2 sm:p-0 w-12 sm:w-20 h-14 sm:h-[70px] sm:flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                        <img src="/images/uiux.png" alt="" />
+                    <div className="flex items-center sm:items-start gap-4">
+                      <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
+                        <img className="w-6 sm:w-auto" src="/images/uiux.png" alt="" />
                       </div>
                       <ListItem
                         className="text-white hover:text-white hover:bg-transparent p-0"
@@ -70,9 +70,9 @@ export default function NavigationMenuDemo() {
                         Craft intuitive and engaging user experiences.
                       </ListItem>
                     </div>
-                    <div className="flex gap-4">
-                      <div className="hidden  p-2 sm:p-0 w-12 sm:w-20 h-14 sm:h-[70px] sm:flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                        <img src="/images/machinel.png" alt="" />
+                    <div className="flex items-center sm:items-start gap-4">
+                      <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
+                        <img className="w-6 sm:w-auto" src="/images/machinel.png" alt="" />
                       </div>
                       <ListItem
                         className="text-white hover:text-white hover:bg-transparent p-0"
@@ -83,9 +83,9 @@ export default function NavigationMenuDemo() {
                         solutions.
                       </ListItem>
                     </div>
-                    <div className="flex gap-4">
-                      <div className="hidden  p-2 sm:p-0 w-12 sm:w-20 h-14 sm:h-[70px] sm:flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                        <img src="/images/ecommerce.png" alt="" />
+                    <div className="flex items-center sm:items-start gap-4">
+                      <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
+                        <img className="w-6 sm:w-auto" src="/images/ecommerce.png" alt="" />
                       </div>
                       <ListItem
                         className="text-white hover:text-white hover:bg-transparent p-0"
@@ -161,15 +161,15 @@ const ListItem = React.forwardRef<
           prefetch={true}
           href={href as string}
           className={cn(
-            "block select-none space-y-1 rounded-md p-0 leading-none no-underline outline-none transition-colors",
+            "block  w-full sm:w-auto select-none space-y-1 rounded-md p-0 leading-none no-underline outline-none transition-colors",
             className
           )}
           {...props}
         >
-          <div className="flex items-center gap-2 text-base sm:text-lg lg:text-lg font-bold leading-none">
-            {title} <img src="/images/right_icon.png" alt="" />
+          <div className="w-full sm:w-auto flex items-center gap-1.5 sm:gap-2 text-sm sm:text-lg lg:text-lg  sm:font-bold leading-none">
+            {title} <img className="w-4 sm:w-auto" src="/images/right_icon.png" alt="" />
           </div>
-          <p className="line-clamp-2 mt-2 text-sm  text-white">{children}</p>
+          <p className="hidden sm:inline-block line-clamp-2 mt-3 sm:mt-2 font-light sm:font-normal text-sm  text-white">{children}</p>
         </Link>
       </NavigationMenuLink>
     </li>

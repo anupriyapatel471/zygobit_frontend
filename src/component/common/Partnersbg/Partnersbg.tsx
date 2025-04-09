@@ -20,11 +20,11 @@ export function HeroHighlightDemo() {
         }}
         className=""
       >
-        <div className="w-full sm:text-center relative z-20 mt-10 sm:mt-16 px-4 lg:px-0">
+        <div className="w-full text-center relative z-20 mt-8 sm:mt-16 px-4 lg:px-0">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradient-custom">
             Our Partners
           </h2>
-          <p className="sm:font-medium max-w-6xl mx-auto text-sm sm:text-xl my-2 sm:my-3">
+          <p className="font-light sm:font-medium max-w-6xl mx-auto text-sm sm:text-xl my-2 sm:my-3">
             Using the latest technology and industry expertise, we built top-end
             Android and iOS-based applications that add value to the business
             and user experience.

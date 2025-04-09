@@ -8,6 +8,7 @@ import dynamic from "next/dynamic";
 import MagicCard from "@/components/ui/magic-card";
 import { ChevronRight } from "lucide-react";
 import { MagicCardDemo } from "../common/Magiccard/Magiccard";
+import arrowRight from "../../../public/images/arrow_right.svg";
 
 interface ProjectData {
   title: string;
@@ -26,7 +27,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
   return (
     <>
       <section className="w-full relative">
-        <div className="w-full h-[365px] sm:h-[550px] lg:h-[900px]">
+        <div className="w-full h-[300px] sm:h-[550px] lg:h-[900px]">
           <Image
             className="w-full"
             src="/images/case_study_banner.png"
@@ -39,7 +40,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
             <div className="w-full flex flex-wrap lg:flex-nowrap justify-between items-center">
               <div className="w-full sm:w-full lg:w-[60%]">
                 <div className="w-auto max-w-2xl">
-                  <ul className="flex items-center flex-wrap sm:flex-nowrap gap-2.5 text-white mb-5 lg:mb-40">
+                  {/* <ul className="flex items-center flex-wrap sm:flex-nowrap gap-2.5 text-white mb-5 lg:mb-40">
                     <li className="text-sm sm:text-base cursor-pointer flex gap-1.5 items-center">
                       Portfolio <ChevronRight className="text-sm" />{" "}
                     </li>
@@ -49,7 +50,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     <li className="text-sm sm:text-base cursor-pointer flex gap-1.5 items-center text-orange-600">
                       Her Calendar{" "}
                     </li>
-                  </ul>
+                  </ul> */}
                   <h1 className="font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl  text-gradiant-custom">
                     {projectData.title}
                   </h1>
@@ -75,7 +76,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
             </div>
           </div>
           <div className="w-full hidden sm:inline absolute max-w-[1248px] mx-auto px-4 -bottom-[170px] left-1/2 -translate-x-1/2 rounded-lg">
-            <div className="w-full border border-[#09090B33] overflow-hidden rounded-lg bg-[#fafafa12] px-4 lg:px-10  ">
+            <div className="w-full sm:border border-[#09090B33] overflow-hidden rounded-lg sm:bg-[#fafafa12] px-4 lg:px-10  ">
               <div className="w-full  z-[1111]  max-w-sm mx-auto rounded-lg">
                 <RippleBg numCircles={10} />
               </div>
@@ -134,8 +135,76 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
               <div className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  max-w-sm mx-auto rounded-lg">
                 <RippleBg numCircles={8} />
               </div>
-              <div className=" w-full py-4 px-4">
-                <MagicCardDemo />
+              <div className=" w-full sm:py-4 sm:px-4">
+                <div
+                  className={
+                    " grid grid-cols-1 sm:grid-cols-3  w-full flex-col gap-4  lg:flex-row"
+                  }
+                >
+                  <MagicCard
+                    data-aos="fade-right"
+                    className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg"
+                  >
+                    <div className="flex flex-wrap sm:flex-nowrap gap-y-3 items-center justify-between">
+                      <h3 className="w-full order-2 sm:order-none sm:w-[calc(100%-65px)] 2xl:w-[calc(100%-65px)] text-base sm:text-lg lg:text-xl 2xl:text-2xl font-semibold tracking-tighter">
+                        Client Location
+                      </h3>
+                      <button className="hidden sm:inline order-1 sm:order-none mb-0 w-[52px] text-white btn-primary bg-gradient-custom">
+                        <Image
+                          className="brightness-0 invert"
+                          width={20}
+                          height={10}
+                          src={arrowRight}
+                          alt="Arrow right"
+                        />
+                      </button>
+                    </div>
+                    <p className="font-[300] sm:font-normal text-sm sm:text-base mt-1.5 sm:mt-3">
+                      {projectData.clientLocation}
+                    </p>
+                  </MagicCard>
+                  <MagicCard className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg">
+                    <div className="flex flex-wrap sm:flex-nowrap gap-y-3 items-center justify-between">
+                      <h3 className="w-full sm:min-h-24 lg:min-h-fit order-2 sm:order-none sm:w-[calc(100%-65px)] xl:w-[calc(100%-80px)] text-base sm:text-lg lg:text-xl 2xl:text-2xl font-semibold tracking-tighter">
+                        Development Time
+                      </h3>
+                      <button className="hidden sm:inline order-1 sm:order-none mb-0 w-[52px] text-white btn-primary bg-gradient-custom">
+                        <Image
+                          className="brightness-0 invert"
+                          width={20}
+                          height={10}
+                          src={arrowRight}
+                          alt="Arrow right"
+                        />
+                      </button>
+                    </div>
+                    <p className="font-[300] sm:font-normal text-sm sm:text-base mt-1.5 sm:mt-3">
+                      {projectData.developmentTime}
+                    </p>
+                  </MagicCard>
+                  <MagicCard
+                    data-aos="fade-left"
+                    className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg"
+                  >
+                    <div className="flex flex-wrap sm:flex-nowrap gap-y-3 items-center justify-between">
+                      <h3 className="w-full order-2 sm:order-none sm:w-[calc(100%-65px)] 2xl:w-[calc(100%-65px)] text-base sm:text-lg lg:text-xl 2xl:text-2xl font-semibold tracking-tighter">
+                        Target Users
+                      </h3>
+                      <button className="hidden sm:inline order-1 sm:order-none mb-0 w-[52px] text-white btn-primary bg-gradient-custom">
+                        <Image
+                          className="brightness-0 invert"
+                          width={20}
+                          height={10}
+                          src={arrowRight}
+                          alt="Arrow right"
+                        />
+                      </button>
+                    </div>
+                    <p className="font-[300] sm:font-normal text-sm sm:text-base mt-1.5 sm:mt-3">
+                      {projectData.targetUsers}
+                    </p>
+                  </MagicCard>
+                </div>
               </div>
             </div>
           </div>
@@ -166,10 +235,10 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
       <section className="w-full text-left sm:text-center mt-12 sm:mt-20 lg:mt-32 mb-8 overflow-hidden">
         <div className="container remove-bg">
           <div className="w-full max-w-6xl mx-auto sm:px-4">
-            <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl text-shadow-2xl  text-gradiant-custom">
+            <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl text-shadow-2xl  text-gradiant-custom">
               Technologies Leveraged
             </h2>
-            <p className="sm:font-medium text-sm sm:text-base lg:text-lg mt-3 sm:mt-6">
+            <p className="font-light sm:font-medium text-sm sm:text-base lg:text-lg mt-3 sm:mt-6">
               {projectData.technologyDescription}
             </p>
             <div className="w-full mt-8 lg:mt-14 grid grid-cols-2 sm:flex justify-center items-center gap-5 sm:gap-24">
