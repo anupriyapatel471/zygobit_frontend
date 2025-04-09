@@ -243,21 +243,23 @@ const MachineLearning = () => {
         </section>
       </Suspense>
 
-      <ClientSays
-        clientHeading={clientSaysHeading}
-        clientSaysDetails={clientSaysDetails}
-      />
+      <div className="-mb-10 sm:-mb-0">
+        <ClientSays
+          clientHeading={clientSaysHeading}
+          clientSaysDetails={clientSaysDetails}
+        />
+      </div>
 
       <CtaSecond content={""} Aurora={""} vortex={""} />
 
-      <section className="w-full pb-12 sm:pb-16 lg:pb-20 mb-12 lg:mb-0 overflow-hidden">
+      <section className="w-full pb-12 sm:pb-16 lg:pb-20 mb-5 sm:mb-12 lg:mb-0 overflow-hidden">
         <div className="container remove-bg">
           <div className="flex flex-wrap lg:flex-nowrap justify-between gap-5">
             <div className="w-full lg:w-1/2 ">
               <h2 className="text-2xl sm:text-3xl lg:text-[35px] lg:leading-[50px] text-gradiant-custom font-bold">
                 Select from Our AI & ML-Powered Development Models
               </h2>
-              <p className="sm:font-medium  text-sm sm:text-lg lg:text-xl mt-4 mb-7">
+              <p className="sm:font-medium  text-sm sm:text-lg lg:text-xl mt-2.5 sm:mt-4 mb-4 sm:mb-7">
                 Being a leading AI & ML-driven web application development
                 provider, we offer multiple hiring models tailored to your
                 needs.

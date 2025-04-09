@@ -14,11 +14,11 @@ const TrustedAcross = () => {
       <section className="w-full  bg-gradient-custom pt-11 sm:pt-52 pb-12 lg:pb-14  overflow-hidden">
         <div className="container">
           <div className="w-full  relative inline-block sm:hidden  rounded-lg">
-            <div className="w-full border border-[#09090B33] rounded-lg bg-[#fafafa12] ">
+            <div className="w-full sm:border border-[#09090B33] rounded-lg sm:bg-[#fafafa12] ">
               <div className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  max-w-sm mx-auto rounded-lg">
                 <RippleBg numCircles={8} />
               </div>
-              <div className=" w-full py-4 px-4">
+              <div className=" w-full sm:py-4 sm:px-4">
                 <MagicCardDemo />
               </div>
             </div>

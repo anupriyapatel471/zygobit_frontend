@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 };
 
 const Contact = () => {
-  const clientHeading = "Lets’s Hear What Our Clients Say";
+  const clientHeading = "Let’s Hear What Our Clients Say";
   const clientSaysDetails =
     " Using the latest technology and industry expertise, we built top-end Android and iOS-based applications that add value to the business and user experience.";
   return (

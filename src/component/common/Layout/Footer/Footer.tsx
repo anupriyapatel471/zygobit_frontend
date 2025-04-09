@@ -95,7 +95,7 @@ const Footer = () => {
                   href="#"
                   className="text-sm text-secondaryText hover:text-white"
                 >
-                  Githu
+                  Github
                 </Link>
               </li>
               <li>

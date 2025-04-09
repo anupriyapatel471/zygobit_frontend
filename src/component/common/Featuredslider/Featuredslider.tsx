@@ -34,7 +34,7 @@ export default function FeaturedSlider() {
               <div>
                 <Card className="border-none rounded-xl">
                   <CardContent className="p-0">
-                    <div className="w-full bg-gradient-to-r from-orange-600 to-[#09090B] lg:bg-[linear-gradient(to_right,#EA580C_0%,#09090B_60%,#09090B_100%)] rounded-[20px] mt-5  sm:mt-11">
+                    <div className="w-full bg-orange-600 sm:bg-gradient-to-r sm:from-orange-600 sm:to-[#09090B] lg:bg-[linear-gradient(to_right,#EA580C_0%,#09090B_60%,#09090B_100%)] rounded-[20px] mt-5  sm:mt-11">
                       <div className="w-full flex justify-between items-center pl-4 sm:pl-16 lg:pl-24 pr-4 sm:pr-12 py-8">
                         <div className="w-auto max-w-md text-white">
                           {/* <Image
@@ -44,11 +44,11 @@ export default function FeaturedSlider() {
                             width={150}
                             height={50}
                           /> */}
-                          <h2 className="font-extrabold text-4xl sm:text-5xl tracking-wide">
+                          <h2 className="font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-wide">
                             {project.projectName}
                           </h2>
 
-                          <h3 className="font-semibold text-2xl sm:text-3xl lg:text-4xl mt-4 ">
+                          <h3 className="font-semibold text-xl sm:text-3xl lg:text-4xl mt-2 sm:mt-4 ">
                             {project.title}
                           </h3>
                           <p className="text-sm sm:text-base sm:font-medium mt-3 sm:pr-5">

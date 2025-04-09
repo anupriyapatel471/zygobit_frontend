@@ -5,7 +5,7 @@ const OurPartners=()=>{
   return(<>
    <section
           data-aos="fade-up"
-          className="w-full relative inline-block pt-48 pb-16 sm:py-24 overflow-hidden"
+          className="w-full relative inline-block pt-[11rem] pb-12 sm:py-24 overflow-hidden"
         >
           <div className="absolute top-0 left-0 w-full h-full z-10">
             <HeroHighlightDemo />

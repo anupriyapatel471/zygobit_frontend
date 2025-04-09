@@ -94,8 +94,7 @@ const Header = () => {
           role="dialog"
           aria-modal="true"
         >
-          <div className="fixed overlay inset-0 z-30 bg-white/70"></div>
-          <div className="side-content overflow-hidden w-full fixed inset-y-0 left-0 z-30  overflow-y-auto bg-black p-4 sm:px-4 sm:py-4  sm:ring-1 sm:ring-gray-900/10">
+          <div className="side-content overflow-hidden w-full fixed inset-y-0 left-0 z-30  overflow-y-auto bg-transparent backdrop-blur-2xl p-4 sm:px-4 sm:py-4  sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <Link
                 href="/"
@@ -112,19 +111,19 @@ const Header = () => {
               <button
                 type="button"
                 onClick={closeMenu}
-                className="close-btn-mobile -m-2.5 rounded-md p-2.5 text-gray-700"
+                className="close-btn-mobile -mr-[2px] bg-white -m-2.5 rounded-md p-2.5 text-gray-700"
               >
                 <span className="sr-only">Close menu</span>
                 <svg
-                  className="h-6 w-6"
-                  fill="none"
+                  className="h-6 w-6 "
+                  fill="black"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
                   aria-hidden="true"
                 >
                   <path
-                    className="text-white"
+                    className="text-black"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     d="M6 18L18 6M6 6l12 12"

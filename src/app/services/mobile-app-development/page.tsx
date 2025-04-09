@@ -207,7 +207,7 @@ const MobileAppDevelopment = () => {
 
       <section className="w-full lg:mt-10 inline-block">
         <div className="container remove-bg">
-          <div className="w-full px-4 lg:px-0 sm:text-center mb-5 sm:mb-10">
+          <div className="w-full  sm:text-center mb-5 sm:mb-10">
             <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl ">
               Revolutionizing Mobile Apps with Cutting-Edge Technology
             </h2>
@@ -256,7 +256,7 @@ const MobileAppDevelopment = () => {
 
       <section className="w-full">
         <div className="container remove-bg">
-          <div className="w-full px-4 lg:px-20 sm:text-center mb-5 sm:mb-9">
+          <div className="w-full  sm:text-center mb-5 sm:mb-9">
             <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom">
               Transforming Ideas into Scalable, High-Performance Applications
             </h2>
@@ -267,7 +267,7 @@ const MobileAppDevelopment = () => {
               applications tailored to your unique needs.
             </p>
           </div>
-          <div className="w-full px-4 lg:px-0">
+          <div className="w-full">
             <SharedLayoutAnimation />
           </div>
         </div>

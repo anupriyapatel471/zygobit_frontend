@@ -1,3 +1,5 @@
+import { BussinessCardsSlider } from "../BusinessCardsSlider";
+
 /* eslint-disable @next/next/no-img-element */
 const solutions = [
   {
@@ -14,7 +16,7 @@ const solutions = [
   {
     id: 2,
     img: "/images/sol_one.png",
-    title: "Strategic Business Solutions",
+    title: "Advanced Technology Integration",
     items: [
       "Comprehensive analysis of your unique business needs.",
       "Custom-built strategies designed to drive results.",
@@ -25,7 +27,7 @@ const solutions = [
   {
     id: 3,
     img: "/images/sol_three.png",
-    title: "Strategic Business Solutions",
+    title: "Innovative Problem Solving Approach",
     items: [
       "Comprehensive analysis of your unique business needs.",
       "Custom-built strategies designed to drive results.",
@@ -36,7 +38,7 @@ const solutions = [
   {
     id: 4,
     img: "/images/sol_four.png",
-    title: "Strategic Business Solutions",
+    title: "Agile, Collaborative Process",
     items: [
       "Comprehensive analysis of your unique business needs.",
       "Custom-built strategies designed to drive results.",
@@ -53,32 +55,37 @@ const BusinessCards = () => {
       className="w-full relative py-0 px-0 overflow-hidden"
     >
       <div className="container">
-        <div className="w-full sm:text-center mb-5 sm:mb-8 lg:mb-10">
-          <h2 className="text-2xl sm:text-4xl lg:text-[38px] text-gradiant-custom 2xl:text-[40px] font-bold">
+        <div className="w-full text-center mb-5 sm:mb-8 lg:mb-10">
+          <h2 className=" text-2xl sm:text-4xl lg:text-[38px] text-gradiant-custom 2xl:text-[40px] font-bold">
             Revolutionizing Businesses with Excellence & Expertise
           </h2>
         </div>
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="hidden w-full sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {solutions.map((solution) => (
             <div
               key={solution.id}
               className="w-full hover:bg-orange-600 rounded-2xl border-2 border-white/20 p-5 text-white group"
             >
-              <span className="border-2 border-white/20 flex items-center justify-center rounded-xl w-20 h-20 overflow-hidden">
+              <span className=" border-2 border-white/20 flex items-center justify-center rounded-xl w-14 h-14 sm:w-20 sm:h-20 overflow-hidden">
                 <img
                   className="group-hover:brightness-0 group-hover:invert size-full"
                   src={solution.img}
                   alt=""
                 />
               </span>
-              <h3 className="font-bold text-xl my-4">{solution.title}</h3>
-              <ul className="list-disc pl-4 text-base">
+              <h3 className="font-bold text-base sm:text-xl my-2.5 sm:my-4">
+                {solution.title}
+              </h3>
+              <ul className="list-disc pl-4 space-y-1 sm:space-y-0 text-sm sm:text-base">
                 {solution.items.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
             </div>
           ))}
+        </div>
+        <div className="inline-block w-full sm:hidden">
+          <BussinessCardsSlider />
         </div>
       </div>
     </section>

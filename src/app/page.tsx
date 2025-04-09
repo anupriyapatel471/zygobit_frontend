@@ -84,7 +84,7 @@ export async function generateStaticParams() {
 }
 
 const Home = () => {
-  const clientHeading = "Lets’s Hear What Our Clients Say";
+  const clientHeading = "Let’s Hear What Our Clients Say";
   const clientSaysDetails =
     "Using the latest technology and industry expertise, we built top-end Android and iOS-based applications that add value to the business and user experience.";
 
@@ -109,10 +109,10 @@ const Home = () => {
             {ourExpertiseData?.map((data, index) => (
               <div
                 key={index}
-                className="border border-[#EA580C] cursor-context-menu p-4 pl-0 sm:pl-0 sm:p-0 rounded-lg sm:rounded-none sm:border-none w-auto group"
+                className="border border-muted-foreground cursor-context-menu p-4 pl-0 sm:pl-0 sm:p-0 rounded-lg sm:rounded-none sm:border-none w-auto group"
               >
                 <span>{data?.image}</span>
-                <h5 className="pl-4 group-hover:text-themetext font-semibold text-lg my-2">
+                <h5 className="pl-4 group-hover:text-themetext font-semibold text-base sm:text-lg my-2">
                   {data?.heading}
                 </h5>
                 <p className="pl-4 text-sm sm:text-base text-muted-foreground">

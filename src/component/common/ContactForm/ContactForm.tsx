@@ -9,10 +9,10 @@ export default function ContactForm() {
     <>
       <section className="w-full  relative overflow-hidden">
         <div className="container remove-bg">
-          <div className="w-full grid items-center   bg-white/5 rounded-[40px] grid-cols-1 lg:grid-cols-2 gap-5 p-4 sm:p-5">
+          <div className="w-full grid items-center   bg-white/5 rounded-xl sm:rounded-2xl  lg:rounded-[40px] grid-cols-1 lg:grid-cols-2 gap-5 p-4 sm:p-5">
             <div
               data-aos="fade-right"
-              className="w-auto relative h-[415px] sm:h-[800px]"
+              className="hidden sm:inline-block w-auto relative h-[415px] sm:h-[710px]"
             >
               <Image
                 className="w-full r rounded-[40px] object-cover"
@@ -20,7 +20,7 @@ export default function ContactForm() {
                 alt="Space X"
                 fill
               />
-              <div className="absolute bottom-0 left-0 px-3 sm:px-8 py-8">
+              {/* <div className="absolute bottom-0 left-0 px-3 sm:px-8 py-8">
                 <p className="tracking-tighter text-sm sm:text-lg mb-2">
                   “Two lunar months revealed Earth&apos;s fragile beauty against
                   vast silence, transforming my view of our place in the
@@ -29,7 +29,7 @@ export default function ContactForm() {
                 <b className="sm:font-medium text-base sm:text-lg tracking-tight">
                   Irinel Traista
                 </b>
-              </div>
+              </div> */}
             </div>
 
             <ConnectForm />
