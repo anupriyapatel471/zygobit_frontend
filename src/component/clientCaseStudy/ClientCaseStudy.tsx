@@ -6,8 +6,6 @@ const RippleBg = dynamic(() => import("@/component/common/Ripplebg/Ripplebg"));
 
 import dynamic from "next/dynamic";
 import MagicCard from "@/components/ui/magic-card";
-import { ChevronRight } from "lucide-react";
-import { MagicCardDemo } from "../common/Magiccard/Magiccard";
 import arrowRight from "../../../public/images/arrow_right.svg";
 
 interface ProjectData {
