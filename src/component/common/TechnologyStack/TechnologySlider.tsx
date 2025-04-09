@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
 import { useEffect, useState } from "react";
-import Image from "next/image";
+
 
 const reviews = [
   {
@@ -46,15 +46,7 @@ const reviews = [
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
-const ReviewCard = ({
-  img,
-  name,
-}: {
-  img: string;
-  name: string;
-  username: string;
-  body: string;
-}) => {
+const ReviewCard = () => {
   return (
     <figure
       className={cn(
