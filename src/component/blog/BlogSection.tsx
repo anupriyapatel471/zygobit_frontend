@@ -2,8 +2,9 @@
 import Image from "next/image";
 import calendarIcon from "../../../public/images/calendar_icon.svg";
 import { truncateText } from "@/lib/utils";
-import Loader from "../common/Loader/Loader";
+// import Loader from "../common/Loader/Loader";
 import { useBlog } from "@/hooks/dynamoDb/useBlog";
+import BlogHeaderSkelton from "../Loader/BlogHeaderSkelton";
 
 const BlogSection = () => {
   const { blogs, loading } = useBlog();
@@ -22,12 +23,11 @@ const BlogSection = () => {
 
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
+       
         <section className="w-full bg-black  py-8 mt-16">
           <div className="container remove-bg">
-            <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-6 sm:gap-4 xl:gap-12">
+            {
+              loading ?  <BlogHeaderSkelton /> :  <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-6 sm:gap-4 xl:gap-12">
               {featuredBlog && (
                 <div className="w-full sm:w-auto h-[400px] sm:h-[450px] lg:h-[520px] cursor-pointer relative rounded-2xl overflow-hidden">
                   <div className="size-full absolute top-0 left-0 bg-black/50"></div>
@@ -64,7 +64,7 @@ const BlogSection = () => {
                 {otherBlogs.map((post) => (
                   <div
                     key={post.id}
-                    className="w-full cursor-pointer flex flex-wrap sm:flex-nowrap gap-4 items-center"
+                    className="w-full cursor-pointer flex flex-wrap sm:flex-nowrap gap-4 "
                   >
                     <div className="w-28 h-28 object-cover sm:w-40 sm:h-40 rounded-sm overflow-hidden relative">
                       <Image
@@ -99,9 +99,11 @@ const BlogSection = () => {
                 ))}
               </div>
             </div>
+            }
+          
           </div>
         </section>
-      )}
+      
     </>
   );
 };

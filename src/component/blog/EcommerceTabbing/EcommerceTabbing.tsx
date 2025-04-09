@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import "./EcommerceTabStyle.css";
 import { MovingBorders } from "../../ui/MovingBorder/MovingBorder";
 import { useBlog } from "@/hooks/dynamoDb/useBlog";
+import BlogGridSkeleton from "@/component/Loader/BlogGridSkelton";
 
 interface TabItem {
   label: string;
@@ -13,7 +14,7 @@ interface TabItem {
 }
 
 export default function EcommerceTabbing() {
-  const { blogs } = useBlog();
+  const { blogs , loading } = useBlog();
 
   const [tabs, setTabs] = useState<TabItem[]>([]);
   const [selectedTab, setSelectedTab] = useState<TabItem | null>(null);
@@ -37,7 +38,7 @@ export default function EcommerceTabbing() {
 
   return (
     <>
-      {selectedTab && (
+      { loading ? <BlogGridSkeleton/> : selectedTab && (
         <div className="container">
           <nav className="nav">
             <ul className="tabsContainer">
@@ -86,14 +87,3 @@ export default function EcommerceTabbing() {
   );
 }
 
-// const allIngredients = [
-//   { icon: "", label: "All" },
-//   { icon: "", label: "Business Models" },
-//   { icon: "", label: "Cost Estimation" },
-//   { icon: "", label: "Technology" },
-//   { icon: "", label: "Learn from Failure" },
-//   { icon: "", label: "Business Punch" },
-//   { icon: "", label: "News" },
-//   { icon: "", label: "App Development Guide" },
-//   { icon: "", label: "e-Guide" },
-// ];
