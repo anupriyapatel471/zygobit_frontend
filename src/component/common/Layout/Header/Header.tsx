@@ -9,11 +9,9 @@ import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
-
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
@@ -143,10 +141,7 @@ const Header = () => {
                   <NavigationMenuDemo />
                 </div>
                 <div className="py-5 border-none grid grid-cols-1 gap-y-4 md:max-w-72">
-                  <Link
-                    href="/contact"
-                    className="w-full sm:w-auto"
-                  >
+                  <Link href="/contact" className="w-full sm:w-auto">
                     <button className="w-full btn-primary relative overflow-hidden hover:bg-[#ea580cd1] h-9 text-sm bg-themebg text-white">
                       Get in Touch
                       <span className="shine"></span>
