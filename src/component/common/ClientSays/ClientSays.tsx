@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+
 import ClientSaysCards from "@/component/new/clientSaysCards";
 const ClientSays = ({
   clientHeading,

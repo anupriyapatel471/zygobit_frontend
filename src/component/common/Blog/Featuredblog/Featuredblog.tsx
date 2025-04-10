@@ -3,6 +3,8 @@ import React from "react";
 import { BentoGrid, BentoGridItem } from "../../../../components/ui/bento-grid";
 import { useBlog } from "@/hooks/dynamoDb/useBlog";
 import { Loader } from "lucide-react";
+import Link from "next/link";
+
 export default function FeaturedBlog() {
   const { blogs, loading } = useBlog();
 
@@ -11,13 +13,15 @@ export default function FeaturedBlog() {
   ) : (
     <BentoGrid className=" mx-auto md:auto-rows-[21rem]">
       {blogs.slice(0, 6).map((item, i) => (
-        <BentoGridItem
-          key={i}
-          title={item.title}
-          description={truncateText(item.description, 100)}
-          image={item.image}
-          category={item.category}
-        />
+        <Link href={`/blogs/${item.slug}`} key={i}>
+          <BentoGridItem
+            key={i}
+            title={item.title}
+            description={truncateText(item.description, 100)}
+            image={item.image}
+            category={item.category}
+          />
+        </Link>
       ))}
     </BentoGrid>
   );
