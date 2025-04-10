@@ -2,6 +2,7 @@ import { ChevronRight } from "lucide-react";
 import React from "react";
 import MarqueeSlider from "../Marque/Marqueslider";
 import { BannerGridBg } from "./BannerGridBg/BannerGridBg";
+import Link from "next/link";
 
 const HeroBanner = ({
   heroParagraph,
@@ -27,10 +28,12 @@ const HeroBanner = ({
                   {heroParagraph}
                 </p>
                 <div className="lg:max-w-sm mx-auto relative z-10">
-                  <button className="lg:w-full mt-9  btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                    Book your free consultation
-                    <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                  </button>
+                  <Link href="/contact">
+                    <button className="lg:w-full mt-9  btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                      Book your free consultation
+                      <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                    </button>
+                  </Link>
                 </div>
               </div>
               <div className="w-auto mt-6 sm:mt-16">

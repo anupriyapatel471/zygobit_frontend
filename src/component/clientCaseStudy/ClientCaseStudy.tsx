@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { ReactNode } from "react";
 import Image from "next/image";
 const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
 const RippleBg = dynamic(() => import("@/component/common/Ripplebg/Ripplebg"));
@@ -9,6 +9,8 @@ import MagicCard from "@/components/ui/magic-card";
 import arrowRight from "../../../public/images/arrow_right.svg";
 
 interface ProjectData {
+  projectName: ReactNode;
+  subTitle: ReactNode;
   title: string;
   description: string;
   mobileImage?: string;
@@ -212,7 +214,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
               className="w-full lg:w-[375px] border-b  lg:border-b-0 lg:border-r  border-white pb-5 lg:pb-12 mt-0 sm:mt-0 pt-6 lg:py-12  lg:px-0"
             >
               <h3 className="lg:w-24 text-lg sm:text-2xl lg:text-3xl uppercase lg:text-left font-semibold max-w-80">
-                Her Calendar
+                {projectData.projectName}
               </h3>
             </div>
             <div
@@ -220,10 +222,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
               data-aos="fade-up"
             >
               <p className=" text-base sm:text-base lg:text-lg tracking-tighter">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                {projectData.description}
               </p>
             </div>
           </div>

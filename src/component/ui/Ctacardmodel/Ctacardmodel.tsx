@@ -31,7 +31,7 @@ export function ThreeDCard({ img }: ThreeDCardProp) {
           <CardItem translateZ="60">
             <Link href={"/contact"}>
               <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                Our Engagement Model{" "}
+                Talk to an Expert
                 <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
               </button>
             </Link>

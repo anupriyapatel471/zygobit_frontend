@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+
 import { CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -8,34 +9,63 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+const testimonials = [
+  {
+    quote:
+      "Zygobit’s team delivered a highly effective solution for our app. They ensured a user-friendly interface and smooth functionality, helping us meet our business goals in no time. ",
+    name: "Sasson Moulavi",
+    designation: "ABBSI",
+    src: "/images/abbsi_img.png",
+  },
+  {
+    quote:
+      "Zygobit’s expertise made the development of our project a seamless experience. They understood our vision and executed it with precision, delivering a fantastic solution.",
+    name: "ellered",
+    designation: "OPSY",
+    src: "/images/opsy.png",
+  },
+  {
+    quote:
+      "The Zygobit team helped us transform our website, combining great design with excellent usability. Their approach exceeded expectations and truly captured the essence of our brand.",
+    name: "Mark",
+    designation: "Inspired Meadows",
+    src: "/images/meadows.png",
+  },
+  {
+    quote:
+      "Collaborating with Zygobit was a game-changer. Their innovative development strategies helped us create a robust and feature-rich app that perfectly meets the needs of our users.",
+    name: "Alan",
+    designation: "TIA",
+    src: "/images/tia.png",
+  },
+];
 const ClientSaysCards = () => {
   return (
     <div className="absolute top-0 left-0 w-full">
       <Carousel className="w-full">
         <CarouselContent>
-          {Array.from({ length: 5 }).map((_, index) => (
+          {testimonials.map((testimonial, index) => (
             <CarouselItem key={index}>
               <div className="p-1">
                 <CardContent className="mt-0 sm:mt-14 w-full h-full flex flex-col justify-center items-center  text-center  p-6 text-white">
                   <div className="ml-1 sm:ml-12 w-fit mr-auto mb-3">
                     <img className="" src="images/qoutus.png" alt="" />
                   </div>
-                  <p className="font-light sm:font-normal text-sm sm:text-base mb-5 sm:mb-8 max-w-xs mx-auto">
-                    The scalability and performance have bee game changing for
-                    our organization. Highly recommend to any growing business.
+                  <p className="font-light sm:font-normal text-sm sm:text-base mb-5 sm:mb-8 max-w-xs mx-auto line-clamp-4">
+                    {testimonial.quote}
                   </p>
                   <div className="w-12 h-12 mx-auto rounded-full overflow-hidden">
                     <img
                       className="w-full h-full mx-auto "
-                      src="/images/profile.png"
+                      src={testimonial.src}
                       alt=""
                     />
                   </div>
                   <h4 className="font-medium text-sm text-[#E0E0E0] mt-3 mb-1">
-                    john smith
+                    {testimonial.name}
                   </h4>
                   <span className="font-[300] text-sm">
-                    Founder of Awesomeux Technology
+                    {testimonial.designation}
                   </span>
                 </CardContent>
               </div>

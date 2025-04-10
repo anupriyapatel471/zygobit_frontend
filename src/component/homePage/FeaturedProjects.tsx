@@ -1,30 +1,8 @@
 import FeaturedSlider from "@/component/common/Featuredslider/Featuredslider";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { ReactNode } from "react";
 
-interface Project {
-  technologyImages: ReactNode;
-  id?: string | null;
-  title: string | null;
-  description: string | null;
-  projectName: string | null;
-  mobileImage: string | null;
-  androidDownloads: number | null;
-  iosDownloads: number | null;
-  createdAt: string | null;
-  updatedAt: string | null;
-  clientLocation: string | null;
-  developmentTime: string | null;
-  targetUsers: string | null;
-  subDescription: string | null;
-  subTitle: string | null;
-  technologyDescription: string | null;
-  developmentDescription: string | null;
-  evaluationDescription: string | null;
-  evaluationImage: string | null;
-}
-const FeaturedProjects = ({ projects }: { projects: Project }) => {
+const FeaturedProjects = () => {
   return (
     <>
       <section className="w-full  py-10 sm:py-14 lg:py-16 overflow-hidden">
@@ -40,7 +18,7 @@ const FeaturedProjects = ({ projects }: { projects: Project }) => {
             </p>
           </div>
           <div data-aos="fade-up">
-            <FeaturedSlider projects={projects} />
+            <FeaturedSlider />
           </div>
           <div className="w-full flex justify-center mt-7 sm:mt-10">
             <Link href={"/portfolio"}>

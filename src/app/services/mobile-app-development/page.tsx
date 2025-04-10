@@ -51,6 +51,7 @@ import CtaSecond from "@/component/new/CtaSecond";
 import { MobileTechnology } from "@/component/sevices/MobileAppDevelopment/MobileTechnology/MobileTechnology";
 import { Suspense } from "react";
 import Loader from "@/component/common/Loader/Loader";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Mobile App Development",
@@ -189,10 +190,12 @@ const MobileAppDevelopment = () => {
           <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
             <div className="w-full lg:w-[45%]">
               <BoostBussiness heading={heading} paragraph={paragraph} />
-              <button className="mt-4 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                Get Assistance{" "}
-                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-              </button>
+              <Link href="/contact">
+                <button className="mt-4 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                  Get Assistance{" "}
+                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                </button>
+              </Link>
             </div>
             <div className="w-full lg:w-[55%]">
               <div className="w-full">
@@ -220,10 +223,12 @@ const MobileAppDevelopment = () => {
             <MobileTechnology />
           </div>
           <div className="w-full flex sm:justify-center mt-5 lg:mt-12">
-            <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-              Build Your App Today!{" "}
-              <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-            </button>
+            <Link href="/contact">
+              <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                Build Your App Today!{" "}
+                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -242,10 +247,12 @@ const MobileAppDevelopment = () => {
                 performance or cross-platform solutions for cost efficiency, we
                 deliver robust applications tailored to your needs.
               </p>
-              <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                Discuss Your Business Requirements{" "}
-                <ChevronRight className="group-hover:left-2 w-5 sm:w-auto left-0 relative duration-500 transition-all" />
-              </button>
+              <Link href="/contact">
+                <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                  Discuss Your Business Requirements{" "}
+                  <ChevronRight className="group-hover:left-2 w-5 sm:w-auto left-0 relative duration-500 transition-all" />
+                </button>
+              </Link>
             </div>
             <div className="w-full lg:w-1/2 bg-[#D9D9D90D] rounded-xl p-5">
               <MobileAppSlider />

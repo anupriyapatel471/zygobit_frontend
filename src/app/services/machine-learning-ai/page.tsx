@@ -44,6 +44,7 @@ import { Suspense } from "react";
 import Loader from "@/component/common/Loader/Loader";
 import AppleCardsCarousel from "@/component/sevices/MobileAppDevelopment/AppleCardsCarousel/AppleCardsCarousel";
 import CtaSecond from "@/component/new/CtaSecond";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Machine Learning AI",
@@ -195,10 +196,12 @@ const MachineLearning = () => {
                     decision-making, providing users with a seamless experience.
                   </p>
                 </div>
-                <button className="mt-5 lg:mt-10 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                  Get Assistance{" "}
-                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                </button>
+                <Link href="/contact">
+                  <button className="mt-5 lg:mt-10 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                    Get Assistance{" "}
+                    <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                  </button>
+                </Link>
               </div>
               <div className="w-full lg:w-[55%]">
                 <div className="w-full">
@@ -264,10 +267,12 @@ const MachineLearning = () => {
                 provider, we offer multiple hiring models tailored to your
                 needs.
               </p>
-              <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                Hire Web Application Developers{" "}
-                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-              </button>
+              <Link href="/contact">
+                <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                  Hire Web Application Developers{" "}
+                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                </button>
+              </Link>
             </div>
             <div className="w-full lg:w-1/2 ">
               <WebSlider engagementModels={engagementModelsMlAi} />

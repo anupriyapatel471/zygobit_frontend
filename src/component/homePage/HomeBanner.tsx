@@ -4,6 +4,7 @@ import MarqueeSlider from "@/component/common/Marque/Marqueslider";
 import RippleBg from "@/component/common/Ripplebg/Ripplebg";
 import { MagicCardDemo } from "@/component/common/Magiccard/Magiccard";
 import TrustedAcross from "../common/TrustedAcross/TrustedAcross";
+import Link from "next/link";
 
 const HomeBanner = () => {
   return (
@@ -19,10 +20,12 @@ const HomeBanner = () => {
                     Innovative IT Solutions for Your 
                     <span className="text-themetext"> Business Growth</span>
                   </h1>
-                  <button className="mt-5 sm:mt-7 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                    Talk to an expert!
-                    <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                  </button>
+                  <Link href="/contact">
+                    <button className="mt-5 sm:mt-7 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                      Talk to an expert!
+                      <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                    </button>
+                  </Link>
                 </div>
                 <div className="w-auto text-center sm:text-left mt-6 sm:mt-16">
                   <span className="block text-center sm:text-left sm:font-bold text-lg mb-7">

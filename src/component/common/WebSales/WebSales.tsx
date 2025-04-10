@@ -3,6 +3,7 @@
 import BoxReveal from "@/components/ui/box-reveal";
 import { useEffect, useState } from "react";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 interface BoxRevealsProps {
   data: {
@@ -55,10 +56,12 @@ export function BoxReveals({ data }: BoxRevealsProps) {
       </BoxReveal>
 
       <BoxReveal boxColor={"#EA580C"} duration={0.5}>
-        <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-          {data.btnText}
-          <ChevronRight className="group-hover:left-2 w-4 sm:w-auto left-0 relative duration-500 transition-all" />
-        </button>
+        <Link href={"/contact"}>
+          <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+            {data.btnText}
+            <ChevronRight className="group-hover:left-2 w-4 sm:w-auto left-0 relative duration-500 transition-all" />
+          </button>
+        </Link>
       </BoxReveal>
     </div>
   );

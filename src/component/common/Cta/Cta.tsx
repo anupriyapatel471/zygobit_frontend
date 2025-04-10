@@ -38,7 +38,8 @@ const Cta = ({ content, Aurora, vortex }: ctaProp) => {
                 >
                   <TypewriterEffect />
                   <div className="inline sm:hidden text-2xl sm:text-[28px] lg:text-4xl text-center sm:text-left text-white font-bold ">
-                    Shape the Future of <span className="text-themetext">Technology </span> with Us
+                    Shape the Future of{" "}
+                    <span className="text-themetext">Technology </span> with Us
                   </div>
                   <div className="text-center sm:text-left sm:font-medium text-sm leading-6 sm:leading-normal sm:text-base lg:text-lg mt-2 mb-5">
                     Shape the Future of Technology with Us Partner with our team
@@ -48,7 +49,7 @@ const Cta = ({ content, Aurora, vortex }: ctaProp) => {
                   <div>
                     <Link href={"/contact"}>
                       <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                        Our Engagement Model{" "}
+                        Talk to an Expert
                         <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                       </button>
                     </Link>

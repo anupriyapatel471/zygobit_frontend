@@ -7,10 +7,10 @@ const solutions = [
     img: "/images/sol_one.png",
     title: "Strategic Business Solutions",
     items: [
-      "Comprehensive analysis of your unique business needs.",
-      "Custom-built strategies designed to drive results.",
-      "Scalable solutions adaptable to future growth.",
-      "Focused on delivering measurable outcomes.",
+      "In-depth evaluation tailored to your specific goals.",
+      "Tailor-made strategies engineered for impactful outcomes.",
+      "Scalable models designed to grow with your business.",
+      "Committed to driving tangible, measurable success.",
     ],
   },
   {
@@ -18,10 +18,10 @@ const solutions = [
     img: "/images/sol_one.png",
     title: "Advanced Technology Integration",
     items: [
-      "Comprehensive analysis of your unique business needs.",
-      "Custom-built strategies designed to drive results.",
-      "Scalable solutions adaptable to future growth.",
-      "Focused on delivering measurable outcomes.",
+      "Tailored tech assessments aligned with your operations.",
+      "Personalized implementations that boost efficiency.",
+      "Scalable architecture for future-proof development.",
+      "Emphasis on results-driven digital transformation.",
     ],
   },
   {
@@ -29,10 +29,10 @@ const solutions = [
     img: "/images/sol_three.png",
     title: "Innovative Problem Solving Approach",
     items: [
-      "Comprehensive analysis of your unique business needs.",
-      "Custom-built strategies designed to drive results.",
-      "Scalable solutions adaptable to future growth.",
-      "Focused on delivering measurable outcomes.",
+      "Customized diagnostics for complex business challenges.",
+      "Creative, results-oriented strategies crafted for you.",
+      "Flexible solutions built for long-term adaptability.",
+      "Laser-focused on real-world impact and success.",
     ],
   },
   {
@@ -40,10 +40,10 @@ const solutions = [
     img: "/images/sol_four.png",
     title: "Agile, Collaborative Process",
     items: [
-      "Comprehensive analysis of your unique business needs.",
-      "Custom-built strategies designed to drive results.",
-      "Scalable solutions adaptable to future growth.",
-      "Focused on delivering measurable outcomes.",
+      "Deep dive into your unique organizational dynamics.",
+      "Interactive planning with stakeholder collaboration.",
+      "Scalable frameworks for seamless future expansion.",
+      "Performance-focused with clear outcome tracking.",
     ],
   },
 ];
@@ -85,7 +85,7 @@ const BusinessCards = () => {
           ))}
         </div>
         <div className="inline-block w-full sm:hidden">
-          <BussinessCardsSlider />
+          <BussinessCardsSlider solutions={solutions} />
         </div>
       </div>
     </section>

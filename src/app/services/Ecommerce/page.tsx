@@ -38,6 +38,7 @@ import faqEcommerceData from "../../../utils/content/faq/faqEcommerce.json";
 import CtaSecond from "@/component/new/CtaSecond";
 import { Suspense } from "react";
 import Loader from "@/component/common/Loader/Loader";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Ecommerce",
@@ -87,10 +88,12 @@ const Ecommerce = () => {
                 solutions. Connect with our experts to build a robust platform
                 that drives engagement and sales.
               </p>
-              <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                Hire Web Application Developers{" "}
-                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-              </button>
+              <Link href="/contact">
+                <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                  Hire Web Application Developers{" "}
+                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                </button>
+              </Link>
             </div>
             <div className="w-full lg:w-1/2 ">
               <WebSlider engagementModels={engagementModelsEcomerce} />
@@ -110,35 +113,37 @@ const Ecommerce = () => {
             <EcommerceShineCards />
           </div>
           <div className="flex justify-center mt-10 lg:mt-14">
-            <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-              Schedule a Call{" "}
-              <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-            </button>
+            <Link href={"/contact"}>
+              <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                Schedule a Call{" "}
+                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+              </button>
+            </Link>
           </div>
         </div>
       </section>
 
       <CtaSecond content={""} Aurora={""} vortex={""} />
+      <Suspense fallback={<Loader />}>
+        <section className="w-full  pt-0 pb-10 lg:py-14 overflow-hidden">
+          <div className="container remove-bg">
+            <div className="w-full  sm:text-center" data-aos="fade-right">
+              <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
+                Zygobit: Ecommerce App Experts
+              </h2>
+              <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
+                Don&apos;t just choose an ecommerce app developer. Choose a
+                collaborator. Let Zygobit co-create your e-commerce app
+                masterpiece.
+              </p>
+            </div>
 
-      <section className="w-full  pt-0 pb-10 lg:py-14 overflow-hidden">
-        <div className="container remove-bg">
-          <div className="w-full  sm:text-center" data-aos="fade-right">
-            <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
-              Zygobit: Ecommerce App Experts
-            </h2>
-            <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
-              Don&apos;t just choose an ecommerce app developer. Choose a
-              collaborator. Let Zygobit co-create your e-commerce app
-              masterpiece.
-            </p>
-          </div>
-          <Suspense fallback={<Loader />}>
             <div data-aos="fade-up">
               <FeaturedSlider />
             </div>
-          </Suspense>
-        </div>
-      </section>
+          </div>
+        </section>
+      </Suspense>
 
       <OurPartners />
       <Suspense fallback={<Loader />}>

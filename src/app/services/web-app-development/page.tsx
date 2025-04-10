@@ -179,10 +179,12 @@ const WebAppDevelopment = () => {
             <CardSpotlights />
           </div>
           <div className="w-full flex justify-center mt-10 sm:mt-14">
-            <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-              Develop a Custom Web App Today{" "}
-              <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-            </button>
+            <Link href="/contact">
+              <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                Develop a Custom Web App Today{" "}
+                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -220,10 +222,12 @@ const WebAppDevelopment = () => {
                   provider, we offer multiple hiring models that best suit your
                   needs
                 </p>
-                <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                  Hire Web Application Developers{" "}
-                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                </button>
+                <Link href="/contact">
+                  <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                    Hire Web Application Developers{" "}
+                    <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                  </button>
+                </Link>
               </div>
               <div className="w-full lg:w-1/2 ">
                 <WebSlider engagementModels={engagementModelsWebApp} />
