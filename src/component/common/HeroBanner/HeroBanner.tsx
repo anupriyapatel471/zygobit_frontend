@@ -20,7 +20,7 @@ const HeroBanner = ({
           <div className=" w-full text-center relative py-10 sm:py-16  lg:py-24">
             <div className="w-full">
               <div className="w-full">
-                <h1 className="font-bold relative z-10 text-3xl sm:text-3xl lg:text-[38px] text-shadow-2xl  text-gradiant-custom">
+                <h1 className="font-bold relative z-10 text-3xl sm:text-3xl lg:text-[38px] lg:leading-[48px] text-shadow-2xl  text-gradiant-custom">
                   {heroHeading}
                 </h1>
                 <p className="text-sm sm:text-base relative z-10 max-w-2xl mx-auto sm:font-semibold mt-5">

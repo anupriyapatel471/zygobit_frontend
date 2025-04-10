@@ -118,7 +118,7 @@ export default function FeaturedSlider({ projects }: { projects?: Project }) {
                               </Link>
                             </li>
                           </ul>
-                          <Link href={`/portfolio/${project.id}`}>
+                          <Link href={`/portfolio/${project.slug}`}>
                             <button className=" btn-primary text-themetext font-normal  group bg-white duration-500 transition-all">
                               View Case Study
                               <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />

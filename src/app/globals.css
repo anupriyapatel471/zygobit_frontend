@@ -240,3 +240,10 @@ input[type="number"]::-webkit-outer-spin-button {
   --tw-backdrop-blur: blur(35px) !important;
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast);
 } */
+
+
+/* styles/globals.css */
+.backdrop-blur-md {
+  -webkit-backdrop-filter: blur(12px); /* WebKit support */
+  backdrop-filter: blur(12px);
+}

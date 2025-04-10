@@ -4,8 +4,8 @@ import React from "react";
 import Logo from "../../../../../public/images/Logo.png";
 const Footer = () => {
   const productLinks = [
-    { name: "Changelog", url: "#" },
-    { name: "Documentation", url: "#" },
+    { name: "Facebook", url: "https://www.facebook.com/zygobit" },
+    { name: "Instagram", url: "https://www.instagram.com/zygobit" },
   ];
 
   // const companyLinks = [
@@ -21,7 +21,7 @@ const Footer = () => {
   // ];
 
   const footerLinks = [
-    { title: "Product", links: productLinks },
+    { title: "Social Media", links: productLinks },
     // { title: "Company", links: companyLinks },
   ];
 
@@ -48,6 +48,7 @@ const Footer = () => {
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
+                    target="_blank"
                       href={link.url}
                       className="text-sm text-secondaryText hover:text-white"
                     >
@@ -58,8 +59,8 @@ const Footer = () => {
               </ul>
             </div>
           ))}
-          <div className="w-full sm:w-1/4 lg:pl-20">
-            <h6 className="font-semibold text-sm mb-4">Company</h6>
+          <div className="w-full sm:w-1/4 lg:pl-10">
+            <h6 className="font-semibold text-sm mb-4">Quick Links</h6>
             <ul className="grid grid-cols-1 space-y-4">
               <li>
                 <Link
@@ -71,10 +72,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/portfolio"
                   className="text-sm text-secondaryText hover:text-white"
                 >
-                  Careers
+                  Portfolio
                 </Link>
               </li>
               <li>
@@ -87,31 +88,33 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full sm:w-1/4 lg:pl-[200px]">
-            <h6 className="font-semibold text-sm mb-4">Contact</h6>
+          <div className="w-full sm:w-1/4">
+            <h6 className="font-semibold text-sm mb-4">Contact Us</h6>
             <ul className="grid grid-cols-1 space-y-4">
               <li>
                 <Link
-                  href="#"
+                  href="tel:+18507923399"
                   className="text-sm text-secondaryText hover:text-white"
                 >
-                  Github
+                  +1(850)792-3399
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="mailto:info@zygobit.com"
                   className="text-sm text-secondaryText hover:text-white"
                 >
-                  Discord
+                  info@zygobit.com
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="https://www.google.co.in/maps/place/Sector+82,+JLPL+Industrial+Area,+Punjab/@30.6522737,76.7239666,15z/data=!3m1!4b1!4m6!3m5!1s0x390febe1fc6b2bef:0x555c2d1b4e524afa!8m2!3d30.6503857!4d76.736538!16s%2Fg%2F12hk5_92n?entry=ttu&g_ep=EgoyMDI1MDQwOC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
+                  target="_blank"
                   className="text-sm text-secondaryText hover:text-white"
                 >
-                  Twitter
+                  Plot No. C-163, Sector 82, JLPL Industrial Area, Sahibzada
+                  Ajit Singh Nagar, Punjab 140308
                 </Link>
               </li>
             </ul>
@@ -125,7 +128,7 @@ const Footer = () => {
           <ul className="w-full sm:w-auto flex gap-5 items-center">
             <li>
               <Link
-                href="#"
+                href="https://zygobit.com/privacy-policy/"
                 className="text-secondaryText hover:text-white text-xs"
               >
                 Privacy Policy
@@ -133,7 +136,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="#"
+                href="https://zygobit.com/terms-of-service/"
                 className="text-secondaryText hover:text-white text-xs"
               >
                 Terms of service

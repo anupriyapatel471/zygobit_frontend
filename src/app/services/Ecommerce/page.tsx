@@ -77,7 +77,7 @@ const Ecommerce = () => {
 
       <section className="w-full pb-12 sm:pb-20 lg:pb-20 lg:pt-12 overflow-hidden">
         <div className="container remove-bg">
-          <div className="flex flex-wrap lg:flex-nowrap justify-between gap-5">
+          <div className="flex flex-wrap lg:flex-nowrap justify-between gap-20 sm:gap-5">
             <div className="w-full lg:w-1/2 ">
               <h2 className="text-2xl sm:text-3xl lg:text-[35px] lg:leading-[50px] text-gradiant-custom font-bold">
                 Drive Success with AI Ecommerce Solutions

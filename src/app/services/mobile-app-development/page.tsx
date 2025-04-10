@@ -289,6 +289,7 @@ const MobileAppDevelopment = () => {
           </div>
         </div>
       </section>
+
       <Suspense fallback={<Loader />}>
         <section className="w-full  py-10 sm:py-14  overflow-hidden">
           <div className="container remove-bg">
@@ -308,13 +309,16 @@ const MobileAppDevelopment = () => {
           </div>
         </section>
       </Suspense>
+      
       <Suspense fallback={<Loader />}>
         <TechnologyStack />
       </Suspense>
+
       <ClientSays
         clientHeading={clientHeading}
         clientSaysDetails={clientSaysDetails}
       />
+
       <Suspense fallback={<Loader />}>
         <Blog />
       </Suspense>

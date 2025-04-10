@@ -163,7 +163,7 @@ const WebAppDevelopment = () => {
             fill
           />
         </div>
-        <div className="container">
+        <div className="container remove-bg">
           <div className="w-full  text-sm sm:text-center">
             <h2 className="text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom font-bold">
               Proven Strategies for Robust Web Solutions
@@ -210,7 +210,7 @@ const WebAppDevelopment = () => {
       <Suspense fallback={<Loader />}>
         <section className="w-full pt-14 sm:pt-0 pb-12 sm:pb-20 lg:pb-20 overflow-hidden">
           <div className="container remove-bg">
-            <div className="flex flex-wrap lg:flex-nowrap justify-between gap-y-6 lg:gap-5">
+            <div className="flex flex-wrap lg:flex-nowrap justify-between gap-y-20 lg:gap-5">
               <div className="w-full lg:w-1/2 ">
                 <h2 className="text-2xl sm:text-3xl lg:text-[35px] lg:leading-[50px] text-gradiant-custom font-bold">
                   Select from Our Flexible Custom Web App Models

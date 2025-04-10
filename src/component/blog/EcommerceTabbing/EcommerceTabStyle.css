@@ -147,6 +147,7 @@
         min-width: 180px !important;
         height: 40px;
         font-size: 14px;
+        max-width: 180px !important;
     }
     
     
@@ -157,5 +158,6 @@
         flex-wrap: nowrap !important;
         min-width: 1500px;
         overflow-y: hidden;
+        justify-content: flex-start;
     }
 }
