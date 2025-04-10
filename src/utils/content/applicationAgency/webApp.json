@@ -5,7 +5,7 @@
     {
       "cardTitle": "Streamline Business Processes",
       "cardDescription": "Our custom web application development solutions simplify complex operations, optimize workflows, and boost overall business efficiency.",
-      "image": "/images/Streamline_img.png"
+      "image": "/images/Streamline_img.svg"
     },
     {
       "cardTitle": "Enhance Customer Experience with AI",
@@ -15,7 +15,7 @@
     {
       "cardTitle": "Scalable & Secure Cloud Solutions",
       "cardDescription": "Empower your business with cloud-based applications designed for scalability, security, and seamless performance.",
-      "image": "/images/Scalable_img.svg"
+      "image": "/images/Salable_img.svg"
     }
   ]
 }

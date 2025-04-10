@@ -34,7 +34,7 @@ export function ContactParticles() {
               src={contactImage}
               alt="image"
               width={590}
-              height={885}
+              height={1000}
             />
           </div>
         </div>
