@@ -74,7 +74,6 @@ const Home = async () => {
   return (
     <>
       <AOSInitializer />
-
       <HomeBanner />
       <FeaturedProjects />
       <BusinessCards />
