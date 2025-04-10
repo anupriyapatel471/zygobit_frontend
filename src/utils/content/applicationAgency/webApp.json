@@ -1,21 +1,21 @@
 {
-  "title": "Build Cutting-Edge Web Applications",
-  "description": "We develop high-performance web applications using the latest technologies to ensure seamless user experiences, security, and scalability.",
+  "title": "Why Partner with Our Web Application Agency?",
+  "description": "Partnering with our custom web application development company in USA unlocks greater profitability, fosters continuous innovation, and accelerates your business growth globally.",
   "cards": [
     {
       "cardTitle": "Streamline Business Processes",
       "cardDescription": "Our custom web application development solutions simplify complex operations, optimize workflows, and boost overall business efficiency.",
-      "image": "/images/streamline_business.jpg"
+      "image": "/images/Streamline_img.png"
     },
     {
       "cardTitle": "Enhance Customer Experience with AI",
       "cardDescription": "Leverage AI-driven insights to personalize shopping journeys, automate recommendations, and increase customer satisfaction.",
-      "image": "/images/enhance_customer.jpg"
+      "image": "/images/Enhance_img.svg"
     },
     {
       "cardTitle": "Scalable & Secure Cloud Solutions",
       "cardDescription": "Empower your business with cloud-based applications designed for scalability, security, and seamless performance.",
-      "image": "/images/Scalable_secure.jpg"
+      "image": "/images/Scalable_img.svg"
     }
   ]
 }

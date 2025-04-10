@@ -1,6 +1,5 @@
 import { ShineBorder } from "@/components/ui/shine-border";
 import Image from "next/image";
-import innovation from "../../../../../public/images/inovation.svg";
 
 export function EcommerceShineCards() {
   return (
@@ -11,7 +10,7 @@ export function EcommerceShineCards() {
           className="relative  w-full  items-center justify-center overflow-hidden rounded-lg"
           // color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
         >
-          <div className="cursor-pointer h-full bg-[#D9D9D91A] backdrop-blur-md relative rounded-lg overflow-hidden py-4 sm:py-6 px-0 sm:px-4 lg:px-8 sm:text-center ">
+          <div className=" h-full bg-[#D9D9D91A] backdrop-blur-md relative rounded-lg overflow-hidden py-4 sm:py-6 px-0 sm:px-4 lg:px-8 sm:text-center ">
             <span>
               <Image
                 src={pilller.image}

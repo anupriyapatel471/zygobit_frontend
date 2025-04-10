@@ -109,7 +109,7 @@ export default function NavigationMenuDemo() {
                       </div>
                       <ListItem
                         className="text-white hover:text-white hover:bg-transparent p-0"
-                        href="/services/Ecommerce"
+                        href="/services/ecommerce"
                         title="E-Commerce"
                       >
                         Build secure online stores with easy payments.
