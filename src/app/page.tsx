@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export const dynamic = "force-static";
-//
 import dynamicImp from "next/dynamic";
 import AOSInitializer from "@/component/common/AOSInitializer";
 import { SparklesHeading } from "@/component/homePage/Sparkleheading/Sparkleheading";
@@ -71,6 +70,7 @@ const Home = async () => {
   const clientHeading = "Let’s Hear What Our Clients Say";
   const clientSaysDetails =
     "Using the latest technology and industry expertise, we built top-end Android and iOS-based applications that add value to the business and user experience.";
+
   return (
     <>
       <AOSInitializer />
