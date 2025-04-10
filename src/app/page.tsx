@@ -34,6 +34,10 @@ import { Metadata } from "next";
 import WhyChooseUs from "@/component/new/WhyChooseUs";
 import { generateClient } from "aws-amplify/data";
 
+import { Amplify } from "aws-amplify";
+import outputs from "../../amplify_outputs.json";
+Amplify.configure(outputs);
+
 export interface project {
   projectInfo: ReactNode;
   id: string;
