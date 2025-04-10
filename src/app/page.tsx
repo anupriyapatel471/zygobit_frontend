@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export const dynamic = "force-static";
-
+//
 import dynamicImp from "next/dynamic";
 import AOSInitializer from "@/component/common/AOSInitializer";
 import { SparklesHeading } from "@/component/homePage/Sparkleheading/Sparkleheading";
