@@ -26,12 +26,14 @@
 
 @media screen and (max-width: 575px) {
   .web_previous_btn {
-    bottom: -50px  !important;
-    right: 60px !important;
+    bottom: auto  !important;
+    top: -30px !important;
+    right: 50px !important;
 }
   
   .web_next_btn {
-    bottom: -50px !important;
+    bottom: auto  !important;
+    top: -30px !important;
     right: 0  !important;
 }
   

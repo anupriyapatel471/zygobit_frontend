@@ -63,11 +63,11 @@ const PortfolioProjects = () => {
       <div className="container remove-bg">
         <div className="w-full">
           <Tabs defaultValue={categories[0]} className="w-full">
-            <TabsList className="grid w-full grid-cols-1 lg:grid-cols-5 h-auto">
+            <TabsList className=" gap-5 grid lg:flex lg:justify-center lg:items-center  w-full grid-cols-2 lg:grid-cols-5 h-auto">
               {categories.map((category) => (
                 <TabsTrigger
                   key={category}
-                  className="justify-normal sm:justify-center"
+                  className="justify-center "
                   value={category}
                 >
                   {category}

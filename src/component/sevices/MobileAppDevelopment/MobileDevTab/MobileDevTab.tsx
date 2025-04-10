@@ -10,7 +10,7 @@ export default function SharedLayoutAnimation() {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
   return (
-    <div className="container px-0" style={{padding:"0"}}>
+    <div className="container px-0 overflow-hidden rounded-lg" style={{padding:"0"}}>
       <nav className="nav">
         <ul className="tabsContainer">
           {tabs.map((item) => (
@@ -18,7 +18,7 @@ export default function SharedLayoutAnimation() {
               key={item.label}
               initial={false}
               animate={{
-                backgroundColor: item === selectedTab ? "#E4550B" : "#eee0",
+                backgroundColor: item === selectedTab ? "#E4550B" : "#eeeeee2b",
               }}
               className="tab"
               onClick={() => setSelectedTab(item)}
@@ -79,7 +79,7 @@ const tabs = [
     description:
       "We begin by understanding your vision, business objectives, and target audience. This phase involves brainstorming, competitor analysis, and gathering key insights to lay a strategic roadmap for your app development journey.",
     icon: "",
-    image: "/images/discovery_img.png",
+    image: "/images/discovery_img.svg",
   },
   {
     id: 2,
@@ -88,7 +88,7 @@ const tabs = [
     description:
       "In this phase, we define the app’s core functionality, wireframes, and technical requirements. Market research and feasibility analysis ensure that the development process aligns with your business goals.",
     icon: "",
-    image: "/images/planning_img.png",
+    image: "/images/planning_img.svg",
   },
   {
     id: 3,
@@ -97,7 +97,7 @@ const tabs = [
     description:
       "Our UI/UX experts craft intuitive, visually engaging designs that enhance user experience. Interactive prototypes allow stakeholders to visualize the app’s flow before development begins.",
     icon: "",
-    image: "/images/design_img.png",
+    image: "/images/design_img.svg",
   },
   {
     id: 4,
@@ -106,7 +106,7 @@ const tabs = [
     description:
       "Using the latest technologies, we build a robust, scalable application with seamless performance. Rigorous testing ensures smooth functionality, security, and an error-free user experience.",
     icon: "",
-    image: "/images/devAndTesting_img.png",
+    image: "/images/devAndTesting_img.svg",
   },
   {
     id: 5,
@@ -115,6 +115,6 @@ const tabs = [
     description:
       "Once your app is live, we continue to optimize its performance with updates, security patches, and ongoing support. Our team ensures your app stays ahead with evolving market trends.",
     icon: "",
-    image: "/images/devAndMaintainance.jpg",
+    image: "/images/devAndMaintainance.svg",
   },
 ];

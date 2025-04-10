@@ -133,33 +133,28 @@ const About = () => {
       content: <SkeletonOne />,
       className: "md:col-span-3 cursor-pointer",
       title: "Proven AI Expertise",
-      thumbnail:
-        "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      thumbnail: "/images/Proven_expertise.png",
     },
     {
       id: 2,
       content: <SkeletonTwo />,
       className: "md:col-span-2 cursor-pointer",
       title: "Scalable AI Solutions",
-
-      thumbnail:
-        "https://images.unsplash.com/photo-1464457312035-3d7d0e0c058e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      thumbnail: "/images/Scalable_solution.png",
     },
     {
       id: 3,
       content: <SkeletonThree />,
       className: "md:col-span-2 cursor-pointer",
       title: "Intelligent User Experience",
-      thumbnail:
-        "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      thumbnail: "/images/User_centric.png",
     },
     {
       id: 4,
       content: <SkeletonFour />,
       className: "md:col-span-3 cursor-pointer",
       title: "Seamless AI Integration",
-      thumbnail:
-        "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      thumbnail: "/images/seamless_interaction.jpg",
     },
   ];
 
@@ -167,6 +162,7 @@ const About = () => {
     <>
       <AOSInitializer />
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
+
       <Suspense fallback={<Loader />}>
         <WeDeliver />
       </Suspense>
@@ -212,6 +208,7 @@ const About = () => {
           </div>
         </section>
       </div>
+
       <Suspense fallback={<Loader />}>
         <section className="w-full relative py-12 lg:py-20">
           <div className="container remove-bg">
@@ -240,7 +237,8 @@ const About = () => {
       />
 
       {/* web app sales */}
-      <section className="w-full relative px-4 lg:px-24 pb-12 pt-5 sm:py-12 lg:py-20">
+      <section className="w-full relative pb-12 pt-5 sm:py-12 lg:py-20">
+        <div className="container remove-bg">
         <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex items-center flex-wrap lg:flex-nowrap  gap-5 sm:gap-8">
           <div className="w-full lg:w-1/2">
             <Image
@@ -255,13 +253,16 @@ const About = () => {
             <BoxReveals data={boxData2} />
           </div>
         </div>
+        </div>
       </section>
+
       <Suspense fallback={<Loader />}>
         <DeliveringTailored
           deliveringHeading={deliveringHeading}
           deliveringPara={deliveringPara}
         />
       </Suspense>
+
       <section className="w-full  mb-0 sm:mb-10 lg:mb-0 pt-10 pb-0 sm:py-12 lg:py-20 relative">
         <div className="absolute top-0 left-0 w-full h-full -z-10">
           <img

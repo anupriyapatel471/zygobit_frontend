@@ -39,7 +39,7 @@ export default function EcommerceTabbing() {
   return (
     <>
       { loading ? <BlogGridSkeleton/> : selectedTab && (
-        <div className="container">
+        <div className="container remove-bg">
           <nav className="nav">
             <ul className="tabsContainer">
               {tabs.map((item) => (
@@ -75,7 +75,7 @@ export default function EcommerceTabbing() {
                 transition={{ duration: 0.2 }}
               >
                 {selectedTab ? selectedTab.icon : "😋"}
-                <div className="w-full   mb-10 sm:mb-12 lg:mb-20">
+                <div className="w-full   mb-0 sm:mb-12 lg:mb-0">
                   <MovingBorders selectedCategory={selectedTab.label} />
                 </div>
               </motion.div>

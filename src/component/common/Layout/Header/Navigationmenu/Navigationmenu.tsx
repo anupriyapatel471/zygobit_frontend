@@ -25,25 +25,25 @@ export default function NavigationMenuDemo() {
     <NavigationMenu className={classDynamic}>
       <NavigationMenuList className="grid grid-cols-1 gap-4 space-x-0 lg:space-x-1 lg:flex">
         <NavigationMenuItem
-          onClick={() => handleClassChange(" top-6 lg:top-full")}
+          onClick={() => handleClassChange(" top-5 lg:top-full")}
           className="  text-white"
         >
           <NavigationMenuTrigger>Services</NavigationMenuTrigger>
           <div className="backdrop-blur-xl bg-opacity-20 bg-[#09090B] w-full h-full">
             <NavigationMenuContent className="bg-transparent custom-bg-remove  border-none relative z-50">
               <div className="w-full">
-                <ul className="backdrop-blur-xl bg-opacity-80 bg-[#09090B]  grid grid-cols-1 gap-3 items-center w-full sm:w-screen mx-auto lg:grid-cols-3">
+                <ul className="bg-[#171717] rounded-lg sm:backdrop-blur-xl sm:bg-opacity-80 sm:bg-[#09090B]  grid grid-cols-1 gap-3 items-center w-full sm:w-screen mx-auto lg:grid-cols-3">
                   <div className="w-auto grid grid-cols-1 lg:grid-cols-2 gap-7 col-span-2 p-4 lg:p-10">
                     <div className="flex items-center sm:items-start gap-4">
-                      <div className="   p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
+                      <div className=" p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
                         <img
                           className="w-6 sm:w-auto"
-                          src="/images/mobile_icon.png"
+                          src="/images/mobile_icon.svg"
                           alt=""
                         />
                       </div>
                       <ListItem
-                        className="text-white text-sm sm:text-base hover:text-white hover:bg-transparent p-0 w-[calc(100%-75px)]"
+                        className="text-white text-sm sm:text-base hover:text-white hover:bg-transparent p-0"
                         href="/services/mobile-app-development"
                         title="Mobile App Development"
                       >
@@ -54,7 +54,7 @@ export default function NavigationMenuDemo() {
                       <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
                         <img
                           className="w-6 sm:w-auto"
-                          src="/images/webdev.png"
+                          src="/images/webdev.svg"
                           alt=""
                         />
                       </div>
@@ -70,7 +70,7 @@ export default function NavigationMenuDemo() {
                       <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
                         <img
                           className="w-6 sm:w-auto"
-                          src="/images/uiux.png"
+                          src="/images/uiux.svg"
                           alt=""
                         />
                       </div>
@@ -86,7 +86,7 @@ export default function NavigationMenuDemo() {
                       <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
                         <img
                           className="w-6 sm:w-auto"
-                          src="/images/machinel.png"
+                          src="/images/machinel.svg"
                           alt=""
                         />
                       </div>
@@ -103,7 +103,7 @@ export default function NavigationMenuDemo() {
                       <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
                         <img
                           className="w-6 sm:w-auto"
-                          src="/images/ecommerce.png"
+                          src="/images/ecommerce.svg"
                           alt=""
                         />
                       </div>
@@ -174,22 +174,22 @@ const ListItem = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof Link>
 >(({ className, title, children, href, ...props }, ref) => {
   return (
-    <li>
+    <li className="w-[calc(100%-48px)] lg:w-[calc(100%-80px)]">
       <NavigationMenuLink asChild>
         <Link
           ref={ref}
           prefetch={true}
           href={href as string}
           className={cn(
-            "block  w-full sm:w-auto select-none space-y-1 rounded-md p-0 leading-none no-underline outline-none transition-colors",
+            "block sm:w-full lg:w-full  select-none space-y-1 rounded-md p-0 leading-none no-underline outline-none transition-colors w-[calc(100%-0px)]",
             className
           )}
           {...props}
         >
-          <div className="w-full sm:w-auto flex items-center gap-1.5 sm:gap-2 text-sm sm:text-lg lg:text-lg  sm:font-bold leading-none">
+          <div className="w-full sm:w-auto flex items-center gap-2 text-sm sm:text-lg lg:text-lg  sm:font-bold leading-none">
             {title}{" "}
             <img
-              className="w-4 sm:w-auto"
+              className="w-3 sm:w-auto"
               src="/images/right_icon.png"
               alt=""
             />

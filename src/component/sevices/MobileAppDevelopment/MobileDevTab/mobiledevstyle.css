@@ -42,6 +42,9 @@
     font-size: 20px;  
     display: flex;
     width: 100%;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    overflow: hidden;
 }
 
 .tab {
@@ -50,9 +53,6 @@
     margin: 0;
     font-weight: 600;
     font-size: 20px;  
-    border-radius: 5px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     width: 100%;
     padding: 10px 15px;
     position: relative;
@@ -96,5 +96,31 @@
         min-width: 100%;
         font-size: 16px;
         height: 50px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .tabsContainer {
+        flex-wrap: wrap !important;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        row-gap: 15px;
+        overflow: hidden;
+        border-radius: 10px;
+        padding: 20px 20px 0;
+        min-width: auto;
+        
+    }
+    .tabsContainer .tab {
+        width: auto !important;
+        min-width: auto !important;
+        border-radius: 6px;
+        font-weight: normal;
+        height: 40px;
+        font-size: 14px;
+    }
+    .iconContainer {
+        margin: 0;
     }
 }

@@ -24,12 +24,12 @@ export function TracingBeams({ blog }: { blog: Blog }) {
     <>
       {blog && ( <TracingBeam className="mt-24 sm:mt-32 mb-16 sm:mb-20 px-0 sm:px-0 lg:px-0 max-w-[1248px] mx-auto">
         <div className="container remove-bg">
-          <div className="w-full antialiased sm:pt-4 relative pl-[60px]">
+          <div className="w-full antialiased sm:pt-4 relative lg:pl-[60px]">
             <div className="mb-10">
-              <h2 className=" text-white font-bold text-2xl sm:text-4xl w-fit mb-2  sm:mb-4">
+              <h2 className=" text-white font-medium sm:font-bold text-2xl sm:text-4xl w-fit mb-2  sm:mb-4">
                 {blog.title}
               </h2>
-              <b className="font-semibold text-sm block my-3">
+              <b className="font-light sm:font-semibold text-sm block my-3">
                 Tag: {blog.tags && blog.tags.join(", ")}
               </b>
               <span className="flex items-center gap-2 text-xs ">
@@ -59,10 +59,10 @@ export function TracingBeams({ blog }: { blog: Blog }) {
                   <div className="mt-6">
                     {blog.projectInfo.map((project, projIndex) => (
                       <div key={`project-${projIndex}`} className="mb-4">
-                        <h3 className="text-lg font-semibold">
+                        <h3 className="text-base sm:text-lg font-medium mb-2 sm:mb-0 sm:font-semibold">
                           {project.SubTitle}
                         </h3>
-                        <p className="text-sm">{project.SubDescription}</p>
+                        <p className="text-sm font-light sm:font-normal">{project.SubDescription}</p>
                       </div>
                     ))}
                   </div>

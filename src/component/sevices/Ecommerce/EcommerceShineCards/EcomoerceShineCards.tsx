@@ -14,7 +14,7 @@ export function EcommerceShineCards() {
           <div className="cursor-pointer h-full bg-[#D9D9D91A] backdrop-blur-md relative rounded-lg overflow-hidden py-4 sm:py-6 px-0 sm:px-4 lg:px-8 sm:text-center ">
             <span>
               <Image
-                src={innovation}
+                src={pilller.image}
                 className="sm:mx-auto"
                 width={66}
                 height={66}
@@ -39,24 +39,24 @@ const pillers = [
     title: "Innovation",
     description:
       "We embrace creativity and forward-thinking to craft cutting-edge solutions that help businesses stay ahead in a competitive landscape.",
-    image: "",
+    image: "/images/inovation.svg",
   },
   {
     title: "Scalability",
     description:
       "Our solutions are built for growth, ensuring your eCommerce platform evolves with increasing demands and new market trends.",
-    image: "",
+    image: "/images/intergrity.svg",
   },
   {
     title: "Automation",
     description:
       "Enhance efficiency with AI-driven automation that streamlines operations, optimizes workflows, and reduces manual tasks.",
-    image: "",
+    image: "/images/client_centric_approach.svg",
   },
   {
     title: "Customer-Centric Approach",
     description:
       "Deliver personalized experiences with AI-powered insights that drive engagement, boost sales, and enhance user satisfaction.",
-    image: "",
+    image: "/images/excellence.svg",
   },
 ];
