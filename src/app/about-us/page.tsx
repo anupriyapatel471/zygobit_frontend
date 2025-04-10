@@ -41,13 +41,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About us",
     description: "Zygobit Website About Us Page",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
   },
   twitter: {
     title: "About us",
     description: "Zygobit Website About Us Page",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },
@@ -239,20 +239,20 @@ const About = () => {
       {/* web app sales */}
       <section className="w-full relative pb-12 pt-5 sm:py-12 lg:py-20">
         <div className="container remove-bg">
-        <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex items-center flex-wrap lg:flex-nowrap  gap-5 sm:gap-8">
-          <div className="w-full lg:w-1/2">
-            <Image
-              className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
-              src={meeting}
-              alt="meating"
-              width={590}
-              height={753}
-            />
+          <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex items-center flex-wrap lg:flex-nowrap  gap-5 sm:gap-8">
+            <div className="w-full lg:w-1/2">
+              <Image
+                className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
+                src={meeting}
+                alt="meating"
+                width={590}
+                height={753}
+              />
+            </div>
+            <div className="w-full lg:w-1/2 lg:pl-10">
+              <BoxReveals data={boxData2} />
+            </div>
           </div>
-          <div className="w-full lg:w-1/2 lg:pl-10">
-            <BoxReveals data={boxData2} />
-          </div>
-        </div>
         </div>
       </section>
 

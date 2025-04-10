@@ -12,14 +12,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Blog",
     description: "Zygobit Website Blog Page",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
 
     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
   },
   twitter: {
     title: "Blog",
     description: "Zygobit Website Blog Page",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },

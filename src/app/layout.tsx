@@ -10,8 +10,7 @@ import Footer from "@/component/common/Layout/Footer/Footer";
 import ScrollProgressBar from "@/component/common/Layout/ScrollBar/ScrollBar";
 
 // skeleton css
-import 'react-loading-skeleton/dist/skeleton.css'
-
+import "react-loading-skeleton/dist/skeleton.css";
 
 export const metadata: Metadata = {
   title: "Zygobit",
@@ -21,13 +20,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Zygobit",
     description: "Zygobit Website",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
   },
   twitter: {
     title: "Zygobit",
     description: "Zygobit Website",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.png"],
+    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },
@@ -41,7 +40,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet"
