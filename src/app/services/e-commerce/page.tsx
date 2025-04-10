@@ -132,7 +132,7 @@ const Ecommerce = () => {
                 Zygobit: Ecommerce App Experts
               </h2>
               <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
-                Don&apos;t just choose an ecommerce app developer. Choose a
+                Don&apos;t just choose an&nbsp;ecommerce app developer. Choose a
                 collaborator. Let Zygobit co-create your e-commerce app
                 masterpiece.
               </p>
