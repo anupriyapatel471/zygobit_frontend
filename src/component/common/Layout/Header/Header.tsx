@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavigationMenuDemo from "./Navigationmenu/Navigationmenu";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../../../public/images/Logo.png";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,6 +17,11 @@ const Header = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   return (
     <>

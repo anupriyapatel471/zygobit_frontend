@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
 import { useEffect, useState } from "react";
-
 
 const reviews = [
   {
@@ -96,7 +96,8 @@ export default function TechnologySlider() {
         reverse
         pauseOnHover
         vertical={vertical}
-        className="[--duration:10s] justify-center items-center">
+        className="[--duration:10s] justify-center items-center"
+      >
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}

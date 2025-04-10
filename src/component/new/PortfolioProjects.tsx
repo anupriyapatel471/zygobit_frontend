@@ -90,28 +90,28 @@ const PortfolioProjects = () => {
                       >
                         <div className="w-full flex items-center  p-4 relative bg-white z-10 rounded-lg sm:rounded-none overflow-hidden">
                           <div className="flex justify-between flex-col">
-                            <div>
-                              <img src="/images/her_calendar_logo.svg" alt="" />
+                            <div className="text-black font-bold">
+                              {project.projectName}
+                              {/* <img src="/images/her_calendar_logo.svg" alt="" />
                             </div>
                             <div className="inline-block sm:hidden w-full">
                               <img
                                 className="object-contain"
                                 src="/images/her_calendar.png"
                                 alt=""
-                              />
+                              /> */}
                             </div>
-                            <p className="line-clamp-4 sm:line-clamp-none text-sm text-black mt-5 mb-6 sm:mb-16 sm:max-w-[400px] lg:max-w-[290px]">
+                            <p className="line-clamp-4 sm:line-clamp-5 text-sm text-black mt-5 mb-6 sm:mb-16 sm:max-w-[400px] lg:max-w-[290px] ">
                               {project.description}
                             </p>
-                            <div className=" flex font-bold text-sm text-black">
-                              Technologies
+                            <div className=" flex font-bold text-sm text-black gap-2 items-center">
                               {(project.technologyImages as string[]).map(
                                 (imageUrl, index) => (
                                   <img
                                     key={index}
                                     src={imageUrl}
                                     alt="technology image"
-                                    className="w-6 h-6 rounded-full"
+                                    className="w- h-6 rounded-full"
                                   />
                                 )
                               )}

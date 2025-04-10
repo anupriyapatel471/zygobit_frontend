@@ -16,20 +16,39 @@ import appleStore from "../../../../public/images/applestore.svg";
 import Link from "next/link";
 
 import { formatDownloads, truncateText } from "@/lib/utils";
-import { useProjects } from "@/hooks/dynamoDb/useProjects";
-import Loader from "../Loader/Loader";
+// import { useProjects } from "@/hooks/dynamoDb/useProjects";
 
-export default function FeaturedSlider() {
-  const { data, loading } = useProjects();
+interface Project {
+  technologyImages: React.ReactNode;
+  id?: string | null;
+  title: string | null;
+  description: string | null;
+  projectName: string | null;
+  mobileImage: string | null;
+  androidDownloads: number | null;
+  iosDownloads: number | null;
+  createdAt: string | null;
+  updatedAt: string | null;
+  clientLocation: string | null;
+  developmentTime: string | null;
+  targetUsers: string | null;
+  subDescription: string | null;
+  subTitle: string | null;
+  technologyDescription: string | null;
+  developmentDescription: string | null;
+  evaluationDescription: string | null;
+  evaluationImage: string | null;
+}
 
-  const projects = Array.isArray(data) ? data.slice(0, 5) : [];
-  return loading ? (
-    <Loader />
-  ) : (
+export default function FeaturedSlider({ projects }: { projects?: Project }) {
+  // const { data, loading } = useProjects();
+
+  const data = Array.isArray(projects) ? projects.slice(0, 5) : [];
+  return (
     <Carousel className="w-full">
       <CarouselContent className="flex lg:ml-0">
-        {projects.length > 0 &&
-          projects.map((project) => (
+        {data.length > 0 &&
+          data.map((project) => (
             <CarouselItem key={project.id}>
               <div>
                 <Card className="border-none rounded-xl">

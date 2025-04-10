@@ -65,13 +65,10 @@ export const metadata: Metadata = {
   },
 };
 
-async function fetchFeaturedProjects(id?: string) {
+async function fetchFeaturedProjects() {
   const client = generateClient();
   try {
     const res = await (client.models as any).Projects.list();
-    if (id) {
-      return res.data && res.data.length > 0 ? res.data[0] : null;
-    }
     return res.data || [];
   } catch (error) {
     console.error("Error fetching featured projects:", error);
@@ -79,22 +76,22 @@ async function fetchFeaturedProjects(id?: string) {
   }
 }
 
-export async function generateStaticParams() {
-  const projects = await fetchFeaturedProjects();
-  return projects.map((project: project) => ({ id: project.id.toString() }));
-}
+// export async function generateStaticParams() {
+//   const projects = await fetchFeaturedProjects();
+//   return projects.map((project: project) => ({ id: project.id.toString() }));
+// }
 
-const Home = () => {
+const Home = async () => {
   const clientHeading = "Let’s Hear What Our Clients Say";
   const clientSaysDetails =
     "Using the latest technology and industry expertise, we built top-end Android and iOS-based applications that add value to the business and user experience.";
-
+  const projects = await fetchFeaturedProjects();
   return (
     <>
       <AOSInitializer />
 
       <HomeBanner />
-      <FeaturedProjects />
+      <FeaturedProjects projects={projects} />
       <BusinessCards />
       <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
 

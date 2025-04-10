@@ -36,7 +36,11 @@ export default function NavigationMenuDemo() {
                   <div className="w-auto grid grid-cols-1 lg:grid-cols-2 gap-7 col-span-2 p-4 lg:p-10">
                     <div className="flex items-center sm:items-start gap-4">
                       <div className="   p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                        <img className="w-6 sm:w-auto" src="/images/mobile_icon.png" alt="" />
+                        <img
+                          className="w-6 sm:w-auto"
+                          src="/images/mobile_icon.png"
+                          alt=""
+                        />
                       </div>
                       <ListItem
                         className="text-white text-sm sm:text-base hover:text-white hover:bg-transparent p-0 w-[calc(100%-75px)]"
@@ -48,7 +52,11 @@ export default function NavigationMenuDemo() {
                     </div>
                     <div className="flex items-center sm:items-start gap-4">
                       <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                        <img className="w-6 sm:w-auto" src="/images/webdev.png" alt="" />
+                        <img
+                          className="w-6 sm:w-auto"
+                          src="/images/webdev.png"
+                          alt=""
+                        />
                       </div>
                       <ListItem
                         className="text-white hover:text-white hover:bg-transparent p-0"
@@ -60,7 +68,11 @@ export default function NavigationMenuDemo() {
                     </div>
                     <div className="flex items-center sm:items-start gap-4">
                       <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                        <img className="w-6 sm:w-auto" src="/images/uiux.png" alt="" />
+                        <img
+                          className="w-6 sm:w-auto"
+                          src="/images/uiux.png"
+                          alt=""
+                        />
                       </div>
                       <ListItem
                         className="text-white hover:text-white hover:bg-transparent p-0"
@@ -72,7 +84,11 @@ export default function NavigationMenuDemo() {
                     </div>
                     <div className="flex items-center sm:items-start gap-4">
                       <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                        <img className="w-6 sm:w-auto" src="/images/machinel.png" alt="" />
+                        <img
+                          className="w-6 sm:w-auto"
+                          src="/images/machinel.png"
+                          alt=""
+                        />
                       </div>
                       <ListItem
                         className="text-white hover:text-white hover:bg-transparent p-0"
@@ -85,7 +101,11 @@ export default function NavigationMenuDemo() {
                     </div>
                     <div className="flex items-center sm:items-start gap-4">
                       <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                        <img className="w-6 sm:w-auto" src="/images/ecommerce.png" alt="" />
+                        <img
+                          className="w-6 sm:w-auto"
+                          src="/images/ecommerce.png"
+                          alt=""
+                        />
                       </div>
                       <ListItem
                         className="text-white hover:text-white hover:bg-transparent p-0"
@@ -167,9 +187,16 @@ const ListItem = React.forwardRef<
           {...props}
         >
           <div className="w-full sm:w-auto flex items-center gap-1.5 sm:gap-2 text-sm sm:text-lg lg:text-lg  sm:font-bold leading-none">
-            {title} <img className="w-4 sm:w-auto" src="/images/right_icon.png" alt="" />
+            {title}{" "}
+            <img
+              className="w-4 sm:w-auto"
+              src="/images/right_icon.png"
+              alt=""
+            />
           </div>
-          <p className="hidden sm:inline-block line-clamp-2 mt-3 sm:mt-2 font-light sm:font-normal text-sm  text-white">{children}</p>
+          <p className="hidden sm:inline-block line-clamp-2 mt-3 sm:mt-2 font-light sm:font-normal text-sm  text-white">
+            {children}
+          </p>
         </Link>
       </NavigationMenuLink>
     </li>
