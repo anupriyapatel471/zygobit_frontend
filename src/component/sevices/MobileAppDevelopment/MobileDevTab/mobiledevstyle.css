@@ -110,6 +110,7 @@
         border-radius: 10px;
         padding: 20px 20px 0;
         min-width: auto;
+        
     }
     .tabsContainer .tab {
         width: auto !important;
