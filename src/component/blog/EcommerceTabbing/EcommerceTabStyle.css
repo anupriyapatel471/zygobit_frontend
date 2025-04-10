@@ -124,9 +124,6 @@
     .container {
         width: 100%;
     }
-    .nav {
-        overflow-x: auto;
-    }
     .tabsContainer {
         flex-wrap: wrap;
         min-width: 1965px;
@@ -144,10 +141,11 @@
 
 @media screen and (max-width:575px) {
     .tabsContainer .tab {
-        min-width: 180px !important;
+        min-width: auto !important;
+        width: 100%;
         height: 40px;
         font-size: 14px;
-        max-width: 180px !important;
+        max-width: auto !important;
     }
     
     
@@ -156,8 +154,11 @@
     }
     .tabsContainer {
         flex-wrap: nowrap !important;
-        min-width: 1500px;
+        min-width: auto;
         overflow-y: hidden;
         justify-content: flex-start;
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 1fr 1fr;
     }
 }

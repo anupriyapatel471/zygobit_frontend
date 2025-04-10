@@ -48,7 +48,7 @@ export default function FeaturedSlider() {
                             {project.projectName}
                           </h2>
 
-                          <h3 className="font-semibold text-xl sm:text-3xl lg:text-4xl mt-2 sm:mt-4 ">
+                          <h3 className="font-semibold text-2xl sm:text-3xl lg:text-4xl mt-2 sm:mt-4 ">
                             {project.title}
                           </h3>
                           <p className="text-sm sm:text-base sm:font-medium mt-3 sm:pr-5">

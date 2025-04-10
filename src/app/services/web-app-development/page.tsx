@@ -175,10 +175,10 @@ const WebAppDevelopment = () => {
               ensure excellence at every step.
             </p>
           </div>
-          <div className="w-full  my-10 sm:my-10">
+          <div className="w-full  mt-10 mb-0 sm:my-10">
             <CardSpotlights />
           </div>
-          <div className="w-full flex justify-center mt-10 sm:mt-14">
+          <div className="w-full flex justify-center mt-5 sm:mt-14">
             <Link href="/contact">
               <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
                 Develop a Custom Web App Today{" "}
