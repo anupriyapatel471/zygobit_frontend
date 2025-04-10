@@ -196,7 +196,7 @@ const UiuxWebDesign = () => {
           <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
             <div className="w-full lg:w-[45%]">
               <BoostBussiness heading={heading} paragraph={paragraph} />
-              <Link href="/conatct">
+              <Link href="/contact">
                 <button className="mt-5 lg:mt-10 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
                   Get Assistance{" "}
                   <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
