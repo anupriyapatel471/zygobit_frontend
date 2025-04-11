@@ -70,6 +70,7 @@ const Ecommerce = () => {
   return (
     <>
       <AOSInitializer />
+
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
       <Suspense fallback={<Loader />}>
         <WeDeliver />
