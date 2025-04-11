@@ -284,6 +284,7 @@ const MachineLearning = () => {
       <Suspense fallback={<Loader />}>
         <TechnologyStack />
       </Suspense>
+      
       <Suspense fallback={<Loader />}>
         <div className="mt-12 sm:mt-0">
           <GridBoxes

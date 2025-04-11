@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+import { SliderHoverCards } from "../SliderHoverCards";
 
 export default function AppleCardsCarousel() {
   const cards = data.map((card, index) => (
@@ -8,7 +9,7 @@ export default function AppleCardsCarousel() {
   ));
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full relative">
       <Carousel items={cards} />
     </div>
   );
@@ -21,7 +22,7 @@ const DummyContent = () => {
         return (
           <div
             key={"dummy-content" + index}
-            className="border border-white rounded-lg bg-transparent"
+            className="border border-white rounded-lg bg-transparent relative"
           >
             <h3 className="font-semibold text-2xl tracking-tighter">
               Power Management, Notification and Geofencing

@@ -34,7 +34,7 @@ export default function NavigationMenuDemo() {
               <div className="w-full">
                 <ul className="bg-[#171717] rounded-lg sm:backdrop-blur-xl sm:bg-opacity-80 sm:bg-[#09090B]  grid grid-cols-1 gap-3 items-center w-full sm:w-screen mx-auto lg:grid-cols-3">
                   <div className="w-auto grid grid-cols-1 lg:grid-cols-2 gap-7 col-span-2 p-4 lg:p-10">
-                    <div className="flex items-center sm:items-start gap-4">
+                    <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
                       <div className=" p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
                         <img
                           className="w-6 sm:w-auto"
@@ -50,7 +50,7 @@ export default function NavigationMenuDemo() {
                         Create high-performance mobile apps for iOS and Android.
                       </ListItem>
                     </div>
-                    <div className="flex items-center sm:items-start gap-4">
+                    <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
                       <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
                         <img
                           className="w-6 sm:w-auto"
@@ -66,7 +66,7 @@ export default function NavigationMenuDemo() {
                         Develop fast, responsive, and optimized websites.
                       </ListItem>
                     </div>
-                    <div className="flex items-center sm:items-start gap-4">
+                    <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
                       <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
                         <img
                           className="w-6 sm:w-auto"
@@ -82,7 +82,7 @@ export default function NavigationMenuDemo() {
                         Craft intuitive and engaging user experiences.
                       </ListItem>
                     </div>
-                    <div className="flex items-center sm:items-start gap-4">
+                    <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
                       <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
                         <img
                           className="w-6 sm:w-auto"
@@ -99,7 +99,7 @@ export default function NavigationMenuDemo() {
                         solutions.
                       </ListItem>
                     </div>
-                    <div className="flex items-center sm:items-start gap-4">
+                    <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
                       <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
                         <img
                           className="w-6 sm:w-auto"
@@ -189,7 +189,7 @@ const ListItem = React.forwardRef<
           <div className="w-full sm:w-auto flex items-center gap-2 text-sm sm:text-lg lg:text-lg  sm:font-bold leading-none">
             {title}{" "}
             <img
-              className="w-3 sm:w-auto"
+              className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
               src="/images/right_icon.png"
               alt=""
             />

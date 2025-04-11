@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { DividerHorizontalIcon } from "@radix-ui/react-icons";
 
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
@@ -28,8 +29,7 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => (
-        <Link
-          href={item?.link}
+        <div
           key={item?.link}
           className="relative group  block sm:p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -53,10 +53,10 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <CardTitle className="cursor-context-menu">{item.title}</CardTitle>
+            <CardDescription className="cursor-context-menu">{item.description}</CardDescription>
           </Card>
-        </Link>
+        </div>
       ))}
     </div>
   );

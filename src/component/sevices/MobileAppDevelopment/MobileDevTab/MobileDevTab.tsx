@@ -48,7 +48,7 @@ export default function SharedLayoutAnimation() {
             <div className="w-full px-4 lg:px-0 mt-7 lg:mt-10 mb-7 lg:mb-10 max-w-5xl mx-auto flex flex-wrap sm:flex-nowrap items-center lg:items-start gap-4 sm:gap-7 lg:gap-10">
               <div className="w-full sm:w-auto">
                 <Image
-                  className="w-[318px] h-auto object-contain rounded-2xl"
+                  className="w-[318px] h-auto object-contain"
                   src={selectedTab.image}
                   alt=""
                   width={500}

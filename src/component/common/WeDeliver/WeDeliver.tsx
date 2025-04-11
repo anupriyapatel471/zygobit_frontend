@@ -46,7 +46,7 @@ const WeDeliver = () => {
               </div>
               <div className="w-full text-center py-14 px-4 rounded-lg bg-[#2D2E34] bg-opacity-20 backdrop-blur-md ">
                 <b className="font-extrabold text-xl sm:text-3xl text-themetext block">
-                  25+
+                  15+
                 </b>
                 <span className="font-medium text-sm sm:text-base">
                   Countries Served
@@ -62,7 +62,7 @@ const WeDeliver = () => {
               </div>
               <div className="w-full text-center py-14 px-4 rounded-lg bg-[#2D2E34] bg-opacity-20 backdrop-blur-md ">
                 <b className="font-extrabold text-xl sm:text-3xl text-themetext block">
-                  300+
+                  250+
                 </b>
                 <span className="font-medium text-sm sm:text-base">
                   Products Delivered
