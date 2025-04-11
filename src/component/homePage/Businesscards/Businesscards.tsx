@@ -54,7 +54,7 @@ const BusinessCards = () => {
       data-aos="fade-up"
       className="w-full relative py-0 px-0 overflow-hidden"
     >
-      <div className="container">
+      <div className="container remove-bg">
         <div className="w-full text-center mb-5 sm:mb-8 lg:mb-10">
           <h2 className=" text-2xl sm:text-4xl lg:text-[38px] text-gradiant-custom 2xl:text-[40px] font-bold">
             Revolutionizing Businesses with Excellence & Expertise

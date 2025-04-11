@@ -22,7 +22,7 @@ const reasons = [
 const WhyChooseUs = () => {
   return (
     <section data-aos="fade-up" className="w-full mb-12 sm:mb-20">
-      <div className="container">
+      <div className="container remove-bg">
         <div className="w-full sm:text-center mb-5 sm:mb-10">
           <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px]">Why Choose Us</h2>
           <p className="font-light sm:font-medium text-sm sm:text-lg lg:text-xl mt-2 sm:mt-5 max-w-3xl mx-auto">

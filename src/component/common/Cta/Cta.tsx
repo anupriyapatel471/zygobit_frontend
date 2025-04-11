@@ -16,7 +16,7 @@ const Cta = ({ content, Aurora, vortex }: ctaProp) => {
   return (
     <>
       <section className="w-full relative my-12 sm:my-14 lg:my-16 overflow-hidden">
-        <div className="container">
+        <div className="container remove-bg">
           {vortex === "VortexBg" && (
             <div className="absolute top-0 left-0 w-full h-full -z-10">
               <VortexBg />

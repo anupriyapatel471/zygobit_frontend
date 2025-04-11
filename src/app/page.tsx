@@ -83,7 +83,7 @@ const Home = async () => {
         data-aos="fade-up"
         className="w-full  mb-12 sm:mb-20 overflow-hidden"
       >
-        <div className="container">
+        <div className="container remove-bg">
           <div className="w-full text-center mb-0">
             <SparklesHeading />
           </div>
