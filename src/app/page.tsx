@@ -16,7 +16,6 @@ const FeaturedProjects = dynamicImp(
 const BusinessCards = dynamicImp(
   () => import("@/component/homePage/Businesscards/Businesscards")
 );
-
 const Cta = dynamicImp(() => import("@/component/common/Cta/Cta"));
 
 const TechnologyStack = dynamicImp(
