@@ -1,10 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { DividerHorizontalIcon } from "@radix-ui/react-icons";
-
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
 
 export const HoverEffect = ({
@@ -54,7 +51,9 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <CardTitle className="cursor-context-menu">{item.title}</CardTitle>
-            <CardDescription className="cursor-context-menu">{item.description}</CardDescription>
+            <CardDescription className="cursor-context-menu">
+              {item.description}
+            </CardDescription>
           </Card>
         </div>
       ))}
@@ -90,7 +89,9 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide lg:mt-4", className)}>
+    <h4
+      className={cn("text-zinc-100 font-bold tracking-wide lg:mt-4", className)}
+    >
       {children}
     </h4>
   );
