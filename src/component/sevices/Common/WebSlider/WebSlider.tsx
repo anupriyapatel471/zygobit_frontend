@@ -25,15 +25,15 @@ export function WebSlider({
     <Carousel className="w-full">
       <CarouselContent className=" lg:ml-0 gap-5 lg:gap-10">
         {engagementModels.map((model, index) => (
-          <CarouselItem key={index} className="max-w-[600px] lg:max-w-[500px]">
+          <CarouselItem key={index} className="max-w-[600px] lg:max-w-[580px]">
             <div className="border-none">
               <Card className="border-[#686868] border p-0 bg-[#1E1E1E] rounded-2xl">
                 <CardContent className="p-0 sm:px-4 lg:p-0 flex  items-center justify-center">
                   <div className="w-full h-[300px] sm:h-auto text-white relative p-4 sm:p-5 overflow-hidden rounded-2xl">
-                    <h3 className="relative z-10 font-semibold text-xl sm:text-2xl">
+                    <h3 className="relative z-10 font-semibold text-xl sm:text-2xl line-clamp-1">
                       {model.title}
                     </h3>
-                    <p className="relative z-10 text-sm sm:text-base sm:leading-8 my-4">
+                    <p className="relative z-10 text-sm sm:text-base sm:leading-8 sm:min-h-16 my-4 line-clamp-2">
                       {model.description}
                     </p>
                     <ul className=" relative z-10 list-disc h-auto inline-block overflow-x-hidden bg-transparent pl-5 text-sm sm:text-base space-y-2">

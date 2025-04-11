@@ -3,10 +3,10 @@ import { MagicCardDemo } from "@/component/common/Magiccard/Magiccard";
 import Count from "@/components/ui/Count";
 
 const stats = [
-  { id: 1, value: "11+", label: "Years of Experience" },
-  { id: 2, value: "25+", label: "Countries Served" },
-  { id: 3, value: "250+", label: "Tech Enthusiast" },
-  { id: 4, value: "1000+", label: "Products Delivered" },
+  { id: 1, value: "2+", label: "Years of Experience" },
+  { id: 2, value: "15+", label: "Countries Served" },
+  { id: 3, value: "25+", label: "Tech Enthusiast" },
+  { id: 4, value: "250+", label: "Products Delivered" },
 ];
 const TrustedAcross = () => {
   return (

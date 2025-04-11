@@ -111,13 +111,13 @@ const PortfolioProjects = () => {
                                     key={index}
                                     src={imageUrl}
                                     alt="technology image"
-                                    className="w- h-6 rounded-full"
+                                    className="w-6 h-6 rounded-full"
                                   />
                                 )
                               )}
                             </div>
                           </div>
-                          <div className="hidden sm:inline w-[325px] ml-auto lg:ml-0">
+                          <div className="hidden sm:inline w-[325px] sm:h-[267px] ml-auto lg:ml-0">
                             {project.mobileImage && (
                               <img
                                 className="object-contain"
@@ -126,7 +126,7 @@ const PortfolioProjects = () => {
                               />
                             )}
                           </div>
-                          <div className="w-[150px] h-[150px] sm:w-[425px] sm:h-[425px] bg-[#F15722] rounded-full absolute -bottom-20 sm:top-1/2 sm:-translate-y-1/2 -z-10 -right-24 sm:-right-40"></div>
+                          <div className="w-[150px]  h-[150px] sm:w-[425px] sm:h-[425px] bg-[#F15722] rounded-full absolute -bottom-20 sm:top-1/2 sm:-translate-y-1/2 -z-10 -right-24 sm:-right-40"></div>
                         </div>
                       </Link>
                     ))}
