@@ -51,7 +51,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                       Her Calendar{" "}
                     </li>
                   </ul> */}
-                  <h1 className="font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl  text-gradiant-custom">
+                  <h1 className="font-bold text-2xl sm:text-3xl lg:text-4xl text-shadow-2xl  text-gradiant-custom">
                     {projectData.title}
                   </h1>
                   <p className="text-sm sm:text-base mt-2.5 line-clamp-3">
@@ -84,10 +84,10 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                 <div className=" grid grid-cols-1 sm:grid-cols-3  w-full flex-col gap-4  lg:flex-row">
                   <MagicCard
                     data-aos="fade-right"
-                    className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg"
+                    className="bg-primaryBg p-4 lg:py-6 lg:px-6 border border-[#FFFFFF26] rounded-lg"
                   >
                     <div className="w-full block pb-4 border-b-2 border-[#EA580C]">
-                      <h3 className="w-full order-2 sm:order-none sm:min-h-[76px] sm:w-[calc(100%-65px)] lg:w-[calc(100%-170px)] text-xl lg:text-2xl font-semibold tracking-tighter">
+                      <h3 className="w-full order-2 sm:order-none   text-xl lg:text-2xl font-semibold tracking-tighter">
                         Client Location
                       </h3>
                     </div>
@@ -97,10 +97,10 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                   </MagicCard>
                   <MagicCard
                     data-aos="fade-right"
-                    className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg"
+                    className="bg-primaryBg p-4 lg:py-6 lg:px-6 border border-[#FFFFFF26] rounded-lg"
                   >
                     <div className="w-full block pb-4 border-b-2 border-[#EA580C]">
-                      <h3 className="w-full order-2 sm:order-none sm:w-[calc(100%-65px)]  lg:w-[calc(100%-125px)] text-xl lg:text-2xl font-semibold tracking-tighter">
+                      <h3 className="w-full order-2 sm:order-none  text-xl lg:text-2xl font-semibold tracking-tighter">
                         Development Time
                       </h3>
                     </div>
@@ -110,10 +110,10 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                   </MagicCard>
                   <MagicCard
                     data-aos="fade-right"
-                    className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg"
+                    className="bg-primaryBg p-4 lg:py-6 lg:px-6 border border-[#FFFFFF26] rounded-lg"
                   >
                     <div className="w-full block pb-4 border-b-2 border-[#EA580C]">
-                      <h3 className="w-full order-2 sm:order-none sm:min-h-[76px] sm:w-[calc(100%-65px)] lg:w-[calc(100%-195px)] text-xl lg:text-2xl font-semibold tracking-tighter">
+                      <h3 className="w-full order-2 sm:order-none   text-xl lg:text-2xl font-semibold tracking-tighter">
                         Target Users
                       </h3>
                     </div>

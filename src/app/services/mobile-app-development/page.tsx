@@ -291,8 +291,47 @@ const MobileAppDevelopment = () => {
               app development solutions tailored to your unique business needs.
             </p>
           </div>
-          <div className="w-full">
+          <div className="w-full ">
             <MobileAppGrid cards={cards} />
+          </div>
+          <div className="w-full hidden  gap-4">
+            <div className="w-full relative">
+              <img
+                className="w-full h-[325px] object-cover rounded-lg"
+                src="/images/Proven_expertise.png"
+                alt=""
+              />
+              <div className="w-full h-full p-4 absolute bottom-0 left-0 bg-black/40 flex flex-col justify-end">
+                <h3 className="text-xl sm:text-3xl lg:text-[32px]">
+                  Proven Expertise
+                </h3>
+                <p className="text-sm mt-2">
+                  Years of experience delivering high-quality UI/UX designs that
+                  enhance user engagement and satisfaction.
+                </p>
+              </div>
+            </div>
+            <div className="w-full relative">
+              <img
+                className="w-full h-[325px] object-cover rounded-lg"
+                src="/images/Scalable_solution.png"
+                alt=""
+              />
+            </div>
+            <div className="w-full relative">
+              <img
+                className="w-full h-[325px] object-cover rounded-lg"
+                src="/images/User_centric.png"
+                alt=""
+              />
+            </div>
+            <div className="w-full relative">
+              <img
+                className="w-full h-[325px] object-cover rounded-lg"
+                src="/images/seamless_interaction.jpg"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </section>

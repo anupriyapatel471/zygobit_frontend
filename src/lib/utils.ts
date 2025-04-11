@@ -19,5 +19,5 @@ export const formatDownloads = (downloads: number) => {
     const result = Math.floor(downloads / 1000);
     return `${result}K+`;
   }
-  return downloads.toString();
+  return `${downloads}+`;
 };
