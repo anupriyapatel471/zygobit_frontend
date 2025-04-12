@@ -28,7 +28,7 @@ export function BoxReveals({ data }: BoxRevealsProps) {
   return (
     <div className="size-full  items-center justify-center overflow-hidden pt-0">
       <BoxReveal boxColor={"#EA580C"} duration={0.5}>
-        <h2 className="text-gradient-custom text-2xl sm:text-3xl lg:text-[38px] lg:leading-[55px] font-bold my-3 sm:mb-5 sm:mt-0 sm:pr-20">
+        <h2 className="text-gradient-custom text-2xl sm:text-3xl lg:text-[38px] lg:leading-[55px] font-bold mb-3 sm:mb-5 sm:mt-0 sm:pr-20">
           {data.title1}
           <span className="text-orange-600">{data.title2}</span>
         </h2>

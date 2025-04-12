@@ -23,7 +23,7 @@ const ClientSays = ({
             </div>
             <div className="w-full sm:w-1/2 relative lg:pr-20">
               <div className="w-full relative">
-                <div className="w-full h-[310px] sm:h-[400px] bg-[#FEF8FF36] backdrop-blur-2xl border-[12px] border-white/20 rounded-2xl relative"></div>
+                <div className="w-full h-[310px] sm:h-[400px] bg-[#FEF8FF36] backdrop-blur-2xl border-[5px] sm:border-[12px] border-white/20 rounded-2xl relative"></div>
                 <div className="absolute top-20 -right-24 -z-20">
                   <img src="/images/square.png" alt="" />
                 </div>

@@ -181,6 +181,7 @@ const MobileAppDevelopment = () => {
       <AOSInitializer />
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
+      
       <Suspense fallback={<Loader />}>
         <WeDeliver />
       </Suspense>

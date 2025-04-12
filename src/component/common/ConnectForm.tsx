@@ -117,7 +117,7 @@ const ConnectForm = () => {
     <form
       onSubmit={handleSubmit}
       data-aos="fade-left"
-      className="w-auto lg:px-8"
+      className="w-auto lg:px-0"
     >
       <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom">
         Let’s connect

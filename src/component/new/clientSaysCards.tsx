@@ -49,7 +49,7 @@ const ClientSaysCards = () => {
               <div className="p-1">
                 <CardContent className="mt-0 sm:mt-14 w-full h-full flex flex-col justify-center items-center  text-center  p-6 text-white">
                   <div className="ml-1 sm:ml-12 w-fit mr-auto mb-3">
-                    <img className="" src="images/qoutus.png" alt="" />
+                    <img className="" src="images/qoutus.svg" alt="" />
                   </div>
                   <p className="font-light sm:font-normal text-sm sm:text-base mb-5 sm:mb-8 max-w-xs mx-auto line-clamp-4">
                     {testimonial.quote}
