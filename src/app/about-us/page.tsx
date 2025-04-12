@@ -216,7 +216,7 @@ const About = () => {
               <div className="w-full lg:w-1/2">
                 <BoxReveals data={boxData1} />
               </div>
-              <div className="w-full lg:w-1/2">
+              <div className="hidden sm:inline w-full lg:w-1/2">
                 <Image
                   className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
                   src={Together}
@@ -240,9 +240,9 @@ const About = () => {
       <section className="w-full relative pb-12 pt-5 sm:py-12 lg:py-20">
         <div className="container remove-bg">
           <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex items-center flex-wrap lg:flex-nowrap  gap-5 sm:gap-8">
-            <div className="w-full lg:w-1/2">
+            <div className="hidden sm:inline w-full lg:w-1/2">
               <Image
-                className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
+                className=" w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
                 src={meeting}
                 alt="meating"
                 width={590}
