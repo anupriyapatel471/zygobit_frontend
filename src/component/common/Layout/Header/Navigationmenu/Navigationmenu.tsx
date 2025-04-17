@@ -29,7 +29,6 @@ export default function NavigationMenuDemo() {
     setClassDynamic(val);
   };
 
-  // Toggle open/close on trigger click
   const handleServiceDropdown = () => {
     setDropdownOpen((open) => !open);
   };
