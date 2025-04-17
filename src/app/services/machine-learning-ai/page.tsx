@@ -181,32 +181,30 @@ const MachineLearning = () => {
       </Suspense>
 
       <Suspense fallback={<Loader />}>
-        <section className="w-full bg-gradient-to-b from-orange-950  to-black py-12 sm:py-14 lg:py-20">
-          <div className="container remove-bg">
-            <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
-              <div className="w-full lg:w-[45%]">
-                <div className="w-full   inline-block">
-                  <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] lg:leading-[50px]">
-                    Full-Scale AI & Machine Learning Services.
-                  </h2>
-                  <p className=" sm:font-medium text-sm sm:text-base sm:leading-8 mt-4">
-                    Zygobit is a leading AI-driven software development company,
-                    delivering cutting-edge machine learning solutions. Our
-                    innovative technology enhances efficiency, automation, and
-                    decision-making, providing users with a seamless experience.
-                  </p>
-                </div>
-                <Link href="/contact">
-                  <button className="mt-5 lg:mt-10 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                    Get Assistance{" "}
-                    <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                  </button>
-                </Link>
+        <section className="w-full custom-apple-slider  bg-gradient-to-b from-orange-950  to-black py-12 sm:py-14 lg:py-20">
+          <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
+            <div className="w-full lg:w-[45%]">
+              <div className="w-full   inline-block">
+                <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] lg:leading-[50px]">
+                  Full-Scale AI & Machine Learning Services.
+                </h2>
+                <p className=" sm:font-medium text-sm sm:text-base sm:leading-8 mt-4">
+                  Zygobit is a leading AI-driven software development company,
+                  delivering cutting-edge machine learning solutions. Our
+                  innovative technology enhances efficiency, automation, and
+                  decision-making, providing users with a seamless experience.
+                </p>
               </div>
-              <div className="w-full lg:w-[55%]">
-                <div className="w-full">
-                  <AppleCardsCarousel />
-                </div>
+              <Link href="/contact">
+                <button className="mt-5 lg:mt-10 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                  Get Assistance{" "}
+                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                </button>
+              </Link>
+            </div>
+            <div className="w-full lg:w-[55%]">
+              <div className="w-full">
+                <AppleCardsCarousel />
               </div>
             </div>
           </div>

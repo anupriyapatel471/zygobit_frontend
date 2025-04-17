@@ -7,7 +7,7 @@ const FeaturedProjects = () => {
     <>
       <section className="w-full  py-10 sm:py-14 lg:py-16 overflow-hidden">
         <div className="container remove-bg">
-          <div className="w-full  sm:text-center" data-aos="fade-right">
+          <div className="w-full  sm:text-center">
             <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
               Featured Projects
             </h2>

@@ -30,7 +30,7 @@ export default function FeaturedSlider() {
       <CarouselContent className="flex lg:ml-0">
         {projects.length > 0 &&
           projects.map((project) => (
-            <CarouselItem key={project.id}>
+            <CarouselItem key={project.id} className="">
               <div>
                 <Card className="border-none rounded-xl">
                   <CardContent className="p-0">
@@ -44,11 +44,11 @@ export default function FeaturedSlider() {
                             width={150}
                             height={50}
                           /> */}
-                          <h2 className="font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-wide">
+                          <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl tracking-wide">
                             {project.projectName}
                           </h2>
 
-                          <h3 className="font-semibold text-2xl sm:text-3xl lg:text-4xl mt-2 sm:mt-4 ">
+                          <h3 className="font-semibold text-xl sm:text-2xl lg:text-3xl mt-2 sm:mt-4 ">
                             {project.title}
                           </h3>
                           <p className="text-sm sm:text-base sm:font-medium mt-3 sm:pr-5">
