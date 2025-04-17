@@ -35,7 +35,7 @@ export function MagicCardDemo() {
           className="bg-primaryBg p-4 lg:py-9 lg:px-6 border border-[#FFFFFF26] rounded-lg"
         >
           <div className="flex flex-wrap sm:flex-nowrap gap-y-3 items-center justify-between">
-            <h3 className="w-full order-2 sm:order-none sm:w-[calc(100%-65px)] 2xl:w-[calc(100%-65px)] text-base sm:text-lg lg:text-xl 2xl:text-2xl font-semibold tracking-tighter">
+            <h3 className="w-full order-2 sm:order-none sm:w-[calc(100%-65px)] 2xl:w-[calc(100%-85px)] text-base sm:text-lg lg:text-xl 2xl:text-2xl font-semibold tracking-tighter">
               {title}
             </h3>
 

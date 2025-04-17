@@ -69,7 +69,7 @@ const NavigationMenuContent = React.forwardRef<
   <NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
-      "left-0 top-0 rounded-xl  backdrop-blur-xl bg-opacity-70 bg-[#09090B]  shadow-lg lg:shadow-none text-popover-foreground lg:text-muted-foreground  w-full  lg:rounded-none   md:fixed md:w-screen ",
+      "left-0 top-0 rounded-xl    shadow-lg lg:shadow-none text-popover-foreground lg:text-muted-foreground  w-full  lg:rounded-none   md:fixed md:w-screen ",
       className
     )}
     {...props}
@@ -83,10 +83,10 @@ const NavigationMenuViewport = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>
 >(({ className, ...props }, ref) => (
-  <div className={cn(`w-full sm:w-screen lg:w-auto top-4 lg:top-[134%] absolute left-0 lg:left-1/2 lg:-translate-x-1/2 flex justify-center  ${className}`)}>
+  <div className={cn(`w-full sm:w-screen backdrop-blur-2xl bg-black/40 lg:w-auto top-4 lg:top-[134%] absolute left-0 lg:left-1/2 lg:-translate-x-1/2 flex justify-center  ${className}`)}>
     <NavigationMenuPrimitive.Viewport
       className={cn(
-        "custom-bg-remove rounded-xl origin-top-center backdrop-blur-xl bg-opacity-20 bg-[#09090B] sm:backdrop-blur-xl sm:bg-opacity-20 sm:bg-[#09090B] lg:backdrop-blur-xl lg:bg-opacity-20 lg:bg-[#09090B] relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] lg:border-none w-full overflow-hidden lg:rounded-md    lg:text-popover-foreground lg:shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
+        "custom-bg-remove rounded-xl origin-top-center  relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] lg:border-none w-full overflow-hidden lg:rounded-md    lg:text-popover-foreground lg:shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
         className
       )}
       ref={ref}
@@ -109,7 +109,7 @@ const NavigationMenuIndicator = React.forwardRef<
     )}
     {...props}
   >
-    <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-black backdrop-blur-2xl shadow-md" />
+    <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm  shadow-md" />
   </NavigationMenuPrimitive.Indicator>
 ))
 NavigationMenuIndicator.displayName =

@@ -15,7 +15,7 @@ const solutions = [
   },
   {
     id: 2,
-    img: "/images/sol_one.png",
+    img: "/images/sol_two.png",
     title: "Advanced Technology Integration",
     items: [
       "Tailored tech assessments aligned with your operations.",

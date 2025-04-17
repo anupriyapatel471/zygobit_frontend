@@ -181,27 +181,25 @@ const MobileAppDevelopment = () => {
       <AOSInitializer />
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
-      
+
       <Suspense fallback={<Loader />}>
         <WeDeliver />
       </Suspense>
 
-      <section className="w-full bg-gradient-to-b from-orange-950  to-black py-12 sm:py-14 lg:py-20">
-        <div className="container remove-bg">
-          <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
-            <div className="w-full lg:w-[45%]">
-              <BoostBussiness heading={heading} paragraph={paragraph} />
-              <Link href="/contact">
-                <button className="mt-4 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                  Get Assistance{" "}
-                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                </button>
-              </Link>
-            </div>
-            <div className="w-full lg:w-[55%]">
-              <div className="w-full">
-                <AppleCardsCarousel />
-              </div>
+      <section className="w-full custom-apple-slider  bg-gradient-to-b from-orange-950  to-black py-12 sm:py-14 lg:py-20">
+        <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
+          <div className="w-full lg:w-[45%]">
+            <BoostBussiness heading={heading} paragraph={paragraph} />
+            <Link href="/contact">
+              <button className="mt-4 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                Get Assistance{" "}
+                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+              </button>
+            </Link>
+          </div>
+          <div className="w-full lg:w-[55%]">
+            <div className="w-full">
+              <AppleCardsCarousel />
             </div>
           </div>
         </div>

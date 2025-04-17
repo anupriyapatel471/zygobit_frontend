@@ -247,3 +247,21 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-backdrop-filter: blur(12px); /* WebKit support */
   backdrop-filter: blur(12px);
 }
+
+
+.custom-blur-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../public/images/mega_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.service-dropdown-active {
+  display: inline-block;
+}
