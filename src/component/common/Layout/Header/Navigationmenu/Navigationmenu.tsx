@@ -53,7 +53,7 @@ export default function NavigationMenuDemo() {
   return (
     <>
       <NavigationMenu className={classDynamic}>
-        <NavigationMenuList className="grid grid-cols-1 gap-4 space-x-0 lg:space-x-1 lg:flex">
+        <NavigationMenuList className="grid grid-cols-1 gap-4 space-x-0 lg:space-x-1 lg:flex ">
           <NavigationMenuItem
             onClick={() => handleClassChange(" top-5 lg:top-[143%]")}
             className="  text-white"
