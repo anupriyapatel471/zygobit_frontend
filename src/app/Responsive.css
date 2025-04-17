@@ -38,6 +38,10 @@
 
 
 @media screen and (max-width: 991px) {
+
+  .service-dropdown-active.active-services {
+    display: none;
+  }
   .custom-left {
     left: 56% !important;
     bottom: -70px !important;

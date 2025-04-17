@@ -263,5 +263,9 @@ input[type="number"]::-webkit-outer-spin-button {
 
 
 .service-dropdown-active {
+  display: none;
+}
+
+.service-dropdown-active.active-services {
   display: inline-block;
 }

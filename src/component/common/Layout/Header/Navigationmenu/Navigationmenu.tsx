@@ -15,22 +15,49 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import ServicesDropdown from "@/component/sevices/Common/ServicesDropdown";
+import { ChevronDown } from "lucide-react";
 
 export default function NavigationMenuDemo() {
   const [classDynamic, setClassDynamic] = React.useState("top-10 lg:top-full ");
+  const [dropdownOpen, setDropdownOpen] = React.useState(false);
 
   const handleClassChange = (val: string) => {
     setClassDynamic(val);
   };
 
-  const [dropdownOpen, SetDropdownOpen] = React.useState(false);
+  // const [dropdownOpen, SetDropdownOpen] = React.useState(false);
+  // const handleServiceDropdown = () => {
+  //   SetDropdownOpen(!dropdownOpen);
+  // };
+  // Toggle open/close on trigger click
   const handleServiceDropdown = () => {
-    SetDropdownOpen(!dropdownOpen);
+    setDropdownOpen((open) => !open);
   };
+
+  // Close dropdown when clicking outside #nav-wrapper
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const wrapper = document.getElementById("nav-wrapper");
+      if (dropdownOpen && wrapper && !wrapper.contains(event.target as Node)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [dropdownOpen]);
+
+  // Sync active-services class on your #nav-wrapper
+  React.useEffect(() => {
+    const wrapper = document.getElementById("nav-wrapper");
+    if (wrapper) {
+      wrapper.classList.toggle("active-services", dropdownOpen);
+    }
+  }, [dropdownOpen]);
 
   return (
     <>
-      {dropdownOpen && <ServicesDropdown />}
+      {/* {dropdownOpen && <ServicesDropdown />} */}
 
       <NavigationMenu className={classDynamic}>
         <NavigationMenuList className="grid grid-cols-1 gap-4 space-x-0 lg:space-x-1 lg:flex">
@@ -39,10 +66,17 @@ export default function NavigationMenuDemo() {
             className="  text-white"
           >
             <NavigationMenuTrigger onClick={handleServiceDropdown}>
-              Services
+              Services{" "}
+              <ChevronDown
+                className={cn(
+                  "relative top-[1px] ml-1 h-3 w-3 transition-transform duration-200",
+                  dropdownOpen ? "rotate-180" : ""
+                )}
+                aria-hidden="true"
+              />
             </NavigationMenuTrigger>
-            <div className=" w-full h-full hidden">
-              <NavigationMenuContent className="hidden backdrop-blur-2xl bg-black/40 custom-bg-remove  border-none relative z-50">
+            <div className=" w-full h-full lg:hidden">
+              <NavigationMenuContent className="lg:hidden backdrop-blur-2xl bg-black/40 custom-bg-remove  border-none relative z-50">
                 <div className="w-full backdrop-blur-2xl bg-black/40  relative ">
                   <ul className="backdrop-blur-2xl bg-black/40 rounded-lg grid grid-cols-1 gap-3 items-center w-full sm:w-screen mx-auto lg:grid-cols-3">
                     <div className="w-auto grid grid-cols-1 lg:grid-cols-2 gap-7 col-span-2 p-4 lg:p-10">
