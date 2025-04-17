@@ -18,21 +18,15 @@ export const validatePhoneNumber = (phoneNumber: string) => {
   return phoneRegex.test(phoneNumber);
 };
 
-export const validateAlphaNumSpecial=(value: string): boolean =>{
-  const alphaNumSpecialRegex = /^(?=.*[A-Za-z])[A-Za-z0-9\s\.\,\'\-\&]+$/;
-  return alphaNumSpecialRegex.test(value.trim());
-}
 export const validateBudget = (value: string): boolean => {
-  const budgetRegex = /^(?:[\$\€\£\₹]|[A-Za-z]{1,3})?\s?\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?\s?(?:[\$\€\£\₹]|[A-Za-z]{1,3})?$/;
-  return budgetRegex.test(value.trim());
+  const budgetRegex = /(?:[\$\€\£\₹]|[A-Za-z]{1,3})?\s*\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?\s*(?:[\$\€\£\₹]|[A-Za-z]{1,3})?/;
+  return budgetRegex.test(value);
 };
-
 
 export const validateName = (value: string) => {
-  const nameRegex = /^[a-zA-Z0-9\s\.\,\'\-\&]+$/;
-  return nameRegex.test(value.trim());
+  const namePattern = /^[a-zA-Z]{2,}(?:[-'\s][a-zA-Z]+)*$/;
+  return namePattern.test(value.trim());
 };
-
 
 export const formatDownloads = (downloads: number) => {
   if (downloads >= 1000) {

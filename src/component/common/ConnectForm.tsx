@@ -6,7 +6,12 @@ import { generateClient } from "aws-amplify/data";
 import { useState } from "react";
 import useAmplifyConfig from "@/hooks/useAmplify";
 import toast from "react-hot-toast";
-import { validateEmail, validatePhoneNumber } from "@/lib/utils";
+import {
+  validateBudget,
+  validateEmail,
+  validateName,
+  validatePhoneNumber,
+} from "@/lib/utils";
 
 const client = generateClient();
 
@@ -72,14 +77,36 @@ const ConnectForm = () => {
       toast.error("Please fill in all fields.");
       return false;
     }
-    if (!validateEmail(companyEmail)) {
-      toast.error("Invalid email address.");
+    if (!validateName(firstName)) {
+      toast.error("Invalid first name.");
+      return false;
+    }
+    if (!validateName(lastName)) {
+      toast.error("Invalid last name.");
       return false;
     }
     if (!validatePhoneNumber(phoneNumber)) {
       toast.error("Phone number must be between 7 and 10 digits.");
       return false;
     }
+
+    if (!validateName(companyName)) {
+      toast.error("Invalid company name.");
+      return false;
+    }
+    if (!validateName(jobTitle)) {
+      toast.error("Invalid job Title.");
+      return false;
+    }
+    if (!validateEmail(companyEmail)) {
+      toast.error("Invalid email address.");
+      return false;
+    }
+    if (!validateBudget(budget)) {
+      toast.error("Invalid budget format.");
+      return false;
+    }
+
     return true;
   };
 

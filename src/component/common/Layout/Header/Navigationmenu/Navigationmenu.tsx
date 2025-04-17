@@ -24,10 +24,6 @@ export default function NavigationMenuDemo() {
     setClassDynamic(val);
   };
 
-  // const [dropdownOpen, SetDropdownOpen] = React.useState(false);
-  // const handleServiceDropdown = () => {
-  //   SetDropdownOpen(!dropdownOpen);
-  // };
   // Toggle open/close on trigger click
   const handleServiceDropdown = () => {
     setDropdownOpen((open) => !open);
@@ -56,8 +52,6 @@ export default function NavigationMenuDemo() {
 
   return (
     <>
-      {/* {dropdownOpen && <ServicesDropdown />} */}
-
       <NavigationMenu className={classDynamic}>
         <NavigationMenuList className="grid grid-cols-1 gap-4 space-x-0 lg:space-x-1 lg:flex">
           <NavigationMenuItem
