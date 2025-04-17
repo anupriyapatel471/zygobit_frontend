@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -153,7 +154,10 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div id="nav-wrapper" className="w-full service-dropdown-active fixed top-20 left-0 bg-[#00000014] backdrop-blur-2xl  z-[999] ">
+      <div
+        id="nav-wrapper"
+        className="w-full service-dropdown-active fixed top-20 left-0 bg-[#00000014] backdrop-blur-2xl  z-[999] "
+      >
         <div className="w-full grid">
           <div className="w-full   relative ">
             <ul className=" rounded-lg grid grid-cols-1 gap-3 items-center w-full sm:w-screen mx-auto lg:grid-cols-3">
@@ -167,7 +171,8 @@ const Header = () => {
                     />
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
-                    <Link href="/services/mobile-app-development"
+                    <Link
+                      href="/services/mobile-app-development"
                       className=" text-white  text-sm sm:text-base hover:text-white inline-block w-full hover:bg-transparent p-0"
                     >
                       <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
@@ -193,7 +198,8 @@ const Header = () => {
                     />
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
-                    <Link  href="/services/mobile-app-development"
+                    <Link
+                      href="/services/mobile-app-development"
                       className=" text-white hover:text-white inline-block w-full hover:bg-transparent p-0"
                       title=""
                     >
@@ -220,7 +226,8 @@ const Header = () => {
                     />
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
-                    <Link  href="/services/uiux-web-design"
+                    <Link
+                      href="/services/uiux-web-design"
                       className=" text-white hover:text-white inline-block w-full hover:bg-transparent p-0"
                     >
                       <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
@@ -246,7 +253,8 @@ const Header = () => {
                     />
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
-                    <Link href="/services/machine-learning-ai"
+                    <Link
+                      href="/services/machine-learning-ai"
                       className=" text-white hover:text-white inline-block w-full hover:bg-transparent p-0"
                     >
                       <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
@@ -273,7 +281,8 @@ const Header = () => {
                     />
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
-                    <Link href="/services/e-commerce"
+                    <Link
+                      href="/services/e-commerce"
                       className=" text-white hover:text-white inline-block w-full hover:bg-transparent p-0"
                     >
                       <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
