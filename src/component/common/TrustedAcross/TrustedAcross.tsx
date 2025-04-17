@@ -8,6 +8,7 @@ const stats = [
   { id: 3, value: "25+", label: "Tech Enthusiast" },
   { id: 4, value: "250+", label: "Products Delivered" },
 ];
+
 const TrustedAcross = () => {
   return (
     <>
