@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
@@ -16,9 +17,13 @@ import {
 } from "@/components/ui/navigation-menu";
 import { ChevronDown } from "lucide-react";
 
+import { usePathname } from "next/navigation";
+
 export default function NavigationMenuDemo() {
   const [classDynamic, setClassDynamic] = React.useState("top-10 lg:top-full ");
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
+
+  const pathname = usePathname();
 
   const handleClassChange = (val: string) => {
     setClassDynamic(val);
@@ -29,17 +34,22 @@ export default function NavigationMenuDemo() {
     setDropdownOpen((open) => !open);
   };
 
+  React.useEffect(() => {
+    setDropdownOpen(false);
+  }, [pathname]);
+
   // Close dropdown when clicking outside #nav-wrapper
   React.useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: any) => {
       const wrapper = document.getElementById("nav-wrapper");
-      if (dropdownOpen && wrapper && !wrapper.contains(event.target as Node)) {
+      if (dropdownOpen && wrapper && !wrapper.contains(event.target)) {
         setDropdownOpen(false);
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    // listen for click (fires *after* your toggleMenu onClick)
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
   }, [dropdownOpen]);
 
   // Sync active-services class on your #nav-wrapper
@@ -58,7 +68,11 @@ export default function NavigationMenuDemo() {
             onClick={() => handleClassChange(" top-5 lg:top-[143%]")}
             className="  text-white"
           >
-            <NavigationMenuTrigger onClick={handleServiceDropdown}>
+            {/* <NavigationMenuTrigger onClick={handleServiceDropdown}> */}
+            <NavigationMenuTrigger
+              onMouseDown={(e) => e.stopPropagation()}
+              onClick={handleServiceDropdown}
+            >
               Services{" "}
               <ChevronDown
                 className={cn(
