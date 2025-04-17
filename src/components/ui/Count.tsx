@@ -1,24 +1,34 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useState, useEffect } from "react";
 
-const Count = ({ endValue }: any) => {
+type CountProps = {
+  endValue: string;
+  duration?: number;
+};
+
+const Count = ({ endValue, duration = 2000 }: CountProps) => {
   const numericEndValue = parseInt(endValue, 10);
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    let start = 0;
-    const duration = 2000;
-    const incrementTime = Math.ceil(duration / numericEndValue);
-    const interval = setInterval(() => {
-      start += 1;
-      setCount(start);
-      if (start >= numericEndValue) {
-        clearInterval(interval);
+    let startTime: number | null = null;
+    let animationFrameId: number;
+
+    const step = (timestamp: number) => {
+      if (startTime === null) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      setCount(Math.floor(progress * numericEndValue));
+
+      if (elapsed < duration) {
+        animationFrameId = requestAnimationFrame(step);
       }
-    }, incrementTime);
-    return () => clearInterval(interval);
-  }, [numericEndValue]);
+    };
+
+    animationFrameId = requestAnimationFrame(step);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [numericEndValue, duration]);
 
   return <span>{count}</span>;
 };
