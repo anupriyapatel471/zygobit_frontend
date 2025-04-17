@@ -199,7 +199,7 @@ const Header = () => {
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
                     <Link
-                      href="/services/mobile-app-development"
+                      href="/services/web-app-development"
                       className=" text-white hover:text-white inline-block w-full hover:bg-transparent p-0"
                       title=""
                     >
