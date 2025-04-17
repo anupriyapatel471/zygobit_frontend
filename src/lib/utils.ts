@@ -14,6 +14,11 @@ export const validateEmail = (email: string) => {
   return emailRegex.test(email);
 };
 
+export const validatePhoneNumber = (phoneNumber: string) => {
+  const phoneRegex = /^\d{7,10}$/;
+  return phoneRegex.test(phoneNumber);
+};
+
 export const formatDownloads = (downloads: number) => {
   if (downloads >= 1000) {
     const result = Math.floor(downloads / 1000);

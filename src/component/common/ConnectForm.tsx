@@ -6,7 +6,7 @@ import { generateClient } from "aws-amplify/data";
 import { useState } from "react";
 import useAmplifyConfig from "@/hooks/useAmplify";
 import toast from "react-hot-toast";
-import { validateEmail } from "@/lib/utils";
+import { validateEmail, validatePhoneNumber } from "@/lib/utils";
 
 const client = generateClient();
 
@@ -33,6 +33,15 @@ const ConnectForm = () => {
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = event.target;
+
+    if (name === "phoneNumber") {
+      const numericValue = value.replace(/\D/g, "");
+      if (numericValue.length <= 10) {
+        setFormData((prev) => ({ ...prev, [name]: numericValue }));
+      }
+      return;
+    }
+
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -50,30 +59,27 @@ const ConnectForm = () => {
     } = formData;
 
     if (
-      !firstName ||
-      !lastName ||
-      !companyEmail ||
-      !phoneNumber ||
-      !jobTitle ||
-      !companyName ||
-      !launchDate ||
-      !budget ||
-      !projectDetails
+      !firstName.trim() ||
+      !lastName.trim() ||
+      !phoneNumber.trim() ||
+      !jobTitle.trim() ||
+      !companyName.trim() ||
+      !companyEmail.trim() ||
+      !launchDate.trim() ||
+      !budget.trim() ||
+      !projectDetails.trim()
     ) {
       toast.error("Please fill in all fields.");
       return false;
     }
-
     if (!validateEmail(companyEmail)) {
-      toast.error("Invalid Email address");
+      toast.error("Invalid email address.");
       return false;
     }
-
-    if (phoneNumber.length < 10) {
-      toast.error("Phone number must be at least 10 digits long.");
+    if (!validatePhoneNumber(phoneNumber)) {
+      toast.error("Phone number must be between 7 and 10 digits.");
       return false;
     }
-
     return true;
   };
 
@@ -85,7 +91,7 @@ const ConnectForm = () => {
     }
     setLoading(true);
     try {
-      const res = await (client.queries as any).sendEmailContactForm({
+      await (client.queries as any).sendEmailContactForm({
         firstName: formData.firstName,
         lastName: formData.lastName,
         phoneNumber: formData.phoneNumber,
@@ -96,7 +102,6 @@ const ConnectForm = () => {
         budget: formData.budget,
         projectDetails: formData.projectDetails,
       });
-      console.log("res", res);
       // const savedRecord = await client.models.ContactRequest.create({
       //   ...formData,
       //   id: v4(),
@@ -104,7 +109,10 @@ const ConnectForm = () => {
       //   updatedAt: new Date().toISOString(),
       // });
       // console.log("Saved record:", savedRecord);
-      toast.success("Saved record");
+      // toast.success("Saved record");
+      toast.success(
+        "Thanks for reaching out to us. The concerned person will contact you shortly !"
+      );
     } catch (error) {
       console.error("Error saving data to DynamoDB:", error);
     } finally {
@@ -118,6 +126,7 @@ const ConnectForm = () => {
       onSubmit={handleSubmit}
       data-aos="fade-left"
       className="w-auto lg:px-0"
+      noValidate
     >
       <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom">
         Let’s connect
@@ -147,10 +156,12 @@ const ConnectForm = () => {
           <Input
             name="phoneNumber"
             placeholder="Phone Number"
-            type="number"
+            type="tel"
             value={formData.phoneNumber}
             onChange={handleChange}
+            maxLength={10}
           />
+
           <Input
             name="jobTitle"
             placeholder="Job Title"
