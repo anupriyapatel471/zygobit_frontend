@@ -58,6 +58,13 @@
               "isRequired": false,
               "attributes": []
             },
+            "dialCode": {
+              "name": "dialCode",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
             "jobTitle": {
               "name": "jobTitle",
               "isArray": false,
@@ -501,6 +508,12 @@
             },
             "phoneNumber": {
               "name": "phoneNumber",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false
+            },
+            "dialCode": {
+              "name": "dialCode",
               "isArray": false,
               "type": "String",
               "isRequired": false

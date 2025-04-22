@@ -12,6 +12,26 @@ import {
   validateName,
   validatePhoneNumber,
 } from "@/lib/utils";
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
+import { parsePhoneNumberFromString } from "libphonenumber-js";
+
+type phoneNumber = {
+  number: string;
+  dialCode: string;
+};
+
+type FormDataType = {
+  firstName: string;
+  lastName: string;
+  phoneNumber: phoneNumber;
+  jobTitle: string;
+  companyName: string;
+  companyEmail: string;
+  launchDate: string;
+  budget: string;
+  projectDetails: string;
+};
 
 const client = generateClient();
 
@@ -23,7 +43,10 @@ const ConnectForm = () => {
   const initialState = {
     firstName: "",
     lastName: "",
-    phoneNumber: "",
+    phoneNumber: {
+      number: "",
+      dialCode: "",
+    },
     jobTitle: "",
     companyName: "",
     companyEmail: "",
@@ -32,21 +55,12 @@ const ConnectForm = () => {
     projectDetails: "",
   };
 
-  const [formData, setFormData] = useState(initialState);
+  const [formData, setFormData] = useState<FormDataType>(initialState);
 
   const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = event.target;
-
-    if (name === "phoneNumber") {
-      const numericValue = value.replace(/\D/g, "");
-      if (numericValue.length <= 10) {
-        setFormData((prev) => ({ ...prev, [name]: numericValue }));
-      }
-      return;
-    }
-
+    const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -54,7 +68,7 @@ const ConnectForm = () => {
     const {
       firstName,
       lastName,
-      phoneNumber,
+      phoneNumber: { number, dialCode },
       jobTitle,
       companyName,
       companyEmail,
@@ -66,7 +80,6 @@ const ConnectForm = () => {
     if (
       !firstName.trim() ||
       !lastName.trim() ||
-      !phoneNumber.trim() ||
       !jobTitle.trim() ||
       !companyName.trim() ||
       !companyEmail.trim() ||
@@ -85,8 +98,12 @@ const ConnectForm = () => {
       toast.error("Invalid last name.");
       return false;
     }
-    if (!validatePhoneNumber(phoneNumber)) {
+    if (!validatePhoneNumber(number)) {
       toast.error("Phone number must be between 7 and 10 digits.");
+      return false;
+    }
+    if (!(dialCode && number)) {
+      toast.error("Please enter a valid phone number or country code.");
       return false;
     }
 
@@ -112,7 +129,7 @@ const ConnectForm = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
+    console.log("formadata++++++++++++++++++++", formData);
     if (!validate()) {
       return;
     }
@@ -121,7 +138,8 @@ const ConnectForm = () => {
       await (client.queries as any).sendEmailContactForm({
         firstName: formData.firstName,
         lastName: formData.lastName,
-        phoneNumber: formData.phoneNumber,
+        phoneNumber: formData.phoneNumber.number,
+        dialCode: formData.phoneNumber.dialCode,
         jobTitle: formData.jobTitle,
         companyName: formData.companyName,
         companyEmail: formData.companyEmail,
@@ -142,6 +160,7 @@ const ConnectForm = () => {
       );
     } catch (error) {
       console.error("Error saving data to DynamoDB:", error);
+      toast.error("Error saving data to DynamoDB");
     } finally {
       setLoading(false);
       setFormData(initialState);
@@ -180,15 +199,44 @@ const ConnectForm = () => {
           />
         </div>
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Input
+          {/* <Input
             name="phoneNumber"
             placeholder="Phone Number"
             type="tel"
             value={formData.phoneNumber}
-            onChange={handleChange}
-            maxLength={10}
-          />
+            // onChange={handleChange}
+            // maxLength={10}
+          /> */}
+          <div className="relative">
+            <Input
+              type="number"
+              className="absolute left-0 top-0 opacity-0 w-full h-10 md:h-11 lg:h-12"
+            />
+            <PhoneInput
+              international
+              defaultCountry="IN"
+              placeholder="Enter phone number"
+              value={
+                formData.phoneNumber?.number && formData.phoneNumber?.dialCode
+                  ? `+${formData.phoneNumber.dialCode}${formData.phoneNumber.number}`
+                  : ""
+              }
+              onChange={(value) => {
+                const phoneNumber = parsePhoneNumberFromString(value || "");
 
+                if (phoneNumber) {
+                  setFormData((prev) => ({
+                    ...prev,
+                    phoneNumber: {
+                      dialCode: phoneNumber.countryCallingCode,
+                      number: phoneNumber.nationalNumber,
+                    },
+                  }));
+                }
+              }}
+              className="h-10 md:h-11 lg:h-12 custom-phone-input absolute top-0 left-0 w-full"
+            />
+          </div>
           <Input
             name="jobTitle"
             placeholder="Job Title"

@@ -1,12 +1,13 @@
 "use client";
 import React, { ReactNode } from "react";
 import Image from "next/image";
-const Cta = dynamic(() => import("@/component/common/Cta/Cta"));
 const RippleBg = dynamic(() => import("@/component/common/Ripplebg/Ripplebg"));
 
 import dynamic from "next/dynamic";
 import MagicCard from "@/components/ui/magic-card";
 import arrowRight from "../../../public/images/arrow_right.svg";
+import GlobeDemo from "../common/Cta/Globe/Globe";
+import VortexBg from "../common/Cta/Vortexbg/Vortexbg";
 
 interface ProjectData {
   projectName: ReactNode;
@@ -21,6 +22,7 @@ interface ProjectData {
   technologyImages?: string[];
   evaluationDescription?: string;
   evaluationImage?: string;
+  developmentDescription?: string;
 }
 
 const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
@@ -253,7 +255,43 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
         </div>
       </section>
 
-      <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
+      <section className="w-full relative my-12 sm:my-14 lg:my-16 overflow-hidden">
+        <div className="container remove-bg">
+          <div className="absolute top-0 left-0 w-full h-full -z-10">
+            <VortexBg />
+          </div>
+          <div className="w-full relative">
+            <div className="inter-var py-0 w-full">
+              <div className="overflow-hidden w-full pb-0 sm:pb-0 relative bg-[#2D2E34] bg-opacity-20 backdrop-blur-md group/card justify-between items-center border-[#FFFFFF26]  rounded-xl flex-wrap lg:flex-nowrap flex border-2  ">
+                <div
+                  data-aos="fade-right"
+                  className="w-full order-2 lg:order-none lg:max-w-3xl p-3 sm:p-5 lg:pr-0 lg:py-12 lg:pl-8 text-center sm:text-left"
+                >
+                  <div className="inline text-2xl sm:text-[28px] lg:text-4xl text-center sm:text-left text-white font-bold ">
+                    Development
+                    {/* <span className="text-themetext">Technology </span> */}
+                  </div>
+                  <div className="text-center sm:text-left sm:font-medium text-sm leading-6 sm:leading-normal sm:text-base lg:text-lg mt-2 mb-5">
+                    {projectData?.developmentDescription}
+                  </div>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  className="order-1 lg:order-none lg:w-[575px] mx-auto lg:mx-0"
+                >
+                  <GlobeDemo />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <Cta
+        vortex={"VortexBg"}
+        Aurora={""}
+        content={"Globe"}
+        projectData={projectData}
+      /> */}
 
       <section className="w-full overflow-hidden">
         <div className="container remove-bg">
