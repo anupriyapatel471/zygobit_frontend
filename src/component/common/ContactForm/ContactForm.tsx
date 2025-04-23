@@ -2,17 +2,16 @@
 import React from "react";
 import ConnectForm from "@/component/common/ConnectForm";
 import Image from "next/image";
-import contactImage from "../../../../public/images/contact_new.png";
+import contactImage from "../../../../public/images/contact_svg.svg";
 
 export default function ContactForm() {
   return (
     <>
-      <section className="w-full  relative overflow-hidden">
+      <section className="w-full  bg-[url('/images/contact_bg.png')] py-20 bg-cover bg-center relative overflow-hidden">
         <div className="container remove-bg">
-          <div className="w-full grid items-center   bg-white/5 rounded-xl sm:rounded-2xl  lg:rounded-[40px] grid-cols-1 lg:grid-cols-2 gap-5 p-4 sm:p-5">
+          <div className="w-full grid items-center   grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-16">
             <div
-              data-aos="fade-right"
-              className="hidden sm:inline-block w-auto relative h-[415px] sm:h-[710px]"
+              className="hidden sm:inline-block w-auto relative h-[415px] sm:h-[580px]"
             >
               <Image
                 className="w-full r rounded-[40px] object-cover"

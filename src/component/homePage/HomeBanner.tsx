@@ -5,65 +5,199 @@ import RippleBg from "@/component/common/Ripplebg/Ripplebg";
 import { MagicCardDemo } from "@/component/common/Magiccard/Magiccard";
 import TrustedAcross from "../common/TrustedAcross/TrustedAcross";
 import Link from "next/link";
+import Image from "next/image";
 
 const HomeBanner = () => {
   return (
     <>
-      <section className="w-full h-[460px] sm:h-[720px] lg:h-[900px] relative">
+      <section className="w-full  relative pt-[100px]">
         <div className="container">
-          {/* bg overlay */}
-          <div className="w-full absolute top-20 sm:top-28 left-1/2 -translate-x-1/2  py-5 lg:py-14 z-10 max-w-[1248px] mx-auto">
-            <div className="w-full  px-4 flex flex-wrap sm:flex-nowrap justify-between">
-              <div className="w-full sm:w-3/4 lg:w-[60%]">
-                <div className="w-auto text-center sm:text-left">
-                  <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl text-shadow-2xl  text-gradiant-custom">
-                    Innovative IT Solutions for Your 
-                    <span className="text-themetext"> Business Growth</span>
-                  </h1>
-                  <Link href="/contact">
-                    <button className="mt-5 sm:mt-7 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                      Talk to an expert!
-                      <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                    </button>
-                  </Link>
+          <div className="w-full relative">
+            <div className="absolute top-0 left-0 w-full h-[930px] -z-10">
+              <div className="w-full flex justify-between h-full">
+                <div className="w-[1px] h-full bg-[#51515182] opacity-30 relative">
+                  <div className="bg-[#666666] w-2.5 h-2.5 rounded-full absolute top-[145px] left-1/2 -translate-x-1/2"></div>
                 </div>
-                <div className="w-auto text-center sm:text-left mt-6 sm:mt-16">
-                  <span className="block text-center sm:text-left sm:font-bold text-lg mb-7">
-                    We are Trusted by
-                  </span>
-                  <div className="max-w-md">
-                    <MarqueeSlider />
+                <div className="w-[1px] h-full bg-[#51515182] opacity-30 relative">
+                  <div className="bg-[#666666] w-2.5 h-2.5 rounded-full absolute top-[50px] left-1/2 -translate-x-1/2"></div>
+                </div>
+                <div className="w-[1px] h-full bg-[#51515182] opacity-30 relative">
+                  <div className="bg-[#666666] w-2.5 h-2.5 rounded-full absolute top-[50%] left-1/2 -translate-x-1/2"></div>
+                </div>
+                <div className="w-[1px] h-full bg-[#51515182] opacity-30 relative">
+                  <div className="bg-[#666666] w-2.5 h-2.5 rounded-full absolute top-[300px] left-1/2 -translate-x-1/2"></div>
+                </div>
+                <div className="w-[1px] h-full bg-[#51515182] opacity-30 relative">
+                  <div className="bg-[#666666] w-2.5 h-2.5 rounded-full absolute top-[100px] left-1/2 -translate-x-1/2"></div>
+                </div>
+                <div className="w-[1px] h-full bg-[#51515182] opacity-30 relative">
+                  <div className="bg-[#666666] w-2.5 h-2.5 rounded-full absolute bottom-[145px] left-1/2 -translate-x-1/2"></div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full relative px-2">
+              <div className="w-full relative h-[420px]">
+                <Image
+                  className="w-full  object-contain"
+                  fill
+                  src="/images/banner_logo.svg"
+                  alt="Logo"
+                />
+              </div>
+              <div className="w-full absolute top-0 left-0 flex items-end justify-between px-24 pt-7">
+                <div className="w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer">
+                  <div className="move-img w-14 h-14 rounded-full relative">
+                    <Image
+                      className="w-full mx-auto h-full rounded-full object-cover"
+                      fill
+                      src="/images/banner_profile_one.png"
+                      alt="image"
+                    />
+                  </div>
+                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
+                    Strategist
+                    <div className="absolute -top-7 left-0">
+                      <Image
+                        className="w-5 h-5"
+                        width={15}
+                        height={15}
+                        src="/images/direction_icon.svg"
+                        alt="icon"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer mb-56">
+                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
+                    Tester
+                    <div className="absolute -top-7 -left-0">
+                      <Image
+                        className="w-5 h-5"
+                        width={15}
+                        height={15}
+                        src="/images/direction_icon.svg"
+                        alt="icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="move-img w-14 h-14 rounded-full relative">
+                    <Image
+                      className="w-full mx-auto h-full rounded-full object-cover"
+                      fill
+                      src="/images/tester.png"
+                      alt="image"
+                    />
+                  </div>
+                </div>
+                <div className="w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer">
+                  <div className="move-img w-14 h-14 rounded-full relative">
+                    <Image
+                      className="w-full mx-auto h-full rounded-full object-cover"
+                      fill
+                      src="/images/designer.png"
+                      alt="image"
+                    />
+                  </div>
+                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
+                    Designer
+                    <div className="absolute -top-7 right-0">
+                      <Image
+                        className="w-5 h-5"
+                        width={15}
+                        height={15}
+                        src="/images/direction_icon.svg"
+                        alt="icon"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="w-fit relative -left-12 custom-move-animation group flex flex-col items-center justify-center gap-5 transition-all duration-300 cursor-pointer mb-56">
+                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
+                    Manager
+                    <div className="absolute -top-7 -left-0">
+                      <Image
+                        className="w-5 h-5"
+                        width={15}
+                        height={15}
+                        src="/images/direction_icon.svg"
+                        alt="icon"
+                      />
+                    </div>
+                  </div>
+                  <div className="move-img w-14 h-14 rounded-full relative">
+                    <Image
+                      className="w-full mx-auto h-full rounded-full object-cover"
+                      fill
+                      src="/images/manager.png"
+                      alt="image"
+                    />
+                  </div>
+                </div>
+                <div className="w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer">
+                  <div className="move-img w-14 h-14 rounded-full relative">
+                    <Image
+                      className="w-full mx-auto h-full rounded-full object-cover"
+                      fill
+                      src="/images/developer.png"
+                      alt="image"
+                    />
+                  </div>
+                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
+                    Developer
+                    <div className="absolute -top-7 right-0">
+                      <Image
+                        className="w-5 h-5"
+                        width={15}
+                        height={15}
+                        src="/images/direction_icon.svg"
+                        alt="icon"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="hidden lg:inline sm:w-1/4 lg:w-[60%] absolute top-[90px] right-0 order-1 sm:order-n">
-                <img
-                  className="w-[550px]  relative lg:-top-11 ml-auto object-contain z-20"
-                  src="/images/banner_img.png"
-                  alt=""
-                />
-                <img
-                  className="w-[250px] absolute top-[45%] -translate-y-1/2 left-[168px] z-10"
-                  src="/images/dotted_bg.svg"
-                  alt=""
-                />
-              </div>
             </div>
-          </div>
-          <div className="w-full hidden sm:inline max-w-[1248px] mx-auto px-4  absolute top-[555px] lg:top-[720px] bottom-auto left-1/2 -translate-x-1/2 rounded-lg z-10">
-            <div className="w-full sm:border border-[#09090B33] overflow-hidden rounded-lg sm:bg-[#fafafa12] px-24  ">
-              <div className="w-full  z-[1111]  max-w-sm mx-auto rounded-lg">
-                <RippleBg numCircles={10} />
+            <div className="w-full flex justify-between gap-14 mt-11">
+              <div className="w-3/5">
+                <h1 className="font-bold text-3xl sm:text-4xl lg:text-6xl text-gradiant-custom">
+                  Innovative IT Solutions for Your 
+                  <span className="text-themetext">Business Growth</span>
+                </h1>
               </div>
-              <div className=" w-full px-6 lg:px-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <MagicCardDemo />
+              <div className="w-2/5">
+                <span className="font-light text-xl">We are Trusted by</span>
+                <ul className="flex flex-wrap gap-10 gap-y-6 mt-6 mb-9">
+                  <li>
+                    <img src="/images/trackday.png" alt="" />
+                  </li>
+                  <li>
+                    <img src="/images/slick.png" alt="" />
+                  </li>
+                  <li>
+                    <img src="/images/recovery.png" alt="" />
+                  </li>
+                  <li>
+                    <img src="/images/pilot.png" alt="" />
+                  </li>
+                  <li>
+                    <img src="/images/abbsi.png" alt="" />
+                  </li>
+                  <li>
+                    <img src="/images/residence.png" alt="" />
+                  </li>
+                </ul>
+                <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                  Build Your Success Story
+                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
+      
 
-      <TrustedAcross />
+      {/* <TrustedAcross /> */}
     </>
   );
 };

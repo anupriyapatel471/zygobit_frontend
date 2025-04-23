@@ -177,12 +177,12 @@ const ConnectForm = () => {
       <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom">
         Let’s connect
       </h2>
-      <p className="text-sm sm:text-lg tracking-tighter pt-2 pb-5 sm:pb-10">
+      <p className="text-sm sm:text-lg tracking-tighter pt-2 pb-5 sm:pb-7">
         Let&apos;s align our constellations! Reach out and let the magic of
         collaboration illuminate our skies.
       </p>
-      <div className="w-full grid grid-cols-1 gap-4">
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="w-full grid grid-cols-1 gap-3">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Input
             name="firstName"
             placeholder="First Name"
@@ -198,7 +198,7 @@ const ConnectForm = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
           {/* <Input
             name="phoneNumber"
             placeholder="Phone Number"
@@ -245,7 +245,7 @@ const ConnectForm = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Input
             name="companyName"
             placeholder="Company Name"

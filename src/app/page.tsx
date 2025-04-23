@@ -33,6 +33,10 @@ const OurPartners = dynamicImp(
 );
 import { Metadata } from "next";
 import WhyChooseUs from "@/component/new/WhyChooseUs";
+import { ChevronRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export interface project {
   projectInfo: ReactNode;
@@ -75,9 +79,99 @@ const Home = async () => {
       <AOSInitializer />
 
       <HomeBanner />
+
       <FeaturedProjects />
+
+      <section className="w-full relative mb-20">
+        <div className="container">
+          <div className="w-full bg-[#17181B] rounded-[40px] p-4 sm:p-5 lg:p-[60px] relative overflow-hidden">
+            <div className="absolute bottom-0 left-20 z-10">
+              <Image
+                width={20}
+                height={20}
+                className="w-[300px] h-auto object-contain"
+                src="/images/g.svg"
+                alt="icon image"
+              />
+            </div>
+            <div className="w-full flex justify-between text-white">
+              <div className="lg:w-[200px] text-center">
+                <b className="font-extrabold text-6xl">11+</b>
+                <div className="w-full h-[1px] bg-white/30 mt-3 mb-3"></div>
+                <span className="font-medium text-base inline-block">
+                  Years of Experience
+                </span>
+              </div>
+              <div className="lg:w-[200px] text-center">
+                <b className="font-extrabold text-6xl">25+</b>
+                <div className="w-full h-[1px] bg-white/30 mt-3 mb-3"></div>
+                <span className="font-medium text-base inline-block">
+                  Countries Served
+                </span>
+              </div>
+              <div className="lg:w-[200px] text-center">
+                <b className="font-extrabold text-6xl">250+</b>
+                <div className="w-full h-[1px] bg-white/30 mt-3 mb-3"></div>
+                <span className="font-medium text-base inline-block">
+                  Tech Enthusiast
+                </span>
+              </div>
+              <div className="lg:w-[200px] text-center">
+                <b className="font-extrabold text-6xl">1000+</b>
+                <div className="w-full h-[1px] bg-white/30 mt-3 mb-3"></div>
+                <span className="font-medium text-base inline-block">
+                  Products Delivered
+                </span>
+              </div>
+            </div>
+            <div className="w-full flex items-center justify-center mt-14">
+              <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                Build Your Success Story
+                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <BusinessCards />
-      <Cta vortex={"VortexBg"} Aurora={""} content={"Globe"} />
+
+      <section className="w-full relative my-12 sm:my-14 lg:my-32">
+        <div className="container remove-bg">
+          <div className="w-full relative">
+            <div className="w-full h-[475px] absolute top-1/2 -translate-y-1/2 left-0 -z-10">
+              <Image
+                className="w-full object-contain"
+                fill
+                src="/images/cta_new_bg.png"
+                alt="image"
+              />
+            </div>
+            <div className="inter-var py-0 w-full">
+              <div className=" w-full pb-0 sm:pb-0 relative  group/card justify-between items-center   rounded-xl flex-wrap lg:flex-nowrap flex  ">
+                <div className="w-full order-2 lg:order-none  p-3 sm:p-5 lg:pr-0 lg:py-12 lg:pl-8 text-center sm:text-left">
+                  <div className="inline text-2xl sm:text-4xl lg:text-5xl text-center sm:text-left text-white font-bold ">
+                    Shape the Future of Technology with Us
+                  </div>
+                  <p className="text-center sm:text-left sm:font-medium text-sm leading-6 sm:leading-normal sm:text-base lg:text-xl mt-2.5 mb-10 max-w-5xl">
+                    Shape the Future of Technology with Us Partner with our team
+                    for a free, no-obligation technical proposal tailored to
+                    your next enterprise custom project.
+                  </p>
+                  <div>
+                    <Link href={"/contact"}>
+                      <Button className="  bg-white text-themetext font-normal  group  duration-500 transition-all">
+                        Our Engagement Model
+                        <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section
         data-aos="fade-up"

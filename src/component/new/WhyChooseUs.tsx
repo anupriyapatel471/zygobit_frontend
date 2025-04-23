@@ -43,12 +43,12 @@ const WhyChooseUs = () => {
               {reasons.map((reason) => (
                 <div
                   key={reason.id}
-                  className="w-full bg-[#2D2E34] rounded-2xl p-4 border border-white/20"
+                  className="w-full bg-white rounded-2xl p-4 border border-white/20"
                 >
-                  <h3 className="font-semibold text-lg sm:text-2xl mb-2 sm:mb-2.5">
+                  <h3 className="font-semibold text-lg sm:text-2xl mb-2 sm:mb-2.5 text-black">
                     {reason.title}
                   </h3>
-                  <p className="font-light sm:font-medium text-sm">{reason.description}</p>
+                  <p className="font-light sm:font-medium text-sm text-black">{reason.description}</p>
                 </div>
               ))}
             </div>

@@ -48,7 +48,7 @@ const ReviewCard = ({ img }: { img: string }) => {
   return (
     <figure
       className={cn(
-        "relative flex items-center justify-center w-48 sm:w-72 lg:w-96 h-16 sm:h-32 lg:h-36 cursor-pointer overflow-hidden  border-none bg-[#2D2E34] rounded-xl border p-4"
+        "relative flex items-center justify-center w-48 sm:w-72 lg:w-80 h-16 sm:h-28 lg:h-32 cursor-pointer overflow-hidden  border-none bg-[#2D2E34] rounded-xl border p-4"
       )}
     >
       <div className="flex flex-row items-center gap-2 p-11">
@@ -57,7 +57,7 @@ const ReviewCard = ({ img }: { img: string }) => {
           alt="Partner Logo"
           width={120}
           height={60}
-          className="w-auto h-auto opacity-40"
+          className="w-auto h-auto opacity-40 scale-90"
         />
       </div>
     </figure>

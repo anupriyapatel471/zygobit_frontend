@@ -5,6 +5,7 @@ const solutions = [
   {
     id: 1,
     img: "/images/sol_one.png",
+    imgTwo: "/images/sol_one_new.svg",
     title: "Strategic Business Solutions",
     items: [
       "In-depth evaluation tailored to your specific goals.",
@@ -16,6 +17,7 @@ const solutions = [
   {
     id: 2,
     img: "/images/sol_two.png",
+    imgTwo: "/images/sol_two_new.svg",
     title: "Advanced Technology Integration",
     items: [
       "Tailored tech assessments aligned with your operations.",
@@ -27,6 +29,7 @@ const solutions = [
   {
     id: 3,
     img: "/images/sol_three.png",
+    imgTwo: "/images/sol_three_new.svg",
     title: "Innovative Problem Solving Approach",
     items: [
       "Customized diagnostics for complex business challenges.",
@@ -38,6 +41,7 @@ const solutions = [
   {
     id: 4,
     img: "/images/sol_four.png",
+    imgTwo: "/images/sol_four_new.svg",
     title: "Agile, Collaborative Process",
     items: [
       "Deep dive into your unique organizational dynamics.",
@@ -56,7 +60,7 @@ const BusinessCards = () => {
     >
       <div className="container remove-bg">
         <div className="w-full text-center mb-5 sm:mb-8 lg:mb-10">
-          <h2 className=" text-2xl sm:text-4xl lg:text-[38px] text-gradiant-custom 2xl:text-[40px] font-bold">
+          <h2 className=" text-2xl sm:text-4xl lg:text-[38px] text-gradiant-custom-second 2xl:text-[40px] font-bold">
             Revolutionizing Businesses with Excellence & Expertise
           </h2>
         </div>
@@ -64,12 +68,17 @@ const BusinessCards = () => {
           {solutions.map((solution) => (
             <div
               key={solution.id}
-              className="w-full hover:bg-orange-600 rounded-2xl border-2 border-white/20 p-5 text-white group"
+              className="w-full hover:bg-white hover:text-black rounded-2xl border-2 border-white/20 p-5 text-white group"
             >
-              <span className=" border-2 border-white/20 flex items-center justify-center rounded-xl w-14 h-14 sm:w-20 sm:h-20 overflow-hidden">
+              <span className="group-hover:border-orange-600 border-2 border-white/20 flex items-center justify-center rounded-xl w-14 h-14 sm:w-20 sm:h-20 overflow-hidden">
                 <img
-                  className="group-hover:brightness-0 group-hover:invert size-full"
+                  className="group-hover:hidden size-full"
                   src={solution.img}
+                  alt=""
+                />
+                <img
+                  className="hidden group-hover:inline-block w-10 h-10"
+                  src={solution.imgTwo}
                   alt=""
                 />
               </span>

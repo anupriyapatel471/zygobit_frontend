@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Logo from "../../../../../public/images/Logo.png";
+import Logo from "../../../../../public/images/footer_logo.png";
 const Footer = () => {
   const productLinks = [
     { name: "Facebook", url: "https://www.facebook.com/zygobit" },
@@ -26,9 +26,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full inline-block">
+    <footer className="w-full inline-block bg-white">
       <div className="w-full container remove-bg">
-        <div className="w-full flex gap-y-7 sm:gap-5 flex-wrap lg:flex-nowrap mt-10 lg:mt-20 mb-10 sm:mb-14 lg:mb-24 justify-between">
+        <div className="w-full flex  gap-y-7 sm:gap-5 flex-wrap lg:flex-nowrap mt-10 lg:mt-20 mb-8 sm:mb-10 lg:mb-12 justify-between">
           <div className="w-full lg:w-1/4 mb-0 sm:mb-6 lg:mb-0">
             <Link href="/">
               <Image
@@ -39,16 +39,26 @@ const Footer = () => {
                 className="w-[110px] sm:w-[160px]"
               />
             </Link>
+            <p className="font-light text-sm text-[#6B6B6B] my-3 sm:my-5">
+              At Zygobit, we don’t just keep up with innovation — we drive it.
+              Tech is in our DNA, and transformation is our constant.
+            </p>
+            <ul className="flex items-center gap-5">
+              <li><a href=""><Image width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6" src="/images/instagram.svg" alt="icon" /></a></li>
+              <li><a href=""><Image width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6" src="/images/facebook.svg" alt="icon" /></a></li>
+              <li><a href=""><Image width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6" src="/images/x.svg" alt="icon" /></a></li>
+              <li><a href=""><Image width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6" src="/images/linkedin.svg" alt="icon" /></a></li>
+            </ul>
           </div>
 
           {footerLinks.map((section) => (
-            <div key={section.title} className="w-full sm:w-1/4">
-              <h6 className="font-semibold text-sm mb-4">{section.title}</h6>
+            <div key={section.title} className="w-full sm:w-1/4 lg:pl-[90px]">
+              <h6 className="font-semibold text-sm mb-4 text-black">{section.title}</h6>
               <ul className="grid grid-cols-1 space-y-4">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
-                    target="_blank"
+                      target="_blank"
                       href={link.url}
                       className="text-sm text-secondaryText hover:text-white"
                     >
@@ -59,8 +69,8 @@ const Footer = () => {
               </ul>
             </div>
           ))}
-          <div className="w-full sm:w-1/4 lg:pl-10">
-            <h6 className="font-semibold text-sm mb-4">Quick Links</h6>
+          <div className="w-full sm:w-1/4 lg:pl-14">
+            <h6 className="font-semibold text-sm mb-4 text-black">Quick Links</h6>
             <ul className="grid grid-cols-1 space-y-4">
               <li>
                 <Link
@@ -88,8 +98,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full sm:w-1/4">
-            <h6 className="font-semibold text-sm mb-4">Contact Us</h6>
+          <div className="w-full sm:w-1/4 lg:pl-8">
+            <h6 className="font-semibold text-sm mb-4 text-black">Contact Us</h6>
             <ul className="grid grid-cols-1 space-y-4">
               <li>
                 <Link
@@ -121,8 +131,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="w-full pt-4 pb-8 flex flex-wrap gap-y-5 sm:flex-nowrap border-t border-[#2D2E34] sm:border-none justify-between items-center">
-          <p className="text-white w-full sm:w-auto text-secondaryText text-xs">
+        <div className="w-full pt-4 pb-8 flex flex-wrap gap-y-5 sm:flex-nowrap border-t border-[#09090B1A] justify-between items-center">
+          <p className=" w-full sm:w-auto text-secondaryText text-xs">
             © 2025 Zygobit All rights reserved.
           </p>
           <ul className="w-full sm:w-auto flex gap-5 items-center">
