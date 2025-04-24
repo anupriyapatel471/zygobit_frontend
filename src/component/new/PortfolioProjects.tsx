@@ -7,6 +7,8 @@ import { generateClient } from "aws-amplify/data";
 import useAmplifyConfig from "@/hooks/useAmplify";
 import Loader from "../common/Loader/Loader";
 import Link from "next/link";
+import Image from "next/image";
+import { ChevronRight } from "lucide-react";
 
 const client = generateClient();
 
@@ -76,60 +78,140 @@ const PortfolioProjects = () => {
             </TabsList>
             {categories.map((category) => (
               <TabsContent key={category} value={category}>
-                <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10">
+                <div className="w-full grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-10">
                   {data
                     .filter(
                       (project) =>
                         (project.category || "Uncategorized") === category
                     )
-                    .map((project) => (
-                      <Link
-                        key={project.id}
-                        href={`/portfolio/${project.slug}`}
-                        className="cursor-pointer"
-                      >
-                        <div className="w-full flex items-center  p-4 relative bg-white z-10 rounded-lg sm:rounded-none overflow-hidden">
-                          <div className="flex justify-between flex-col">
-                            <div className="text-black font-bold">
-                              {project.projectName}
-                              {/* <img src="/images/her_calendar_logo.svg" alt="" />
-                            </div>
-                            <div className="inline-block sm:hidden w-full">
-                              <img
-                                className="object-contain"
-                                src="/images/her_calendar.png"
-                                alt=""
-                              /> */}
-                            </div>
-                            <p className="line-clamp-4 sm:line-clamp-5 text-sm text-black mt-5 mb-6 sm:mb-16 sm:max-w-[400px] lg:max-w-[290px] ">
-                              {project.description}
-                            </p>
-                            <div className=" flex font-bold text-sm text-black gap-2 items-center">
-                              {(project.technologyImages as string[]).map(
-                                (imageUrl, index) => (
-                                  <img
-                                    key={index}
-                                    src={imageUrl}
-                                    alt="technology image"
-                                    className="w-6 h-6 rounded-full"
-                                  />
-                                )
-                              )}
-                            </div>
-                          </div>
-                          <div className="hidden sm:inline w-[325px] sm:h-[267px] ml-auto lg:ml-0">
-                            {project.mobileImage && (
-                              <img
-                                className="object-contain"
-                                src={project.mobileImage}
-                                alt=""
-                              />
+                    .map((project, index) => {
+                      const isEven = index % 2 === 1; // 0-based index
+                      return (
+                        <Link
+                          key={project.id}
+                          href={`/portfolio/${project.slug}`}
+                          className="cursor-pointer"
+                        >
+                          <div className="w-full flex group justify-between items-center gap-10 p-10 relative bg-white z-10 rounded-2xl overflow-hidden">
+                            {isEven ? (
+                              <>
+                                {/* 45% FIRST */}
+                                <div className="w-[45%] flex justify-between items-start flex-col gap-[126px]">
+                                  <div>
+                                    <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
+                                      {project.projectName}
+                                    </div>
+                                    <p className="line-clamp-4 sm:line-clamp-5 text-sm sm:text-base lg:text-lg text-black mt-3.5">
+                                      {project.description}
+                                    </p>
+                                    <div className="mt-6 flex gap-5 items-center">
+                                      <div className="w-fit flex flex-col">
+                                        <b className="text-3xl text-black">
+                                          2M+
+                                        </b>
+                                        <span className="font-light text-lg text-black">
+                                          App downloads
+                                        </span>
+                                      </div>
+                                      <div className="w-[1px] h-20 bg-black"></div>
+                                      <div className="w-fit flex flex-col">
+                                        <b className="text-3xl text-black">
+                                          500k
+                                        </b>
+                                        <span className="font-light text-lg text-black">
+                                          New users acquired
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <button className="w-fit btn-primary text-white font-normal group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
+                                    View Case Study
+                                    <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                                  </button>
+                                </div>
+
+                                {/* 55% SECOND */}
+                                <div className="w-[55%] relative">
+                                  <div className="relative w-full h-[500px]">
+                                    <Image
+                                      fill
+                                      src="/images/her_cal.png"
+                                      alt="image"
+                                    />
+                                    <div className="w-[465px] h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                      {project.mobileImage && (
+                                        <img
+                                          className="w-full h-full object-contain"
+                                          src={project.mobileImage}
+                                          alt=""
+                                        />
+                                      )}
+                                    </div>
+                                  </div>
+                                </div>
+                              </>
+                            ) : (
+                              <>
+                                {/* 55% FIRST */}
+                                <div className="w-[55%] relative">
+                                  <div className="relative w-full h-[500px]">
+                                    <Image
+                                      fill
+                                      src="/images/her_cal.png"
+                                      alt="image"
+                                    />
+                                    <div className="w-[465px] h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                      {project.mobileImage && (
+                                        <img
+                                          className="w-full h-full object-contain"
+                                          src={project.mobileImage}
+                                          alt=""
+                                        />
+                                      )}
+                                    </div>
+                                  </div>
+                                </div>
+
+                                {/* 45% SECOND */}
+                                <div className="w-[45%] flex justify-between items-start flex-col gap-[126px]">
+                                  <div>
+                                    <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
+                                      {project.projectName}
+                                    </div>
+                                    <p className="line-clamp-4 sm:line-clamp-5 text-sm sm:text-base lg:text-lg text-black mt-3.5">
+                                      {project.description}
+                                    </p>
+                                    <div className="mt-6 flex gap-5 items-center">
+                                      <div className="w-fit flex flex-col">
+                                        <b className="text-3xl text-black">
+                                          2M+
+                                        </b>
+                                        <span className="font-light text-lg text-black">
+                                          App downloads
+                                        </span>
+                                      </div>
+                                      <div className="w-[1px] h-20 bg-black"></div>
+                                      <div className="w-fit flex flex-col">
+                                        <b className="text-3xl text-black">
+                                          500k
+                                        </b>
+                                        <span className="font-light text-lg text-black">
+                                          New users acquired
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <button className="w-fit btn-primary text-white font-normal group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
+                                    View Case Study
+                                    <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                                  </button>
+                                </div>
+                              </>
                             )}
                           </div>
-                          <div className="w-[150px]  h-[150px] sm:w-[425px] sm:h-[425px] bg-[#F15722] rounded-full absolute -bottom-20 sm:top-1/2 sm:-translate-y-1/2 -z-10 -right-24 sm:-right-40"></div>
-                        </div>
-                      </Link>
-                    ))}
+                        </Link>
+                      );
+                    })}
                 </div>
               </TabsContent>
             ))}

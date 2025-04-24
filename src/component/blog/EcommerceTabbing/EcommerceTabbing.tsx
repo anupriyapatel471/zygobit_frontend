@@ -14,7 +14,7 @@ interface TabItem {
 }
 
 export default function EcommerceTabbing() {
-  const { blogs , loading } = useBlog();
+  const { blogs, loading } = useBlog();
 
   const [tabs, setTabs] = useState<TabItem[]>([]);
   const [selectedTab, setSelectedTab] = useState<TabItem | null>(null);
@@ -38,52 +38,52 @@ export default function EcommerceTabbing() {
 
   return (
     <>
-      { loading ? <BlogGridSkeleton/> : selectedTab && (
-        <div className="container remove-bg">
-          <nav className="nav">
-            <ul className="tabsContainer">
-              {tabs.map((item) => (
-                <motion.li
-                  key={item.label}
-                  initial={false}
-                  animate={{
-                    backgroundColor:
-                      item.label === selectedTab.label ? "#E4550B" : "#eee0",
-                  }}
-                  className="tab"
-                  onClick={() => setSelectedTab(item)}
+      {loading ? (
+        <BlogGridSkeleton />
+      ) : (
+        selectedTab && (
+          <div className="container remove-bg">
+            <nav className="nav">
+              <ul className="tabsContainer gap-8">
+                {tabs.map((item) => (
+                  <motion.li
+                    key={item.label}
+                    initial={false}
+                    className={`tab ${item.label === selectedTab.label ? "active" : ""}`}
+                    onClick={() => setSelectedTab(item)}
+                    layout
+                  >
+                    {`${item.icon} ${item.label}`}
+                    {item.label === selectedTab.label ? (
+                      <motion.div
+                        className="underline"
+                        layoutId="underline"
+                        id="underline"
+                      />
+                    ) : null}
+                  </motion.li>
+                ))}
+              </ul>
+            </nav>
+            <main className="iconContainer">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={selectedTab ? selectedTab.label : "empty"}
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -10, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  {`${item.icon} ${item.label}`}
-                  {item.label === selectedTab.label ? (
-                    <motion.div
-                      className="underline"
-                      layoutId="underline"
-                      id="underline"
-                    />
-                  ) : null}
-                </motion.li>
-              ))}
-            </ul>
-          </nav>
-          <main className="iconContainer">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={selectedTab ? selectedTab.label : "empty"}
-                initial={{ y: 10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -10, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                {selectedTab ? selectedTab.icon : "😋"}
-                <div className="w-full   mb-0 sm:mb-12 lg:mb-0">
-                  <MovingBorders selectedCategory={selectedTab.label} />
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </main>
-        </div>
+                  {selectedTab ? selectedTab.icon : "😋"}
+                  <div className="w-full mb-0 sm:mb-12 lg:mb-0">
+                    <MovingBorders selectedCategory={selectedTab.label} />
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </main>
+          </div>
+        )
       )}
     </>
   );
 }
-

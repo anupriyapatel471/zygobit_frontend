@@ -8,6 +8,9 @@ import MagicCard from "@/components/ui/magic-card";
 import arrowRight from "../../../public/images/arrow_right.svg";
 import GlobeDemo from "../common/Cta/Globe/Globe";
 import VortexBg from "../common/Cta/Vortexbg/Vortexbg";
+import ContactForm from "../common/ContactForm/ContactForm";
+import { Button } from "@/components/ui/button";
+import { DotsVerticalIcon } from "@radix-ui/react-icons";
 
 interface ProjectData {
   projectName: ReactNode;
@@ -28,101 +31,82 @@ interface ProjectData {
 const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
   return (
     <>
-      <section className="w-full relative">
-        <div className="w-full h-[300px] sm:h-[550px] lg:h-[900px]">
-          <Image
-            className="w-full"
-            src="/images/case_study_banner.png"
-            fill
-            alt="case_study_banner"
-          />
-        </div>
-        <div className="container remove-bg">
-          <div className="w-full max-w-[1248px] mx-auto px-4 absolute top-20 sm:top-28 left-1/2 -translate-x-1/2  py-5 lg:py-14">
-            <div className="w-full flex flex-wrap lg:flex-nowrap justify-between items-center">
-              <div className="w-full sm:w-full lg:w-[60%]">
-                <div className="w-auto max-w-2xl">
-                  {/* <ul className="flex items-center flex-wrap sm:flex-nowrap gap-2.5 text-white mb-5 lg:mb-40">
-                    <li className="text-sm sm:text-base cursor-pointer flex gap-1.5 items-center">
-                      Portfolio <ChevronRight className="text-sm" />{" "}
-                    </li>
-                    <li className="text-sm sm:text-base cursor-pointer flex gap-1.5 items-center">
-                      Mobile Application <ChevronRight className="text-sm" />{" "}
-                    </li>
-                    <li className="text-sm sm:text-base cursor-pointer flex gap-1.5 items-center text-orange-600">
-                      Her Calendar{" "}
-                    </li>
-                  </ul> */}
-                  <h1 className="font-bold text-2xl sm:text-3xl lg:text-4xl text-shadow-2xl  text-gradiant-custom">
-                    {projectData.title}
-                  </h1>
-                  <p className="text-sm sm:text-base mt-2.5 line-clamp-3">
-                    {projectData.description}
-                  </p>
-                </div>
-                <div className="w-auto mt-6 sm:mt-16">
-                  <span className="block sm:font-bold text-lg mb-7"></span>
-                </div>
-              </div>
-              <div className="mt-6 w-full sm:w-full lg:w-[44%] lg:mt-5 hidden lg:inline text-right">
-                {projectData.mobileImage && (
+      <section className="w-full rounded-bl-[100px] relative overflow-hidden backdrop-blur-xl bg-[url('/images/pink_bg.png')]  bg-cover bg-center mt-20">
+        <div className="container">
+          <div className="w-full flex justify-between ">
+            <div className="w-[520px] flex flex-col gap-10 py-6">
+              <Button className="w-12 h-12 rounded-full bg-white hover:bg-white">
+                <Image
+                  width={18}
+                  height={18}
+                  className="w-4 h-4"
+                  src="/images/left_arrow.svg"
+                  alt="icon"
+                />
+              </Button>
+              <div className="w-full flex items-center gap-7">
+                <div className="w-24 h-24 bg-white shadow-[0_20px_48px_0_#EB00293D] rounded-2xl p-5">
                   <Image
-                    className="ml-auto"
-                    src={projectData.mobileImage}
-                    alt="case_banner"
-                    width={500}
-                    height={500}
+                    width={58}
+                    height={64}
+                    className="w-16 h-16 object-containF"
+                    src="/images/her_new.svg"
+                    alt="icon"
                   />
-                )}
+                </div>
+                <h2 className="font-bold text-[45px] text-[#D95A6C]">
+                  Her Calendar
+                </h2>
               </div>
+              <p className="text-sm text-black sm:text-base slg:text-lg">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
             </div>
-          </div>
-          <div className="w-full hidden sm:inline absolute max-w-[1248px] mx-auto px-4 -bottom-[170px] left-1/2 -translate-x-1/2 rounded-lg">
-            <div className="w-full sm:border border-[#09090B33] overflow-hidden rounded-lg sm:bg-[#fafafa12] px-4 lg:px-10  ">
-              <div className="w-full  z-[1111]  max-w-sm mx-auto rounded-lg">
-                <RippleBg numCircles={10} />
-              </div>
-              <div className=" w-full px-8 lg:px-14 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div className=" grid grid-cols-1 sm:grid-cols-3  w-full flex-col gap-4  lg:flex-row">
-                  <MagicCard
-                    data-aos="fade-right"
-                    className="bg-primaryBg p-4 lg:py-6 lg:px-6 border border-[#FFFFFF26] rounded-lg"
-                  >
-                    <div className="w-full block pb-4 border-b-2 border-[#EA580C]">
-                      <h3 className="w-full order-2 sm:order-none   text-xl lg:text-2xl font-semibold tracking-tighter">
-                        Client Location
-                      </h3>
-                    </div>
-                    <p className="text-sm sm:text-base mt-3">
-                      {projectData.clientLocation}
-                    </p>
-                  </MagicCard>
-                  <MagicCard
-                    data-aos="fade-right"
-                    className="bg-primaryBg p-4 lg:py-6 lg:px-6 border border-[#FFFFFF26] rounded-lg"
-                  >
-                    <div className="w-full block pb-4 border-b-2 border-[#EA580C]">
-                      <h3 className="w-full order-2 sm:order-none  text-xl lg:text-2xl font-semibold tracking-tighter">
-                        Development Time
-                      </h3>
-                    </div>
-                    <p className="text-sm sm:text-base mt-3">
-                      {projectData.developmentTime}
-                    </p>
-                  </MagicCard>
-                  <MagicCard
-                    data-aos="fade-right"
-                    className="bg-primaryBg p-4 lg:py-6 lg:px-6 border border-[#FFFFFF26] rounded-lg"
-                  >
-                    <div className="w-full block pb-4 border-b-2 border-[#EA580C]">
-                      <h3 className="w-full order-2 sm:order-none   text-xl lg:text-2xl font-semibold tracking-tighter">
-                        Target Users
-                      </h3>
-                    </div>
-                    <p className="text-sm sm:text-base mt-3">
-                      {projectData.targetUsers}
-                    </p>
-                  </MagicCard>
+            <div className="w-[600px] relative -right-20">
+              <div className="w-full grid grid-cols-2 h-fit gap-10 ">
+                <div className="w-full flex flex-col gap-8">
+                  <Image
+                    width={264}
+                    height={570}
+                    className="w-full h-fit rounded-b-3xl object-cover"
+                    src="/images/phone_one.png"
+                    alt="mobile image"
+                  />
+                  <Image
+                    width={264}
+                    height={570}
+                    className="w-full h-fit rounded-3xl object-cover"
+                    src="/images/phone_three.png"
+                    alt="mobile image"
+                  />
+                </div>
+                <div className="w-full flex flex-col gap-8">
+                  <Image
+                    width={264}
+                    height={570}
+                    className="w-full h-fit mt-14 rounded-3xl object-cover"
+                    src="/images/phone_two.png"
+                    alt="mobile image"
+                  />
+                  <Image
+                    width={264}
+                    height={570}
+                    className="w-full h-fit rounded-t-3xl object-cover"
+                    src="/images/phone_four.png"
+                    alt="mobile image"
+                  />
+                </div>
+                <div className="w-full absolute bottom-0 -left-[320px]">
+                  <Image
+                    width={264}
+                    height={570}
+                    className="w-[280px] h-[500px] rounded-t-3xl object-cover"
+                    src="/images/phone_five.png"
+                    alt="mobile image"
+                  />
                 </div>
               </div>
             </div>
@@ -320,6 +304,8 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
           </div>
         </div>
       </section>
+
+      <ContactForm />
     </>
   );
 };

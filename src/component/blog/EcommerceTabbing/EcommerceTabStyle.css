@@ -88,10 +88,17 @@
     align-items: center;
     min-width: 0;
     user-select: none;
-    color: #fff;  
+    border: 1px solid #6B6B6B;
+    color: #6B6B6B;  
     flex: auto;
     min-width: 245px;
 }
+
+.tab.active {
+    background-color: transparent !important;
+    border:1px solid #FFFFFF !important;
+    color: #FFFFFF !important;
+  }
 
 .underline {
     position: absolute;

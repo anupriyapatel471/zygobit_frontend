@@ -160,7 +160,7 @@ const Home = async () => {
                   </p>
                   <div>
                     <Link href={"/contact"}>
-                      <Button className="  bg-white text-themetext font-normal  group  duration-500 transition-all">
+                      <Button className="  bg-white hover:bg-white text-themetext font-normal  group  duration-500 transition-all">
                         Our Engagement Model
                         <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                       </Button>

@@ -10,7 +10,7 @@ const Blog = () => {
       <section className="w-full mt-5 sm:mt-0  mb-12 sm:mb-16 overflow-hidden">
         <div className="container remove-bg">
           <div data-aos="fade-left" className="w-full  sm:text-center">
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradient-custom">
+            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom-second">
               Featured Blogs
             </h2>
             <p className="font-light sm:font-medium max-w-6xl mx-auto text-sm sm:text-lg lg:text-xl my-2 sm:my-3">

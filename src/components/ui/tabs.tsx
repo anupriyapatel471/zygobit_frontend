@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import * as TabsPrimitive from "@radix-ui/react-tabs"
+import * as React from "react";
+import * as TabsPrimitive from "@radix-ui/react-tabs";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
-const Tabs = TabsPrimitive.Root
+const Tabs = TabsPrimitive.Root;
 
 const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>,
@@ -19,8 +19,8 @@ const TabsList = React.forwardRef<
     )}
     {...props}
   />
-))
-TabsList.displayName = TabsPrimitive.List.displayName
+));
+TabsList.displayName = TabsPrimitive.List.displayName;
 
 const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Trigger>,
@@ -29,13 +29,13 @@ const TabsTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      "lg:w-1/5 inline-flex items-center h-10 sm:h-12 justify-cente bg-[#d6cdcd21] sm:bg-transparent whitespace-nowrap rounded-sm px-3 py-1.5 text-sm sm:text-base sm:font-semibold  transition-all focus-visible:outline-none  disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-gradient-to-tr data-[state=active]:to-[#843207] data-[state=active]:from-[#EA580C] data-[state=active]:text-white",
+      "lg:w-1/5 inline-flex items-center h-10 sm:h-12 border border-[#6B6B6B] text-[#6B6B6B] rounded-lg justify-cente bg-[#d6cdcd21] sm:bg-transparent whitespace-nowrap  px-3 py-1.5 text-sm sm:text-base sm:font-semibold  transition-all focus-visible:outline-none  disabled:pointer-events-none disabled:opacity-50 data-[state=active]:border-white data-[state=active]:text-white data-[state=active]:bg-transparent",
       className
     )}
     {...props}
   />
-))
-TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
+));
+TabsTrigger.displayName = TabsPrimitive.Trigger.displayName;
 
 const TabsContent = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Content>,
@@ -49,7 +49,7 @@ const TabsContent = React.forwardRef<
     )}
     {...props}
   />
-))
-TabsContent.displayName = TabsPrimitive.Content.displayName
+));
+TabsContent.displayName = TabsPrimitive.Content.displayName;
 
-export { Tabs, TabsList, TabsTrigger, TabsContent }
+export { Tabs, TabsList, TabsTrigger, TabsContent };

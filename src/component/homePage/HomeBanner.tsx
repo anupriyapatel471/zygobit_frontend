@@ -186,7 +186,7 @@ const HomeBanner = () => {
                     <img src="/images/residence.png" alt="" />
                   </li>
                 </ul>
-                <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                <button className=" btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
                   Build Your Success Story
                   <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                 </button>

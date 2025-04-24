@@ -7,6 +7,9 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../../../public/images/Logo.png";
 import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { ChatBotBtn } from "@/component/new/ChatBot";
+import { ContactBtn } from "@/component/new/ContactNewForm";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,43 +56,45 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="hidden lg:flex xl:gap-x-5">
-            <NavigationMenuDemo />
-          </div>
+          <div className="flex items-center gap-10">
+            <div className="hidden lg:flex xl:gap-x-5">
+              <NavigationMenuDemo />
+            </div>
 
-          <div className="flex lg:hidden">
-            <button
-              onClick={toggleMenu}
-              type="button"
-              className="open-btn-mobile -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            >
-              <svg
-                className="h-10 w-10 rounded-[5px] p-1 "
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
+            <div className="flex lg:hidden">
+              <button
+                onClick={toggleMenu}
+                type="button"
+                className="open-btn-mobile -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
               >
-                <path
-                  className="text-orange-600"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-            </button>
-          </div>
+                <svg
+                  className="h-10 w-10 rounded-[5px] p-1 "
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    className="text-orange-600"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </button>
+            </div>
 
-          <div className="hidden lg:flex xl:justify-end gap-4">
-            {/* <button className="btn-ghost h-9 text-sm">Sign in</button> */}
-            <Link
-              href="/contact"
-              className="btn-primary relative overflow-hidden hover:bg-[#ea580cd1] h-9 text-sm bg-themebg text-white"
-            >
-              Get in Touch
-              <span className="shine"></span>
-            </Link>
+            <div className="hidden lg:flex xl:justify-end gap-4">
+              {/* <button className="btn-ghost h-9 text-sm">Sign in</button> */}
+              <Link
+                href="/contact"
+                className="btn-primary relative overflow-hidden hover:bg-[#ea580cd1] h-9 text-sm bg-themebg text-white"
+              >
+                Get in Touch
+                <span className="shine"></span>
+              </Link>
+            </div>
           </div>
         </nav>
 
@@ -357,17 +362,12 @@ const Header = () => {
       </div>
 
       <div>
-        <div className="wrapper z-20">
-          <div className="">
-            <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-              <div className="coccoc-alo-ph-circle"></div>
-              <div className="coccoc-alo-ph-circle-fill"></div>
-              <div className="coccoc-alo-ph-img-circle"></div>
-            </div>
-          </div>
+        <div className=" fixed bottom-32 left-8 z-50">
+          <ContactBtn />
         </div>
 
-        <a href="" className="btn-whatsapp-pulse relative z-20">
+        {/* whats app */}
+        <a href="" className="btn-whatsapp-pulse relative z-50">
           <Image
             width={25}
             height={25}
@@ -376,6 +376,7 @@ const Header = () => {
             alt="icon"
           />
         </a>
+        <ChatBotBtn />
       </div>
     </>
   );

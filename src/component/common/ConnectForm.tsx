@@ -174,7 +174,7 @@ const ConnectForm = () => {
       className="w-auto lg:px-0"
       noValidate
     >
-      <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom">
+      <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl  text-gradiant-custom-second">
         Let’s connect
       </h2>
       <p className="text-sm sm:text-lg tracking-tighter pt-2 pb-5 sm:pb-7">
