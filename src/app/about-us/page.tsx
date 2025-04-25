@@ -17,6 +17,9 @@ import Loader from "@/component/common/Loader/Loader";
 import { Suspense } from "react";
 import { AboutBgParticles } from "@/component/about/AboutBgParticles/AboutBgParticles";
 import { EcommerceShineCards } from "@/component/sevices/Ecommerce/EcommerceShineCards/EcomoerceShineCards";
+import AboutCta from "@/component/new/AboutCta";
+import { ChevronRight } from "lucide-react";
+import AboutWeb from "@/component/new/AboutWeb";
 
 const WeDeliver = dynamic(
   () => import("@/component/common/WeDeliver/WeDeliver"),
@@ -163,72 +166,40 @@ const About = () => {
       <AOSInitializer />
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
 
-      <Suspense fallback={<Loader />}>
+      {/* <Suspense fallback={<Loader />}>
         <WeDeliver />
-      </Suspense>
+      </Suspense> */}
 
-      <div className="w-full relative">
-        <AboutBgParticles />
-        <div className="w-full mb-14 sm:mb-0 max-w-[1248px] mx-auto px-4 relative sm:absolute sm:top-10 sm:left-1/2 sm:-translate-x-1/2 inline-block   rounded-lg">
-          <div className="w-full border border-[#09090B33] rounded-lg bg-[#fafafa12] ">
-            <div className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  max-w-sm mx-auto rounded-lg">
-              <RippleBg numCircles={8} />
+      <AboutCta />
+
+      <section className="w-full relative">
+        <div className="container">
+          <div className="w-full relative flex gap-[215px] justify-between items-center">
+            <div className="font-bold text-[150px] text-themetext absolute top-10 left-[42%] -translate-x-1/2">
+              2025
             </div>
-            <div className=" w-full py-4 sm:py-8 lg:py-16 px-4 lg:px-10">
-              <MagicCardDemo />
+            <div className="w-[433px]">
+              <Image
+                className="w-[433px] h-[372px] object-contain"
+                width={433}
+                height={372}
+                src="/images/team_work.png"
+                alt="team work image"
+              />
+            </div>
+            <div className="w-[548px]">
+              <p className="text-sm sm:text-base lg:text-lg text-white mt-8 relative z-10">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. 
+              </p>
             </div>
           </div>
         </div>
+      </section>
 
-        <section className="w-full  bg-gradient-custom pt-11 sm:pt-44 lg:pt-52 pb-12 lg:pb-14  overflow-hidden">
-          <div className="container remove-bg">
-            <div className="w-full mt-0 sm:mt-0 flex flex-wrap lg:flex-nowrap gap-5 lg:gap-0 items-center justify-between ">
-              <div
-                className="w-full sm:w-auto sm:max-w-3xl pr-4 lg:pr-0"
-                data-aos="fade-up"
-              >
-                <span className="mb-2 block font-semibold text-base">
-                  Trusted Across the Galaxy
-                </span>
-                <p className="sm:font-semibold text-base sm:text-xl lg:text-2xl tracking-tighter">
-                  We&apos;ve partnered with forward-thinking brands across
-                  multiple industries, delivering innovative solutions through a
-                  diverse range of services.
-                </p>
-              </div>
-              <div
-                data-aos="fade-up"
-                className="w-full lg:w-auto border-t  lg:border-t-0 lg:border-l  border-white mt-0 sm:mt-0 pt-6 lg:py-12  lg:px-12"
-              >
-                <h3 className="text-lg sm:text-xl lg:text-2xl uppercase lg:text-center font-semibold max-w-80">
-                  Breaking Barriers Since Day One
-                </h3>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <Suspense fallback={<Loader />}>
-        <section className="w-full relative py-12 lg:py-20">
-          <div className="container remove-bg">
-            <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex items-center flex-wrap lg:flex-nowrap  gap-5 sm:gap-8">
-              <div className="w-full lg:w-1/2">
-                <BoxReveals data={boxData1} />
-              </div>
-              <div className="hidden sm:inline w-full lg:w-1/2">
-                <Image
-                  className="w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
-                  src={Together}
-                  alt="Together"
-                  width={590}
-                  height={753}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-      </Suspense>
+      <AboutWeb />
 
       <GridBoxes
         GridBoxesHeading={GridBoxesHeading}
@@ -236,25 +207,7 @@ const About = () => {
         cards={cards}
       />
 
-      {/* web app sales */}
-      <section className="w-full relative pb-12 pt-5 sm:py-12 lg:py-20">
-        <div className="container remove-bg">
-          <div className="w-full p-4 sm:p-6 bg-white/5 rounded-2xl flex items-center flex-wrap lg:flex-nowrap  gap-5 sm:gap-8">
-            <div className="hidden sm:inline w-full lg:w-1/2">
-              <Image
-                className=" w-full h-[350px] sm:h-[500px] lg:h-full object-cover rounded-xl"
-                src={meeting}
-                alt="meating"
-                width={590}
-                height={753}
-              />
-            </div>
-            <div className="w-full lg:w-1/2 lg:pl-10">
-              <BoxReveals data={boxData2} />
-            </div>
-          </div>
-        </div>
-      </section>
+      <AboutWeb />
 
       <Suspense fallback={<Loader />}>
         <DeliveringTailored

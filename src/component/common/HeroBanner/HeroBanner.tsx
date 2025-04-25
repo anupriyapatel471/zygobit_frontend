@@ -21,13 +21,13 @@ const HeroBanner = ({
           <div className=" w-full text-center relative py-10 sm:py-16  lg:py-24">
             <div className="w-full">
               <div className="w-full">
-                <h1 className="font-bold relative z-10 text-3xl sm:text-3xl lg:text-[38px] lg:leading-[48px] text-shadow-2xl  text-gradiant-custom">
+                <h1 className="font-bold relative z-10 text-2xl sm:text-3xl lg:text-5xl lg:leading-[48px]">
                   {heroHeading}
                 </h1>
-                <p className="text-sm sm:text-base relative z-10 max-w-2xl mx-auto sm:font-semibold mt-5">
+                <p className="text-sm sm:text-base relative z-10 max-w-5xl mx-auto sm:font-semibold mt-7">
                   {heroParagraph}
                 </p>
-                <div className="lg:max-w-sm mx-auto relative z-10">
+                <div className="lg:max-w-fit mx-auto relative z-10">
                   <Link href="/contact">
                     <button className="lg:w-full mt-9  btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
                       Book your free consultation

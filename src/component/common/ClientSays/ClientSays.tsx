@@ -11,7 +11,7 @@ const ClientSays = ({
 }) => {
   return (
     <>
-      <section className="w-full inline-block py-12  lg:py-14 overflow-hidden bg-[url('/images/client_bg.png')] bg-cover bg-center">
+      <section className="w-full align-top inline-block py-12  lg:py-14 overflow-hidden bg-[url('/images/client_bg.png')] bg-cover bg-center">
         <div className="container remove-bg">
           <div className="w-full flex items-center justify-center mb-10">
             <div className="w-full  text-center sm:text-center">
