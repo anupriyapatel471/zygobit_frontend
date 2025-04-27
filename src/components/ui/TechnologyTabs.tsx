@@ -4,6 +4,7 @@ import * as React from "react"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
 
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 const Tabs = TabsPrimitive.Root
 
@@ -25,17 +26,27 @@ TabsList.displayName = TabsPrimitive.List.displayName
 const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
->(({ className, ...props }, ref) => (
+>(({ className, children, ...props }, ref) => (
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      "lg:w-full inline-flex text-center rounded-lg items-center h-10 sm:h-14 lg:h-[75px] text-[#6B6B6B] justify-center border border-[#6B6B6B] bg-[#d6cdcd21] sm:bg-transparent whitespace-nowrap  px-3 py-1.5 text-sm sm:text-base sm:font-semibold  transition-all focus-visible:outline-none  disabled:pointer-events-none disabled:opacity-100 data-[state=active]:bg-[#EA580C] data-[state=active]:border-none  data-[state=active]:text-white",
-      className 
+      "group relative lg:w-full inline-flex gap-5 text-center rounded-lg items-center h-10 sm:h-14 lg:h-[75px] text-[#6B6B6B] justify-center bg-[#d6cdcd21] sm:bg-[#F4F4F4] whitespace-nowrap px-3 py-1.5 text-sm sm:text-base sm:font-semibold transition-all focus-visible:outline-none disabled:pointer-events-none disabled:opacity-100 data-[state=active]:bg-[#EA580C] data-[state=active]:border-none data-[state=active]:text-white",
+      className
     )}
     {...props}
-  />
-))
-TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
+  >
+    {children}
+    <Image 
+      width={24}
+      height={24}
+      src="/images/white_right.svg" 
+      alt="Arrow"
+      className="w-6 h-6 invisible opacity-0 brightness-0 invert group-data-[state=active]:visible group-data-[state=active]:opacity-100"
+    />
+  </TabsPrimitive.Trigger>
+));
+
+
 
 const TabsContent = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Content>,
@@ -44,7 +55,7 @@ const TabsContent = React.forwardRef<
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
-      "mt-2 w-full lg:w-[calc(100%-240px)] ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+      "mt-0 w-full lg:w-[calc(100%-160px)] ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
       className
     )}
     {...props}

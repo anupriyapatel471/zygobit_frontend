@@ -21,21 +21,21 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3",
+        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-4 lg:gap-8",
         className
       )}
     >
       {items.map((item, idx) => (
         <div
           key={item?.link}
-          className="relative group  block sm:p-2 h-full w-full"
+          className="relative group  block sm:p-0 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-orange-900 block  rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-transparent block  rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -71,7 +71,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent  group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden group bg-[#09090B] hover:bg-white border border-[#404040]  relative z-20",
         className
       )}
     >
@@ -90,7 +90,7 @@ export const CardTitle = ({
 }) => {
   return (
     <h4
-      className={cn("text-zinc-100 font-bold tracking-wide lg:mt-4", className)}
+      className={cn("text-zinc-100 group-hover:text-black font-bold tracking-wide lg:mt-4", className)}
     >
       {children}
     </h4>
@@ -106,7 +106,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-4 lg:mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-4 lg:mt-8 text-zinc-400 group-hover:text-black tracking-wide leading-relaxed text-sm",
         className
       )}
     >

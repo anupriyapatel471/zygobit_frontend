@@ -3,6 +3,8 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
 interface ctaProp {
   content: string;
   Aurora: string;
@@ -12,36 +14,37 @@ interface ctaProp {
 const CtaSecond = ({ content, Aurora, vortex }: ctaProp) => {
   return (
     <>
-      <section className="w-full relative my-14 sm:my-16 overflow-hidden">
+      <section className="w-full relative my-12 sm:my-14 lg:my-32">
         <div className="container remove-bg">
-          <div className="inter-var py-0 w-full">
-            <div className="w-full pb-5 sm:pb-0 relative bg-orange-600  group/card justify-between items-center border-white/20  rounded-xl flex-wrap lg:flex-nowrap flex border-2  ">
-              <div
-                data-aos="fade-right"
-                className="w-full order-2 lg:order-none lg:max-w-2xl p-4 text-white  sm:p-5 lg:pr-0 lg:py-12 lg:pl-8"
-              >
-                <h2 className="text-2xl sm:text-[28px] lg:text-4xl  text-white font-bold">
-                  Shape the Future of Technology with Us
-                </h2>
-                <div className="sm:font-medium text-sm leading-6 sm:leading-normal sm:text-base lg:text-lg mt-2 mb-5">
-                  Shape the Future of Technology with Us Partner with our team
-                  for a free, no-obligation technical proposal tailored to your
-                  next enterprise custom project.
+          <div className="w-full relative">
+            <div className="w-full h-[475px] absolute top-1/2 -translate-y-1/2 left-0 -z-10">
+              <Image
+                className="w-full object-contain"
+                fill
+                src="/images/cta_new_bg.png"
+                alt="image"
+              />
+            </div>
+            <div className="inter-var py-0 w-full">
+              <div className=" w-full pb-0 sm:pb-0 relative  group/card justify-between items-center   rounded-xl flex-wrap lg:flex-nowrap flex  ">
+                <div className="w-full order-2 lg:order-none  p-3 sm:p-5 lg:pr-0 lg:py-12 lg:pl-8 text-center sm:text-left">
+                  <div className="inline text-2xl sm:text-4xl lg:text-5xl text-center sm:text-left text-white font-bold ">
+                    Shape the Future of Technology with Us
+                  </div>
+                  <p className="text-center sm:text-left sm:font-medium text-sm leading-6 sm:leading-normal sm:text-base lg:text-xl mt-2.5 mb-10 max-w-5xl">
+                    Shape the Future of Technology with Us Partner with our team
+                    for a free, no-obligation technical proposal tailored to
+                    your next enterprise custom project.
+                  </p>
+                  <div>
+                    <Link href={"/contact"}>
+                      <Button className="  bg-white hover:bg-white text-themetext font-normal  group  duration-500 transition-all">
+                        Our Engagement Model
+                        <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
-                <div>
-                  <Link href={"/contact"}>
-                    <button className=" btn-primary  text-themetext font-normal  group bg-white duration-500 transition-all">
-                      Talk to an Expert
-                      <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                    </button>
-                  </Link>
-                </div>
-              </div>
-              <div
-                // data-aos="fade-left"
-                className="hidden lg:inline order-1 lg:order-none w-auto mx-auto lg:mx-0"
-              >
-                <img src="/images/cta_circle.png" alt="" />
               </div>
             </div>
           </div>

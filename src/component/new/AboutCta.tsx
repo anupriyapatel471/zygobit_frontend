@@ -6,7 +6,7 @@ const AboutCta = () => {
   return (
     <>
       <section className="w-full relative my-12 sm:my-14 lg:my-20">
-        <div className="container">
+        <div className="container remove-bg">
           <div className="w-full bg-[#17181B] rounded-[40px] p-4 sm:p-5 lg:p-[60px] relative overflow-hidden">
             <div className="absolute bottom-0 left-20 z-10">
               <Image

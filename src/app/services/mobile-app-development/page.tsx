@@ -53,6 +53,8 @@ import { MobileTechnology } from "@/component/sevices/MobileAppDevelopment/Mobil
 import { Suspense } from "react";
 import Loader from "@/component/common/Loader/Loader";
 import Link from "next/link";
+import GridBoxes from "@/component/common/GridBoxes/GridBoxes";
+import StebTab from "@/component/new/Steptab";
 
 export const metadata: Metadata = {
   title: "Mobile App Development",
@@ -75,6 +77,10 @@ export const metadata: Metadata = {
 };
 
 const MobileAppDevelopment = () => {
+  const GridBoxesHeading = "Why Zygobit for Mobile Applications ?";
+  const GridBoxesDetail =
+    "Empowering businesses with intuitive, aesthetically pleasing, and user-friendly experiences. Our expert UI/UX designers leverage cutting-edge tools to craft seamless digital journeys that captivate and convert.";
+
   const heading = "Accelerate Your Business with Tailored Mobile App Solutions";
   const paragraph =
     "we specialize in crafting custom mobile applications that empower businesses to thrive in today’s digital-first world. Our innovative solutions are designed to align with your unique goals, helping you unlock new opportunities, engage your audience, and drive sustainable growth.";
@@ -187,26 +193,24 @@ const MobileAppDevelopment = () => {
         <WeDeliver />
       </Suspense>
 
-      <section className="w-full custom-apple-slider  bg-gradient-to-b from-orange-950  to-black py-12 sm:py-14 lg:py-20">
+      <section className="w-full custom-apple-slider  bg-white py-12 sm:py-14 lg:py-20">
         <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
-          <div className="w-full lg:w-[45%]">
+          <div className="w-full lg:w-[40%]">
             <BoostBussiness heading={heading} paragraph={paragraph} />
             <Link href="/contact">
-              <button className="mt-4 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+              <button className="mt-10 btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
                 Get Assistance{" "}
                 <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
               </button>
             </Link>
           </div>
-          <div className="w-full lg:w-[55%]">
+          <div className="w-full lg:w-[60%]">
             <div className="w-full">
               <AppleCardsCarousel />
             </div>
           </div>
         </div>
       </section>
-
-      <CtaSecond content={""} Aurora={""} vortex={""} />
 
       <section className="w-full lg:mt-10 inline-block">
         <div className="container remove-bg">
@@ -232,6 +236,8 @@ const MobileAppDevelopment = () => {
           </div>
         </div>
       </section>
+
+      <CtaSecond content={""} Aurora={""} vortex={""} />
 
       <section className="w-full py-12 sm:py-14 lg:py-20">
         <div className="container remove-bg">
@@ -261,80 +267,17 @@ const MobileAppDevelopment = () => {
         </div>
       </section>
 
-      <section className="w-full">
-        <div className="container remove-bg">
-          <div className="w-full  sm:text-center mb-5 sm:mb-9">
-            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom">
-              Transforming Ideas into Scalable, High-Performance Applications
-            </h2>
-            <p className="sm:font-medium text-sm sm:text-lg lg:text-xl mx-auto mt-2">
-              We offer end-to-end custom mobile app development services to help
-              businesses innovate and succeed in the digital era. Our structured
-              process ensures the creation of user-centric, high-quality
-              applications tailored to your unique needs.
-            </p>
-          </div>
-          <div className="w-full">
-            <SharedLayoutAnimation />
-          </div>
-        </div>
-      </section>
+      <StebTab />
 
-      <section className="w-full py-12 sm:py-14 lg:py-20 bg-black">
-        <div className="container remove-bg">
-          <div className="w-full  sm:text-center mb-8 sm:mb-12 lg:mb-12">
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gradiant-custom">
-              Why Zygobit for Mobile Apps ?
-            </h2>
-            <p className="sm:font-medium text-sm sm:text-lg lg:text-xl max-w-4xl mx-auto mt-2">
-              Partner with Zygobit for innovative, secure, and scalable mobile
-              app development solutions tailored to your unique business needs.
-            </p>
-          </div>
-          <div className="w-full ">
-            <MobileAppGrid cards={cards} />
-          </div>
-          <div className="w-full hidden  gap-4">
-            <div className="w-full relative">
-              <img
-                className="w-full h-[325px] object-cover rounded-lg"
-                src="/images/Proven_expertise.png"
-                alt=""
-              />
-              <div className="w-full h-full p-4 absolute bottom-0 left-0 bg-black/40 flex flex-col justify-end">
-                <h3 className="text-xl sm:text-3xl lg:text-[32px]">
-                  Proven Expertise
-                </h3>
-                <p className="text-sm mt-2">
-                  Years of experience delivering high-quality UI/UX designs that
-                  enhance user engagement and satisfaction.
-                </p>
-              </div>
-            </div>
-            <div className="w-full relative">
-              <img
-                className="w-full h-[325px] object-cover rounded-lg"
-                src="/images/Scalable_solution.png"
-                alt=""
-              />
-            </div>
-            <div className="w-full relative">
-              <img
-                className="w-full h-[325px] object-cover rounded-lg"
-                src="/images/User_centric.png"
-                alt=""
-              />
-            </div>
-            <div className="w-full relative">
-              <img
-                className="w-full h-[325px] object-cover rounded-lg"
-                src="/images/seamless_interaction.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <GridBoxes
+        GridBoxesHeading={GridBoxesHeading}
+        GridBoxesDetail={GridBoxesDetail}
+        cards={cards}
+      />
+
+      <Suspense fallback={<Loader />}>
+        <TechnologyStack />
+      </Suspense>
 
       <Suspense fallback={<Loader />}>
         <section className="w-full  py-10 sm:py-14  overflow-hidden">
@@ -364,10 +307,6 @@ const MobileAppDevelopment = () => {
         </section>
       </Suspense>
 
-      <Suspense fallback={<Loader />}>
-        <TechnologyStack />
-      </Suspense>
-
       <ClientSays
         clientHeading={clientHeading}
         clientSaysDetails={clientSaysDetails}
@@ -376,6 +315,7 @@ const MobileAppDevelopment = () => {
       <Suspense fallback={<Loader />}>
         <Blog />
       </Suspense>
+      
       <FaqSection faqData={faqMobileApp} />
 
       <ContactForm />

@@ -21,12 +21,12 @@ const DummyContent = () => {
         return (
           <div
             key={"dummy-content" + index}
-            className="border border-white rounded-lg bg-transparent relative"
+            className="border border-[#C4C4C4] rounded-lg bg-transparent relative"
           >
-            <h3 className="font-semibold text-2xl tracking-tighter">
+            <h3 className="font-semibold text-2xl tracking-tighter text-black">
               Power Management, Notification and Geofencing
             </h3>
-            <p className="text-base">
+            <p className="text-base text-black">
               Our mobile application development services optimize your
               app&apos;s effeciency with advanced power management timely
               notification, and precise geofencing features.

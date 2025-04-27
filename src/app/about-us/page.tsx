@@ -173,7 +173,7 @@ const About = () => {
       <AboutCta />
 
       <section className="w-full relative">
-        <div className="container">
+        <div className="container remove-bg">
           <div className="w-full relative flex gap-[215px] justify-between items-center">
             <div className="font-bold text-[150px] text-themetext absolute top-10 left-[42%] -translate-x-1/2">
               2025

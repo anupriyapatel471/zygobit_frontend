@@ -6,7 +6,7 @@ const AboutWeb = () => {
   return (
     <>
        <section className="w-full relative overflow-hidden py-12 sm:py-14 lg:py-20">
-        <div className="container">
+        <div className="container remove-bg">
           <div className="w-full max-w-[1248px] lg:px-4 mx-auto absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-10">
             <div className="w-3/5 mr-auto absolute top-1/2 -translate-y-1/2 lg:left-4 bg-[#1F1F21] rounded-2xl  p-10">
               <div className="absolute bottom-0 right-0 ">

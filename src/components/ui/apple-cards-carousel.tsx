@@ -122,7 +122,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                   },
                 }}
                 key={"card" + index}
-                className="last:pr-[1%] md:last:pr-[4%]  rounded-3xl"
+                className="last:pr-[1%] md:last:pr-[4%]  rounded-2xl"
               >
                 {item}
               </motion.div>
@@ -131,14 +131,14 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         </div>
         <div className="flex justify-end gap-5 mr-5 sm:mr-10 lg:mr-0 mt-9 lg:px-5 ">
           <button
-            className="relative z-40 w-10 h-10 sm:h-12 sm:w-12 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+            className="relative z-40 w-10 h-10 sm:h-12 sm:w-12 rounded-full bg-transparent border border-orange-600 flex items-center justify-center disabled:opacity-50"
             onClick={scrollLeft}
             disabled={!canScrollLeft}
           >
             <IconArrowNarrowLeft className="h-6 w-6 text-orange-600" />
           </button>
           <button
-            className="relative z-40 w-10 h-10 sm:h-12 sm:w-12 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+            className="relative z-40 w-10 h-10 sm:h-12 sm:w-12 rounded-full bg-transparent border border-orange-600 flex items-center justify-center disabled:opacity-50"
             onClick={scrollRight}
             disabled={!canScrollRight}
           >
@@ -218,13 +218,13 @@ export const Card = ({
               </button>
               <motion.p
                 layoutId={layout ? `category-${card.title}` : undefined}
-                className=" font-semibold text-2xl text-white"
+                className=" font-semibold text-2xl text-black"
               >
                 {card.category}
               </motion.p>
               <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
-                className="text-base text-white"
+                className="text-base text-black"
               >
                 {card.title}
               </motion.p>
@@ -236,24 +236,24 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="rounded-3xl bg-white bg-opacity-5  w-[18rem]  md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="rounded-2xl bg-white bg-opacity-5  w-[18rem]  md:w-80 xl:w-[330px] overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
         <div className="absolute hidden h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
-        <div className="w-full relative z-40 px-4 lg:px-6 py-4 sm:py-12 lg:py-10 border border-white/5 bg-white/5 text-left h-[275px] sm:h-auto lg:h-[349px] cursor-default">
+        <div className="w-full relative rounded-2xl z-40 p-4 2xl:p-5 border border-[#C4C4C4] bg-white/5 text-left h-[275px] sm:h-auto lg:h-[349px] cursor-default">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
-            className="font-semibold relative z-[1111] text-base sm:text-xl lg:text-2xl cursor-text tracking-tighter"
+            className="font-semibold relative z-[1111] text-base sm:text-lg cursor-text tracking-tighter text-black"
           >
             {card.category}
           </motion.p>
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="mt-3 lg:mt-6 text-white relative z-[1111] cursor-text text-sm sm:text-base"
+            className="mt-3 lg:mt-4 text-[#6B6B6B] relative z-[1111] cursor-text text-sm sm:text-base"
           >
             {card.title}
           </motion.p>
           {/* <EvervaultCards /> */}
-          <SliderHoverCards />
+          {/* <SliderHoverCards /> */}
         </div>
         <BlurImage
           src={card.src}

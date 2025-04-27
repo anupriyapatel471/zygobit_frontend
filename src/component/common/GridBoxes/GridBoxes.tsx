@@ -27,7 +27,7 @@ const GridBoxes = ({
             <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom-second">
               {GridBoxesHeading}
             </h2>
-            <p className="sm:font-medium text-sm sm:text-lg lg:text-xl max-w-5xl mx-auto mt-5">
+            <p className="sm:font-medium text-sm sm:text-lg lg:text-xl max-w-6xl mx-auto mt-5">
               {GridBoxesDetail}
             </p>
           </div>

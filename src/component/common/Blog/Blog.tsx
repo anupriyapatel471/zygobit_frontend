@@ -7,7 +7,7 @@ import Link from "next/link";
 const Blog = () => {
   return (
     <>
-      <section className="w-full mt-5 sm:mt-0  mb-12 sm:mb-16 overflow-hidden">
+      <section className="w-full py-12 sm:py-14 lg:py-20 overflow-hidden">
         <div className="container remove-bg">
           <div data-aos="fade-left" className="w-full  sm:text-center">
             <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom-second">
