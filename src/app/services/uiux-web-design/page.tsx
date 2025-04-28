@@ -64,6 +64,7 @@ import CtaSecond from "@/component/new/CtaSecond";
 import { Suspense } from "react";
 import Loader from "@/component/common/Loader/Loader";
 import Link from "next/link";
+import DeliveringTailored from "@/component/common/DeliveringTailored/DeliveringTailored";
 
 export const metadata: Metadata = {
   title: "UI UX Design",
@@ -85,6 +86,14 @@ export const metadata: Metadata = {
   },
 };
 const UiuxWebDesign = () => {
+  const clientHeading = "Hear It from Our Happy Clients!";
+  const clientSaysDetails =
+    "See how our custom app development services have transformed businesses and driven success for our happy clients";
+
+  const deliveringHeading = "Delivering Tailored Excellence";
+  const deliveringPara =
+    "At Zygobit, we turn your vision into reality with creative, innovative solutions that deliver quality and results.";
+
   const heading = "Craft Exceptional User Experiences with UI/UX Design";
   const paragraph =
     "We create visually stunning and intuitive UI/UX designs that enhance usability, engagement, and brand identity. Our expertise ensures a seamless digital experience tailored to your audience.";
@@ -191,18 +200,18 @@ const UiuxWebDesign = () => {
         <WeDeliver />
       </Suspense>
 
-      <section className="w-full custom-apple-slider  bg-gradient-to-b from-orange-950  to-black py-12 sm:py-14 lg:py-20">
+      <section className="w-full custom-apple-slider  bg-white py-12 sm:py-14 lg:py-20">
         <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
-          <div className="w-full lg:w-[45%]">
+          <div className="w-full lg:w-2/5">
             <BoostBussiness heading={heading} paragraph={paragraph} />
             <Link href="/contact">
-              <button className="mt-5 lg:mt-10 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+              <button className="mt-5 lg:mt-10 btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-600 duration-500 transition-all">
                 Get Assistance{" "}
                 <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
               </button>
             </Link>
           </div>
-          <div className="w-full lg:w-[55%]">
+          <div className="w-full lg:w-3/5">
             <div className="w-full">
               <AppleCardsCarousel />
             </div>
@@ -210,10 +219,10 @@ const UiuxWebDesign = () => {
         </div>
       </section>
 
-      <section data-aos="fade-up" className="w-full pt-10 sm:pt-16  relative">
+      <section data-aos="fade-up" className="w-full py-12 sm:py-14 lg:py-20  relative">
         <div className="container remove-bg">
           <div className="w-full sm:text-center mb-5 sm:mb-10">
-            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradient-custom">
+            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom-second">
               We Follow a Comprehensive UI UX Design Process
             </h2>
             <p className="sm:font-medium  text-sm sm:text-xl my-3">
@@ -342,25 +351,10 @@ const UiuxWebDesign = () => {
       </section>
 
       <Suspense fallback={<Loader />}>
-        <section className="w-full pt-12 sm:pt-14 lg:pt-16">
-          <div
-            className="w-full px-4 sm:px-0  sm:text-center"
-            data-aos="fade-right"
-          >
-            <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
-              Industries We Serve: Unmatched Experiences
-            </h2>
-            <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
-              Transforming Ideas into Exceptional User Experiences Across
-              Various Sectors
-            </p>
-          </div>
-          <div className="w-full relative  mt-8 sm:mt-12 mb-12 sm:mb-24 lg:mb-32">
-            <div className="hidden sm:inline pointer-events-none absolute z-[1] -top-8 sm:-top-12 rounded-[50%] right-0 w-full h-16 sm:h-20 lg:h-24 bg-[#09090B]"></div>
-            <UiuxSlider firstRow={uiuxSliderData} />
-            <div className="hidden sm:inline pointer-events-none absolute -bottom-8 sm:-bottom-12 rounded-[50%] right-0 w-full h-16 sm:h-20 lg:h-24 bg-[#09090B]"></div>
-          </div>
-        </section>
+        <DeliveringTailored
+          deliveringHeading={deliveringHeading}
+          deliveringPara={deliveringPara}
+        />
       </Suspense>
 
       <section className="w-full  overflow-hidden  py-12 sm:py-16 relative">
@@ -396,10 +390,10 @@ const UiuxWebDesign = () => {
       <section className="w-full pt-10 sm:pt-10 lg:mt-16 pb-12 sm:pb-20 lg:pb-32 bg-black">
         <div className="container remove-bg">
           <div className="w-full  sm:text-center mb-8 sm:mb-12 lg:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom">
+            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom-second">
               Why Zygobit for UI/UX Design?
             </h2>
-            <p className="sm:font-medium text-sm sm:text-lg lg:text-xl max-w-7xl mx-auto mt-2">
+            <p className="sm:font-medium text-sm sm:text-lg lg:text-xl max-w-7xl mx-auto mt-2 sm:mt-5">
               Empowering businesses with intuitive, aesthetically pleasing, and
               user-friendly experiences. Our expert UI/UX designers leverage
               cutting-edge tools to craft seamless digital journeys that
@@ -411,11 +405,18 @@ const UiuxWebDesign = () => {
           </div>
         </div>
       </section>
+
+      <ClientSays
+        clientHeading={clientHeading}
+        clientSaysDetails={clientSaysDetails}
+      />
+
       <Suspense fallback={<Loader />}>
-        <div className="mt-5 sm:mt-12">
+        <div className="">
           <Blog />
         </div>
       </Suspense>
+
       <FaqSection faqData={faqUiUx} />
 
       <ContactForm />

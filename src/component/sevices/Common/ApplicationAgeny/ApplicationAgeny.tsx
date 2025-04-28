@@ -15,10 +15,10 @@ interface ApplicationAgencyProps {
 const ApplicationAgeny = ({ data }: ApplicationAgencyProps) => {
   return (
     <>
-      <section className="w-full relative pb-10 pt-10 sm:py-12 lg:py-16 overflow-hidden">
+      <section className="w-full relative py-12 text-black sm:py-14 lg:py-20 overflow-hidden bg-[#FFF1ED]">
         <div className="container remove-bg">
           <div className="w-full  sm:text-center">
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom font-bold">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl  font-bold">
               {data.title}
             </h2>
             <p className="sm:font-medium max-w-6xl mx-auto text-sm sm:text-lg lg:text-xl mt-3">
@@ -37,7 +37,7 @@ const ApplicationAgeny = ({ data }: ApplicationAgencyProps) => {
                   data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                   className="w-full lg:w-3/5 order-2 lg:order-none"
                 >
-                  <h3 className="font-semibold text-xl sm:text-3xl lg:text-4xl">
+                  <h3 className="font-semibold text-lg sm:text-xl lg:text-2xl">
                     {card.cardTitle}
                   </h3>
                   <p className="text-sm sm:text-base mt-2 sm:mt-3 lg:mt-5">

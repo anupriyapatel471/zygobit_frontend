@@ -4,14 +4,8 @@ import Image from "next/image";
 const RippleBg = dynamic(() => import("@/component/common/Ripplebg/Ripplebg"));
 
 import dynamic from "next/dynamic";
-import MagicCard from "@/components/ui/magic-card";
-import arrowRight from "../../../public/images/arrow_right.svg";
-import GlobeDemo from "../common/Cta/Globe/Globe";
-import VortexBg from "../common/Cta/Vortexbg/Vortexbg";
 import ContactForm from "../common/ContactForm/ContactForm";
 import { Button } from "@/components/ui/button";
-import { DotsVerticalIcon } from "@radix-ui/react-icons";
-import { ChevronRight } from "lucide-react";
 
 interface ProjectData {
   projectName: ReactNode;
@@ -115,101 +109,109 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
         </div>
       </section>
 
-      <section className="w-full relative py-20 overflow-hidden">
-        <div className="absolute -top-[12rem] -right-[21%] w-[900px] h-[900px] -z-10">
-          <Image fill src="/images/universe.svg" alt="universe image" />
-        </div>
+      <section className="w-full relative overflow-hidden pt-12 sm:pt-14 lg:pt-20">
         <div className="container">
           <div className="w-full">
             <div className="w-full text-center mb-20">
               <div className="w-24 h-24 mx-auto flex items-center justify-center bg-[#D95A6C] rounded-2xl">
                 <Image
-                  width={59}
-                  height={48}
-                  className="w-14 h-12 mx-auto object-contain "
+                  width={65}
+                  height={65}
+                  className="w-16 h-16 mx-auto object-contain "
                   src="/images/overview_icon.svg"
                   alt="icon"
                 />
               </div>
               <h2 className="font-bold text-2xl text-white mt-10 mb-5 sm:text-3xl lg:text-[38px]">
-                Overview
+                About The Project
               </h2>
-              <p className="text-[#C4C4C4] text-sm sm:text-base lg:text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-              </p>
             </div>
-            <div className=" max-w-4xl text-center  mx-auto flex flex-col gap-14">
-              <div className="w-fit mx-auto flex items-center justify-center gap-2">
-                <h2 className="font-bold text-2xl text-white mt-10 mb-5 sm:text-3xl lg:text-[38px]">
-                  Design Process
-                </h2>
+            <div className="w-full flex flex-col gap-32">
+              <div className="w-full flex items-center gap-14 justify-between">
+                <div className="w-3/5">
+                  <div className="w-fit  flex items-center  gap-2 mb-8">
+                    <h2 className="font-bold text-2xl text-white  sm:text-3xl lg:text-[38px]">
+                      Project Idea
+                    </h2>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+                <div className="w-2/5 relative">
+                  <div className="absolute -top-20  -right-[220px] -z-10 w-[400px] h-[400px] rounded-full bg-[#F2A5A04D]"></div>
+                  <Image
+                    width={520}
+                    height={400}
+                    className="w-full h-[400px] object-cover"
+                    src="/images/project_one.png"
+                    alt="image"
+                  />
+                </div>
               </div>
-              <div className="w-full grid grid-cols-3 gap-24">
-                <div className="w-full flex gap-5 justify-between px-8 py-6 border border-white/25 rounded-xl">
-                  <div className=" flex flex-col gap-6">
-                    <Image
-                      width={36}
-                      height={36}
-                      className="w-9 h-9"
-                      src="/images/research_icon.svg"
-                      alt="icon"
-                    />
-                    <span className="font-medium text-sm sm:text-base lg:text-lg">
-                      Research
-                    </span>
-                  </div>
-                  <div className="text-4xl text-white/15 sm:text-[50px] lg:text-[72px]">
-                    1
-                  </div>
+              <div className="w-full flex items-center gap-14 justify-between">
+                <div className="w-2/5 relative">
+                  <div className="absolute -top-20  -left-[220px] -z-10 w-[400px] h-[400px] rounded-full bg-[#F2A5A04D]"></div>
+                  <Image
+                    width={520}
+                    height={400}
+                    className="w-full h-[400px] object-cover"
+                    src="/images/project_two.png"
+                    alt="image"
+                  />
                 </div>
-                <div className="w-full flex gap-5 justify-between px-8 py-6 border border-white/25 rounded-xl">
-                  <div className=" flex flex-col gap-6">
-                    <Image
-                      width={36}
-                      height={36}
-                      className="w-9 h-9"
-                      src="/images/ux_icon.svg"
-                      alt="icon"
-                    />
-                    <span className="font-medium text-sm sm:text-base lg:text-lg">
-                      UX Design
-                    </span>
+                <div className="w-3/5">
+                  <div className="w-fit  flex items-center  gap-2 mb-8">
+                    <h2 className="font-bold text-2xl text-white  sm:text-3xl lg:text-[38px]">
+                      Project Challenges
+                    </h2>
                   </div>
-                  <div className="text-4xl text-white/15 sm:text-[50px] lg:text-[72px]">
-                    2
-                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                  </p>
                 </div>
-                <div className="w-full flex gap-5 justify-between px-5 pt-5 pb-4 border border-white/25 rounded-xl">
-                  <div className=" flex flex-col text-left gap-6">
-                    <Image
-                      width={42}
-                      height={42}
-                      className="w-[42px] h-[42px]"
-                      src="/images/style_icon.svg"
-                      alt="icon"
-                    />
-                    <span className="font-medium text-sm sm:text-base lg:text-lg">
-                      Style Guide & Ui Element
-                    </span>
+              </div>
+              <div className="w-full flex items-center gap-14 justify-between">
+                <div className="w-3/5">
+                  <div className="w-fit  flex items-center  gap-2 mb-8">
+                    <h2 className="font-bold text-2xl text-white  sm:text-3xl lg:text-[38px]">
+                    The Solution
+                    </h2>
                   </div>
-                  <div className="text-4xl  text-white/15 sm:text-[50px] lg:text-[72px]">
-                    3
-                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+                <div className="w-2/5 relative">
+                  <div className="absolute -top-20  -right-[220px] -z-10 w-[400px] h-[400px] rounded-full bg-[#F2A5A04D]"></div>
+                  <Image
+                    width={520}
+                    height={400}
+                    className="w-full h-[400px] object-cover"
+                    src="/images/project_three.png"
+                    alt="image"
+                  />
                 </div>
               </div>
             </div>
@@ -219,54 +221,124 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
 
       <section className="w-full text-left sm:text-center my-12 sm:my-20 lg:my-24 overflow-hidden">
         <div className="container remove-bg">
-          <div className="w-full max-w-6xl mx-auto sm:px-4">
+          <div className="w-full">
+            <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl mt-10 ">
+              Technology Stack
+            </h2>
+            <div className="w-full mt-8 lg:mt-14 grid grid-cols-2 sm:grid-cols-3 sm:grid xl:grid-cols-6 justify-center items-center gap-5gap-10 lg:gap-14">
+              <div className="flex flex-col gap-5">
+                <div className="w-full sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
+                  <Image
+                    src="/images/flutter_n.svg"
+                    alt=""
+                    width={53}
+                    height={65}
+                    className="object-contain"
+                  />
+                </div>
+                <span className="text-sm sm:text-base lg:text-lg">Flutter</span>
+              </div>
+              <div className="flex flex-col gap-5">
+                <div className="w-full sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
+                  <Image
+                    src="/images/flutter_n.svg"
+                    alt=""
+                    width={53}
+                    height={65}
+                    className="object-contain"
+                  />
+                </div>
+                <span className="text-sm sm:text-base lg:text-lg">GoLang</span>
+              </div>
+              <div className="flex flex-col gap-5">
+                <div className="w-full sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
+                  <Image
+                    src="/images/flutter_n.svg"
+                    alt=""
+                    width={53}
+                    height={65}
+                    className="object-contain"
+                  />
+                </div>
+                <span className="text-sm sm:text-base lg:text-lg">React</span>
+              </div>
+              <div className="flex flex-col gap-5">
+                <div className="w-full sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
+                  <Image
+                    src="/images/flutter_n.svg"
+                    alt=""
+                    width={53}
+                    height={65}
+                    className="object-contain"
+                  />
+                </div>
+                <span className="text-sm sm:text-base lg:text-lg">Python</span>
+              </div>
+              <div className="flex flex-col gap-5">
+                <div className="w-full sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
+                  <Image
+                    src="/images/flutter_n.svg"
+                    alt=""
+                    width={53}
+                    height={65}
+                    className="object-contain"
+                  />
+                </div>
+                <span className="text-sm sm:text-base lg:text-lg">Ruby</span>
+              </div>
+              <div className="flex flex-col gap-5">
+                <div className="w-full sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
+                  <Image
+                    src="/images/flutter_n.svg"
+                    alt=""
+                    width={53}
+                    height={65}
+                    className="object-contain"
+                  />
+                </div>
+                <span className="text-sm sm:text-base lg:text-lg">
+                  JavaScript
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full  text-black">
+        <div className="container remove-bg">
+          <div className="w-full text-center mb-5 sm:mb-10">
             <div className="w-24 h-24 mx-auto flex items-center justify-center bg-[#D95A6C] rounded-2xl">
               <Image
                 width={65}
                 height={65}
                 className="w-16 h-16 mx-auto object-contain "
-                src="/images/stack.svg"
+                src="/images/star.svg"
                 alt="icon"
               />
             </div>
-            <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl mt-10 ">
-              Technologies Leveraged
+            <h2 className="text-left sm:text-center text-white font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl mt-10 ">
+              Main Features of The Project
             </h2>
-            {/* <p className="font-light sm:font-medium text-sm sm:text-base lg:text-lg mt-3 sm:mt-6">
-              {projectData.technologyDescription}
-            </p> */}
-            <div className="w-full mt-8 lg:mt-14 grid grid-cols-2 sm:flex justify-center items-center gap-5 sm:gap-24">
-              {projectData.technologyImages &&
-                projectData.technologyImages.map((image: string, i: number) => (
-                  <div
-                    key={i}
-                    className="w-full sm:w-32 h-32 lg:w-24 lg:h-24 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative"
-                  >
-                    <Image src={image} alt="" fill className="object-contain" />
-                  </div>
-                ))}
-            </div>
           </div>
-        </div>
-      </section>
-
-      <section className="w-full bg-white py-20 text-black">
-        <div className="container">
-          <div className="w-full flex gap-[200px]">
+          <div className="w-full flex relative items-center gap-[200px] bg-[#FFF1ED] overflow-hidden rounded-[60px] px-4 py-5 lg:px-14 lg:py-14 lg:pt-7">
+            <div className="w-[200px] h-[200px] bg-[#FFE5DD] rounded-full absolute -top-10 -right-10"></div>
+            <div className="w-9 h-9 bg-[#FFE5DD] rounded-full absolute top-48 right-5"></div>
+            <div className="w-[200px] h-[200px] bg-[#FFE5DD] rounded-full absolute -bottom-12  left-1/2"></div>
             <div className="w-1/2">
-              <div className="w-24 h-24 mx-auto flex items-center justify-center bg-[#D95A6C] rounded-2xl">
-                <Image
-                  width={65}
-                  height={65}
-                  className="w-16 h-16 mx-auto object-contain "
-                  src="/images/require_icon.svg"
-                  alt="icon"
-                />
-              </div>
-              <h2 className="text-left sm:text-center font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl mt-10 mb-5 ">
-                Business Requirements
-              </h2>
-              <ul className="list-disc space-y-1 pl-8">
+              <h3 className=" font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl mb-5">
+                Mobile App
+              </h3>
+              <ul className="list-decimal sm:font-bold text-sm space-y-4 pl-5">
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
                 <li>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </li>
@@ -284,109 +356,114 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                 </li>
               </ul>
             </div>
-            <div className="w-1/2">
-              <div className="w-24 h-24 mx-auto flex items-center justify-center bg-[#D95A6C] rounded-2xl">
+            <div className="w-1/2 relative">
+              <div className="relative top-12">
                 <Image
-                  width={65}
-                  height={65}
-                  className="w-16 h-16 mx-auto object-contain "
-                  src="/images/develop_icon.svg"
-                  alt="icon"
+                  width={380}
+                  height={467}
+                  className="object-contain"
+                  src="/images/mobile_app_new.png"
+                  alt="image"
                 />
               </div>
-              <h2 className="text-left sm:text-center font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl mt-10 mb-5 ">
-                Development
-              </h2>
-              <ul className="list-disc space-y-1 pl-5">
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="w-full relative py-20">
+      <section className="w-full relative py-20 overflow-hidden">
         <div className="container">
           <div className="w-full">
-            <div className=" max-w-[1050px] text-center  mx-auto flex flex-col gap-12">
+            <div className="w-full text-center  mx-auto flex flex-col gap-5 sm:gap-10">
               <div className="w-fit mx-auto flex items-center justify-center gap-2">
                 <h2 className="font-bold text-2xl text-white  sm:text-3xl lg:text-[38px]">
-                  Other Details
+                  Process
                 </h2>
               </div>
-              <div className="w-full grid  sm:grid-cols-3 gap-5 lg:gap-20">
-                <div className="w-full flex gap-5 justify-between px-6 py-10 border border-white/25 rounded-xl">
-                  <div className="w-full items-center flex justify-between gap-6">
-                    <div className="text-left">
-                      <h4 className="font-medium text-base sm:text-lg">
-                        {" "}
-                        Client
-                      </h4>
-                      <span className="font-medium text-xs sm:text-sm">
-                        Research
-                      </span>
-                    </div>
+              <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-12">
+                <div className="w-full flex gap-5 justify-between items-center p-4 bg-white/10 border border-white/25 rounded-xl">
+                  <div className=" flex flex-col gap-6">
                     <Image
                       width={36}
                       height={36}
                       className="w-9 h-9"
-                      src="/images/client_icon.svg"
+                      src="/images/research_icon.svg"
                       alt="icon"
                     />
+                    <span className="font-medium text-sm sm:text-base lg:text-base">
+                      Research
+                    </span>
+                  </div>
+                  <div className="text-4xl text-white/15 sm:text-[50px] lg:text-[65px]">
+                    1
                   </div>
                 </div>
-                <div className="w-full flex gap-5 justify-between px-6 py-10 border border-white/25 rounded-xl">
-                  <div className="w-full items-center flex justify-between gap-6">
-                    <div className="text-left">
-                      <h4 className="font-medium text-base sm:text-lg">
-                        {" "}
-                        Services
-                      </h4>
-                      <span className="font-medium text-xs sm:text-sm">
-                        Live Chat Integration
-                      </span>
-                    </div>
+                <div className="w-full flex gap-5 justify-between items-center p-4 bg-white/10 border border-white/25 rounded-xl">
+                  <div className=" flex flex-col gap-6">
                     <Image
                       width={36}
                       height={36}
                       className="w-9 h-9"
-                      src="/images/livechat_icon.svg"
+                      src="/images/ux_icon.svg"
                       alt="icon"
                     />
+                    <span className="font-medium text-sm sm:text-base lg:text-base">
+                      UI/UX Design
+                    </span>
+                  </div>
+                  <div className="text-4xl text-white/15 sm:text-[50px] lg:text-[65px]">
+                    2
                   </div>
                 </div>
-                <div className="w-full flex gap-5 justify-between px-6 py-10 border border-white/25 rounded-xl">
-                  <div className="w-full items-center flex justify-between gap-6">
-                    <div className="text-left">
-                      <h4 className="font-medium text-base sm:text-lg">
-                        {" "}
-                        Business Type
-                      </h4>
-                      <span className="font-medium text-xs sm:text-sm">
-                        FemTech
-                      </span>
-                    </div>
+                <div className="w-full flex gap-5 justify-between items-center p-4 pb-4 bg-white/10 border border-white/25 rounded-xl">
+                  <div className=" flex flex-col text-left gap-6">
+                    <Image
+                      width={42}
+                      height={42}
+                      className="w-[42px] h-[42px]"
+                      src="/images/style_icon.svg"
+                      alt="icon"
+                    />
+                    <span className="font-medium text-sm sm:text-base lg:text-base">
+                      Development
+                    </span>
+                  </div>
+                  <div className="text-4xl  text-white/15 sm:text-[50px] lg:text-[65px]">
+                    3
+                  </div>
+                </div>
+                <div className="w-full flex gap-5 justify-between items-center p-4 bg-white/10 border border-white/25 rounded-xl">
+                  <div className=" flex flex-col gap-6">
                     <Image
                       width={36}
                       height={36}
                       className="w-9 h-9"
-                      src="/images/fem_icon.svg"
+                      src="/images/ux_icon.svg"
                       alt="icon"
                     />
+                    <span className="font-medium text-sm sm:text-base lg:text-base">
+                      Deployment
+                    </span>
+                  </div>
+                  <div className="text-4xl text-white/15 sm:text-[50px] lg:text-[65px]">
+                    4
+                  </div>
+                </div>
+                <div className="w-full flex gap-5 justify-between items-center p-4 bg-white/10 border border-white/25 rounded-xl">
+                  <div className=" flex flex-col text-left gap-6">
+                    <Image
+                      width={42}
+                      height={42}
+                      className="w-[42px] h-[42px]"
+                      src="/images/style_icon.svg"
+                      alt="icon"
+                    />
+                    <span className="font-medium text-sm sm:text-base lg:text-base">
+                      Maintenance
+                    </span>
+                  </div>
+                  <div className="text-4xl  text-white/15 sm:text-[50px] lg:text-[65px]">
+                    5
                   </div>
                 </div>
               </div>
@@ -395,357 +472,52 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
         </div>
       </section>
 
-      <section className="w-full relative overflow-hidden py-20">
-        <div className="container">
-          <div className="w-full">
-            <div className="w-full text-center mb-20">
-              <div className="w-24 h-24 mx-auto flex items-center justify-center bg-[#D95A6C] rounded-2xl">
+      <section className="w-full  text-black pb-12 sm:pb-14 lg:pb-20">
+        <div className="container remove-bg">
+          <div className="w-full flex relative items-center gap-14 bg-[#FFF1ED] overflow-hidden rounded-[60px] px-4 py-5 lg:px-14 lg:py-14 lg:pt-7">
+            <div className="w-[200px] h-[200px] bg-[#FFE5DD] rounded-full absolute -top-10 -left-10"></div>
+            <div className="w-9 h-9 bg-[#FFE5DD] rounded-full absolute top-5 left-60"></div>
+            <div className="w-[200px] h-[200px] bg-[#FFE5DD] rounded-full absolute -bottom-12  left-[40%]"></div>
+            <div className="w-3/5 relative">
+              <div className="w-full top-5 h-[399px] relative">
                 <Image
-                  width={65}
-                  height={65}
-                  className="w-16 h-16 mx-auto object-contain "
-                  src="/images/screen_preview.svg"
-                  alt="icon"
+                  fill
+                  className="w-full object-contain"
+                  src="/images/moniter.png"
+                  alt="image"
                 />
               </div>
-              <h2 className="font-bold text-2xl text-white mt-10 mb-5 sm:text-3xl lg:text-[38px]">
-                Screen Preview
-              </h2>
-              <p className="text-[#C4C4C4] text-sm sm:text-base lg:text-lg">
-                Below we will take a look at the most important application
-                screens separately.
-              </p>
             </div>
-            <div className="w-full flex flex-col gap-[320px]">
-              <div className="w-full flex items-center gap-28 justify-between">
-                <div className="w-2/5">
-                  <div className="w-fit  flex items-center  gap-2 mb-8">
-                    <h2 className="font-bold text-2xl text-white  sm:text-3xl lg:text-[38px]">
-                      Login/Signup
-                    </h2>
-                  </div>
-                  <div className="w-full bg-[#1E1E1E] rounded-[50px] p-9 pb-20">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                  </div>
-                </div>
-                <div className="w-3/5 relative">
-                  <div className="absolute top-[56%] -translate-y-1/2 -right-[220px] -z-10 w-[700px] h-[700px] rounded-full bg-[#F2A5A04D]"></div>
-                  <div className="w-full flex relative gap-12">
-                    <div className="w-full">
-                      <Image
-                        width={264}
-                        height={574}
-                        className="w-full rounded-2xl object-cover max-h-[575px]"
-                        src="/images/signup.png"
-                        alt="mobile image"
-                      />
-                    </div>
-                    <div className="w-full mt-24">
-                      <Image
-                        width={264}
-                        height={574}
-                        className="w-full rounded-2xl object-cover max-h-[575px]"
-                        src="/images/otp.png"
-                        alt="mobile image"
-                      />
-                    </div>
-                    <div className="w-[307px] absolute -bottom-[250px] left-1/2 -translate-x-1/2">
-                      <Image
-                        width={264}
-                        height={574}
-                        className="w-full rounded-2xl object-cover h-[574px]"
-                        src="/images/signup.png"
-                        alt="mobile image"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full flex items-center gap-28 justify-between">
-                <div className="w-3/5 relative">
-                  <div className="absolute top-[56%] -translate-y-1/2 -left-[220px] -z-10 w-[700px] h-[700px] rounded-full bg-[#F2A5A04D]"></div>
-                  <div className="w-full flex relative gap-12">
-                    <div className="w-full">
-                      <Image
-                        width={264}
-                        height={574}
-                        className="w-full rounded-2xl object-cover max-h-[575px]"
-                        src="/images/signup.png"
-                        alt="mobile image"
-                      />
-                    </div>
-                    <div className="w-full mt-24">
-                      <Image
-                        width={264}
-                        height={574}
-                        className="w-full rounded-2xl object-cover max-h-[575px]"
-                        src="/images/otp.png"
-                        alt="mobile image"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="w-2/5">
-                  <div className="w-fit  flex items-center  gap-2 mb-8">
-                    <h2 className="font-bold text-2xl text-white  sm:text-3xl lg:text-[38px]">
-                      Homepage
-                    </h2>
-                  </div>
-                  <div className="w-full bg-[#1E1E1E] rounded-[50px] p-9">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full flex items-center gap-28 justify-between">
-                <div className="w-2/5">
-                  <div className="w-fit  flex items-center  gap-2 mb-8">
-                    <h2 className="font-bold text-2xl text-white  sm:text-3xl lg:text-[38px]">
-                      Detail Page
-                    </h2>
-                  </div>
-                  <div className="w-full bg-[#1E1E1E] rounded-[50px] p-9">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                  </div>
-                </div>
-                <div className="w-3/5 relative">
-                  <div className="absolute top-[56%] -translate-y-1/2 -right-[220px] -z-10 w-[700px] h-[700px] rounded-full bg-[#F2A5A04D]"></div>
-                  <div className="w-full flex relative gap-12">
-                    <div className="w-full">
-                      <Image
-                        width={264}
-                        height={574}
-                        className="w-full rounded-2xl object-cover max-h-[575px]"
-                        src="/images/signup.png"
-                        alt="mobile image"
-                      />
-                    </div>
-                    <div className="w-full mt-24">
-                      <Image
-                        width={264}
-                        height={574}
-                        className="w-full rounded-2xl object-cover max-h-[575px]"
-                        src="/images/otp.png"
-                        alt="mobile image"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full flex items-center gap-28 justify-between">
-                <div className="w-3/5 relative">
-                  <div className="absolute top-[56%] -translate-y-1/2 -left-[220px] -z-10 w-[700px] h-[700px] rounded-full bg-[#F2A5A04D]"></div>
-                  <div className="w-full flex relative gap-12">
-                    <div className="w-full">
-                      <Image
-                        width={264}
-                        height={574}
-                        className="w-full rounded-2xl object-cover max-h-[575px]"
-                        src="/images/signup.png"
-                        alt="mobile image"
-                      />
-                    </div>
-                    <div className="w-full mt-24">
-                      <Image
-                        width={264}
-                        height={574}
-                        className="w-full rounded-2xl object-cover max-h-[575px]"
-                        src="/images/otp.png"
-                        alt="mobile image"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="w-2/5">
-                  <div className="w-fit  flex items-center  gap-2 mb-8">
-                    <h2 className="font-bold text-2xl text-white  sm:text-3xl lg:text-[38px]">
-                      Profile
-                    </h2>
-                  </div>
-                  <div className="w-full bg-[#1E1E1E] rounded-[50px] p-9">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="w-full relative py-20">
-        <div className="container">
-          <div className="w-full">
-            <div className="w-fit mx-auto flex items-center justify-center gap-2 mb-10">
-              <h2 className="font-bold text-2xl text-white  sm:text-3xl lg:text-[38px]">
-                More Case Studies
-              </h2>
-            </div>
-            <div className="w-full grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-10">
-              <div className="w-full flex group justify-between items-center gap-10 p-10 relative bg-white z-10 rounded-2xl overflow-hidden">
-                {/* 45% SECOND */}
-                <div className="w-[45%] flex justify-between items-start flex-col gap-[126px]">
-                  <div>
-                    <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
-                      MH Ride
-                    </div>
-                    <p className="line-clamp-4 sm:line-clamp-5 text-sm sm:text-base lg:text-lg text-black mt-3.5">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                    <div className="mt-6 flex gap-5 items-center">
-                      <div className="w-fit flex flex-col">
-                        <b className="text-3xl text-black">2M+</b>
-                        <span className="font-light text-lg text-black">
-                          App downloads
-                        </span>
-                      </div>
-                      <div className="w-[1px] h-20 bg-black"></div>
-                      <div className="w-fit flex flex-col">
-                        <b className="text-3xl text-black">500k</b>
-                        <span className="font-light text-lg text-black">
-                          New users acquired
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <button className="w-fit btn-primary text-white font-normal group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
-                    View Case Study
-                    <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                  </button>
-                </div>
-
-                {/* 55% FIRST */}
-                <div className="w-[55%] relative">
-                  <div className="relative w-full h-[500px]">
-                    <Image fill src="/images/mh_bg.png" alt="image" />
-                    <div className="w-[445px] h-[400px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                      <img
-                        className="w-full h-full object-contain"
-                        src="/images/mh_mobile.png"
-                        alt="mobile image"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full flex group justify-between items-center gap-10 p-10 relative bg-white z-10 rounded-2xl overflow-hidden">
-                {/* 55% FIRST */}
-                <div className="w-[55%] relative">
-                  <div className="relative w-full h-[500px]">
-                    <Image fill src="/images/bee_bg.png" alt="image" />
-                    <div className="w-[445px] h-[400px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                      <img
-                        className="w-full h-full object-contain"
-                        src="/images/bee_mobile.png"
-                        alt="mobile image"
-                      />
-                    </div>
-                  </div>
-                </div>
-                {/* 45% SECOND */}
-                <div className="w-[45%] flex justify-between items-start flex-col gap-[126px]">
-                  <div>
-                    <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
-                    Bee Inspection
-                    </div>
-                    <p className="line-clamp-4 sm:line-clamp-5 text-sm sm:text-base lg:text-lg text-black mt-3.5">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                    <div className="mt-6 flex gap-5 items-center">
-                      <div className="w-fit flex flex-col">
-                        <b className="text-3xl text-black">2M+</b>
-                        <span className="font-light text-lg text-black">
-                          App downloads
-                        </span>
-                      </div>
-                      <div className="w-[1px] h-20 bg-black"></div>
-                      <div className="w-fit flex flex-col">
-                        <b className="text-3xl text-black">500k</b>
-                        <span className="font-light text-lg text-black">
-                          New users acquired
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <button className="w-fit btn-primary text-white font-normal group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
-                    View Case Study
-                    <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                  </button>
-                </div>
-              </div>
-              <div className="w-full flex group justify-between items-center gap-10 p-10 relative bg-white z-10 rounded-2xl overflow-hidden">
-                {/* 45% SECOND */}
-                <div className="w-[45%] flex justify-between items-start flex-col gap-[126px]">
-                  <div>
-                    <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
-                    TIA
-                    </div>
-                    <p className="line-clamp-4 sm:line-clamp-5 text-sm sm:text-base lg:text-lg text-black mt-3.5">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                    <div className="mt-6 flex gap-5 items-center">
-                      <div className="w-fit flex flex-col">
-                        <b className="text-3xl text-black">2M+</b>
-                        <span className="font-light text-lg text-black">
-                          App downloads
-                        </span>
-                      </div>
-                      <div className="w-[1px] h-20 bg-black"></div>
-                      <div className="w-fit flex flex-col">
-                        <b className="text-3xl text-black">500k</b>
-                        <span className="font-light text-lg text-black">
-                          New users acquired
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <button className="w-fit btn-primary text-white font-normal group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
-                    View Case Study
-                    <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                  </button>
-                </div>
-
-                {/* 55% FIRST */}
-                <div className="w-[55%] relative">
-                  <div className="relative w-full h-[500px]">
-                    <Image fill src="/images/tia_bg.png" alt="image" />
-                    <div className="w-[445px] h-[400px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                      <img
-                        className="w-full h-full object-contain"
-                        src="/images/tia_mobile.png"
-                        alt="mobile image"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="w-2/5">
+              <h3 className=" font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl mb-5">
+                Admin Panel
+              </h3>
+              <ul className="list-decimal sm:font-bold text-sm space-y-4 pl-5">
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+              </ul>
             </div>
           </div>
         </div>

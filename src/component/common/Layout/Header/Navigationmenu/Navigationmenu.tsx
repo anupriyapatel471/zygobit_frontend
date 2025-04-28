@@ -82,12 +82,12 @@ export default function NavigationMenuDemo() {
               />
             </NavigationMenuTrigger>
             <div className=" w-full h-full lg:hidden">
-              <NavigationMenuContent className="lg:hidden backdrop-blur-2xl bg-black/40 custom-bg-remove  border-none relative z-50">
-                <div className="w-full backdrop-blur-2xl bg-black/40  relative ">
-                  <ul className="backdrop-blur-2xl bg-black/40 rounded-lg grid grid-cols-1 gap-3 items-center w-full sm:w-screen mx-auto lg:grid-cols-3">
+              <NavigationMenuContent className="lg:hidden bg-white  border-none relative z-50">
+                <div className="w-full backdrop-blur-2xl   relative ">
+                  <ul className="backdrop-blur-2xl  rounded-lg grid grid-cols-1 gap-3 items-center w-full sm:w-screen mx-auto lg:grid-cols-3">
                     <div className="w-auto grid grid-cols-1 lg:grid-cols-2 gap-7 col-span-2 p-4 lg:p-10">
                       <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
-                        <div className=" p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
+                        <div className=" p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
                           <img
                             className="w-6 sm:w-auto"
                             src="/images/mobile_icon.svg"
@@ -95,7 +95,7 @@ export default function NavigationMenuDemo() {
                           />
                         </div>
                         <ListItem
-                          className="text-white text-sm sm:text-base hover:text-white hover:bg-transparent p-0"
+                          className="text-black text-base hover:text-orange-600 font-semibold hover:bg-transparent p-0"
                           href="/services/mobile-app-development"
                           title="Mobile App Development"
                         >
@@ -104,7 +104,7 @@ export default function NavigationMenuDemo() {
                         </ListItem>
                       </div>
                       <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
-                        <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
+                        <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
                           <img
                             className="w-6 sm:w-auto"
                             src="/images/webdev.svg"
@@ -112,7 +112,7 @@ export default function NavigationMenuDemo() {
                           />
                         </div>
                         <ListItem
-                          className="text-white hover:text-white hover:bg-transparent p-0"
+                          className="text-black hover:text-orange-600 font-semibold hover:bg-transparent p-0"
                           href="/services/web-app-development"
                           title="Web Development"
                         >
@@ -120,7 +120,7 @@ export default function NavigationMenuDemo() {
                         </ListItem>
                       </div>
                       <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
-                        <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
+                        <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
                           <img
                             className="w-6 sm:w-auto"
                             src="/images/uiux.svg"
@@ -128,7 +128,7 @@ export default function NavigationMenuDemo() {
                           />
                         </div>
                         <ListItem
-                          className="text-white hover:text-white hover:bg-transparent p-0"
+                          className="text-black hover:text-orange-600 font-semibold hover:bg-transparent p-0"
                           href="/services/uiux-web-design"
                           title="UI/UX Design"
                         >
@@ -136,7 +136,7 @@ export default function NavigationMenuDemo() {
                         </ListItem>
                       </div>
                       <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
-                        <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
+                        <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
                           <img
                             className="w-6 sm:w-auto"
                             src="/images/machinel.svg"
@@ -144,7 +144,7 @@ export default function NavigationMenuDemo() {
                           />
                         </div>
                         <ListItem
-                          className="text-white hover:text-white hover:bg-transparent p-0"
+                          className="text-black hover:text-orange-600 font-semibold hover:bg-transparent p-0"
                           href="/services/machine-learning-ai"
                           title="Machine Learning and AI"
                         >
@@ -153,7 +153,7 @@ export default function NavigationMenuDemo() {
                         </ListItem>
                       </div>
                       <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
-                        <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
+                        <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
                           <img
                             className="w-6 sm:w-auto"
                             src="/images/ecommerce.svg"
@@ -161,11 +161,27 @@ export default function NavigationMenuDemo() {
                           />
                         </div>
                         <ListItem
-                          className="text-white hover:text-white hover:bg-transparent p-0"
+                          className="text-black hover:text-orange-600 font-semibold hover:bg-transparent p-0"
                           href="/services/e-commerce"
                           title="E-Commerce"
                         >
                           Build secure online stores with easy payments.
+                        </ListItem>
+                      </div>
+                      <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
+                        <div className="  p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
+                          <img
+                            className="w-6 sm:w-auto"
+                            src="/images/blockchain.svg"
+                            alt=""
+                          />
+                        </div>
+                        <ListItem
+                          className="text-black hover:text-orange-600 font-semibold hover:bg-transparent p-0"
+                          href="/services/blockchain"
+                          title="Blockchain"
+                        >
+                          Leverage AI for automation, insights, and smarter solutions.
                         </ListItem>
                       </div>
                     </div>
@@ -240,7 +256,7 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="w-full sm:w-auto flex items-center gap-2 text-sm sm:text-lg lg:text-lg  sm:font-bold leading-none">
+          <div className="w-full sm:w-auto flex items-center gap-2 text-base sm:text-lg lg:text-lg  font-semibold sm:font-bold leading-none">
             {title}{" "}
             <img
               className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"

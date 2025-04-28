@@ -169,7 +169,7 @@ const Header = () => {
             <ul className=" rounded-lg grid grid-cols-1 gap-3 items-center w-full sm:w-screen mx-auto lg:grid-cols-3">
               <div className="w-auto grid grid-cols-1 lg:grid-cols-2 gap-7 col-span-2 p-4 lg:p-10">
                 <div className="group flex items-center sm:items-start gap-4 group transition-all duration-500">
-                  <div className=" p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
+                  <div className=" mt-1.5 p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/mobile_icon.svg"
@@ -196,7 +196,7 @@ const Header = () => {
                   </div>
                 </div>
                 <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
-                  <div className="  p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
+                  <div className="  mt-1.5 p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/webdev.svg"
@@ -224,7 +224,7 @@ const Header = () => {
                   </div>
                 </div>
                 <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
-                  <div className="  p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
+                  <div className="  mt-1.5 p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/uiux.svg"
@@ -251,7 +251,7 @@ const Header = () => {
                   </div>
                 </div>
                 <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
-                  <div className="  p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
+                  <div className="  mt-1.5 p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/machinel.svg"
@@ -279,7 +279,7 @@ const Header = () => {
                   </div>
                 </div>
                 <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
-                  <div className="  p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
+                  <div className="  mt-1.5 p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/ecommerce.svg"
@@ -306,7 +306,7 @@ const Header = () => {
                   </div>
                 </div>
                 <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
-                  <div className="  p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
+                  <div className="  mt-1.5 p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/blockchain.svg"
@@ -315,7 +315,7 @@ const Header = () => {
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
                     <Link
-                      href="/services/e-commerce"
+                      href="/services/blockchain"
                       className=" text-neutral-950 hover:text-neutral-950 inline-block w-full hover:bg-transparent p-0"
                     >
                       <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">

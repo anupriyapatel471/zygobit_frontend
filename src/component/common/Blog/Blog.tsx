@@ -13,7 +13,7 @@ const Blog = () => {
             <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom-second">
               Featured Blogs
             </h2>
-            <p className="font-light sm:font-medium max-w-6xl mx-auto text-sm sm:text-lg lg:text-xl my-2 sm:my-3">
+            <p className="font-light sm:font-medium max-w-6xl mx-auto text-sm sm:text-lg lg:text-xl my-2 sm:mt-5">
               Using the latest technology and industry expertise, we built
               top-end Android and iOS-based applications that add value to the
               business and user experience.

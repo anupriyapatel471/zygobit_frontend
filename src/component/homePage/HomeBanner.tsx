@@ -44,7 +44,7 @@ const HomeBanner = () => {
                   alt="Logo"
                 />
               </div>
-              <div className="w-full absolute top-0 left-0 flex items-end justify-between px-24 pt-7">
+              <div className="w-full absolute top-0 left-0 flex items-end justify-between px-4 lg:px-24 pt-7">
                 <div className="w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer">
                   <div className="move-img w-14 h-14 rounded-full relative">
                     <Image
@@ -157,14 +157,14 @@ const HomeBanner = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full flex justify-between gap-14 mt-11">
-              <div className="w-3/5">
+            <div className="w-full flex  flex-wrap  lg:flex-nowrap justify-between gap-5 lg:gap-14 mt-8 lg:mt-11">
+              <div className="w-full lg:w-3/5">
                 <h1 className="font-bold text-3xl sm:text-4xl lg:text-6xl text-gradiant-custom">
                   Innovative IT Solutions for Your 
                   <span className="text-themetext">Business Growth</span>
                 </h1>
               </div>
-              <div className="w-2/5">
+              <div className="w-full lg:w-2/5">
                 <span className="font-light text-xl">We are Trusted by</span>
                 <ul className="flex flex-wrap gap-10 gap-y-6 mt-6 mb-9">
                   <li>

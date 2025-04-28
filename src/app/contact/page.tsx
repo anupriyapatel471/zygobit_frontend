@@ -11,6 +11,7 @@ const OurPartners = dynamic(
 import AOSInitializer from "@/component/common/AOSInitializer";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -43,12 +44,102 @@ const Contact = () => {
       <div className="w-full mt-24">
         <ContactParticles />
       </div>
-      <WeDeliver />
-      <ClientSays
-        clientHeading={clientHeading}
-        clientSaysDetails={clientSaysDetails}
-      />
-      <OurPartners />
+
+      <section className="w-full py-12 sm:py-14 lg:py-20">
+        <div className="container remove-bg">
+          <div className="w-full grid grid-cols-4 gap-16">
+            <div className="w-full flex items-center gap-4 border border-[#7C7C7C] bg-white/10 p-7 rounded-2xl">
+              <div className="w-10 h-10 relative">
+                <Image fill src="/images/whatsapp_new.svg" alt="icon" />
+              </div>
+              <div className="w-[calc(100%-40px)]">
+                <b className="text-sm sm:text-base lg:text-lg">WhatsApp</b>
+                <span className="block text-sm mt-1">+1(850)792-3399</span>
+              </div>
+            </div>
+            <div className="w-full flex items-center gap-4 border border-[#7C7C7C] bg-white/10 p-7 rounded-2xl">
+              <div className="w-10 h-10 relative">
+                <Image fill src="/images/instagram_new.svg" alt="icon" />
+              </div>
+              <div className="w-[calc(100%-40px)]">
+                <b className="text-sm sm:text-base lg:text-lg">Instagram</b>
+                <span className="block text-sm mt-1">Zygobit</span>
+              </div>
+            </div>
+            <div className="w-full flex items-center gap-4 border border-[#7C7C7C] bg-white/10 p-7 rounded-2xl">
+              <div className="w-10 h-10 relative">
+                <Image fill src="/images/facebook_bew.svg" alt="icon" />
+              </div>
+              <div className="w-[calc(100%-40px)]">
+                <b className="text-sm sm:text-base lg:text-lg">Facebook</b>
+                <span className="block text-sm mt-1">Zygobit</span>
+              </div>
+            </div>
+            <div className="w-full flex items-center gap-4 border border-[#7C7C7C] bg-white/10 p-7 rounded-2xl">
+              <div className="w-10 h-7 relative">
+                <Image fill src="/images/gmail.svg" alt="icon" />
+              </div>
+              <div className="w-[calc(100%-40px)]">
+                <b className="text-sm sm:text-base lg:text-lg">Email</b>
+                <span className="block text-sm mt-1">info@zygobit.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full relative text-black pb-12 sm:pb-14 lg:pb-20 bg-[#FFF1ED]">
+        <div className="container remove-bg">
+          <div className="w-full flex justify-between items-center gap-[196px]">
+            <div className="w-1/3 text-center">
+              <Image
+                width={190}
+                height={229}
+                className="w-full mx-auto h-[229px] object-contain"
+                src="/images/vector_one.svg"
+                alt="icon"
+              />
+              <div className="inline-block w-full font-bold text-lg pt-2.5 border-t-2 border-orange-600 my-2.5 min-h-[50px]">
+                India
+              </div>
+              <p className="text-[#1F1F1F] text-xs ">
+                Plot No. C-163, Sector 82, JLPL, Industrial Area, Sahibzada Ajit
+                Singh Nagar, Punjab,140308
+              </p>
+            </div>
+            <div className="w-1/3 text-center">
+              <Image
+                width={190}
+                height={229}
+                className="w-full mx-auto h-[229px] object-contain"
+                src="/images/vector_two.svg"
+                alt="icon"
+              />
+              <div className="inline-block w-full font-bold text-lg pt-2.5 border-t-2 border-orange-600 my-2.5">
+                USA
+              </div>
+              <p className="text-[#1F1F1F] text-xs lg:max-w-[228px] mx-auto ">
+                541 Windsor Cmns, East Windsor, NJ 08512
+              </p>
+            </div>
+            <div className="w-1/3 text-center">
+              <Image
+                width={190}
+                height={229}
+                className="w-full mx-auto h-[229px] object-contain"
+                src="/images/vector_three.svg"
+                alt="icon"
+              />
+              <div className="inline-block w-full font-bold text-lg pt-2.5 border-t-2 border-orange-600 my-2.5">
+                Australia
+              </div>
+              <p className="text-[#1F1F1F] text-xs lg:max-w-[228px] mx-auto">
+                2 Waterview St Putney, New South Wales
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

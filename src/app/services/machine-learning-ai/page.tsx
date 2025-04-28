@@ -181,12 +181,12 @@ const MachineLearning = () => {
       </Suspense>
 
       <Suspense fallback={<Loader />}>
-        <section className="w-full custom-apple-slider  bg-gradient-to-b from-orange-950  to-black py-12 sm:py-14 lg:py-20">
+        <section className="w-full custom-apple-slider  bg-white py-12 sm:py-14 lg:py-20">
           <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
-            <div className="w-full lg:w-[45%]">
-              <div className="w-full   inline-block">
+            <div className="w-full lg:w-[40%]">
+              <div className="w-full  inline-block text-black">
                 <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] lg:leading-[50px]">
-                  Full-Scale AI & Machine Learning Services.
+                  Full-Scale Machine Learning & AI Services.
                 </h2>
                 <p className=" sm:font-medium text-sm sm:text-base sm:leading-8 mt-4">
                   Zygobit is a leading AI-driven software development company,
@@ -196,13 +196,13 @@ const MachineLearning = () => {
                 </p>
               </div>
               <Link href="/contact">
-                <button className="mt-5 lg:mt-10 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                <button className="mt-5 lg:mt-10 btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-600 duration-500 transition-all">
                   Get Assistance{" "}
                   <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                 </button>
               </Link>
             </div>
-            <div className="w-full lg:w-[55%]">
+            <div className="w-full lg:w-[60%]">
               <div className="w-full">
                 <AppleCardsCarousel />
               </div>
@@ -211,10 +211,10 @@ const MachineLearning = () => {
         </section>
       </Suspense>
       <Suspense fallback={<Loader />}>
-        <section className="w-full  pb-10 sm:pb-0 pt-10  lg:py-14 overflow-hidden">
+        <section className="w-full  pt-10 sm:pt-14 lg:pt-20 overflow-hidden">
           <div className="container remove-bg">
             <div className="w-full  sm:text-center" data-aos="fade-right">
-              <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
+              <h2 className="text-gradiant-custom-second font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
                 Featured UI UX Design Case Studies
               </h2>
             </div>
@@ -234,10 +234,10 @@ const MachineLearning = () => {
         </section>
       </Suspense>
       <Suspense fallback={<Loader />}>
-        <section className="w-full mb-0 sm:mb-0 pt-5 sm:pt-16">
+        <section className="w-full  py-12 sm:py-14 lg:py-20">
           <div className="container remove-bg">
             <div className="w-full  sm:text-center " data-aos="fade-right">
-              <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
+              <h2 className="text-gradiant-custom-second font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
                 Leverage AI & Machine Learning to Stay Ahead.
               </h2>
               <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium">
@@ -253,7 +253,7 @@ const MachineLearning = () => {
         </section>
       </Suspense>
 
-      <div className="-mb-10 sm:-mb-0">
+      <div className="">
         <ClientSays
           clientHeading={clientSaysHeading}
           clientSaysDetails={clientSaysDetails}
@@ -262,11 +262,10 @@ const MachineLearning = () => {
 
       <CtaSecond content={""} Aurora={""} vortex={""} />
 
-      <section className="w-full pb-12 sm:pb-16 lg:pb-20 mb-5 sm:mb-12 lg:mb-12 lg:mt-32 overflow-hidden">
-        <div className="container remove-bg">
+      <section className="w-full custom-apple-slider pb-12 sm:pb-16 lg:pb-20 mb-5 sm:mb-12 lg:mb-12 lg:mt-32 overflow-hidden">
           <div className="flex flex-wrap lg:flex-nowrap justify-between gap-20 sm:gap-5">
-            <div className="w-full lg:w-1/2 ">
-              <h2 className="text-2xl sm:text-3xl lg:text-[35px] lg:leading-[50px] text-gradiant-custom font-bold">
+            <div className="w-full lg:w-2/5 ">
+              <h2 className="text-2xl sm:text-3xl lg:text-[35px] lg:leading-[50px] text-gradiant-custom-second font-bold">
                 Select from Our AI & ML-Powered Development Models
               </h2>
               <p className="sm:font-medium  text-sm sm:text-lg lg:text-xl mt-2.5 sm:mt-4 mb-4 sm:mb-7">
@@ -281,11 +280,10 @@ const MachineLearning = () => {
                 </button>
               </Link>
             </div>
-            <div className="w-full lg:w-1/2 ">
+            <div className="w-full lg:w-3/5 ">
               <WebSlider engagementModels={engagementModelsMlAi} />
             </div>
           </div>
-        </div>
       </section>
 
       <Suspense fallback={<Loader />}>
@@ -300,14 +298,8 @@ const MachineLearning = () => {
             cards={cards}
           />
         </div>
-
-        <div className="-mt-9 sm:-mt-0">
-          <ClientSays
-            clientHeading={clientSaysHeading}
-            clientSaysDetails={clientSaysDetails}
-          />
-        </div>
       </Suspense>
+
       <Suspense fallback={<Loader />}>
         <Blog />
       </Suspense>

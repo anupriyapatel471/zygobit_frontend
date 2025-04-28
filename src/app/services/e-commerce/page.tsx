@@ -75,28 +75,26 @@ const Ecommerce = () => {
         <WeDeliver />
       </Suspense>
 
-      <section className="w-full pb-12 sm:pb-20 lg:pb-20 lg:pt-12 overflow-hidden">
-        <div className="container remove-bg">
-          <div className="flex flex-wrap lg:flex-nowrap justify-between gap-20 sm:gap-5">
-            <div className="w-full lg:w-1/2 ">
-              <h2 className="text-2xl sm:text-3xl lg:text-[35px] lg:leading-[50px] text-gradiant-custom font-bold">
-                Drive Success with AI Ecommerce Solutions
-              </h2>
-              <p className="sm:font-medium  text-sm sm:text-lg lg:text-xl mt-4 mb-7">
-                Boost your eCommerce store with our tailored app development
-                solutions. Connect with our experts to build a robust platform
-                that drives engagement and sales.
-              </p>
-              <Link href="/contact">
-                <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                  Hire Web Application Developers{" "}
-                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                </button>
-              </Link>
-            </div>
-            <div className="w-full lg:w-1/2 ">
-              <WebSlider engagementModels={engagementModelsEcomerce} />
-            </div>
+      <section className="w-full custom-apple-slider  bg-white py-12 sm:py-14 lg:py-20 overflow-hidden">
+        <div className="flex flex-wrap lg:flex-nowrap text-black justify-between gap-20 sm:gap-5">
+          <div className="w-full lg:w-2/5 ">
+            <h2 className="text-2xl sm:text-3xl lg:text-[35px] lg:leading-[50px]  font-bold">
+              Drive Success with AI Ecommerce Solutions
+            </h2>
+            <p className="sm:font-medium  text-sm sm:text-lg lg:text-xl mt-4 mb-7">
+              Boost your eCommerce store with our tailored app development
+              solutions. Connect with our experts to build a robust platform
+              that drives engagement and sales.
+            </p>
+            <Link href="/contact">
+              <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                Hire Web Application Developers{" "}
+                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+              </button>
+            </Link>
+          </div>
+          <div className="w-full lg:w-3/5 ">
+            <WebSlider engagementModels={engagementModelsEcomerce} />
           </div>
         </div>
       </section>
@@ -104,7 +102,7 @@ const Ecommerce = () => {
       <section className="w-full bg-[url(/images/cta_bg.png)] bg-cover bg-no-repeat bg-center py-12 sm:py-16 ">
         <div className="container remove-bg">
           <div className="w-full  sm:text-center" data-aos="fade-right">
-            <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl mb-5 sm:mb-12 lg:mb-16">
+            <h2 className="font-bold text-2xl sm:text-4xl lg:text-[38px] text-gradiant-custom-second mb-5 sm:mb-8 lg:mb-10">
               Boost your business with AI & ML eCommerce.
             </h2>
           </div>
@@ -124,10 +122,10 @@ const Ecommerce = () => {
 
       <CtaSecond content={""} Aurora={""} vortex={""} />
       <Suspense fallback={<Loader />}>
-        <section className="w-full  pt-0 pb-10 lg:py-14 overflow-hidden">
+        <section className="w-full  pb-12 sm:pb-14 lg:pb-20 overflow-hidden">
           <div className="container remove-bg">
             <div className="w-full  sm:text-center" data-aos="fade-right">
-              <h2 className="text-gradiant-custom font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
+              <h2 className="text-gradiant-custom-second font-bold text-2xl sm:text-4xl lg:text-[38px] mb-2 sm:mb-6">
                 Zygobit: Ecommerce App Experts
               </h2>
               <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
@@ -152,10 +150,6 @@ const Ecommerce = () => {
         </section>
       </Suspense>
 
-      <OurPartners />
-      <Suspense fallback={<Loader />}>
-        <Blog />
-      </Suspense>
       <Suspense fallback={<Loader />}>
         <TechnologyStack />
 
@@ -163,6 +157,10 @@ const Ecommerce = () => {
           clientHeading={clientHeading}
           clientSaysDetails={clientSaysDetails}
         />
+      </Suspense>
+
+      <Suspense fallback={<Loader />}>
+        <Blog />
       </Suspense>
 
       <FaqSection faqData={faqEcommerceData} />

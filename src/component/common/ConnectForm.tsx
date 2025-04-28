@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
 import { Input, TextArea } from "../../components/ui/contactInput";
-import Rocket from "../../../public/images/rocket.svg";
+import Rocket from "../../../public/images/contact_btn.svg";
 import { generateClient } from "aws-amplify/data";
 import { useState } from "react";
 import useAmplifyConfig from "@/hooks/useAmplify";
@@ -295,7 +295,7 @@ const ConnectForm = () => {
         >
           {loading ? "Submitting..." : "Let’s Build"}
           <Image
-            className="group-hover:translate-x-64 transition-all duration-1000"
+            className="group-hover:translate-x-5 transition-all duration-1000"
             src={Rocket}
             alt="Rocket Icon"
             width={13.73}
