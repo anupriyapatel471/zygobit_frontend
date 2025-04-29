@@ -59,8 +59,70 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
               </p>
+              <div className="w-full max-w-sm grid grid-cols-2 gap-5">
+                <div className="w-full flex flex-col justify-center items-center text-center gap-2.5 border border-[#D95A6C] rounded-lg p-2.5">
+                  <div>
+                    <Image
+                      width={40}
+                      height={40}
+                      className="w-10 mx-auto h-10"
+                      src="/images/client_a.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div className="text-black">
+                    <b className="text-xs inline-block w-full">Client</b>
+                    <span className="text-xs">John Doe</span>
+                  </div>
+                </div>
+                <div className="w-full flex flex-col justify-center items-center text-center gap-2.5 border border-[#D95A6C] rounded-lg p-2.5">
+                  <div>
+                    <Image
+                      width={40}
+                      height={40}
+                      className="w-10 mx-auto h-10"
+                      src="/images/chat_icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div className="text-black">
+                    <b className="text-xs inline-block w-full">Services</b>
+                    <span className="text-xs">Live Chat Integration</span>
+                  </div>
+                </div>
+                <div className="w-full flex flex-col justify-center items-center text-center gap-2.5 border border-[#D95A6C] rounded-lg p-2.5">
+                  <div>
+                    <Image
+                      width={40}
+                      height={40}
+                      className="w-10 mx-auto h-10"
+                      src="/images/idea_i.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div className="text-black">
+                    <b className="text-xs inline-block w-full">Business Type</b>
+                    <span className="text-xs">FemTech</span>
+                  </div>
+                </div>
+                <div className="w-full flex flex-col justify-center items-center text-center gap-2.5 border border-[#D95A6C] rounded-lg p-2.5">
+                  <div>
+                    <Image
+                      width={40}
+                      height={40}
+                      className="w-10 mx-auto h-10"
+                      src="/images/time_i.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div className="text-black">
+                    <b className="text-xs inline-block w-full">Project Duration</b>
+                    <span className="text-xs">6 months</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="w-[600px] relative -right-20">
+            <div className="w-[600px] relative -right-28">
               <div className="w-full grid grid-cols-2 h-fit gap-10 ">
                 <div className="w-full flex flex-col gap-8">
                   <Image
@@ -189,7 +251,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                 <div className="w-3/5">
                   <div className="w-fit  flex items-center  gap-2 mb-8">
                     <h2 className="font-bold text-2xl text-white  sm:text-3xl lg:text-[38px]">
-                    The Solution
+                      The Solution
                     </h2>
                   </div>
                   <p>
