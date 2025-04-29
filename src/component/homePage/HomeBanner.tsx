@@ -10,10 +10,10 @@ import Image from "next/image";
 const HomeBanner = () => {
   return (
     <>
-      <section className="w-full  relative pt-[100px]">
+      <section className="w-full  relative pt-[88px] sm:pt-[100px]">
         <div className="container">
-          <div className="w-full relative">
-            <div className="absolute top-0 left-0 w-full h-[930px] -z-10">
+          <div className="w-full flex flex-wrap sm:inline relative">
+            <div className="hidden sm:inline absolute top-0 left-0 w-full h-[930px] -z-10">
               <div className="w-full flex justify-between h-full">
                 <div className="w-[1px] h-full bg-[#51515182] opacity-30 relative">
                   <div className="bg-[#666666] w-2.5 h-2.5 rounded-full absolute top-[145px] left-1/2 -translate-x-1/2"></div>
@@ -35,8 +35,8 @@ const HomeBanner = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full relative px-2">
-              <div className="w-full relative h-[420px]">
+            <div className="w-full order-2 sm:order-none relative px-2">
+              <div className="w-full relative h-[250px] sm:h-[420px]">
                 <Image
                   className="w-full  object-contain"
                   fill
@@ -44,9 +44,9 @@ const HomeBanner = () => {
                   alt="Logo"
                 />
               </div>
-              <div className="w-full absolute top-0 left-0 flex items-end justify-between px-4 lg:px-24 pt-7">
+              <div className="w-full absolute top-0 left-0 grid grid-cols-3 gap-y-10 sm:gap-y-0 sm:flex items-end justify-between px-4 lg:px-24 pt-4 sm:pt-7">
                 <div className="w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer">
-                  <div className="move-img w-14 h-14 rounded-full relative">
+                  <div className="move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -67,7 +67,7 @@ const HomeBanner = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer mb-56">
+                <div className="w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer mb-0 sm:mb-56">
                   <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
                     Tester
                     <div className="absolute -top-7 -left-0">
@@ -80,7 +80,7 @@ const HomeBanner = () => {
                       />
                     </div>
                   </div>
-                  <div className="move-img w-14 h-14 rounded-full relative">
+                  <div className="move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -90,7 +90,7 @@ const HomeBanner = () => {
                   </div>
                 </div>
                 <div className="w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer">
-                  <div className="move-img w-14 h-14 rounded-full relative">
+                  <div className="move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -111,7 +111,7 @@ const HomeBanner = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-fit relative -left-12 custom-move-animation group flex flex-col items-center justify-center gap-5 transition-all duration-300 cursor-pointer mb-56">
+                <div className="w-fit relative -left-12 custom-move-animation group flex flex-col items-center justify-center gap-5 transition-all duration-300 cursor-pointer mb-0 sm:mb-56">
                   <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
                     Manager
                     <div className="absolute -top-7 -left-0">
@@ -124,7 +124,7 @@ const HomeBanner = () => {
                       />
                     </div>
                   </div>
-                  <div className="move-img w-14 h-14 rounded-full relative">
+                  <div className="move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -134,7 +134,7 @@ const HomeBanner = () => {
                   </div>
                 </div>
                 <div className="w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer">
-                  <div className="move-img w-14 h-14 rounded-full relative">
+                  <div className="move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -157,21 +157,21 @@ const HomeBanner = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full flex  flex-wrap  lg:flex-nowrap justify-between gap-5 lg:gap-14 mt-8 lg:mt-11">
+            <div className="w-full flex  order-1 sm:order-none flex-wrap  lg:flex-nowrap justify-between gap-5 lg:gap-14 sm:mt-8 lg:mt-11">
               <div className="w-full lg:w-3/5">
                 <h1 className="font-bold text-3xl sm:text-4xl lg:text-6xl text-gradiant-custom">
                   Innovative IT Solutions for Your 
                   <span className="text-themetext">Business Growth</span>
                 </h1>
               </div>
-              <div className="w-full lg:w-2/5">
-                <span className="font-light text-xl">We are Trusted by</span>
-                <ul className="flex flex-wrap gap-10 gap-y-6 mt-6 mb-9">
+              <div className="w-full my-3 sm:my-0 lg:w-2/5">
+                <span className="font-light text-lg sm:text-xl">We are Trusted by</span>
+                <ul className="flex flex-wrap gap-5  sm:gap-10 sm:gap-y-6 mt-4 sm:mt-6 mb-9">
                   <li>
-                    <img src="/images/trackday.png" alt="" />
+                    <img className="w-[150px] sm:w-auto" src="/images/trackday.png" alt="" />
                   </li>
                   <li>
-                    <img src="/images/slick.png" alt="" />
+                    <img className="w-[100px] sm:w-auto" src="/images/slick.png" alt="" />
                   </li>
                   <li>
                     <img src="/images/recovery.png" alt="" />
