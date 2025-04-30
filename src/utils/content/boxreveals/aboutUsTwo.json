@@ -1,13 +1,13 @@
 {
-  "title1": "Accelerate Growth with Our",
+  "title1": "Who We Are",
   "title2": " Web Development Services",
-  "description": "With billions of online users and rapidly growing digital markets, having a fast, secure, and scalable web application is essential for business success.",
-  "subTitle": "Why Choose Zygobit?",
+  "description": "We go beyond being mere developers; we are literal digital architects. We craft strategic websites, build scalable applications, web portals and create meaningful web experiences that foster connections, drive conversions, and stimulate growth.",
+  "subTitle": "What Makes Us Different?",
   "features": [
-    "Lightning-Fast Load Times – Optimized for seamless performance",
-    "Secure Payment Integration – Ensuring safe transactions for your users",
-    "Mobile & Desktop Compatibility – A flawless experience across all devices",
-    "Advanced Analytics & Reporting – Gain insights to drive business decisions"
+    "Human-Centered Approach – Instead of treating users as inputs, we think of them as people that are part of the end experience.",
+    "Performance is Priority – Economy of performance means speed and reliability which is a requirement in every business.",
+    " Built-In Security – For every product we launch, security is a prerequisite. We don’t wait for it till now.",
+    " Global Readiness – Along with responsiveness, we ensure that the application runs smoothly on all devices, ensuring a truly global reach."
   ],
   "btnText": "Build Your Web App Today"
 }

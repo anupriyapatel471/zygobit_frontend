@@ -12,7 +12,7 @@ import Rocket from "../../../public/images/rocket.svg";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
 
-export function ContactBtn() {
+export function ContactnewForm() {
   return (
     <Dialog>
       <DialogTrigger asChild>

@@ -18,7 +18,8 @@ const testimonials = [
     name: "Sasson Moulavi",
     designation: "ABBSI",
     src: "/images/abbsi_admin.png",
-    videosrc: "/videos/SampleVideo.mp4",
+    videosrc: "",
+    // videosrc: "/videos/SampleVideo.mp4",
   },
   {
     quote:
@@ -26,7 +27,7 @@ const testimonials = [
     name: "ellered",
     designation: "OPSY",
     src: "/images/opsy_admin.png",
-    videosrc: "/videos/SampleVideo.mp4",
+    // videosrc: "/videos/SampleVideo.mp4",
   },
   {
     quote:
@@ -42,7 +43,7 @@ const testimonials = [
     name: "Alan",
     designation: "TIA",
     src: "/images/tia_admin.png",
-    videosrc: "/videos/SampleVideo.mp4",
+    // videosrc: "/videos/SampleVideo.mp4",
   },
 ];
 
@@ -93,7 +94,8 @@ export function ClientSlider() {
                       {data.quote}
                     </p>
                   )}
-                  {data.videosrc && hoveredIndex !== index && (
+                  {/* {data.videosrc && hoveredIndex !== index && ( */}
+                  {(data.videosrc ? hoveredIndex !== index : true) && (
                     <div className="flex gap-1.5 max-w-[90%] mx-auto  w-full p-5 items-center absolute bottom-5 left-1/2 -translate-x-1/2 border border-[#F2F2F71A] bg-black/40 rounded-2xl">
                       <div className="w-14 h-14 overflow-hidden rounded-full relative">
                         <Image
