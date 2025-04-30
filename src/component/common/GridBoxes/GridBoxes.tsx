@@ -1,4 +1,4 @@
-import { MobileAppGrid } from "@/component/common/MobileAppGrid/MobileAppGrid";
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 

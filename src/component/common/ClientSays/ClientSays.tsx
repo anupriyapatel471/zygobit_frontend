@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 
-import ClientSaysCards from "@/component/new/clientSaysCards";
 import { ClientSlider } from "@/component/new/ClientSlider";
 const ClientSays = ({
   clientHeading,
@@ -25,7 +24,7 @@ const ClientSays = ({
           </div>
           <div className="w-full flex flex-wrap sm:flex-nowrap gap-y-4 sm:gap-5 lg:gap-16 items-center justify-between">
             <div className="w-full  relative">
-                <ClientSlider />
+              <ClientSlider />
             </div>
           </div>
         </div>

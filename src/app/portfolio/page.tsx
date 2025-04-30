@@ -29,8 +29,6 @@ export const metadata: Metadata = {
   },
 };
 const Portfolio = () => {
-  const heroHeading = "Our Portfolio";
-
   return (
     <>
       <AOSInitializer />
@@ -45,7 +43,7 @@ const Portfolio = () => {
             <div className="w-full">
               <div className="w-full">
                 <h1 className="font-bold relative z-10 text-3xl sm:text-3xl lg:text-[38px] text-shadow-2xl  text-gradiant-custom">
-                  {heroHeading}
+                  Our Portfolio
                 </h1>
               </div>
             </div>

@@ -1,5 +1,3 @@
-import dynamic from "next/dynamic";
-
 import IndustriesSlider from "@/component/new/IndustriesSlider";
 
 interface DeliveringTailoredProps {

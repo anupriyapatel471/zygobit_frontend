@@ -3,35 +3,27 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import { Metadata } from "next";
 
-import { MagicCardDemo } from "@/component/common/Magiccard/Magiccard";
 import AOSInitializer from "@/component/common/AOSInitializer";
-import boxData1 from "../../utils/content/boxreveals/aboutUsOne.json";
-import boxData2 from "../../utils/content/boxreveals/aboutUsTwo.json";
-import Together from "../../../public/images/about_img.png";
-import meeting from "../../../public/images/meeting.png";
-import RippleBg from "@/component/common/Ripplebg/Ripplebg";
 import HeroBanner from "@/component/common/HeroBanner/HeroBanner";
 import GridBoxes from "@/component/common/GridBoxes/GridBoxes";
 import DeliveringTailored from "@/component/common/DeliveringTailored/DeliveringTailored";
 import Loader from "@/component/common/Loader/Loader";
 import { Suspense } from "react";
-import { AboutBgParticles } from "@/component/about/AboutBgParticles/AboutBgParticles";
 import { EcommerceShineCards } from "@/component/sevices/Ecommerce/EcommerceShineCards/EcomoerceShineCards";
 import AboutCta from "@/component/new/AboutCta";
-import { ChevronRight } from "lucide-react";
 import AboutWeb from "@/component/new/AboutWeb";
 
-const WeDeliver = dynamic(
-  () => import("@/component/common/WeDeliver/WeDeliver"),
-  { ssr: false }
-);
+// const WeDeliver = dynamic(
+//   () => import("@/component/common/WeDeliver/WeDeliver"),
+//   { ssr: false }
+// );
 const ContactForm = dynamic(
   () => import("@/component/common/ContactForm/ContactForm")
 );
 
-const BoxReveals = dynamic(() =>
-  import("@/component/common/WebSales/WebSales").then((mod) => mod.BoxReveals)
-);
+// const BoxReveals = dynamic(() =>
+//   import("@/component/common/WebSales/WebSales").then((mod) => mod.BoxReveals)
+// );
 const ClientSays = dynamic(
   () => import("@/component/common/ClientSays/ClientSays")
 );

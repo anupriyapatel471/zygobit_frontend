@@ -7,7 +7,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../../../public/images/Logo.png";
 import { usePathname } from "next/navigation";
-import { Button } from "@/components/ui/button";
 import { ChatBotBtn } from "@/component/new/ChatBot";
 import { ContactBtn } from "@/component/new/ContactNewForm";
 

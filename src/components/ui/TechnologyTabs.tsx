@@ -1,12 +1,13 @@
-"use client"
+/* eslint-disable react/display-name */
+"use client";
 
-import * as React from "react"
-import * as TabsPrimitive from "@radix-ui/react-tabs"
+import * as React from "react";
+import * as TabsPrimitive from "@radix-ui/react-tabs";
 
-import { cn } from "@/lib/utils"
-import Image from "next/image"
+import { cn } from "@/lib/utils";
+import Image from "next/image";
 
-const Tabs = TabsPrimitive.Root
+const Tabs = TabsPrimitive.Root;
 
 const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>,
@@ -20,8 +21,8 @@ const TabsList = React.forwardRef<
     )}
     {...props}
   />
-))
-TabsList.displayName = TabsPrimitive.List.displayName
+));
+TabsList.displayName = TabsPrimitive.List.displayName;
 
 const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Trigger>,
@@ -36,17 +37,15 @@ const TabsTrigger = React.forwardRef<
     {...props}
   >
     {children}
-    <Image 
+    <Image
       width={24}
       height={24}
-      src="/images/white_right.svg" 
+      src="/images/white_right.svg"
       alt="Arrow"
       className="w-6 h-6 invisible opacity-0 brightness-0 invert group-data-[state=active]:visible group-data-[state=active]:opacity-100"
     />
   </TabsPrimitive.Trigger>
 ));
-
-
 
 const TabsContent = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Content>,
@@ -60,7 +59,7 @@ const TabsContent = React.forwardRef<
     )}
     {...props}
   />
-))
-TabsContent.displayName = TabsPrimitive.Content.displayName
+));
+TabsContent.displayName = TabsPrimitive.Content.displayName;
 
-export { Tabs, TabsList, TabsTrigger, TabsContent }
+export { Tabs, TabsList, TabsTrigger, TabsContent };

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 export const dynamic = "force-static";
 import dynamicImp from "next/dynamic";
 import AOSInitializer from "@/component/common/AOSInitializer";
@@ -33,10 +32,6 @@ const OurPartners = dynamicImp(
 );
 import { Metadata } from "next";
 import WhyChooseUs from "@/component/new/WhyChooseUs";
-import { ChevronRight } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import AboutCta from "@/component/new/AboutCta";
 import CtaSecond from "@/component/new/CtaSecond";
 

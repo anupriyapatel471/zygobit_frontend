@@ -1,8 +1,16 @@
+import Count from "@/components/ui/Count";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const AboutCta = () => {
+  const data = [
+    { title: "Years of Experience", records: "2" },
+    { title: "Countries Served", records: "15" },
+    { title: "Tech Enthusiast", records: "25" },
+    { title: "Products Delivered", records: "250" },
+  ];
   return (
     <>
       <section className="w-full relative my-12 sm:my-14 lg:my-20">
@@ -18,40 +26,25 @@ const AboutCta = () => {
               />
             </div>
             <div className="w-full flex justify-between text-white">
-              <div className="lg:w-[200px] text-center">
-                <b className="font-extrabold text-6xl">11+</b>
-                <div className="w-full h-[1px] bg-white/30 mt-3 mb-3"></div>
-                <span className="font-medium text-base inline-block">
-                  Years of Experience
-                </span>
-              </div>
-              <div className="lg:w-[200px] text-center">
-                <b className="font-extrabold text-6xl">25+</b>
-                <div className="w-full h-[1px] bg-white/30 mt-3 mb-3"></div>
-                <span className="font-medium text-base inline-block">
-                  Countries Served
-                </span>
-              </div>
-              <div className="lg:w-[200px] text-center">
-                <b className="font-extrabold text-6xl">250+</b>
-                <div className="w-full h-[1px] bg-white/30 mt-3 mb-3"></div>
-                <span className="font-medium text-base inline-block">
-                  Tech Enthusiast
-                </span>
-              </div>
-              <div className="lg:w-[200px] text-center">
-                <b className="font-extrabold text-6xl">1000+</b>
-                <div className="w-full h-[1px] bg-white/30 mt-3 mb-3"></div>
-                <span className="font-medium text-base inline-block">
-                  Products Delivered
-                </span>
-              </div>
+              {data.map((item, index) => (
+                <div key={index} className="lg:w-[200px] text-center">
+                  <b className="font-extrabold text-6xl">
+                    <Count endValue={item.records} />+
+                  </b>
+                  <div className="w-full h-[1px] bg-white/30 mt-3 mb-3"></div>
+                  <span className="font-medium text-base inline-block">
+                    {item.title}
+                  </span>
+                </div>
+              ))}
             </div>
             <div className="w-full flex items-center justify-center mt-14">
-              <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                Build Your Success Story
-                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-              </button>
+              <Link href={"/contact"}>
+                <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                  Build Your Success Story
+                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
