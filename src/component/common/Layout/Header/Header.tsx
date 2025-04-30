@@ -8,7 +8,7 @@ import Image from "next/image";
 import Logo from "../../../../../public/images/Logo.png";
 import { usePathname } from "next/navigation";
 import { ChatBotBtn } from "@/component/new/ChatBot";
-import { ContactBtn } from "@/component/new/ContactNewForm";
+import { ContactnewForm } from "@/component/new/ContactNewForm";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -362,11 +362,14 @@ const Header = () => {
 
       <div>
         <div className="scale-75 sm:scale-100 fixed bottom-32 left-8 z-50">
-          <ContactBtn />
+          <ContactnewForm />
         </div>
 
         {/* whats app */}
-        <a href="" className="scale-75 sm:scale-100 btn-whatsapp-pulse relative z-50">
+        <a
+          href=""
+          className="scale-75 sm:scale-100 btn-whatsapp-pulse relative z-50"
+        >
           <Image
             width={25}
             height={25}

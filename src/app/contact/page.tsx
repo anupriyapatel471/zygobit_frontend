@@ -1,17 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ContactParticles } from "@/component/contact/contactParticles/contactParticles";
-const WeDeliver = dynamic(
-  () => import("@/component/common/WeDeliver/WeDeliver")
-);
-const ClientSays = dynamic(
-  () => import("@/component/common/ClientSays/ClientSays")
-);
-const OurPartners = dynamic(
-  () => import("@/component/common/OurPartners/OurPartners")
-);
 import AOSInitializer from "@/component/common/AOSInitializer";
 import { Metadata } from "next";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -35,9 +24,6 @@ export const metadata: Metadata = {
 };
 
 const Contact = () => {
-  const clientHeading = "Let’s Hear What Our Clients Say";
-  const clientSaysDetails =
-    " Using the latest technology and industry expertise, we built top-end Android and iOS-based applications that add value to the business and user experience.";
   return (
     <>
       <AOSInitializer />
@@ -116,7 +102,7 @@ const Contact = () => {
               </p>
             </div>
             <div className="w-1/3 group text-center">
-              <Image  
+              <Image
                 width={190}
                 height={229}
                 className="w-full mx-auto  group-hover:hidden h-[229px] object-contain"

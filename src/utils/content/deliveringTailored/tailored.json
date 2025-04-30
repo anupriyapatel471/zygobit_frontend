@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Education & E-Learning",
+    "description": "We specialize in UI/UX design audits for educational platforms, creating interactive and engaging user experiences. Our designs keep students engaged with easy navigation and content accessibility.",
+    "img": "/images/education_elearning.jpg"
+  },
+  {
+    "name": "Healthcare & Wellness",
+    "description": "Enhancing patient experiences through intuitive healthcare applications, telemedicine platforms, and wellness tracking solutions with seamless navigation and accessibility.",
+    "img": "/images/health_wellness.jpg"
+  },
+  {
+    "name": "E-Commerce & Retail",
+    "description": "Building user-centric online stores, marketplaces, and retail applications that maximize conversions and provide seamless shopping experiences.",
+    "img": "/images/ecommerce_retail.jpg"
+  },
+  {
+    "name": "Finance & Banking",
+    "description": "Designing secure and intuitive digital banking solutions, fintech platforms, and investment tools for a smooth financial experience.",
+    "img": "/images/finance_banking.png"
+  },
+  {
+    "name": "Real Estate & Property Management",
+    "description": "Empowering property listings, rental platforms, and management software with user-friendly interfaces and advanced search capabilities.",
+    "img": "/images/realestate_property.png"
+  },
+  {
+    "name": "Travel & Hospitality",
+    "description": "Creating engaging UI/UX for travel booking systems, hotel management solutions, and customer-friendly interfaces for tourism services.",
+    "img": "/images/travel_hospitality.jpg"
+  },
+  {
+    "name": "Entertainment & Media",
+    "description": "Designing seamless experiences for streaming platforms, gaming applications, and digital content portals to enhance user engagement.",
+    "img": "/images/entertainment_media.jpg"
+  },
+  {
+    "name": "Logistics & Transportation",
+    "description": "Developing user-friendly tracking systems, fleet management dashboards, and transport booking applications for efficiency and ease of use.",
+    "img": "/images/logistics_transportation.jpg"
+  }
+]
