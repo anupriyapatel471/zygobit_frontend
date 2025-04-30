@@ -9,6 +9,7 @@ import Loader from "../common/Loader/Loader";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
+import { formatDownloads } from "@/lib/utils";
 
 const client = generateClient();
 
@@ -85,131 +86,144 @@ const PortfolioProjects = () => {
                         (project.category || "Uncategorized") === category
                     )
                     .map((project, index) => {
-                      const isEven = index % 2 === 1; // 0-based index
+                      const isEven = index % 2 === 1;
                       return (
-                        <Link
+                        <div
                           key={project.id}
-                          href={`/portfolio/${project.slug}`}
-                          className="cursor-pointer"
+                          className="w-full flex group justify-between items-center gap-10 p-10 relative bg-white z-10 rounded-2xl overflow-hidden"
                         >
-                          <div className="w-full flex group justify-between items-center gap-10 p-10 relative bg-white z-10 rounded-2xl overflow-hidden">
-                            {isEven ? (
-                              <>
-                                {/* 45% FIRST */}
-                                <div className="w-[45%] flex justify-between items-start flex-col gap-[126px]">
-                                  <div>
-                                    <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
-                                      {project.projectName}
+                          {isEven ? (
+                            <>
+                              {/* 45% FIRST */}
+                              <div className="w-[45%] flex justify-between items-start flex-col gap-[126px]">
+                                <div>
+                                  <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
+                                    {project.projectName}
+                                  </div>
+                                  <p className="line-clamp-4 sm:line-clamp-5 text-sm sm:text-base lg:text-lg text-black mt-3.5">
+                                    {project.description}
+                                  </p>
+                                  <div className="mt-6 flex gap-5 items-center">
+                                    <div className="w-fit flex flex-col">
+                                      <b className="text-3xl text-black">
+                                        {project.androidDownloads &&
+                                          formatDownloads(
+                                            project?.androidDownloads
+                                          )}
+                                      </b>
+                                      <span className="font-light text-lg text-black">
+                                        App downloads
+                                      </span>
                                     </div>
-                                    <p className="line-clamp-4 sm:line-clamp-5 text-sm sm:text-base lg:text-lg text-black mt-3.5">
-                                      {project.description}
-                                    </p>
-                                    <div className="mt-6 flex gap-5 items-center">
-                                      <div className="w-fit flex flex-col">
-                                        <b className="text-3xl text-black">
-                                          2M+
-                                        </b>
-                                        <span className="font-light text-lg text-black">
-                                          App downloads
-                                        </span>
-                                      </div>
-                                      <div className="w-[1px] h-20 bg-black"></div>
-                                      <div className="w-fit flex flex-col">
-                                        <b className="text-3xl text-black">
-                                          500k
-                                        </b>
-                                        <span className="font-light text-lg text-black">
-                                          New users acquired
-                                        </span>
-                                      </div>
+                                    <div className="w-[1px] h-20 bg-black"></div>
+                                    <div className="w-fit flex flex-col">
+                                      <b className="text-3xl text-black">
+                                        500k
+                                      </b>
+                                      <span className="font-light text-lg text-black">
+                                        Available on Playstore & Appstore
+                                      </span>
                                     </div>
                                   </div>
+                                </div>
+                                <Link
+                                  href={`/portfolio/${project.slug}`}
+                                  className="cursor-pointer"
+                                >
                                   <button className="w-fit btn-primary text-white font-normal group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
                                     View Case Study
                                     <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                                   </button>
-                                </div>
+                                </Link>
+                              </div>
 
-                                {/* 55% SECOND */}
-                                <div className="w-[55%] relative">
-                                  <div className="relative w-full h-[500px]">
-                                    <Image
-                                      fill
-                                      src="/images/her_cal.png"
-                                      alt="image"
-                                    />
-                                    <div className="w-[465px] h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                      {project.mobileImage && (
-                                        <img
-                                          className="w-full h-full object-contain"
-                                          src={project.mobileImage}
-                                          alt=""
-                                        />
-                                      )}
-                                    </div>
+                              {/* 55% SECOND */}
+                              <div className="w-[55%] relative">
+                                <div className="relative w-full h-[500px]">
+                                  <Image
+                                    fill
+                                    src="/images/her_cal.png"
+                                    alt="image"
+                                  />
+                                  <div className="w-[465px] h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    {project.mobileImage && (
+                                      <img
+                                        className="w-full h-full object-contain"
+                                        src={project.mobileImage}
+                                        alt=""
+                                      />
+                                    )}
                                   </div>
                                 </div>
-                              </>
-                            ) : (
-                              <>
-                                {/* 55% FIRST */}
-                                <div className="w-[55%] relative">
-                                  <div className="relative w-full h-[500px]">
-                                    <Image
-                                      fill
-                                      src="/images/her_cal.png"
-                                      alt="image"
-                                    />
-                                    <div className="w-[465px] h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                      {project.mobileImage && (
-                                        <img
-                                          className="w-full h-full object-contain"
-                                          src={project.mobileImage}
-                                          alt=""
-                                        />
-                                      )}
-                                    </div>
+                              </div>
+                            </>
+                          ) : (
+                            <>
+                              {/* 55% FIRST */}
+                              <div className="w-[55%] relative">
+                                <div className="relative w-full h-[500px]">
+                                  <Image
+                                    fill
+                                    src="/images/her_cal.png"
+                                    alt="image"
+                                  />
+                                  <div className="w-[465px] h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    {project.mobileImage && (
+                                      <img
+                                        className="w-full h-full object-contain"
+                                        src={project.mobileImage}
+                                        alt=""
+                                      />
+                                    )}
                                   </div>
                                 </div>
+                              </div>
 
-                                {/* 45% SECOND */}
-                                <div className="w-[45%] flex justify-between items-start flex-col gap-[126px]">
-                                  <div>
-                                    <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
-                                      {project.projectName}
+                              {/* 45% SECOND */}
+                              <div className="w-[45%] flex justify-between items-start flex-col gap-[126px]">
+                                <div>
+                                  <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
+                                    {project.projectName}
+                                  </div>
+                                  <p className="line-clamp-4 sm:line-clamp-5 text-sm sm:text-base lg:text-lg text-black mt-3.5">
+                                    {project.description}
+                                  </p>
+                                  <div className="mt-6 flex gap-5 items-center">
+                                    <div className="w-fit flex flex-col">
+                                      <b className="text-3xl text-black">
+                                        {project.androidDownloads &&
+                                          formatDownloads(
+                                            project?.androidDownloads
+                                          )}
+                                      </b>
+                                      <span className="font-light text-lg text-black">
+                                        App downloads
+                                      </span>
                                     </div>
-                                    <p className="line-clamp-4 sm:line-clamp-5 text-sm sm:text-base lg:text-lg text-black mt-3.5">
-                                      {project.description}
-                                    </p>
-                                    <div className="mt-6 flex gap-5 items-center">
-                                      <div className="w-fit flex flex-col">
-                                        <b className="text-3xl text-black">
-                                          2M+
-                                        </b>
-                                        <span className="font-light text-lg text-black">
-                                          App downloads
-                                        </span>
-                                      </div>
-                                      <div className="w-[1px] h-20 bg-black"></div>
-                                      <div className="w-fit flex flex-col">
-                                        <b className="text-3xl text-black">
-                                          500k
-                                        </b>
-                                        <span className="font-light text-lg text-black">
-                                          New users acquired
-                                        </span>
-                                      </div>
+                                    <div className="w-[1px] h-20 bg-black"></div>
+                                    <div className="w-fit flex flex-col">
+                                      <b className="text-3xl text-black">
+                                        500k
+                                      </b>
+                                      <span className="font-light text-lg text-black">
+                                        Available on Playstore & Appstore
+                                      </span>
                                     </div>
                                   </div>
+                                </div>
+                                <Link
+                                  href={`/portfolio/${project.slug}`}
+                                  className="cursor-pointer"
+                                >
                                   <button className="w-fit btn-primary text-white font-normal group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
                                     View Case Study
                                     <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                                   </button>
-                                </div>
-                              </>
-                            )}
-                          </div>
-                        </Link>
+                                </Link>
+                              </div>
+                            </>
+                          )}
+                        </div>
                       );
                     })}
                 </div>

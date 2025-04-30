@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ContactParticles } from "@/component/contact/contactParticles/contactParticles";
 const WeDeliver = dynamic(
   () => import("@/component/common/WeDeliver/WeDeliver")

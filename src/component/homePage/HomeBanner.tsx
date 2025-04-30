@@ -1,10 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
 import { ChevronRight } from "lucide-react";
-import MarqueeSlider from "@/component/common/Marque/Marqueslider";
-import RippleBg from "@/component/common/Ripplebg/Ripplebg";
-import { MagicCardDemo } from "@/component/common/Magiccard/Magiccard";
-import TrustedAcross from "../common/TrustedAcross/TrustedAcross";
-import Link from "next/link";
 import Image from "next/image";
 
 const HomeBanner = () => {
@@ -68,7 +62,7 @@ const HomeBanner = () => {
                   </div>
                 </div>
                 <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer mb-0 sm:mb-56">
-                  <div className= "order-2 sm:order-none bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
+                  <div className="order-2 sm:order-none bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
                     Tester
                     <div className="absolute -top-7 -left-0">
                       <Image
@@ -165,25 +159,47 @@ const HomeBanner = () => {
                 </h1>
               </div>
               <div className="w-full my-3 sm:my-0 lg:w-2/5">
-                <span className="font-semibold sm:font-light text-base sm:text-xl">We are Trusted by</span>
+                <span className="font-semibold sm:font-light text-base sm:text-xl">
+                  We are Trusted by
+                </span>
                 <ul className="flex flex-wrap gap-5  sm:gap-10 sm:gap-y-6 mt-4 sm:mt-6 mb-6 sm:mb-9">
                   <li>
-                    <img className="w-[150px] sm:w-auto" src="/images/trackday.png" alt="" />
+                    <img
+                      className="w-[150px] sm:w-auto"
+                      src="/images/trackday.png"
+                      alt=""
+                    />
                   </li>
                   <li>
-                    <img className="w-[100px] sm:w-auto" src="/images/slick.png" alt="" />
+                    <img
+                      className="w-[100px] sm:w-auto"
+                      src="/images/slick.png"
+                      alt=""
+                    />
                   </li>
                   <li>
-                    <img  src="/images/recovery.png" alt="" />
+                    <img src="/images/recovery.png" alt="" />
                   </li>
                   <li>
-                    <img className="w-[70px] sm:w-auto" src="/images/pilot.png" alt="" />
+                    <img
+                      className="w-[70px] sm:w-auto"
+                      src="/images/pilot.png"
+                      alt=""
+                    />
                   </li>
                   <li>
-                    <img className="w-[110px] sm:w-auto" src="/images/abbsi.png" alt="" />
+                    <img
+                      className="w-[110px] sm:w-auto"
+                      src="/images/abbsi.png"
+                      alt=""
+                    />
                   </li>
                   <li>
-                    <img className="w-[30px] sm:w-auto" src="/images/residence.png" alt="" />
+                    <img
+                      className="w-[30px] sm:w-auto"
+                      src="/images/residence.png"
+                      alt=""
+                    />
                   </li>
                 </ul>
                 <button className=" btn-primary text-sm sm:text-base text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
@@ -195,7 +211,6 @@ const HomeBanner = () => {
           </div>
         </div>
       </section>
-      
 
       {/* <TrustedAcross /> */}
     </>

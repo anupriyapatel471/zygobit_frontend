@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import React, { ReactNode } from "react";
 import Image from "next/image";
@@ -116,7 +117,9 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     />
                   </div>
                   <div className="text-black">
-                    <b className="text-xs inline-block w-full">Project Duration</b>
+                    <b className="text-xs inline-block w-full">
+                      Project Duration
+                    </b>
                     <span className="text-xs">6 months</span>
                   </div>
                 </div>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import * as React from "react";
@@ -61,7 +62,13 @@ export function ChatBotBtn() {
                 type="button"
                 variant="secondary"
               >
-                <Image width={18} height={18} className="w-5 h-5" src="/images/close_chatbot_icon.svg" alt="icon" />
+                <Image
+                  width={18}
+                  height={18}
+                  className="w-5 h-5"
+                  src="/images/close_chatbot_icon.svg"
+                  alt="icon"
+                />
               </Button>
             </div>
           </div>

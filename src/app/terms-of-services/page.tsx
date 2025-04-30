@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { BannerGridBg } from "@/component/common/HeroBanner/BannerGridBg/BannerGridBg";
 import React from "react";
 
@@ -39,7 +40,9 @@ const page = () => {
             </p>
           </div>
           <div className="mb-8">
-            <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">Use of Services</h2>
+            <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">
+              Use of Services
+            </h2>
             <p className="text-sm sm:text-base">
               By using any Services provided on our Site, you agree to abide by
               these terms. Your agreement to these terms applies both personally
@@ -140,7 +143,9 @@ const page = () => {
             </p>
           </div>
           <div className="mb-8">
-            <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">Proprietary Rights</h2>
+            <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">
+              Proprietary Rights
+            </h2>
             <p className="text-sm sm:text-base">
               The Services and Software are proprietary to us and our licensors,
               protected by intellectual property laws. You agree that all
@@ -195,7 +200,9 @@ const page = () => {
             </p>
           </div>
           <div className="mb-8">
-            <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">Pricing Policy</h2>
+            <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">
+              Pricing Policy
+            </h2>
             <p className="text-sm sm:text-base">
               Invoices are issued in USD or INR based on actual usage and sent
               to your registered email on the first of each month. Payments are
@@ -210,7 +217,9 @@ const page = () => {
           Once a prepaid plan is activated, the subscription cost is
           non-refundable and deducted on the first day of each month.
           <div className="mb-8">
-            <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">Products Information</h2>
+            <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">
+              Products Information
+            </h2>
             <p className="text-sm sm:text-base">
               References to products on the Site pertain to those available
               through us. The terms governing the use of our products and

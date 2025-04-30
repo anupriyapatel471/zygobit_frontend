@@ -1,6 +1,7 @@
+"use client";
 import * as React from "react";
 
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -10,38 +11,106 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 
+const testimonials = [
+  {
+    quote:
+      "Zygobit’s team delivered a highly effective solution for our app. They ensured a user-friendly interface and smooth functionality, helping us meet our business goals in no time.",
+    name: "Sasson Moulavi",
+    designation: "ABBSI",
+    src: "/images/abbsi_admin.png",
+    videosrc: "/videos/SampleVideo.mp4",
+  },
+  {
+    quote:
+      "Zygobit’s expertise made the development of our project a seamless experience. They understood our vision and executed it with precision, delivering a fantastic solution.",
+    name: "ellered",
+    designation: "OPSY",
+    src: "/images/opsy_admin.png",
+    videosrc: "/videos/SampleVideo.mp4",
+  },
+  {
+    quote:
+      "The Zygobit team helped us transform our website, combining great design with excellent usability. Their approach exceeded expectations and truly captured the essence of our brand.",
+    name: "Mark",
+    designation: "Inspired Meadows",
+    src: "/images/inspired_admin.jpeg",
+    // videosrc: "/videos/SampleVideo.mp4",
+  },
+  {
+    quote:
+      "Collaborating with Zygobit was a game-changer. Their innovative development strategies helped us create a robust and feature-rich app that perfectly meets the needs of our users.",
+    name: "Alan",
+    designation: "TIA",
+    src: "/images/tia_admin.png",
+    videosrc: "/videos/SampleVideo.mp4",
+  },
+];
+
 export function ClientSlider() {
+  const videoRefs = React.useRef<HTMLVideoElement[]>([]);
+  const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
+
   return (
     <Carousel className="w-full max-w-full">
       <CarouselContent className="ml-0 lg:ml-0 gap-5 lg:gap-9">
-        {Array.from({ length: 5 }).map((_, index) => (
+        {testimonials.map((data, index) => (
           <CarouselItem
             key={index}
             className="pl-1 md:basis-[48%] lg:basis-[382px]"
           >
-            <div className="border-[6px] border-[#FFFFFF38] relative bg-[#FEF8FF36] backdrop-blur-2xl h-[400px] lg:h-[555px] rounded-3xl p-4">
+            <div
+              className="border-[6px] border-[#FFFFFF38] relative bg-[#FEF8FF36] backdrop-blur-2xl h-[400px] lg:h-[555px] rounded-3xl p-4"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              {data.videosrc && (
+                <video
+                  width="600"
+                  height="500"
+                  className="absolute top-0 left-0 w-full h-full object-cover"
+                  loop
+                  playsInline
+                  ref={(el) => {
+                    if (el) videoRefs.current[index] = el;
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.play();
+                    setHoveredIndex(index);
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.pause();
+                    setHoveredIndex(null);
+                  }}
+                >
+                  <source src={data.videosrc} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
               <CardContent className="flex  items-center justify-center p-0">
                 <div className="w-full">
-                  <p className="text-sm sm:text-base text-white">
-                    The scalability and performance have bee game changing for
-                    our organization. Highly recommend to any growing business.
-                  </p>
-                  <div className="flex gap-1.5 max-w-[90%] mx-auto  w-full p-5 items-center absolute bottom-5 left-1/2 -translate-x-1/2 border border-[#F2F2F71A] bg-black/40 rounded-2xl">
-                    <div className="w-14 h-14 overflow-hidden rounded-full relative">
-                      <Image
-                        fill
-                        className="w-full h-full object-cover"
-                        src="/images/client_img.png"
-                        alt="client image"
-                      />
+                  {!data.videosrc && (
+                    <p className="text-sm sm:text-base text-white">
+                      {data.quote}
+                    </p>
+                  )}
+                  {data.videosrc && hoveredIndex !== index && (
+                    <div className="flex gap-1.5 max-w-[90%] mx-auto  w-full p-5 items-center absolute bottom-5 left-1/2 -translate-x-1/2 border border-[#F2F2F71A] bg-black/40 rounded-2xl">
+                      <div className="w-14 h-14 overflow-hidden rounded-full relative">
+                        <Image
+                          fill
+                          className="w-full h-full object-cover"
+                          src={data.src}
+                          alt="client image"
+                        />
+                      </div>
+                      <div>
+                        <h4 className="font-medium uppercase tracking-wide text-sm text-[#E0E0E0]">
+                          {data.name}
+                        </h4>
+                        <p className="font-light text-sm">{data.designation}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-medium uppercase tracking-wide text-sm text-[#E0E0E0]">
-                        john smith
-                      </h4>
-                      <p className="font-light text-sm">Founder & CEO, Kai</p>
-                    </div>
-                  </div>
+                  )}
                 </div>
               </CardContent>
             </div>

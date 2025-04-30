@@ -1,0 +1,57 @@
+{
+  "Frontend": [
+    { "name": "React", "icon": "/images/new_react.svg" },
+    { "name": "Angular", "icon": "/images/new_angular.svg" },
+    { "name": "NextJS", "icon": "/images/new_nextjs.svg" },
+    { "name": "VueJS", "icon": "/images/new_vuejs.svg" },
+    { "name": "JavaScript", "icon": "/images/new_js.svg" },
+    { "name": "HTML", "icon": "/images/new_html.svg" },
+    { "name": "CSS", "icon": "/images/new_css.svg" },
+    { "name": "Meteor", "icon": "/images/new_metor.svg" },
+    { "name": "Ember", "icon": "/images/new_ember.svg" }
+  ],
+  "Backend": [
+    { "name": "Java", "icon": "/images/new_java.svg" },
+    { "name": "NodeJs", "icon": "/images/new_node.svg" },
+    { "name": "php", "icon": "/images/new_php.svg" },
+    { "name": "Python", "icon": "/images/new_python.svg" },
+    { "name": "Go", "icon": "/images/new_go.svg" },
+    { "name": ".NET", "icon": "/images/new_dotnet.svg" }
+  ],
+  "Mobile": [
+    { "name": "Android", "icon": "/images/new_android.svg" },
+    { "name": "Flutter", "icon": "/images/new_flutter.svg" },
+    { "name": "Cordova", "icon": "/images/new_cordova.svg" },
+    { "name": "Ionic", "icon": "/images/new_ionic.svg" },
+    { "name": "iOS", "icon": "/images/new_ios.svg" },
+    { "name": "PWA", "icon": "/images/new_pwa.svg" },
+    { "name": "React Native", "icon": "/images/new_react.svg" },
+    { "name": "Xamarin", "icon": "/images/new_xamarin.svg" }
+  ],
+  "Microsoft": [
+    { "name": "Saleforce", "icon": "/images/new_salesforce.svg" },
+    { "name": "SharePoint", "icon": "/images/new_sharepoint.svg" },
+    { "name": "MicrosoftSQL", "icon": "/images/new_microsoftsql.svg" },
+    { "name": "MySQL", "icon": "/images/new_mysql.svg" },
+    { "name": "PostgreSQL", "icon": "/images/new_postgresql.svg" },
+    { "name": "Oracle", "icon": "/images/new_oracle.svg" },
+    { "name": "MongoDB", "icon": "/images/new_mongodb.svg" }
+  ],
+  "AL & ML": [
+    { "name": "OpenAI", "icon": "/images/new_openai.svg" },
+    { "name": "Meta", "icon": "/images/new_meta.svg" },
+    { "name": "Gemini", "icon": "/images/new_gemini.svg" },
+    { "name": "Pinecone", "icon": "/images/new_pinecone.svg" },
+    { "name": "Grok", "icon": "/images/new_grok.svg" }
+  ],
+  "Devops": [
+    { "name": "Docker", "icon": "/images/new_docker.svg" },
+    { "name": "Kubernetes", "icon": "/images/new_kubernetes.svg" },
+    { "name": "OpenShift", "icon": "/images/new_openshift.svg" },
+    { "name": "Terraform", "icon": "/images/new_terraform.svg" },
+    { "name": "AzureDevOps", "icon": "/images/new_azuredevops.svg" },
+    { "name": "Ansible", "icon": "/images/new_ansible.svg" },
+    { "name": "Puppet", "icon": "/images/new_puppet.svg" },
+    { "name": "Saltstack", "icon": "/images/new_saltstack.svg" }
+  ]
+}

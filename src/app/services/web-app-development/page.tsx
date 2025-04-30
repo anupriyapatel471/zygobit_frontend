@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
@@ -207,7 +208,7 @@ const WebAppDevelopment = () => {
           <div className="container remove-bg">
             <div className="w-full  sm:text-center" data-aos="fade-right">
               <h2 className="text-gradiant-custom-second font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
-              Featured Projects
+                Featured Projects
               </h2>
               <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-4xl sm:mx-auto">
                 Partner with Zygobit for innovative, secure, and scalable mobile
