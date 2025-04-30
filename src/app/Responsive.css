@@ -34,6 +34,22 @@
 }
 
 @media screen and (max-width: 991px) {
+  .custom-apple-slider {
+    padding-left: 16px;
+  }
+  .slick-next {
+    right: 16px !important;
+    left: auto  !important;
+  }
+  .slick-prev, .slick-next {
+    left: auto  !important;
+  }
+  .slick-prev {
+    right: 70px !important;
+  }
+  .slick-dots {
+    display: none;
+  }
   .service-dropdown-active.active-services {
     display: none;
   }
@@ -100,4 +116,7 @@
   .custom-apple-slider {
     padding-left: 16px;
   }
+  .slick-prev, .slick-next {
+    bottom: -75px  !important;
+  }  
 }

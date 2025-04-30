@@ -13,18 +13,18 @@ import Image from "next/image";
 export function ClientSlider() {
   return (
     <Carousel className="w-full max-w-full">
-      <CarouselContent className="ml-0 lg:ml-0  gap-9">
+      <CarouselContent className="ml-0 lg:ml-0 gap-5 lg:gap-9">
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem
             key={index}
-            className="pl-1 md:basis-1/2 lg:basis-[382px]"
+            className="pl-1 md:basis-[48%] lg:basis-[382px]"
           >
-            <div className="border-[6px] border-[#FFFFFF38] relative bg-[#FEF8FF36] backdrop-blur-2xl h-[555px] rounded-3xl p-4">
+            <div className="border-[6px] border-[#FFFFFF38] relative bg-[#FEF8FF36] backdrop-blur-2xl h-[400px] lg:h-[555px] rounded-3xl p-4">
               <CardContent className="flex  items-center justify-center p-0">
                 <div className="w-full">
-                  <p className="text-base text-white">
-                    The scalability and performance have bee game changing
-                    for our organization. Highly recommend to any growing business.
+                  <p className="text-sm sm:text-base text-white">
+                    The scalability and performance have bee game changing for
+                    our organization. Highly recommend to any growing business.
                   </p>
                   <div className="flex gap-1.5 max-w-[90%] mx-auto  w-full p-5 items-center absolute bottom-5 left-1/2 -translate-x-1/2 border border-[#F2F2F71A] bg-black/40 rounded-2xl">
                     <div className="w-14 h-14 overflow-hidden rounded-full relative">
@@ -48,8 +48,8 @@ export function ClientSlider() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="sm:-left-20" />
-      <CarouselNext className="lg:-right-[90px]" />
+      <CarouselPrevious className="w-10 h-10  lg:h-[52px] lg:w-[52px] -bottom-20 sm:-bottom-24 sm:top-auto lg:top-1/2 sm:right-20 sm:left-auto" />
+      <CarouselNext className="w-10 h-10  lg:h-[52px] lg:w-[52px] -bottom-20 sm:-bottom-24 sm:top-auto sm:right-2 lg:top-1/2 lg:-right-[90px]" />
     </Carousel>
   );
 }

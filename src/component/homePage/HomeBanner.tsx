@@ -36,7 +36,7 @@ const HomeBanner = () => {
               </div>
             </div>
             <div className="w-full order-2 sm:order-none relative px-2">
-              <div className="w-full relative h-[250px] sm:h-[420px]">
+              <div className="w-full relative top-7 sm:top-0 h-[250px] sm:h-[420px]">
                 <Image
                   className="w-full  object-contain"
                   fill
@@ -44,8 +44,8 @@ const HomeBanner = () => {
                   alt="Logo"
                 />
               </div>
-              <div className="w-full absolute top-0 left-0 grid grid-cols-3 gap-y-10 sm:gap-y-0 sm:flex items-end justify-between px-4 lg:px-24 pt-4 sm:pt-7">
-                <div className="w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer">
+              <div className="w-full absolute top-6 sm:top-0 left-0 grid grid-cols-3 gap-y-10 sm:gap-y-0 sm:flex items-end justify-between px-0 lg:px-24 pt-0 sm:pt-7">
+                <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer">
                   <div className="move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
@@ -67,8 +67,8 @@ const HomeBanner = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer mb-0 sm:mb-56">
-                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
+                <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer mb-0 sm:mb-56">
+                  <div className= "order-2 sm:order-none bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
                     Tester
                     <div className="absolute -top-7 -left-0">
                       <Image
@@ -80,7 +80,7 @@ const HomeBanner = () => {
                       />
                     </div>
                   </div>
-                  <div className="move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
+                  <div className="order-1 sm:order-none move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -89,7 +89,7 @@ const HomeBanner = () => {
                     />
                   </div>
                 </div>
-                <div className="w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer">
+                <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer">
                   <div className="move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
@@ -111,8 +111,8 @@ const HomeBanner = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-fit relative -left-12 custom-move-animation group flex flex-col items-center justify-center gap-5 transition-all duration-300 cursor-pointer mb-0 sm:mb-56">
-                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
+                <div className="w-full sm:w-fit relative sm:-left-12 custom-move-animation group flex flex-col items-center justify-center gap-5 transition-all duration-300 cursor-pointer mb-0 sm:mb-56">
+                  <div className="bg-[#2A2A2A] order-2 sm:order-none relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
                     Manager
                     <div className="absolute -top-7 -left-0">
                       <Image
@@ -124,7 +124,7 @@ const HomeBanner = () => {
                       />
                     </div>
                   </div>
-                  <div className="move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
+                  <div className="order-1 sm:order-none move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -133,7 +133,7 @@ const HomeBanner = () => {
                     />
                   </div>
                 </div>
-                <div className="w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer">
+                <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer">
                   <div className="move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
@@ -165,8 +165,8 @@ const HomeBanner = () => {
                 </h1>
               </div>
               <div className="w-full my-3 sm:my-0 lg:w-2/5">
-                <span className="font-light text-lg sm:text-xl">We are Trusted by</span>
-                <ul className="flex flex-wrap gap-5  sm:gap-10 sm:gap-y-6 mt-4 sm:mt-6 mb-9">
+                <span className="font-semibold sm:font-light text-base sm:text-xl">We are Trusted by</span>
+                <ul className="flex flex-wrap gap-5  sm:gap-10 sm:gap-y-6 mt-4 sm:mt-6 mb-6 sm:mb-9">
                   <li>
                     <img className="w-[150px] sm:w-auto" src="/images/trackday.png" alt="" />
                   </li>
@@ -174,19 +174,19 @@ const HomeBanner = () => {
                     <img className="w-[100px] sm:w-auto" src="/images/slick.png" alt="" />
                   </li>
                   <li>
-                    <img src="/images/recovery.png" alt="" />
+                    <img  src="/images/recovery.png" alt="" />
                   </li>
                   <li>
-                    <img src="/images/pilot.png" alt="" />
+                    <img className="w-[70px] sm:w-auto" src="/images/pilot.png" alt="" />
                   </li>
                   <li>
-                    <img src="/images/abbsi.png" alt="" />
+                    <img className="w-[110px] sm:w-auto" src="/images/abbsi.png" alt="" />
                   </li>
                   <li>
-                    <img src="/images/residence.png" alt="" />
+                    <img className="w-[30px] sm:w-auto" src="/images/residence.png" alt="" />
                   </li>
                 </ul>
-                <button className=" btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
+                <button className=" btn-primary text-sm sm:text-base text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
                   Build Your Success Story
                   <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                 </button>

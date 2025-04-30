@@ -92,7 +92,7 @@ const Home = async () => {
 
       <section
         data-aos="fade-up"
-        className="w-full  mb-12 sm:mb-20 overflow-hidden"
+        className="w-full mt-[90px] sm:mt-0 mb-12 sm:mb-20 overflow-hidden"
       >
         <div className="container remove-bg">
           <div className="w-full text-center mb-0">

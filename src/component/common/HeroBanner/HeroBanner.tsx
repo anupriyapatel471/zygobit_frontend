@@ -24,12 +24,12 @@ const HeroBanner = ({
                 <h1 className="font-bold relative z-10 text-2xl sm:text-3xl lg:text-5xl lg:leading-[48px]">
                   {heroHeading}
                 </h1>
-                <p className="text-sm sm:text-base relative z-10 max-w-5xl mx-auto sm:font-semibold mt-7">
+                <p className="text-sm sm:text-base relative z-10 max-w-5xl mx-auto sm:font-semibold mt-4 sm:mt-7">
                   {heroParagraph}
                 </p>
                 <div className="lg:max-w-fit mx-auto relative z-10">
                   <Link href="/contact">
-                    <button className="lg:w-full mt-9  btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                    <button className="lg:w-full mt-5 sm:mt-9  btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
                       Book your free consultation
                       <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                     </button>

@@ -362,12 +362,12 @@ const Header = () => {
       </div>
 
       <div>
-        <div className=" fixed bottom-32 left-8 z-50">
+        <div className="scale-75 sm:scale-100 fixed bottom-32 left-8 z-50">
           <ContactBtn />
         </div>
 
         {/* whats app */}
-        <a href="" className="btn-whatsapp-pulse relative z-50">
+        <a href="" className="scale-75 sm:scale-100 btn-whatsapp-pulse relative z-50">
           <Image
             width={25}
             height={25}

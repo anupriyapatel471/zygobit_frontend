@@ -118,7 +118,7 @@ const Footer = () => {
               </ul>
             </div>
           ))}
-          <div className="w-full sm:w-1/4 lg:pl-[90px]">
+          <div className="w-full sm:w-1/4 sm:pl-14  lg:pl-[90px]">
             <h6 className="font-semibold text-sm lg:text-lg mb-4 text-black">
               Company
             </h6>
@@ -149,18 +149,18 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full sm:w-1/4 lg:w-[398px] ">
+          <div className="w-full sm:w-[320px] lg:w-[398px] ">
             <div className="w-full bg-[#F2F2F7] rounded-lg p-4">
               <Label className="text-black font-semibold text-sm block mb-3 sm:text-base lg:text-lg">
                 Join Our Newsletter
               </Label>
               <div className="flex items-center h-10 sm:h-11 lg:h-12 rounded-lg overflow-hidden">
                 <Input
-                  className="bg-white text-sm text-black sm:text-sm lg:text-sm h-full sm:h-full lg:h-full placeholder:text-[#6B6B6B] border-none rounded-none"
+                  className="bg-white  text-sm text-black sm:text-sm lg:text-sm h-10 md:h-11 lg:h-12 placeholder:text-[#6B6B6B] border-none rounded-none"
                   placeholder="Your email address"
                   type="email"
                 />
-                <Button className="h-full bg-orange-600 font-medium text-sm lg:text-sm hover:bg-orange-500 border-none rounded-none">
+                <Button className=" bg-orange-600 font-medium text-sm h-10 sm:h-11 lg:h-12 lg:text-sm hover:bg-orange-500 border-none rounded-none">
                   Subscribe
                 </Button>
               </div>

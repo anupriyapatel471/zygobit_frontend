@@ -18,14 +18,41 @@ export default function IndustriesSlider() {
     speed: 500,
     slidesToShow: 3.1,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 992, 
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 750, // For tablets and small devices
+        settings: {
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 480, // For mobile devices
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+    ],
   };
+  
 
   return (
     <>
       <div className="w-full inline-block">
         <Slider {...settings}>
           <div className="">
-            <div className="w-[415px] h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
+            <div className="w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
               <div className="w-full h-full absolute top-0 left-0 -z-10">
                 <Image
                   fill
@@ -50,16 +77,16 @@ export default function IndustriesSlider() {
               </div>
               <div className="mt-10 w-full">
                 <ul className="flex flex-col gap-4">
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     AI based patient monitoring
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Fraud Detention
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Remote Monitoring
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Analytics
                   </li>
                 </ul>
@@ -67,7 +94,7 @@ export default function IndustriesSlider() {
             </div>
           </div>
           <div className="">
-            <div className="w-[415px] h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
+            <div className="w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
               <div className="w-full h-full absolute top-0 left-0 -z-10">
                 <Image
                   fill
@@ -92,16 +119,16 @@ export default function IndustriesSlider() {
               </div>
               <div className="mt-10 w-full">
                 <ul className="flex flex-col gap-4">
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     AI based patient monitoring
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Fraud Detention
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Remote Monitoring
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Analytics
                   </li>
                 </ul>
@@ -109,7 +136,7 @@ export default function IndustriesSlider() {
             </div>
           </div>
           <div className="">
-            <div className="w-[415px] h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
+            <div className="w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
               <div className="w-full h-full absolute top-0 left-0 -z-10">
                 <Image
                   fill
@@ -134,16 +161,16 @@ export default function IndustriesSlider() {
               </div>
               <div className="mt-10 w-full">
                 <ul className="flex flex-col gap-4">
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     AI based patient monitoring
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Fraud Detention
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Remote Monitoring
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Analytics
                   </li>
                 </ul>
@@ -151,7 +178,7 @@ export default function IndustriesSlider() {
             </div>
           </div>
           <div className="">
-            <div className="w-[415px] h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
+            <div className="w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
               <div className="w-full h-full absolute top-0 left-0 -z-10">
                 <Image
                   fill
@@ -176,16 +203,16 @@ export default function IndustriesSlider() {
               </div>
               <div className="mt-10 w-full">
                 <ul className="flex flex-col gap-4">
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     AI based patient monitoring
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Fraud Detention
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Remote Monitoring
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Analytics
                   </li>
                 </ul>
@@ -193,7 +220,7 @@ export default function IndustriesSlider() {
             </div>
           </div>
           <div className="">
-            <div className="w-[415px] h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
+            <div className="w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
               <div className="w-full h-full absolute top-0 left-0 -z-10">
                 <Image
                   fill
@@ -218,16 +245,16 @@ export default function IndustriesSlider() {
               </div>
               <div className="mt-10 w-full">
                 <ul className="flex flex-col gap-4">
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     AI based patient monitoring
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Fraud Detention
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Remote Monitoring
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Analytics
                   </li>
                 </ul>
@@ -235,7 +262,7 @@ export default function IndustriesSlider() {
             </div>
           </div>
           <div className="">
-            <div className="w-[415px] h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
+            <div className="w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
               <div className="w-full h-full absolute top-0 left-0 -z-10">
                 <Image
                   fill
@@ -260,16 +287,16 @@ export default function IndustriesSlider() {
               </div>
               <div className="mt-10 w-full">
                 <ul className="flex flex-col gap-4">
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     AI based patient monitoring
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Fraud Detention
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Remote Monitoring
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Analytics
                   </li>
                 </ul>
@@ -277,7 +304,7 @@ export default function IndustriesSlider() {
             </div>
           </div>
           <div className="">
-            <div className="w-[415px] h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
+            <div className="w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
               <div className="w-full h-full absolute top-0 left-0 -z-10">
                 <Image
                   fill
@@ -302,16 +329,16 @@ export default function IndustriesSlider() {
               </div>
               <div className="mt-10 w-full">
                 <ul className="flex flex-col gap-4">
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     AI based patient monitoring
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Fraud Detention
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Remote Monitoring
                   </li>
-                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  sm:text-base border-white">
+                  <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                     Analytics
                   </li>
                 </ul>

@@ -21,7 +21,7 @@ const reasons = [
 ];
 const WhyChooseUs = () => {
   return (
-    <section data-aos="fade-up" className="w-full mb-12 sm:mb-20">
+    <section data-aos="fade-up" className="w-full mb-0 sm:mb-20">
       <div className="container remove-bg">
         <div className="w-full sm:text-center mb-5 sm:mb-10">
           <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] text-gradiant-custom-second">Why Choose Us</h2>

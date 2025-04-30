@@ -91,12 +91,19 @@ const Contact = () => {
       <section className="w-full relative text-black pb-12 sm:pb-14 lg:pb-20 bg-[#FFF1ED]">
         <div className="container remove-bg">
           <div className="w-full flex justify-between items-center gap-[196px]">
-            <div className="w-1/3 text-center">
+            <div className="w-1/3 group text-center">
               <Image
                 width={190}
                 height={229}
-                className="w-full mx-auto h-[229px] object-contain"
+                className="w-full group-hover:hidden mx-auto h-[229px] object-contain"
                 src="/images/vector_one.svg"
+                alt="icon"
+              />
+              <Image
+                width={190}
+                height={229}
+                className="w-full hidden group-hover:block mx-auto h-[229px] object-contain"
+                src="/images/vector_ones.svg"
                 alt="icon"
               />
               <div className="inline-block w-full font-bold text-lg pt-2.5 border-t-2 border-orange-600 my-2.5 min-h-[50px]">
@@ -107,12 +114,19 @@ const Contact = () => {
                 Singh Nagar, Punjab,140308
               </p>
             </div>
-            <div className="w-1/3 text-center">
+            <div className="w-1/3 group text-center">
+              <Image  
+                width={190}
+                height={229}
+                className="w-full mx-auto  group-hover:hidden h-[229px] object-contain"
+                src="/images/vector_two.svg"
+                alt="icon"
+              />
               <Image
                 width={190}
                 height={229}
-                className="w-full mx-auto h-[229px] object-contain"
-                src="/images/vector_two.svg"
+                className="w-full hidden group-hover:block mx-auto h-[229px] object-contain"
+                src="/images/vector_threes.svg"
                 alt="icon"
               />
               <div className="inline-block w-full font-bold text-lg pt-2.5 border-t-2 border-orange-600 my-2.5">
@@ -122,12 +136,19 @@ const Contact = () => {
                 541 Windsor Cmns, East Windsor, NJ 08512
               </p>
             </div>
-            <div className="w-1/3 text-center">
+            <div className="w-1/3 group text-center">
               <Image
                 width={190}
                 height={229}
-                className="w-full mx-auto h-[229px] object-contain"
+                className="w-full mx-auto group-hover:hidden h-[229px] object-contain"
                 src="/images/vector_three.svg"
+                alt="icon"
+              />
+              <Image
+                width={190}
+                height={229}
+                className="w-full mx-auto hidden group-hover:block h-[229px] object-contain"
+                src="/images/vector_twos.svg"
                 alt="icon"
               />
               <div className="inline-block w-full font-bold text-lg pt-2.5 border-t-2 border-orange-600 my-2.5">

@@ -172,23 +172,23 @@ const About = () => {
 
       <AboutCta />
 
-      <section className="w-full relative">
+      <section className="w-full relative pt-5 sm:py-0">
         <div className="container remove-bg">
-          <div className="w-full relative flex gap-[215px] justify-between items-center">
-            <div className="font-bold text-[150px] text-themetext absolute top-10 left-[42%] -translate-x-1/2">
+          <div className="w-full relative flex flex-wrap sm:flex-nowrap sm:gap-[105px] lg:gap-[215px] justify-center sm:justify-between items-center">
+            <div className="font-bold order-2 sm:order-none text-[55px] sm:text-[90px] lg:text-[150px] text-themetext sm:absolute sm:top-5 lg:top-10 left-[42%] sm:-translate-x-1/2">
               2025
             </div>
-            <div className="w-[433px]">
+            <div className="w-full order-1 sm:order-none sm:w-[433px]">
               <Image
-                className="w-[433px] h-[372px] object-contain"
+                className="w-full sm:w-[433px] h-[275px] lg:h-[372px] object-contain"
                 width={433}
                 height={372}
                 src="/images/team_work.png"
                 alt="team work image"
               />
             </div>
-            <div className="w-[548px]">
-              <p className="text-sm sm:text-base lg:text-lg text-white mt-8 relative z-10">
+            <div className="text-center sm:text-left w-full order-3 sm:order-none sm:w-[548px]">
+              <p className="text-sm sm:text-base lg:text-lg text-white sm:mt-8 relative z-10">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -201,13 +201,17 @@ const About = () => {
 
       <AboutWeb />
 
-      <GridBoxes
-        GridBoxesHeading={GridBoxesHeading}
-        GridBoxesDetail={GridBoxesDetail}
-        cards={cards}
-      />
+      <div className="sm:-my-5  lg:my-0">
+        <GridBoxes
+          GridBoxesHeading={GridBoxesHeading}
+          GridBoxesDetail={GridBoxesDetail}
+          cards={cards}
+        />
+      </div>
 
-      <AboutWeb />
+      <div className="-mt-5 mb-5 sm:mb-0 sm:mt-0 ">
+        <AboutWeb />
+      </div>
 
       <Suspense fallback={<Loader />}>
         <DeliveringTailored
@@ -216,7 +220,7 @@ const About = () => {
         />
       </Suspense>
 
-      <section className="w-full  mb-0 sm:mb-10 lg:mb-0 pt-10 pb-0 sm:py-12 lg:py-20 relative">
+      <section className="w-full  mb-0 sm:mb-10 lg:mb-0 pt-10 pb-10 sm:py-12 lg:py-20 relative">
         <div className="absolute top-0 left-0 w-full h-full -z-10">
           <img
             className="w-full h-full object-cover"
@@ -229,10 +233,10 @@ const About = () => {
             className="w-full  sm:text-center mb-5 sm:mb-10"
             data-aos="fade-right"
           >
-            <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-6">
+            <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] mb-2 sm:mb-6">
               Our Values
             </h2>
-            <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
+            <p className="text-sm leading-6 sm:leading-normal sm:text-base lg:text-xl sm:font-medium max-w-6xl sm:mx-auto">
               Choose Zygobit for innovative, reliable, and high-quality
               solutions that drive your business forward with cutting-edge
               technology and expert support!

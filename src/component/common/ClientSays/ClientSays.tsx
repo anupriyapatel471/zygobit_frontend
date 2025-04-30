@@ -11,7 +11,7 @@ const ClientSays = ({
 }) => {
   return (
     <>
-      <section className="w-full align-top inline-block py-12  lg:py-14 overflow-hidden bg-[url('/images/client_bg.png')] bg-cover bg-center">
+      <section className="w-full align-top inline-block pt-12 pb-20 sm:pt-14 sm:pb-28  lg:py-14 overflow-hidden bg-[url('/images/client_bg.png')] bg-cover bg-center">
         <div className="container remove-bg">
           <div className="w-full flex items-center justify-center mb-10">
             <div className="w-full  text-center sm:text-center">
@@ -23,7 +23,7 @@ const ClientSays = ({
               </p>
             </div>
           </div>
-          <div className="w-full flex flex-wrap sm:flex-nowrap gap-y-4 sm:gap-5 lg:gap-16 items-center justify-between">
+          <div className="w-full flex  flex-wrap sm:flex-nowrap gap-y-4 sm:gap-5 lg:gap-16 items-center justify-between">
             <div className="w-full  relative">
                 <ClientSlider />
             </div>

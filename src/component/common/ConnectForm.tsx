@@ -207,7 +207,7 @@ const ConnectForm = () => {
             // onChange={handleChange}
             // maxLength={10}
           /> */}
-          <div className="relative">
+          <div className="relative h-10 sm:h-auto">
             <Input
               type="number"
               className="absolute left-0 top-0 opacity-0 w-full h-10 md:h-11 lg:h-12"
@@ -282,7 +282,7 @@ const ConnectForm = () => {
         <div className="w-full">
           <TextArea
             name="projectDetails"
-            className="resize-none w-full text-sm sm:text-base h-16 md:h-20 lg:h-32 border border-white/20 bg-zinc-800 p-3 rounded-md outline-none"
+            className="resize-none w-full text-sm sm:text-base h-20 md:h-20 lg:h-32 border border-white/20 bg-zinc-800 p-3 rounded-md outline-none"
             placeholder="About Project"
             value={formData.projectDetails}
             onChange={handleChange}
