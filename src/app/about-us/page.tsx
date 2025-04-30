@@ -181,10 +181,11 @@ const About = () => {
             </div>
             <div className="w-[548px]">
               <p className="text-sm sm:text-base lg:text-lg text-white mt-8 relative z-10">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. 
+                Zygobit is where innovative ideas and exceptional code converge.
+                We don&apos;t merely create digital products – we design growth,
+                innovation, and user-focused solutions. Collaboration is fuelled
+                by our team of experts that crafts future-proof software that
+                helps businesses to lead, scale, and prevail with certainty.
               </p>
             </div>
           </div>
