@@ -24,9 +24,9 @@ export function ContactBtn() {
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent className="max-w-[90%] lg:max-w-[1150px] rounded-none p-0">
+      <DialogContent className="max-w-[90%] lg:max-w-[1150px] rounded-none p-0 z-[9999]">
         <div className="w-full flex gap-10">
-          <div className="w-2/5 p-5 relative">
+          <div className="hidden sm:inline w-2/5 p-5 relative">
             <Image
               className="w-[325px] object-contain"
               src="/images/form_g.svg"
@@ -36,39 +36,39 @@ export function ContactBtn() {
             />
             <Image src="/images/form_bg.png" fill alt="background image" />
           </div>
-          <div className="w-3/5 p-10 pl-0">
-            <h2 className="font-bold text-[34px] text-black mb-2">
+          <div className="w-full sm:w-3/5 p-4 sm:p-10 sm:pl-0">
+            <h2 className="font-bold text-2xl sm:text-[34px] text-black mb-2">
               Let’s connect to{" "}
               <span className="text-orange-600">succeed your Business!</span>
             </h2>
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Input
                 name="firstName"
-                className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-11 font-normal"
+                className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
                 placeholder="First Name"
                 type="text"
               />
               <Input
                 name="lastName"
-                className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-11 font-normal"
+                className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
                 placeholder="Last Name"
                 type="text"
               />
               <Input
                 name="PhoneNumber"
-                className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-11 font-normal"
+                className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
                 placeholder="Phone Number"
                 type="number"
               />
               <Input
                 name="CompanyName"
-                className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-11 font-normal"
+                className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
                 placeholder="Company Name"
                 type="text"
               />
               <Input
                 name="Budget"
-                className="bg-black/5 placeholder:text-black/60 text-black col-span-1 sm:col-span-2 border-black/20 text-xs lg:text-xs h-11 font-normal"
+                className="bg-black/5 placeholder:text-black/60 text-black col-span-1 sm:col-span-2 border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
                 placeholder="Budget :"
                 type="text"
               />

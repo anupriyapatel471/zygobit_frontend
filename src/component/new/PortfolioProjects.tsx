@@ -90,39 +90,50 @@ const PortfolioProjects = () => {
                       return (
                         <div
                           key={project.id}
-                          className="w-full flex group justify-between items-center gap-10 p-10 relative bg-white z-10 rounded-2xl overflow-hidden"
+                          className="w-full flex flex-wrap lg:flex-nowrap group justify-between items-center gap-4 sm:gap-5 lg:gap-10 p-4 lg:p-10 relative bg-white z-10 rounded-2xl overflow-hidden"
                         >
                           {isEven ? (
                             <>
                               {/* 45% FIRST */}
-                              <div className="w-[45%] flex justify-between items-start flex-col gap-[126px]">
+                              {/* 45% SECOND */}
+                              <div className="order-2 lg:order-none w-full lg:w-[45%] flex justify-between items-start flex-col gap-5 sm:gap-10 lg:gap-[126px]">
                                 <div>
-                                  <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
+                                  <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-2 sm:border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
                                     {project.projectName}
                                   </div>
-                                  <p className="line-clamp-4 sm:line-clamp-5 text-sm sm:text-base lg:text-lg text-black mt-3.5">
+                                  <p className="line-clamp-4 sm:line-clamp-5 text-sm  lg:text-lg text-black mt-1 sm:mt-2 lg:mt-3.5">
                                     {project.description}
                                   </p>
                                   <div className="mt-6 flex gap-5 items-center">
                                     <div className="w-fit flex flex-col">
-                                      <b className="text-3xl text-black">
+                                      <b className="text-2xl sm:text-3xl text-black">
                                         {project.androidDownloads &&
                                           formatDownloads(
                                             project?.androidDownloads
                                           )}
                                       </b>
-                                      <span className="font-light text-lg text-black">
+                                      <span className="font-light text-base sm:text-lg text-black">
                                         App downloads
                                       </span>
                                     </div>
                                     <div className="w-[1px] h-20 bg-black"></div>
-                                    <div className="w-fit flex flex-col">
-                                      <b className="text-3xl text-black">
-                                        500k
-                                      </b>
-                                      <span className="font-light text-lg text-black">
-                                        Available on Playstore & Appstore
-                                      </span>
+                                    <div className="w-fit flex gap-2.5 flex-col">
+                                      <Link href="" target="_blank">
+                                        <Image
+                                          width={100}
+                                          height={29}
+                                          src="/images/playstore.svg"
+                                          alt="image"
+                                        />
+                                      </Link>
+                                      <Link href="" target="_blank">
+                                        <Image
+                                          width={100}
+                                          height={29}
+                                          src="/images/applestore.svg"
+                                          alt="image"
+                                        />
+                                      </Link>
                                     </div>
                                   </div>
                                 </div>
@@ -138,14 +149,14 @@ const PortfolioProjects = () => {
                               </div>
 
                               {/* 55% SECOND */}
-                              <div className="w-[55%] relative">
-                                <div className="relative w-full h-[500px]">
+                              <div className="order-1 lg:order-none w-full lg:w-[55%] relative">
+                                <div className="relative w-full h-[265px] sm:h-[370px] lg:h-[500px]">
                                   <Image
                                     fill
                                     src="/images/her_cal.png"
                                     alt="image"
                                   />
-                                  <div className="w-[465px] h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                  <div className="w-full lg:w-[465px] h-[170px] sm:h-[320px] lg:h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                     {project.mobileImage && (
                                       <img
                                         className="w-full h-full object-contain"
@@ -160,14 +171,14 @@ const PortfolioProjects = () => {
                           ) : (
                             <>
                               {/* 55% FIRST */}
-                              <div className="w-[55%] relative">
-                                <div className="relative w-full h-[500px]">
+                              <div className="order-1 lg:order-none w-full lg:w-[55%] relative">
+                                <div className="relative w-full h-[265px] sm:h-[370px] lg:h-[500px]">
                                   <Image
                                     fill
                                     src="/images/her_cal.png"
                                     alt="image"
                                   />
-                                  <div className="w-[465px] h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                  <div className="w-full lg:w-[465px] h-[170px] sm:h-[320px] lg:h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                     {project.mobileImage && (
                                       <img
                                         className="w-full h-full object-contain"
@@ -180,34 +191,44 @@ const PortfolioProjects = () => {
                               </div>
 
                               {/* 45% SECOND */}
-                              <div className="w-[45%] flex justify-between items-start flex-col gap-[126px]">
+                              <div className="order-2 lg:order-none w-full lg:w-[45%] flex justify-between items-start flex-col gap-5 sm:gap-10 lg:gap-[126px]">
                                 <div>
-                                  <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
+                                  <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-2 sm:border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
                                     {project.projectName}
                                   </div>
-                                  <p className="line-clamp-4 sm:line-clamp-5 text-sm sm:text-base lg:text-lg text-black mt-3.5">
+                                  <p className="line-clamp-4 sm:line-clamp-5 text-sm  lg:text-lg text-black mt-1 sm:mt-2 lg:mt-3.5">
                                     {project.description}
                                   </p>
                                   <div className="mt-6 flex gap-5 items-center">
                                     <div className="w-fit flex flex-col">
-                                      <b className="text-3xl text-black">
+                                      <b className="text-2xl sm:text-3xl text-black">
                                         {project.androidDownloads &&
                                           formatDownloads(
                                             project?.androidDownloads
                                           )}
                                       </b>
-                                      <span className="font-light text-lg text-black">
+                                      <span className="font-light text-base sm:text-lg text-black">
                                         App downloads
                                       </span>
                                     </div>
                                     <div className="w-[1px] h-20 bg-black"></div>
-                                    <div className="w-fit flex flex-col">
-                                      <b className="text-3xl text-black">
-                                        500k
-                                      </b>
-                                      <span className="font-light text-lg text-black">
-                                        Available on Playstore & Appstore
-                                      </span>
+                                    <div className="w-fit flex gap-2.5 flex-col">
+                                      <Link href="" target="_blank">
+                                        <Image
+                                          width={100}
+                                          height={29}
+                                          src="/images/playstore.svg"
+                                          alt="image"
+                                        />
+                                      </Link>
+                                      <Link href="" target="_blank">
+                                        <Image
+                                          width={100}
+                                          height={29}
+                                          src="/images/applestore.svg"
+                                          alt="image"
+                                        />
+                                      </Link>
                                     </div>
                                   </div>
                                 </div>

@@ -52,7 +52,7 @@ const page = () => {
               subscribing to the Services on behalf of an organization or
               corporate entity, you represent and warrant that:
             </p>
-            <ul className="list-disc list-inside pl-4 mt-2">
+            <ul className="list-disc text-sm sm:text-base list-inside pl-4 mt-2">
               <li>
                 (A) you have reached the age of majority in your jurisdiction;
               </li>
@@ -89,7 +89,7 @@ const page = () => {
               business needs. Without our express written permission, you are
               prohibited from:
             </p>
-            <ul className="list-disc list-inside pl-4 mt-2">
+            <ul className="list-disc text-sm sm:text-base list-inside pl-4 mt-2">
               <li>
                 (i) storing, copying, modifying, or distributing any content
                 from our Services ("Service Content") or compiling it into a
@@ -214,8 +214,11 @@ const page = () => {
               responsible for all applicable taxes.
             </p>
           </div>
-          Once a prepaid plan is activated, the subscription cost is
-          non-refundable and deducted on the first day of each month.
+         
+         <div>
+          <p className="text-sm sm:text-base"> Once a prepaid plan is activated, the subscription cost is
+          non-refundable and deducted on the first day of each month.</p>
+         </div>
           <div className="mb-8">
             <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">
               Products Information

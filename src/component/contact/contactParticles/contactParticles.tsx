@@ -23,10 +23,10 @@ export function ContactParticles() {
           />
         </div>
         <div className="container remove-bg">
-          <div className="w-full grid items-center bg-white/5 rounded-2xl lg:rounded-3xl grid-cols-1 lg:grid-cols-2 gap-8 p-4 sm:p-10">
+          <div className="w-full grid items-center bg-white/5 rounded-2xl lg:rounded-3xl grid-cols-1 lg:grid-cols-2 gap-8 p-4 lg:p-10">
             <div
               data-aos="fade-left"
-              className="w-auto relative hidden sm:inline"
+              className="w-auto relative hidden lg:inline"
             >
               <Image
                 className="rounded-2xl lg:h-[715px] object-cover"

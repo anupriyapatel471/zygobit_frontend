@@ -40,7 +40,7 @@ const page = () => {
             <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">
               Information We Collect
             </h2>
-            <p>
+            <p className="text-sm sm:text-base">
               When you interact with our website, you may be asked to provide
               certain details such as your name, email address, phone number, or
               other information to enhance your user experience.
@@ -51,7 +51,7 @@ const page = () => {
             <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">
               When Do We Collect Information?
             </h2>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc text-sm sm:text-base list-inside">
               <li>When you sign up for our newsletter</li>
               <li>When you fill out forms on our site</li>
               <li>When you share information during site interactions</li>
@@ -62,7 +62,7 @@ const page = () => {
             <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">
               How We Use Your Information
             </h2>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc text-sm sm:text-base list-inside">
               <li>
                 To customize your experience and provide content or product
                 recommendations tailored to your interests.
@@ -81,13 +81,13 @@ const page = () => {
             <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">
               Data Security Measures
             </h2>
-            <p>
+            <p className="text-sm sm:text-base">
               We are committed to protecting your personal information and
               adhere to the Information Technology (Reasonable Security
               Practices and Procedures and Sensitive Personal Data or
               Information) Rules, 2011. Our measures include:
             </p>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc  text-sm sm:text-baselist-inside">
               <li>
                 Using collected data only for lawful and legitimate purposes.
               </li>
@@ -100,7 +100,7 @@ const page = () => {
 
           <div className="mb-8">
             <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">Third-Party Sharing</h2>
-            <p>
+            <p className="text-sm sm:text-base">
               We do not sell, trade, or otherwise share your personally
               identifiable information with external parties, except when
               required by Indian law or necessary to fulfill legal obligations.
@@ -111,7 +111,7 @@ const page = () => {
             <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">
               Links to External Sites
             </h2>
-            <p>
+            <p className="text-sm sm:text-base">
               Our website does not include or promote third-party products or
               services.
             </p>
@@ -119,7 +119,7 @@ const page = () => {
 
           <div className="mb-8">
             <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">Use of Trademarks</h2>
-            <p>
+            <p className="text-sm sm:text-base">
               References to trademarked terms on this site are for descriptive
               purposes only and remain the property of their respective owners.
               All code and design elements are the original work of our in-house
@@ -130,7 +130,7 @@ const page = () => {
 
           <div className="mb-8">
             <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">Google Services</h2>
-            <p>
+            <p className="text-sm sm:text-base">
               We adhere to Google’s Advertising Principles to ensure a positive
               experience for users. With the assistance of third-party vendors
               like Google, we utilize tools such as Google Analytics to analyze
@@ -140,7 +140,7 @@ const page = () => {
 
           <div className="mb-8">
             <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">Opt-Out Options</h2>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc text-sm sm:text-base list-inside">
               <li>
                 Adjust your Google Ad preferences via the Google Ad Settings
                 page.
@@ -155,7 +155,7 @@ const page = () => {
 
           <div>
             <h2 className="text-base sm:text-lg lg:text-2xl font-bold mb-4 border-b border-white w-fit ">Contact Us</h2>
-            <p>
+            <p className="text-sm sm:text-base">
               If you have questions or need further clarification regarding this
               Privacy Policy, feel free to reach out to us through our official
               communication channels. We are here to assist you.

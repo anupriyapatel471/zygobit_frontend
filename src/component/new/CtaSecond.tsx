@@ -14,7 +14,7 @@ interface ctaProp {
 const CtaSecond = ({ content, Aurora, vortex }: ctaProp) => {
   return (
     <>
-      <section className="w-full relative my-12 sm:my-14 lg:my-32">
+      <section className="w-full relative my-20 sm:my-14 lg:my-32">
         <div className="container remove-bg">
           <div className="w-full relative">
             <div className="w-full  absolute top-1/2 -translate-y-1/2 left-0 -z-10">

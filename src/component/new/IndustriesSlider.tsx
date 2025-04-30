@@ -49,10 +49,10 @@ export default function IndustriesSlider() {
 
   return (
     <>
-      <div className="w-full inline-block">
+      <div className="w-full inline-block pr-4 sm:pr-0">
         <Slider {...settings}>
           <div className="">
-            <div className="w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
+            <div className="w-full sm:w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
               <div className="w-full h-full absolute top-0 left-0 -z-10">
                 <Image
                   fill
@@ -94,7 +94,7 @@ export default function IndustriesSlider() {
             </div>
           </div>
           <div className="">
-            <div className="w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
+            <div className="w-full sm:w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
               <div className="w-full h-full absolute top-0 left-0 -z-10">
                 <Image
                   fill
@@ -136,7 +136,7 @@ export default function IndustriesSlider() {
             </div>
           </div>
           <div className="">
-            <div className="w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
+            <div className="w-full sm:w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
               <div className="w-full h-full absolute top-0 left-0 -z-10">
                 <Image
                   fill
@@ -178,7 +178,7 @@ export default function IndustriesSlider() {
             </div>
           </div>
           <div className="">
-            <div className="w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
+            <div className="w-full sm:w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
               <div className="w-full h-full absolute top-0 left-0 -z-10">
                 <Image
                   fill
@@ -220,7 +220,7 @@ export default function IndustriesSlider() {
             </div>
           </div>
           <div className="">
-            <div className="w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
+            <div className="w-full sm:w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
               <div className="w-full h-full absolute top-0 left-0 -z-10">
                 <Image
                   fill
@@ -262,7 +262,7 @@ export default function IndustriesSlider() {
             </div>
           </div>
           <div className="">
-            <div className="w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
+            <div className="w-full sm:w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
               <div className="w-full h-full absolute top-0 left-0 -z-10">
                 <Image
                   fill
@@ -304,7 +304,7 @@ export default function IndustriesSlider() {
             </div>
           </div>
           <div className="">
-            <div className="w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
+            <div className="w-full sm:w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
               <div className="w-full h-full absolute top-0 left-0 -z-10">
                 <Image
                   fill

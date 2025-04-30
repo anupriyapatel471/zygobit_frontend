@@ -12,7 +12,7 @@
   ],
   "Backend": [
     { "name": "Java", "icon": "/images/new_java.svg" },
-    { "name": "NodeJs", "icon": "/images/new_node.svg" },
+    { "name": "NodeJs", "icon": "/images/new_nodejs.svg" },
     { "name": "php", "icon": "/images/new_php.svg" },
     { "name": "Python", "icon": "/images/new_python.svg" },
     { "name": "Go", "icon": "/images/new_go.svg" },
@@ -21,11 +21,11 @@
   "Mobile": [
     { "name": "Android", "icon": "/images/new_android.svg" },
     { "name": "Flutter", "icon": "/images/new_flutter.svg" },
-    { "name": "Cordova", "icon": "/images/new_cordova.svg" },
+    { "name": "Cordova", "icon": "/images/new_cardova.svg" },
     { "name": "Ionic", "icon": "/images/new_ionic.svg" },
     { "name": "iOS", "icon": "/images/new_ios.svg" },
     { "name": "PWA", "icon": "/images/new_pwa.svg" },
-    { "name": "React Native", "icon": "/images/new_react.svg" },
+    { "name": "React Native", "icon": "/images/new_reactnative.svg" },
     { "name": "Xamarin", "icon": "/images/new_xamarin.svg" }
   ],
   "Microsoft": [
@@ -50,6 +50,7 @@
     { "name": "OpenShift", "icon": "/images/new_openshift.svg" },
     { "name": "Terraform", "icon": "/images/new_terraform.svg" },
     { "name": "AzureDevOps", "icon": "/images/new_azuredevops.svg" },
+    { "name": "OpenShift", "icon": "/images/new_openshift.svg" },
     { "name": "Ansible", "icon": "/images/new_ansible.svg" },
     { "name": "Puppet", "icon": "/images/new_puppet.svg" },
     { "name": "Saltstack", "icon": "/images/new_saltstack.svg" }

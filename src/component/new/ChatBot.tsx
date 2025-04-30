@@ -26,7 +26,7 @@ export function ChatBotBtn() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         {/* chat bot btn*/}
-        <Button className="bg-transparent hover:bg-transparent border-none p-0 w-auto h-auto fixed bottom-8 right-8 z-50">
+        <Button className="bg-transparent hover:bg-transparent border-none p-0 w-auto h-auto fixed bottom-8 right-4 sm:right-8 z-50">
           <Image
             width={36}
             height={40}
@@ -36,9 +36,9 @@ export function ChatBotBtn() {
           />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-[465px] right-10 rounded-2xl relative p-4 sm:p-5">
+      <DropdownMenuContent className="w-full sm:w-[465px] right-5 sm:right-10 rounded-2xl relative p-4 sm:p-5">
         <div className="w-full">
-          <div className="w-full relative rounded-2xl bg-[#EA580C] flex gap-5 items-center p-5">
+          <div className="w-full relative rounded-2xl bg-[#EA580C] flex gap-5 items-center p-3 sm:p-5">
             <div className="relative">
               <Image
                 width={28}
@@ -49,14 +49,14 @@ export function ChatBotBtn() {
               />
             </div>
             <div>
-              <h4 className="font-semibold text-lg text-white">
+              <h4 className="font-semibold text-base sm:text-lg text-white">
                 Talk to Zygobit
               </h4>
               <p className="font-medium text-xs mt-0.5 text-white">
                 Usual reply time: 2 to 3 minutes
               </p>
             </div>
-            <div className="absolute top-4 right-5">
+            <div className="absolute top-2 sm:top-4 right-4 sm:right-5">
               <Button
                 className="bg-transparent border-none p-0 hover:bg-transparent"
                 type="button"
@@ -83,7 +83,7 @@ export function ChatBotBtn() {
                   alt="icon"
                 />
               </div>
-              <div className="font-normal text-[#8E8E93] py-5 px-4 w-fit text-sm sm:text-sm bg-[#F2F2F7] rounded-bl-none rounded-3xl">
+              <div className="font-normal text-[#8E8E93] py-2.5 sm:py-5 px-2 sm:px-4 w-fit text-xs sm:text-sm bg-[#F2F2F7] rounded-bl-none rounded-3xl">
                 Hi! I am ChatBot. Welcome to Zygobit.
               </div>
             </div>

@@ -37,22 +37,22 @@ const TechnologyStack = () => {
               {Object.entries(technologyData).map(([category, techList]) => (
                 <TabsContent key={category} value={category}>
                   <div className="w-full bg-[#FF71461A] rounded-2xl sm:h-[650px] p-4 sm:p-10">
-                    <div className="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-y-10 gap-[70px]">
+                    <div className="w-full grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-y-5 sm:gap-y-10 gap-11 sm:gap-[70px]">
                       {techList.map((tech, i: number) => (
                         <div
                           key={i}
-                          className="w-fit flex flex-col items-center justify-center gap-4"
+                          className="w-full sm:w-fit flex flex-col items-center justify-center gap-2 sm:gap-4"
                         >
                           <div>
                             <Image
                               width={100}
                               height={100}
-                              className="w-24 h-24"
+                              className="w-20 h-20 sm:w-24 sm:h-24"
                               src={tech.icon}
                               alt="icon"
                             />
                           </div>
-                          <span className="text-black text-base sm:text-lg">
+                          <span className="text-black text-sm sm:text-base lg:text-lg">
                             {tech.name}
                           </span>
                         </div>
