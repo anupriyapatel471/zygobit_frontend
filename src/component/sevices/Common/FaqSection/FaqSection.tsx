@@ -14,7 +14,7 @@ const FaqSection = ({ faqData }: FaqProps) => {
     <>
       <section className="w-full   pb-12 sm:pb-14 lg:pb-20">
         <div className="container remove-bg">
-          <div className="w-full pt-10 pb-8 sm:pb-14 text-center">
+          <div className="w-full  pb-5 sm:pb-10 text-center">
             <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom-second">
               Frequently Asked Questions
             </h2>

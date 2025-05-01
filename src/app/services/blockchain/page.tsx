@@ -65,6 +65,7 @@ import AboutWeb from "@/component/new/AboutWeb";
 import FeaturedSlider from "@/component/common/Featuredslider/Featuredslider";
 import StebTab from "@/component/new/Steptab";
 import DeliveringTailored from "@/component/common/DeliveringTailored/DeliveringTailored";
+import webAppOneJson from "../../../utils/content/boxreveals/webAppOne.json";
 
 export const metadata: Metadata = {
   title: "Web Development",
@@ -122,16 +123,16 @@ const WebAppDevelopment = () => {
 
       <section className="w-full custom-apple-slider  bg-white py-12 sm:py-14 lg:py-20">
         <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
-          <div className="w-full lg:w-[40%]">
+          <div className="w-full lg:w-2/5">
             <BoostBussiness heading={heading} paragraph={paragraph} />
             <Link href="/contact">
-              <button className="mt-10 btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
+              <button className="mt-3 sm:mt-5 lg:mt-10 btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
                 Get Assistance{" "}
                 <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
               </button>
             </Link>
           </div>
-          <div className="w-full lg:w-[60%]">
+          <div className="w-full lg:w-3/5">
             <div className="w-full">
               <AppleCardsCarousel />
             </div>
@@ -139,7 +140,7 @@ const WebAppDevelopment = () => {
         </div>
       </section>
 
-      <AboutWeb />
+      <AboutWeb data={webAppOneJson} />
 
       <StebTab />
 

@@ -16,7 +16,7 @@ const TechnologyStack = () => {
         className="w-full relative overflow-hidden py-10 sm:py-14 lg:py-20 bg-white"
       >
         <div className="container remove-bg">
-          <div className="w-full text-center mb-5 sm:mb-9 lg:mb-10">
+          <div className="w-full sm:text-center mb-5 sm:mb-9 lg:mb-10">
             <h2 className="text-2xl sm:text-3xl  font-bold text-black lg:text-[38px] ">
               Technology Stack
             </h2>
@@ -24,9 +24,9 @@ const TechnologyStack = () => {
           <div className="w-full">
             <Tabs
               defaultValue="Frontend"
-              className="w-full flex flex-wrap sm:flex-nowrap items-center gap-5 sm:gap-10"
+              className="w-full flex flex-wrap lg:flex-nowrap items-center gap-5 sm:gap-10"
             >
-              <TabsList className="grid grid-cols-2 sm:grid-cols-1 w-full sm:w-[240px] gap-5 sm:gap-10 text-black">
+              <TabsList className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 w-full lg:w-[240px] gap-5 lg:gap-10 text-black">
                 <TabsTrigger value="Frontend">Frontend</TabsTrigger>
                 <TabsTrigger value="Backend">Backend</TabsTrigger>
                 <TabsTrigger value="Mobile">Mobile</TabsTrigger>
@@ -36,7 +36,7 @@ const TechnologyStack = () => {
               </TabsList>
               {Object.entries(technologyData).map(([category, techList]) => (
                 <TabsContent key={category} value={category}>
-                  <div className="w-full bg-[#FF71461A] rounded-2xl sm:h-[650px] p-4 sm:p-10">
+                  <div className="w-full bg-[#FF71461A] rounded-2xl lg:h-[650px] p-4 sm:p-10">
                     <div className="w-full grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-y-5 sm:gap-y-10 gap-11 sm:gap-[70px]">
                       {techList.map((tech, i: number) => (
                         <div

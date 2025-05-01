@@ -139,38 +139,82 @@ const MachineLearning = () => {
     );
   };
 
+  // const cards = [
+  //   {
+  //     id: 1,
+  //     content: <SkeletonOne />,
+  //     className: "md:col-span-3 cursor-pointer",
+  //     title: "Proven AI Expertise",
+  //     thumbnail: "/images/Proven_expertise.png",
+  //   },
+  //   {
+  //     id: 2,
+  //     content: <SkeletonTwo />,
+  //     className: "md:col-span-2 cursor-pointer",
+  //     title: "Scalable AI Solutions",
+
+  //     thumbnail: "/images/Scalable_solution.png",
+  //   },
+  //   {
+  //     id: 3,
+  //     content: <SkeletonThree />,
+  //     className: "md:col-span-2 cursor-pointer",
+  //     title: "Intelligent User Experience",
+
+  //     thumbnail: "/images/User_centric.png",
+  //   },
+  //   {
+  //     id: 4,
+  //     content: <SkeletonFour />,
+  //     className: "md:col-span-3 cursor-pointer",
+  //     title: "Seamless AI Integration",
+  //     thumbnail: "/images/seamless_interaction.jpg",
+  //   },
+  // ];
+
   const cards = [
     {
       id: 1,
-      content: <SkeletonOne />,
-      className: "md:col-span-3 cursor-pointer",
-      title: "Proven AI Expertise",
+      title: "Proven Expertise",
+      content:
+        "Harness the power of AI-driven solutions tailored to optimize your business operations, enhance decision-making, and drive innovation.",
+      className: "sm:col-span-2",
+      bgClass: "bg-black/70",
       thumbnail: "/images/Proven_expertise.png",
+      boxIcon: "/images/setting_icon.svg",
     },
     {
       id: 2,
-      content: <SkeletonTwo />,
-      className: "md:col-span-2 cursor-pointer",
-      title: "Scalable AI Solutions",
-
+      title: "Scalable Solutions",
+      content:
+        " Deploy AI models that grow with your business, ensuring efficiency, automation , and seamless adaptability to changing demands.",
+      className: "",
+      bgClass: "bg-orange-600",
       thumbnail: "/images/Scalable_solution.png",
+      boxIcon: "/images/black_arrow.svg",
     },
     {
       id: 3,
-      content: <SkeletonThree />,
-      className: "md:col-span-2 cursor-pointer",
-      title: "Intelligent User Experience",
-
+      title: "User-Centric Design",
+      content:
+        " Enhance customer interactions with AI-powered personalization, predictive analytics, and smart automation for a seamless digital experience.",
+      className: "",
+      bgClass: "bg-orange-600",
       thumbnail: "/images/User_centric.png",
+      boxIcon: "/images/pen_icon.svg",
     },
     {
       id: 4,
-      content: <SkeletonFour />,
-      className: "md:col-span-3 cursor-pointer",
-      title: "Seamless AI Integration",
+      title: "Seamless Interactions",
+      content:
+        "Integrate cutting-edge AI and ML models into your existing systems, enabling real-time data processing, automation, and intelligent insights.",
+      className: "sm:col-span-2",
+      bgClass: "bg-black/70",
+      boxIcon: "/images/repeat.svg",
       thumbnail: "/images/seamless_interaction.jpg",
     },
   ];
+
   return (
     <>
       <AOSInitializer />
@@ -237,7 +281,7 @@ const MachineLearning = () => {
         <section className="w-full  py-12 sm:py-14 lg:py-20">
           <div className="container remove-bg">
             <div className="w-full  sm:text-center " data-aos="fade-right">
-              <h2 className="text-gradiant-custom-second font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-6">
+              <h2 className="text-gradiant-custom-second font-bold text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3 lg:mb-5">
                 Leverage AI & Machine Learning to Stay Ahead.
               </h2>
               <p className="text-sm leading-6 sm:leading-normal sm:text-lg lg:text-xl sm:font-medium">
@@ -246,7 +290,7 @@ const MachineLearning = () => {
                 enabling secure and instant transactions.
               </p>
             </div>
-            <div className="w-full  mt-8 sm:mt-12 lg:mt-16">
+            <div className="w-full  mt-8 sm:mt-8 lg:mt-10">
               <AwareHoverCards />
             </div>
           </div>
@@ -291,7 +335,7 @@ const MachineLearning = () => {
       </Suspense>
 
       <Suspense fallback={<Loader />}>
-        <div className="mt-12 sm:mt-0">
+        <div className="mt-12 sm:mt-0 -mb-10">
           <GridBoxes
             GridBoxesDetail={GridBoxesDetail}
             GridBoxesHeading={GridBoxesHeading}

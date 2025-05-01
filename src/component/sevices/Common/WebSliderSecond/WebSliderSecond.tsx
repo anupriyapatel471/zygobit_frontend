@@ -16,24 +16,24 @@ interface EngagementModel {
   image?: string;
 }
 
-export function WebSlider({
+export default function WebSliderSecond({
   engagementModels,
 }: {
   engagementModels: EngagementModel[];
 }) {
   return (
     <Carousel className="pr-4 sm:pr-0 w-full">
-      <CarouselContent className=" lg:ml-0 gap-5 lg:gap-10">
+      <CarouselContent className="pb-3 lg:pb-0 lg:ml-0 gap-5 lg:gap-10">
         {engagementModels.map((model, index) => (
           <CarouselItem key={index} className="max-w-[600px] lg:max-w-[580px]">
             <div className="border-none">
-              <Card className="border-[#686868] border p-0 bg-[#1E1E1E] rounded-2xl">
+              <Card className="border-[#C4C4C4] border p-0 bg-white rounded-2xl">
                 <CardContent className="p-0 sm:px-4 lg:p-0 flex  items-center justify-center">
-                  <div className="w-full h-[300px] sm:h-auto text-white relative p-4 sm:p-5 overflow-hidden rounded-2xl">
-                    <h3 className="relative z-10 font-semibold text-xl sm:text-2xl line-clamp-1">
+                  <div className="w-full h-auto sm:h-auto text-black relative p-4 sm:p-5 overflow-hidden rounded-2xl">
+                    <h3 className="relative z-10 font-semibold text-black text-xl sm:text-2xl line-clamp-1">
                       {model.title}
                     </h3>
-                    <p className="relative z-10 text-sm sm:text-base sm:leading-8 sm:min-h-16 my-4 line-clamp-2">
+                    <p className="relative z-10 text-sm sm:text-base text-black sm:leading-8 sm:min-h-16 my-4 line-clamp-2">
                       {model.description}
                     </p>
                     <ul className=" relative z-10 list-disc h-auto inline-block overflow-x-hidden bg-transparent pl-5 text-sm sm:text-base space-y-2">
@@ -48,8 +48,8 @@ export function WebSlider({
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="web_previous_btn" />
-      <CarouselNext className="web_next_btn" />
+      <CarouselPrevious className="border border-orange-600 web_previous_btn" />
+      <CarouselNext className="border border-orange-600 web_next_btn" />
     </Carousel>
   );
 }

@@ -82,13 +82,13 @@
   .web_previous_btn {
     bottom: auto !important;
     top: -30px !important;
-    right: 50px !important;
+    right: 65px !important;
   }
 
   .web_next_btn {
     bottom: auto !important;
     top: -30px !important;
-    right: 0 !important;
+    right: 15px !important;
   }
 
   .tabsContainer {

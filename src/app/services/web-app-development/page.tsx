@@ -63,6 +63,7 @@ import AppleCardsCarousel from "@/component/sevices/MobileAppDevelopment/AppleCa
 import BoostBussiness from "@/component/sevices/Common/BoostBussiness/BoostBussiness";
 import AboutWeb from "@/component/new/AboutWeb";
 import FeaturedSlider from "@/component/common/Featuredslider/Featuredslider";
+import webAppOneJson from "../../../utils/content/boxreveals/webAppOne.json";
 
 export const metadata: Metadata = {
   title: "Web Development",
@@ -118,7 +119,7 @@ const WebAppDevelopment = () => {
           <div className="w-full lg:w-[40%]">
             <BoostBussiness heading={heading} paragraph={paragraph} />
             <Link href="/contact">
-              <button className="mt-10 btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
+              <button className="mt-3 sm:mt-3 lg:mt-10 btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
                 Get Assistance{" "}
                 <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
               </button>
@@ -132,7 +133,7 @@ const WebAppDevelopment = () => {
         </div>
       </section>
 
-      <AboutWeb />
+      <AboutWeb data={webAppOneJson} />
 
       <ApplicationAgeny data={applicationAgencyData} />
 
@@ -150,14 +151,14 @@ const WebAppDevelopment = () => {
             <h2 className="text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom-second font-bold">
               Proven Strategies for Robust Web Solutions
             </h2>
-            <p className="sm:font-medium max-w-6xl mx-auto text-sm sm:text-lg lg:text-xl mt-3">
+            <p className="sm:font-medium max-w-6xl mx-auto text-sm sm:text-lg lg:text-xl mt-1.5 sm:mt-3">
               Here are the key principles we follow to deliver top-notch web
               development solutions. Whether you need a responsive website, a
               scalable web application, or an enterprise-grade platform, we
               ensure excellence at every step.
             </p>
           </div>
-          <div className="w-full  mt-10 mb-0 sm:my-10">
+          <div className="w-full mt-5 sm:mt-10 mb-0 sm:my-10">
             <CardSpotlights />
           </div>
           <div className="w-full flex justify-center mt-5 sm:mt-14">
@@ -180,7 +181,7 @@ const WebAppDevelopment = () => {
               <h2 className="text-2xl sm:text-3xl lg:text-[38px] text-gradiant-custom-second font-bold">
                 Zygobit: Pioneering Custom Web App Development
               </h2>
-              <p className="sm:font-medium  text-sm sm:text-lg lg:text-xl mt-5">
+              <p className="sm:font-medium  text-sm sm:text-lg lg:text-xl mt-2 sm:mt-5">
                 Empowering businesses with innovative web applications, our
                 expert developers craft high-performance solutions to enhance
                 efficiency, scalability, and profitability.
@@ -190,7 +191,7 @@ const WebAppDevelopment = () => {
               <CustomWebCards />
             </div>
             <div className="w-full  flex justify-center items-center">
-              <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+              <button className="mt-4 sm:mt-7 lg:mt-10 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
                 Build Your App Today!{" "}
                 <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
               </button>

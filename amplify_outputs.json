@@ -5,9 +5,15 @@
     "user_pool_client_id": "20dkee53ojklpcpji8j4vktdb6",
     "identity_pool_id": "ap-south-1:102cf9ae-902d-445b-a32d-056fce4bc451",
     "mfa_methods": [],
-    "standard_required_attributes": ["email"],
-    "username_attributes": ["email"],
-    "user_verification_types": ["email"],
+    "standard_required_attributes": [
+      "email"
+    ],
+    "username_attributes": [
+      "email"
+    ],
+    "user_verification_types": [
+      "email"
+    ],
     "groups": [],
     "mfa_configuration": "NONE",
     "password_policy": {
@@ -23,7 +29,9 @@
     "url": "https://kfuz56sstfbipmpkto2vxzcdpu.appsync-api.ap-south-1.amazonaws.com/graphql",
     "aws_region": "ap-south-1",
     "default_authorization_type": "AWS_IAM",
-    "authorization_types": ["AMAZON_COGNITO_USER_POOLS"],
+    "authorization_types": [
+      "AMAZON_COGNITO_USER_POOLS"
+    ],
     "model_introspection": {
       "version": 1,
       "models": {
@@ -132,7 +140,9 @@
             {
               "type": "key",
               "properties": {
-                "fields": ["id"]
+                "fields": [
+                  "id"
+                ]
               }
             },
             {
@@ -142,7 +152,12 @@
                   {
                     "allow": "public",
                     "provider": "iam",
-                    "operations": ["create", "update", "delete", "read"]
+                    "operations": [
+                      "create",
+                      "update",
+                      "delete",
+                      "read"
+                    ]
                   }
                 ]
               }
@@ -253,7 +268,12 @@
                   {
                     "allow": "public",
                     "provider": "iam",
-                    "operations": ["create", "update", "delete", "read"]
+                    "operations": [
+                      "create",
+                      "update",
+                      "delete",
+                      "read"
+                    ]
                   }
                 ]
               }
@@ -411,7 +431,9 @@
             "technologyImages": {
               "name": "technologyImages",
               "isArray": true,
-              "type": "String",
+              "type": {
+                "nonModel": "ProjectTechnology"
+              },
               "isRequired": false,
               "attributes": [],
               "isArrayNullable": true
@@ -452,7 +474,12 @@
                   {
                     "allow": "public",
                     "provider": "iam",
-                    "operations": ["create", "update", "delete", "read"]
+                    "operations": [
+                      "create",
+                      "update",
+                      "delete",
+                      "read"
+                    ]
                   }
                 ]
               }
@@ -479,6 +506,25 @@
             },
             "SubDescription": {
               "name": "SubDescription",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            }
+          }
+        },
+        "ProjectTechnology": {
+          "name": "ProjectTechnology",
+          "fields": {
+            "ImageUrl": {
+              "name": "ImageUrl",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "ImageName": {
+              "name": "ImageName",
               "isArray": false,
               "type": "String",
               "isRequired": false,

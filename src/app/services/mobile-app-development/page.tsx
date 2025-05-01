@@ -93,93 +93,136 @@ const MobileAppDevelopment = () => {
   const heroParagraph =
     "Custom iOS & Android solutions designed for performance, security, and scalability—empowering businesses with innovative mobile experiences.";
 
-  const SkeletonOne = () => {
-    return (
-      <div>
-        <p className="font-bold md:text-4xl text-xl text-white">
-          Proven Expertise
-        </p>
-        <p className="font-normal text-base text-white"></p>
-        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          Years of experience delivering high-quality UI/UX designs that enhance
-          user engagement and satisfaction.
-        </p>
-      </div>
-    );
-  };
+  // const SkeletonOne = () => {
+  //   return (
+  //     <div>
+  //       <p className="font-bold md:text-4xl text-xl text-white">
+  //         Proven Expertise
+  //       </p>
+  //       <p className="font-normal text-base text-white"></p>
+  //       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+  //         Years of experience delivering high-quality UI/UX designs that enhance
+  //         user engagement and satisfaction.
+  //       </p>
+  //     </div>
+  //   );
+  // };
 
-  const SkeletonTwo = () => {
-    return (
-      <div>
-        <p className="font-bold md:text-4xl text-xl text-white">
-          Scalable Solutions
-        </p>
-        <p className="font-normal text-base text-white"></p>
-        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          Designs that grow with your business, ensuring a seamless experience
-          across all user touchpoints.
-        </p>
-      </div>
-    );
-  };
-  const SkeletonThree = () => {
-    return (
-      <div>
-        <p className="font-bold md:text-4xl text-xl text-white">
-          User-Centric Design
-        </p>
-        <p className="font-normal text-base text-white"></p>
-        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          A human-first approach that prioritizes usability, accessibility, and
-          intuitive navigation.
-        </p>
-      </div>
-    );
-  };
-  const SkeletonFour = () => {
-    return (
-      <div>
-        <p className="font-bold md:text-4xl text-xl text-white">
-          Seamless Interactions
-        </p>
-        <p className="font-normal text-base text-white"></p>
-        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          Smooth, responsive, and engaging experiences that keep users connected
-          and satisfied.
-        </p>
-      </div>
-    );
-  };
+  // const SkeletonTwo = () => {
+  //   return (
+  //     <div>
+  //       <p className="font-bold md:text-4xl text-xl text-white">
+  //         Scalable Solutions
+  //       </p>
+  //       <p className="font-normal text-base text-white"></p>
+  //       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+  //         Designs that grow with your business, ensuring a seamless experience
+  //         across all user touchpoints.
+  //       </p>
+  //     </div>
+  //   );
+  // };
+  // const SkeletonThree = () => {
+  //   return (
+  //     <div>
+  //       <p className="font-bold md:text-4xl text-xl text-white">
+  //         User-Centric Design
+  //       </p>
+  //       <p className="font-normal text-base text-white"></p>
+  //       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+  //         A human-first approach that prioritizes usability, accessibility, and
+  //         intuitive navigation.
+  //       </p>
+  //     </div>
+  //   );
+  // };
+  // const SkeletonFour = () => {
+  //   return (
+  //     <div>
+  //       <p className="font-bold md:text-4xl text-xl text-white">
+  //         Seamless Interactions
+  //       </p>
+  //       <p className="font-normal text-base text-white"></p>
+  //       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+  //         Smooth, responsive, and engaging experiences that keep users connected
+  //         and satisfied.
+  //       </p>
+  //     </div>
+  //   );
+  // };
+
+  // const cards = [
+  //   {
+  //     id: 1,
+  //     content: <SkeletonOne />,
+  //     className: "md:col-span-3 cursor-pointer",
+  //     title: "Proven Expertise",
+  //     thumbnail: "/images/Proven_expertise.png",
+  //   },
+  //   {
+  //     id: 2,
+  //     content: <SkeletonTwo />,
+  //     className: "md:col-span-2 cursor-pointer",
+  //     title: "Scalable Solutions",
+
+  //     thumbnail: "/images/Scalable_solution.png",
+  //   },
+  //   {
+  //     id: 3,
+  //     content: <SkeletonThree />,
+  //     className: "md:col-span-2 cursor-pointer",
+  //     title: "User-Centric Design",
+
+  //     thumbnail: "/images/User_centric.png",
+  //   },
+  //   {
+  //     id: 4,
+  //     content: <SkeletonFour />,
+  //     className: "md:col-span-3 cursor-pointer",
+  //     title: "Seamless Interactions",
+  //     thumbnail: "/images/seamless_interaction.jpg",
+  //   },
+  // ];
 
   const cards = [
     {
       id: 1,
-      content: <SkeletonOne />,
-      className: "md:col-span-3 cursor-pointer",
       title: "Proven Expertise",
+      content:
+        "Years of experience delivering high-quality UI/UX designs that enhance user engagement and satisfaction.",
+      className: "sm:col-span-2",
+      bgClass: "bg-black/70",
       thumbnail: "/images/Proven_expertise.png",
+      boxIcon: "/images/setting_icon.svg",
     },
     {
       id: 2,
-      content: <SkeletonTwo />,
-      className: "md:col-span-2 cursor-pointer",
       title: "Scalable Solutions",
-
+      content:
+        " Designs that grow with your business, ensuring a seamless experience across all user touchpoints.",
+      className: "",
+      bgClass: "bg-orange-600",
       thumbnail: "/images/Scalable_solution.png",
+      boxIcon: "/images/black_arrow.svg",
     },
     {
       id: 3,
-      content: <SkeletonThree />,
-      className: "md:col-span-2 cursor-pointer",
       title: "User-Centric Design",
-
+      content:
+        " A human-first approach that prioritizes usability, accessibility, and intuitive navigation.",
+      className: "",
+      bgClass: "bg-orange-600",
       thumbnail: "/images/User_centric.png",
+      boxIcon: "/images/pen_icon.svg",
     },
     {
       id: 4,
-      content: <SkeletonFour />,
-      className: "md:col-span-3 cursor-pointer",
       title: "Seamless Interactions",
+      content:
+        "Smooth, responsive, and engaging experiences that keep users connected and satisfied.",
+      className: "sm:col-span-2",
+      bgClass: "bg-black/70",
+      boxIcon: "/images/repeat.svg",
       thumbnail: "/images/seamless_interaction.jpg",
     },
   ];
@@ -199,7 +242,7 @@ const MobileAppDevelopment = () => {
           <div className="w-full lg:w-[40%]">
             <BoostBussiness heading={heading} paragraph={paragraph} />
             <Link href="/contact">
-              <button className="mt-10 btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
+              <button className="mt-3 sm:mt-3 lg:mt-10 btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
                 Get Assistance{" "}
                 <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
               </button>
@@ -213,10 +256,10 @@ const MobileAppDevelopment = () => {
         </div>
       </section>
 
-      <section className="w-full lg:mt-10 inline-block">
+      <section className="w-full pt-12 sm:pt-14 lg:pt-20 inline-block">
         <div className="container remove-bg">
           <div className="w-full  sm:text-center mb-5 sm:mb-10">
-            <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl ">
+            <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] ">
               Revolutionizing Mobile Apps with Cutting-Edge Technology
             </h2>
             <p className="text-sm sm:text-lg lg:text-xl sm:font-medium mt-2">
@@ -240,14 +283,14 @@ const MobileAppDevelopment = () => {
 
       <CtaSecond content={""} Aurora={""} vortex={""} />
 
-      <section className="w-full py-12 sm:py-14 lg:py-20">
+      <section className="w-full pb-12 sm:pb-14 lg:pb-20">
         <div className="container remove-bg">
           <div className="w-full flex flex-wrap lg:flex-nowrap gap-6 lg:gap-10">
             <div className="w-full lg:w-1/2  lg:mb-9">
-              <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom">
+              <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom-second">
                 End-to-End Mobile App Development
               </h2>
-              <p className="sm:font-medium text-sm sm:text-base lg:text-xl  mx-auto mt-3 sm:mt-5 lg:mt-12 mb-5 lg:mb-14">
+              <p className="sm:font-medium text-sm sm:text-base lg:text-xl  mx-auto mt-2 sm:mt-2 lg:mt-12 mb-5 lg:mb-14">
                 We create dynamic, feature-rich mobile applications using the
                 latest technologies, ensuring seamless performance across all
                 devices. Whether you need native development for optimal
@@ -270,11 +313,13 @@ const MobileAppDevelopment = () => {
 
       <StebTab />
 
-      <GridBoxes
-        GridBoxesHeading={GridBoxesHeading}
-        GridBoxesDetail={GridBoxesDetail}
-        cards={cards}
-      />
+      <div className="pt-12 sm:pt-0">
+        <GridBoxes
+          GridBoxesHeading={GridBoxesHeading}
+          GridBoxesDetail={GridBoxesDetail}
+          cards={cards}
+        />
+      </div>
 
       <Suspense fallback={<Loader />}>
         <TechnologyStack />

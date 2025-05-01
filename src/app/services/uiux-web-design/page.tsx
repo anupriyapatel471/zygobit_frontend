@@ -65,6 +65,8 @@ import { Suspense } from "react";
 import Loader from "@/component/common/Loader/Loader";
 import Link from "next/link";
 import DeliveringTailored from "@/component/common/DeliveringTailored/DeliveringTailored";
+import GridBoxes from "@/component/common/GridBoxes/GridBoxes";
+
 
 export const metadata: Metadata = {
   title: "UI UX Design",
@@ -86,6 +88,10 @@ export const metadata: Metadata = {
   },
 };
 const UiuxWebDesign = () => {
+  const GridBoxesHeading = " Why Zygobit for UI/UX Design ?";
+  const GridBoxesDetail =
+    "Empowering businesses with intuitive, aesthetically pleasing, and user-friendly experiences. Our expert UI/UX designers leverage cutting-edge tools to craft seamless digital journeys that captivate and convert.";
+
   const clientHeading = "Hear It from Our Happy Clients!";
   const clientSaysDetails =
     "See how our custom app development services have transformed businesses and driven success for our happy clients";
@@ -159,35 +165,78 @@ const UiuxWebDesign = () => {
     );
   };
 
+  // const cards = [
+  //   {
+  //     id: 1,
+  //     content: <SkeletonOne />,
+  //     className: "md:col-span-3 cursor-pointer",
+  //     title: "Proven Expertise",
+  //     thumbnail: "/images/Proven_expertise.png",
+  //   },
+  //   {
+  //     id: 2,
+  //     content: <SkeletonTwo />,
+  //     className: "md:col-span-2 cursor-pointer",
+  //     title: "Scalable Solutions",
+
+  //     thumbnail: "/images/Scalable_solution.png",
+  //   },
+  //   {
+  //     id: 3,
+  //     content: <SkeletonThree />,
+  //     className: "md:col-span-2 cursor-pointer",
+  //     title: "User-Centric Design",
+
+  //     thumbnail: "/images/User_centric.png",
+  //   },
+  //   {
+  //     id: 4,
+  //     content: <SkeletonFour />,
+  //     className: "md:col-span-3 cursor-pointer",
+  //     title: "Seamless Interactions",
+  //     thumbnail: "/images/seamless_interaction.jpg",
+  //   },
+  // ];
+
   const cards = [
     {
       id: 1,
-      content: <SkeletonOne />,
-      className: "md:col-span-3 cursor-pointer",
       title: "Proven Expertise",
+      content:
+        "Years of experience delivering high-quality UI/UX designs that enhance user engagement and satisfaction.",
+      className: "sm:col-span-2",
+      bgClass: "bg-black/70",
       thumbnail: "/images/Proven_expertise.png",
+      boxIcon: "/images/setting_icon.svg",
     },
     {
       id: 2,
-      content: <SkeletonTwo />,
-      className: "md:col-span-2 cursor-pointer",
       title: "Scalable Solutions",
-
+      content:
+        " Designs that grow with your business, ensuring a seamless experience across all user touchpoints.",
+      className: "",
+      bgClass: "bg-orange-600",
       thumbnail: "/images/Scalable_solution.png",
+      boxIcon: "/images/black_arrow.svg",
     },
     {
       id: 3,
-      content: <SkeletonThree />,
-      className: "md:col-span-2 cursor-pointer",
       title: "User-Centric Design",
-
+      content:
+        " A human-first approach that prioritizes usability, accessibility, and intuitive navigation.",
+      className: "",
+      bgClass: "bg-orange-600",
       thumbnail: "/images/User_centric.png",
+      boxIcon: "/images/pen_icon.svg",
     },
     {
       id: 4,
-      content: <SkeletonFour />,
-      className: "md:col-span-3 cursor-pointer",
       title: "Seamless Interactions",
+      content:
+        "Smooth, responsive, and engaging experiences that keep users connected and satisfied.",
+      className: "sm:col-span-2",
+      bgClass: "bg-black/70",
+      boxIcon: "/images/repeat.svg",
       thumbnail: "/images/seamless_interaction.jpg",
     },
   ];
@@ -219,13 +268,16 @@ const UiuxWebDesign = () => {
         </div>
       </section>
 
-      <section data-aos="fade-up" className="w-full py-12 sm:py-14 lg:py-20  relative">
+      <section
+        data-aos="fade-up"
+        className="w-full py-12 sm:py-14 lg:py-20  relative"
+      >
         <div className="container remove-bg">
           <div className="w-full sm:text-center mb-5 sm:mb-10">
             <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom-second">
               We Follow a Comprehensive UI UX Design Process
             </h2>
-            <p className="sm:font-medium  text-sm sm:text-xl my-3">
+            <p className="sm:font-medium  text-sm sm:text-base lg:text-xl my-3">
               As a leading mobile UI/UX design services company, we meticulously
               fine-tune every aspect of your project to ensure an exceptional
               user experience that meets business goals and exceeds
@@ -234,7 +286,7 @@ const UiuxWebDesign = () => {
           </div>
           <div className=" w-full flex flex-wrap lg:flex-nowrap items-center gap-5 lg:gap-10">
             <div className="w-full lg:w-32">
-              <h3 className="font-bold text-xl sm:text-2xl lg:text-[32px] text-gradient-custom">
+              <h3 className="font-bold sm:text-center lg:text-left text-xl sm:text-2xl lg:text-[32px] text-gradient-custom">
                 UI Design Process
               </h3>
             </div>
@@ -292,7 +344,7 @@ const UiuxWebDesign = () => {
           </div>
           <div className=" w-full flex flex-wrap lg:flex-nowrap items-center gap-4 sm:gap-5 lg:gap-10">
             <div className="w-full lg:w-32">
-              <h3 className="font-bold text-xl sm:text-2xl lg:text-[32px] text-gradient-custom">
+              <h3 className="font-bold sm:text-center lg:text-left text-xl sm:text-2xl lg:text-[32px] text-gradient-custom">
                 UX Design Process
               </h3>
             </div>
@@ -387,24 +439,14 @@ const UiuxWebDesign = () => {
       <Suspense fallback={<Loader />}>
         <TechnologyStack />
       </Suspense>
-      <section className="w-full pt-10 sm:pt-10 lg:mt-16 pb-12 sm:pb-20 lg:pb-32 bg-black">
-        <div className="container remove-bg">
-          <div className="w-full  sm:text-center mb-8 sm:mb-12 lg:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gradiant-custom-second">
-              Why Zygobit for UI/UX Design?
-            </h2>
-            <p className="sm:font-medium text-sm sm:text-lg lg:text-xl max-w-7xl mx-auto mt-2 sm:mt-5">
-              Empowering businesses with intuitive, aesthetically pleasing, and
-              user-friendly experiences. Our expert UI/UX designers leverage
-              cutting-edge tools to craft seamless digital journeys that
-              captivate and convert.
-            </p>
-          </div>
-          <div className="w-full">
-            <MobileAppGrid cards={cards} />
-          </div>
-        </div>
-      </section>
+
+      <div className="pt-12 sm:pt-0">
+        <GridBoxes
+          GridBoxesHeading={GridBoxesHeading}
+          GridBoxesDetail={GridBoxesDetail}
+          cards={cards}
+        />
+      </div>
 
       <ClientSays
         clientHeading={clientHeading}

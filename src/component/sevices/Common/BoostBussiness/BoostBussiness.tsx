@@ -9,7 +9,7 @@ const BoostBussiness = ({ heading, paragraph }: BoostBusinessProps) => {
         <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] lg:leading-[50px] text-black">
           {heading}
         </h2>
-        <p className=" sm:font-medium text-sm sm:text-base sm:leading-8 mt-4 text-[#6B6B6B]">
+        <p className=" sm:font-medium text-sm sm:text-base sm:leading-8 mt-2 lg:mt-4 text-[#6B6B6B]">
           {paragraph}
         </p>
       </div>

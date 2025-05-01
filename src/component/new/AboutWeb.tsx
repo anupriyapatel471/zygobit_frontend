@@ -36,9 +36,9 @@ const AboutWeb = ({ data }: { data: AboutWebProps }) => {
                 <br></br>
                 {data?.subTitle}
               </p>
-              <ul className="text-sm sm:text-base space-y-1.5 sm:space-y-1 list-disc">
+              <ul className="text-sm pl-5 sm:text-base space-y-1.5 sm:space-y-1 list-disc">
                 {data?.features.map((item, index) => (
-                  <li className="line-clamp-1" key={index}>
+                  <li  key={index}>
                     {item}
                   </li>
                 ))}

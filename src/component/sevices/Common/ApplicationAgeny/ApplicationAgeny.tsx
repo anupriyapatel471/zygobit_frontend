@@ -40,7 +40,7 @@ const ApplicationAgeny = ({ data }: ApplicationAgencyProps) => {
                   <h3 className="font-semibold text-lg sm:text-xl lg:text-2xl">
                     {card.cardTitle}
                   </h3>
-                  <p className="text-sm sm:text-base mt-2 sm:mt-3 lg:mt-5">
+                  <p className="text-sm sm:text-base mt-1 sm:mt-3 lg:mt-5">
                     {card.cardDescription}
                   </p>
                 </div>

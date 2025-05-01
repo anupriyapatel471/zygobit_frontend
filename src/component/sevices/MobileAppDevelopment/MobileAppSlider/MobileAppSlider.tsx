@@ -27,10 +27,10 @@ export default function MobileAppSlider() {
                         alt="Mobile App"
                         width={500}
                         height={300}
-                        className="p-4 sm:p-0 w-[400x] mx-auto h-[270px] object-contain"
+                        className="p-4 pt-0 sm:p-0 w-[400x] mx-auto h-[270px] object-contain"
                       />
                     </div>
-                    <div className="w-full lg:w-full  sm:text-center">
+                    <div className="w-full lg:w-full  text-center">
                       <h3 className="font-semibold text-xl sm:text-2xl sm:leading-[55px] text-white tracking-tighter">
                         {card.title}
                       </h3>
@@ -45,8 +45,8 @@ export default function MobileAppSlider() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="-left-2.5 right-auto sm:-left-[180px] lg:-left-[180px] bottom-auto sm:-bottom-6 lg:-bottom-6 top-1/2 sm:top-auto lg:top-auto" />
-      <CarouselNext className="left-auto -right-2.5 sm:right-auto sm:-left-[110px] lg:-left-[110px] bottom-auto top-1/2 sm:-bottom-6 lg:-bottom-6 sm:top-auto lg:top-auto" />
+      <CarouselPrevious className="-left-2.5 sm:left-0 right-auto  lg:-left-[180px] bottom-auto sm:bottom-auto lg:-bottom-6 top-1/2 sm:top-1/2 lg:top-auto" />
+      <CarouselNext className="left-auto -right-2.5 sm:right-0 sm:left-auto lg:-left-[110px] bottom-auto top-1/2 sm:bottom-auto lg:-bottom-6 sm:top-1/2 lg:top-auto" />
     </Carousel>
   );
 }

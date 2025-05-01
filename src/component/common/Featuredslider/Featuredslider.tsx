@@ -34,88 +34,77 @@ export default function FeaturedSlider() {
               <div>
                 <Card className="border-none rounded-xl">
                   <CardContent className="p-0">
-                    <div className="w-full bg-orange-600 sm:bg-gradient-to-r sm:from-orange-600 sm:to-[#09090B] lg:bg-[linear-gradient(to_right,#EA580C_0%,#09090B_60%,#09090B_100%)] rounded-[20px] mt-5  sm:mt-11">
-                      <div className="w-full flex justify-between items-center pl-4 sm:pl-16 lg:pl-24 pr-4 sm:pr-12 py-8">
-                        <div className="w-auto max-w-md text-white">
-                          {/* <Image
-                            className="w-28 sm:w-auto"
-                            src={featured}
-                            alt="Featured Slick"
-                            width={150}
-                            height={50}
-                          /> */}
-                          <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl tracking-wide">
+                    <div className="w-full   mt-5  sm:mt-11">
+                      <div className="w-full flex justify-between items-start">
+                        <div className="w-2/5 text-white">
+                          <span className="font-light text-sm sm:text-base lg:text-lg block mb-2.5 text-themetext sm:mb-4 lg:mb-6">
+                            Case Study
+                          </span>
+                          <h2 className="font-extrabold text-xl sm:text-2xl lg:text-[32px] tracking-wide">
                             {project.projectName}
                           </h2>
-
-                          <h3 className="font-semibold text-xl sm:text-2xl line-clamp-1 sm:line-clamp-2 lg:text-3xl mt-2 sm:mt-4 ">
+                          {/* <h3 className="font-semibold text-xl sm:text-2xl line-clamp-1 sm:line-clamp-2 lg:text-3xl mt-2 sm:mt-4 ">
                             {project.title}
-                          </h3>
-                          <p className="text-sm sm:text-base sm:font-medium mt-3 sm:pr-5">
+                          </h3> */}
+                          <p className="text-sm sm:text-base sm:font-medium mt-1.5 sm:pr-5">
                             {project.description &&
                               truncateText(project.description, 100)}
                           </p>
-                          <div className="w-64 my-4 grid grid-cols-2 gap-x-14 gap-y-4">
+                          <div className="font-light text-base lg:text-lg mb-3">
+                            Results
+                          </div>
+                          <div className="w-full my-4 flex items-center gap-4 sm:gap-5">
                             {project.androidDownloads && (
                               <div className="w-auto">
-                                <span className="block text-sm sm:text-base mb-1">
-                                  Android Downloads
-                                </span>
                                 <b className="font-semibold tracking-tighter text-xl sm:text-2xl">
                                   {formatDownloads(project.androidDownloads)}
                                 </b>
+                                <span className="block text-sm sm:text-base font-light mbt-1">
+                                  Android Downloads
+                                </span>
                               </div>
                             )}
+                            <div className="w-[0.5px] h-20 bg-white"></div>
                             {project.iosDownloads && (
                               <div className="w-auto">
-                                <span className="block text-sm sm:text-base mb-1">
-                                  iOS Downloads
-                                </span>
                                 <b className="font-semibold tracking-tighter text-xl sm:text-2xl">
                                   {formatDownloads(project.iosDownloads)}
                                 </b>
+                                <span className="block text-sm sm:text-base font-light mt-1">
+                                  iOS Downloads
+                                </span>
                               </div>
                             )}
                           </div>
-                          <ul className="flex gap-3 mb-4">
-                            <li>
-                              <Link href="">
-                                <Image
-                                  src={playStore}
-                                  alt="Playstore"
-                                  width={100}
-                                  height={30}
-                                />
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="">
-                                <Image
-                                  src={appleStore}
-                                  alt="AppStore"
-                                  width={100}
-                                  height={30}
-                                />
-                              </Link>
-                            </li>
-                          </ul>
-                          <Link href={`/portfolio/${project.slug}`}>
-                            <button className=" btn-primary text-themetext font-normal  group bg-white duration-500 transition-all">
-                              View Case Study
-                              <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                            </button>
-                          </Link>
+                          <div>
+                            <Link href={`/portfolio/${project.slug}`}>
+                              <button className=" btn-primary  font-normal text-white group bg-gradient-custom duration-500 transition-all">
+                                View More
+                                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                              </button>
+                            </Link>
+                          </div>
                         </div>
-                        <div className="hidden sm:inline w-auto max-w-md">
-                          {project.mobileImage && (
+                        <div className="hidden sm:inline w-3/5">
+                          <div className="w-full relative h-[450px] ">
                             <Image
-                              className="h-[450px] w-[450px] object-contain"
-                              src={project.mobileImage}
-                              alt="Featured Mobile"
-                              width={500}
-                              height={800}
+                              fill
+                              className="w-full h-full rounded-lg object-cover"
+                              src="/images/her_cal_bg.png"
+                              alt="image"
                             />
-                          )}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                              {project.mobileImage && (
+                                <Image
+                                  className="h-[450px] w-[465px] object-contain"
+                                  src={project.mobileImage}
+                                  alt="Featured Mobile"
+                                  width={500}
+                                  height={800}
+                                />
+                              )}
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -125,7 +114,7 @@ export default function FeaturedSlider() {
             </CarouselItem>
           ))}
       </CarouselContent>
-      <CarouselPrevious />
+      <CarouselPrevious  />
       <CarouselNext />
     </Carousel>
   );

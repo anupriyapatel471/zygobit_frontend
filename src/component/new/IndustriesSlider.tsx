@@ -75,7 +75,7 @@ export default function IndustriesSlider() {
                     />
                   </Button>
                 </div>
-                <div className="mt-10 w-full">
+                <div className="mt-5 lg:mt-10 w-full">
                   <ul className="flex flex-col gap-4">
                     <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
                       AI based patient monitoring

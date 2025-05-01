@@ -14,12 +14,12 @@ interface ctaProp {
 const CtaSecond = ({ content, Aurora, vortex }: ctaProp) => {
   return (
     <>
-      <section className="w-full relative my-20 sm:my-14 lg:my-32">
+      <section className="w-full relative my-20 sm:my-20 lg:my-32">
         <div className="container remove-bg">
           <div className="w-full relative">
             <div className="w-full  absolute top-1/2 -translate-y-1/2 left-0 -z-10">
               <Image
-                className="w-full h-[330px] rounded-tl-2xl sm:rounded-tl-none sm:rounded-br-none rounded-br-2xl sm:h-[475px] object-cover sm:object-contain"
+                className="w-full h-[330px] rounded-tl-2xl sm:rounded-tl-3xl lg:rounded-tl-none lg:rounded-br-none rounded-br-2xl sm:rounded-br-3xl sm:h-[325px] lg:h-[475px] object-cover lg:object-contain"
                 width={475}
                 height={475}
                 src="/images/cta_new_bg.png"
@@ -32,7 +32,7 @@ const CtaSecond = ({ content, Aurora, vortex }: ctaProp) => {
                   <div className="inline text-2xl sm:text-4xl lg:text-5xl text-center sm:text-left text-white font-bold ">
                     Shape the Future of Technology with Us
                   </div>
-                  <p className="text-left sm:font-medium text-sm leading-6 sm:leading-normal sm:text-base lg:text-xl mt-2.5 mb-5 sm:mb-10 max-w-5xl">
+                  <p className="text-left sm:font-medium text-sm leading-6 sm:leading-normal sm:text-base lg:text-xl mt-2.5 mb-5 lg:mb-10 max-w-5xl">
                     Shape the Future of Technology with Us Partner with our team
                     for a free, no-obligation technical proposal tailored to
                     your next enterprise custom project.
