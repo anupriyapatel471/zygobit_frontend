@@ -129,7 +129,6 @@ const ConnectForm = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log("formadata++++++++++++++++++++", formData);
     if (!validate()) {
       return;
     }

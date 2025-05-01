@@ -1,18 +1,140 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { Copy } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useState } from "react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Rocket from "../../../public/images/rocket.svg";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
+import toast from "react-hot-toast";
+import PhoneInput from "react-phone-number-input";
+import { parsePhoneNumberFromString } from "libphonenumber-js";
+
+import { validateBudget, validateName, validatePhoneNumber } from "@/lib/utils";
+import { generateClient } from "aws-amplify/api";
+type phoneNumber = {
+  number: string;
+  dialCode: string;
+};
+
+type FormDataType = {
+  firstName: string;
+  lastName: string;
+  phoneNumber: phoneNumber;
+  jobTitle: string;
+  companyName: string;
+  companyEmail: string;
+  launchDate: string;
+  budget: string;
+  projectDetails: string;
+};
+const client = generateClient();
 
 export function ContactnewForm() {
+  const initialState = {
+    firstName: "",
+    lastName: "",
+    phoneNumber: {
+      number: "",
+      dialCode: "",
+    },
+    jobTitle: "",
+    companyName: "",
+    companyEmail: "",
+    launchDate: "",
+    budget: "",
+    projectDetails: "",
+  };
+
+  const [formData, setFormData] = useState<FormDataType>(initialState);
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const validate = () => {
+    const {
+      firstName,
+      lastName,
+      phoneNumber: { number, dialCode },
+      companyName,
+      budget,
+      projectDetails,
+    } = formData;
+
+    if (
+      !firstName.trim() ||
+      !lastName.trim() ||
+      !companyName.trim() ||
+      !budget.trim() ||
+      !projectDetails.trim()
+    ) {
+      toast.error("Please fill in all fields.");
+      return false;
+    }
+    if (!validateName(firstName)) {
+      toast.error("Invalid first name.");
+      return false;
+    }
+    if (!validateName(lastName)) {
+      toast.error("Invalid last name.");
+      return false;
+    }
+    if (!validatePhoneNumber(number)) {
+      toast.error("Phone number must be between 7 and 10 digits.");
+      return false;
+    }
+    if (!(dialCode && number)) {
+      toast.error("Please enter a valid phone number or country code.");
+      return false;
+    }
+
+    if (!validateName(companyName)) {
+      toast.error("Invalid company name.");
+      return false;
+    }
+
+    if (!validateBudget(budget)) {
+      toast.error("Invalid budget format.");
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (!validate()) {
+      return;
+    }
+    console.log(formData);
+    setLoading(true);
+    try {
+      await (client.queries as any).sendEmailContactForm({
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        phoneNumber: formData.phoneNumber.number,
+        dialCode: formData.phoneNumber.dialCode,
+
+        companyName: formData.companyName,
+
+        budget: formData.budget,
+        projectDetails: formData.projectDetails,
+      });
+      toast.success(
+        "Thanks for reaching out to us. The concerned person will contact you shortly !"
+      );
+    } catch (error) {
+      console.error("Error saving data to DynamoDB:", error);
+      toast.error("Error saving data to DynamoDB");
+    } finally {
+      setLoading(false);
+      setFormData(initialState);
+    }
+  };
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -25,73 +147,120 @@ export function ContactnewForm() {
         </div>
       </DialogTrigger>
       <DialogContent className="max-w-[90%] lg:max-w-[1150px] rounded-none p-0 z-[9999]">
-        <div className="w-full flex gap-10">
-          <div className="hidden sm:inline w-2/5 p-5 relative">
-            <Image
-              className="w-[325px] object-contain"
-              src="/images/form_g.svg"
-              width={325}
-              height={485}
-              alt="icon"
-            />
-            <Image src="/images/form_bg.png" fill alt="background image" />
-          </div>
-          <div className="w-full sm:w-3/5 p-4 sm:p-10 sm:pl-0">
-            <h2 className="font-bold text-2xl sm:text-[34px] text-black mb-2">
-              Let’s connect to{" "}
-              <span className="text-orange-600">succeed your Business!</span>
-            </h2>
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Input
-                name="firstName"
-                className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
-                placeholder="First Name"
-                type="text"
+        <form onSubmit={handleSubmit}>
+          <div className="w-full flex gap-10">
+            <div className="hidden sm:inline w-2/5 p-5 relative">
+              <Image
+                className="w-[325px] object-contain"
+                src="/images/form_g.svg"
+                width={325}
+                height={485}
+                alt="icon"
               />
-              <Input
-                name="lastName"
-                className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
-                placeholder="Last Name"
-                type="text"
-              />
-              <Input
+              <Image src="/images/form_bg.png" fill alt="background image" />
+            </div>
+            <div className="w-full sm:w-3/5 p-4 sm:p-10 sm:pl-0">
+              <h2 className="font-bold text-2xl sm:text-[34px] text-black mb-2">
+                Let’s connect to{" "}
+                <span className="text-orange-600">succeed your Business!</span>
+              </h2>
+              <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <Input
+                  name="firstName"
+                  className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
+                  placeholder="First Name"
+                  type="text"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                />
+                <Input
+                  name="lastName"
+                  className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
+                  placeholder="Last Name"
+                  type="text"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                />
+                {/* <Input
                 name="PhoneNumber"
                 className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
                 placeholder="Phone Number"
                 type="number"
-              />
-              <Input
-                name="CompanyName"
-                className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
-                placeholder="Company Name"
-                type="text"
-              />
-              <Input
-                name="Budget"
-                className="bg-black/5 placeholder:text-black/60 text-black col-span-1 sm:col-span-2 border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
-                placeholder="Budget :"
-                type="text"
-              />
-              <textarea
-                className="resize-none placeholder:text-black/60 text-black bg-black/5 col-span-1 sm:col-span-2 w-full text-xs lg:text-xs h-16 md:h-20 lg:h-32 border border-black/20 p-3 rounded-md outline-none"
-                placeholder="About Project"
-              ></textarea>
-              <button
-                type="submit"
-                className="group bg-orange-600 hover:bg-orange-500 sm:h-12 col-span-1 sm:col-span-2 overflow-hidden font-medium transition-all duration-500 btn-primary text-white relative"
-              >
-                Let’s Build
-                <Image
-                  className="group-hover:translate-x-64 transition-all duration-1000"
-                  src={Rocket}
-                  alt="Rocket Icon"
-                  width={13.73}
-                  height={28.59}
+              /> */}
+                <div className="relative h-10 sm:h-auto">
+                  <Input
+                    type="number"
+                    className="absolute left-0 top-0 opacity-0 w-full h-10 md:h-11 lg:h-12"
+                  />
+                  <PhoneInput
+                    international
+                    defaultCountry="IN"
+                    placeholder="Enter phone number"
+                    value={
+                      formData.phoneNumber?.number &&
+                      formData.phoneNumber?.dialCode
+                        ? `+${formData.phoneNumber.dialCode}${formData.phoneNumber.number}`
+                        : ""
+                    }
+                    onChange={(value) => {
+                      const phoneNumber = parsePhoneNumberFromString(
+                        value || ""
+                      );
+
+                      if (phoneNumber) {
+                        setFormData((prev) => ({
+                          ...prev,
+                          phoneNumber: {
+                            dialCode: phoneNumber.countryCallingCode,
+                            number: phoneNumber.nationalNumber,
+                          },
+                        }));
+                      }
+                    }}
+                    className="h-10 md:h-11 lg:h-12 custom-phone-input absolute top-0 left-0 w-full"
+                  />
+                </div>
+                <Input
+                  name="companyName"
+                  className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
+                  placeholder="Company Name"
+                  type="text"
+                  value={formData.companyName}
+                  onChange={handleChange}
                 />
-              </button>
+                <Input
+                  name="budget"
+                  className="bg-black/5 placeholder:text-black/60 text-black col-span-1 sm:col-span-2 border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
+                  placeholder="Budget :"
+                  type="text"
+                  value={formData.budget}
+                  onChange={handleChange}
+                />
+                <textarea
+                  className="resize-none placeholder:text-black/60 text-black bg-black/5 col-span-1 sm:col-span-2 w-full text-xs lg:text-xs h-16 md:h-20 lg:h-32 border border-black/20 p-3 rounded-md outline-none"
+                  placeholder="About Project"
+                  name="projectDetails"
+                  value={formData.projectDetails}
+                  onChange={handleChange}
+                ></textarea>
+                <button
+                  type="submit"
+                  className="group bg-orange-600 hover:bg-orange-500 sm:h-12 col-span-1 sm:col-span-2 overflow-hidden font-medium transition-all duration-500 btn-primary text-white relative"
+                  disabled={loading}
+                >
+                  {loading ? "Submitting..." : "Let’s Build"}
+                  <Image
+                    className="group-hover:translate-x-64 transition-all duration-1000"
+                    src={Rocket}
+                    alt="Rocket Icon"
+                    width={13.73}
+                    height={28.59}
+                  />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        </form>
       </DialogContent>
     </Dialog>
   );

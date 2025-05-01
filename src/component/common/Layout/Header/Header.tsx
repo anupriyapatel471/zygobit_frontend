@@ -366,18 +366,21 @@ const Header = () => {
         </div>
 
         {/* whats app */}
-        <a
-          href=""
+        <Link
+          href="https://wa.me/18507923399"
+          target="_blank"
+          rel="noopener noreferrer"
           className="scale-75 sm:scale-100 btn-whatsapp-pulse relative z-50"
         >
           <Image
-            width={25}
-            height={25}
-            className="w-6 h-6"
+            width={24}
+            height={24}
             src="/images/whatsapp.svg"
-            alt="icon"
+            alt="WhatsApp"
+            className="w-6 h-6"
           />
-        </a>
+        </Link>
+
         <ChatBotBtn />
       </div>
     </>
