@@ -18,13 +18,14 @@ interface ProjectData {
   developmentTime?: string;
   targetUsers?: string;
   technologyDescription?: string;
-  technologyImages?: string[];
+  technologyImages: [{ ImageUrl: string; ImageName: string }];
   evaluationDescription?: string;
   evaluationImage?: string;
   developmentDescription?: string;
 }
 
 const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
+  console.log("projectData", projectData);
   return (
     <>
       <section className="w-full  lg:rounded-bl-[100px] relative overflow-hidden backdrop-blur-xl bg-[url('/images/pink_bg.png')]  bg-cover bg-center mt-20">
@@ -51,14 +52,11 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                   />
                 </div>
                 <h2 className="font-bold text-3xl sm:text-[35px] lg:text-[45px] text-[#D95A6C]">
-                  Her Calendar
+                  {projectData.projectName}
                 </h2>
               </div>
               <p className="text-sm text-black sm:text-base slg:text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                {projectData.description}
               </p>
               <div className="w-full lg:max-w-sm grid grid-cols-2 gap-5">
                 <div className="w-full flex flex-col justify-center items-center text-center gap-2.5 border border-[#D95A6C] rounded-lg p-2.5">
@@ -120,7 +118,9 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     <b className="text-xs inline-block w-full">
                       Project Duration
                     </b>
-                    <span className="text-xs">6 months</span>
+                    <span className="text-xs">
+                      {projectData.developmentTime}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -235,18 +235,11 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                 <div className="w-full order-2 sm:order-none sm:w-1/2 lg:w-3/5">
                   <div className="w-fit  flex items-center  gap-2 mb-2 sm:mb-5 lg:mb-8">
                     <h2 className="font-bold text-xl text-white  sm:text-3xl lg:text-[38px]">
-                      Project Challenges
+                      Development
                     </h2>
                   </div>
                   <p className="text-sm lg:text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                    {projectData.developmentDescription}
                   </p>
                 </div>
               </div>
@@ -291,80 +284,22 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
               Technology Stack
             </h2>
             <div className="w-full mt-8 lg:mt-14 grid grid-cols-2 sm:grid-cols-3 sm:grid xl:grid-cols-6 justify-center items-center gap-y-10 sm:gap-y-0  gap-5 sm:gap-10 lg:gap-14">
-              <div className="flex flex-col gap-2 sm:gap-5">
-                <div className="w-full mx-auto sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
-                  <Image
-                    src="/images/flutter_n.svg"
-                    alt=""
-                    width={53}
-                    height={65}
-                    className="object-contain"
-                  />
+              {projectData.technologyImages.map((data, index) => (
+                <div key={index} className="flex flex-col gap-2 sm:gap-5">
+                  <div className="w-full mx-auto sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
+                    <Image
+                      src={data.ImageUrl}
+                      alt="Technology"
+                      width={53}
+                      height={65}
+                      className="object-contain"
+                    />
+                  </div>
+                  <span className="text-sm sm:text-base lg:text-lg">
+                    {data.ImageName}
+                  </span>
                 </div>
-                <span className="text-sm sm:text-base lg:text-lg">Flutter</span>
-              </div>
-              <div className="flex flex-col gap-2 sm:gap-5">
-                <div className="w-full mx-auto sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
-                  <Image
-                    src="/images/flutter_n.svg"
-                    alt=""
-                    width={53}
-                    height={65}
-                    className="object-contain"
-                  />
-                </div>
-                <span className="text-sm sm:text-base lg:text-lg">GoLang</span>
-              </div>
-              <div className="flex flex-col gap-2 sm:gap-5">
-                <div className="w-full mx-auto sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
-                  <Image
-                    src="/images/flutter_n.svg"
-                    alt=""
-                    width={53}
-                    height={65}
-                    className="object-contain"
-                  />
-                </div>
-                <span className="text-sm sm:text-base lg:text-lg">React</span>
-              </div>
-              <div className="flex flex-col gap-2 sm:gap-5">
-                <div className="w-full mx-auto sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
-                  <Image
-                    src="/images/flutter_n.svg"
-                    alt=""
-                    width={53}
-                    height={65}
-                    className="object-contain"
-                  />
-                </div>
-                <span className="text-sm sm:text-base lg:text-lg">Python</span>
-              </div>
-              <div className="flex flex-col gap-2 sm:gap-5">
-                <div className="w-full mx-auto sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
-                  <Image
-                    src="/images/flutter_n.svg"
-                    alt=""
-                    width={53}
-                    height={65}
-                    className="object-contain"
-                  />
-                </div>
-                <span className="text-sm sm:text-base lg:text-lg">Ruby</span>
-              </div>
-              <div className="flex flex-col gap-2 sm:gap-5">
-                <div className="w-full mx-auto sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
-                  <Image
-                    src="/images/flutter_n.svg"
-                    alt=""
-                    width={53}
-                    height={65}
-                    className="object-contain"
-                  />
-                </div>
-                <span className="text-sm sm:text-base lg:text-lg">
-                  JavaScript
-                </span>
-              </div>
+              ))}
             </div>
           </div>
         </div>

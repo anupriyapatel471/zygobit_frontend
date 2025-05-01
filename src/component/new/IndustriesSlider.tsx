@@ -77,18 +77,14 @@ export default function IndustriesSlider() {
                 </div>
                 <div className="mt-10 w-full">
                   <ul className="flex flex-col gap-4">
-                    <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
-                      AI based patient monitoring
-                    </li>
-                    <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
-                      Fraud Detention
-                    </li>
-                    <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
-                      Remote Monitoring
-                    </li>
-                    <li className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white">
-                      Analytics
-                    </li>
+                    {data?.description.map((item, index) => (
+                      <li
+                        key={index}
+                        className="border w-fit rounded-lg py-2 px-3 text-sm  lg:text-base border-white"
+                      >
+                        {item}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>

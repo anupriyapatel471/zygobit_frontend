@@ -2,6 +2,7 @@ import { ContactParticles } from "@/component/contact/contactParticles/contactPa
 import AOSInitializer from "@/component/common/AOSInitializer";
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -24,6 +25,32 @@ export const metadata: Metadata = {
 };
 
 const Contact = () => {
+  const socialLinks = [
+    {
+      link: "https://wa.me/18507923399",
+      icon: "/images/whatsapp_new.svg",
+      title: "WhatsApp",
+      description: "+1(850)792-3399",
+    },
+    {
+      link: "https://www.instagram.com/zygobit",
+      icon: "/images/instagram_new.svg",
+      title: "Instagram",
+      description: "Zygobit",
+    },
+    {
+      link: "https://www.facebook.com/zygobit",
+      icon: "/images/facebook_bew.svg",
+      title: "Facebook",
+      description: "Zygobit",
+    },
+    {
+      link: "https://mail.google.com/mail/?view=cm&to=info@zygobit.com",
+      icon: "/images/gmail.svg",
+      title: "Email",
+      description: "info@zygobit.com",
+    },
+  ];
   return (
     <>
       <AOSInitializer />
@@ -35,42 +62,28 @@ const Contact = () => {
       <section className="w-full py-12 sm:py-14 lg:py-20">
         <div className="container remove-bg">
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-16">
-            <div className="w-full flex items-center gap-4 border border-[#7C7C7C] bg-white/10 p-4 lg:p-7 rounded-2xl">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 relative">
-                <Image fill src="/images/whatsapp_new.svg" alt="icon" />
-              </div>
-              <div className="w-[calc(100%-40px)]">
-                <b className="text-sm sm:text-base lg:text-lg">WhatsApp</b>
-                <span className="block text-sm mt-1">+1(850)792-3399</span>
-              </div>
-            </div>
-            <div className="w-full flex items-center gap-4 border border-[#7C7C7C] bg-white/10 p-4 lg:p-7 rounded-2xl">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 relative">
-                <Image fill src="/images/instagram_new.svg" alt="icon" />
-              </div>
-              <div className="w-[calc(100%-40px)]">
-                <b className="text-sm sm:text-base lg:text-lg">Instagram</b>
-                <span className="block text-sm mt-1">Zygobit</span>
-              </div>
-            </div>
-            <div className="w-full flex items-center gap-4 border border-[#7C7C7C] bg-white/10 p-4 lg:p-7 rounded-2xl">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 relative">
-                <Image fill src="/images/facebook_bew.svg" alt="icon" />
-              </div>
-              <div className="w-[calc(100%-40px)]">
-                <b className="text-sm sm:text-base lg:text-lg">Facebook</b>
-                <span className="block text-sm mt-1">Zygobit</span>
-              </div>
-            </div>
-            <div className="w-full flex items-center gap-4 border border-[#7C7C7C] bg-white/10 p-4 lg:p-7 rounded-2xl">
-              <div className="w-8 sm:w-10 h-6 sm:h-7 relative">
-                <Image fill src="/images/gmail.svg" alt="icon" />
-              </div>
-              <div className="w-[calc(100%-40px)]">
-                <b className="text-sm sm:text-base lg:text-lg">Email</b>
-                <span className="block text-sm mt-1">info@zygobit.com</span>
-              </div>
-            </div>
+            {socialLinks.map((data, index) => (
+              <Link
+                key={index}
+                href={data.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-full flex items-center gap-4 border border-[#7C7C7C] bg-white/10 p-4 lg:p-7 rounded-2xl">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 relative">
+                    <Image fill src={data.icon} alt="icon" />
+                  </div>
+                  <div className="w-[calc(100%-40px)]">
+                    <b className="text-sm sm:text-base lg:text-lg">
+                      {data.title}
+                    </b>
+                    <span className="block text-sm mt-1">
+                      {data.description}
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

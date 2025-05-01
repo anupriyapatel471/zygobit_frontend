@@ -1,42 +1,82 @@
 [
   {
     "name": "Education & E-Learning",
-    "description": "We specialize in UI/UX design audits for educational platforms, creating interactive and engaging user experiences. Our designs keep students engaged with easy navigation and content accessibility.",
+    "description": [
+      "AI-based student progress tracking",
+      "Personalized learning tools",
+      "Remote learning management",
+      "Learning analytics"
+    ],
     "img": "/images/education_elearning.jpg"
   },
   {
     "name": "Healthcare & Wellness",
-    "description": "Enhancing patient experiences through intuitive healthcare applications, telemedicine platforms, and wellness tracking solutions with seamless navigation and accessibility.",
+    "description": [
+      "AI-powered patient monitoring",
+      "Telehealth solutions",
+      "Remote diagnostics",
+      "Health data analytics"
+    ],
     "img": "/images/health_wellness.jpg"
   },
   {
     "name": "E-Commerce & Retail",
-    "description": "Building user-centric online stores, marketplaces, and retail applications that maximize conversions and provide seamless shopping experiences.",
+    "description": [
+      "Personalized product recommendations",
+      "Smart inventory management",
+      "Remote order tracking",
+      "Customer behavior analytics"
+    ],
     "img": "/images/ecommerce_retail.jpg"
   },
   {
     "name": "Finance & Banking",
-    "description": "Designing secure and intuitive digital banking solutions, fintech platforms, and investment tools for a smooth financial experience.",
+    "description": [
+      "AI-driven transaction monitoring",
+      "Fraud detection",
+      "Mobile payment integration",
+      "Financial analytics"
+    ],
     "img": "/images/finance_banking.png"
   },
   {
     "name": "Real Estate & Property Management",
-    "description": "Empowering property listings, rental platforms, and management software with user-friendly interfaces and advanced search capabilities.",
+    "description": [
+      "Smart tenant screening",
+      "Remote property management",
+      "Digital lease processing",
+      "Real estate market analytics"
+    ],
     "img": "/images/realestate_property.png"
   },
   {
     "name": "Travel & Hospitality",
-    "description": "Creating engaging UI/UX for travel booking systems, hotel management solutions, and customer-friendly interfaces for tourism services.",
+    "description": [
+      "AI-powered booking systems",
+      "Personalized travel recommendations",
+      "Remote guest service tools",
+      "Travel trends analytics"
+    ],
     "img": "/images/travel_hospitality.jpg"
   },
   {
     "name": "Entertainment & Media",
-    "description": "Designing seamless experiences for streaming platforms, gaming applications, and digital content portals to enhance user engagement.",
+    "description": [
+      "AI-based content recommendations",
+      "Audience engagement tools",
+      "Remote content delivery monitoring",
+      "Streaming performance analytics"
+    ],
     "img": "/images/entertainment_media.jpg"
   },
   {
     "name": "Logistics & Transportation",
-    "description": "Developing user-friendly tracking systems, fleet management dashboards, and transport booking applications for efficiency and ease of use.",
+    "description": [
+      "Smart shipment tracking",
+      "Fleet management systems",
+      "Inventory optimization",
+      "Supply chain analytics"
+    ],
     "img": "/images/logistics_transportation.jpg"
   }
 ]

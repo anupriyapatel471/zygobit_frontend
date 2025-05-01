@@ -411,7 +411,9 @@
             "technologyImages": {
               "name": "technologyImages",
               "isArray": true,
-              "type": "String",
+              "type": {
+                "nonModel": "ProjectTechnology"
+              },
               "isRequired": false,
               "attributes": [],
               "isArrayNullable": true
@@ -479,6 +481,25 @@
             },
             "SubDescription": {
               "name": "SubDescription",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            }
+          }
+        },
+        "ProjectTechnology": {
+          "name": "ProjectTechnology",
+          "fields": {
+            "ImageUrl": {
+              "name": "ImageUrl",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "ImageName": {
+              "name": "ImageName",
               "isArray": false,
               "type": "String",
               "isRequired": false,

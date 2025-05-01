@@ -13,6 +13,22 @@ import Image from "next/image";
 
 const testimonials = [
   {
+    quote: "",
+    name: "Alan",
+    designation: "Total Wireless Tracker",
+    src: "/images/clientOne.png",
+    videosrc: "https://zygobit.com/wp-content/uploads/2025/01/Zygobit-r3-1.mp4",
+  },
+  {
+    quote: "",
+    name: "Daniel",
+    designation: "TrackDay Hub",
+    src: "/images/clientTwo.png",
+    videosrc:
+      "https://zygobit.com/wp-content/uploads/2025/01/zygobit-r_1-1.mp4",
+  },
+
+  {
     quote:
       "Zygobit’s team delivered a highly effective solution for our app. They ensured a user-friendly interface and smooth functionality, helping us meet our business goals in no time.",
     name: "Sasson Moulavi",
@@ -20,6 +36,14 @@ const testimonials = [
     src: "/images/abbsi_admin.png",
     videosrc: "",
     // videosrc: "/videos/SampleVideo.mp4",
+  },
+  {
+    quote: "",
+    name: "David Hakki",
+    designation: "Ascent Above and ClaimEase",
+    src: "/images/clientThree.png",
+    videosrc:
+      "https://zygobit.com/wp-content/uploads/2025/01/zygobit-review-3-1.mp4",
   },
   {
     quote:
