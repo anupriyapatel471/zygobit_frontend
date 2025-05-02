@@ -7,7 +7,7 @@ const HomeBanner = () => {
       <section className="w-full  relative pt-[88px] sm:pt-[100px]">
         <div className="container">
           <div className="w-full flex flex-wrap sm:inline relative">
-            <div className="hidden sm:inline absolute top-0 left-0 w-full h-[930px] -z-10">
+            <div className="hidden sm:inline absolute top-0 left-0 w-full h-[830px] -z-10">
               <div className="w-full flex justify-between h-full">
                 <div className="w-[1px] h-full bg-[#51515182] opacity-30 relative">
                   <div className="bg-[#666666] w-2.5 h-2.5 rounded-full absolute top-[145px] left-1/2 -translate-x-1/2"></div>

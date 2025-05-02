@@ -361,25 +361,53 @@ const Header = () => {
       </div>
 
       <div>
-        <div className="scale-75 sm:scale-100 fixed bottom-32 left-8 z-50">
+        <div className="scale-75  group sm:scale-100 fixed bottom-32 left-8 z-50">
           <ContactnewForm />
+          <div className="fixed bottom-0 left-12 hidden group-hover:flex items-center">
+            <div className="w-[17px] relative left-1">
+              <Image
+                width={17}
+                height={14}
+                src="/images/triangle.svg"
+                alt="icon"
+              />
+            </div>
+            <div className=" bg-white whitespace-nowrap rounded-sm py-2.5 px-3.5 text-themetext font-semibold text-sm">
+              Let’s Connect
+            </div>
+          </div>
         </div>
 
-        {/* whats app */}
-        <Link
-          href="https://wa.me/18507923399"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="scale-75 sm:scale-100 btn-whatsapp-pulse relative z-50"
-        >
-          <Image
-            width={24}
-            height={24}
-            src="/images/whatsapp.svg"
-            alt="WhatsApp"
-            className="w-6 h-6"
-          />
-        </Link>
+        <div className="group relative">
+          {/* whats app */}
+          <Link
+            href="https://wa.me/18507923399"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="scale-75 sm:scale-100 btn-whatsapp-pulse relative z-50"
+          >
+            <Image
+              width={24}
+              height={24}
+              src="/images/whatsapp.svg"
+              alt="WhatsApp"
+              className="w-6 h-6"
+            />
+          </Link>
+          <div className="fixed bottom-[34px] left-20 hidden group-hover:flex items-center">
+            <div className="relative left-1">
+              <Image
+                width={17}
+                height={14}
+                src="/images/triangle.svg"
+                alt="icon"
+              />
+            </div>
+            <div className=" bg-white rounded-sm py-2.5 px-3.5 text-themetext font-semibold text-sm">
+              Chat with us
+            </div>
+          </div>
+        </div>
 
         <ChatBotBtn />
       </div>

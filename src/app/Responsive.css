@@ -119,4 +119,15 @@
   .slick-prev, .slick-next {
     bottom: -75px  !important;
   }  
+  .featured-btn {
+    bottom: -10px  !important;
+    right:  0  !important;
+  }
+  .featured-right-btn {
+    left: auto  !important;
+}
+.featured-left-btn {
+  left:auto !important;
+  right: 21%  !important;
+}
 }

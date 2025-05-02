@@ -291,6 +291,21 @@ input[type="number"]::-webkit-outer-spin-button {
   border: 1px solid rgba(255, 255, 255, 0.278);
 }
 
+.form-input {
+  background-color: #0000000D;
+  border: 1px solid #00000033;
+  padding: 16px;
+  border-radius: 6px;
+}
+.form-input input {
+  height: 44px;
+  padding: 12px;
+  background-color: transparent;
+  outline: none;
+  color: black;
+  font-size: 12px;
+}
+
 .custom-move-animation:hover .move-img {
   animation: bounce 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
 }
@@ -576,4 +591,26 @@ input[type="number"]::-webkit-outer-spin-button {
 .slick-dots li button {
   width: auto !important;
   height: auto !important;
+}
+
+.featured-btn {
+  top: auto !important;
+  bottom: -10px !important;
+  background-color: transparent  !important;
+  border: none !important;
+  width: auto !important;
+  height: auto !important;
+  right: auto  !important;
+}
+.featured-btn img {
+  width: 28px !important;
+  height: 28px !important;
+  filter: brightness(0) invert(1); 
+}
+.featured-left-btn {
+  left: 28% !important;
+}
+
+.featured-right-btn {
+  left: 36%  !important;
 }

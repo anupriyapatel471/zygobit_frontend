@@ -3,6 +3,7 @@ import * as React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
+  CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -22,11 +23,24 @@ export const revalidate = 60;
 export default function FeaturedSlider() {
   const { data, loading } = useProjects();
 
+  const [current, setCurrent] = React.useState(0);
+
+  const [api, setApi] = React.useState<CarouselApi>();
+  React.useEffect(() => {
+    if (!api) {
+      return;
+    }
+    setCurrent(api.selectedScrollSnap() + 1);
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
+
   const projects = Array.isArray(data) ? data.slice(0, 5) : [];
   return loading ? (
     <Loader />
   ) : (
-    <Carousel className="w-full">
+    <Carousel setApi={setApi} className="w-full relative">
       <CarouselContent className="flex lg:ml-0">
         {projects.length > 0 &&
           projects.map((project) => (
@@ -35,46 +49,53 @@ export default function FeaturedSlider() {
                 <Card className="border-none rounded-xl">
                   <CardContent className="p-0">
                     <div className="w-full   mt-5  sm:mt-11">
-                      <div className="w-full flex justify-between items-start">
-                        <div className="w-2/5 text-white">
-                          <span className="font-light text-sm sm:text-base lg:text-lg block mb-2.5 text-themetext sm:mb-4 lg:mb-6">
-                            Case Study
-                          </span>
-                          <h2 className="font-extrabold text-xl sm:text-2xl lg:text-[32px] tracking-wide">
-                            {project.projectName}
-                          </h2>
-                          {/* <h3 className="font-semibold text-xl sm:text-2xl line-clamp-1 sm:line-clamp-2 lg:text-3xl mt-2 sm:mt-4 ">
-                            {project.title}
-                          </h3> */}
-                          <p className="text-sm sm:text-base sm:font-medium mt-1.5 sm:pr-5">
-                            {project.description &&
-                              truncateText(project.description, 100)}
-                          </p>
-                          <div className="font-light text-base lg:text-lg mb-3">
-                            Results
-                          </div>
-                          <div className="w-full my-4 flex items-center gap-4 sm:gap-5">
-                            {project.androidDownloads && (
-                              <div className="w-auto">
-                                <b className="font-semibold tracking-tighter text-xl sm:text-2xl">
-                                  {formatDownloads(project.androidDownloads)}
-                                </b>
-                                <span className="block text-sm sm:text-base font-light mbt-1">
-                                  Android Downloads
-                                </span>
+                      <div className="w-full flex flex-wrap sm:flex-nowrap gap-5 justify-between items-start">
+                        <div className="order-2 sm:order-2 w-full sm:w-1/2 lg:w-2/5 h-full gap-4 sm:sgap-8 lg:gap-[75px] flex flex-col justify-between  text-white">
+                          <div>
+                            <span className="font-light text-sm sm:text-base lg:text-lg block mb-2 text-themetext sm:mb-4 lg:mb-6">
+                              Case Study
+                            </span>
+                            <h2 className="font-extrabold text-xl sm:text-2xl lg:text-[32px] tracking-wide">
+                              {project.projectName}
+                            </h2>
+                            <p className="text-sm sm:text-base sm:font-medium mt-1.5 sm:pr-5">
+                              {project.description &&
+                                truncateText(project.description, 100)}
+                            </p>
+                            <div className="font-light text-base lg:text-lg mb-1.5 sm:mb-3 mt-4 sm:mt-10">
+                              Results
+                            </div>
+                            <div className="w-full my-4 flex items-center gap-4 sm:gap-5">
+                              {project.androidDownloads && (
+                                <div className="w-auto">
+                                  <b className="font-semibold tracking-tighter text-xl sm:text-2xl">
+                                    {formatDownloads(project.androidDownloads)}
+                                  </b>
+                                  <span className="block text-sm sm:text-base font-light mbt-1">
+                                    Android Downloads
+                                  </span>
+                                </div>
+                              )}
+                              <div className="w-[0.5px] h-20 bg-white"></div>
+                              <div className="w-fit flex gap-2.5 flex-col">
+                                <Link href="" target="_blank">
+                                  <Image
+                                    width={100}
+                                    height={29}
+                                    src="/images/playstore.svg"
+                                    alt="image"
+                                  />
+                                </Link>
+                                <Link href="" target="_blank">
+                                  <Image
+                                    width={100}
+                                    height={29}
+                                    src="/images/applestore.svg"
+                                    alt="image"
+                                  />
+                                </Link>
                               </div>
-                            )}
-                            <div className="w-[0.5px] h-20 bg-white"></div>
-                            {project.iosDownloads && (
-                              <div className="w-auto">
-                                <b className="font-semibold tracking-tighter text-xl sm:text-2xl">
-                                  {formatDownloads(project.iosDownloads)}
-                                </b>
-                                <span className="block text-sm sm:text-base font-light mt-1">
-                                  iOS Downloads
-                                </span>
-                              </div>
-                            )}
+                            </div>
                           </div>
                           <div>
                             <Link href={`/portfolio/${project.slug}`}>
@@ -85,8 +106,8 @@ export default function FeaturedSlider() {
                             </Link>
                           </div>
                         </div>
-                        <div className="hidden sm:inline w-3/5">
-                          <div className="w-full relative h-[450px] ">
+                        <div className="order-1 sm:order-2 inline w-full sm:w-1/2 lg:w-3/5">
+                          <div className="w-full relative h-[250px] sm:h-[400px] lg:h-[450px] ">
                             <Image
                               fill
                               className="w-full h-full rounded-lg object-cover"
@@ -114,8 +135,10 @@ export default function FeaturedSlider() {
             </CarouselItem>
           ))}
       </CarouselContent>
-      <CarouselPrevious  />
-      <CarouselNext />
+      <span className="text-base sm:text-xl absolute bottom-1.5 sm:bottom-0 right-[35px] sm:right-auto left-auto sm:left-[32%] font-normal">{current}/5</span>
+
+      <CarouselPrevious className="featured-left-btn featured-btn" />
+      <CarouselNext className="featured-right-btn featured-btn" />
     </Carousel>
   );
 }

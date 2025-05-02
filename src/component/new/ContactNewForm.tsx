@@ -190,7 +190,7 @@ export function ContactnewForm() {
                 <div className="relative h-10 sm:h-auto">
                   <Input
                     type="number"
-                    className="absolute left-0 top-0 opacity-0 w-full h-10 md:h-11 lg:h-12"
+                    className="absolute left-0 top-0 opacity-0 w-full h-10 md:h-11 lg:h-11"
                   />
                   <PhoneInput
                     international
@@ -217,7 +217,7 @@ export function ContactnewForm() {
                         }));
                       }
                     }}
-                    className="h-10 md:h-11 lg:h-12 custom-phone-input absolute top-0 left-0 w-full"
+                    className="h-10 md:h-11 lg:h-11 form-input absolute top-0 left-0 w-full"
                   />
                 </div>
                 <Input
