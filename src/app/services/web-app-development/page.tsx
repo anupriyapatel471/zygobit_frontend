@@ -132,7 +132,6 @@ const WebAppDevelopment = () => {
       </section>
 
       <AboutWeb data={webAppOneJson} />
-
       <ApplicationAgeny data={applicationAgencyData} />
 
       <section className="w-full py-10 sm:py-16 z-10  relative overflow-hidden">
