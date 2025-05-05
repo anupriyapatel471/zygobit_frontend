@@ -98,6 +98,7 @@ const WebAppDevelopment = () => {
     "we specialize in crafting custom mobile applications that empower businesses to thrive in today’s digital-first world. Our innovative solutions are designed to align with your unique goals, helping you unlock new opportunities, engage your audience, and drive sustainable growth.";
 
   const heroHeading = "We are Trusted by Industry Leaders";
+
   const heroParagraph =
     "Powering businesses with cutting-edge web development solutions that ensure seamless performance, scalability, and innovation.";
 
@@ -106,6 +107,7 @@ const WebAppDevelopment = () => {
       <AOSInitializer />
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
+
       <Suspense fallback={<Loader />}>
         <WeDeliver />
       </Suspense>
