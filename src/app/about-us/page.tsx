@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 };
 
 const About = () => {
-  const clientSaysHeading = "We Are a Trusted Web App Development Company";
+  const clientSaysHeading = " We Are a Trusted Web App Development Company";
   const clientSaysDetails =
     "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions.";
 
