@@ -16,6 +16,10 @@ import aboutUsOneJson from "../../utils/content/boxreveals/aboutUsOne.json";
 import aboutUsTwoJson from "../../utils/content/boxreveals/aboutUsTwo.json";
 import cards from "../../utils/content/gridboxcardsdata/aboutusGrid.json";
 
+// const WeDeliver = dynamic(
+//   () => import("@/component/common/WeDeliver/WeDeliver"),
+//   { ssr: false }
+// );
 const ContactForm = dynamic(
   () => import("@/component/common/ContactForm/ContactForm")
 );
