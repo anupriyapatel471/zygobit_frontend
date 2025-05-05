@@ -12,8 +12,7 @@ import {
 import { ChevronRight, Loader } from "lucide-react";
 
 import Image from "next/image";
-import playStore from "../../../../public/images/playstore.svg";
-import appleStore from "../../../../public/images/applestore.svg";
+
 import Link from "next/link";
 
 import { formatDownloads, truncateText } from "@/lib/utils";

@@ -1,7 +1,4 @@
 import FeaturedSlider from "@/component/common/Featuredslider/Featuredslider";
-import { ChevronRight } from "lucide-react";
-import Link from "next/link";
-
 const FeaturedProjects = () => {
   return (
     <>
