@@ -5,9 +5,10 @@ import dynamic from "next/dynamic";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import sliderData from "../../utils/content/deliveringTailored/tailored.json";
+import { ContactnewForm } from "./ContactNewForm";
+import { deliveringTailored } from "@/lib/utils";
 
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
@@ -65,15 +66,7 @@ export default function IndustriesSlider() {
                   <h3 className="sm:font-semibold text-xl sm:text-2xl lg:text-[32px]">
                     {data?.name}
                   </h3>
-                  <Button className="bg-transparent hover:bg-transparent p-0 w-7 h-7 border border-white rounded-full">
-                    <Image
-                      width={10}
-                      height={10}
-                      className="w-3 h-3 object-contain"
-                      src="/images/up_arrow.svg"
-                      alt=""
-                    />
-                  </Button>
+                  <ContactnewForm formOpen={deliveringTailored} />
                 </div>
                 <div className="mt-5 lg:mt-10 w-full">
                   <ul className="flex flex-col gap-4">

@@ -56,6 +56,8 @@ import Loader from "@/component/common/Loader/Loader";
 import Link from "next/link";
 import GridBoxes from "@/component/common/GridBoxes/GridBoxes";
 import StebTab from "@/component/new/Steptab";
+import stebTabMobileData from "../../../utils/content/stebTab/mobileAppStebTab.json";
+import cards from "../../../utils/content/gridboxcardsdata/gridcardMobile.json";
 
 export const metadata: Metadata = {
   title: "Mobile App Development",
@@ -92,140 +94,6 @@ const MobileAppDevelopment = () => {
   const heroHeading = "Mobile App Development That Drives Success";
   const heroParagraph =
     "Custom iOS & Android solutions designed for performance, security, and scalability—empowering businesses with innovative mobile experiences.";
-
-  // const SkeletonOne = () => {
-  //   return (
-  //     <div>
-  //       <p className="font-bold md:text-4xl text-xl text-white">
-  //         Proven Expertise
-  //       </p>
-  //       <p className="font-normal text-base text-white"></p>
-  //       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-  //         Years of experience delivering high-quality UI/UX designs that enhance
-  //         user engagement and satisfaction.
-  //       </p>
-  //     </div>
-  //   );
-  // };
-
-  // const SkeletonTwo = () => {
-  //   return (
-  //     <div>
-  //       <p className="font-bold md:text-4xl text-xl text-white">
-  //         Scalable Solutions
-  //       </p>
-  //       <p className="font-normal text-base text-white"></p>
-  //       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-  //         Designs that grow with your business, ensuring a seamless experience
-  //         across all user touchpoints.
-  //       </p>
-  //     </div>
-  //   );
-  // };
-  // const SkeletonThree = () => {
-  //   return (
-  //     <div>
-  //       <p className="font-bold md:text-4xl text-xl text-white">
-  //         User-Centric Design
-  //       </p>
-  //       <p className="font-normal text-base text-white"></p>
-  //       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-  //         A human-first approach that prioritizes usability, accessibility, and
-  //         intuitive navigation.
-  //       </p>
-  //     </div>
-  //   );
-  // };
-  // const SkeletonFour = () => {
-  //   return (
-  //     <div>
-  //       <p className="font-bold md:text-4xl text-xl text-white">
-  //         Seamless Interactions
-  //       </p>
-  //       <p className="font-normal text-base text-white"></p>
-  //       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-  //         Smooth, responsive, and engaging experiences that keep users connected
-  //         and satisfied.
-  //       </p>
-  //     </div>
-  //   );
-  // };
-
-  // const cards = [
-  //   {
-  //     id: 1,
-  //     content: <SkeletonOne />,
-  //     className: "md:col-span-3 cursor-pointer",
-  //     title: "Proven Expertise",
-  //     thumbnail: "/images/Proven_expertise.png",
-  //   },
-  //   {
-  //     id: 2,
-  //     content: <SkeletonTwo />,
-  //     className: "md:col-span-2 cursor-pointer",
-  //     title: "Scalable Solutions",
-
-  //     thumbnail: "/images/Scalable_solution.png",
-  //   },
-  //   {
-  //     id: 3,
-  //     content: <SkeletonThree />,
-  //     className: "md:col-span-2 cursor-pointer",
-  //     title: "User-Centric Design",
-
-  //     thumbnail: "/images/User_centric.png",
-  //   },
-  //   {
-  //     id: 4,
-  //     content: <SkeletonFour />,
-  //     className: "md:col-span-3 cursor-pointer",
-  //     title: "Seamless Interactions",
-  //     thumbnail: "/images/seamless_interaction.jpg",
-  //   },
-  // ];
-
-  const cards = [
-    {
-      id: 1,
-      title: "Proven Expertise",
-      content:
-        "Years of experience delivering high-quality UI/UX designs that enhance user engagement and satisfaction.",
-      className: "sm:col-span-2",
-      bgClass: "bg-black/70",
-      thumbnail: "/images/Proven_expertise.png",
-      boxIcon: "/images/setting_icon.svg",
-    },
-    {
-      id: 2,
-      title: "Scalable Solutions",
-      content:
-        " Designs that grow with your business, ensuring a seamless experience across all user touchpoints.",
-      className: "",
-      bgClass: "bg-orange-600",
-      thumbnail: "/images/Scalable_solution.png",
-      boxIcon: "/images/black_arrow.svg",
-    },
-    {
-      id: 3,
-      title: "User-Centric Design",
-      content:
-        " A human-first approach that prioritizes usability, accessibility, and intuitive navigation.",
-      className: "",
-      bgClass: "bg-orange-600",
-      thumbnail: "/images/User_centric.png",
-      boxIcon: "/images/pen_icon.svg",
-    },
-    {
-      id: 4,
-      title: "Seamless Interactions",
-      content:
-        "Smooth, responsive, and engaging experiences that keep users connected and satisfied.",
-      className: "sm:col-span-2",
-      bgClass: "bg-black/70",
-      boxIcon: "/images/repeat.svg",
-      thumbnail: "/images/seamless_interaction.jpg",
-    },
-  ];
 
   return (
     <>
@@ -311,7 +179,7 @@ const MobileAppDevelopment = () => {
         </div>
       </section>
 
-      <StebTab />
+      <StebTab stebTabData={stebTabMobileData} />
 
       <div className="pt-12 sm:pt-0">
         <GridBoxes

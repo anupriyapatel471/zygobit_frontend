@@ -40,7 +40,7 @@ import CtaSecond from "@/component/new/CtaSecond";
 import { Suspense } from "react";
 import Loader from "@/component/common/Loader/Loader";
 import Link from "next/link";
-import  WebSliderSecond  from "@/component/sevices/Common/WebSliderSecond/WebSliderSecond";
+import WebSliderSecond from "@/component/sevices/Common/WebSliderSecond/WebSliderSecond";
 
 export const metadata: Metadata = {
   title: "Ecommerce",

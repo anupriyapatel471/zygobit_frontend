@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Proven Expertise",
+    "content": "Years of experience delivering high-quality UI/UX designs that enhance user engagement and satisfaction.",
+    "className": "sm:col-span-2",
+    "bgClass": "bg-black/70",
+    "thumbnail": "/images/Proven_expertise.png",
+    "boxIcon": "/images/setting_icon.svg"
+  },
+  {
+    "id": 2,
+    "title": "Scalable Solutions",
+    "content": "Designs that grow with your business, ensuring a seamless experience across all user touchpoints.",
+    "className": "",
+    "bgClass": "bg-orange-600",
+    "thumbnail": "/images/Scalable_solution.png",
+    "boxIcon": "/images/black_arrow.svg"
+  },
+  {
+    "id": 3,
+    "title": "User-Centric Design",
+    "content": "A human-first approach that prioritizes usability, accessibility, and intuitive navigation.",
+    "className": "",
+    "bgClass": "bg-orange-600",
+    "thumbnail": "/images/User_centric.png",
+    "boxIcon": "/images/pen_icon.svg"
+  },
+  {
+    "id": 4,
+    "title": "Seamless Interactions",
+    "content": "Smooth, responsive, and engaging experiences that keep users connected and satisfied.",
+    "className": "sm:col-span-2",
+    "bgClass": "bg-black/70",
+    "boxIcon": "/images/repeat.svg",
+    "thumbnail": "/images/seamless_interaction.jpg"
+  }
+]

@@ -45,6 +45,7 @@ import Loader from "@/component/common/Loader/Loader";
 import AppleCardsCarousel from "@/component/sevices/MobileAppDevelopment/AppleCardsCarousel/AppleCardsCarousel";
 import CtaSecond from "@/component/new/CtaSecond";
 import Link from "next/link";
+import cards from "../../../utils/content/gridboxcardsdata/machineGrid.json";
 
 export const metadata: Metadata = {
   title: "Machine Learning AI",
@@ -78,142 +79,6 @@ const MachineLearning = () => {
     "Pioneering AI & Machine Learning Solutions for Smarter Businesses";
   const heroParagraph =
     "Unleash the power of Artificial Intelligence with Zygobit! We build intelligent, data-driven solutions using cutting-edge Machine Learning and AI to revolutionize industries and drive innovation.";
-
-  const SkeletonOne = () => {
-    return (
-      <div>
-        <p className="font-bold md:text-4xl text-xl text-white">
-          Proven AI Expertise
-        </p>
-        <p className="font-normal text-base text-white"></p>
-        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          Harness the power of AI-driven solutions tailored to optimize your
-          business operations, enhance decision-making, and drive innovation.
-        </p>
-      </div>
-    );
-  };
-
-  const SkeletonTwo = () => {
-    return (
-      <div>
-        <p className="font-bold md:text-4xl text-xl text-white">
-          Scalable AI Solutions
-        </p>
-        <p className="font-normal text-base text-white"></p>
-        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          Deploy AI models that grow with your business, ensuring efficiency,
-          automation, and seamless adaptability to changing demands.
-        </p>
-      </div>
-    );
-  };
-  const SkeletonThree = () => {
-    return (
-      <div>
-        <p className="font-bold md:text-4xl text-xl text-white">
-          Intelligent User Experience
-        </p>
-        <p className="font-normal text-base text-white"></p>
-        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          Enhance customer interactions with AI-powered personalization,
-          predictive analytics, and smart automation for a seamless digital
-          experience.
-        </p>
-      </div>
-    );
-  };
-  const SkeletonFour = () => {
-    return (
-      <div>
-        <p className="font-bold md:text-4xl text-xl text-white">
-          Seamless AI Integration
-        </p>
-        <p className="font-normal text-base text-white"></p>
-        <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-          Integrate cutting-edge AI and ML models into your existing systems,
-          enabling real-time data processing, automation, and intelligent
-          insights.
-        </p>
-      </div>
-    );
-  };
-
-  // const cards = [
-  //   {
-  //     id: 1,
-  //     content: <SkeletonOne />,
-  //     className: "md:col-span-3 cursor-pointer",
-  //     title: "Proven AI Expertise",
-  //     thumbnail: "/images/Proven_expertise.png",
-  //   },
-  //   {
-  //     id: 2,
-  //     content: <SkeletonTwo />,
-  //     className: "md:col-span-2 cursor-pointer",
-  //     title: "Scalable AI Solutions",
-
-  //     thumbnail: "/images/Scalable_solution.png",
-  //   },
-  //   {
-  //     id: 3,
-  //     content: <SkeletonThree />,
-  //     className: "md:col-span-2 cursor-pointer",
-  //     title: "Intelligent User Experience",
-
-  //     thumbnail: "/images/User_centric.png",
-  //   },
-  //   {
-  //     id: 4,
-  //     content: <SkeletonFour />,
-  //     className: "md:col-span-3 cursor-pointer",
-  //     title: "Seamless AI Integration",
-  //     thumbnail: "/images/seamless_interaction.jpg",
-  //   },
-  // ];
-
-  const cards = [
-    {
-      id: 1,
-      title: "Proven Expertise",
-      content:
-        "Harness the power of AI-driven solutions tailored to optimize your business operations, enhance decision-making, and drive innovation.",
-      className: "sm:col-span-2",
-      bgClass: "bg-black/70",
-      thumbnail: "/images/Proven_expertise.png",
-      boxIcon: "/images/setting_icon.svg",
-    },
-    {
-      id: 2,
-      title: "Scalable Solutions",
-      content:
-        " Deploy AI models that grow with your business, ensuring efficiency, automation , and seamless adaptability to changing demands.",
-      className: "",
-      bgClass: "bg-orange-600",
-      thumbnail: "/images/Scalable_solution.png",
-      boxIcon: "/images/black_arrow.svg",
-    },
-    {
-      id: 3,
-      title: "User-Centric Design",
-      content:
-        " Enhance customer interactions with AI-powered personalization, predictive analytics, and smart automation for a seamless digital experience.",
-      className: "",
-      bgClass: "bg-orange-600",
-      thumbnail: "/images/User_centric.png",
-      boxIcon: "/images/pen_icon.svg",
-    },
-    {
-      id: 4,
-      title: "Seamless Interactions",
-      content:
-        "Integrate cutting-edge AI and ML models into your existing systems, enabling real-time data processing, automation, and intelligent insights.",
-      className: "sm:col-span-2",
-      bgClass: "bg-black/70",
-      boxIcon: "/images/repeat.svg",
-      thumbnail: "/images/seamless_interaction.jpg",
-    },
-  ];
 
   return (
     <>
@@ -307,27 +172,26 @@ const MachineLearning = () => {
       <CtaSecond content={""} Aurora={""} vortex={""} />
 
       <section className="w-full custom-apple-slider pb-12 sm:pb-16 lg:pb-20 mb-5 sm:mb-12 lg:mb-12 lg:mt-32 overflow-hidden">
-          <div className="flex flex-wrap lg:flex-nowrap justify-between gap-20 sm:gap-5">
-            <div className="w-full lg:w-2/5 ">
-              <h2 className="text-2xl sm:text-3xl lg:text-[35px] lg:leading-[50px] text-gradiant-custom-second font-bold">
-                Select from Our AI & ML-Powered Development Models
-              </h2>
-              <p className="sm:font-medium  text-sm sm:text-lg lg:text-xl mt-2.5 sm:mt-4 mb-4 sm:mb-7">
-                Being a leading AI & ML-driven web application development
-                provider, we offer multiple hiring models tailored to your
-                needs.
-              </p>
-              <Link href="/contact">
-                <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
-                  Hire Web Application Developers{" "}
-                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                </button>
-              </Link>
-            </div>
-            <div className="w-full lg:w-3/5 ">
-              <WebSlider engagementModels={engagementModelsMlAi} />
-            </div>
+        <div className="flex flex-wrap lg:flex-nowrap justify-between gap-20 sm:gap-5">
+          <div className="w-full lg:w-2/5 ">
+            <h2 className="text-2xl sm:text-3xl lg:text-[35px] lg:leading-[50px] text-gradiant-custom-second font-bold">
+              Select from Our AI & ML-Powered Development Models
+            </h2>
+            <p className="sm:font-medium  text-sm sm:text-lg lg:text-xl mt-2.5 sm:mt-4 mb-4 sm:mb-7">
+              Being a leading AI & ML-driven web application development
+              provider, we offer multiple hiring models tailored to your needs.
+            </p>
+            <Link href="/contact">
+              <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                Hire Web Application Developers{" "}
+                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+              </button>
+            </Link>
           </div>
+          <div className="w-full lg:w-3/5 ">
+            <WebSlider engagementModels={engagementModelsMlAi} />
+          </div>
+        </div>
       </section>
 
       <Suspense fallback={<Loader />}>

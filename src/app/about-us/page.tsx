@@ -14,18 +14,12 @@ import AboutCta from "@/component/new/AboutCta";
 import AboutWeb from "@/component/new/AboutWeb";
 import aboutUsOneJson from "../../utils/content/boxreveals/aboutUsOne.json";
 import aboutUsTwoJson from "../../utils/content/boxreveals/aboutUsTwo.json";
+import cards from "../../utils/content/gridboxcardsdata/aboutusGrid.json";
 
-// const WeDeliver = dynamic(
-//   () => import("@/component/common/WeDeliver/WeDeliver"),
-//   { ssr: false }
-// );
 const ContactForm = dynamic(
   () => import("@/component/common/ContactForm/ContactForm")
 );
 
-// const BoxReveals = dynamic(() =>
-//   import("@/component/common/WebSales/WebSales").then((mod) => mod.BoxReveals)
-// );
 const ClientSays = dynamic(
   () => import("@/component/common/ClientSays/ClientSays")
 );
@@ -64,109 +58,6 @@ const About = () => {
   const heroHeading = "Innovatinng the Digital Future";
   const heroParagraph =
     "We are a tech-driven company passionate about building cutting-edge mobile and web solutions, helping businesses thrive in a digital-first world.";
-  // const SkeletonOne = () => {
-  //   return (
-  //     <div>
-  //       <p className="font-bold md:text-4xl text-xl text-white">
-  //         Proven AI Expertise
-  //       </p>
-  //       <p className="font-normal text-base text-white"></p>
-  //       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-  //         Harness the power of AI-driven solutions tailored to optimize your
-  //         business operations, enhance decision-making, and drive innovation.
-  //       </p>
-  //     </div>
-  //   );
-  // };
-
-  // const SkeletonTwo = () => {
-  //   return (
-  //     <div>
-  //       <p className="font-bold md:text-4xl text-xl text-white">
-  //         Scalable AI Solutions
-  //       </p>
-  //       <p className="font-normal text-base text-white"></p>
-  //       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-  //         Deploy AI models that grow with your business, ensuring efficiency,
-  //         automation, and seamless adaptability to changing demands.
-  //       </p>
-  //     </div>
-  //   );
-  // };
-  // const SkeletonThree = () => {
-  //   return (
-  //     <div>
-  //       <p className="font-bold md:text-4xl text-xl text-white">
-  //         Intelligent User Experience
-  //       </p>
-  //       <p className="font-normal text-base text-white"></p>
-  //       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-  //         Enhance customer interactions with AI-powered personalization,
-  //         predictive analytics, and smart automation for a seamless digital
-  //         experience.
-  //       </p>
-  //     </div>
-  //   );
-  // };
-  // const SkeletonFour = () => {
-  //   return (
-  //     <div>
-  //       <p className="font-bold md:text-4xl text-xl text-white">
-  //         Seamless AI Integration
-  //       </p>
-  //       <p className="font-normal text-base text-white"></p>
-  //       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-  //         Integrate cutting-edge AI and ML models into your existing systems,
-  //         enabling real-time data processing, automation, and intelligent
-  //         insights.
-  //       </p>
-  //     </div>
-  //   );
-  // };
-
-  const cards = [
-    {
-      id: 1,
-      title: "Proven AI Expertise",
-      content:
-        "Harness the power of AI-driven solutions tailored to optimize your business operations, enhance decision-making, and drive innovation.",
-      className: "sm:col-span-2",
-      bgClass: "bg-black/70",
-      thumbnail: "/images/Proven_expertise.png",
-      boxIcon: "/images/setting_icon.svg",
-    },
-    {
-      id: 2,
-      title: "Scalable AI Solutions",
-      content:
-        "Deploy AI models that grow with your business, ensuring efficiency, automation, and seamless adaptability to changing demands.",
-      className: "",
-      bgClass: "bg-orange-600",
-      thumbnail: "/images/Scalable_solution.png",
-      boxIcon: "/images/black_arrow.svg",
-    },
-    {
-      id: 3,
-      title: "Intelligent User Experience",
-      content:
-        "Enhance customer interactions with AI-powered personalization, predictive analytics, and smart automation for a seamless digital experience.",
-      className: "",
-      bgClass: "bg-orange-600",
-      thumbnail: "/images/User_centric.png",
-      boxIcon: "/images/pen_icon.svg",
-    },
-    {
-      id: 4,
-      title: "Seamless AI Integration",
-      content:
-        "Integrate cutting-edge AI and ML models into your existing systems, enabling real-time data processing, automation, and intelligent insights.",
-      className: "sm:col-span-2",
-      bgClass: "bg-black/70",
-      boxIcon: "/images/repeat.svg",
-      thumbnail: "/images/seamless_interaction.jpg",
-    },
-  ];
-
   return (
     <>
       <AOSInitializer />

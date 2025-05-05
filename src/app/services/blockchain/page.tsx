@@ -50,19 +50,19 @@ const CustomWebCards = dynamic(() =>
     "@/component/sevices/WebAppDevelopment/CustomWebCards/CustomWebCards"
   ).then((mod) => mod.CustomWebCards)
 );
+import stebTabMobileData from "../../../utils/content/stebTab/mobileAppStebTab.json";
 
 import { Metadata } from "next";
-import applicationAgencyData from "../../../utils/content/applicationAgency/webApp.json";
-
-import engagementModelsWebApp from "../../../utils/content/webSlider/ecommerce.json";
 import Link from "next/link";
 import CtaSecond from "@/component/new/CtaSecond";
 import { Suspense } from "react";
 import Loader from "@/component/common/Loader/Loader";
 import AppleCardsCarousel from "@/component/sevices/MobileAppDevelopment/AppleCardsCarousel/AppleCardsCarousel";
 import BoostBussiness from "@/component/sevices/Common/BoostBussiness/BoostBussiness";
+import applicationAgencyData from "../../../utils/content/applicationAgency/webApp.json";
+
+import engagementModelsWebApp from "../../../utils/content/webSlider/ecommerce.json";
 import AboutWeb from "@/component/new/AboutWeb";
-import FeaturedSlider from "@/component/common/Featuredslider/Featuredslider";
 import StebTab from "@/component/new/Steptab";
 import DeliveringTailored from "@/component/common/DeliveringTailored/DeliveringTailored";
 import webAppOneJson from "../../../utils/content/boxreveals/webAppOne.json";
@@ -142,7 +142,7 @@ const WebAppDevelopment = () => {
 
       <AboutWeb data={webAppOneJson} />
 
-      <StebTab />
+      <StebTab stebTabData={stebTabMobileData} />
 
       <CtaSecond content={""} Aurora={""} vortex={""} />
 

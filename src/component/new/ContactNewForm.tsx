@@ -7,6 +7,7 @@ import Image from "next/image";
 import toast from "react-hot-toast";
 import PhoneInput from "react-phone-number-input";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
+import { Button } from "@/components/ui/button";
 
 import { validateBudget, validateName, validatePhoneNumber } from "@/lib/utils";
 import { generateClient } from "aws-amplify/api";
@@ -28,7 +29,7 @@ type FormDataType = {
 };
 const client = generateClient();
 
-export function ContactnewForm() {
+export function ContactnewForm({ formOpen }: { formOpen?: string }) {
   const initialState = {
     firstName: "",
     lastName: "",
@@ -138,13 +139,35 @@ export function ContactnewForm() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div>
-          <div className="">
-            <button className="pulse-button-contact">
-              <span></span>
-            </button>
+        {formOpen === "gridButton" ? (
+          <Button className="absolute transition-all duration-300 top-4 right-4 lg:top-10 lg:right-10 border-2 border-white bg-transparent hover:bg-transparent group-hover:rotate-0 -rotate-45 w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 rounded-full p-0">
+            <Image
+              width={28}
+              height={28}
+              className="w-5 h-5 lg:w-7 lg:h-7"
+              src="/images/why_arrow.svg"
+              alt="arrow"
+            />
+          </Button>
+        ) : formOpen === "deliveringTailored" ? (
+          <Button className="bg-transparent hover:bg-transparent p-0 w-7 h-7 border border-white rounded-full">
+            <Image
+              width={10}
+              height={10}
+              className="w-3 h-3 object-contain"
+              src="/images/up_arrow.svg"
+              alt=""
+            />
+          </Button>
+        ) : (
+          <div>
+            <div className="">
+              <button className="pulse-button-contact">
+                <span></span>
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </DialogTrigger>
       <DialogContent className="max-w-[90%] lg:max-w-[1150px] rounded-none p-0 z-[9999]">
         <form onSubmit={handleSubmit}>

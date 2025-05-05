@@ -54,7 +54,6 @@ const CustomWebCards = dynamic(() =>
 import { Metadata } from "next";
 import applicationAgencyData from "../../../utils/content/applicationAgency/webApp.json";
 
-import engagementModelsWebApp from "../../../utils/content/webSlider/ecommerce.json";
 import Link from "next/link";
 import CtaSecond from "@/component/new/CtaSecond";
 import { Suspense } from "react";
@@ -98,9 +97,6 @@ const WebAppDevelopment = () => {
   const paragraph =
     "we specialize in crafting custom mobile applications that empower businesses to thrive in today’s digital-first world. Our innovative solutions are designed to align with your unique goals, helping you unlock new opportunities, engage your audience, and drive sustainable growth.";
 
-  const clientSaysHeading = "We Are a Trusted Web App Development Company";
-  const clientSaysDetails =
-    "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions.";
   const heroHeading = "We are Trusted by Industry Leaders";
   const heroParagraph =
     "Powering businesses with cutting-edge web development solutions that ensure seamless performance, scalability, and innovation.";

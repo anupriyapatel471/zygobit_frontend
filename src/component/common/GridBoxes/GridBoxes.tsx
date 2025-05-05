@@ -1,4 +1,6 @@
-import { Button } from "@/components/ui/button";
+"use client";
+import { ContactnewForm } from "@/component/new/ContactNewForm";
+import { gridButtonOpen } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 
@@ -55,15 +57,7 @@ const GridBoxes: React.FC<GridBoxesProps> = ({
                     />
                   </div>
                 )}
-                <Button className="absolute transition-all duration-300 top-4 right-4 lg:top-10 lg:right-10 border-2 border-white bg-transparent hover:bg-transparent group-hover:rotate-0 -rotate-45 w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 rounded-full p-0">
-                  <Image
-                    width={28}
-                    height={28}
-                    className="w-5 h-5 lg:w-7 lg:h-7"
-                    src="/images/why_arrow.svg"
-                    alt="arrow"
-                  />
-                </Button>
+                <ContactnewForm formOpen={gridButtonOpen} />
                 {card.bgClass == "bg-orange-600" && (
                   <div className="group-hover:invisible   absolute bottom-0 right-0  z-10">
                     <Image

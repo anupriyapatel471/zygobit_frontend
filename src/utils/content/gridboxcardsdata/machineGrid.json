@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Proven Expertise",
+    "content": "Harness the power of AI-driven solutions tailored to optimize your business operations, enhance decision-making, and drive innovation.",
+    "className": "sm:col-span-2",
+    "bgClass": "bg-black/70",
+    "thumbnail": "/images/Proven_expertise.png",
+    "boxIcon": "/images/setting_icon.svg"
+  },
+  {
+    "id": 2,
+    "title": "Scalable Solutions",
+    "content": "Deploy AI models that grow with your business, ensuring efficiency, automation , and seamless adaptability to changing demands.",
+    "className": "",
+    "bgClass": "bg-orange-600",
+    "thumbnail": "/images/Scalable_solution.png",
+    "boxIcon": "/images/black_arrow.svg"
+  },
+  {
+    "id": 3,
+    "title": "User-Centric Design",
+    "content": "Enhance customer interactions with AI-powered personalization, predictive analytics, and smart automation for a seamless digital experience.",
+    "className": "",
+    "bgClass": "bg-orange-600",
+    "thumbnail": "/images/User_centric.png",
+    "boxIcon": "/images/pen_icon.svg"
+  },
+  {
+    "id": 4,
+    "title": "Seamless Interactions",
+    "content": "Integrate cutting-edge AI and ML models into your existing systems, enabling real-time data processing, automation, and intelligent insights.",
+    "className": "sm:col-span-2",
+    "bgClass": "bg-black/70",
+    "boxIcon": "/images/repeat.svg",
+    "thumbnail": "/images/seamless_interaction.jpg"
+  }
+]

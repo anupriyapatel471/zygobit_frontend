@@ -58,6 +58,7 @@ for improvement.`,
     description: `Analyzing user journeys and refining designs to improve conversions and increase engagement.`,
   },
 ];
+
 export function ParticlesCards() {
   return (
     <>

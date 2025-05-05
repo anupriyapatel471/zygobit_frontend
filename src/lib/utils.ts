@@ -35,3 +35,6 @@ export const formatDownloads = (downloads: number) => {
   }
   return `${downloads}+`;
 };
+
+export const gridButtonOpen = "gridButton";
+export const deliveringTailored = "deliveringTailored";
