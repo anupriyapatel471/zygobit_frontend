@@ -159,7 +159,7 @@ const WebAppDevelopment = () => {
           <div className="w-full mt-5 sm:mt-10 mb-0 sm:my-10">
             <CardSpotlights />
           </div>
-          <div className="w-full flex justify-center mt-5 sm:mt-14">
+          <div className="w-full flex justify-center mt-5 sm:mt-5">
             <Link href="/contact">
               <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
                 Develop a Custom Web App Today{" "}
@@ -189,7 +189,7 @@ const WebAppDevelopment = () => {
               <CustomWebCards />
             </div>
             <div className="w-full  flex justify-center items-center">
-              <button className="mt-4 sm:mt-7 lg:mt-10 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+              <button className="mt-4 sm:mt-7 lg:mt-5 btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
                 Build Your App Today!{" "}
                 <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
               </button>

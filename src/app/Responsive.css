@@ -130,4 +130,7 @@
   left:auto !important;
   right: 21%  !important;
 }
+.btn-whatsapp-pulse {
+  left: 16px;
+}
 }

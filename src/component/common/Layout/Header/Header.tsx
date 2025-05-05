@@ -361,7 +361,7 @@ const Header = () => {
       </div>
 
       <div>
-        <div className="scale-75  group sm:scale-100 fixed bottom-32 left-8 z-50">
+        <div className="scale-75  group sm:scale-100 fixed bottom-32 left-4 sm:left-8 z-50">
           <ContactnewForm />
           <div className="fixed bottom-0 left-12 hidden group-hover:flex items-center">
             <div className="w-[17px] relative left-1">
@@ -394,7 +394,7 @@ const Header = () => {
               className="w-6 h-6"
             />
           </Link>
-          <div className="fixed bottom-[34px] left-20 hidden group-hover:flex items-center">
+          <div className="fixed bottom-[34px] left-20 hidden group-hover:flex items-center z-50">
             <div className="relative left-1">
               <Image
                 width={17}

@@ -42,7 +42,7 @@ const GridBoxes: React.FC<GridBoxesProps> = ({
               <div
                 key={card.id}
                 className={
-                  `w-full max-h-[165px] sm:max-h-[220px] lg:max-h-[324px] overflow-hidden ` +
+                  `w-full max-h-[165px] sm:max-h-[220px] lg:max-h-[324px] lg:min-h-[324px] overflow-hidden ` +
                   `transition-all duration-300 group p-4 lg:p-10 ${card.className} rounded-2xl hover:bg-[#1E1E20] ` +
                   `${card.bgClass} relative`
                 }

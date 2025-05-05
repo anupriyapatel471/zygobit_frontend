@@ -92,7 +92,7 @@ export function ClientSlider() {
                 <video
                   width="600"
                   height="500"
-                  className="absolute top-0 left-0 w-full h-full object-cover"
+                  className="absolute rounded-3xl  top-0 left-0 w-full h-full object-cover"
                   loop
                   playsInline
                   ref={(el) => {

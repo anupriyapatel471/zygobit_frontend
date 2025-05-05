@@ -125,7 +125,10 @@ const Home = async () => {
       {/* new why choose us  */}
       <WhyChooseUs />
 
+      <div className="sm:-mt-14 lg:-mt-20">
       <Blog />
+      </div>
+
       <ContactForm />
     </>
   );
