@@ -125,9 +125,9 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                 </div>
               </div>
             </div>
-            <div className="w-[600px] hidden lg:inline relative -right-28">
-              <div className="w-full grid grid-cols-2 h-fit gap-10 ">
-                <div className="w-full flex flex-col gap-8 lg:pl-4">
+            <div className="w-[480px] 2xl:w-[600px] hidden lg:inline relative -right-16 2xl:-right-28">
+              <div className="w-full grid grid-cols-2 h-fit gap-7 2xl:gap-10 ">
+                <div className="w-full flex flex-col gap-8 ">
                   <Image
                     width={264}
                     height={570}
@@ -159,11 +159,11 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     alt="mobile image"
                   />
                 </div>
-                <div className="w-full absolute bottom-0 -left-[300px]">
+                <div className="w-full absolute bottom-0 -left-[275px] 2xl:-left-[300px]">
                   <Image
                     width={264}
                     height={570}
-                    className="w-[275px] h-[500px] rounded-t-3xl object-cover"
+                    className="w-[250px] 2xl:w-[275px] h-[500px] rounded-t-3xl object-cover"
                     src="/images/phone_five.png"
                     alt="mobile image"
                   />
@@ -198,6 +198,12 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     <h2 className="font-bold text-xl text-white  sm:text-3xl lg:text-[38px]">
                       Project Idea
                     </h2>
+                    <Image
+                      width={60}
+                      height={20}
+                      src="/images/moving_arrow.svg"
+                      alt="icon"
+                    />
                   </div>
                   <p className="text-sm lg:text-base">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -237,6 +243,12 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     <h2 className="font-bold text-xl text-white  sm:text-3xl lg:text-[38px]">
                       Development
                     </h2>
+                    <Image
+                      width={60}
+                      height={20}
+                      src="/images/moving_arrow.svg"
+                      alt="icon"
+                    />
                   </div>
                   <p className="text-sm lg:text-base">
                     {projectData.developmentDescription}
@@ -249,6 +261,12 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     <h2 className="font-bold text-xl text-white  sm:text-3xl lg:text-[38px]">
                       The Solution
                     </h2>
+                    <Image
+                      width={60}
+                      height={20}
+                      src="/images/moving_arrow.svg"
+                      alt="icon"
+                    />
                   </div>
                   <p className="text-sm lg:text-base">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -280,10 +298,19 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
       <section className="w-full text-center mb-12 sm:my-20 lg:my-24 overflow-hidden">
         <div className="container remove-bg">
           <div className="w-full">
-            <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl mt-10 ">
-              Technology Stack
-            </h2>
-            <div className="w-full mt-8 lg:mt-14 grid grid-cols-2 sm:grid-cols-3 sm:grid xl:grid-cols-6 justify-center items-center gap-y-10 sm:gap-y-0  gap-5 sm:gap-10 lg:gap-14">
+            <div className="w-fit mx-auto  flex items-center justify-center gap-2  mt-10">
+              <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl  ">
+                Technology Stack
+              </h2>
+              <Image
+                width={60}
+                height={20}
+                src="/images/moving_arrow.svg"
+                alt="icon"
+              />
+            </div>
+
+            <div className="w-full mt-8 lg:mt-14 grid grid-cols-2 sm:grid-cols-3 sm:flex  xl:grid-cols-6 justify-center items-center gap-y-10 sm:gap-y-0  gap-5 sm:gap-10 lg:gap-14">
               {projectData.technologyImages.map((data, index) => (
                 <div key={index} className="flex flex-col gap-2 sm:gap-5">
                   <div className="w-full mx-auto sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
@@ -329,7 +356,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
               <h3 className=" font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl mb-3 sm:mb-5">
                 Mobile App
               </h3>
-              <ul className="list-decimal sm:font-bold text-sm space-y-4 pl-5">
+              <ul className="list-decimal sm:font-bold text-sm space-y-4 pl-3 sm:pl-5">
                 <li>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </li>
@@ -362,7 +389,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                   width={380}
                   height={467}
                   className="object-contain"
-                  src="/images/mobile_app_new.png"
+                  src="/images/mobile_app_new.svg"
                   alt="image"
                 />
               </div>
@@ -379,6 +406,12 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                 <h2 className="font-bold text-2xl text-white  sm:text-3xl lg:text-[38px]">
                   Process
                 </h2>
+                <Image
+                  width={60}
+                  height={20}
+                  src="/images/moving_arrow.svg"
+                  alt="icon"
+                />
               </div>
               <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-12">
                 <div className="w-full flex gap-5 justify-between items-center p-4 bg-white/10 border border-white/25 rounded-xl">
@@ -492,7 +525,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
               <h3 className=" font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl mb-3 sm:mb-5">
                 Admin Panel
               </h3>
-              <ul className="list-decimal sm:font-bold text-sm space-y-4 pl-5">
+              <ul className="list-decimal sm:font-bold text-sm space-y-4 pl-3 sm:pl-5">
                 <li>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </li>

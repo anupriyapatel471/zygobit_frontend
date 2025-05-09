@@ -78,7 +78,7 @@ const GridBoxes: React.FC<GridBoxesProps> = ({
                     alt="icon"
                   />
                 </div>
-                <h2 className="font-bold text-xl sm:text-2xl lg:text-[32px] text-white mb-7 sm:mb-12">
+                <h2 className="font-bold text-xl sm:text-2xl lg:text-3xl pr-14 sm:pr-0 text-white mb-4 sm:mb-12">
                   {card.title}
                 </h2>
 

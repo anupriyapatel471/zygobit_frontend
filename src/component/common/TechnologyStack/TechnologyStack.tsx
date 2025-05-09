@@ -4,7 +4,7 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/components/ui/TechnologyTabs";
+} from "@/components/ui/StepTabs";
 import Image from "next/image";
 import technologyData from "../../../utils/content/technologyStack.json";
 

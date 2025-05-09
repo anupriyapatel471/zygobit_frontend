@@ -36,7 +36,7 @@ export function ChatBotBtn() {
           />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-full sm:w-[465px] right-5 sm:right-10 rounded-2xl relative p-4 sm:p-5">
+      <DropdownMenuContent className="w-full sm:w-[465px] right-5 sm:right-10 rounded-2xl relative p-4 sm:p-5 z-[99999]">
         <div className="w-full">
           <div className="w-full relative rounded-2xl bg-[#EA580C] flex gap-5 items-center p-3 sm:p-5">
             <div className="relative">

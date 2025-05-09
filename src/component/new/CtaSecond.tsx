@@ -28,11 +28,11 @@ const CtaSecond = ({ content, Aurora, vortex }: ctaProp) => {
             </div>
             <div className="inter-var py-0 w-full">
               <div className=" w-full pb-0 sm:pb-0 relative  group/card justify-between items-center   rounded-xl flex-wrap lg:flex-nowrap flex  ">
-                <div className="w-full order-2 lg:order-none  p-3 sm:p-5 lg:pr-0 lg:py-12 lg:pl-8 text-left">
+                <div className="w-full order-2 lg:order-none  p-3 sm:p-5 lg:pr-12 lg:py-12 lg:pl-14 text-left">
                   <div className="inline text-2xl sm:text-4xl lg:text-5xl text-center sm:text-left text-white font-bold ">
                     Shape the Future of Technology with Us
                   </div>
-                  <p className="text-left sm:font-medium text-sm leading-6 sm:leading-normal sm:text-base lg:text-xl mt-2.5 mb-5 lg:mb-10 max-w-5xl">
+                  <p className="text-left sm:font-medium text-sm leading-6 sm:leading-normal sm:text-base lg:text-xl mt-2.5 mb-5 lg:mb-10">
                     Shape the Future of Technology with Us Partner with our team
                     for a free, no-obligation technical proposal tailored to
                     your next enterprise custom project.

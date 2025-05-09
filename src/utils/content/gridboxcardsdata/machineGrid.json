@@ -5,7 +5,7 @@
     "content": "Harness the power of AI-driven solutions tailored to optimize your business operations, enhance decision-making, and drive innovation.",
     "className": "sm:col-span-2",
     "bgClass": "bg-black/70",
-    "thumbnail": "/images/Proven_expertise.png",
+    "thumbnail": "/images/new_proven.png",
     "boxIcon": "/images/setting_icon.svg"
   },
   {
@@ -33,6 +33,6 @@
     "className": "sm:col-span-2",
     "bgClass": "bg-black/70",
     "boxIcon": "/images/repeat.svg",
-    "thumbnail": "/images/seamless_interaction.jpg"
+    "thumbnail": "/images/seamless_interactionOne.png"
   }
 ]

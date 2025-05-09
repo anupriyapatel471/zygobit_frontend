@@ -35,7 +35,7 @@ const Footer = () => {
   return (
     <footer className="w-full inline-block bg-white">
       <div className="w-full container remove-bg">
-        <div className="w-full flex  gap-y-7 sm:gap-5 flex-wrap lg:flex-nowrap mt-10 lg:mt-20 mb-8 sm:mb-10 lg:mb-12 justify-between">
+        <div className="w-full flex  gap-y-7 sm:gap-5 flex-wrap lg:flex-nowrap mt-10 lg:mt-12 mb-8 sm:mb-10 lg:mb-10 justify-between">
           <div className="w-full lg:w-1/4 mb-0 sm:mb-6 lg:mb-0">
             <Link href="/">
               <Image
@@ -52,7 +52,7 @@ const Footer = () => {
             </p>
             <ul className="flex items-center gap-5">
               <li>
-                <a href="">
+                <a href="https://www.instagram.com/zygobit" target="_blank">
                   <Image
                     width={24}
                     height={24}
@@ -63,7 +63,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="https://www.facebook.com/zygobit" target="_blank">
                   <Image
                     width={24}
                     height={24}
@@ -73,7 +73,7 @@ const Footer = () => {
                   />
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="">
                   <Image
                     width={24}
@@ -94,7 +94,7 @@ const Footer = () => {
                     alt="icon"
                   />
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 

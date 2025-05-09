@@ -5,7 +5,7 @@
     "content": "Years of experience delivering high-quality UI/UX designs that enhance user engagement and satisfaction.",
     "className": "sm:col-span-2",
     "bgClass": "bg-black/70",
-    "thumbnail": "/images/Proven_expertise.png",
+    "thumbnail": "/images/new_proven.png",
     "boxIcon": "/images/setting_icon.svg"
   },
   {
@@ -33,6 +33,6 @@
     "className": "sm:col-span-2",
     "bgClass": "bg-black/70",
     "boxIcon": "/images/repeat.svg",
-    "thumbnail": "/images/seamless_interaction.jpg"
+    "thumbnail": "/images/seamless_interactionOne.png"
   }
 ]

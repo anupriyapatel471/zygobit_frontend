@@ -133,4 +133,14 @@
 .btn-whatsapp-pulse {
   left: 16px;
 }
+.form-item label , .custom-phone-input input {
+  font-size: 12px;
+}
+
+.form-item input:focus + label,
+.form-item input:valid + label,
+.form-item textarea:focus + label,
+.form-item textarea:valid + label {
+  font-size: 12px;
+}
 }
