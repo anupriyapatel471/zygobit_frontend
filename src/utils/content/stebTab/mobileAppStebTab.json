@@ -4,34 +4,34 @@
     "label": "Step 1",
     "title": "Discovery Phase",
     "description": "We begin by understanding your vision, business objectives, and target audience. This phase involves brainstorming, competitor analysis, and gathering key insights to lay a strategic roadmap for your app development journey.",
-    "image": "/images/discovery_img.svg"
+    "image": "/images/discovery_img.jpg"
   },
   {
     "id": 2,
     "label": "Step 2",
     "title": "Planning Phase",
     "description": "In this phase, we define the app’s core functionality, wireframes, and technical requirements. Market research and feasibility analysis ensure that the development process aligns with your business goals.",
-    "image": "/images/planning_img.svg"
+    "image": "/images/planning_img.jpg"
   },
   {
     "id": 3,
     "label": "Step 3",
     "title": "Design & Prototyping",
     "description": "Our UI/UX experts craft intuitive, visually engaging designs that enhance user experience. Interactive prototypes allow stakeholders to visualize the app’s flow before development begins.",
-    "image": "/images/design_img.svg"
+    "image": "/images/design_img.jpg"
   },
   {
     "id": 4,
     "label": "Step 4",
     "title": "Development & Testing",
     "description": "Using the latest technologies, we build a robust, scalable application with seamless performance. Rigorous testing ensures smooth functionality, security, and an error-free user experience.",
-    "image": "/images/devAndTesting_img.svg"
+    "image": "/images/devAndTesting_img.png"
   },
   {
     "id": 5,
     "label": "Step 5",
     "title": "Deployment & Maintenance",
     "description": "Once your app is live, we continue to optimize its performance with updates, security patches, and ongoing support. Our team ensures your app stays ahead with evolving market trends.",
-    "image": "/images/devAndMaintainance.svg"
+    "image": "/images/devAndMaintainance.png"
   }
 ]

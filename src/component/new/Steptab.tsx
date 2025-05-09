@@ -15,22 +15,25 @@ interface StebTabProps {
   description: string;
   image: string;
 }
+interface StebTab {
+  stebTabData: StebTabProps[];
+  title: string;
+  desc: string;
+}
 
-const StebTab = ({ stebTabData }: { stebTabData: StebTabProps[] }) => {
+const StebTab = ({ stebTabData, title, desc }: StebTab) => {
   return (
     <section
       data-aos="fade-up"
-      className="w-full relative overflow-hidden py-10 sm:py-14 lg:py-20 bg-white">
+      className="w-full relative overflow-hidden py-10 sm:py-14 lg:py-20 bg-white"
+    >
       <div className="container remove-bg">
         <div className="w-full sm:text-center mb-5 sm:mb-8 lg:mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-black lg:text-[38px]">
-            Transforming Ideas into Scalable, High-Performance Applications
+            {title}
           </h2>
           <p className="sm:font-medium text-sm sm:text-lg lg:text-xl mx-auto mt-2 sm:mt-5 text-black">
-            We offer end-to-end custom mobile app development services to help
-            businesses innovate and succeed in the digital era. Our structured
-            process ensures the creation of user-centric, high-quality
-            applications tailored to your unique needs.
+            {desc}
           </p>
         </div>
         <div className="w-full">

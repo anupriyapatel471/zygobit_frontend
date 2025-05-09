@@ -42,6 +42,7 @@ import Link from "next/link";
 import DeliveringTailored from "@/component/common/DeliveringTailored/DeliveringTailored";
 import GridBoxes from "@/component/common/GridBoxes/GridBoxes";
 import cards from "../../../utils/content/gridboxcardsdata/uiuxgrid.json";
+import appleCardsData from "../../../utils/content/appleCardsCarousel/uiUxApple.json";
 
 export const metadata: Metadata = {
   title: "UI UX Design",
@@ -103,7 +104,7 @@ const UiuxWebDesign = () => {
           </div>
           <div className="w-full lg:w-3/5">
             <div className="w-full">
-              <AppleCardsCarousel />
+              <AppleCardsCarousel data={appleCardsData} />
             </div>
           </div>
         </div>

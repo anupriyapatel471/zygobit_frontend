@@ -1,5 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const HomeBanner = () => {
   return (
@@ -202,10 +203,12 @@ const HomeBanner = () => {
                     />
                   </li>
                 </ul>
-                <button className=" btn-primary text-sm sm:text-base text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
-                  Build Your Success Story
-                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                </button>
+                <Link href="/contact">
+                  <button className=" btn-primary text-sm sm:text-base text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
+                    Build Your Success Story
+                    <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -35,6 +35,8 @@ interface Project {
   evaluationDescription: string | null;
   evaluationImage: string | null;
   category?: string | null;
+  googlePlayAppLink: string;
+  appStoreAppLink: string;
 }
 
 const PortfolioProjects = () => {
@@ -118,7 +120,10 @@ const PortfolioProjects = () => {
                                     </div>
                                     <div className="w-[1px] h-20 bg-black"></div>
                                     <div className="w-fit flex gap-2.5 flex-col">
-                                      <Link href="" target="_blank">
+                                      <Link
+                                        href={project.googlePlayAppLink}
+                                        target="_blank"
+                                      >
                                         <Image
                                           width={100}
                                           height={29}
@@ -126,7 +131,10 @@ const PortfolioProjects = () => {
                                           alt="image"
                                         />
                                       </Link>
-                                      <Link href="" target="_blank">
+                                      <Link
+                                        href={project?.appStoreAppLink}
+                                        target="_blank"
+                                      >
                                         <Image
                                           width={100}
                                           height={29}
@@ -213,7 +221,10 @@ const PortfolioProjects = () => {
                                     </div>
                                     <div className="w-[1px] h-20 bg-black"></div>
                                     <div className="w-fit flex gap-2.5 flex-col">
-                                      <Link href="" target="_blank">
+                                      <Link
+                                        href={project.googlePlayAppLink}
+                                        target="_blank"
+                                      >
                                         <Image
                                           width={100}
                                           height={29}
@@ -221,7 +232,10 @@ const PortfolioProjects = () => {
                                           alt="image"
                                         />
                                       </Link>
-                                      <Link href="" target="_blank">
+                                      <Link
+                                        href={project?.appStoreAppLink}
+                                        target="_blank"
+                                      >
                                         <Image
                                           width={100}
                                           height={29}

@@ -1,7 +1,6 @@
 import React from "react";
 import GlobeDemo from "./Globe/Globe";
 import { ChevronRight } from "lucide-react";
-import TypewriterEffect from "./Typewriter/Typewriter";
 import VortexBg from "./Vortexbg/Vortexbg";
 import MarqueeVertical from "./Ctaslider/Ctaslider";
 import { AuroraBg } from "./AuroraBg/AuroraBg";
@@ -36,15 +35,13 @@ const Cta = ({ content, Aurora, vortex }: ctaProp) => {
                   data-aos="fade-right"
                   className="w-full order-2 lg:order-none lg:max-w-3xl p-3 sm:p-5 lg:pr-0 lg:py-12 lg:pl-8 text-center sm:text-left"
                 >
-                  <TypewriterEffect />
-                  <div className="inline sm:hidden text-2xl sm:text-[28px] lg:text-4xl text-center sm:text-left text-white font-bold ">
-                    Shape the Future of{" "}
-                    <span className="text-themetext">Technology </span> with Us
+                  <div className="inline text-2xl sm:text-[28px] lg:text-4xl text-center sm:text-left text-white font-bold ">
+                    <span className="text-themetext">Let’s Build </span>
+                    the Future of Technology Together
                   </div>
                   <div className="text-center sm:text-left sm:font-medium text-sm leading-6 sm:leading-normal sm:text-base lg:text-lg mt-2 mb-5">
-                    Shape the Future of Technology with Us Partner with our team
-                    for a free, no-obligation technical proposal tailored to
-                    your next enterprise custom project.
+                    Let our team provide you with a no-cost, no-commitment
+                    technical proposal for your next enterprise custom project.
                   </div>
                   <div>
                     <Link href={"/contact"}>

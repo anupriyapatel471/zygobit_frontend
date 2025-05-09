@@ -46,6 +46,7 @@ import AppleCardsCarousel from "@/component/sevices/MobileAppDevelopment/AppleCa
 import CtaSecond from "@/component/new/CtaSecond";
 import Link from "next/link";
 import cards from "../../../utils/content/gridboxcardsdata/machineGrid.json";
+import appleCardsData from "../../../utils/content/appleCardsCarousel/aiMachineApple.json";
 
 export const metadata: Metadata = {
   title: "Machine Learning AI",
@@ -113,7 +114,7 @@ const MachineLearning = () => {
             </div>
             <div className="w-full lg:w-[60%]">
               <div className="w-full">
-                <AppleCardsCarousel />
+                <AppleCardsCarousel data={appleCardsData} />
               </div>
             </div>
           </div>

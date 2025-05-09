@@ -1,11 +1,21 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../../../../public/images/footer_logo.png";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import toast from "react-hot-toast";
+import { generateClient } from "aws-amplify/data";
+import useAmplifyConfig from "@/hooks/useAmplify";
+
+const client = generateClient();
+
 const Footer = () => {
+  useAmplifyConfig();
+
   const productLinks = [
     { name: "Mobile App Development", url: "/services/mobile-app-development" },
     { name: "Web App Development", url: "/services/web-app-development" },
@@ -15,22 +25,42 @@ const Footer = () => {
     { name: "Blockchain", url: "/services/blockchain" },
   ];
 
-  // const companyLinks = [
-  //   { name: "About", url: "/about-us" },
-  //   { name: "Careers", url: "#" },
-  //   { name: "Blog", url: "/blogs" },
-  // ];
+  const footerLinks = [{ title: "Services", links: productLinks }];
 
-  // const contactLinks = [
-  //   { name: "Github", url: "#" },
-  //   { name: "Discord", url: "#" },
-  //   { name: "Twitter", url: "#" },
-  // ];
+  const [email, setEmail] = useState<string>("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const footerLinks = [
-    { title: "Services", links: productLinks },
-    // { title: "Company", links: companyLinks },
-  ];
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubscribe = async () => {
+    if (!email || !email.includes("@")) {
+      toast.error("Please enter a valid email.");
+      return;
+    }
+    setIsLoading(true);
+    try {
+      // Check if already subscribed
+      const existing = await (client.models as any).SubscribersEmail.list({
+        filter: { email: { eq: email } },
+      });
+
+      if (existing.data.length > 0) {
+        toast.error("Already subscribed!");
+      } else {
+        await (client.models as any).SubscribersEmail.create({
+          email,
+        });
+        toast.success("Subscribed successfully!");
+        setEmail("");
+      }
+    } catch (error) {
+      console.error("Subscription error:", error);
+      toast.error("Something went wrong. Please try again.");
+    }
+    setIsLoading(false);
+  };
 
   return (
     <footer className="w-full inline-block bg-white">
@@ -73,28 +103,6 @@ const Footer = () => {
                   />
                 </a>
               </li>
-              {/* <li>
-                <a href="">
-                  <Image
-                    width={24}
-                    height={24}
-                    className="w-5 h-5 sm:w-6 sm:h-6"
-                    src="/images/x.svg"
-                    alt="icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <Image
-                    width={24}
-                    height={24}
-                    className="w-5 h-5 sm:w-6 sm:h-6"
-                    src="/images/linkedin.svg"
-                    alt="icon"
-                  />
-                </a>
-              </li> */}
             </ul>
           </div>
 
@@ -159,9 +167,16 @@ const Footer = () => {
                   className="bg-white  text-sm text-black sm:text-sm lg:text-sm h-10 md:h-11 lg:h-12 placeholder:text-[#6B6B6B] border-none rounded-none"
                   placeholder="Your email address"
                   type="email"
+                  onChange={handleChange}
+                  name="email"
+                  value={email}
                 />
-                <Button className=" bg-orange-600 font-medium text-sm h-10 sm:h-11 lg:h-12 lg:text-sm hover:bg-orange-500 border-none rounded-none">
-                  Subscribe
+                <Button
+                  onClick={handleSubscribe}
+                  className=" bg-orange-600 font-medium text-sm h-10 sm:h-11 lg:h-12 lg:text-sm hover:bg-orange-500 border-none rounded-none"
+                  disabled={isLoading}
+                >
+                  {isLoading ? "Submitting..." : "Subscribe"}
                 </Button>
               </div>
             </div>

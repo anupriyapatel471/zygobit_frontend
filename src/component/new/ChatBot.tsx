@@ -1,8 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import * as React from "react";
-import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -13,17 +11,12 @@ import {
 
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
-import { CrossCircledIcon } from "@radix-ui/react-icons";
-
-type Checked = DropdownMenuCheckboxItemProps["checked"];
 
 export function ChatBotBtn() {
-  const [showStatusBar, setShowStatusBar] = React.useState<Checked>(true);
-  const [showActivityBar, setShowActivityBar] = React.useState<Checked>(false);
-  const [showPanel, setShowPanel] = React.useState<Checked>(false);
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <DropdownMenu>
+    <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
       <DropdownMenuTrigger asChild>
         {/* chat bot btn*/}
         <Button className="bg-transparent hover:bg-transparent border-none p-0 w-auto h-auto fixed bottom-8 right-4 sm:right-8 z-50">
@@ -58,6 +51,7 @@ export function ChatBotBtn() {
             </div>
             <div className="absolute top-2 sm:top-4 right-4 sm:right-5">
               <Button
+                onClick={() => setIsOpen(false)}
                 className="bg-transparent border-none p-0 hover:bg-transparent"
                 type="button"
                 variant="secondary"

@@ -63,6 +63,7 @@ import BoostBussiness from "@/component/sevices/Common/BoostBussiness/BoostBussi
 import AboutWeb from "@/component/new/AboutWeb";
 import FeaturedSlider from "@/component/common/Featuredslider/Featuredslider";
 import webAppOneJson from "../../../utils/content/boxreveals/webAppOne.json";
+import appleCardsData from "../../../utils/content/appleCardsCarousel/webAppApple.json";
 
 export const metadata: Metadata = {
   title: "Web Development",
@@ -125,7 +126,7 @@ const WebAppDevelopment = () => {
           </div>
           <div className="w-full lg:w-[60%]">
             <div className="w-full">
-              <AppleCardsCarousel />
+              <AppleCardsCarousel data={appleCardsData} />
             </div>
           </div>
         </div>

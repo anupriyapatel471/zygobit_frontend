@@ -28,13 +28,22 @@ export const validateName = (value: string) => {
   return namePattern.test(value.trim());
 };
 
-export const formatDownloads = (downloads: number) => {
-  if (downloads >= 1000) {
-    const result = Math.floor(downloads / 1000);
-    return `${result}K+`;
+export const formatDownloads = (downloads: number): string => {
+  const thresholds = [
+    { value: 1_000_000_000_000, suffix: 'T' },
+    { value: 1_000_000_000, suffix: 'B' },
+    { value: 1_000_000, suffix: 'M' },
+    { value: 1_000, suffix: 'K' },
+  ];
+  for (const { value, suffix } of thresholds) {
+    if (downloads >= value) {
+      const formatted = (downloads / value).toFixed(1).replace(/\.0$/, '');
+      return `${formatted}${suffix}+`;
+    }
   }
   return `${downloads}+`;
 };
+
 
 export const gridButtonOpen = "gridButton";
 export const deliveringTailored = "deliveringTailored";

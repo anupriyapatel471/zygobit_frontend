@@ -640,21 +640,29 @@ input[type="number"]::-webkit-outer-spin-button {
   transition: all 0.3s ease;
 }
 
-.new-form-item input:focus + label
-.new-form-item input:valid + label
-.new-form-item textarea:focus + label
-.new-form-item textarea:valid + label {
+.new-form-item
+  input:focus
+  + label
+  .new-form-item
+  input:valid
+  + label
+  .new-form-item
+  textarea:focus
+  + label
+  .new-form-item
+  textarea:valid
+  + label {
   color: #000 !important;
   font-size: 12px !important;
 }
 
-.new-form-item input:focus + label, 
+.new-form-item input:focus + label,
 .new-form-item textarea:focus + label {
-  background-color: #fff  !important;
+  background-color: #fff !important;
   color: #000 !important;
 }
 .new-form-item label {
-  color: #000  !important;
+  color: #000 !important;
   font-size: 12px !important;
 }
 
@@ -685,12 +693,15 @@ input[type="number"]::-webkit-outer-spin-button {
   opacity: 60%;
 }
 
-
-
 .form-item input:focus + label,
 .form-item textarea:focus + label {
   background-color: #592207;
   color: #fff;
   top: -8px;
   font-size: 12px;
+}
+
+#_rht_toaster {
+  z-index: 99999 !important;
+  position: relative;
 }

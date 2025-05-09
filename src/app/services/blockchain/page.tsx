@@ -1,9 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @next/next/no-img-element */
 import dynamic from "next/dynamic";
 import { ChevronRight } from "lucide-react";
-import Image from "next/image";
-import ApplicationAgeny from "@/component/sevices/Common/ApplicationAgeny/ApplicationAgeny";
+
 import AOSInitializer from "@/component/common/AOSInitializer";
 
 import faqData from "../../../utils/content/faq/faqEcommerce.json";
@@ -29,27 +26,11 @@ const HeroBanner = dynamic(
 const TechnologyStack = dynamic(
   () => import("@/component/common/TechnologyStack/TechnologyStack")
 );
-const WebSlider = dynamic(() =>
-  import("@/component/sevices/Common/WebSlider/WebSlider").then(
-    (mod) => mod.WebSlider
-  )
-);
 
 const ClientSays = dynamic(
   () => import("@/component/common/ClientSays/ClientSays")
 );
 
-const CardSpotlights = dynamic(() =>
-  import(
-    "@/component/sevices/WebAppDevelopment/RobustWebCards/RobustWebCards"
-  ).then((mod) => mod.CardSpotlights)
-);
-
-const CustomWebCards = dynamic(() =>
-  import(
-    "@/component/sevices/WebAppDevelopment/CustomWebCards/CustomWebCards"
-  ).then((mod) => mod.CustomWebCards)
-);
 import stebTabMobileData from "../../../utils/content/stebTab/mobileAppStebTab.json";
 
 import { Metadata } from "next";
@@ -59,13 +40,11 @@ import { Suspense } from "react";
 import Loader from "@/component/common/Loader/Loader";
 import AppleCardsCarousel from "@/component/sevices/MobileAppDevelopment/AppleCardsCarousel/AppleCardsCarousel";
 import BoostBussiness from "@/component/sevices/Common/BoostBussiness/BoostBussiness";
-import applicationAgencyData from "../../../utils/content/applicationAgency/webApp.json";
-
-import engagementModelsWebApp from "../../../utils/content/webSlider/ecommerce.json";
 import AboutWeb from "@/component/new/AboutWeb";
 import StebTab from "@/component/new/Steptab";
 import DeliveringTailored from "@/component/common/DeliveringTailored/DeliveringTailored";
 import webAppOneJson from "../../../utils/content/boxreveals/webAppOne.json";
+import appleCardsData from "../../../utils/content/appleCardsCarousel/blockChainApple.json";
 
 export const metadata: Metadata = {
   title: "Web Development",
@@ -104,13 +83,16 @@ const WebAppDevelopment = () => {
   const paragraph =
     "we specialize in crafting custom mobile applications that empower businesses to thrive in today’s digital-first world. Our innovative solutions are designed to align with your unique goals, helping you unlock new opportunities, engage your audience, and drive sustainable growth.";
 
-  const clientSaysHeading = "We Are a Trusted Web App Development Company";
   const clientHeading = "Hear It from Our Happy Clients!";
   const clientSaysDetails =
     "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions.";
   const heroHeading = "We are Trusted by Industry Leaders";
   const heroParagraph =
     "Powering businesses with cutting-edge web development solutions that ensure seamless performance, scalability, and innovation.";
+  const stebtabTitle = "Blockchain Development Solutions We Deliver";
+
+  const stebtabDesc =
+    "Unlock your business’s full potential with our expert blockchain development services, designed to transform and innovate your operations with tailor-made, agile solutions.";
   return (
     <>
       <AOSInitializer />
@@ -133,7 +115,7 @@ const WebAppDevelopment = () => {
           </div>
           <div className="w-full lg:w-3/5">
             <div className="w-full">
-              <AppleCardsCarousel />
+              <AppleCardsCarousel data={appleCardsData} />
             </div>
           </div>
         </div>
@@ -141,7 +123,11 @@ const WebAppDevelopment = () => {
 
       <AboutWeb data={webAppOneJson} />
 
-      <StebTab stebTabData={stebTabMobileData} />
+      <StebTab
+        stebTabData={stebTabMobileData}
+        title={stebtabTitle}
+        desc={stebtabDesc}
+      />
 
       <CtaSecond content={""} Aurora={""} vortex={""} />
 

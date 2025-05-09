@@ -2,27 +2,27 @@
   {
     "title": "User-Friendly Interface",
     "description": "At Zygobit, our custom web app development solutions are designed for cost-effectiveness, ensuring your project is executed efficiently without compromising quality.",
-    "image": "/images/user_friendly.jpg"
+    "image": "/images/user_friendly.png"
   },
   {
     "title": "OTC Trading",
     "description": "OTC or over-the-counter trading enables direct trading of assets between users. No intermediaries, no additional expenses.",
-    "image": "/images/otc_trading.jpg"
+    "image": "/images/otc_trading.png"
   },
   {
     "title": "Multi-Layer Security",
     "description": "We develop a highly secure digital currency platform to help you transfer multiple assets simultaneously without any worries.",
-    "image": "/images/multi_security.jpg"
+    "image": "/images/multi_security.png"
   },
   {
-    "title": "Automated Trading",
+    "title": "Automated Testing",
     "description": "Our AI-powered trading system executes trades efficiently, ensuring seamless and profitable transactions.",
     "image": "/images/automated_trading.png"
   },
   {
     "title": "Smart Order Routing",
     "description": "We optimize trade execution by routing orders through multiple liquidity sources for better pricing.",
-    "image": "/images/smart_order_routing.jpg"
+    "image": "/images/smart_order_routing.png"
   },
   {
     "title": "Risk Management Tools",
@@ -37,11 +37,11 @@
   {
     "title": "Advanced Analytics",
     "description": "We provide data-driven insights and analytics to help users make informed trading decisions.",
-    "image": "/images/advanced_analytics.jpg"
+    "image": "/images/advanced_analytics.png"
   },
   {
     "title": "Fraud Detection & Prevention",
     "description": "Leveraging AI, we detect suspicious activities in real time, preventing fraud and ensuring transaction security.",
-    "image": "/images/fraud_detection.jpg"
+    "image": "/images/fraud_detection.png"
   }
 ]

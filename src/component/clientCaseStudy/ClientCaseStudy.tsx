@@ -7,6 +7,7 @@ const RippleBg = dynamic(() => import("@/component/common/Ripplebg/Ripplebg"));
 import dynamic from "next/dynamic";
 import ContactForm from "../common/ContactForm/ContactForm";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 interface ProjectData {
   projectName: ReactNode;
@@ -26,13 +27,17 @@ interface ProjectData {
 
 const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
   console.log("projectData", projectData);
+  const router = useRouter();
   return (
     <>
       <section className="w-full  lg:rounded-bl-[100px] relative overflow-hidden backdrop-blur-xl bg-[url('/images/pink_bg.png')]  bg-cover bg-center mt-20">
         <div className="container">
           <div className="w-full flex justify-between ">
             <div className="w-full lg:w-[520px] flex flex-col gap-5 sm:gap-10 py-6">
-              <Button className="w-10 h-10 p-0 sm:p-0 sm:w-12 sm:h-12 rounded-full bg-white hover:bg-white">
+              <Button
+                onClick={() => router.back()}
+                className="w-10 h-10 p-0 sm:p-0 sm:w-12 sm:h-12 rounded-full bg-white hover:bg-white"
+              >
                 <Image
                   width={18}
                   height={18}

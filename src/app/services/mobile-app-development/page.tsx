@@ -39,15 +39,7 @@ const Blog = dynamic(() => import("@/component/common/Blog/Blog"));
 const FaqSection = dynamic(
   () => import("@/component/sevices/Common/FaqSection/FaqSection")
 );
-const MobileAppGrid = dynamic(() =>
-  import("@/component/common/MobileAppGrid/MobileAppGrid").then(
-    (mod) => mod.MobileAppGrid
-  )
-);
-const SharedLayoutAnimation = dynamic(
-  () =>
-    import("@/component/sevices/MobileAppDevelopment/MobileDevTab/MobileDevTab")
-);
+
 import { Metadata } from "next";
 import CtaSecond from "@/component/new/CtaSecond";
 import { MobileTechnology } from "@/component/sevices/MobileAppDevelopment/MobileTechnology/MobileTechnology";
@@ -58,6 +50,7 @@ import GridBoxes from "@/component/common/GridBoxes/GridBoxes";
 import StebTab from "@/component/new/Steptab";
 import stebTabMobileData from "../../../utils/content/stebTab/mobileAppStebTab.json";
 import cards from "../../../utils/content/gridboxcardsdata/gridcardMobile.json";
+import appleCardsData from "../../../utils/content/appleCardsCarousel/mobileAppApple.json";
 
 export const metadata: Metadata = {
   title: "Mobile App Development",
@@ -95,6 +88,12 @@ const MobileAppDevelopment = () => {
   const heroParagraph =
     "Custom iOS & Android solutions designed for performance, security, and scalability—empowering businesses with innovative mobile experiences.";
 
+  const stebtabTitle =
+    "Transforming Ideas into Scalable, High-Performance Applications";
+
+  const stebtabDesc =
+    "We offer end-to-end custom mobile app development services to help businesses innovate and succeed in the digital era. Our structured process ensures the creation of user-centric, high-quality applications tailored to your unique needs.";
+
   return (
     <>
       <AOSInitializer />
@@ -118,7 +117,7 @@ const MobileAppDevelopment = () => {
           </div>
           <div className="w-full lg:w-[60%]">
             <div className="w-full">
-              <AppleCardsCarousel />
+              <AppleCardsCarousel data={appleCardsData} />
             </div>
           </div>
         </div>
@@ -179,7 +178,11 @@ const MobileAppDevelopment = () => {
         </div>
       </section>
 
-      <StebTab stebTabData={stebTabMobileData} />
+      <StebTab
+        stebTabData={stebTabMobileData}
+        title={stebtabTitle}
+        desc={stebtabDesc}
+      />
 
       <div className="pt-12 sm:pt-0">
         <GridBoxes
