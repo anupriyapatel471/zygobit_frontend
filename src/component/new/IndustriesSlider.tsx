@@ -63,7 +63,7 @@ export default function IndustriesSlider() {
                   />
                 </div>
                 <div className="flex items-center justify-between w-full">
-                  <h3 className="sm:font-semibold text-xl sm:text-2xl lg:text-[28px] 2xl:text-[32px]">
+                  <h3 className="sm:font-semibold w-[calc(100%-30px)] text-xl sm:text-2xl lg:text-[28px] 2xl:text-3xl">
                     {data?.name}
                   </h3>
                   <ContactnewForm formOpen={deliveringTailored} />

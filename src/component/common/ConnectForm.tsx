@@ -187,6 +187,7 @@ const ConnectForm = () => {
             <Input
               name="firstName"
               id="firstName"
+              placeholder=" "
               className="bg-white/5 h-10 md:h-10  border-white/20"
               autoComplete="off"
               type="text"
@@ -312,6 +313,7 @@ const ConnectForm = () => {
           <div className="form-item relative">
             <Textarea
               name="projectDetails"
+              placeholder=" "
               id="projectDetails"
               className="resize-none w-full bg-white/5  text-sm sm:text-base h-20 md:h-20 lg:h-32 border border-white/20  p-3 rounded-md outline-none"
               value={formData.projectDetails}

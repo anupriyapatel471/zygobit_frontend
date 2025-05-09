@@ -105,7 +105,7 @@ const MachineLearning = () => {
                 </p>
               </div>
               <Link href="/contact">
-                <button className="mt-5 lg:mt-10 btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-600 duration-500 transition-all">
+                <button className="mt-5 lg:mt-16 2xl:mt-[144px] btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-600 duration-500 transition-all">
                   Get Assistance{" "}
                   <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                 </button>

@@ -150,7 +150,7 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
             />
           </Button>
         ) : formOpen === "deliveringTailored" ? (
-          <Button className="bg-transparent group transition-all duration-500 hover:bg-transparent p-0 w-[30px] h-7 border border-white rounded-full">
+          <Button className="bg-transparent group transition-all duration-500 hover:bg-transparent p-0 w-7 h-7 border border-white rounded-full">
             <Image
               width={10}
               height={10}
@@ -192,10 +192,10 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                   <Input
                     name="firstName"
                     id="firstName"
+                    placeholder=" "
                     className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
-                    placeholder=""
-                    type="text"
                     autoComplete="off"
+                    type="text"
                     value={formData.firstName}
                     onChange={handleChange}
                   />
@@ -205,6 +205,7 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                   <Input
                     name="lastName"
                     id="lastName"
+                    placeholder=" "
                     className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
                     type="text"
                     autoComplete="off"
@@ -259,7 +260,7 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                     autoComplete="off"
                     name="companyEmail"
                     className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
-                    placeholder=""
+                    placeholder=" "
                     type="email"
                   />
                   <label htmlFor="companyEmail">Company Email</label>
@@ -270,7 +271,7 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                     name="companyName"
                     autoComplete="off"
                     className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
-                    placeholder=""
+                    placeholder=" "
                     type="text"
                     value={formData.companyName}
                     onChange={handleChange}
@@ -281,7 +282,7 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                   <Input
                     name="budget"
                     className="bg-black/5 placeholder:text-black/60 text-black  border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
-                    placeholder=""
+                    placeholder=" "
                     type="text"
                     autoComplete="off"
                     value={formData.budget}
@@ -292,7 +293,7 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                 <div className="form-item new-form-item col-span-1 sm:col-span-2 relative">
                   <textarea
                     className="resize-none placeholder:text-black/60 text-black bg-black/5  w-full text-xs lg:text-xs h-16 md:h-20 lg:h-32 border border-black/20 p-3 rounded-md outline-none"
-                    placeholder=""
+                    placeholder=" "
                     name="projectDetails"
                     autoComplete="off"
                     id="projectDetails"

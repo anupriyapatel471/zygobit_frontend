@@ -658,7 +658,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 12px !important;
 }
 
-.form-item label {
+.form-item label, .new-form-item label {
   position: absolute;
   cursor: text;
   z-index: 2;
@@ -693,4 +693,30 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #fff;
   top: -8px;
   font-size: 12px;
+}
+
+
+.form-item input:focus + label,
+.form-item input:not(:placeholder-shown) + label,
+.form-item textarea:focus + label,
+.form-item textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 10px;
+  background-color: #592207;
+  color: #fff;
+  opacity: 60%;
+}
+
+.new-form-item label {
+  pointer-events: none; /* Add this line */
+}
+
+.new-form-item input:focus + label,
+.new-form-item input:not(:placeholder-shown) + label,
+.new-form-item textarea:focus + label,
+.new-form-item textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 10px  !important;
+  background-color: #fff;
+  color: #000;
 }

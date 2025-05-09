@@ -4,6 +4,12 @@
   }
 }
 
+@media screen and (max-width:1870px) {
+  .about-slider-padding {
+    padding-left: 16rem;
+  }
+}
+
 @media screen and (max-width: 1680px) {
   .custom-apple-slider {
     padding-left: 15rem;
@@ -134,13 +140,13 @@
   left: 16px;
 }
 .form-item label , .custom-phone-input input {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .form-item input:focus + label,
 .form-item input:valid + label,
 .form-item textarea:focus + label,
 .form-item textarea:valid + label {
-  font-size: 12px;
+  font-size: 10px;
 }
 }

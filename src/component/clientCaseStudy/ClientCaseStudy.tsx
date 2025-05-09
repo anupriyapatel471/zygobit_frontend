@@ -163,7 +163,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                   <Image
                     width={264}
                     height={570}
-                    className="w-[250px] 2xl:w-[275px] h-[500px] rounded-t-3xl object-cover"
+                    className="w-[250px] 2xl:w-[260px] h-[500px] rounded-t-3xl object-fill 2xl:object-cover"
                     src="/images/phone_five.png"
                     alt="mobile image"
                   />

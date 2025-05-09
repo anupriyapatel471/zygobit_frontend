@@ -114,7 +114,7 @@ const Contact = () => {
                   width={190}
                   height={229}
                   className="w-full group-hover:hidden mx-auto h-[200px] lg:h-[229px] object-contain"
-                  src="/images/vector_one.svg"
+                  src="/images/india_vector.png"
                   alt="icon"
                 />
                 <Image

@@ -95,7 +95,7 @@ const UiuxWebDesign = () => {
           <div className="w-full lg:w-2/5">
             <BoostBussiness heading={heading} paragraph={paragraph} />
             <Link href="/contact">
-              <button className="mt-5 lg:mt-10 btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-600 duration-500 transition-all">
+              <button className="mt-5 lg:mt-[45px] 2xl:mt-[95px] btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-600 duration-500 transition-all">
                 Get Assistance{" "}
                 <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
               </button>
