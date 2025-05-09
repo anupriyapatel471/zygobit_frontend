@@ -107,7 +107,7 @@ const WebAppDevelopment = () => {
           <div className="w-full lg:w-2/5">
             <BoostBussiness heading={heading} paragraph={paragraph} />
             <Link href="/contact">
-              <button className="mt-3 sm:mt-5 lg:mt-10 btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
+              <button className="mt-3 sm:mt-5 lg:mt-4 2xl:mt-[60px] btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
                 Get Assistance{" "}
                 <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
               </button>

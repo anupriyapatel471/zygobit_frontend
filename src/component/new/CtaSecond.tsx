@@ -22,7 +22,7 @@ const CtaSecond = ({ content, Aurora, vortex }: ctaProp) => {
                 className="w-full h-[330px] rounded-tl-2xl sm:rounded-tl-3xl lg:rounded-tl-none lg:rounded-br-none rounded-br-2xl sm:rounded-br-3xl sm:h-[325px] lg:h-[475px] object-cover lg:object-contain"
                 width={475}
                 height={475}
-                src="/images/cta_new_bg.png"
+                src="/images/cta_new_bg.svg"
                 alt="image"
               />
             </div>
