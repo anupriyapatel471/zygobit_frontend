@@ -15,7 +15,7 @@ import Image from "next/image";
 
 import Link from "next/link";
 
-import { formatDownloads, truncateText } from "@/lib/utils";
+import { truncateText } from "@/lib/utils";
 import { useProjects } from "@/hooks/dynamoDb/useProjects";
 export const revalidate = 60;
 
