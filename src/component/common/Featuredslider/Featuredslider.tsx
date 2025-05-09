@@ -59,12 +59,12 @@ export default function FeaturedSlider() {
                             </h2>
                             <p className="text-sm sm:text-base sm:font-medium mt-1.5 sm:pr-5">
                               {project.description &&
-                                truncateText(project.description, 100)}
+                                truncateText(project.description, 300)}
                             </p>
-                            <div className="font-light text-base lg:text-lg mb-1.5 sm:mb-3 mt-4 sm:mt-10">
+                            {/* <div className="font-light text-base lg:text-lg mb-1.5 sm:mb-3 mt-4 sm:mt-10">
                               Results
-                            </div>
-                            <div className="w-full my-4 flex items-center gap-4 sm:gap-5">
+                            </div> */}
+                            {/* <div className="w-full my-4 flex items-center gap-4 sm:gap-5">
                               {project.androidDownloads && (
                                 <div className="w-auto">
                                   <b className="font-semibold tracking-tighter text-xl sm:text-2xl">
@@ -94,7 +94,7 @@ export default function FeaturedSlider() {
                                   />
                                 </Link>
                               </div>
-                            </div>
+                            </div> */}
                           </div>
                           <div>
                             <Link href={`/portfolio/${project.slug}`}>
@@ -134,7 +134,9 @@ export default function FeaturedSlider() {
             </CarouselItem>
           ))}
       </CarouselContent>
-      <span className="text-base sm:text-xl absolute bottom-1.5 sm:bottom-0 right-[35px] sm:right-auto left-auto sm:left-[32%] font-normal">{current}/5</span>
+      <span className="text-base sm:text-xl absolute bottom-1.5 sm:bottom-0 right-[35px] sm:right-auto left-auto sm:left-[32%] font-normal">
+        {current}/5
+      </span>
 
       <CarouselPrevious className="featured-left-btn featured-btn" />
       <CarouselNext className="featured-right-btn featured-btn" />
