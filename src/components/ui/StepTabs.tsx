@@ -5,7 +5,6 @@ import * as React from "react";
 import * as TabsPrimitive from "@radix-ui/react-tabs";
 
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 
 const Tabs = TabsPrimitive.Root;
 
