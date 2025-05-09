@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import toast from "react-hot-toast";
 import { generateClient } from "aws-amplify/data";
 import useAmplifyConfig from "@/hooks/useAmplify";
+import { validateEmail } from "@/lib/utils";
 
 const client = generateClient();
 
@@ -47,13 +48,12 @@ const Footer = () => {
   };
 
   const handleSubscribe = async () => {
-    if (!email || !email.includes("@")) {
+    if (!email || !validateEmail(email)) {
       toast.error("Please enter a valid email.");
       return;
     }
     setIsLoading(true);
     try {
-      // Check if already subscribed
       const existing = await (client.models as any).SubscribersEmail.list({
         filter: { email: { eq: email } },
       });
