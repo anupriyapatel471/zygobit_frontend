@@ -24,9 +24,21 @@ const Footer = () => {
     { name: "E-Commerce", url: "/services/e-commerce" },
     { name: "Blockchain", url: "/services/blockchain" },
   ];
+  // const companyLinks = [
+  //   { name: "About", url: "/about-us" },
+  //   { name: "Careers", url: "#" },
+  //   { name: "Blog", url: "/blogs" },
+  // ];
 
-  const footerLinks = [{ title: "Services", links: productLinks }];
-
+  // const contactLinks = [
+  //   { name: "Github", url: "#" },
+  //   { name: "Discord", url: "#" },
+  //   { name: "Twitter", url: "#" },
+  // ];
+  const footerLinks = [
+    { title: "Services", links: productLinks },
+    // { title: "Company", links: companyLinks },
+  ];
   const [email, setEmail] = useState<string>("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -103,6 +115,28 @@ const Footer = () => {
                   />
                 </a>
               </li>
+              {/* <li>
+              <a href="">
+                <Image
+                  width={24}
+                  height={24}
+                  className="w-5 h-5 sm:w-6 sm:h-6"
+                  src="/images/x.svg"
+                  alt="icon"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <Image
+                  width={24}
+                  height={24}
+                  className="w-5 h-5 sm:w-6 sm:h-6"
+                  src="/images/linkedin.svg"
+                  alt="icon"
+                />
+              </a>
+            </li> */}
             </ul>
           </div>
 
