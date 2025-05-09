@@ -51,6 +51,7 @@ const Contact = () => {
       description: "info@zygobit.com",
     },
   ];
+
   return (
     <>
       <AOSInitializer />
