@@ -140,7 +140,7 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
     <Dialog>
       <DialogTrigger asChild>
         {formOpen === "gridButton" ? (
-          <Button className="absolute transition-all duration-300 top-4 right-4 lg:top-10 lg:right-10 border-2 border-white bg-transparent hover:bg-transparent group-hover:rotate-0 -rotate-45 w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 rounded-full p-0">
+          <Button className="absolute transition-all duration-300 top-4 right-4 lg:top-10 lg:right-10 border-2 border-white bg-transparent hover:bg-transparent group-hover:rotate-0 -rotate-45 w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 rounded-full p-0 sm:p-0">
             <Image
               width={28}
               height={28}
@@ -150,11 +150,11 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
             />
           </Button>
         ) : formOpen === "deliveringTailored" ? (
-          <Button className="bg-transparent hover:bg-transparent p-0 w-7 h-7 border border-white rounded-full">
+          <Button className="bg-transparent group transition-all duration-500 hover:bg-transparent p-0 w-[30px] h-7 border border-white rounded-full">
             <Image
               width={10}
               height={10}
-              className="w-3 h-3 object-contain"
+              className="w-4 group-hover:rotate-[45deg] transition-all duration-500 h-4 object-contain"
               src="/images/up_arrow.svg"
               alt=""
             />
@@ -188,22 +188,32 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                 <span className="text-orange-600">succeed your Business!</span>
               </h2>
               <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <Input
-                  name="firstName"
-                  className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
-                  placeholder="First Name"
-                  type="text"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                />
-                <Input
-                  name="lastName"
-                  className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
-                  placeholder="Last Name"
-                  type="text"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                />
+                <div className="form-item new-form-item relative">
+                  <Input
+                    name="firstName"
+                    id="firstName"
+                    className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
+                    placeholder=""
+                    type="text"
+                    autoComplete="off"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                  />
+                  <label htmlFor="firstName">First Name</label>
+                </div>
+                <div className="form-item new-form-item relative">
+                  <Input
+                    name="lastName"
+                    id="lastName"
+                    className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
+                    type="text"
+                    autoComplete="off"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                  />
+                  <label htmlFor="lastName">Last Name</label>
+                </div>
+
                 {/* <Input
                 name="PhoneNumber"
                 className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
@@ -243,29 +253,55 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                     className="h-10 md:h-11 lg:h-11 form-input absolute top-0 left-0 w-full"
                   />
                 </div>
-                <Input
-                  name="companyName"
-                  className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
-                  placeholder="Company Name"
-                  type="text"
-                  value={formData.companyName}
-                  onChange={handleChange}
-                />
-                <Input
-                  name="budget"
-                  className="bg-black/5 placeholder:text-black/60 text-black col-span-1 sm:col-span-2 border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
-                  placeholder="Budget :"
-                  type="text"
-                  value={formData.budget}
-                  onChange={handleChange}
-                />
-                <textarea
-                  className="resize-none placeholder:text-black/60 text-black bg-black/5 col-span-1 sm:col-span-2 w-full text-xs lg:text-xs h-16 md:h-20 lg:h-32 border border-black/20 p-3 rounded-md outline-none"
-                  placeholder="About Project"
-                  name="projectDetails"
-                  value={formData.projectDetails}
-                  onChange={handleChange}
-                ></textarea>
+                <div className="form-item new-form-item relative">
+                  <Input
+                    id="companyEmail"
+                    autoComplete="off"
+                    name="companyEmail"
+                    className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
+                    placeholder=""
+                    type="email"
+                  />
+                  <label htmlFor="companyEmail">Company Email</label>
+                </div>
+                <div className="form-item new-form-item relative">
+                  <Input
+                    id="companyName"
+                    name="companyName"
+                    autoComplete="off"
+                    className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
+                    placeholder=""
+                    type="text"
+                    value={formData.companyName}
+                    onChange={handleChange}
+                  />
+                  <label htmlFor="companyName">Company Name</label>
+                </div>
+                <div className="form-item new-form-item relative">
+                  <Input
+                    name="budget"
+                    className="bg-black/5 placeholder:text-black/60 text-black  border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
+                    placeholder=""
+                    type="text"
+                    autoComplete="off"
+                    value={formData.budget}
+                    onChange={handleChange}
+                  />
+                  <label htmlFor="budget">Budget :</label>
+                </div>
+                <div className="form-item new-form-item col-span-1 sm:col-span-2 relative">
+                  <textarea
+                    className="resize-none placeholder:text-black/60 text-black bg-black/5  w-full text-xs lg:text-xs h-16 md:h-20 lg:h-32 border border-black/20 p-3 rounded-md outline-none"
+                    placeholder=""
+                    name="projectDetails"
+                    autoComplete="off"
+                    id="projectDetails"
+                    value={formData.projectDetails}
+                    onChange={handleChange}
+                  ></textarea>
+                  <label htmlFor="projectDetails">About Project</label>
+                </div>
+
                 <button
                   type="submit"
                   className="group bg-orange-600 hover:bg-orange-500 sm:h-12 col-span-1 sm:col-span-2 overflow-hidden font-medium transition-all duration-500 btn-primary text-white relative"

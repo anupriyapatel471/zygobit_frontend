@@ -131,14 +131,14 @@ const MachineLearning = () => {
               <FeaturedSlider />
             </div>
 
-            <div className="w-full flex justify-center mt-7 sm:mt-10">
+            {/* <div className="w-full flex justify-center mt-7 sm:mt-10">
               <Link href={"/portfolio"}>
                 <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
                   View All
                   <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                 </button>
               </Link>
-            </div>
+            </div> */}
           </div>
         </section>
       </Suspense>

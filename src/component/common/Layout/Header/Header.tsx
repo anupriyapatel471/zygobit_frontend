@@ -178,9 +178,9 @@ const Header = () => {
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
                     <Link
                       href="/services/mobile-app-development"
-                      className=" text-neutral-950  text-sm sm:text-base hover:text-neutral-950 inline-block w-full hover:bg-transparent p-0"
+                      className=" text-neutral-950 group text-sm sm:text-base hover:text-neutral-950 inline-block w-full hover:bg-transparent p-0"
                     >
-                      <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
+                      <h3 className="flex gap-2 items-center group-hover:text-themetext font-semibold text-base sm:text-lg lg:text-xl">
                         Mobile App Development{" "}
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
@@ -205,10 +205,10 @@ const Header = () => {
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
                     <Link
                       href="/services/web-app-development"
-                      className=" text-neutral-950 hover:text-neutral-950 inline-block w-full hover:bg-transparent p-0"
+                      className=" text-neutral-950 group hover:text-neutral-950 inline-block w-full hover:bg-transparent p-0"
                       title=""
                     >
-                      <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
+                      <h3 className="flex gap-2 items-center group-hover:text-themetext font-semibold text-base sm:text-lg lg:text-xl">
                         Web Development{" "}
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
@@ -233,9 +233,9 @@ const Header = () => {
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
                     <Link
                       href="/services/uiux-web-design"
-                      className=" text-neutral-950 hover:text-neutral-950 inline-block w-full hover:bg-transparent p-0"
+                      className=" text-neutral-950 group  hover:text-neutral-950 inline-block w-full hover:bg-transparent p-0"
                     >
-                      <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
+                      <h3 className="flex gap-2 items-center group-hover:text-themetext font-semibold text-base sm:text-lg lg:text-xl">
                         UI/UX Design{" "}
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
@@ -260,9 +260,9 @@ const Header = () => {
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
                     <Link
                       href="/services/machine-learning-ai"
-                      className=" text-neutral-950 hover:text-neutral-950 inline-block w-full hover:bg-transparent p-0"
+                      className=" text-neutral-950 group hover:text-neutral-950 inline-block w-full hover:bg-transparent p-0"
                     >
-                      <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
+                      <h3 className="flex gap-2 items-center group-hover:text-themetext font-semibold text-base sm:text-lg lg:text-xl">
                         Machine Learning and AI{" "}
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
@@ -288,9 +288,9 @@ const Header = () => {
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
                     <Link
                       href="/services/e-commerce"
-                      className=" text-neutral-950 hover:text-neutral-950 inline-block w-full hover:bg-transparent p-0"
+                      className=" text-neutral-950 group hover:text-neutral-950 inline-block w-full hover:bg-transparent p-0"
                     >
-                      <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
+                      <h3 className="flex gap-2 items-center group-hover:text-themetext font-semibold text-base sm:text-lg lg:text-xl">
                         E-Commerce{" "}
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
@@ -315,9 +315,9 @@ const Header = () => {
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
                     <Link
                       href="/services/blockchain"
-                      className=" text-neutral-950 hover:text-neutral-950 inline-block w-full hover:bg-transparent p-0"
+                      className=" text-neutral-950 group hover:text-neutral-950 inline-block w-full hover:bg-transparent p-0"
                     >
-                      <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
+                      <h3 className="flex gap-2 items-center group-hover:text-themetext font-semibold text-base sm:text-lg lg:text-xl">
                         Blockchain{" "}
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"

@@ -20,8 +20,7 @@ const StebTab = ({ stebTabData }: { stebTabData: StebTabProps[] }) => {
   return (
     <section
       data-aos="fade-up"
-      className="w-full relative overflow-hidden py-10 sm:py-14 lg:py-20 bg-white"
-    >
+      className="w-full relative overflow-hidden py-10 sm:py-14 lg:py-20 bg-white">
       <div className="container remove-bg">
         <div className="w-full sm:text-center mb-5 sm:mb-8 lg:mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-black lg:text-[38px]">

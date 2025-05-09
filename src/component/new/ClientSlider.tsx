@@ -143,8 +143,8 @@ export function ClientSlider() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="w-10 h-10  lg:h-[52px] lg:w-[52px] -bottom-20 sm:-bottom-24 sm:top-auto lg:top-1/2 sm:right-20 sm:left-auto lg:-left-[90px]" />
-      <CarouselNext className="w-10 h-10  lg:h-[52px] lg:w-[52px] -bottom-20 sm:-bottom-24 sm:top-auto sm:right-2 lg:top-1/2 lg:-right-[90px]" />
+      <CarouselPrevious className="w-10 h-10  lg:h-11 lg:w-11 2xl:h-[52px] 2xl:w-[52px] -bottom-20 sm:-bottom-24 sm:top-auto lg:top-1/2 sm:right-20 sm:left-auto lg:-left-[65px] 2xl:-left-[90px]" />
+      <CarouselNext className="w-10 h-10  lg:h-11 lg:w-11 2xl:h-[52px] 2xl:w-[52px] -bottom-20 sm:-bottom-24 sm:top-auto sm:right-2 lg:top-1/2 lg:-right-[65px] 2xl:-right-[90px]" />
     </Carousel>
   );
 }

@@ -53,7 +53,7 @@ export default function IndustriesSlider() {
         <Slider {...settings}>
           {sliderData.map((data, index) => (
             <div key={index} className="">
-              <div className="w-full sm:w-[350px] lg:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
+              <div className="w-full sm:w-[350px] lg:w-[385px] 2xl:w-[415px] h-[340px] lg:h-96 p-5 bg-black/60 rounded-2xl relative overflow-hidden">
                 <div className="w-full h-full absolute top-0 left-0 -z-10">
                   <Image
                     fill
@@ -63,7 +63,7 @@ export default function IndustriesSlider() {
                   />
                 </div>
                 <div className="flex items-center justify-between w-full">
-                  <h3 className="sm:font-semibold text-xl sm:text-2xl lg:text-[32px]">
+                  <h3 className="sm:font-semibold text-xl sm:text-2xl lg:text-[28px] 2xl:text-[32px]">
                     {data?.name}
                   </h3>
                   <ContactnewForm formOpen={deliveringTailored} />

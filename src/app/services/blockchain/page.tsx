@@ -111,7 +111,6 @@ const WebAppDevelopment = () => {
   const heroHeading = "We are Trusted by Industry Leaders";
   const heroParagraph =
     "Powering businesses with cutting-edge web development solutions that ensure seamless performance, scalability, and innovation.";
-
   return (
     <>
       <AOSInitializer />

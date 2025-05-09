@@ -77,7 +77,7 @@ const Ecommerce = () => {
         <WeDeliver />
       </Suspense>
 
-      <section className="w-full custom-apple-slider  bg-white pt-12 pb-6 sm:pt-14 sm:pb-24 lg:py-20 overflow-hidden">
+      <section className="w-full custom-apple-slider  bg-white pt-12 pb-12 sm:pt-14 sm:pb-24 lg:py-20 overflow-hidden">
         <div className="flex flex-wrap lg:flex-nowrap text-black justify-between gap-20 sm:gap-5">
           <div className="w-full lg:w-2/5 ">
             <h2 className="text-2xl sm:text-3xl lg:text-[35px] lg:leading-[50px]  font-bold">
