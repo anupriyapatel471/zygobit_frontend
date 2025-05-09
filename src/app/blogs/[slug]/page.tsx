@@ -72,6 +72,7 @@ export async function generateMetadata({
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const blog = await fetchBlogBySlug(params.slug);
+
   return (
     <>
       <AOSInitializer />
