@@ -48,8 +48,8 @@ export default function FeaturedSlider() {
                 <Card className="border-none rounded-xl">
                   <CardContent className="p-0">
                     <div className="w-full   mt-5  sm:mt-11">
-                      <div className="w-full flex flex-wrap sm:flex-nowrap gap-5 justify-between items-start">
-                        <div className="order-2 sm:order-2 w-full sm:w-1/2 lg:w-2/5 h-full gap-4 sm:sgap-8 lg:gap-[75px] flex flex-col justify-between  text-white">
+                      <div className="w-full flex flex-wrap sm:flex-nowrap gap-5 justify-between items-start xl:px-10">
+                        <div className="order-2 sm:order-2 w-full sm:w-1/2 lg:w-2/5 h-full xl:h-[450px] gap-4 sm:sgap-8 lg:gap-[75px] flex flex-col justify-between  text-white">
                           <div>
                             <span className="font-light text-sm sm:text-base lg:text-lg block mb-2 text-themetext sm:mb-4 lg:mb-6">
                               Case Study
@@ -61,40 +61,6 @@ export default function FeaturedSlider() {
                               {project.description &&
                                 truncateText(project.description, 300)}
                             </p>
-                            {/* <div className="font-light text-base lg:text-lg mb-1.5 sm:mb-3 mt-4 sm:mt-10">
-                              Results
-                            </div> */}
-                            {/* <div className="w-full my-4 flex items-center gap-4 sm:gap-5">
-                              {project.androidDownloads && (
-                                <div className="w-auto">
-                                  <b className="font-semibold tracking-tighter text-xl sm:text-2xl">
-                                    {formatDownloads(project.androidDownloads)}
-                                  </b>
-                                  <span className="block text-sm sm:text-base font-light mbt-1">
-                                    Android Downloads
-                                  </span>
-                                </div>
-                              )}
-                              <div className="w-[0.5px] h-20 bg-white"></div>
-                              <div className="w-fit flex gap-2.5 flex-col">
-                                <Link href="" target="_blank">
-                                  <Image
-                                    width={100}
-                                    height={29}
-                                    src="/images/playstore.svg"
-                                    alt="image"
-                                  />
-                                </Link>
-                                <Link href="" target="_blank">
-                                  <Image
-                                    width={100}
-                                    height={29}
-                                    src="/images/applestore.svg"
-                                    alt="image"
-                                  />
-                                </Link>
-                              </div>
-                            </div> */}
                           </div>
                           <div>
                             <Link href={`/portfolio/${project.slug}`}>

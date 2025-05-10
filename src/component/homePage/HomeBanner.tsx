@@ -39,9 +39,9 @@ const HomeBanner = () => {
                   alt="Logo"
                 />
               </div>
-              <div className="w-full absolute top-6 sm:top-0 left-0 grid grid-cols-3 gap-y-10 sm:gap-y-0 sm:flex items-end justify-between px-0 lg:px-24 pt-0 sm:pt-7">
-                <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer">
-                  <div className="move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
+              <div className="w-full absolute top-12 sm:top-0 left-0 grid grid-cols-3 gap-y-9 sm:gap-y-0 sm:flex items-end justify-between px-0 lg:px-24 pt-0 sm:pt-7">
+                <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-4 sm:gap-6 transition-all duration-300 cursor-pointer">
+                  <div className="move-img w-8 h-8 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -49,11 +49,11 @@ const HomeBanner = () => {
                       alt="image"
                     />
                   </div>
-                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
+                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-xs sm:text-sm">
                     Strategist
                     <div className="absolute -top-7 left-0">
                       <Image
-                        className="w-5 h-5"
+                        className="w-4 h-4 sm:w-5 sm:h-5"
                         width={15}
                         height={15}
                         src="/images/direction_icon.svg"
@@ -62,12 +62,12 @@ const HomeBanner = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer mb-0 sm:mb-56">
-                  <div className="order-2 sm:order-none bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
+                <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-4 sm:gap-6 transition-all duration-300 cursor-pointer mb-0 sm:mb-56">
+                  <div className="order-2 sm:order-none bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-xs sm:text-sm">
                     Tester
                     <div className="absolute -top-7 -left-0">
                       <Image
-                        className="w-5 h-5"
+                        className="w-4 h-4 sm:w-5 sm:h-5"
                         width={15}
                         height={15}
                         src="/images/direction_icon.svg"
@@ -75,7 +75,7 @@ const HomeBanner = () => {
                       />
                     </div>
                   </div>
-                  <div className="order-1 sm:order-none move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
+                  <div className="order-1 sm:order-none move-img w-8 h-8 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -84,8 +84,8 @@ const HomeBanner = () => {
                     />
                   </div>
                 </div>
-                <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer">
-                  <div className="move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
+                <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-4 sm:gap-6 transition-all duration-300 cursor-pointer">
+                  <div className="move-img w-8 h-8 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -93,11 +93,11 @@ const HomeBanner = () => {
                       alt="image"
                     />
                   </div>
-                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
+                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-xs sm:text-sm">
                     Designer
                     <div className="absolute -top-7 right-0">
                       <Image
-                        className="w-5 h-5"
+                        className="w-4 h-4 sm:w-5 sm:h-5"
                         width={15}
                         height={15}
                         src="/images/direction_icon.svg"
@@ -107,11 +107,11 @@ const HomeBanner = () => {
                   </div>
                 </div>
                 <div className="w-full sm:w-fit relative sm:-left-12 custom-move-animation group flex flex-col items-center justify-center gap-5 transition-all duration-300 cursor-pointer mb-0 sm:mb-56">
-                  <div className="bg-[#2A2A2A] order-2 sm:order-none relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
+                  <div className="bg-[#2A2A2A] order-2 sm:order-none relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-xs sm:text-sm">
                     Manager
                     <div className="absolute -top-7 -left-0">
                       <Image
-                        className="w-5 h-5"
+                        className="w-4 h-4 sm:w-5 sm:h-5"
                         width={15}
                         height={15}
                         src="/images/direction_icon.svg"
@@ -119,7 +119,7 @@ const HomeBanner = () => {
                       />
                     </div>
                   </div>
-                  <div className="order-1 sm:order-none move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
+                  <div className="order-1 sm:order-none move-img w-8 h-8 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -128,8 +128,8 @@ const HomeBanner = () => {
                     />
                   </div>
                 </div>
-                <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-6 transition-all duration-300 cursor-pointer">
-                  <div className="move-img w-10 h-10 sm:w-14 sm:h-14 rounded-full relative">
+                <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-4 sm:gap-6 transition-all duration-300 cursor-pointer">
+                  <div className="move-img w-8 h-8 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -137,11 +137,11 @@ const HomeBanner = () => {
                       alt="image"
                     />
                   </div>
-                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-sm">
+                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-xs sm:text-sm">
                     Developer
                     <div className="absolute -top-7 right-0">
                       <Image
-                        className="w-5 h-5"
+                        className="w-4 h-4 sm:w-5 sm:h-5"
                         width={15}
                         height={15}
                         src="/images/direction_icon.svg"

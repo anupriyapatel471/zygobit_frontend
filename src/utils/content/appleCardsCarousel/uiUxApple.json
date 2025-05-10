@@ -1,32 +1,32 @@
 [
   {
-    "category": "Custom-Built Mobile Apps",
-    "title": "We develop bespoke mobile applications tailored to your specific business needs, ensuring seamless functionality, an intuitive user interface, and a smooth experience for your customers. Our solutions are designed to enhance engagement and drive efficiency.",
-    "icon": ""
+    "category": "UI/UX Consulting",
+    "title": "We guide you through every step of the UI UX design process. Whether it's mobile app UI design or web design, our UI UX design consultants assist you with the best expertise.",
+    "icon": "/images/ui_icon_one.svg"
   },
   {
-    "category": "Cutting-Edge Technology Integration",
-    "title": "From AI and machine learning to IoT and blockchain, we integrate the latest technologies to future-proof your app. Our innovative approach keeps you ahead of the competition, ensuring high performance, security, and adaptability in an ever-changing digital landscape.",
-    "icon": ""
+    "category": "Prototyping",
+    "title": "Our UI UX design agency creates prototypes to ensure usability, where we meticulously optimize page layouts, strategically arranging elements for a responsive digital experience.",
+    "icon": "/images/ui_icon_two.svg"
   },
   {
-    "category": "Scalable Solutions",
-    "title": "Our mobile applications are built to grow with your business, ensuring they adapt to evolving demands, market trends, and user expectations. We design flexible architectures that allow seamless upgrades and expansions without compromising performance.",
-    "icon": ""
+    "category": "Web UI/UX Design",
+    "title": "With our responsive web design services, we transform your online presence, ensuring that your web UI UX design is visually stunning, highly functional, and user-friendly.",
+    "icon": "/images/ui_icon_three.svg"
   },
   {
-    "category": "Powerful Notifications & Alerts",
-    "title": "Keep your users engaged with advanced notification services that ensure timely alerts, reminders, and updates. Our solutions leverage AI-driven personalization to send relevant and impactful messages, improving user retention and experience.",
-    "icon": ""
+    "category": "Powerful Notifications",
+    "title": "With our responsive web design services, we transform your online presence, ensuring that your web UI UX design is visually stunning, highly functional, and user-friendly.",
+    "icon": "/images/ui_icon_three.svg"
   },
   {
-    "category": "Cross-Platform Compatibility",
-    "title": "We develop mobile applications that work seamlessly across multiple devices and platforms, ensuring a consistent experience for all users. Whether it’s iOS, Android, or web-based applications, we deliver high-performance solutions for maximum reach.",
-    "icon": ""
+    "category": "Cross-Platform ",
+    "title": "With our responsive web design services, we transform your online presence, ensuring that your web UI UX design is visually stunning, highly functional, and user-friendly.",
+    "icon": "/images/ui_icon_three.svg"
   },
   {
-    "category": "Robust Security & Compliance",
-    "title": "Security is at the core of our mobile app development. We implement advanced encryption, secure authentication, and compliance measures to protect user data. Our apps adhere to industry standards, ensuring reliability, privacy, and trustworthiness.",
-    "icon": ""
+    "category": "Robust Security ",
+    "title": "With our responsive web design services, we transform your online presence, ensuring that your web UI UX design is visually stunning, highly functional, and user-friendly.",
+    "icon": "/images/ui_icon_three.svg"
   }
 ]
