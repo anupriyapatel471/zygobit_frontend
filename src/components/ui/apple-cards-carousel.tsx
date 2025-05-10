@@ -27,6 +27,7 @@ interface CarouselProps {
 type Card = {
   title: string;
   category: string;
+  icon: string;
 };
 
 export const CarouselContext = createContext<{
@@ -214,12 +215,13 @@ export const Card = ({
               >
                 <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
               </button>
-              <motion.p
+
+              {/* <motion.p
                 layoutId={layout ? `category-${card.title}` : undefined}
                 className=" font-semibold text-2xl text-black"
               >
                 {card.category}
-              </motion.p>
+              </motion.p> */}
               <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
                 className="text-base text-black"
@@ -238,6 +240,10 @@ export const Card = ({
       >
         <div className="absolute hidden h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
         <div className="w-full relative rounded-2xl z-40 p-4 2xl:p-5 border border-[#C4C4C4] bg-white/5 text-left h-[275px] sm:h-auto lg:h-[300px] 2xl:h-[349px] cursor-default">
+         {card.icon.length > 0 &&  <div className="relative -left-6">
+            <img src={card.icon} alt="" />
+          </div>
+          }
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
             className="font-semibold relative z-[1111] text-base sm:text-lg cursor-text tracking-tighter text-black"

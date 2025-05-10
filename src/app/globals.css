@@ -595,7 +595,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .featured-btn {
   top: auto !important;
-  bottom: -10px !important;
+  bottom: -7px !important;
   background-color: transparent !important;
   border: none !important;
   width: auto !important;
@@ -603,8 +603,8 @@ input[type="number"]::-webkit-outer-spin-button {
   right: auto !important;
 }
 .featured-btn img {
-  width: 28px !important;
-  height: 28px !important;
+  width: 24px !important;
+  height: 24px !important;
   filter: brightness(0) invert(1);
 }
 .featured-left-btn {
@@ -642,13 +642,13 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .new-form-item
   input:focus
-  + label
+  + label, 
   .new-form-item
   input:valid
-  + label
+  + label, 
   .new-form-item
   textarea:focus
-  + label
+  + label, 
   .new-form-item
   textarea:valid
   + label {
@@ -702,11 +702,6 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 12px;
 }
 
-#_rht_toaster {
-  z-index: 99999 !important;
-  position: relative;
-}
-
 .form-item input:focus + label,
 .form-item input:not(:placeholder-shown) + label,
 .form-item textarea:focus + label,
@@ -730,4 +725,9 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 10px !important;
   background-color: #fff;
   color: #000;
+}
+
+#_rht_toaster {
+  z-index: 99999 !important;
+  position: relative;
 }

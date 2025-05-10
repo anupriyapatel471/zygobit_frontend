@@ -130,7 +130,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                 </div>
               </div>
             </div>
-            <div className="w-[480px] 2xl:w-[600px] hidden lg:inline relative -right-16 2xl:-right-28">
+            <div className="w-[450px] 2xl:w-[600px] hidden lg:inline relative -right-10 2xl:-right-28">
               <div className="w-full grid grid-cols-2 h-fit gap-7 2xl:gap-10 ">
                 <div className="w-full flex flex-col gap-8 ">
                   <Image

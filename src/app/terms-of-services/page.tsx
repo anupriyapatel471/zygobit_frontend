@@ -54,14 +54,14 @@ const page = () => {
             </p>
             <ul className="list-disc text-sm sm:text-base list-inside pl-4 mt-2">
               <li>
-                (A) you have reached the age of majority in your jurisdiction;
+                 you have reached the age of majority in your jurisdiction;
               </li>
               <li>
-                (B) you possess the necessary authority, capacity, and power to
+                 you possess the necessary authority, capacity, and power to
                 accept these terms on behalf of the entity;
               </li>
               <li>
-                (C) the entity agrees to be irrevocably bound by these terms and
+                the entity agrees to be irrevocably bound by these terms and
                 comply fully with them.
               </li>
             </ul>
@@ -91,21 +91,21 @@ const page = () => {
             </p>
             <ul className="list-disc text-sm sm:text-base list-inside pl-4 mt-2">
               <li>
-                (i) storing, copying, modifying, or distributing any content
+                 storing, copying, modifying, or distributing any content
                 from our Services ("Service Content") or compiling it into a
                 database;
               </li>
               <li>
-                (ii) using automated tools such as robots or spiders to interact
+                 using automated tools such as robots or spiders to interact
                 with the Services;
               </li>
-              <li>(iii) sublicensing access to our Services;</li>
+              <li>sublicensing access to our Services;</li>
               <li>
-                (iv) overburdening or compromising the performance of our
+                 overburdening or compromising the performance of our
                 Services;
               </li>
               <li>
-                (vii) altering or obscuring copyright, trademark, or proprietary
+                 altering or obscuring copyright, trademark, or proprietary
                 notices.
               </li>
             </ul>
