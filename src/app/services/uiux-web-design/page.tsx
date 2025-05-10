@@ -25,7 +25,6 @@ const WeDeliver = dynamic(
 const TechnologyStack = dynamic(
   () => import("@/component/common/TechnologyStack/TechnologyStack")
 );
-
 const ParticlesCards = dynamic(() =>
   import(
     "@/component/sevices/uiUxWebDesign/ParticlesCards/ParticlesCards"
