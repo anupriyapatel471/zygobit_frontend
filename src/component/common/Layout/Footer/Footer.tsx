@@ -173,14 +173,14 @@ const Footer = () => {
                   About Us
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/portfolio"
                   className="text-sm text-secondaryText hover:text-themetext"
                 >
                   Careers
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/blogs"

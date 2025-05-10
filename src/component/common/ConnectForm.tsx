@@ -168,12 +168,7 @@ const ConnectForm = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      data-aos="fade-left"
-      className="w-auto lg:px-0"
-      noValidate
-    >
+    <form onSubmit={handleSubmit} className="w-auto lg:px-0" noValidate>
       <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl  text-gradiant-custom-second">
         Let’s connect
       </h2>
