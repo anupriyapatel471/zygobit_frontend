@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is blockchain technology?",
+    "answer": "Blockchain is a decentralized digital ledger that records transactions across multiple computers in a way that ensures security, transparency, and immutability."
+  },
+  {
+    "question": "How secure is blockchain?",
+    "answer": "Blockchain uses advanced cryptographic algorithms, decentralized consensus mechanisms, and data redundancy to make it highly secure against fraud and data tampering."
+  },
+  {
+    "question": "What industries can benefit from blockchain?",
+    "answer": "Blockchain is transforming industries like finance, healthcare, supply chain, real estate, education, and government by enabling secure, transparent, and efficient processes."
+  },
+  {
+    "question": "What is the difference between blockchain and cryptocurrency?",
+    "answer": "Blockchain is the underlying technology, while cryptocurrency (like Bitcoin or Ethereum) is a digital asset built using blockchain."
+  },
+  {
+    "question": "Can blockchain be used for non-financial applications?",
+    "answer": "Absolutely. Blockchain is widely used in identity verification, supply chain tracking, voting systems, healthcare data management, and intellectual property protection."
+  },
+  {
+    "question": "Is blockchain scalable?",
+    "answer": "Scalability has been a challenge, but new technologies like Layer 2 solutions, sharding, and sidechains are addressing this to handle large-scale usage."
+  },
+  {
+    "question": "What is a smart contract?",
+    "answer": "A smart contract is a self-executing contract with predefined rules written in code, which runs on the blockchain when conditions are met, eliminating intermediaries."
+  },
+  {
+    "question": "What is the difference between permissioned and permissionless blockchains?",
+    "answer": "Permissioned blockchains restrict access to known participants, while permissionless ones (like Bitcoin) are open to anyone."
+  },
+  {
+    "question": "How can businesses adopt blockchain technology?",
+    "answer": "Businesses can start with pilot projects, choosing the right blockchain platform (like Hyperledger, Ethereum, etc.) and integrating it with existing systems to enhance efficiency and trust."
+  },
+  {
+    "question": "Is blockchain environmentally friendly?",
+    "answer": "Traditional blockchains using Proof of Work (like Bitcoin) consume significant energy. However, newer models like Proof of Stake (used in Ethereum 2.0) are much more energy-efficient."
+  }
+]

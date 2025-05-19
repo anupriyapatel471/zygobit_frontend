@@ -1,32 +1,62 @@
 [
   {
-    "category": "Custom-Built Mobile Apps",
-    "title": "We develop bespoke mobile applications tailored to your specific business needs, ensuring seamless functionality, an intuitive user interface, and a smooth experience for your customers. Our solutions are designed to enhance engagement and drive efficiency.",
-    "icon": ""
-  },
-  {
-    "category": "Cutting-Edge Technology Integration",
-    "title": "From AI and machine learning to IoT and blockchain, we integrate the latest technologies to future-proof your app. Our innovative approach keeps you ahead of the competition, ensuring high performance, security, and adaptability in an ever-changing digital landscape.",
-    "icon": ""
-  },
-  {
-    "category": "Scalable Solutions",
-    "title": "Our mobile applications are built to grow with your business, ensuring they adapt to evolving demands, market trends, and user expectations. We design flexible architectures that allow seamless upgrades and expansions without compromising performance.",
-    "icon": ""
-  },
-  {
-    "category": "Powerful Notifications & Alerts",
-    "title": "Keep your users engaged with advanced notification services that ensure timely alerts, reminders, and updates. Our solutions leverage AI-driven personalization to send relevant and impactful messages, improving user retention and experience.",
-    "icon": ""
-  },
-  {
-    "category": "Cross-Platform Compatibility",
-    "title": "We develop mobile applications that work seamlessly across multiple devices and platforms, ensuring a consistent experience for all users. Whether it’s iOS, Android, or web-based applications, we deliver high-performance solutions for maximum reach.",
+    "category": "Cross-Platform Blockchain Compatibility",
+    "title": "We develop blockchain solutions that operate across diverse environments and networks. Whether it’s Ethereum, Hyperledger, or cross-chain platforms, we ensure interoperability and consistent functionality for users and businesses.",
     "icon": ""
   },
   {
     "category": "Robust Security & Compliance",
-    "title": "Security is at the core of our mobile app development. We implement advanced encryption, secure authentication, and compliance measures to protect user data. Our apps adhere to industry standards, ensuring reliability, privacy, and trustworthiness.",
+    "title": "Security is fundamental to everything we build. Our solutions feature end-to-end encryption, tamper-proof architectures, and full compliance with blockchain protocols and legal regulations.",
+    "icon": ""
+  },
+  {
+    "category": "Smart Contract Automation",
+    "title": "We design and deploy smart contracts that automate business processes with transparency and efficiency. These self-executing protocols reduce operational costs and eliminate the need for intermediaries.",
+    "icon": ""
+  },
+  {
+    "category": "Decentralized App (dApp) Development",
+    "title": "Build secure, scalable, and user-friendly decentralized apps for industries ranging from finance to supply chain. Our dApps are designed for performance, usability, and real-world impact.",
+    "icon": ""
+  },
+  {
+    "category": "Private & Consortium Blockchain Development",
+    "title": "We create both private and permissioned blockchain networks tailored to enterprise needs—ensuring full control, speed, and data privacy for internal or consortium-based operations.",
+    "icon": ""
+  },
+  {
+    "category": "Token Development & Integration",
+    "title": "From utility tokens to security tokens and NFTs, we develop and integrate custom token solutions that enhance engagement, enable new monetization models, or power DeFi ecosystems.",
+    "icon": ""
+  },
+  {
+    "category": "Blockchain for Supply Chain Transparency",
+    "title": "Enhance visibility, traceability, and accountability across your supply chain using blockchain. Our systems ensure every transaction and movement is securely recorded and instantly verifiable.",
+    "icon": ""
+  },
+  {
+    "category": "Crypto Wallet & Exchange Solutions",
+    "title": "We develop secure, multi-currency crypto wallets and custom exchange platforms with advanced security, KYC/AML support, and real-time trading features.",
+    "icon": ""
+  },
+  {
+    "category": "Blockchain Consulting & Strategy",
+    "title": "Navigate blockchain adoption with confidence. Our consultants guide you through ideation, use case analysis, technology selection, and roadmap planning for long-term success.",
+    "icon": ""
+  },
+  {
+    "category": "NFT Marketplace Development",
+    "title": "Launch your own NFT platform with minting, trading, auctioning, and wallet integration features. We build robust NFT ecosystems tailored to art, gaming, and digital ownership.",
+    "icon": ""
+  },
+  {
+    "category": "Blockchain Integration Services",
+    "title": "Seamlessly integrate blockchain into your existing systems and workflows. We ensure minimal disruption and maximum advantage by connecting legacy systems with decentralized frameworks.",
+    "icon": ""
+  },
+  {
+    "category": "Ongoing Support & Optimization",
+    "title": "Get continuous performance monitoring, upgrades, and technical support to ensure your blockchain applications evolve with your business and the ecosystem.",
     "icon": ""
   }
 ]

@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Finance & Banking",
+    "description": [
+      "Secure smart contract execution",
+      "Cross-border payments with blockchain",
+      "Fraud detection and prevention",
+      "Decentralized finance (DeFi) platforms"
+    ],
+    "img": "/images/finance_banking.png"
+  },
+  {
+    "name": "Supply Chain & Logistics",
+    "description": [
+      "End-to-end shipment tracking",
+      "Smart contracts for vendor agreements",
+      "Real-time inventory transparency",
+      "Counterfeit goods prevention"
+    ],
+    "img": "/images/logistics_transportation.jpg"
+  },
+  {
+    "name": "Healthcare & Pharmaceuticals",
+    "description": [
+      "Tamper-proof medical records",
+      "Drug traceability on blockchain",
+      "Patient consent via smart contracts",
+      "Decentralized clinical trial data"
+    ],
+    "img": "/images/health_wellness.jpg"
+  },
+  {
+    "name": "Real Estate",
+    "description": [
+      "Blockchain-based property titles",
+      "Instant settlements via smart contracts",
+      "Transparent transaction history",
+      "Tokenized real estate investments"
+    ],
+    "img": "/images/realestate_property.png"
+  },
+  {
+    "name": "Identity & Access Management",
+    "description": [
+      "Blockchain-based digital ID",
+      "Secure access verification",
+      "Self-sovereign identity (SSI)",
+      "Multi-factor blockchain authentication"
+    ],
+    "img": "/images/identity_access.jpg"
+  },
+  {
+    "name": "Government & Public Services",
+    "description": [
+      "Transparent voting systems",
+      "Blockchain land registry",
+      "Secure citizen data management",
+      "Welfare distribution tracking"
+    ],
+    "img": "/images/government_services.jpg"
+  },
+  {
+    "name": "Media & Entertainment",
+    "description": [
+      "NFT-based content ownership",
+      "Blockchain-powered royalty tracking",
+      "Transparent licensing contracts",
+      "Anti-piracy content verification"
+    ],
+    "img": "/images/entertainment_media.jpg"
+  },
+  {
+    "name": "Education & Certification",
+    "description": [
+      "Tamper-proof digital certificates",
+      "Blockchain-based student records",
+      "Credential verification systems",
+      "Lifelong learning transcripts"
+    ],
+    "img": "/images/education_elearning.jpg"
+  }
+]

@@ -7,6 +7,7 @@ import useAmplifyConfig from "@/hooks/useAmplify";
 const client = generateClient();
 
 interface Project {
+  backgroundImage: string;
   slug: any;
   technologyImages: any;
   id?: string | null;

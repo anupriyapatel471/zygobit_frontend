@@ -76,7 +76,7 @@ export default function FeaturedSlider() {
                             <Image
                               fill
                               className="w-full h-full rounded-lg object-cover"
-                              src="/images/her_cal_bg.png"
+                              src={project.backgroundImage}
                               alt="image"
                             />
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">

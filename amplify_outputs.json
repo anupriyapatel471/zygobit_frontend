@@ -418,6 +418,16 @@
               "attributes": [],
               "isArrayNullable": true
             },
+            "detailPageImages": {
+              "name": "detailPageImages",
+              "isArray": true,
+              "type": {
+                "nonModel": "ProjectTechnology"
+              },
+              "isRequired": false,
+              "attributes": [],
+              "isArrayNullable": true
+            },
             "category": {
               "name": "category",
               "isArray": false,
@@ -434,6 +444,20 @@
             },
             "projectIcon": {
               "name": "projectIcon",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "backgroundImage": {
+              "name": "backgroundImage",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "adminImage": {
+              "name": "adminImage",
               "isArray": false,
               "type": "String",
               "isRequired": false,

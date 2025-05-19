@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react";
 
 import AOSInitializer from "@/component/common/AOSInitializer";
 
-import faqData from "../../../utils/content/faq/faqEcommerce.json";
+import faqData from "../../../utils/content/faq/faqBlockChain.json";
 
 const WeDeliver = dynamic(
   () => import("@/component/common/WeDeliver/WeDeliver")
@@ -31,8 +31,6 @@ const ClientSays = dynamic(
   () => import("@/component/common/ClientSays/ClientSays")
 );
 
-import stebTabMobileData from "../../../utils/content/stebTab/mobileAppStebTab.json";
-
 import { Metadata } from "next";
 import Link from "next/link";
 import CtaSecond from "@/component/new/CtaSecond";
@@ -43,8 +41,10 @@ import BoostBussiness from "@/component/sevices/Common/BoostBussiness/BoostBussi
 import AboutWeb from "@/component/new/AboutWeb";
 import StebTab from "@/component/new/Steptab";
 import DeliveringTailored from "@/component/common/DeliveringTailored/DeliveringTailored";
-import webAppOneJson from "../../../utils/content/boxreveals/webAppOne.json";
+import blockChainJson from "../../../utils/content/boxreveals/blockChain.json";
 import appleCardsData from "../../../utils/content/appleCardsCarousel/blockChainApple.json";
+import blockChainStebTab from "../../../utils/content/stebTab/blockChainStebTab.json";
+import deliveringTailoredData from "../../../utils/content/deliveringTailored/tailoredBlockChain.json";
 
 export const metadata: Metadata = {
   title: "Web Development",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   },
 };
 
-const WebAppDevelopment = () => {
+const Blockchain = () => {
   const deliveringHeading = "Industries We Serve: Unmatched Experiences";
   const deliveringPara =
     "Transforming Ideas into Exceptional User Experiences Across Various Sectors";
@@ -86,13 +86,13 @@ const WebAppDevelopment = () => {
   const clientHeading = "Hear It from Our Happy Clients!";
   const clientSaysDetails =
     "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions.";
-  const heroHeading = "We are Trusted by Industry Leaders";
+  const heroHeading = "Blockchain Development Solutions We Deliver";
   const heroParagraph =
-    "Powering businesses with cutting-edge web development solutions that ensure seamless performance, scalability, and innovation.";
+    "Empower your business with our advanced blockchain development services, designed to provide secure, scalable, and innovative solutions tailored to your needs.";
   const stebtabTitle = "Blockchain Development Solutions We Deliver";
 
   const stebtabDesc =
-    "Unlock your business’s full potential with our expert blockchain development services, designed to transform and innovate your operations with tailor-made, agile solutions.";
+    "Unlock your business’s full potential with our expert blockchain services. From ideation to deployment, we deliver secure, scalable, and future-ready solutions tailored to your needs.";
   return (
     <>
       <AOSInitializer />
@@ -121,10 +121,10 @@ const WebAppDevelopment = () => {
         </div>
       </section>
 
-      <AboutWeb data={webAppOneJson} />
+      <AboutWeb data={blockChainJson} />
 
       <StebTab
-        stebTabData={stebTabMobileData}
+        stebTabData={blockChainStebTab}
         title={stebtabTitle}
         desc={stebtabDesc}
       />
@@ -145,6 +145,7 @@ const WebAppDevelopment = () => {
         <DeliveringTailored
           deliveringHeading={deliveringHeading}
           deliveringPara={deliveringPara}
+          deliveringTailoredData={deliveringTailoredData}
         />
       </Suspense>
 
@@ -159,4 +160,4 @@ const WebAppDevelopment = () => {
   );
 };
 
-export default WebAppDevelopment;
+export default Blockchain;

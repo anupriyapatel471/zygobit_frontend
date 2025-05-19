@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "label": "Step 1",
+    "title": "Discovery Phase",
+    "description": "We begin by understanding your business vision, goals, and target audience. Through collaborative workshops, we define the core idea, assess feasibility, and gather functional and technical requirements. We also conduct competitor research and market analysis to build a strategic roadmap for your blockchain product.",
+    "image": "/images/discovery_img.jpg"
+  },
+  {
+    "id": 2,
+    "label": "Step 2",
+    "title": "Architecture & Planning",
+    "description": "In this phase, we choose the ideal blockchain protocol (Ethereum, Polygon, Hyperledger, etc.) and define the technology stack. We outline the system architecture, data flow, and security layers. Smart contract logic is planned, and a detailed development timeline is established to ensure project alignment.",
+    "image": "/images/planning_img.jpg"
+  },
+  {
+    "id": 3,
+    "label": "Step 3",
+    "title": "Design & Prototyping",
+    "description": "We create intuitive UI/UX designs tailored for both technical and non-technical users. Wireframes, interactive prototypes, and user flows are built to demonstrate the look and feel of your application. This phase ensures your product is not only functional but also user-centric and visually appealing.",
+    "image": "/images/design_img.jpg"
+  },
+  {
+    "id": 4,
+    "label": "Step 4",
+    "title": "Development & Integration",
+    "description": "Our development team writes secure, efficient smart contracts and sets up the blockchain infrastructure. We build the front-end and back-end, integrate third-party APIs, wallets, and off-chain databases where needed. All code is written to meet the highest security and performance standards.",
+    "image": "/images/devAndTesting_img.png"
+  },
+  {
+    "id": 5,
+    "label": "Step 5",
+    "title": "Testing, Deployment & Support",
+    "description": "We perform rigorous testing, including smart contract audits, unit testing, integration testing, and performance validation. Once verified, we deploy the application on your chosen network (testnet/mainnet). Post-launch, we offer ongoing maintenance, upgrades, and user support to ensure long-term success.",
+    "image": "/images/devAndMaintainance.png"
+  }
+]

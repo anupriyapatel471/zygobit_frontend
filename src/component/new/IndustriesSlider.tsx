@@ -1,18 +1,25 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import sliderData from "../../utils/content/deliveringTailored/tailored.json";
+import tailoredData from "../../utils/content/deliveringTailored/tailored.json";
 import { ContactnewForm } from "./ContactNewForm";
 import { deliveringTailored } from "@/lib/utils";
 
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-export default function IndustriesSlider() {
+interface IndustriesSliderProps {
+  deliveringTailoredData?: any;
+}
+export default function IndustriesSlider({
+  deliveringTailoredData,
+}: IndustriesSliderProps) {
+  const [sliderData, setsliderData] = useState(tailoredData);
   const settings = {
     dots: true,
     infinite: false,
@@ -46,6 +53,14 @@ export default function IndustriesSlider() {
       },
     ],
   };
+
+  useEffect(() => {
+    if (deliveringTailoredData) {
+      setsliderData(deliveringTailoredData);
+    } else {
+      setsliderData(tailoredData);
+    }
+  }, [deliveringTailoredData]);
 
   return (
     <>

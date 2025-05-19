@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 
 interface ProjectData {
+  detailPageImages: { ImageUrl: string; ImageName: string }[];
   projectName: ReactNode;
   subTitle: ReactNode;
   title: string;
@@ -23,10 +24,11 @@ interface ProjectData {
   evaluationDescription?: string;
   evaluationImage?: string;
   developmentDescription?: string;
+  adminImage?: string;
 }
 
 const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
-  console.log("projectData", projectData);
+  console.log("projectData in dtails page", projectData);
   const router = useRouter();
   return (
     <>
@@ -137,14 +139,16 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     width={264}
                     height={570}
                     className="w-[275px] h-fit rounded-b-3xl object-cover"
-                    src="/images/phone_one.png"
+                    src={projectData?.detailPageImages[2]?.ImageUrl}
+                    // src="/images/project_one.png"
                     alt="mobile image"
                   />
                   <Image
                     width={264}
                     height={570}
                     className="w-[275px] h-fit rounded-3xl object-cover"
-                    src="/images/phone_three.png"
+                    // src="/images/phone_three.png"
+                    src={projectData?.detailPageImages[4]?.ImageUrl}
                     alt="mobile image"
                   />
                 </div>
@@ -153,14 +157,16 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     width={264}
                     height={570}
                     className="w-[275px] h-fit mt-14 rounded-3xl object-cover"
-                    src="/images/phone_two.png"
+                    // src="/images/phone_two.png"
+                    src={projectData?.detailPageImages[1]?.ImageUrl}
                     alt="mobile image"
                   />
                   <Image
                     width={264}
                     height={570}
                     className="w-[275px] h-fit rounded-t-3xl object-cover"
-                    src="/images/phone_four.png"
+                    // src="/images/phone_four.png"
+                    src={projectData?.detailPageImages[0]?.ImageUrl}
                     alt="mobile image"
                   />
                 </div>
@@ -169,7 +175,8 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     width={264}
                     height={570}
                     className="w-[250px] 2xl:w-[260px] h-[500px] rounded-t-3xl object-fill 2xl:object-cover"
-                    src="/images/phone_five.png"
+                    // src="/images/phone_five.png"
+                    src={projectData?.detailPageImages[3]?.ImageUrl}
                     alt="mobile image"
                   />
                 </div>
@@ -390,13 +397,15 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
             </div>
             <div className="w-1/2 hidden lg:inline relative">
               <div className="relative top-12">
-                <Image
-                  width={380}
-                  height={467}
-                  className="object-contain"
-                  src="/images/mobile_app_new.svg"
-                  alt="image"
-                />
+                {projectData?.mobileImage && (
+                  <Image
+                    width={380}
+                    height={467}
+                    className="object-contain"
+                    src={projectData?.mobileImage}
+                    alt="image"
+                  />
+                )}
               </div>
             </div>
           </div>
@@ -509,58 +518,58 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
           </div>
         </div>
       </section>
-
-      <section className="w-full  text-black pb-12 sm:pb-14 lg:pb-20">
-        <div className="container remove-bg">
-          <div className="w-full flex relative items-center gap-14 bg-[#FFF1ED] overflow-hidden rounded-2xl lg:rounded-[60px] px-4 py-5 lg:px-14 lg:py-14 lg:pt-7">
-            <div className="w-[200px] h-[200px] bg-[#FFE5DD] rounded-full absolute -top-10 -left-10"></div>
-            <div className="w-9 h-9 bg-[#FFE5DD] rounded-full absolute top-5 left-60"></div>
-            <div className="w-[200px] h-[200px] bg-[#FFE5DD] rounded-full absolute -bottom-12  left-[40%]"></div>
-            <div className="w-3/5 hidden lg:inline relative">
-              <div className="w-full top-5 h-[399px] relative">
-                <Image
-                  fill
-                  className="w-full object-contain"
-                  src="/images/moniter.png"
-                  alt="image"
-                />
+      {projectData?.adminImage && (
+        <section className="w-full  text-black pb-12 sm:pb-14 lg:pb-20">
+          <div className="container remove-bg">
+            <div className="w-full flex relative items-center gap-14 bg-[#FFF1ED] overflow-hidden rounded-2xl lg:rounded-[60px] px-4 py-5 lg:px-14 lg:py-14 lg:pt-7">
+              <div className="w-[200px] h-[200px] bg-[#FFE5DD] rounded-full absolute -top-10 -left-10"></div>
+              <div className="w-9 h-9 bg-[#FFE5DD] rounded-full absolute top-5 left-60"></div>
+              <div className="w-[200px] h-[200px] bg-[#FFE5DD] rounded-full absolute -bottom-12  left-[40%]"></div>
+              <div className="w-3/5 hidden lg:inline relative">
+                <div className="w-full top-5 h-[399px] relative">
+                  <Image
+                    fill
+                    className="w-full object-contain"
+                    src={projectData?.adminImage}
+                    alt="image"
+                  />
+                </div>
+              </div>
+              <div className="w-full relative z-10 lg:static lg:w-2/5">
+                <h3 className=" font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl mb-3 sm:mb-5">
+                  Admin Panel
+                </h3>
+                <ul className="list-decimal sm:font-bold text-sm space-y-4 pl-3 sm:pl-5">
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </li>
+                </ul>
               </div>
             </div>
-            <div className="w-full relative z-10 lg:static lg:w-2/5">
-              <h3 className=" font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl mb-3 sm:mb-5">
-                Admin Panel
-              </h3>
-              <ul className="list-decimal sm:font-bold text-sm space-y-4 pl-3 sm:pl-5">
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-              </ul>
-            </div>
           </div>
-        </div>
-      </section>
-
+        </section>
+      )}
       <ContactForm />
     </>
   );

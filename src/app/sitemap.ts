@@ -9,13 +9,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: 'https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com//blogs',
+      url: 'https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/blogs',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: 'https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com//about-us',
+      url: 'https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/about-us',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,

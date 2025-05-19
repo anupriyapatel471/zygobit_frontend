@@ -9,11 +9,12 @@ import Loader from "../common/Loader/Loader";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
-import { formatDownloads } from "@/lib/utils";
+// import { formatDownloads } from "@/lib/utils";
 
 const client = generateClient();
 
 interface Project {
+  backgroundImage: string;
   slug: any;
   technologyImages: ReactNode;
   id?: string | null;
@@ -106,7 +107,7 @@ const PortfolioProjects = () => {
                                   <p className="line-clamp-4 sm:line-clamp-5 text-sm  lg:text-lg text-black mt-1 sm:mt-2 lg:mt-3.5">
                                     {project.description}
                                   </p>
-                                  <div className="mt-6 flex gap-5 items-center">
+                                  {/* <div className="mt-6 flex gap-5 items-center">
                                     <div className="w-fit flex flex-col">
                                       <b className="text-2xl sm:text-3xl text-black">
                                         {project.androidDownloads &&
@@ -143,7 +144,7 @@ const PortfolioProjects = () => {
                                         />
                                       </Link>
                                     </div>
-                                  </div>
+                                  </div> */}
                                 </div>
                                 <Link
                                   href={`/portfolio/${project.slug}`}
@@ -161,7 +162,7 @@ const PortfolioProjects = () => {
                                 <div className="relative w-full h-[265px] sm:h-[370px] lg:h-[500px]">
                                   <Image
                                     fill
-                                    src="/images/her_cal.png"
+                                    src={project.backgroundImage}
                                     alt="image"
                                   />
                                   <div className="w-full lg:w-[465px] h-[170px] sm:h-[320px] lg:h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -183,7 +184,7 @@ const PortfolioProjects = () => {
                                 <div className="relative w-full h-[265px] sm:h-[370px] lg:h-[500px]">
                                   <Image
                                     fill
-                                    src="/images/her_cal.png"
+                                    src={project.backgroundImage}
                                     alt="image"
                                   />
                                   <div className="w-full lg:w-[465px] h-[170px] sm:h-[320px] lg:h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -207,7 +208,7 @@ const PortfolioProjects = () => {
                                   <p className="line-clamp-4 sm:line-clamp-5 text-sm  lg:text-lg text-black mt-1 sm:mt-2 lg:mt-3.5">
                                     {project.description}
                                   </p>
-                                  <div className="mt-6 flex gap-5 items-center">
+                                  {/* <div className="mt-6 flex gap-5 items-center">
                                     <div className="w-fit flex flex-col">
                                       <b className="text-2xl sm:text-3xl text-black">
                                         {project.androidDownloads &&
@@ -244,7 +245,7 @@ const PortfolioProjects = () => {
                                         />
                                       </Link>
                                     </div>
-                                  </div>
+                                  </div> */}
                                 </div>
                                 <Link
                                   href={`/portfolio/${project.slug}`}

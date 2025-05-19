@@ -1,13 +1,16 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import IndustriesSlider from "@/component/new/IndustriesSlider";
 
 interface DeliveringTailoredProps {
   deliveringHeading: string;
   deliveringPara: string;
+  deliveringTailoredData?: any;
 }
 
 const DeliveringTailored: React.FC<DeliveringTailoredProps> = ({
   deliveringHeading,
   deliveringPara,
+  deliveringTailoredData,
 }) => {
   return (
     <>
@@ -21,7 +24,7 @@ const DeliveringTailored: React.FC<DeliveringTailoredProps> = ({
           </p>
         </div>
         <div className="w-full custom-apple-slider about-slider-padding  relative mt-5 sm:mt-7 lg:mt-10">
-          <IndustriesSlider />
+          <IndustriesSlider deliveringTailoredData={deliveringTailoredData} />
         </div>
       </section>
     </>
