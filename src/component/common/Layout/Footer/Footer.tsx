@@ -89,8 +89,7 @@ const Footer = () => {
               />
             </Link>
             <p className="font-light text-sm text-[#6B6B6B] my-3 sm:my-5">
-              At Zygobit, we don’t just keep up with innovation — we drive it.
-              Tech is in our DNA, and transformation is our constant.
+              Your Vision, Our Innovation.
             </p>
             <ul className="flex items-center gap-5">
               <li>

@@ -26,6 +26,7 @@ interface ProjectData {
   developmentDescription?: string;
   adminData?: { image: string; data: string[] };
   themeColor?: { bgGradientOne: string; bgGradientTwo: string };
+  projectLogo: string;
 }
 
 const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
@@ -58,15 +59,17 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                 />
               </Button>
               <div className="w-full flex items-center gap-7">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 flex items-center justify-center lg:h-24 bg-white shadow-[0_20px_48px_0_#EB00293D] rounded-xl sm:rounded-2xl p-5">
-                  <Image
-                    width={58}
-                    height={64}
-                    className="w-10 sm:w-14 h-10 sm:h-14 lg:w-16 lg:h-16 object-containF"
-                    src="/images/her_new.svg"
-                    alt="icon"
-                  />
-                </div>
+                {projectData?.projectLogo && (
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 flex items-center justify-center lg:h-24 bg-white shadow-[0_20px_48px_0_#EB00293D] rounded-xl sm:rounded-2xl p-5">
+                    <Image
+                      width={58}
+                      height={64}
+                      className="w-10 sm:w-14 h-10 sm:h-14 lg:w-16 lg:h-16 object-contain"
+                      src={projectData?.projectLogo}
+                      alt="icon"
+                    />
+                  </div>
+                )}
                 <h2 className="font-bold text-3xl sm:text-[35px] lg:text-[45px] text-[#D95A6C]">
                   {projectData?.projectName}
                 </h2>

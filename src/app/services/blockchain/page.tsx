@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     url: "https://www.zygobit.com/web-development",
     images: [
       {
-        url: "https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg",
+        url: "/images/Logo.jpg",
         width: 1200,
         height: 630,
         alt: "Zygobit Web Development",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     description: "Zygobit Website Web Development Page",
     card: "summary_large_image",
     creator: "@Zygobit",
-    images: ["https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg"],
+    images: ["/images/Logo.jpg"],
   },
 };
 

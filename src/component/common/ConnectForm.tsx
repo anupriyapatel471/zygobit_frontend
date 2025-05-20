@@ -196,7 +196,7 @@ const ConnectForm = () => {
               name="lastName"
               id="lastName"
               className="bg-white/5 h-10 md:h-10 border-white/20"
-              placeholder=""
+              placeholder=" "
               type="text"
               value={formData.lastName}
               onChange={handleChange}
@@ -240,7 +240,7 @@ const ConnectForm = () => {
               name="jobTitle"
               id="jobTitle"
               className="bg-white/5 h-10 md:h-10 border-white/20"
-              placeholder=""
+              placeholder=" "
               type="text"
               value={formData.jobTitle}
               onChange={handleChange}
@@ -254,7 +254,7 @@ const ConnectForm = () => {
               name="companyName"
               id="companyName"
               className="bg-white/5 h-10 md:h-10 border-white/20"
-              placeholder=""
+              placeholder=" "
               type="text"
               value={formData.companyName}
               onChange={handleChange}
@@ -265,7 +265,7 @@ const ConnectForm = () => {
             <Input
               name="companyEmail"
               id="companyEmail"
-              placeholder=""
+              placeholder=" "
               className="bg-white/5 h-10 md:h-10 border-white/20"
               type="email"
               value={formData.companyEmail}
@@ -280,7 +280,7 @@ const ConnectForm = () => {
               className="bg-white/5 h-10 md:h-10 border-white/20"
               name="launchDate"
               id="launchDate"
-              placeholder=""
+              placeholder=" "
               type="text"
               value={formData.launchDate}
               onChange={handleChange}
@@ -296,7 +296,7 @@ const ConnectForm = () => {
               className="bg-white/5 h-10 md:h-10 border-white/20"
               name="budget"
               id="budget"
-              placeholder=""
+              placeholder=" "
               type="text"
               value={formData.budget}
               onChange={handleChange}

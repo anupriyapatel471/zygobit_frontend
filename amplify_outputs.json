@@ -473,6 +473,13 @@
               },
               "isRequired": false,
               "attributes": []
+            },
+            "projectLogo": {
+              "name": "projectLogo",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
             }
           },
           "syncable": true,

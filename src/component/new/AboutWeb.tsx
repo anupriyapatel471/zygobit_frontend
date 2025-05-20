@@ -10,6 +10,7 @@ interface AboutWebProps {
   subTitle: string;
   features: string[];
   btnText: string;
+  image: string;
 }
 const AboutWeb = ({ data }: { data: AboutWebProps }) => {
   return (
@@ -38,9 +39,7 @@ const AboutWeb = ({ data }: { data: AboutWebProps }) => {
               </p>
               <ul className="text-sm pl-5 sm:text-base space-y-1.5 sm:space-y-1 list-disc">
                 {data?.features.map((item, index) => (
-                  <li  key={index}>
-                    {item}
-                  </li>
+                  <li key={index}>{item}</li>
                 ))}
               </ul>
               <Link href={"/contact"}>
@@ -55,7 +54,7 @@ const AboutWeb = ({ data }: { data: AboutWebProps }) => {
             <Image
               fill
               className="object-cover rounded-2xl"
-              src="/images/web_bg.png"
+              src={data?.image || "/images/web_bg.png"}
               alt="web image"
             />
           </div>
