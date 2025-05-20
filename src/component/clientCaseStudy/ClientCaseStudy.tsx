@@ -289,6 +289,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                       alt="icon"
                     />
                   </div>
+
                   <p className="text-sm lg:text-base">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
