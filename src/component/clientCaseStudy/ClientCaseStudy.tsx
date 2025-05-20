@@ -338,6 +338,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                       alt="icon"
                     />
                   </div>
+
                   <p className="text-sm lg:text-base">
                     {projectData?.developmentDescription}
                   </p>
