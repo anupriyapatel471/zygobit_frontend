@@ -280,6 +280,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     <h2 className="font-bold text-xl text-white  sm:text-3xl lg:text-[38px]">
                       Project Idea
                     </h2>
+
                     <Image
                       width={60}
                       height={20}
