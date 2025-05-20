@@ -301,6 +301,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     deserunt mollit anim id est laborum.
                   </p>
                 </div>
+
                 <div className="w-full order-1 sm:order-none sm:w-1/2 lg:w-2/5 relative">
                   <div className="hidden sm:inline absolute -top-20  -right-[120px] sm:-right-[220px] -z-10 w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] rounded-full bg-[#FFC3A466]"></div>
                   <Image
