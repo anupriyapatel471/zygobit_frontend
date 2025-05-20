@@ -40,17 +40,13 @@ export async function generateMetadata({
     openGraph: {
       title: project?.title || "Zygobit Featured Projects",
       description: project?.description || "Zygobit Featured Projects",
-      images:
-        project?.image ||
-        "https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg",
+      images: project?.image || "/images/Logo.jpg",
       url: `https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/portfolio/${params.slug}`,
     },
     twitter: {
       title: project?.title || "Zygobit Featured Projects",
       description: project?.description || "Zygobit Featured Projects",
-      images:
-        project?.image ||
-        "https://zygobit-images.s3.ap-south-1.amazonaws.com/Logo.jpg",
+      images: project?.image || "/images/Logo.jpg",
       card: "summary_large_image",
       creator: "Teqexpert",
     },

@@ -1,4 +1,5 @@
 import FeaturedSlider from "@/component/common/Featuredslider/Featuredslider";
+
 const FeaturedProjects = () => {
   return (
     <>
