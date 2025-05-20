@@ -24,15 +24,24 @@ interface ProjectData {
   evaluationDescription?: string;
   evaluationImage?: string;
   developmentDescription?: string;
-  adminImage?: string;
+  adminData?: { image: string; data: string[] };
+  themeColor?: { bgGradientOne: string; bgGradientTwo: string };
 }
 
 const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
-  console.log("projectData in dtails page", projectData);
+  console.log(
+    "projectData in dtails page",
+    projectData?.themeColor?.bgGradientOne
+  );
   const router = useRouter();
   return (
     <>
-      <section className="w-full  lg:rounded-bl-[100px] relative overflow-hidden backdrop-blur-xl bg-[url('/images/pink_bg.png')]  bg-cover bg-center mt-20">
+      <section
+        className={`w-full  lg:rounded-bl-[100px] relative overflow-hidden backdrop-blur-xl bg-cover bg-center mt-20`}
+        style={{
+          backgroundImage: `linear-gradient(to right, ${projectData?.themeColor?.bgGradientOne}, ${projectData?.themeColor?.bgGradientTwo})`,
+        }}
+      >
         <div className="container">
           <div className="w-full flex justify-between ">
             <div className="w-full lg:w-[520px] flex flex-col gap-5 sm:gap-10 py-6">
@@ -59,11 +68,11 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                   />
                 </div>
                 <h2 className="font-bold text-3xl sm:text-[35px] lg:text-[45px] text-[#D95A6C]">
-                  {projectData.projectName}
+                  {projectData?.projectName}
                 </h2>
               </div>
               <p className="text-sm text-black sm:text-base slg:text-lg">
-                {projectData.description}
+                {projectData?.description}
               </p>
               <div className="w-full lg:max-w-sm grid grid-cols-2 gap-5">
                 <div className="w-full flex flex-col justify-center items-center text-center gap-2.5 border border-[#D95A6C] rounded-lg p-2.5">
@@ -71,7 +80,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     <Image
                       width={40}
                       height={40}
-                      className="w-10 mx-auto h-10"
+                      className="w-10 mx-auto h-10 "
                       src="/images/client_a.svg"
                       alt="icon"
                     />
@@ -126,7 +135,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                       Project Duration
                     </b>
                     <span className="text-xs">
-                      {projectData.developmentTime}
+                      {projectData?.developmentTime}
                     </span>
                   </div>
                 </div>
@@ -263,7 +272,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     />
                   </div>
                   <p className="text-sm lg:text-base">
-                    {projectData.developmentDescription}
+                    {projectData?.developmentDescription}
                   </p>
                 </div>
               </div>
@@ -323,7 +332,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
             </div>
 
             <div className="w-full mt-8 lg:mt-14 grid grid-cols-2 sm:grid-cols-3 sm:flex  xl:grid-cols-6 justify-center items-center gap-y-10 sm:gap-y-0  gap-5 sm:gap-10 lg:gap-14">
-              {projectData.technologyImages.map((data, index) => (
+              {projectData?.technologyImages.map((data, index) => (
                 <div key={index} className="flex flex-col gap-2 sm:gap-5">
                   <div className="w-full mx-auto sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
                     <Image
@@ -518,7 +527,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
           </div>
         </div>
       </section>
-      {projectData?.adminImage && (
+      {projectData?.adminData && (
         <section className="w-full  text-black pb-12 sm:pb-14 lg:pb-20">
           <div className="container remove-bg">
             <div className="w-full flex relative items-center gap-14 bg-[#FFF1ED] overflow-hidden rounded-2xl lg:rounded-[60px] px-4 py-5 lg:px-14 lg:py-14 lg:pt-7">
@@ -530,7 +539,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                   <Image
                     fill
                     className="w-full object-contain"
-                    src={projectData?.adminImage}
+                    src={projectData?.adminData?.image}
                     alt="image"
                   />
                 </div>
@@ -540,30 +549,9 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                   Admin Panel
                 </h3>
                 <ul className="list-decimal sm:font-bold text-sm space-y-4 pl-3 sm:pl-5">
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </li>
+                  {projectData?.adminData?.data.map((record, i) => (
+                    <li key={i}>{record}</li>
+                  ))}
                 </ul>
               </div>
             </div>

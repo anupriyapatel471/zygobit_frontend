@@ -456,10 +456,21 @@
               "isRequired": false,
               "attributes": []
             },
-            "adminImage": {
-              "name": "adminImage",
+            "adminData": {
+              "name": "adminData",
               "isArray": false,
-              "type": "String",
+              "type": {
+                "nonModel": "AdminProjectData"
+              },
+              "isRequired": false,
+              "attributes": []
+            },
+            "themeColor": {
+              "name": "themeColor",
+              "isArray": false,
+              "type": {
+                "nonModel": "ProjectThemeColor"
+              },
               "isRequired": false,
               "attributes": []
             }
@@ -598,6 +609,45 @@
             },
             "ImageName": {
               "name": "ImageName",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            }
+          }
+        },
+        "AdminProjectData": {
+          "name": "AdminProjectData",
+          "fields": {
+            "image": {
+              "name": "image",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "data": {
+              "name": "data",
+              "isArray": true,
+              "type": "String",
+              "isRequired": false,
+              "attributes": [],
+              "isArrayNullable": true
+            }
+          }
+        },
+        "ProjectThemeColor": {
+          "name": "ProjectThemeColor",
+          "fields": {
+            "bgGradientOne": {
+              "name": "bgGradientOne",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "bgGradientTwo": {
+              "name": "bgGradientTwo",
               "isArray": false,
               "type": "String",
               "isRequired": false,
