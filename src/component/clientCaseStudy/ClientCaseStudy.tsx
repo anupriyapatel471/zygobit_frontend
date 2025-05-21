@@ -578,6 +578,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
           </div>
         </section>
       )}
+
       <ContactForm />
     </>
   );
