@@ -48,7 +48,6 @@ const About = () => {
   const clientSaysHeading = " We Are a Trusted Web App Development Company";
   const clientSaysDetails =
     "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions.";
-
   const GridBoxesHeading = "Why Choose Zygobit?";
   const GridBoxesDetail =
     "Choose Zygobit for innovative, reliable, and high-quality solutions that drive your business forward with cutting-edge technology and expert support!";
