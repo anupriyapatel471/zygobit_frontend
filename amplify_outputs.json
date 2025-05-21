@@ -480,6 +480,20 @@
               "type": "String",
               "isRequired": false,
               "attributes": []
+            },
+            "testColor": {
+              "name": "testColor",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "mockupImage": {
+              "name": "mockupImage",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
             }
           },
           "syncable": true,

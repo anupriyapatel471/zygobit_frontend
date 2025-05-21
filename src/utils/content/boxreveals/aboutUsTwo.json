@@ -1,14 +1,14 @@
 {
-  "title1": "Who We Are",
-  "title2": " Web Development Services",
-  "description": "We go beyond being mere developers; we are literal digital architects. We craft strategic websites, build scalable applications, web portals and create meaningful web experiences that foster connections, drive conversions, and stimulate growth.",
-  "subTitle": "What Makes Us Different?",
+  "title1": "Who ",
+  "title2": "We Are ?",
+  "description": "We're not just developers — we're digital architects. We design strategic websites, scalable apps, and web portals that connect, convert, and grow your business.",
+  "subTitle": "What Sets Us Apart?",
   "features": [
-    "Human-Centered Approach – Instead of treating users as inputs, we think of them as people that are part of the end experience.",
-    "Performance is Priority – Economy of performance means speed and reliability which is a requirement in every business.",
-    " Built-In Security – For every product we launch, security is a prerequisite. We don’t wait for it till now.",
-    " Global Readiness – Along with responsiveness, we ensure that the application runs smoothly on all devices, ensuring a truly global reach."
+    "Human-Centered Design – We design for people, not just users.",
+    "Performance First – Speed and reliability are built into every solution.",
+    "Security by Default – Every product we build starts with security.",
+    "Globally Ready – Optimized for all devices and audiences worldwide."
   ],
   "btnText": "Build Your Web App Today",
-  "image": ""
+  "image": "/images/aboutUsTwo.jpg"
 }

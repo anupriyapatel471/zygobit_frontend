@@ -42,6 +42,7 @@ import DeliveringTailored from "@/component/common/DeliveringTailored/Delivering
 import GridBoxes from "@/component/common/GridBoxes/GridBoxes";
 import cards from "../../../utils/content/gridboxcardsdata/uiuxgrid.json";
 import appleCardsData from "../../../utils/content/appleCardsCarousel/uiUxApple.json";
+import deliveringTailoredData from "../../../utils/content/deliveringTailored/tailoredUiux.json";
 
 export const metadata: Metadata = {
   title: "UI UX Design",
@@ -71,9 +72,9 @@ const UiuxWebDesign = () => {
   const clientSaysDetails =
     "See how our custom app development services have transformed businesses and driven success for our happy clients";
 
-  const deliveringHeading = "Delivering Tailored Excellence";
+  const deliveringHeading = "Delivering Tailored UI/UX Excellence";
   const deliveringPara =
-    "At Zygobit, we turn your vision into reality with creative, innovative solutions that deliver quality and results.";
+    "We transform your ideas into seamless, intuitive digital experiences with creative, user-first design solutions that drive engagement and results.";
 
   const heading = "Craft Exceptional User Experiences with UI/UX Design";
   const paragraph =
@@ -247,6 +248,7 @@ const UiuxWebDesign = () => {
         <DeliveringTailored
           deliveringHeading={deliveringHeading}
           deliveringPara={deliveringPara}
+          deliveringTailoredData={deliveringTailoredData}
         />
       </Suspense>
 

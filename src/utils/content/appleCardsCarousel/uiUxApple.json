@@ -1,32 +1,32 @@
 [
   {
     "category": "UI/UX Consulting",
-    "title": "We guide you through every step of the UI UX design process. Whether it's mobile app UI design or web design, our UI UX design consultants assist you with the best expertise.",
+    "title": "We guide you through every step of the UI/UX design process. Whether it's mobile app UI or web design, our consultants deliver expert insights to align with your goals.",
     "icon": "/images/ui_icon_one.svg"
   },
   {
     "category": "Prototyping",
-    "title": "Our UI UX design agency creates prototypes to ensure usability, where we meticulously optimize page layouts, strategically arranging elements for a responsive digital experience.",
+    "title": "Our design team builds interactive prototypes to validate ideas early, ensuring smooth user flows and optimized layout structures for responsive experiences.",
     "icon": "/images/ui_icon_two.svg"
   },
   {
     "category": "Web UI/UX Design",
-    "title": "With our responsive web design services, we transform your online presence, ensuring that your web UI UX design is visually stunning, highly functional, and user-friendly.",
+    "title": "We craft visually appealing and functional web interfaces that reflect your brand, enhance user satisfaction, and drive engagement across all devices.",
     "icon": "/images/ui_icon_three.svg"
   },
   {
-    "category": "Powerful Notifications",
-    "title": "With our responsive web design services, we transform your online presence, ensuring that your web UI UX design is visually stunning, highly functional, and user-friendly.",
-    "icon": "/images/ui_icon_three.svg"
+    "category": "Mobile App Design",
+    "title": "From wireframes to high-fidelity designs, we design mobile experiences that are intuitive, scalable, and tailored for both iOS and Android platforms.",
+    "icon": "/images/smartphone.svg"
   },
   {
-    "category": "Cross-Platform ",
-    "title": "With our responsive web design services, we transform your online presence, ensuring that your web UI UX design is visually stunning, highly functional, and user-friendly.",
-    "icon": "/images/ui_icon_three.svg"
+    "category": "UX Research & Testing",
+    "title": "Using user interviews, A/B tests, and usability audits, we uncover deep insights to refine designs that truly resonate with your audience.",
+    "icon": "/images/search_icon.svg"
   },
   {
-    "category": "Robust Security ",
-    "title": "With our responsive web design services, we transform your online presence, ensuring that your web UI UX design is visually stunning, highly functional, and user-friendly.",
-    "icon": "/images/ui_icon_three.svg"
+    "category": "Design System Development",
+    "title": "We build scalable design systems and component libraries that ensure consistency, efficiency, and seamless collaboration between design and development teams.",
+    "icon": "/images/system_icon.svg"
   }
 ]

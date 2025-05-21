@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+export const revalidate = 60;
 
 export const dynamic = "force-static";
-export const revalidate = 60;
 
 import { generateClient } from "aws-amplify/data";
 import { TracingBeams } from "@/component/blog/TracingBeam/TracingBeam";
