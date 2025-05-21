@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "title": "Proven AI Expertise",
-    "content": "Harness the power of AI-driven solutions tailored to optimize your business operations, enhance decision-making, and drive innovation.",
+    "title": "Proven Expertise",
+    "content": "Years of hands-on experience across industries help us design future-ready digital solutions that perform and scale.",
     "className": "sm:col-span-2",
     "bgClass": "bg-black/70",
     "thumbnail": "/images/new_proven.png",
@@ -10,8 +10,8 @@
   },
   {
     "id": 2,
-    "title": "Scalable AI Solutions",
-    "content": "Deploy AI models that grow with your business, ensuring efficiency, automation, and seamless adaptability to changing demands.",
+    "title": "Vision-Driven Culture",
+    "content": "We blend creative thinking with technical depth to turn bold ideas into real digital impact.",
     "className": "",
     "bgClass": "bg-orange-600",
     "thumbnail": "/images/Scalable_solution.png",
@@ -19,8 +19,8 @@
   },
   {
     "id": 3,
-    "title": "Intelligent User Experience",
-    "content": "Enhance customer interactions with AI-powered personalization, predictive analytics, and smart automation for a seamless digital experience.",
+    "title": "Human-Centered Design",
+    "content": "Every product we build starts with empathy — shaping seamless experiences that users truly connect with.",
     "className": "",
     "bgClass": "bg-orange-600",
     "thumbnail": "/images/User_centric.png",
@@ -28,8 +28,8 @@
   },
   {
     "id": 4,
-    "title": "Seamless AI Integration",
-    "content": "Integrate cutting-edge AI and ML models into your existing systems, enabling real-time data processing, automation, and intelligent insights.",
+    "title": "Agile & Adaptive",
+    "content": "We thrive on flexibility — constantly evolving our process to match your pace, goals, and growth.",
     "className": "sm:col-span-2",
     "bgClass": "bg-black/70",
     "thumbnail": "/images/seamless_interactionOne.png",

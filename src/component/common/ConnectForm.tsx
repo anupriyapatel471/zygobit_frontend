@@ -156,7 +156,7 @@ const ConnectForm = () => {
       // console.log("Saved record:", savedRecord);
       // toast.success("Saved record");
       toast.success(
-        "Thanks for reaching out to us. The concerned person will contact you shortly !"
+        "Thanks for reaching out to us. we will contact contact you shortly!"
       );
     } catch (error) {
       console.error("Error saving data to DynamoDB:", error);

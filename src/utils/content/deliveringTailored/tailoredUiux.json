@@ -1,0 +1,53 @@
+[
+  {
+    "name": "UI/UX Strategy",
+    "description": [
+      "Design thinking workshops",
+      "User journey mapping",
+      "UX research & persona creation",
+      "Product-market fit validation"
+    ],
+    "img": "/images/uiux_strategy.jpg"
+  },
+  {
+    "name": "Interface Design",
+
+    "description": [
+      "Consistent visual design systems",
+      "High-fidelity UI mockups",
+      "Mobile & web responsive layouts",
+      "Theme customization & branding"
+    ],
+    "img": "/images/interface_design.jpg"
+  },
+  {
+    "name": "Interaction Design",
+    "description": [
+      "Clickable prototypes & flows",
+      "Micro-interaction animations",
+      "Intuitive navigation patterns",
+      "Motion design for user feedback"
+    ],
+    "img": "/images/interaction_design.jpg"
+  },
+  {
+    "name": "Usability Engineering",
+    "description": [
+      "Accessibility-compliant design",
+      "A/B testing & performance tracking",
+      "Heuristic evaluations & audits",
+      "Iterative feedback incorporation"
+    ],
+    "img": "/images/usability_engineering.jpg"
+  },
+  {
+    "name": "Design Integration",
+    "description": [
+      "Developer handoff with Figma/XD",
+      "Design tokens & component libraries",
+      "Cross-platform consistency",
+      "UI QA & post-launch support"
+    ],
+    "img": "/images/design_integration.jpg"
+  }
+]

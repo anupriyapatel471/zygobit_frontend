@@ -78,11 +78,11 @@ const GridBoxes: React.FC<GridBoxesProps> = ({
                     alt="icon"
                   />
                 </div>
-                <h2 className="font-bold text-xl sm:text-2xl lg:text-3xl pr-14 sm:pr-0 text-white mb-4 sm:mb-12">
+                <h2 className="font-bold text-xl sm:text-2xl lg:text-3xl pr-14 sm:pr-0 text-white mb-4 sm:mb-12 lg:pr-5">
                   {card.title}
                 </h2>
 
-                <p className="text-white transition-all line-clamp-3 duration-300 text-sm group-hover:opacity-100 group-hover:visible opacity-0 invisible lg:text-base">
+                <p className="text-white transition-all line-clamp-5 duration-300 text-sm group-hover:opacity-100 group-hover:visible opacity-0 invisible lg:text-base">
                   {card.content}
                 </p>
               </div>

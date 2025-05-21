@@ -125,7 +125,7 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
         projectDetails: formData.projectDetails,
       });
       toast.success(
-        "Thanks for reaching out to us. The concerned person will contact you shortly !"
+        "Thanks for reaching out to us. we will contact contact you shortly!"
       );
     } catch (error) {
       console.error("Error saving data to DynamoDB:", error);
