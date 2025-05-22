@@ -148,7 +148,6 @@ const Footer = () => {
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
-                      target="_blank"
                       href={link.url}
                       className="text-sm text-secondaryText hover:text-themetext"
                     >

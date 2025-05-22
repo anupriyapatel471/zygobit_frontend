@@ -79,9 +79,9 @@ const Blockchain = () => {
   const deliveringPara =
     "Transforming Ideas into Exceptional User Experiences Across Various Sectors";
 
-  const heading = "Accelerate Your Business with Tailored Mobile App Solutions";
+  const heading = "Drive Growth with Custom Blockchain Solutions";
   const paragraph =
-    "we specialize in crafting custom mobile applications that empower businesses to thrive in today’s digital-first world. Our innovative solutions are designed to align with your unique goals, helping you unlock new opportunities, engage your audience, and drive sustainable growth.";
+    "We build secure, scalable blockchain applications designed to fit your business needs. Whether you're streamlining operations, enhancing transparency, or creating new digital assets, our solutions help you build trust, unlock new value, and stay ahead in a rapidly evolving tech landscape.";
 
   const clientHeading = "Hear It from Our Happy Clients!";
   const clientSaysDetails =

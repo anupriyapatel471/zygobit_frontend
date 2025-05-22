@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "title": "Proven Expertise",
-    "content": "Years of experience delivering high-quality UI/UX designs that enhance user engagement and satisfaction.",
+    "title": "Proven Mobile Expertise",
+    "content": "Leverage years of experience in building mobile apps that power startups and enterprises alike — secure, scalable, and user-focused.",
     "className": "sm:col-span-2",
     "bgClass": "bg-black/70",
     "thumbnail": "/images/new_proven.png",
@@ -10,8 +10,8 @@
   },
   {
     "id": 2,
-    "title": "Scalable Solutions",
-    "content": "Designs that grow with your business, ensuring a seamless experience across all user touchpoints.",
+    "title": "Scalable App Solutions",
+    "content": "We design mobile apps that grow with your business — built for speed, adaptability, and seamless upgrades.",
     "className": "",
     "bgClass": "bg-orange-600",
     "thumbnail": "/images/Scalable_solution.png",
@@ -19,8 +19,8 @@
   },
   {
     "id": 3,
-    "title": "User-Centric Design",
-    "content": "A human-first approach that prioritizes usability, accessibility, and intuitive navigation.",
+    "title": "Intelligent User Experience",
+    "content": "Our apps prioritize intuitive design and fluid interactions to ensure users stay engaged and satisfied on every device.",
     "className": "",
     "bgClass": "bg-orange-600",
     "thumbnail": "/images/User_centric.png",
@@ -28,8 +28,8 @@
   },
   {
     "id": 4,
-    "title": "Seamless Interactions",
-    "content": "Smooth, responsive, and engaging experiences that keep users connected and satisfied.",
+    "title": "Seamless System Integration",
+    "content": "We integrate your mobile app with CRMs, ERPs, and third-party APIs to ensure smooth data flow and connected operations.",
     "className": "sm:col-span-2",
     "bgClass": "bg-black/70",
     "boxIcon": "/images/repeat.svg",

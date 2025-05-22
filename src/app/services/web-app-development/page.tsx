@@ -94,9 +94,10 @@ export const metadata: Metadata = {
 };
 
 const WebAppDevelopment = () => {
-  const heading = "Accelerate Your Business with Tailored Mobile App Solutions";
+  const heading =
+    "Accelerate Your Business with Tailored Web Development Solutions";
   const paragraph =
-    "we specialize in crafting custom mobile applications that empower businesses to thrive in today’s digital-first world. Our innovative solutions are designed to align with your unique goals, helping you unlock new opportunities, engage your audience, and drive sustainable growth.";
+    "We specialize in crafting custom web solutions that empower businesses to thrive in today’s digital-first world. From intuitive websites to complex platforms, our development services are aligned with your goals—helping you attract, convert, and grow.";
 
   const heroHeading = "We are Trusted by Industry Leaders";
 

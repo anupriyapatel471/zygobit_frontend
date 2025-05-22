@@ -53,7 +53,7 @@ const About = () => {
     "Choose Zygobit for innovative, reliable, and high-quality solutions that drive your business forward with cutting-edge technology and expert support!";
   const deliveringHeading = "Delivering Tailored Excellence";
   const deliveringPara =
-    "At Zygobit, we turn your vision into reality with creative, innovative solutions that deliver quality and results.";
+    "We turn your vision into reality with creative, innovative solutions that deliver quality and results.";
   const heroHeading = "Innovatinng the Digital Future";
   const heroParagraph =
     "We are a tech-driven company passionate about building cutting-edge mobile and web solutions, helping businesses thrive in a digital-first world.";
