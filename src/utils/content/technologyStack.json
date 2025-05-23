@@ -47,10 +47,9 @@
   "Devops": [
     { "name": "Docker", "icon": "/images/new_docker.svg" },
     { "name": "Kubernetes", "icon": "/images/new_kubernetes.svg" },
-    { "name": "OpenShift", "icon": "/images/new_openshift.svg" },
     { "name": "Terraform", "icon": "/images/new_terraform.svg" },
+    { "name": "OpenShift", "icon": "/images/new_terraform.svg" },
     { "name": "AzureDevOps", "icon": "/images/new_azuredevops.svg" },
-    { "name": "OpenShift", "icon": "/images/new_openshift.svg" },
     { "name": "Ansible", "icon": "/images/new_ansible.svg" },
     { "name": "Puppet", "icon": "/images/new_puppet.svg" },
     { "name": "Saltstack", "icon": "/images/new_saltstack.svg" }
