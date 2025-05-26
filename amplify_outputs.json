@@ -418,16 +418,6 @@
               "attributes": [],
               "isArrayNullable": true
             },
-            "detailPageImages": {
-              "name": "detailPageImages",
-              "isArray": true,
-              "type": {
-                "nonModel": "ProjectTechnology"
-              },
-              "isRequired": false,
-              "attributes": [],
-              "isArrayNullable": true
-            },
             "category": {
               "name": "category",
               "isArray": false,
@@ -494,6 +484,28 @@
               "type": "String",
               "isRequired": false,
               "attributes": []
+            },
+            "projectIdea": {
+              "name": "projectIdea",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "theSolution": {
+              "name": "theSolution",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "features": {
+              "name": "features",
+              "isArray": true,
+              "type": "String",
+              "isRequired": false,
+              "attributes": [],
+              "isArrayNullable": true
             }
           },
           "syncable": true,

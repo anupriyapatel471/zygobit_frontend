@@ -24,6 +24,9 @@ interface ProjectData {
   projectLogo: string;
   testColor: string;
   mockupImage?: string;
+  features: string[];
+  projectIdea: string;
+  theSolution: string;
 }
 
 const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
@@ -241,14 +244,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                   </div>
 
                   <p className="text-sm lg:text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                    {projectData.projectIdea}
                   </p>
                 </div>
 
@@ -308,14 +304,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     />
                   </div>
                   <p className="text-sm lg:text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                    {projectData.theSolution}
                   </p>
                 </div>
                 <div className="w-full order-1 sm:order-none sm:w-1/2 lg:w-2/5 relative">
@@ -397,30 +386,9 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                 Mobile App
               </h3>
               <ul className="list-decimal sm:font-bold text-sm space-y-4 pl-3 sm:pl-5">
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
+                {projectData?.features.map((data, index) => (
+                  <li key={index}>{data} </li>
+                ))}
               </ul>
             </div>
             <div className="w-1/2 hidden lg:inline relative">
