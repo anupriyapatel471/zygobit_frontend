@@ -47,22 +47,25 @@ export interface project {
 }
 
 export const metadata: Metadata = {
-  title: "Home",
-  description: "Zygobit Website Home Page",
+  title: "Home | Innovative Software & App Development Solutions",
+  description:
+    "Discover Zygobit – your partner in Web and Mobile App Development, UI/UX Design, AI, and IT Solutions. We help businesses grow with custom, scalable technology.",
   keywords:
-    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI Solutions, Software Development, IT Consulting, Business Growth",
   openGraph: {
-    title: "Home",
-    description: "Zygobit Website Home Page",
+    title: "Home | Innovative Software & App Development Solutions",
+    description:
+      "Explore Zygobit's full-service digital solutions—from web and mobile apps to UI/UX design and AI-powered tools. Build smarter with our expert tech team.",
     images: ["/images/Logo.jpg"],
     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
   },
   twitter: {
-    title: "Home",
-    description: "Zygobit Website Home Page",
+    title: "Zygobit | Innovative Software & App Development Solutions",
+    description:
+      "Web and mobile development, UI/UX design, and AI solutions tailored to grow your business. Discover Zygobit’s custom technology services.",
     images: ["/images/Logo.jpg"],
     card: "summary_large_image",
-    creator: "Teqexpert",
+    // creator: "@Teqexpert",
   },
 };
 

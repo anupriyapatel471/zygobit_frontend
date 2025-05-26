@@ -172,7 +172,7 @@ const Header = () => {
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/mobile_icon.svg"
-                      alt=""
+                      alt="	Mobile App Icon"
                     />
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
@@ -185,7 +185,7 @@ const Header = () => {
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
-                          alt=""
+                          alt="Arrow Right Icon"
                         />
                       </h3>
                       <p className="hidden sm:inline-block text-sm lg:text-sm text-[#494949] mt-0.5">
@@ -199,7 +199,7 @@ const Header = () => {
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/webdev.svg"
-                      alt=""
+                      alt="Web Development Icon"
                     />
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
@@ -213,7 +213,7 @@ const Header = () => {
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
-                          alt=""
+                          alt="Arrow Right Icon"
                         />
                       </h3>
                       <p className="hidden sm:inline-block text-sm lg:text-sm text-[#494949] mt-0.5">
@@ -227,7 +227,7 @@ const Header = () => {
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/uiux.svg"
-                      alt=""
+                      alt="UI/UX Design Icon"
                     />
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
@@ -240,7 +240,7 @@ const Header = () => {
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
-                          alt=""
+                          alt="Arrow Right Icon"
                         />
                       </h3>
                       <p className="hidden sm:inline-block text-sm lg:text-sm text-[#494949] mt-0.5">
@@ -254,7 +254,7 @@ const Header = () => {
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/machinel.svg"
-                      alt=""
+                      alt="Machine Learning and AI Icon"
                     />
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
@@ -267,7 +267,7 @@ const Header = () => {
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
-                          alt=""
+                          alt="Arrow Right Icon"
                         />
                       </h3>
                       <p className="hidden sm:inline-block text-sm lg:text-sm text-[#494949] mt-0.5">
@@ -282,7 +282,7 @@ const Header = () => {
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/ecommerce.svg"
-                      alt=""
+                      alt="E-Commerce Icon"
                     />
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
@@ -295,7 +295,7 @@ const Header = () => {
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
-                          alt=""
+                          alt="Arrow Right Icon"
                         />
                       </h3>
                       <p className="hidden sm:inline-block text-sm lg:text-sm text-[#494949] mt-0.5">
@@ -309,7 +309,7 @@ const Header = () => {
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/blockchain.svg"
-                      alt=""
+                      alt="Blockchain Icon"
                     />
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
@@ -322,7 +322,7 @@ const Header = () => {
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
-                          alt=""
+                          alt="Arrow Right Icon"
                         />
                       </h3>
                       <p className="hidden sm:inline-block text-sm lg:text-sm text-[#494949] mt-0.5">
@@ -343,7 +343,7 @@ const Header = () => {
                       <img
                         className="w-[250px]"
                         src="/images/mega_logo.png"
-                        alt=""
+                        alt="meta logo"
                       />
                     </div>
                     <p className="mt-7 text-base  text-[#494949] font-[300] sm:px-20">
