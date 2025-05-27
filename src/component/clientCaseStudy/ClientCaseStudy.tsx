@@ -24,7 +24,7 @@ interface ProjectData {
   projectLogo: string;
   testColor: string;
   mockupImage?: string;
-  features: string[];
+  features?: string[];
   projectIdea: string;
   theSolution: string;
 }
@@ -244,7 +244,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                   </div>
 
                   <p className="text-sm lg:text-base">
-                    {projectData.projectIdea}
+                    {projectData?.projectIdea}
                   </p>
                 </div>
 
@@ -304,7 +304,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     />
                   </div>
                   <p className="text-sm lg:text-base">
-                    {projectData.theSolution}
+                    {projectData?.theSolution}
                   </p>
                 </div>
                 <div className="w-full order-1 sm:order-none sm:w-1/2 lg:w-2/5 relative">
@@ -386,9 +386,10 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                 Mobile App
               </h3>
               <ul className="list-decimal sm:font-bold text-sm space-y-4 pl-3 sm:pl-5">
-                {projectData?.features.map((data, index) => (
-                  <li key={index}>{data} </li>
-                ))}
+                {projectData?.features &&
+                  projectData?.features.map((data, index) => (
+                    <li key={index}>{data} </li>
+                  ))}
               </ul>
             </div>
             <div className="w-1/2 hidden lg:inline relative">
