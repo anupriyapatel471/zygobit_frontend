@@ -50,7 +50,6 @@ export const metadata: Metadata = {
   title: "Home | Innovative Software & App Development Solutions",
   description:
     "Discover Zygobit – your partner in Web and Mobile App Development, UI/UX Design, AI, and IT Solutions. We help businesses grow with custom, scalable technology.",
-
   keywords:
     "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI Solutions, Software Development, IT Consulting, Business Growth",
   openGraph: {
