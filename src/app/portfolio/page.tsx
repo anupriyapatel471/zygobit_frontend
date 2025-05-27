@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Portfolio",
     description: "Zygobit Website Portfolio Page",
     images: ["/images/Logo.jpg"],
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/portfolio",
   },
   twitter: {
     title: "Portfolio",
@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     images: ["/images/Logo.jpg"],
     card: "summary_large_image",
     creator: "Teqexpert",
+  },
+  alternates: {
+    canonical: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/portfolio",
   },
 };
 const Portfolio = () => {

@@ -67,6 +67,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     // creator: "@Teqexpert",
   },
+  alternates: {
+    canonical: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+  },
 };
 
 const Home = async () => {

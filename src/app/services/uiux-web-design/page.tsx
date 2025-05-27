@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: "UI UX Design",
     description: "Zygobit Website Uiux Web Design Page",
     images: ["/images/Logo.jpg"],
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/uiux-web-design",
   },
   twitter: {
     title: "UI UX Design",
@@ -61,6 +61,10 @@ export const metadata: Metadata = {
     images: ["/images/Logo.jpg"],
     card: "summary_large_image",
     creator: "Teqexpert",
+  },
+  alternates: {
+    canonical:
+      "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/uiux-web-design",
   },
 };
 const UiuxWebDesign = () => {
@@ -135,7 +139,10 @@ const UiuxWebDesign = () => {
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8 pb-8 sm:mb-12 sm:pb-12 border-b border-white">
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/setting_design_icon.svg" alt="" />
+                  <img
+                    src="/images/setting_design_icon.svg"
+                    alt="setting design icon"
+                  />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Setting Design Goals
@@ -148,7 +155,10 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/user_research_icon.svg" alt="" />
+                  <img
+                    src="/images/user_research_icon.svg"
+                    alt="user research icon"
+                  />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   User research & Analysis
@@ -160,7 +170,10 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/wireframing_icon.svg" alt="" />
+                  <img
+                    src="/images/wireframing_icon.svg"
+                    alt="wireframing icon"
+                  />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Wireframing & Prototyping
@@ -172,7 +185,7 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/testing_icon.svg" alt="" />
+                  <img src="/images/testing_icon.svg" alt="testing icon" />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Usability Testing
@@ -193,7 +206,10 @@ const UiuxWebDesign = () => {
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 ">
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/setting_design_icon.svg" alt="" />
+                  <img
+                    src="/images/setting_design_icon.svg"
+                    alt="setting design icon"
+                  />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Visual Design & Branding
@@ -205,7 +221,10 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/user_research_icon.svg" alt="" />
+                  <img
+                    src="/images/user_research_icon.svg"
+                    alt="user research icon"
+                  />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Interactions & Motion Design
@@ -217,7 +236,10 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/wireframing_icon.svg" alt="" />
+                  <img
+                    src="/images/wireframing_icon.svg"
+                    alt="wireframing icon"
+                  />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Responsive & Adaptive Design
@@ -229,7 +251,7 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/testing_icon.svg" alt="" />
+                  <img src="/images/testing_icon.svg" alt="testing icon" />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Design Hand off & implementation
@@ -257,7 +279,7 @@ const UiuxWebDesign = () => {
           <img
             className="w-full h-full object-cover"
             src="/images/cta_bg.png"
-            alt=""
+            alt="cta bg"
           />
         </div>
         <div className="container remove-bg">

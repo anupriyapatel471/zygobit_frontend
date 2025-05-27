@@ -176,7 +176,7 @@ export default function NavigationMenuDemo() {
                             <img
                               className="w-[250px]"
                               src="/images/Logo.png"
-                              alt=""
+                              alt="Logo"
                             />
                           </div>
                           <p className="mt-7 text-base text-white font-[300] sm:px-20">
@@ -254,7 +254,7 @@ const ServiceListItem = ({
 }) => (
   <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
     <div className="p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-      <img className="w-6 sm:w-auto" src={icon} alt="" />
+      <img className="w-6 sm:w-auto" src={icon} alt="icon" />
     </div>
     <ListItem
       href={href}
@@ -290,7 +290,7 @@ const ListItem = React.forwardRef<
             <img
               className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
               src="/images/right_icon.png"
-              alt=""
+              alt="Right Icon"
             />
           </div>
           <p className="hidden sm:inline-block line-clamp-2 mt-3 sm:mt-2 font-light sm:font-normal text-sm text-white">

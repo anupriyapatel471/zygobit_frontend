@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "About us",
     description: "Zygobit Website About Us Page",
     images: ["/images/Logo.jpg"],
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/about-us",
   },
   twitter: {
     title: "About us",
@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     images: ["/images/Logo.jpg"],
     card: "summary_large_image",
     creator: "Teqexpert",
+  },
+  alternates: {
+    canonical: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/about-us",
   },
 };
 
@@ -124,7 +127,7 @@ const About = () => {
           <img
             className="w-full h-full object-cover"
             src="/images/cta_bg.png"
-            alt=""
+            alt="Cta bg"
           />
         </div>
         <div className="container remove-bg">

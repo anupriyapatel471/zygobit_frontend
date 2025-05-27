@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "Web Development",
     description: "Zygobit Website Web Development Page",
     type: "website",
-    url: "https://www.zygobit.com/web-development",
+    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/blockchain",
     images: [
       {
         url: "/images/Logo.jpg",
@@ -71,6 +71,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     creator: "@Zygobit",
     images: ["/images/Logo.jpg"],
+  },
+  alternates: {
+    canonical:
+      "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/blockchain",
   },
 };
 

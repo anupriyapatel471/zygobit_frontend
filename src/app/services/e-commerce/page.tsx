@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: "Ecommerce",
     description: "Zygobit Website Ecommerce Page",
     images: ["/images/Logo.jpg"],
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/ecommerce",
   },
   twitter: {
     title: "Ecommerce",
@@ -59,6 +59,10 @@ export const metadata: Metadata = {
     images: ["/images/Logo.jpg"],
     card: "summary_large_image",
     creator: "Teqexpert",
+  },
+  alternates: {
+    canonical:
+      "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/ecommerce",
   },
 };
 const Ecommerce = () => {

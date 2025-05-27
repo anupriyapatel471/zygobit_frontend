@@ -168,38 +168,38 @@ const HomeBanner = () => {
                     <img
                       className="w-[150px] sm:w-auto"
                       src="/images/trackday.png"
-                      alt=""
+                      alt="Trackday logo"
                     />
                   </li>
                   <li>
                     <img
                       className="w-[100px] sm:w-auto"
                       src="/images/slick.png"
-                      alt=""
+                      alt="Slick logo"
                     />
                   </li>
                   <li>
-                    <img src="/images/recovery.png" alt="" />
+                    <img src="/images/recovery.png" alt="Recovery logo" />
                   </li>
                   <li>
                     <img
                       className="w-[70px] sm:w-auto"
                       src="/images/pilot.png"
-                      alt=""
+                      alt="pilot logo"
                     />
                   </li>
                   <li>
                     <img
                       className="w-[110px] sm:w-auto"
                       src="/images/abbsi.png"
-                      alt=""
+                      alt="Abbsi logo"
                     />
                   </li>
                   <li>
                     <img
                       className="w-[30px] sm:w-auto"
                       src="/images/residence.png"
-                      alt=""
+                      alt="Residence logo"
                     />
                   </li>
                 </ul>

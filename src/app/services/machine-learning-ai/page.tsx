@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Machine Learning AI",
     description: "Zygobit Website Machine Learning AI Page",
     images: ["/images/Logo.jpg"],
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/machine-learning-ai",
   },
   twitter: {
     title: "Machine Learning AI",
@@ -65,6 +65,10 @@ export const metadata: Metadata = {
     images: ["/images/Logo.jpg"],
     card: "summary_large_image",
     creator: "Teqexpert",
+  },
+  alternates: {
+    canonical:
+      "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/machine-learning-ai",
   },
 };
 

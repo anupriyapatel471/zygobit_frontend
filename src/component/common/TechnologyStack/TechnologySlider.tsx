@@ -101,14 +101,14 @@ const ReviewCard: React.FC<Pick<Review, "img">> = ({ img }) => (
         <span className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <img
             src="/images/line.png"
-            alt=""
+            alt="Line"
             className="h-[200px] hidden sm:inline lg:h-[200px]"
           />
         </span>
         <div className="hover:mt-14 transition-all duration-500 w-20 h-20 sm:w-[100px] sm:h-[100px] shadow-[inset_0_0_15px_2px_#C5C5C552] flex items-center justify-center rounded-full">
           <img
             src={img}
-            alt=""
+            alt="image"
             className="w-8 h-8 sm:w-12 sm:h-12 brightness-0 invert"
           />
         </div>

@@ -65,7 +65,7 @@ const GridBoxes: React.FC<GridBoxesProps> = ({
                       height={221}
                       className=" w-[147px] h-[221px] object-cover"
                       src="/images/white_g.png"
-                      alt=""
+                      alt="white g icon"
                     />
                   </div>
                 )}
