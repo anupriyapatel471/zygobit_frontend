@@ -8,7 +8,6 @@ import { Toaster } from "react-hot-toast";
 import Header from "@/component/common/Layout/Header/Header";
 import Footer from "@/component/common/Layout/Footer/Footer";
 import ScrollProgressBar from "@/component/common/Layout/ScrollBar/ScrollBar";
-
 // skeleton css
 import "react-loading-skeleton/dist/skeleton.css";
 
