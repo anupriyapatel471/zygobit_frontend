@@ -47,20 +47,21 @@ export interface project {
 }
 
 export const metadata: Metadata = {
-  title: "Home | Innovative Software & App Development Solutions",
+  title: "Home | Zygobit - Web & Mobile App Development, UI/UX, AI Solutions",
   description:
-    "Discover Zygobit – your partner in Web and Mobile App Development, UI/UX Design, AI, and IT Solutions. We help businesses grow with custom, scalable technology.",
+    "Partner with Zygobit for innovative web and mobile app development, UI/UX design, and AI-powered solutions. Scalable, custom technology to grow your business.",
   keywords:
-    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI Solutions, Software Development, IT Consulting, Business Growth",
+    "Zygobit, Web App Development, Mobile App Development, UI/UX Design, AI Solutions, Machine Learning, Software Development, IT Consulting",
   openGraph: {
-    title: "Home | Innovative Software & App Development Solutions",
+    title: "Home | Zygobit - Web & Mobile App Development, UI/UX, AI Solutions",
     description:
-      "Explore Zygobit's full-service digital solutions—from web and mobile apps to UI/UX design and AI-powered tools. Build smarter with our expert tech team.",
+      "Explore Zygobit's full-service digital solutions—from custom web and mobile apps to intuitive UI/UX design and intelligent AI tools. Build smarter today.",
     images: ["/images/Logo.jpg"],
     url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+    type: "website",
   },
   twitter: {
-    title: "Zygobit | Innovative Software & App Development Solutions",
+    title: "Home | Zygobit - Expert Web, Mobile & AI Solutions",
     description:
       "Web and mobile development, UI/UX design, and AI solutions tailored to grow your business. Discover Zygobit’s custom technology services.",
     images: ["/images/Logo.jpg"],

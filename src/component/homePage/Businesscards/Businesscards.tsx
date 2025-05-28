@@ -74,12 +74,12 @@ const BusinessCards = () => {
                 <img
                   className="group-hover:hidden size-full"
                   src={solution.img}
-                  alt=""
+                  alt="Icon "
                 />
                 <img
                   className="hidden group-hover:inline-block w-10 h-10"
                   src={solution.imgTwo}
-                  alt=""
+                  alt="Icon"
                 />
               </span>
               <h3 className="font-bold text-base sm:text-xl my-2.5 sm:my-4">

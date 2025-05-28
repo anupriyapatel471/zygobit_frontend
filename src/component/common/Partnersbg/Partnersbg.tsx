@@ -5,7 +5,7 @@ import { HeroHighlight } from "../../../components/ui/hero-highlight";
 export function HeroHighlightDemo() {
   return (
     <HeroHighlight>
-      <motion.h1
+      <motion.div
         initial={{
           opacity: 0,
           y: 20,
@@ -30,7 +30,7 @@ export function HeroHighlightDemo() {
             and user experience.
           </p>
         </div>
-      </motion.h1>
+      </motion.div>
     </HeroHighlight>
   );
 }

@@ -34,7 +34,6 @@ export const metadata: Metadata = {
     canonical: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com",
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{

@@ -24,7 +24,9 @@ const WhyChooseUs = () => {
     <section data-aos="fade-up" className="w-full mb-0 sm:mb-20">
       <div className="container remove-bg">
         <div className="w-full sm:text-center mb-5 sm:mb-10">
-          <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] text-gradiant-custom-second">Why Choose Us</h2>
+          <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] text-gradiant-custom-second">
+            Why Choose Us
+          </h2>
           <p className="font-light sm:font-medium text-sm sm:text-lg lg:text-xl mt-2 sm:mt-5 max-w-3xl mx-auto">
             More the years, the better the solutions! We have been partnering
             with brands and offering our expertise for more than a decade.
@@ -35,7 +37,7 @@ const WhyChooseUs = () => {
             <img
               className="w-full max-h-[450px] lg:max-h-[560px] rounded-xl object-cover"
               src="/images/why_choose_us.png"
-              alt=""
+              alt="image"
             />
           </div>
           <div className="w-full lg:w-3/5">
@@ -48,7 +50,9 @@ const WhyChooseUs = () => {
                   <h3 className="font-semibold text-lg sm:text-2xl mb-2 sm:mb-2.5 text-black">
                     {reason.title}
                   </h3>
-                  <p className="font-light sm:font-medium text-sm text-black">{reason.description}</p>
+                  <p className="font-light sm:font-medium text-sm text-black">
+                    {reason.description}
+                  </p>
                 </div>
               ))}
             </div>
