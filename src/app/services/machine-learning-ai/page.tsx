@@ -95,35 +95,38 @@ const MachineLearning = () => {
       </Suspense>
 
       <Suspense fallback={<Loader />}>
-        <section className="w-full custom-apple-slider  bg-white py-12 sm:py-14 lg:py-20">
-          <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
-            <div className="w-full lg:w-[40%]">
-              <div className="w-full  inline-block text-black">
-                <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] lg:leading-[50px]">
-                  Full-Scale Machine Learning & AI Services.
-                </h2>
-                <p className=" sm:font-medium text-sm sm:text-base sm:leading-8 mt-4">
-                  Zygobit is a leading AI-driven software development company,
-                  delivering cutting-edge machine learning solutions. Our
-                  innovative technology enhances efficiency, automation, and
-                  decision-making, providing users with a seamless experience.
-                </p>
+        <section className="w-full relative overflow-hidden  bg-white py-12 sm:py-14 lg:py-20">
+          <div className="container remove-bg">
+            <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
+              <div className="w-full lg:w-[40%]">
+                <div className="w-full  inline-block text-black">
+                  <h2 className="font-bold text-2xl sm:text-3xl lg:text-[38px] lg:leading-[50px]">
+                    Full-Scale Machine Learning & AI Services.
+                  </h2>
+                  <p className=" sm:font-medium text-sm sm:text-base sm:leading-8 mt-4">
+                    Zygobit is a leading AI-driven software development company,
+                    delivering cutting-edge machine learning solutions. Our
+                    innovative technology enhances efficiency, automation, and
+                    decision-making, providing users with a seamless experience.
+                  </p>
+                </div>
+                <Link href="/contact">
+                  <button className="mt-5 lg:mt-16 2xl:mt-[144px] btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-600 duration-500 transition-all">
+                    Get Assistance{" "}
+                    <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                  </button>
+                </Link>
               </div>
-              <Link href="/contact">
-                <button className="mt-5 lg:mt-16 2xl:mt-[144px] btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-600 duration-500 transition-all">
-                  Get Assistance{" "}
-                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                </button>
-              </Link>
-            </div>
-            <div className="w-full lg:w-[60%]">
-              <div className="w-full">
-                <AppleCardsCarousel data={appleCardsData} />
+              <div className="w-full lg:w-[60%] lg:absolute lg:-right-12 2xl:-right-16">
+                <div className="w-full">
+                  <AppleCardsCarousel data={appleCardsData} />
+                </div>
               </div>
             </div>
           </div>
         </section>
       </Suspense>
+
       <Suspense fallback={<Loader />}>
         <section className="w-full  pt-10 sm:pt-14 lg:pt-20 overflow-hidden">
           <div className="container remove-bg">
