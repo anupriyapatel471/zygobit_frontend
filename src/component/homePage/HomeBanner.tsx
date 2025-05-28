@@ -197,7 +197,7 @@ const HomeBanner = () => {
                   </li>
                   <li>
                     <img
-                      className="w-[30px] sm:w-auto"
+                      className="w-[60px] sm:w-auto"
                       src="/images/residence.svg"
                       alt="Residence logo"
                     />

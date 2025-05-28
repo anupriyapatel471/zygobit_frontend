@@ -16,7 +16,7 @@ export function ChatBotBtn() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
+    <DropdownMenu  open={isOpen} onOpenChange={setIsOpen}>
       <DropdownMenuTrigger asChild>
         {/* chat bot btn*/}
         <Button className="bg-transparent hover:bg-transparent border-none p-0 w-auto h-auto fixed bottom-8 right-4 sm:right-8 z-50">
