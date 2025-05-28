@@ -108,9 +108,10 @@ const MobileAppDevelopment = () => {
         <WeDeliver />
       </Suspense>
 
-      <section className="w-full custom-apple-slider  bg-white py-12 sm:py-14 lg:py-20">
-        <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
-          <div className="w-full lg:w-[40%]">
+      <section className="w-full relative overflow-hidden  bg-white py-12 sm:py-14 lg:py-20">
+        <div className="container remove-bg">
+          <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
+          <div className="w-full pr-4 sm:pr-0 lg:w-[40%]">
             <BoostBussiness heading={heading} paragraph={paragraph} />
             <Link href="/contact">
               <button className="mt-3 sm:mt-3 lg:mt-4  2xl:mt-16 btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
@@ -119,11 +120,12 @@ const MobileAppDevelopment = () => {
               </button>
             </Link>
           </div>
-          <div className="w-full lg:w-[60%]">
+          <div className="w-full lg:w-[60%] lg:absolute lg:-right-12 2xl:-right-16">
             <div className="w-full">
               <AppleCardsCarousel data={appleCardsData} />
             </div>
           </div>
+        </div>
         </div>
       </section>
 

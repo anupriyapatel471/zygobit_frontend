@@ -377,7 +377,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
               Main Features of The Project
             </h2>
           </div>
-          <div className="w-full flex relative items-center gap-[200px] bg-[#FFF1ED] overflow-hidden rounded-2xl lg:rounded-[60px] px-4 py-5 lg:px-14 lg:py-14 lg:pt-7">
+          <div className="w-full flex relative items-center gap-[200px] bg-[#FFF1ED] overflow-hidden rounded-2xl lg:rounded-[60px] px-5 py-5 lg:px-14 lg:py-14">
             <div className="w-[200px] h-[200px] bg-[#FFE5DD] rounded-full absolute -top-10 -right-10"></div>
             <div className="w-9 h-9 bg-[#FFE5DD] rounded-full absolute top-48 right-5"></div>
             <div className="w-[200px] h-[200px] bg-[#FFE5DD] rounded-full absolute -bottom-12  left-1/2"></div>
@@ -393,7 +393,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
               </ul>
             </div>
             <div className="w-1/2 hidden lg:inline relative">
-              <div className="relative top-12">
+              <div className="relative top-0">
                 {projectData?.mobileImage && (
                   <Image
                     width={380}

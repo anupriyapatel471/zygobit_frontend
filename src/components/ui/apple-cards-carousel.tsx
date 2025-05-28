@@ -241,7 +241,7 @@ export const Card = ({
         <div className="absolute hidden h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
         <div className="w-full relative rounded-2xl z-40 p-4 2xl:p-5 border border-[#C4C4C4] bg-white/5 text-left h-[275px] sm:h-auto lg:h-[300px] 2xl:h-[349px] cursor-default">
          {card.icon.length > 0 &&  <div className="relative -left-6">
-            <img src={card.icon} alt="" />
+            <img src={card.icon} alt="card icon" />
           </div>
           }
           <motion.p

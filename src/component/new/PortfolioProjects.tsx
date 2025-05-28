@@ -170,7 +170,7 @@ const PortfolioProjects = () => {
                                       <img
                                         className="w-full h-full object-contain"
                                         src={project.mobileImage}
-                                        alt=""
+                                        alt="mobile image"
                                       />
                                     )}
                                   </div>
@@ -192,7 +192,7 @@ const PortfolioProjects = () => {
                                       <img
                                         className="w-full h-full object-contain"
                                         src={project.mobileImage}
-                                        alt=""
+                                        alt="mobile image"
                                       />
                                     )}
                                   </div>

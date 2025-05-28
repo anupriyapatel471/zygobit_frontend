@@ -51,7 +51,7 @@ const ReviewCard = ({ img }: { img: string }) => {
         "relative flex items-center justify-center w-48 sm:w-72 lg:w-80 h-16 sm:h-28 lg:h-32 cursor-pointer overflow-hidden  border-none bg-[#2D2E34] rounded-xl border p-4"
       )}
     >
-      <div className="flex flex-row items-center gap-2 p-11">
+      <div className="flex flex-row items-center gap-2 p-5 sm:p-11">
         <Image
           src={img}
           alt="Partner Logo"

@@ -39,9 +39,9 @@ const HomeBanner = () => {
                   alt="Logo"
                 />
               </div>
-              <div className="w-full absolute top-12 sm:top-0 left-0 grid grid-cols-3 gap-y-9 sm:gap-y-0 sm:flex items-end justify-between px-0 lg:px-24 pt-0 sm:pt-7">
+              <div className="w-full absolute top-7 sm:top-0 left-0 grid grid-cols-3 gap-y-20 sm:gap-y-0 sm:flex items-end justify-between px-0 lg:px-24 pt-0 sm:pt-7">
                 <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-4 sm:gap-6 transition-all duration-300 cursor-pointer">
-                  <div className="move-img w-8 h-8 sm:w-14 sm:h-14 rounded-full relative">
+                  <div className="move-img w-7 h-7 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -49,7 +49,7 @@ const HomeBanner = () => {
                       alt="image"
                     />
                   </div>
-                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-xs sm:text-sm">
+                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-[10px] sm:text-sm">
                     Strategist
                     <div className="absolute -top-7 left-0">
                       <Image
@@ -63,7 +63,7 @@ const HomeBanner = () => {
                   </div>
                 </div>
                 <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-4 sm:gap-6 transition-all duration-300 cursor-pointer mb-0 sm:mb-56">
-                  <div className="order-2 sm:order-none bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-xs sm:text-sm">
+                  <div className="order-2 sm:order-none bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-[10px] sm:text-sm">
                     Tester
                     <div className="absolute -top-7 -left-0">
                       <Image
@@ -75,7 +75,7 @@ const HomeBanner = () => {
                       />
                     </div>
                   </div>
-                  <div className="order-1 sm:order-none move-img w-8 h-8 sm:w-14 sm:h-14 rounded-full relative">
+                  <div className="order-1 sm:order-none move-img w-7 h-7 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -85,7 +85,7 @@ const HomeBanner = () => {
                   </div>
                 </div>
                 <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-4 sm:gap-6 transition-all duration-300 cursor-pointer">
-                  <div className="move-img w-8 h-8 sm:w-14 sm:h-14 rounded-full relative">
+                  <div className="move-img w-7 h-7 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -93,7 +93,7 @@ const HomeBanner = () => {
                       alt="image"
                     />
                   </div>
-                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-xs sm:text-sm">
+                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-[10px] sm:text-sm">
                     Designer
                     <div className="absolute -top-7 right-0">
                       <Image
@@ -107,7 +107,7 @@ const HomeBanner = () => {
                   </div>
                 </div>
                 <div className="w-full sm:w-fit relative sm:-left-12 custom-move-animation group flex flex-col items-center justify-center gap-5 transition-all duration-300 cursor-pointer mb-0 sm:mb-56">
-                  <div className="bg-[#2A2A2A] order-2 sm:order-none relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-xs sm:text-sm">
+                  <div className="bg-[#2A2A2A] order-2 sm:order-none relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-[10px] sm:text-sm">
                     Manager
                     <div className="absolute -top-7 -left-0">
                       <Image
@@ -119,7 +119,7 @@ const HomeBanner = () => {
                       />
                     </div>
                   </div>
-                  <div className="order-1 sm:order-none move-img w-8 h-8 sm:w-14 sm:h-14 rounded-full relative">
+                  <div className="order-1 sm:order-none move-img w-7 h-7 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -129,7 +129,7 @@ const HomeBanner = () => {
                   </div>
                 </div>
                 <div className="w-full sm:w-fit custom-move-animation group flex flex-col items-center justify-center gap-4 sm:gap-6 transition-all duration-300 cursor-pointer">
-                  <div className="move-img w-8 h-8 sm:w-14 sm:h-14 rounded-full relative">
+                  <div className="move-img w-7 h-7 sm:w-14 sm:h-14 rounded-full relative">
                     <Image
                       className="w-full mx-auto h-full rounded-full object-cover"
                       fill
@@ -137,7 +137,7 @@ const HomeBanner = () => {
                       alt="image"
                     />
                   </div>
-                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-xs sm:text-sm">
+                  <div className="bg-[#2A2A2A] relative group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 rounded-sm px-2.5 py-0.5 text-white text-[10px] sm:text-sm">
                     Developer
                     <div className="absolute -top-7 right-0">
                       <Image
@@ -166,39 +166,39 @@ const HomeBanner = () => {
                 <ul className="flex flex-wrap gap-5  sm:gap-10 sm:gap-y-6 mt-4 sm:mt-6 mb-6 sm:mb-9">
                   <li>
                     <img
-                      className="w-[150px] sm:w-auto"
-                      src="/images/trackday.png"
+                      className="w-[150px] sm:w-[199px]"
+                      src="/images/trackday.svg"
                       alt="Trackday logo"
                     />
                   </li>
                   <li>
                     <img
                       className="w-[100px] sm:w-auto"
-                      src="/images/slick.png"
+                      src="/images/slick.svg"
                       alt="Slick logo"
                     />
                   </li>
                   <li>
-                    <img src="/images/recovery.png" alt="Recovery logo" />
+                    <img src="/images/recovery.svg" alt="Recovery logo" />
                   </li>
                   <li>
                     <img
                       className="w-[70px] sm:w-auto"
-                      src="/images/pilot.png"
+                      src="/images/pilot.svg"
                       alt="pilot logo"
                     />
                   </li>
                   <li>
                     <img
                       className="w-[110px] sm:w-auto"
-                      src="/images/abbsi.png"
+                      src="/images/abbsi_new.svg"
                       alt="Abbsi logo"
                     />
                   </li>
                   <li>
                     <img
                       className="w-[30px] sm:w-auto"
-                      src="/images/residence.png"
+                      src="/images/residence.svg"
                       alt="Residence logo"
                     />
                   </li>

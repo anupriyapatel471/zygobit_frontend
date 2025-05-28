@@ -32,7 +32,7 @@ export function BussinessCardsSlider({
                     <img
                       className="brightness-0 invert size-full"
                       src="/images/sol_three.png"
-                      alt=""
+                      alt="image"
                     />
                   </span>
                   <h3 className="font-bold text-base sm:text-xl my-2.5 sm:my-4">

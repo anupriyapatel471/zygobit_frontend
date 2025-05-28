@@ -50,7 +50,7 @@ export default function SharedLayoutAnimation() {
                 <Image
                   className="w-[318px] h-auto object-contain"
                   src={selectedTab.image}
-                  alt=""
+                  alt="tab image"
                   width={500}
                   height={500}
                 />

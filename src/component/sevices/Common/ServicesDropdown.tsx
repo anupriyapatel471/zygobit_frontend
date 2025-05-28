@@ -15,7 +15,7 @@ const ServicesDropdown = () => {
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/mobile_icon.svg"
-                      alt=""
+                      alt="mobile icon"
                     />
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
@@ -28,7 +28,7 @@ const ServicesDropdown = () => {
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
-                          alt=""
+                          alt="right icon"
                         />
                       </h3>
                       <p className="hidden sm:inline-block text-sm lg:text-sm text-[#C1C1C1] mt-0.5">
@@ -42,7 +42,7 @@ const ServicesDropdown = () => {
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/webdev.svg"
-                      alt=""
+                      alt="webdev image"
                     />
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
@@ -56,7 +56,7 @@ const ServicesDropdown = () => {
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
-                          alt=""
+                          alt="right icon"
                         />
                       </h3>
                       <p className="hidden sm:inline-block text-sm lg:text-sm text-[#C1C1C1] mt-0.5">
@@ -70,7 +70,7 @@ const ServicesDropdown = () => {
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/uiux.svg"
-                      alt=""
+                      alt="uiux icon"
                     />
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
@@ -84,7 +84,7 @@ const ServicesDropdown = () => {
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
-                          alt=""
+                          alt="right icon"
                         />
                       </h3>
                       <p className="hidden sm:inline-block text-sm lg:text-sm text-[#C1C1C1] mt-0.5">
@@ -98,7 +98,7 @@ const ServicesDropdown = () => {
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/machinel.svg"
-                      alt=""
+                      alt="machinel image"
                     />
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
@@ -112,7 +112,7 @@ const ServicesDropdown = () => {
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
-                          alt=""
+                          alt="right icon"
                         />
                       </h3>
                       <p className="hidden sm:inline-block text-sm lg:text-sm text-[#C1C1C1] mt-0.5">
@@ -127,7 +127,7 @@ const ServicesDropdown = () => {
                     <img
                       className="w-6 sm:w-auto"
                       src="/images/ecommerce.svg"
-                      alt=""
+                      alt="ecomerce image"
                     />
                   </div>
                   <div className="w-[calc(100%-48px)] lg:w-[calc(100%-70px)]">
@@ -141,7 +141,7 @@ const ServicesDropdown = () => {
                         <img
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
-                          alt=""
+                          alt="right icon"
                         />
                       </h3>
                       <p className="hidden sm:inline-block text-sm lg:text-sm text-[#C1C1C1] mt-0.5">
@@ -161,7 +161,7 @@ const ServicesDropdown = () => {
                       <img
                         className="w-[250px]"
                         src="/images/Logo.png"
-                        alt=""
+                        alt="logo"
                       />
                     </div>
                     <p className="mt-7 text-base  text-white font-[300] sm:px-20">

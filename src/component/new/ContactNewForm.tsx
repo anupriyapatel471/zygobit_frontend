@@ -156,7 +156,7 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
               height={10}
               className="w-4 group-hover:rotate-[45deg] transition-all duration-500 h-4 object-contain"
               src="/images/up_arrow.svg"
-              alt=""
+              alt="arrow icon"
             />
           </Button>
         ) : (

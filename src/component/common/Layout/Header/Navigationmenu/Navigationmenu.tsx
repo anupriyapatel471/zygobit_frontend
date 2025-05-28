@@ -21,7 +21,7 @@ import { ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 export default function NavigationMenuDemo() {
-  const [classDynamic, setClassDynamic] = React.useState("top-10 lg:top-full ");
+  const [classDynamic, setClassDynamic] = React.useState("top-5 lg:top-full ");
 
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
   const [clickedTab, setClickedTab] = React.useState<string | null>(null);

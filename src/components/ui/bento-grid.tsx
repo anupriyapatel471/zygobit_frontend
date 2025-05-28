@@ -40,7 +40,7 @@ export const BentoGridItem = ({
       {image && (
         <Image
           src={image}
-          alt=""
+          alt="image"
           width={200}
           height={200}
           className="w-full h-[150px] object-cover rounded-xl "

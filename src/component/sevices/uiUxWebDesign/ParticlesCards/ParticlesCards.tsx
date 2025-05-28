@@ -73,7 +73,7 @@ export function ParticlesCards() {
                 <Image
                   className="w-12 relative sm:static -left-[15px] sm:w-auto sm:mx-auto"
                   src={card.imgSrc}
-                  alt=""
+                  alt="card image"
                   width={100}
                   height={100}
                 />
