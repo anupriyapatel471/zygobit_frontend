@@ -385,7 +385,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
               <h3 className=" font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl mb-3 sm:mb-5">
                 Mobile App
               </h3>
-              <ul className="list-decimal sm:font-bold text-sm space-y-4 pl-3 sm:pl-5">
+              <ul className="list-decimal sm:font-bold text-sm space-y-4 pl-3.5 sm:pl-5">
                 {projectData?.features &&
                   projectData?.features.map((data, index) => (
                     <li key={index}>{data} </li>

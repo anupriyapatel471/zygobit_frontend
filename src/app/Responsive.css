@@ -149,4 +149,8 @@
 .form-item textarea:valid + label {
   font-size: 10px;
 }
+
+input, textarea, select {
+  font-size: 16px !important;
+}
 }

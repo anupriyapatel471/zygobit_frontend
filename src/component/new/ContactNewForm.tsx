@@ -169,7 +169,7 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
           </div>
         )}
       </DialogTrigger>
-      <DialogContent className="max-w-[90%] lg:max-w-[1150px] rounded-none p-0 z-[9999]">
+      <DialogContent className="max-w-[90%] lg:max-w-[1150px] rounded-xl p-0 z-[9999]">
         <form onSubmit={handleSubmit}>
           <div className="w-full flex gap-10">
             <div className="hidden sm:inline w-2/5 p-5 relative">

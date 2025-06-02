@@ -95,20 +95,22 @@ const UiuxWebDesign = () => {
         <WeDeliver />
       </Suspense>
 
-      <section className="w-full custom-apple-slider  bg-white py-12 sm:py-14 lg:py-20">
-        <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
-          <div className="w-full lg:w-2/5">
-            <BoostBussiness heading={heading} paragraph={paragraph} />
-            <Link href="/contact">
-              <button className="mt-5 lg:mt-[45px] 2xl:mt-[95px] btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-600 duration-500 transition-all">
-                Get Assistance{" "}
-                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-              </button>
-            </Link>
-          </div>
-          <div className="w-full lg:w-3/5">
-            <div className="w-full">
-              <AppleCardsCarousel data={appleCardsData} />
+      <section className="w-full relative overflow-hidden  bg-white py-12 sm:py-14 lg:py-20">
+        <div className="container remove-bg">
+          <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
+            <div className="w-full lg:w-2/5">
+              <BoostBussiness heading={heading} paragraph={paragraph} />
+              <Link href="/contact">
+                <button className="mt-5 lg:mt-[45px] 2xl:mt-[95px] btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-600 duration-500 transition-all">
+                  Get Assistance{" "}
+                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                </button>
+              </Link>
+            </div>
+            <div className="w-full lg:w-3/5 lg:absolute lg:-right-12 2xl:-right-16">
+              <div className="w-full">
+                <AppleCardsCarousel data={appleCardsData} />
+              </div>
             </div>
           </div>
         </div>

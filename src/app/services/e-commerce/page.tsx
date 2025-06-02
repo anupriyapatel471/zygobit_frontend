@@ -81,26 +81,28 @@ const Ecommerce = () => {
         <WeDeliver />
       </Suspense>
 
-      <section className="w-full custom-apple-slider  bg-white pt-12 pb-12 sm:pt-14 sm:pb-24 lg:py-20 overflow-hidden">
-        <div className="flex flex-wrap lg:flex-nowrap text-black justify-between gap-20 sm:gap-5">
-          <div className="w-full lg:w-2/5 ">
-            <h2 className="text-2xl sm:text-3xl lg:text-[35px] lg:leading-[50px]  font-bold">
-              Drive Success with AI Ecommerce Solutions
-            </h2>
-            <p className="sm:font-medium  text-sm sm:text-base lg:text-xl mt-2 lg:mt-4 mb-4 lg:mb-7">
-              Boost your eCommerce store with our tailored app development
-              solutions. Connect with our experts to build a robust platform
-              that drives engagement and sales.
-            </p>
-            <Link href="/contact">
-              <button className=" btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-600 duration-500 transition-all">
-                Hire Web Application Developers{" "}
-                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-              </button>
-            </Link>
-          </div>
-          <div className="w-full lg:w-3/5 ">
-            <WebSliderSecond engagementModels={engagementModelsEcomerce} />
+      <section className="w-full relative overflow-hidden  bg-white pt-12 pb-12 sm:pt-14 sm:pb-24 lg:py-20 ">
+        <div className="container remove-bg">
+          <div className="flex flex-wrap lg:flex-nowrap text-black justify-between gap-20 sm:gap-5">
+            <div className="w-full lg:w-2/5 ">
+              <h2 className="text-2xl sm:text-3xl lg:text-[35px] lg:leading-[50px]  font-bold">
+                Drive Success with AI Ecommerce Solutions
+              </h2>
+              <p className="sm:font-medium  text-sm sm:text-base lg:text-xl mt-2 lg:mt-4 mb-4 lg:mb-7">
+                Boost your eCommerce store with our tailored app development
+                solutions. Connect with our experts to build a robust platform
+                that drives engagement and sales.
+              </p>
+              <Link href="/contact">
+                <button className=" btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-600 duration-500 transition-all">
+                  Hire Web Application Developers{" "}
+                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                </button>
+              </Link>
+            </div>
+            <div className="w-full lg:w-3/5 lg:absolute lg:-right-12 2xl:-right-16">
+              <WebSliderSecond engagementModels={engagementModelsEcomerce} />
+            </div>
           </div>
         </div>
       </section>
