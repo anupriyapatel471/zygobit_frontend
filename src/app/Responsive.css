@@ -40,6 +40,12 @@
 }
 
 @media screen and (max-width: 991px) {
+  .nav {
+    overflow-x: auto;
+  }
+  .featured-right-btn {
+    left: 37% !important;
+} 
   .custom-apple-slider {
     padding-left: 16px;
   }
@@ -77,6 +83,7 @@
   }
   .tabsContainer {
     flex-wrap: nowrap !important;
+    justify-content: left;
   }
   .tabsContainer .tab {
     width: auto !important;
@@ -126,7 +133,7 @@
     bottom: -75px  !important;
   }  
   .featured-btn {
-    bottom: -10px  !important;
+    bottom: -6px  !important;
     right:  0  !important;
   }
   .featured-right-btn {

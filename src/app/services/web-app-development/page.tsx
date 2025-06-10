@@ -186,7 +186,7 @@ const WebAppDevelopment = () => {
               <h2 className="text-2xl sm:text-3xl lg:text-[38px] text-gradiant-custom-second font-bold">
                 Zygobit: Pioneering Custom Web App Development
               </h2>
-              <p className="sm:font-medium  text-sm sm:text-lg lg:text-xl mt-2 sm:mt-5">
+              <p className="sm:font-medium  text-sm sm:text-lg lg:text-xl mt-2 sm:mt-2.5 lg:mt-5">
                 Empowering businesses with innovative web applications, our
                 expert developers craft high-performance solutions to enhance
                 efficiency, scalability, and profitability.
@@ -225,14 +225,14 @@ const WebAppDevelopment = () => {
             <div data-aos="fade-up">
               <FeaturedSlider />
             </div>
-            <div className="w-full flex justify-center mt-7 sm:mt-10">
+            {/* <div className="w-full flex justify-center mt-7 sm:mt-10">
               <Link href={"/portfolio"}>
                 <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
                   View All
                   <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                 </button>
               </Link>
-            </div>
+            </div> */}
           </div>
         </section>
       </Suspense>

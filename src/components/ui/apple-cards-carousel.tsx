@@ -128,7 +128,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             ))}
           </div>
         </div>
-        <div className="flex justify-end gap-5 mr-5 sm:mr-10 lg:mr-0 mt-5 lg:mt-9 lg:px-5 ">
+        <div className="flex justify-end gap-5 mr-0 sm:mr-0 lg:mr-0 mt-5 lg:mt-9 lg:px-5 ">
           <button
             className="relative z-40 w-10 h-10 sm:h-12 sm:w-12 rounded-full bg-transparent border border-orange-600 flex items-center justify-center disabled:opacity-50"
             onClick={scrollLeft}

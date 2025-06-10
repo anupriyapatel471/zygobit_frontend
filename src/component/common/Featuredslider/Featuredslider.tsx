@@ -49,7 +49,7 @@ export default function FeaturedSlider() {
                   <CardContent className="p-0">
                     <div className="w-full   mt-5  sm:mt-11">
                       <div className="w-full flex flex-wrap sm:flex-nowrap gap-5 justify-between items-start xl:px-10">
-                        <div className="order-2 sm:order-2 w-full sm:w-1/2 lg:w-2/5 h-full xl:h-[450px] gap-4 sm:sgap-8 lg:gap-[75px] flex flex-col justify-between  text-white">
+                        <div className="order-2 sm:order-2 w-full sm:w-1/2 lg:w-2/5 h-full xl:h-[450px] gap-4 sm:gap-20 lg:gap-[75px] flex flex-col justify-between  text-white">
                           <div>
                             <span className="font-light text-sm sm:text-base lg:text-lg block mb-2 text-themetext sm:mb-4 lg:mb-6">
                               Case Study

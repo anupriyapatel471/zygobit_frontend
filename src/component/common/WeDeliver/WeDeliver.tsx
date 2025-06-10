@@ -29,7 +29,7 @@ const WeDeliver = () => {
         <div className="container remove-bg">
           <div className="w-full pt-16 lg:pt-24 pb-16 sm:pb-24 lg:pb-24">
             <div className="w-full px-4 sm:px-0 text-center mb-10 sm:mb-16 lg:mb-24">
-              <h2 className="font-bold text-2xl sm:text-4xl lg:text-[35px] text-white ">
+              <h2 className="font-bold text-2xl sm:text-3xl lg:text-[35px] text-white ">
                 We provide cutting-edge mobile app development services and IT
                 solutions designed to keep your business ahead in the digital
                 era.
