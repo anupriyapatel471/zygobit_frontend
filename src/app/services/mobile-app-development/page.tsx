@@ -143,7 +143,7 @@ const MobileAppDevelopment = () => {
           <div className="w-full">
             <MobileTechnology />
           </div>
-          <div className="w-full flex sm:justify-center mt-5 lg:mt-12">
+          <div className="w-full flex justify-center mt-5 lg:mt-12">
             <Link href="/contact">
               <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
                 Build Your App Today!{" "}

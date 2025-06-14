@@ -37,12 +37,12 @@ const GridBoxes: React.FC<GridBoxesProps> = ({
           </p>
         </div>
         <div className="w-full">
-          <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 lg:gap-10">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-10">
             {cards.map((card) => (
               <div
                 key={card.id}
                 className={
-                  `w-full h-[165px] sm:h-auto sm:max-h-[220px] lg:max-h-[324px] lg:min-h-[324px] overflow-hidden ` +
+                  `w-full h-[165px] sm:h-auto sm:max-h-[204px] sm:min-h-[204px] lg:max-h-[324px] lg:min-h-[324px] overflow-hidden ` +
                   `transition-all duration-300 group p-4 lg:p-10 ${card.className} rounded-2xl hover:bg-[#1E1E20] ` +
                   `${card.bgClass} relative`
                 }
@@ -78,7 +78,7 @@ const GridBoxes: React.FC<GridBoxesProps> = ({
                     alt="icon"
                   />
                 </div>
-                <h2 className="font-bold text-xl sm:text-2xl lg:text-3xl pr-14 sm:pr-0 text-white mb-4 sm:mb-12 lg:pr-5">
+                <h2 className="font-bold text-xl sm:text-2xl lg:text-3xl pr-14 sm:pr-10 lg:pr-5 text-white mb-4 sm:mb-3.5 lg:mb-12 ">
                   {card.title}
                 </h2>
 

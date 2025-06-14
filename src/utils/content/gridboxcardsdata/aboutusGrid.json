@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Proven Expertise",
     "content": "Years of hands-on experience across industries help us design future-ready digital solutions that perform and scale.",
-    "className": "sm:col-span-2",
+    "className": "lg:col-span-2",
     "bgClass": "bg-black/70",
     "thumbnail": "/images/new_proven.png",
     "boxIcon": "/images/setting_icon.svg"
@@ -30,7 +30,7 @@
     "id": 4,
     "title": "Agile & Adaptive",
     "content": "We thrive on flexibility — constantly evolving our process to match your pace, goals, and growth.",
-    "className": "sm:col-span-2",
+    "className": "lg:col-span-2",
     "bgClass": "bg-black/70",
     "thumbnail": "/images/seamless_interactionOne.png",
     "boxIcon": "/images/repeat.svg"

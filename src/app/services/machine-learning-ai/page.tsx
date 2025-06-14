@@ -163,7 +163,7 @@ const MachineLearning = () => {
                 enabling secure and instant transactions.
               </p>
             </div>
-            <div className="w-full  mt-8 sm:mt-8 lg:mt-10">
+            <div className="w-full  mt-5 sm:mt-8 lg:mt-10">
               <AwareHoverCards />
             </div>
           </div>

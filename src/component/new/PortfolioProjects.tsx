@@ -99,7 +99,7 @@ const PortfolioProjects = () => {
                             <>
                               {/* 45% FIRST */}
                               {/* 45% SECOND */}
-                              <div className="order-2 lg:order-none w-full lg:w-[45%] flex justify-between items-start flex-col gap-5 sm:gap-10 lg:gap-[126px]">
+                              <div className="order-2 lg:order-none w-full lg:w-[45%] flex justify-between items-start flex-col gap-5 sm:gap-5 lg:gap-[126px]">
                                 <div>
                                   <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-2 sm:border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
                                     {project.projectName}
@@ -200,7 +200,7 @@ const PortfolioProjects = () => {
                               </div>
 
                               {/* 45% SECOND */}
-                              <div className="order-2 lg:order-none w-full lg:w-[45%] flex justify-between items-start flex-col gap-5 sm:gap-10 lg:gap-[126px]">
+                              <div className="order-2 lg:order-none w-full lg:w-[45%] flex justify-between items-start flex-col gap-5 sm:gap-5 lg:gap-[126px]">
                                 <div>
                                   <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-2 sm:border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
                                     {project.projectName}

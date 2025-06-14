@@ -89,7 +89,7 @@ export default function MarqueeVertical() {
   }, []);
 
   return (
-    <div className="relative lg:flex h-[200px] sm:h-[380px] w-full flex-row items-center justify-center overflow-hidden ">
+    <div className="relative lg:flex h-[200px] sm:h-[290px] lg:h-[380px] w-full flex-row items-center justify-center overflow-hidden ">
       <Marquee pauseOnHover vertical={vertical} className="[--duration:10s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />

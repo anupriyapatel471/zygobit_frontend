@@ -160,7 +160,10 @@ const Blockchain = () => {
         clientSaysDetails={clientSaysDetails}
       />
 
-      <FaqSection faqData={faqData} />
+      <div className="mt-12 sm:mt-14 lg:mt-16">
+        <FaqSection faqData={faqData} />
+      </div>
+
       <ContactForm />
     </>
   );

@@ -23,10 +23,10 @@ export function TracingBeams({ blog }: { blog: Blog }) {
   return (
     <>
       {blog && (
-        <TracingBeam className="mt-24 sm:mt-32 mb-16 sm:mb-20 px-0 sm:px-0 lg:px-0 max-w-[1248px] mx-auto">
+        <TracingBeam className="mt-24 sm:mt-24 lg:mt-32 mb-0 sm:mb-14 lg:mb-20 px-0 sm:px-0 lg:px-0 max-w-[1248px] mx-auto">
           <div className="container remove-bg">
             <div className="w-full antialiased sm:pt-4 relative lg:pl-[60px]">
-              <div className="mb-10">
+              <div className="sm:mb-10">
                 <h2 className=" text-white font-medium sm:font-bold text-2xl sm:text-4xl w-fit mb-2  sm:mb-4">
                   {blog.title}
                 </h2>
@@ -44,7 +44,7 @@ export function TracingBeams({ blog }: { blog: Blog }) {
                   Published on {blog.publishedDate}
                 </span>
 
-                <div className="text-sm sm:text-lg lg:text-xl  prose prose-sm dark:prose-invert">
+                <div className="text-sm sm:text-sm lg:text-xl  prose prose-sm dark:prose-invert">
                   <Image
                     src={blog.image}
                     alt="blog thumbnail"
@@ -54,7 +54,7 @@ export function TracingBeams({ blog }: { blog: Blog }) {
                   />
                   {blog.description}
                 </div>
-                <p className="text-sm sm:text-lg lg:text-xl">{blog.title}</p>
+                <p className="text-sm sm:text-sm lg:text-xl">{blog.title}</p>
                 {Array.isArray(blog.projectInfo) &&
                   blog.projectInfo.length > 0 && (
                     <div className="mt-6">
