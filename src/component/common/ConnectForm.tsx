@@ -155,7 +155,6 @@ const ConnectForm = () => {
       // });
       // console.log("Saved record:", savedRecord);
       // toast.success("Saved record");
-
       toast.success(
         "Thanks for reaching out to us. we will contact contact you shortly!"
       );
