@@ -192,7 +192,7 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                   <Input
                     name="firstName"
                     id="firstName"
-                    placeholder=" "
+                    placeholder="First Name"
                     className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
                     autoComplete="off"
                     type="text"
@@ -205,7 +205,7 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                   <Input
                     name="lastName"
                     id="lastName"
-                    placeholder=" "
+                    placeholder="Last Name"
                     className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
                     type="text"
                     autoComplete="off"
@@ -260,7 +260,7 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                     autoComplete="off"
                     name="companyEmail"
                     className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
-                    placeholder=" "
+                    placeholder="Company Email"
                     type="email"
                   />
                   <label htmlFor="companyEmail">Company Email</label>
@@ -271,7 +271,7 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                     name="companyName"
                     autoComplete="off"
                     className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
-                    placeholder=" "
+                    placeholder="Company Name"
                     type="text"
                     value={formData.companyName}
                     onChange={handleChange}
@@ -281,8 +281,9 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                 <div className="form-item new-form-item relative">
                   <Input
                     name="budget"
+                    id="budget"
                     className="bg-black/5 placeholder:text-black/60 text-black  border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
-                    placeholder=" "
+                    placeholder="Budget"
                     type="text"
                     autoComplete="off"
                     value={formData.budget}
@@ -293,7 +294,7 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                 <div className="form-item new-form-item col-span-1 sm:col-span-2 relative">
                   <textarea
                     className="resize-none placeholder:text-black/60 text-black bg-black/5  w-full text-xs lg:text-xs h-16 md:h-20 lg:h-32 border border-black/20 p-3 rounded-md outline-none"
-                    placeholder=" "
+                    placeholder="About Project"
                     name="projectDetails"
                     autoComplete="off"
                     id="projectDetails"
