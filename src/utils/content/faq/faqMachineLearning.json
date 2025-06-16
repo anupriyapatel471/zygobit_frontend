@@ -1,42 +1,34 @@
 [
   {
-    "question": "What types of mobile apps do you develop?",
-    "answer": "We specialize in developing native, hybrid, and cross-platform apps for iOS and Android, tailored to various industries."
+    "question": "What is the difference between Artificial Intelligence and Machine Learning?",
+    "answer": "AI refers to systems that simulate human intelligence, while Machine Learning is a subset of AI that enables systems to learn from data and improve over time without being explicitly programmed."
   },
   {
-    "question": "How long does it take to develop a mobile app?",
-    "answer": "The timeline varies based on the complexity, features, and integrations required. On average, it takes 3–6 months to develop a fully functional app."
+    "question": "What types of business problems can AI solve?",
+    "answer": "AI can help with predictive analytics, customer behavior analysis, fraud detection, image recognition, natural language processing (chatbots), recommendation engines, automation, and much more."
   },
   {
-    "question": "What technologies do you use for mobile app development?",
-    "answer": "We use Flutter, React Native, Swift, Kotlin, and Golang for backend development, ensuring high performance and scalability."
+    "question": "Do I need a large dataset to implement machine learning?",
+    "answer": "While large datasets improve model accuracy, there are also effective techniques for working with smaller datasets, such as data augmentation and transfer learning."
   },
   {
-    "question": "Can you help with app store submission and approvals?",
-    "answer": "Yes! We handle the entire process, including App Store (iOS) and Google Play (Android) submission, ensuring compliance with guidelines."
+    "question": "How secure is AI in handling sensitive data?",
+    "answer": "We follow strict data privacy protocols and can implement secure AI models that comply with GDPR, HIPAA, and other industry standards."
   },
   {
-    "question": "Do you provide post-launch support and maintenance?",
-    "answer": "Absolutely! We offer ongoing maintenance, updates, bug fixes, and feature enhancements to keep your app optimized."
+    "question": "Can AI be integrated with my existing software or platform?",
+    "answer": "Yes, AI models can be integrated via APIs or directly into your applications, whether web-based, mobile, or cloud-hosted."
   },
   {
-    "question": "How much does mobile app development cost?",
-    "answer": "The cost depends on the app’s complexity, features, and platform. Contact us for a custom quote based on your project requirements."
+    "question": "How long does it take to develop an AI solution?",
+    "answer": "It varies depending on complexity. A simple chatbot may take a few weeks, while a custom machine learning model may require 1–3 months or more."
   },
   {
-    "question": "Can you integrate third-party APIs and payment gateways?",
-    "answer": "Yes, we integrate APIs, payment gateways (Stripe, PayPal, etc.), analytics, and other third-party services seamlessly."
+    "question": "Will I need a data scientist to maintain the AI system?",
+    "answer": "Not necessarily. We offer managed AI services and provide dashboards or auto-training systems that allow you to monitor performance without deep technical knowledge."
   },
   {
-    "question": "Will my app be secure?",
-    "answer": "Security is our priority! We implement end-to-end encryption, secure authentication, and compliance with industry standards to protect user data."
-  },
-  {
-    "question": "Can you scale the app as my business grows?",
-    "answer": "Yes, we build scalable architectures that allow your app to handle increased users, features, and data as your business expands."
-  },
-  {
-    "question": "Why should I choose Zygobit for mobile app development?",
-    "answer": "With proven expertise, cutting-edge technology, and a user-focused approach, we deliver high-quality apps tailored to your business needs."
+    "question": "What industries can benefit most from AI?",
+    "answer": "Almost every industry can benefit—especially healthcare, finance, eCommerce, logistics, marketing, and manufacturing."
   }
 ]
