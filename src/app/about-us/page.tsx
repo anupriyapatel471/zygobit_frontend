@@ -88,6 +88,7 @@ const About = () => {
                 alt="team work image"
               />
             </div>
+
             <div className="text-center sm:text-left w-full order-3 sm:order-none sm:w-[548px]">
               <p className="text-sm sm:text-base lg:text-lg text-white sm:mt-8 relative z-10">
                 Zygobit is where innovative ideas and exceptional code converge.
