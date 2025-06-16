@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Proven Mobile Expertise",
     "content": "Leverage years of experience in building mobile apps that power startups and enterprises alike — secure, scalable, and user-focused.",
-    "className": "lg:col-span-2",
+    "className": "sm:col-span-2 md:col-span-2 lg:col-span-2",
     "bgClass": "bg-black/70",
     "thumbnail": "/images/new_proven.png",
     "boxIcon": "/images/setting_icon.svg"
@@ -30,7 +30,7 @@
     "id": 4,
     "title": "Seamless System Integration",
     "content": "We integrate your mobile app with CRMs, ERPs, and third-party APIs to ensure smooth data flow and connected operations.",
-    "className": "lg:col-span-2",
+    "className": "sm:col-span-2 md:col-span-2 lg:col-span-2",
     "bgClass": "bg-black/70",
     "boxIcon": "/images/repeat.svg",
     "thumbnail": "/images/seamless_interactionOne.png"
