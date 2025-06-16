@@ -88,11 +88,24 @@ export function ClientSlider() {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
+              {!data.videosrc && (
+                <div
+                  className="w-full h-full absolute top-0 
+               left-0 -z-10"
+                >
+                  <Image
+                    className="p-8"
+                    fill
+                    src="/images/client_bg_img.svg"
+                    alt="icon"
+                  />{" "}
+                </div>
+              )}
               {data.videosrc && (
                 <video
                   width="600"
                   height="500"
-                  className="absolute rounded-3xl  top-0 left-0 w-full h-full object-contain"
+                  className="absolute rounded-3xl  top-0 left-0 z-10 w-full h-full object-contain"
                   loop
                   playsInline
                   ref={(el) => {
@@ -121,7 +134,7 @@ export function ClientSlider() {
                   {/* {data.videosrc && hoveredIndex !== index && ( */}
                   {(data.videosrc ? hoveredIndex !== index : true) && (
                     <div className="flex gap-1.5 max-w-[90%] mx-auto  w-full p-5 items-center absolute bottom-5 left-1/2 -translate-x-1/2 border border-[#F2F2F71A] bg-black/40 rounded-2xl">
-                      <div className="w-14 h-14 overflow-hidden rounded-full relative">
+                      <div className="w-14 h-14 border-[3px] border-[#FF4D00] overflow-hidden rounded-full relative">
                         <Image
                           fill
                           className="w-full h-full object-cover"

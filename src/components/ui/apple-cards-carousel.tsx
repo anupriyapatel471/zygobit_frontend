@@ -153,10 +153,12 @@ export const Card = ({
   card,
   index,
   layout = false,
+  appleClass
 }: {
   card: Card;
   index: number;
   layout?: boolean;
+  appleClass?: string;
 }) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -239,7 +241,7 @@ export const Card = ({
         className="rounded-2xl bg-white bg-opacity-5  w-[18rem]  md:w-80 xl:w-[330px] overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
         <div className="absolute hidden h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
-        <div className="w-full relative rounded-2xl z-40 p-4 2xl:p-5 border border-[#C4C4C4] bg-white/5 text-left h-[275px] sm:h-auto lg:h-[300px] 2xl:h-[349px] cursor-default">
+        <div className={`w-full relative rounded-2xl z-40 p-4 2xl:p-5 border border-[#C4C4C4] bg-white/5 text-left ${appleClass ?? "h-[275px]" } sm:h-auto lg:h-[300px] 2xl:h-[349px] cursor-default`}>
          {card.icon.length > 0 &&  <div className="relative -left-6">
             <img src={card.icon} alt="card icon" />
           </div>

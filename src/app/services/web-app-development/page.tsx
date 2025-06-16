@@ -132,7 +132,7 @@ const WebAppDevelopment = () => {
             </div>
             <div className="w-full lg:w-[60%] lg:absolute lg:-right-12 2xl:-right-16">
               <div className="w-full">
-                <AppleCardsCarousel data={appleCardsData} />
+                <AppleCardsCarousel appleClass={"h-[180px]"} data={appleCardsData} />
               </div>
             </div>
           </div>

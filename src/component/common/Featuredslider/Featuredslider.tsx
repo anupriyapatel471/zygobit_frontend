@@ -57,7 +57,7 @@ export default function FeaturedSlider() {
                             <h2 className="font-extrabold text-xl sm:text-2xl lg:text-[32px] tracking-wide">
                               {project.projectName}
                             </h2>
-                            <p className="text-sm sm:text-base sm:font-medium mt-1.5 sm:pr-5">
+                            <p className="text-sm sm:text-base sm:font-medium mt-1.5 sm:pr-5 min-h-[140px] sm:min-h-fit">
                               {project.description &&
                                 truncateText(project.description, 300)}
                             </p>

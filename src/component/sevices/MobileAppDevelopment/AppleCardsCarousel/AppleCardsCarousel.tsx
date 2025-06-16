@@ -9,11 +9,13 @@ interface AppleCardsCarouselProps {
 }
 export default function AppleCardsCarousel({
   data,
+  appleClass,
 }: {
   data: AppleCardsCarouselProps[];
+    appleClass?: string
 }) {
   const cards = data.map((card, index) => (
-    <Card key={index} card={card} index={index} />
+    <Card appleClass={appleClass} key={index} card={card} index={index} />
   ));
 
   return (
