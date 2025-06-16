@@ -88,7 +88,8 @@ const MobileAppDevelopment = () => {
   const clientSaysDetails =
     "See how our custom app development services have transformed businesses and driven success for our happy clients";
 
-  const heroHeading = "Mobile App Development That Drives Success";
+  const heroHeading =
+    "Mobile App Development Solutions for Scalable and Custom Experiences";
   const heroParagraph =
     "Custom iOS & Android solutions designed for performance, security, and scalability—empowering businesses with innovative mobile experiences.";
 
@@ -111,21 +112,21 @@ const MobileAppDevelopment = () => {
       <section className="w-full relative overflow-hidden  bg-white py-12 sm:py-14 lg:py-20">
         <div className="container remove-bg">
           <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
-          <div className="w-full pr-4 sm:pr-0 lg:w-[40%]">
-            <BoostBussiness heading={heading} paragraph={paragraph} />
-            <Link href="/contact">
-              <button className="mt-3 sm:mt-3 lg:mt-4  2xl:mt-16 btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
-                Get Assistance{" "}
-                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-              </button>
-            </Link>
-          </div>
-          <div className="w-full lg:w-[60%] lg:absolute lg:-right-12 2xl:-right-16">
-            <div className="w-full">
-              <AppleCardsCarousel data={appleCardsData} />
+            <div className="w-full pr-4 sm:pr-0 lg:w-[40%]">
+              <BoostBussiness heading={heading} paragraph={paragraph} />
+              <Link href="/contact">
+                <button className="mt-3 sm:mt-3 lg:mt-4  2xl:mt-16 btn-primary text-white font-normal  group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
+                  Get Assistance{" "}
+                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                </button>
+              </Link>
+            </div>
+            <div className="w-full lg:w-[60%] lg:absolute lg:-right-12 2xl:-right-16">
+              <div className="w-full">
+                <AppleCardsCarousel data={appleCardsData} />
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </section>
 

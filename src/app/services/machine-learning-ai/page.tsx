@@ -81,7 +81,7 @@ const MachineLearning = () => {
   const GridBoxesDetail =
     " At Zygobit, we harness the power of AI and Machine Learning to develop intelligent, data-driven solutions. Our cutting-edge tools and AI-driven insights enable us to create seamless, efficient, and highly adaptive experiences that drive innovation.";
   const heroHeading =
-    "Pioneering AI & Machine Learning Solutions for Smarter Businesses";
+    "Machine Learning Solutions for Smart and Predictive Applications";
   const heroParagraph =
     "Unleash the power of Artificial Intelligence with Zygobit! We build intelligent, data-driven solutions using cutting-edge Machine Learning and AI to revolutionize industries and drive innovation.";
 

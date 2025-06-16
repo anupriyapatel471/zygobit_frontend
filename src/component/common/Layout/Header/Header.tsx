@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../../../public/images/Logo.png";
 import { usePathname } from "next/navigation";
-import { ChatBotBtn } from "@/component/new/ChatBot";
+// import { ChatBotBtn } from "@/component/new/ChatBot";
 import { ContactnewForm } from "@/component/new/ContactNewForm";
 
 const Header = () => {
@@ -409,7 +409,7 @@ const Header = () => {
           </div>
         </div>
 
-        <ChatBotBtn />
+        {/* <ChatBotBtn /> */}
       </div>
     </>
   );

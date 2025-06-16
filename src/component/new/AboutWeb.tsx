@@ -35,7 +35,7 @@ const AboutWeb = ({ data }: { data: AboutWebProps }) => {
               <p className="sm:font-medium text-sm sm:text-base my-5">
                 {data?.description}
                 <br></br>
-                {data?.subTitle}
+                <span className="block mt-3  lg:mt-4 "> {data?.subTitle}</span>
               </p>
               <ul className="text-sm pl-5 sm:text-base space-y-1.5 sm:space-y-1 list-disc">
                 {data?.features.map((item, index) => (

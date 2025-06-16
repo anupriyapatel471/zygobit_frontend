@@ -338,13 +338,6 @@
               "isRequired": false,
               "attributes": []
             },
-            "developmentTime": {
-              "name": "developmentTime",
-              "isArray": false,
-              "type": "String",
-              "isRequired": false,
-              "attributes": []
-            },
             "targetUsers": {
               "name": "targetUsers",
               "isArray": false,
@@ -506,6 +499,34 @@
               "isRequired": false,
               "attributes": [],
               "isArrayNullable": true
+            },
+            "clientName": {
+              "name": "clientName",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "services": {
+              "name": "services",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "businessType": {
+              "name": "businessType",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "developmentTime": {
+              "name": "developmentTime",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
             }
           },
           "syncable": true,

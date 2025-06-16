@@ -69,7 +69,8 @@ const Ecommerce = () => {
   const clientHeading = "We Are a Trusted Web App Development Company";
   const clientSaysDetails =
     "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions";
-  const heroHeading = "Expert E-Commerce Development Services";
+  const heroHeading =
+    "E-commerce Development Solutions for Seamless and Profitable Stores";
   const heroParagraph =
     "We build powerful and scalable e-commerce solutions tailored to your business needs. From custom store development to seamless integrations, our team ensures your online store is optimized for performance, conversions, and user experience.";
 

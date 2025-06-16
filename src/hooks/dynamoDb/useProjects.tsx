@@ -3,36 +3,13 @@
 import { useState, useEffect } from "react";
 import { generateClient } from "aws-amplify/data";
 import useAmplifyConfig from "@/hooks/useAmplify";
+import { ProjectData } from "@/app/type/projectType";
 
 const client = generateClient();
 
-interface Project {
-  backgroundImage: string;
-  slug: any;
-  technologyImages: any;
-  id?: string | null;
-  title: string | null;
-  description: string | null;
-  projectName: string | null;
-  mobileImage: string | null;
-  androidDownloads: number | null;
-  iosDownloads: number | null;
-  createdAt: string | null;
-  updatedAt: string | null;
-  clientLocation: string | null;
-  developmentTime: string | null;
-  targetUsers: string | null;
-  subDescription: string | null;
-  subTitle: string | null;
-  technologyDescription: string | null;
-  developmentDescription: string | null;
-  evaluationDescription: string | null;
-  evaluationImage: string | null;
-}
-
 export const useProjects = (id?: string) => {
   useAmplifyConfig();
-  const [data, setData] = useState<Project | Project[] | null>(null);
+  const [data, setData] = useState<ProjectData | ProjectData[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 

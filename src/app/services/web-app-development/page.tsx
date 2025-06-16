@@ -103,7 +103,8 @@ const WebAppDevelopment = () => {
   const paragraph =
     "We specialize in crafting custom web solutions that empower businesses to thrive in today’s digital-first world. From intuitive websites to complex platforms, our development services are aligned with your goals—helping you attract, convert, and grow.";
 
-  const heroHeading = "We are Trusted by Industry Leaders";
+  const heroHeading =
+    "Mobile App Development Solutions for Scalable and Custom Experiences";
 
   const heroParagraph =
     "Powering businesses with cutting-edge web development solutions that ensure seamless performance, scalability, and innovation.";

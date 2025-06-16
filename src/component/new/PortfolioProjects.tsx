@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { useState, useEffect, ReactNode } from "react";
+import { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { generateClient } from "aws-amplify/data";
 import useAmplifyConfig from "@/hooks/useAmplify";
@@ -9,40 +9,14 @@ import Loader from "../common/Loader/Loader";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
+import { ProjectData } from "@/app/type/projectType";
 // import { formatDownloads } from "@/lib/utils";
 
 const client = generateClient();
 
-interface Project {
-  backgroundImage: string;
-  slug: any;
-  technologyImages: ReactNode;
-  id?: string | null;
-  title: string | null;
-  description: string | null;
-  projectName: string | null;
-  mobileImage: string | null;
-  androidDownloads: number | null;
-  iosDownloads: number | null;
-  createdAt: string | null;
-  updatedAt: string | null;
-  clientLocation: string | null;
-  developmentTime: string | null;
-  targetUsers: string | null;
-  subDescription: string | null;
-  subTitle: string | null;
-  technologyDescription: string | null;
-  developmentDescription: string | null;
-  evaluationDescription: string | null;
-  evaluationImage: string | null;
-  category?: string | null;
-  googlePlayAppLink: string;
-  appStoreAppLink: string;
-}
-
 const PortfolioProjects = () => {
   useAmplifyConfig();
-  const [data, setData] = useState<Project[]>([]);
+  const [data, setData] = useState<ProjectData[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -162,7 +136,7 @@ const PortfolioProjects = () => {
                                 <div className="relative w-full h-[265px] sm:h-[370px] lg:h-[500px]">
                                   <Image
                                     fill
-                                    src={project.backgroundImage}
+                                    src={project.backgroundImage || ""}
                                     alt="image"
                                   />
                                   <div className="w-full lg:w-[465px] h-[170px] sm:h-[320px] lg:h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -184,7 +158,7 @@ const PortfolioProjects = () => {
                                 <div className="relative w-full h-[265px] sm:h-[370px] lg:h-[500px]">
                                   <Image
                                     fill
-                                    src={project.backgroundImage}
+                                    src={project.backgroundImage || ""}
                                     alt="image"
                                   />
                                   <div className="w-full lg:w-[465px] h-[170px] sm:h-[320px] lg:h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">

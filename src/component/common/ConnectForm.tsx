@@ -181,7 +181,7 @@ const ConnectForm = () => {
             <Input
               name="firstName"
               id="firstName"
-              placeholder="First Name"
+              placeholder=" "
               className="bg-white/5 h-10 md:h-10  border-white/20"
               autoComplete="off"
               type="text"
@@ -195,7 +195,7 @@ const ConnectForm = () => {
               name="lastName"
               id="lastName"
               className="bg-white/5 h-10 md:h-10 border-white/20"
-              placeholder="Last Name"
+              placeholder=" "
               type="text"
               value={formData.lastName}
               onChange={handleChange}
@@ -239,7 +239,7 @@ const ConnectForm = () => {
               name="jobTitle"
               id="jobTitle"
               className="bg-white/5 h-10 md:h-10 border-white/20"
-              placeholder="Job Title"
+              placeholder=" "
               type="text"
               value={formData.jobTitle}
               onChange={handleChange}
@@ -253,7 +253,7 @@ const ConnectForm = () => {
               name="companyName"
               id="companyName"
               className="bg-white/5 h-10 md:h-10 border-white/20"
-              placeholder="Company Name"
+              placeholder=" "
               type="text"
               value={formData.companyName}
               onChange={handleChange}
@@ -264,7 +264,7 @@ const ConnectForm = () => {
             <Input
               name="companyEmail"
               id="companyEmail"
-              placeholder="Company Email"
+              placeholder=" "
               className="bg-white/5 h-10 md:h-10 border-white/20"
               type="email"
               value={formData.companyEmail}
@@ -279,7 +279,7 @@ const ConnectForm = () => {
               className="bg-white/5 h-10 md:h-10 border-white/20"
               name="launchDate"
               id="launchDate"
-              placeholder="When do you want to launch a solution?"
+              placeholder=" "
               type="text"
               value={formData.launchDate}
               onChange={handleChange}
@@ -295,7 +295,7 @@ const ConnectForm = () => {
               className="bg-white/5 h-10 md:h-10 border-white/20"
               name="budget"
               id="budget"
-              placeholder="Budget"
+              placeholder=" "
               type="text"
               value={formData.budget}
               onChange={handleChange}
@@ -307,7 +307,7 @@ const ConnectForm = () => {
           <div className="form-item relative">
             <Textarea
               name="projectDetails"
-              placeholder="About Project"
+              placeholder=" "
               id="projectDetails"
               className="resize-none w-full bg-white/5  text-sm sm:text-base h-20 md:h-20 lg:h-32 border border-white/20  p-3 rounded-md outline-none"
               value={formData.projectDetails}
@@ -320,8 +320,6 @@ const ConnectForm = () => {
           type="submit"
           className="group bg-gradient-custom overflow-hidden font-medium transition-all duration-500 btn-primary text-white relative"
           disabled={loading}
-          name="action"
-          value="lets_build"
         >
           {loading ? "Submitting..." : "Let’s Build"}
           <Image

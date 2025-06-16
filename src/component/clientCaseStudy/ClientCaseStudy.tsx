@@ -1,33 +1,10 @@
 "use client";
-import React, { ReactNode } from "react";
+import React from "react";
 import Image from "next/image";
 import ContactForm from "../common/ContactForm/ContactForm";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
-
-interface ProjectData {
-  projectName: ReactNode;
-  subTitle: ReactNode;
-  title: string;
-  description: string;
-  mobileImage?: string;
-  clientLocation?: string;
-  developmentTime?: string;
-  targetUsers?: string;
-  technologyDescription?: string;
-  technologyImages: [{ ImageUrl: string; ImageName: string }];
-  evaluationDescription?: string;
-  evaluationImage?: string;
-  developmentDescription?: string;
-  adminData?: { image: string; data: string[] };
-  themeColor?: { bgGradientOne: string; bgGradientTwo: string };
-  projectLogo: string;
-  testColor: string;
-  mockupImage?: string;
-  features?: string[];
-  projectIdea: string;
-  theSolution: string;
-}
+import { ProjectData } from "@/app/type/projectType";
 
 const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
   const router = useRouter();
@@ -35,7 +12,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
   const cardData = [
     {
       title: "Client",
-      subtitle: "John Doe",
+      subtitle: projectData?.clientName,
       svg: (
         <svg
           width="40"
@@ -55,7 +32,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
     },
     {
       title: "Services",
-      subtitle: "Live Chat Integration",
+      subtitle: projectData?.services,
       svg: (
         <svg
           width="40"
@@ -75,7 +52,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
     },
     {
       title: "Business Type",
-      subtitle: "FemTech",
+      subtitle: projectData?.businessType,
       svg: (
         <svg
           width="40"

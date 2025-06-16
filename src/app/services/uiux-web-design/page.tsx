@@ -83,7 +83,8 @@ const UiuxWebDesign = () => {
   const heading = "Craft Exceptional User Experiences with UI/UX Design";
   const paragraph =
     "We create visually stunning and intuitive UI/UX designs that enhance usability, engagement, and brand identity. Our expertise ensures a seamless digital experience tailored to your audience.";
-  const heroHeading = "Custom UI/UX Design Services";
+  const heroHeading =
+    "UI/UX Design Services for Intuitive and Engaging Interfaces";
   const heroParagraph =
     "We craft visually stunning and user-centric experiences with our cutting-edge, research-driven UI/UX design services. Our team specializes in creating intuitive, engaging, and accessible interfaces that not only meet but exceed user expectations, ensuring a seamless and impactful digital experience.";
 
