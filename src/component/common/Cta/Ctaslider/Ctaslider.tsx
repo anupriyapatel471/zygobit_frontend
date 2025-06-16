@@ -41,6 +41,48 @@ const reviews = [
     body: "I'm at a loss for words. This is amazing. I love it.",
     img: "/images/figma.svg",
   },
+  {
+    name: "John",
+    username: "@john",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "/images/html_cta.svg",
+  },
+  {
+    name: "John",
+    username: "@john",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "/images/js_cta.svg",
+  },
+  {
+    name: "John",
+    username: "@john",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "/images/flutter_cta.svg",
+  },
+  {
+    name: "John",
+    username: "@john",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "/images/java_cta.svg",
+  },
+  {
+    name: "John",
+    username: "@john",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "/images/go_cta.svg",
+  },
+  {
+    name: "John",
+    username: "@john",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "/images/css3_cta.svg",
+  },
+  {
+    name: "John",
+    username: "@john",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "/images/nextjs_cta.svg",
+  },
 ];
 
 const firstRow = reviews.slice(0, reviews.length / 2);
