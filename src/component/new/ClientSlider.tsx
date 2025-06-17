@@ -1,6 +1,5 @@
 "use client";
 import * as React from "react";
-
 import { CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -27,7 +26,6 @@ const testimonials = [
     videosrc:
       "https://zygobit.com/wp-content/uploads/2025/01/zygobit-r_1-1.mp4",
   },
-
   {
     quote:
       "Zygobit’s team delivered a highly effective solution for our app. They ensured a user-friendly interface and smooth functionality, helping us meet our business goals in no time.",
@@ -35,7 +33,6 @@ const testimonials = [
     designation: "ABBSI",
     src: "/images/abbsi_admin.png",
     videosrc: "",
-    // videosrc: "/videos/SampleVideo.mp4",
   },
   {
     quote: "",
@@ -51,7 +48,6 @@ const testimonials = [
     name: "ellered",
     designation: "OPSY",
     src: "/images/opsy_admin.png",
-    // videosrc: "/videos/SampleVideo.mp4",
   },
   {
     quote:
@@ -59,7 +55,6 @@ const testimonials = [
     name: "Mark",
     designation: "Inspired Meadows",
     src: "/images/inspired_admin.jpeg",
-    // videosrc: "/videos/SampleVideo.mp4",
   },
   {
     quote:
@@ -67,13 +62,25 @@ const testimonials = [
     name: "Alan",
     designation: "TIA",
     src: "/images/tia_admin.png",
-    // videosrc: "/videos/SampleVideo.mp4",
   },
 ];
 
 export function ClientSlider() {
   const videoRefs = React.useRef<HTMLVideoElement[]>([]);
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
+  const [loadingVideos, setLoadingVideos] = React.useState<{
+    [key: number]: boolean;
+  }>({});
+
+  React.useEffect(() => {
+    const initialLoadingState: { [key: number]: boolean } = {};
+    testimonials.forEach((testimonial, index) => {
+      if (testimonial.videosrc) {
+        initialLoadingState[index] = true;
+      }
+    });
+    setLoadingVideos(initialLoadingState);
+  }, []);
 
   return (
     <Carousel className="w-full max-w-full">
@@ -84,56 +91,67 @@ export function ClientSlider() {
             className="pl-1 md:basis-[48%] lg:basis-[382px]"
           >
             <div
-              className="border-[6px] border-[#FFFFFF38] relative bg-[#FEF8FF36] backdrop-blur-2xl h-[400px] lg:h-[555px] rounded-3xl p-4"
+              className="border-[6px] border-[#FFFFFF38] relative bg-[#FEF8FF36] backdrop-blur-2xl h-[400px] lg:h-[555px] rounded-3xl p-4 overflow-hidden"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {!data.videosrc && (
-                <div
-                  className="w-full h-full absolute top-0 
-               left-0 -z-10"
-                >
+                <div className="w-full h-full absolute top-0 left-0 -z-10">
                   <Image
                     className="p-8"
                     fill
                     src="/images/client_bg_img.svg"
                     alt="icon"
-                  />{" "}
+                  />
                 </div>
               )}
+
               {data.videosrc && (
-                <video
-                  width="600"
-                  height="500"
-                  className="absolute rounded-3xl  top-0 left-0 z-10 w-full h-full object-contain"
-                  loop
-                  playsInline
-                  ref={(el) => {
-                    if (el) videoRefs.current[index] = el;
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.play();
-                    setHoveredIndex(index);
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.pause();
-                    setHoveredIndex(null);
-                  }}
-                >
-                  <source src={data.videosrc} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                <div className="relative w-full h-full">
+                  {loadingVideos[index] && (
+                    <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/40 rounded-3xl">
+                      <div className="w-10 h-10 border-4 border-white border-t-transparent animate-spin rounded-full" />
+                    </div>
+                  )}
+                  <video
+                    width="600"
+                    height="500"
+                    className="absolute rounded-3xl top-0 left-0 z-10 w-full h-full object-contain"
+                    loop
+                    playsInline
+                    ref={(el) => {
+                      if (el) videoRefs.current[index] = el;
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.play();
+                      setHoveredIndex(index);
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.pause();
+                      setHoveredIndex(null);
+                    }}
+                    onLoadedData={() => {
+                      setLoadingVideos((prev) => ({
+                        ...prev,
+                        [index]: false,
+                      }));
+                    }}
+                  >
+                    <source src={data.videosrc} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               )}
-              <CardContent className="flex  items-center justify-center p-0">
+
+              <CardContent className="flex items-center justify-center p-0">
                 <div className="w-full">
                   {!data.videosrc && (
                     <p className="text-sm sm:text-base text-white">
                       {data.quote}
                     </p>
                   )}
-                  {/* {data.videosrc && hoveredIndex !== index && ( */}
                   {(data.videosrc ? hoveredIndex !== index : true) && (
-                    <div className="flex gap-1.5 max-w-[90%] mx-auto  w-full p-5 items-center absolute bottom-5 left-1/2 -translate-x-1/2 border border-[#F2F2F71A] bg-black/40 rounded-2xl">
+                    <div className="z-20 flex gap-1.5 max-w-[90%] mx-auto w-full p-5 items-center absolute bottom-5 left-1/2 -translate-x-1/2 border border-[#F2F2F71A] bg-black/40 rounded-2xl">
                       <div className="w-14 h-14 border-[3px] border-[#FF4D00] overflow-hidden rounded-full relative">
                         <Image
                           fill
@@ -156,8 +174,8 @@ export function ClientSlider() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="w-10 h-10  lg:h-11 lg:w-11 2xl:h-[52px] 2xl:w-[52px] -bottom-20 sm:-bottom-24 sm:top-auto lg:top-1/2 sm:right-20 sm:left-auto lg:-left-[65px] 2xl:-left-[90px]" />
-      <CarouselNext className="w-10 h-10  lg:h-11 lg:w-11 2xl:h-[52px] 2xl:w-[52px] -bottom-20 sm:-bottom-24 sm:top-auto sm:right-2 lg:top-1/2 lg:-right-[65px] 2xl:-right-[90px]" />
+      <CarouselPrevious className="w-10 h-10 lg:h-11 lg:w-11 2xl:h-[52px] 2xl:w-[52px] -bottom-20 sm:-bottom-24 sm:top-auto lg:top-1/2 sm:right-20 sm:left-auto lg:-left-[65px] 2xl:-left-[90px]" />
+      <CarouselNext className="w-10 h-10 lg:h-11 lg:w-11 2xl:h-[52px] 2xl:w-[52px] -bottom-20 sm:-bottom-24 sm:top-auto sm:right-2 lg:top-1/2 lg:-right-[65px] 2xl:-right-[90px]" />
     </Carousel>
   );
 }
