@@ -19,6 +19,7 @@ const testimonials = [
     src: "/images/clientOne.png",
     videosrc: "/videos/alan_review.mp4",
   },
+
   {
     quote: "",
     name: "Daniel",
