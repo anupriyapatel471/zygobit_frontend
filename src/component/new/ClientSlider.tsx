@@ -17,7 +17,8 @@ const testimonials = [
     name: "Alan",
     designation: "Total Wireless Tracker",
     src: "/images/clientOne.png",
-    videosrc: "/videos/alan_review.mp4",
+    videosrc:
+      "https://zygobit-images.s3.ap-south-1.amazonaws.com/Review+videos/alan_review.mp4",
   },
 
   {
@@ -25,7 +26,8 @@ const testimonials = [
     name: "Daniel",
     designation: "TrackDay Hub",
     src: "/images/clientTwo.png",
-    videosrc: "/videos/daniel.mp4",
+    videosrc:
+      "https://zygobit-images.s3.ap-south-1.amazonaws.com/Review+videos/daniel.mp4",
   },
   {
     quote:
@@ -40,7 +42,8 @@ const testimonials = [
     name: "David Hakki",
     designation: "Ascent Above and ClaimEase",
     src: "/images/clientThree.png",
-    videosrc: "/videos/david.mp4",
+    videosrc:
+      "https://zygobit-images.s3.ap-south-1.amazonaws.com/Review+videos/david.mp4",
   },
   {
     quote:
