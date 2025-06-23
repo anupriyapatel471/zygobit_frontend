@@ -1,5 +1,3 @@
-import LazyImage from "../common/LazyImage";
-
 /* eslint-disable @next/next/no-img-element */
 const reasons = [
   {
@@ -22,7 +20,6 @@ const reasons = [
   },
 ];
 const WhyChooseUs = () => {
-  const whyChooseImg = "/images/why_choose_us.png"
   return (
     <section data-aos="fade-up" className="w-full mb-0 sm:mb-20">
       <div className="container remove-bg">
@@ -36,16 +33,11 @@ const WhyChooseUs = () => {
           </p>
         </div>
         <div className="w-full flex flex-wrap lg:flex-nowrap gap-5 lg:gap-10 items-center">
-          <div className="w-full relative h-[450px] lg:h-[560px] lg:w-2/5">
-            {/* <img
+          <div className="w-full lg:w-2/5">
+            <img
               className="w-full max-h-[450px] lg:max-h-[560px] rounded-xl object-cover"
               src="/images/why_choose_us.png"
               alt="image"
-            /> */}
-            <LazyImage
-              src={whyChooseImg}
-              className="w-full h-full rounded-xl object-cover"
-              alt="Image"
             />
           </div>
           <div className="w-full lg:w-3/5">

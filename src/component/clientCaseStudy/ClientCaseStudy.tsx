@@ -316,10 +316,10 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
               />
             </div>
 
-            <div className="w-full mt-8 lg:mt-14 grid grid-cols-2 sm:grid-cols-3 sm:flex  xl:grid-cols-6 justify-center items-center gap-y-10 sm:gap-y-0  gap-5 sm:gap-10 lg:gap-14">
+            <div className="w-full mt-8 lg:mt-14 grid grid-cols-2 sm:grid-cols-3 sm:flex xl:grid-cols-6 justify-center items-center gap-y-10 sm:gap-y-0  gap-5 sm:gap-10 lg:gap-14 sm:flex-wrap sm:justify-center">
               {projectData?.technologyImages.map((data, index) => (
                 <div key={index} className="flex flex-col gap-2 sm:gap-5">
-                  <div className="w-full mx-auto sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
+                  <div className="w-full mx-auto sm:w-32 h-32 lg:w-36 lg:h-36 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
                     <Image
                       src={data.ImageUrl}
                       alt="Technology"

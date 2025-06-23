@@ -128,7 +128,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             ))}
           </div>
         </div>
-        <div className="flex justify-end gap-5 mr-0 sm:mr-0 lg:mr-0 mt-5 lg:mt-9 lg:px-5 ">
+        <div className="flex justify-end gap-5 mr-0 sm:mr-0 lg:mr-[7rem] 2xl:mr-[12rem] mt-5 lg:mt-9 lg:px-5 ">
           <button
             className="relative z-40 w-10 h-10 sm:h-12 sm:w-12 rounded-full bg-transparent border border-orange-600 flex items-center justify-center disabled:opacity-50"
             onClick={scrollLeft}
@@ -153,7 +153,7 @@ export const Card = ({
   card,
   index,
   layout = false,
-  appleClass
+  appleClass,
 }: {
   card: Card;
   index: number;
@@ -241,11 +241,16 @@ export const Card = ({
         className="rounded-2xl bg-white bg-opacity-5  w-[18rem]  md:w-80 xl:w-[330px] overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
         <div className="absolute hidden h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
-        <div className={`w-full relative rounded-2xl z-40 p-4 2xl:p-5 border border-[#C4C4C4] bg-white/5 text-left ${appleClass ?? "h-[275px]" } sm:h-auto lg:h-[300px] 2xl:h-[349px] cursor-default`}>
-         {card.icon.length > 0 &&  <div className="relative -left-6">
-            <img src={card.icon} alt="card icon" />
-          </div>
-          }
+        <div
+          className={`w-full relative rounded-2xl z-40 p-4 2xl:p-5 border border-[#C4C4C4] bg-white/5 text-left ${
+            appleClass ?? "h-[275px]"
+          } sm:h-auto lg:h-[300px] 2xl:h-[349px] cursor-default`}
+        >
+          {card.icon.length > 0 && (
+            <div className="relative -left-6">
+              <img src={card.icon} alt="card icon" />
+            </div>
+          )}
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
             className="font-semibold relative z-[1111] text-base sm:text-lg cursor-text tracking-tighter text-black"
