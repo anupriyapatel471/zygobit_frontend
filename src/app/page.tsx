@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const homePageJsonLd: WithContext<WebPage> = {
+const homePageJsonLd: WithContext<WebPage> = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: "Zygobit | Web & Mobile App Development Experts",
