@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "About us",
     description: "Zygobit Website About Us Page",
     images: ["/images/Logo.jpg"],
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/about-us",
+    url: "https://www.zygobit.com/about-us",
   },
   twitter: {
     title: "About us",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     creator: "Teqexpert",
   },
   alternates: {
-    canonical: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/about-us",
+    canonical: "https://www.zygobit.com/about-us",
   },
 };
 

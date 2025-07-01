@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: "Zygobit Website Blog Page",
     images: ["/images/Logo.jpg"],
 
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/blogs",
+    url: "https://www.zygobit.com/blogs",
   },
   twitter: {
     title: "Blog",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     creator: "Teqexpert",
   },
   alternates: {
-    canonical: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/blogs",
+    canonical: "https://www.zygobit.com/blogs",
   },
 };
 

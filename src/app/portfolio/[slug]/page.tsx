@@ -41,7 +41,7 @@ export async function generateMetadata({
       title: project?.title || "Zygobit Featured Projects",
       description: project?.description || "Zygobit Featured Projects",
       images: project?.image || "/images/Logo.jpg",
-      url: `https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/portfolio/${params.slug}`,
+      url: `https://www.zygobit.com/portfolio/${params.slug}`,
     },
     twitter: {
       title: project?.title || "Zygobit Featured Projects",

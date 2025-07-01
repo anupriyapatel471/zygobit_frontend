@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Contact",
     description: "Zygobit Website Contact Page",
     images: ["/images/Logo.jpg"],
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/contact",
+    url: "https://www.zygobit.com/contact",
   },
   twitter: {
     title: "Contact",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     creator: "Teqexpert",
   },
   alternates: {
-    canonical: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/contact",
+    canonical: "https://www.zygobit.com/contact",
   },
 };
 

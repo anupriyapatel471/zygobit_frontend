@@ -58,7 +58,7 @@ export async function generateMetadata({
       title,
       description,
       images: blog?.image,
-      url: `https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/blog/${params.slug}`,
+      url: `https://www.zygobit.com/blog/${params.slug}`,
     },
     twitter: {
       title,

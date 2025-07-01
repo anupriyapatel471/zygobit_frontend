@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "Mobile App Development",
     description: "Zygobit Website Mobile App Development Page",
     images: ["/images/Logo.jpg"],
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/mobile-app-development",
+    url: "https://www.zygobit.com/services/mobile-app-development",
   },
   twitter: {
     title: "Mobile App Development",
@@ -71,8 +71,7 @@ export const metadata: Metadata = {
     creator: "Teqexpert",
   },
   alternates: {
-    canonical:
-      "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/mobile-app-development",
+    canonical: "https://www.zygobit.com/services/mobile-app-development",
   },
 };
 

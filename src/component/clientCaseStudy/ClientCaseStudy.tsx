@@ -360,7 +360,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
             <div className="w-[200px] h-[200px] bg-[#FFE5DD] rounded-full absolute -bottom-12  left-1/2"></div>
             <div className="w-full lg:w-1/2 relative z-10 lg:static">
               <h3 className=" font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl mb-3 sm:mb-5">
-                Mobile App
+                {projectData?.category}
               </h3>
               <ul className="list-decimal sm:font-bold text-sm space-y-4 pl-3.5 sm:pl-5">
                 {projectData?.features &&

@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     title: "Web Development",
     description: "Zygobit Website Web Development Page",
     type: "website",
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/web-app-development",
+    url: "https://www.zygobit.com/services/web-app-development",
     images: [
       {
         url: "/images/Logo.jpg",
@@ -92,8 +92,7 @@ export const metadata: Metadata = {
     images: ["/images/Logo.jpg"],
   },
   alternates: {
-    canonical:
-      "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/web-app-development",
+    canonical: "https://www.zygobit.com/services/web-app-development",
   },
 };
 
@@ -133,7 +132,10 @@ const WebAppDevelopment = () => {
             </div>
             <div className="w-full lg:w-[60%] lg:absolute lg:-right-12 2xl:-right-16">
               <div className="w-full">
-                <AppleCardsCarousel appleClass={"h-[180px]"} data={appleCardsData} />
+                <AppleCardsCarousel
+                  appleClass={"h-[180px]"}
+                  data={appleCardsData}
+                />
               </div>
             </div>
           </div>

@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Machine Learning AI",
     description: "Zygobit Website Machine Learning AI Page",
     images: ["/images/Logo.jpg"],
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/machine-learning-ai",
+    url: "https://www.zygobit.com/services/machine-learning-ai",
   },
   twitter: {
     title: "Machine Learning AI",
@@ -67,8 +67,7 @@ export const metadata: Metadata = {
     creator: "Teqexpert",
   },
   alternates: {
-    canonical:
-      "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/machine-learning-ai",
+    canonical: "https://www.zygobit.com/services/machine-learning-ai",
   },
 };
 
@@ -119,7 +118,10 @@ const MachineLearning = () => {
               </div>
               <div className="w-full lg:w-[60%] lg:absolute lg:-right-12 2xl:-right-16">
                 <div className="w-full">
-                  <AppleCardsCarousel appleClass={"h-[215px]"} data={appleCardsData} />
+                  <AppleCardsCarousel
+                    appleClass={"h-[215px]"}
+                    data={appleCardsData}
+                  />
                 </div>
               </div>
             </div>

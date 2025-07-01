@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '*',
       disallow: '/private/',
     },
-    sitemap: 'https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/sitemap.xml',
+    sitemap: 'https://www.zygobit.com/sitemap.xml',
   }
 }

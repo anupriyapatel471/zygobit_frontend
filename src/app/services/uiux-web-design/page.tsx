@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: "UI UX Design",
     description: "Zygobit Website Uiux Web Design Page",
     images: ["/images/Logo.jpg"],
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/uiux-web-design",
+    url: "https://www.zygobit.com/services/uiux-web-design",
   },
   twitter: {
     title: "UI UX Design",
@@ -63,8 +63,7 @@ export const metadata: Metadata = {
     creator: "Teqexpert",
   },
   alternates: {
-    canonical:
-      "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/uiux-web-design",
+    canonical: "https://www.zygobit.com/services/uiux-web-design",
   },
 };
 const UiuxWebDesign = () => {
