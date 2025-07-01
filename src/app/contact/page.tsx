@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const contactPageJsonLd: WithContext<ContactPage> = {
+const contactPageJsonLd: WithContext<ContactPage> = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   name: "Contact Zygobit",
