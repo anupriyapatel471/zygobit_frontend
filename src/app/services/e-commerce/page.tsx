@@ -50,13 +50,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ecommerce",
     description: "Zygobit Website Ecommerce Page",
-    images: ["/images/Logo.jpg"],
+    images: ["/images/Logo.png"],
     url: "https://www.zygobit.com/services/ecommerce",
   },
   twitter: {
     title: "Ecommerce",
     description: "Zygobit Website Ecommerce Page",
-    images: ["/images/Logo.jpg"],
+    images: ["/images/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },

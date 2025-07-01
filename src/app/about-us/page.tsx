@@ -23,22 +23,49 @@ const ContactForm = dynamic(
 const ClientSays = dynamic(
   () => import("@/component/common/ClientSays/ClientSays")
 );
+import { WebPage, WithContext } from "schema-dts";
+
+const aboutPageJsonLd: WithContext<WebPage> = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "About Zygobit",
+  url: "https://www.zygobit.com/about-us",
+  description:
+    "Discover Zygobit – a cutting-edge software development company offering web and mobile app development, UI/UX design, and AI-driven solutions.",
+  about: {
+    "@type": "Organization",
+    name: "Zygobit",
+    url: "https://www.zygobit.com",
+    logo: "https://www.zygobit.com/images/Logo.png",
+    // contactPoint: {
+    //   "@type": "ContactPoint",
+    //   telephone: "+91-1234567890",
+    //   contactType: "Customer Support",
+    //   areaServed: "IN",
+    //   availableLanguage: ["English", "Hindi"],
+    // },
+    sameAs: ["https://www.facebook.com/zygobit"],
+  },
+};
 
 export const metadata: Metadata = {
-  title: "About us",
-  description: "Zygobit Website About Us Page",
+  title: "About Zygobit | Web & Mobile App Development Experts",
+  description:
+    "Discover Zygobit – a cutting-edge software development company offering web and mobile app development, UI/UX design, and AI-driven solutions.",
   keywords:
-    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "Zygobit, About Zygobit, Web Development Company, Mobile App Development, UI/UX Design, AI Solutions, Custom Software Development, Tech Company India",
   openGraph: {
-    title: "About us",
-    description: "Zygobit Website About Us Page",
-    images: ["/images/Logo.jpg"],
+    title: "About Zygobit | Web & Mobile App Development Experts",
+    description:
+      "Learn more about Zygobit – experts in custom web apps, mobile development, and digital transformation solutions.",
+    images: ["/images/Logo.png"],
     url: "https://www.zygobit.com/about-us",
   },
   twitter: {
-    title: "About us",
-    description: "Zygobit Website About Us Page",
-    images: ["/images/Logo.jpg"],
+    title: "About Zygobit | Web & Mobile App Development Experts",
+    description:
+      "Get to know Zygobit – your trusted partner for innovative and scalable digital solutions.",
+    images: ["/images/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },
@@ -63,6 +90,12 @@ const About = () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aboutPageJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <AOSInitializer />
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />

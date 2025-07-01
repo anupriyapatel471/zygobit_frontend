@@ -52,13 +52,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "UI UX Design",
     description: "Zygobit Website Uiux Web Design Page",
-    images: ["/images/Logo.jpg"],
+    images: ["/images/Logo.png"],
     url: "https://www.zygobit.com/services/uiux-web-design",
   },
   twitter: {
     title: "UI UX Design",
     description: "Zygobit Website Uiux Web Design Page",
-    images: ["/images/Logo.jpg"],
+    images: ["/images/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },

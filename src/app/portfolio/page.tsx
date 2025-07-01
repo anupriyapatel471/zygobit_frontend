@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Portfolio",
     description: "Zygobit Website Portfolio Page",
-    images: ["/images/Logo.jpg"],
+    images: ["/images/Logo.png"],
     url: "https://www.zygobit.com/portfolio",
   },
   twitter: {
     title: "Portfolio",
     description: "Zygobit Website Ecommerce Page",
-    images: ["/images/Logo.jpg"],
+    images: ["/images/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },

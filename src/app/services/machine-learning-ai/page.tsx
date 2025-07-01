@@ -56,13 +56,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Machine Learning AI",
     description: "Zygobit Website Machine Learning AI Page",
-    images: ["/images/Logo.jpg"],
+    images: ["/images/Logo.png"],
     url: "https://www.zygobit.com/services/machine-learning-ai",
   },
   twitter: {
     title: "Machine Learning AI",
     description: "Zygobit Website Machine Learning AI Page",
-    images: ["/images/Logo.jpg"],
+    images: ["/images/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },

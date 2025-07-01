@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     url: "https://www.zygobit.com/services/blockchain",
     images: [
       {
-        url: "/images/Logo.jpg",
+        url: "/images/Logo.png",
         width: 1200,
         height: 630,
         alt: "Zygobit Web Development",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     description: "Zygobit Website Web Development Page",
     card: "summary_large_image",
     creator: "@Zygobit",
-    images: ["/images/Logo.jpg"],
+    images: ["/images/Logo.png"],
   },
   alternates: {
     canonical: "https://www.zygobit.com/services/blockchain",

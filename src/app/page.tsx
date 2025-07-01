@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "Home | Zygobit - Web & Mobile App Development, UI/UX, AI Solutions",
     description:
       "Explore Zygobit's full-service digital solutions—from custom web and mobile apps to intuitive UI/UX design and intelligent AI tools. Build smarter today.",
-    images: ["/images/Logo.jpg"],
+    images: ["/images/Logo.png"],
     url: "https://www.zygobit.com/",
     type: "website",
   },
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: "Home | Zygobit - Expert Web, Mobile & AI Solutions",
     description:
       "Web and mobile development, UI/UX design, and AI solutions tailored to grow your business. Discover Zygobit’s custom technology services.",
-    images: ["/images/Logo.jpg"],
+    images: ["/images/Logo.png"],
     card: "summary_large_image",
   },
   alternates: {

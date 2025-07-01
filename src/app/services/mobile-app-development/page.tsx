@@ -60,13 +60,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mobile App Development",
     description: "Zygobit Website Mobile App Development Page",
-    images: ["/images/Logo.jpg"],
+    images: ["/images/Logo.png"],
     url: "https://www.zygobit.com/services/mobile-app-development",
   },
   twitter: {
     title: "Mobile App Development",
     description: "Zygobit Website Mobile App Development Page",
-    images: ["/images/Logo.jpg"],
+    images: ["/images/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
   },

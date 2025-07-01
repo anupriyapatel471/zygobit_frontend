@@ -15,7 +15,7 @@ Amplify.configure(outputs);
 const DEFAULT_META = {
   title: "Zygobit Blog",
   description: "Zygobit Blog",
-  images: ["/images/Logo.jpg"],
+  images: ["/images/Logo.png"],
   creator: "Teqexpert",
 };
 
