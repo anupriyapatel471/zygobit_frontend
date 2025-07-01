@@ -3,21 +3,25 @@ import AOSInitializer from "@/component/common/AOSInitializer";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { WithContext, ContactPage } from "schema-dts";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Zygobit Website Contact Page",
+  title: "Contact Zygobit | Software, Web & App Development Company",
+  description:
+    "Get in touch with Zygobit for custom software, web, and mobile app development. Reach out to our experts for your digital transformation needs.",
   keywords:
-    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "Contact Zygobit, Software Development, Web App Development, Mobile App Development, IT Solutions, Custom Software Company, Zygobit Contact Page",
   openGraph: {
-    title: "Contact",
-    description: "Zygobit Website Contact Page",
+    title: "Contact Zygobit | Software, Web & App Development Company",
+    description:
+      "Connect with Zygobit for expert web, mobile, and AI-powered software development services tailored to your business goals.",
     images: ["/images/Logo.png"],
     url: "https://www.zygobit.com/contact",
   },
   twitter: {
-    title: "Contact",
-    description: "Zygobit Website Contact Page",
+    title: "Contact Zygobit | Software, Web & App Development Company",
+    description:
+      "Reach out to Zygobit – your trusted partner for custom software and innovative digital solutions.",
     images: ["/images/Logo.png"],
     card: "summary_large_image",
     creator: "Teqexpert",
@@ -25,6 +29,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.zygobit.com/contact",
   },
+};
+
+export const contactPageJsonLd: WithContext<ContactPage> = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Contact Zygobit",
+  url: "https://www.zygobit.com/contact",
+  description:
+    "Get in touch with Zygobit for expert software, mobile, and AI development services.",
 };
 
 const Contact = () => {
@@ -57,6 +70,13 @@ const Contact = () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(contactPageJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+
       <AOSInitializer />
 
       <div className="w-full mt-24">

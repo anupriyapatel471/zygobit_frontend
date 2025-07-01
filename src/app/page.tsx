@@ -34,6 +34,7 @@ import { Metadata } from "next";
 import WhyChooseUs from "@/component/new/WhyChooseUs";
 import AboutCta from "@/component/new/AboutCta";
 import CtaSecond from "@/component/new/CtaSecond";
+import { WebPage, WithContext } from "schema-dts";
 
 export interface project {
   projectInfo: ReactNode;
@@ -72,6 +73,15 @@ export const metadata: Metadata = {
   },
 };
 
+export const homePageJsonLd: WithContext<WebPage> = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Zygobit | Web & Mobile App Development Experts",
+  url: "https://www.zygobit.com",
+  description:
+    "Partner with Zygobit for web and mobile app development, UI/UX design, and AI-driven solutions. Scalable, custom tech to grow your business.",
+};
+
 const Home = async () => {
   const clientHeading = "Let’s Hear What Our Clients Say";
   // const clientSaysDetails =
@@ -82,6 +92,12 @@ const Home = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homePageJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <AOSInitializer />
 
       <HomeBanner />

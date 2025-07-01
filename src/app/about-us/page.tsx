@@ -25,29 +25,6 @@ const ClientSays = dynamic(
 );
 import { WebPage, WithContext } from "schema-dts";
 
-const aboutPageJsonLd: WithContext<WebPage> = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "About Zygobit",
-  url: "https://www.zygobit.com/about-us",
-  description:
-    "Discover Zygobit – a cutting-edge software development company offering web and mobile app development, UI/UX design, and AI-driven solutions.",
-  about: {
-    "@type": "Organization",
-    name: "Zygobit",
-    url: "https://www.zygobit.com",
-    logo: "https://www.zygobit.com/images/Logo.png",
-    // contactPoint: {
-    //   "@type": "ContactPoint",
-    //   telephone: "+91-1234567890",
-    //   contactType: "Customer Support",
-    //   areaServed: "IN",
-    //   availableLanguage: ["English", "Hindi"],
-    // },
-    sameAs: ["https://www.facebook.com/zygobit"],
-  },
-};
-
 export const metadata: Metadata = {
   title: "About Zygobit | Web & Mobile App Development Experts",
   description:
@@ -72,6 +49,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.zygobit.com/about-us",
   },
+};
+
+const aboutPageJsonLd: WithContext<WebPage> = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "About Zygobit",
+  url: "https://www.zygobit.com/about-us",
+  description:
+    "Discover Zygobit – a cutting-edge software development company offering web and mobile app development, UI/UX design, and AI-driven solutions.",
 };
 
 const About = () => {
