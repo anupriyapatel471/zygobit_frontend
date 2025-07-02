@@ -72,9 +72,22 @@ export async function generateMetadata({
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const blog = await fetchBlogBySlug(params.slug);
-
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    name: blog?.title,
+    url: `https://www.zygobit.com/blogs/${params.slug}`,
+    image: blog?.image,
+    description: blog?.description,
+  };
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <AOSInitializer />
       <TracingBeams blog={blog} />
       <ContactForm />

@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
 import { Input } from "../../components/ui/input";
@@ -40,7 +41,7 @@ const client = generateClient();
 const ConnectForm = () => {
   useAmplifyConfig();
   const pathname = usePathname();
-  const isContactPage = pathname === "/contact";
+  const isContactPage = pathname === "/contact" || pathname === "/blogs";
 
   const [loading, setLoading] = useState(false);
 

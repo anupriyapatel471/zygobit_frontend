@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import ConnectForm from "@/component/common/ConnectForm";
 import Image from "next/image";

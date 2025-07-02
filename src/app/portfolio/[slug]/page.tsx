@@ -55,7 +55,24 @@ export async function generateMetadata({
 
 const CaseStudyPage = async ({ params }: { params: { slug: string } }) => {
   const project = await fetchFeaturedProjects(params.slug);
-  return <ClientCaseStudy projectData={project} />;
+  const portfolioJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project?.title,
+    description: project?.description,
+    url: `https://www.zygobit.com/portfolio/${params.slug}`,
+  };
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(portfolioJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      <ClientCaseStudy projectData={project} />;
+    </>
+  );
 };
 
 export default CaseStudyPage;
