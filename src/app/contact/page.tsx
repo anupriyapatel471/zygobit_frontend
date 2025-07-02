@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       "Reach out to Zygobit – your trusted partner for custom software and innovative digital solutions.",
     images: ["/images/Logo.png"],
     card: "summary_large_image",
-    creator: "Teqexpert",
+    creator: "Zygobit",
   },
   alternates: {
     canonical: "https://www.zygobit.com/contact",

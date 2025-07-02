@@ -55,7 +55,7 @@ import appleCardsData from "../../../utils/content/appleCardsCarousel/mobileAppA
 export const metadata: Metadata = {
   title: "Mobile App Development | Zygobit",
   description:
-    "Zygobit offers custom mobile app development services for iOS and Android. Build scalable, secure, and high-performing mobile applications tailored to your business needs.",
+    "Get custom mobile app development for iOS & Android. Zygobit builds secure, scalable, high-performance apps tailored to your business goals.",
   keywords:
     "Mobile App Development, iOS App Development, Android App Development, Custom App Development, Cross-Platform App, React Native, Flutter, App Development Company, Zygobit",
   openGraph: {
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
       "Get end-to-end custom mobile app development services with Zygobit. Expert solutions for startups and enterprises.",
     images: ["/images/Logo.png"],
     card: "summary_large_image",
-    creator: "Teqexpert",
+    creator: "Zygobit",
   },
   alternates: {
     canonical: "https://www.zygobit.com/services/mobile-app-development",

@@ -16,7 +16,7 @@ const DEFAULT_META = {
   title: "Zygobit Blog",
   description: "Zygobit Blog",
   images: ["/images/Logo.png"],
-  creator: "Teqexpert",
+  creator: "Zygobit",
 };
 
 async function fetchBlogBySlug(slug: string) {
@@ -58,7 +58,7 @@ export async function generateMetadata({
       title,
       description,
       images: blog?.image,
-      url: `https://www.zygobit.com/blog/${params.slug}`,
+      url: `https://www.zygobit.com/blogs/${params.slug}`,
     },
     twitter: {
       title,
@@ -67,11 +67,15 @@ export async function generateMetadata({
       card: "summary_large_image",
       creator: DEFAULT_META.creator,
     },
+    alternates: {
+      canonical: `https://www.zygobit.com/blog/${params.slug}`,
+    },
   };
 }
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const blog = await fetchBlogBySlug(params.slug);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

@@ -138,12 +138,12 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     />
                   </div>
                 )}
-                <h2
+                <h1
                   className="font-bold text-3xl sm:text-[35px] lg:text-[45px] w-full lg:w-fit sm:w-fit lg:whitespace-nowrap mt-4 sm:mt-0 "
                   style={{ color: projectData?.testColor }}
                 >
                   {projectData?.projectName}
-                </h2>
+                </h1>
               </div>
               <p
                 className="text-sm sm:text-base slg:text-lg"

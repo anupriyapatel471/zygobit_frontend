@@ -47,7 +47,8 @@ import deliveringTailoredData from "../../../utils/content/deliveringTailored/ta
 export const metadata: Metadata = {
   title: "UI/UX Design Services | Zygobit",
   description:
-    "Enhance user experience with Zygobit's custom UI/UX design services. We design intuitive, visually appealing, and conversion-focused interfaces for web and mobile apps.",
+    "Enhance user experience with Zygobit's custom UI/UX design services. We craft intuitive, beautiful, and conversion-focused interfaces for web and mobile.",
+
   keywords:
     "UI UX Design Services, User Experience Design, User Interface Design, Web UI Design, Mobile UX Design, Zygobit, App Design, UX Research, UI Strategy, UX Consulting",
   openGraph: {

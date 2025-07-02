@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       "Follow the Zygobit blog for insights into custom software, AI solutions, and web/mobile development best practices.",
     images: ["/images/Logo.png"],
     card: "summary_large_image",
-    creator: "Teqexpert",
+    creator: "Zygobit",
   },
   alternates: {
     canonical: "https://www.zygobit.com/blogs",

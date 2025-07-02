@@ -49,7 +49,7 @@ import deliveringTailoredData from "../../../utils/content/deliveringTailored/ta
 export const metadata: Metadata = {
   title: "Blockchain Development | Zygobit",
   description:
-    "Zygobit provides secure and scalable blockchain solutions tailored to your business needs. Build trust, improve transparency, and unlock innovation with our expert development services.",
+    "Zygobit offers secure, scalable blockchain development services. Build smart contracts, DApps, and custom blockchain solutions tailored to your business.",
   keywords:
     "Blockchain Development, Smart Contracts, Decentralized Apps, Web3 Development, Custom Blockchain Solutions, Zygobit Blockchain, Crypto App Development, Blockchain Integration, Enterprise Blockchain",
   openGraph: {
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
 const blockchainJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Blockchain Development Services",
+  name: "Blockchain Development ",
   url: "https://www.zygobit.com/services/blockchain",
   description:
     "Zygobit delivers secure, scalable blockchain solutions for startups and enterprises. Our expert team builds smart contracts, DApps, and blockchain platforms tailored to business goals.",

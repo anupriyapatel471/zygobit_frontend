@@ -45,7 +45,7 @@ import WebSliderSecond from "@/component/sevices/Common/WebSliderSecond/WebSlide
 export const metadata: Metadata = {
   title: "Ecommerce App Development | Zygobit",
   description:
-    "Zygobit offers tailored ecommerce development solutions to boost your online store. We build scalable, high-performance platforms with seamless UX and AI-powered features.",
+    "Zygobit builds custom ecommerce apps with AI-powered features, seamless UX, and scalable architecture to help your online store drive sales and growth.",
   keywords:
     "Ecommerce Development, Online Store Development, Ecommerce App, Zygobit Ecommerce, AI Ecommerce Solutions, Custom Ecommerce, Web Store, Mobile Commerce, Ecommerce UX Design",
   openGraph: {

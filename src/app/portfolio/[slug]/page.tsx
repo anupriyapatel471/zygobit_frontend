@@ -48,7 +48,10 @@ export async function generateMetadata({
       description: project?.description || "Zygobit Featured Projects",
       images: project?.image || "/images/Logo.png",
       card: "summary_large_image",
-      creator: "Teqexpert",
+      creator: "Zygobit",
+    },
+    alternates: {
+      canonical: `https://www.zygobit.com/portfolio/${params.slug}`,
     },
   };
 }
