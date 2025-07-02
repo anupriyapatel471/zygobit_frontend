@@ -49,26 +49,45 @@ import cards from "../../../utils/content/gridboxcardsdata/machineGrid.json";
 import appleCardsData from "../../../utils/content/appleCardsCarousel/aiMachineApple.json";
 
 export const metadata: Metadata = {
-  title: "Machine Learning AI",
-  description: "Zygobit Website Machine Learning AI Page",
+  title: "AI & Machine Learning Services | Zygobit",
+  description:
+    "Unlock the power of AI with Zygobit's machine learning development services. We build intelligent, scalable, and data-driven solutions for modern businesses.",
   keywords:
-    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "AI Development, Machine Learning Solutions, Artificial Intelligence, Data Science, Predictive Analytics, Zygobit AI, AI Software Development, Smart Applications, Automation, AI Services",
   openGraph: {
-    title: "Machine Learning AI",
-    description: "Zygobit Website Machine Learning AI Page",
-    images: ["/images/Logo.png"],
+    title: "AI & Machine Learning Services | Zygobit",
+    description:
+      "Discover Zygobit's AI and machine learning solutions that drive business innovation through intelligent automation and predictive technologies.",
     url: "https://www.zygobit.com/services/machine-learning-ai",
+    type: "website",
+    images: [
+      {
+        url: "https://www.zygobit.com/images/Logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Zygobit AI & Machine Learning",
+      },
+    ],
   },
   twitter: {
-    title: "Machine Learning AI",
-    description: "Zygobit Website Machine Learning AI Page",
-    images: ["/images/Logo.png"],
+    title: "AI & Machine Learning Services | Zygobit",
+    description:
+      "Transform your business with custom AI and ML solutions from Zygobit. Predict trends, automate workflows, and drive growth.",
     card: "summary_large_image",
-    creator: "Teqexpert",
+    creator: "@Zygobit",
+    images: ["https://www.zygobit.com/images/Logo.png"],
   },
   alternates: {
     canonical: "https://www.zygobit.com/services/machine-learning-ai",
   },
+};
+const machineLearningJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "AI & Machine Learning Services",
+  url: "https://www.zygobit.com/services/machine-learning-ai",
+  description:
+    "Unlock the power of AI with Zygobit's machine learning development services. We build intelligent, scalable, and data-driven solutions for modern businesses.",
 };
 
 const MachineLearning = () => {
@@ -86,6 +105,15 @@ const MachineLearning = () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(machineLearningJsonLd).replace(
+            /</g,
+            "\\u003c"
+          ),
+        }}
+      />
       <AOSInitializer />
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />

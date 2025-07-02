@@ -43,9 +43,9 @@ const BlogSection = () => {
                       <span className="block w-fit py-1 px-2 rounded-sm bg-gradient-to-b from-orange-600 to-orange-800 text-white font-medium text-[10px]">
                         {featuredBlog.category}
                       </span>
-                      <h3 className="font-bold text-base sm:text-xl mt-4">
+                      <h1 className="font-bold text-base sm:text-xl mt-4">
                         {featuredBlog.title}
-                      </h3>
+                      </h1>
                       <p className="text-sm sm:text-base my-3 sm:my-6">
                         {truncateText(featuredBlog.description, 100)}
                       </p>

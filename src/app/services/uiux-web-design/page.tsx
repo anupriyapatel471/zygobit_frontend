@@ -45,26 +45,46 @@ import appleCardsData from "../../../utils/content/appleCardsCarousel/uiUxApple.
 import deliveringTailoredData from "../../../utils/content/deliveringTailored/tailoredUiux.json";
 
 export const metadata: Metadata = {
-  title: "UI UX Design",
-  description: "Zygobit Website Uiux Web Design Page",
+  title: "UI/UX Design Services | Zygobit",
+  description:
+    "Enhance user experience with Zygobit's custom UI/UX design services. We design intuitive, visually appealing, and conversion-focused interfaces for web and mobile apps.",
   keywords:
-    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "UI UX Design Services, User Experience Design, User Interface Design, Web UI Design, Mobile UX Design, Zygobit, App Design, UX Research, UI Strategy, UX Consulting",
   openGraph: {
-    title: "UI UX Design",
-    description: "Zygobit Website Uiux Web Design Page",
-    images: ["/images/Logo.png"],
+    title: "UI/UX Design Services | Zygobit",
+    description:
+      "Boost engagement and conversions with expert UI/UX design by Zygobit. We create user-first digital experiences for web and mobile.",
     url: "https://www.zygobit.com/services/uiux-web-design",
+    type: "website",
+    images: [
+      {
+        url: "https://www.zygobit.com/images/Logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Zygobit UI/UX Design",
+      },
+    ],
   },
   twitter: {
-    title: "UI UX Design",
-    description: "Zygobit Website Uiux Web Design Page",
-    images: ["/images/Logo.png"],
+    title: "UI/UX Design Services | Zygobit",
+    description:
+      "Create intuitive and beautiful digital interfaces with Zygobit's UI/UX design services tailored to your business goals.",
     card: "summary_large_image",
-    creator: "Teqexpert",
+    creator: "@Zygobit",
+    images: ["https://www.zygobit.com/images/Logo.png"],
   },
   alternates: {
     canonical: "https://www.zygobit.com/services/uiux-web-design",
   },
+};
+
+const uiuxWebDesignJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "UI/UX Design Services",
+  url: "https://www.zygobit.com/services/uiux-web-design",
+  description:
+    "Zygobit's UI/UX design services create user-friendly and high-converting digital experiences. Our expert designers build intuitive, scalable, and visually engaging solutions for web and mobile.",
 };
 const UiuxWebDesign = () => {
   const GridBoxesHeading = " Why Zygobit for UI/UX Design ?";
@@ -89,6 +109,12 @@ const UiuxWebDesign = () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(uiuxWebDesignJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <AOSInitializer />
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
       <Suspense fallback={<Loader />}>

@@ -47,34 +47,45 @@ import blockChainStebTab from "../../../utils/content/stebTab/blockChainStebTab.
 import deliveringTailoredData from "../../../utils/content/deliveringTailored/tailoredBlockChain.json";
 
 export const metadata: Metadata = {
-  title: "Web Development",
-  description: "Zygobit Website Web Development Page",
+  title: "Blockchain Development | Zygobit",
+  description:
+    "Zygobit provides secure and scalable blockchain solutions tailored to your business needs. Build trust, improve transparency, and unlock innovation with our expert development services.",
   keywords:
-    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "Blockchain Development, Smart Contracts, Decentralized Apps, Web3 Development, Custom Blockchain Solutions, Zygobit Blockchain, Crypto App Development, Blockchain Integration, Enterprise Blockchain",
   openGraph: {
-    title: "Web Development",
-    description: "Zygobit Website Web Development Page",
+    title: "Blockchain Development | Zygobit",
+    description:
+      "Build secure and future-ready blockchain applications with Zygobit's custom development services. Scalable, transparent, and enterprise-grade solutions.",
     type: "website",
     url: "https://www.zygobit.com/services/blockchain",
     images: [
       {
-        url: "/images/Logo.png",
+        url: "https://www.zygobit.com/images/Logo.png",
         width: 1200,
         height: 630,
-        alt: "Zygobit Web Development",
+        alt: "Zygobit Blockchain Development",
       },
     ],
   },
   twitter: {
-    title: "Web Development",
-    description: "Zygobit Website Web Development Page",
+    title: "Blockchain Development | Zygobit",
+    description:
+      "Zygobit builds secure blockchain applications tailored to business needs. Boost transparency, security, and innovation with our expert services.",
     card: "summary_large_image",
     creator: "@Zygobit",
-    images: ["/images/Logo.png"],
+    images: ["https://www.zygobit.com/images/Logo.png"],
   },
   alternates: {
     canonical: "https://www.zygobit.com/services/blockchain",
   },
+};
+const blockchainJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Blockchain Development Services",
+  url: "https://www.zygobit.com/services/blockchain",
+  description:
+    "Zygobit delivers secure, scalable blockchain solutions for startups and enterprises. Our expert team builds smart contracts, DApps, and blockchain platforms tailored to business goals.",
 };
 
 const Blockchain = () => {
@@ -98,6 +109,12 @@ const Blockchain = () => {
     "Unlock your business’s full potential with our expert blockchain services. From ideation to deployment, we deliver secure, scalable, and future-ready solutions tailored to your needs.";
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(blockchainJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <AOSInitializer />
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />

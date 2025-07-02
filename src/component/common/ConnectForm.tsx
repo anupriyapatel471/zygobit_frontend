@@ -16,6 +16,7 @@ import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
 import { Textarea } from "@/components/ui/textarea";
+import { usePathname } from "next/navigation";
 
 type phoneNumber = {
   number: string;
@@ -38,6 +39,8 @@ const client = generateClient();
 
 const ConnectForm = () => {
   useAmplifyConfig();
+  const pathname = usePathname();
+  const isContactPage = pathname === "/contact";
 
   const [loading, setLoading] = useState(false);
 
@@ -168,9 +171,16 @@ const ConnectForm = () => {
   };
   return (
     <form onSubmit={handleSubmit} className="w-auto lg:px-0" noValidate>
-      <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl  text-gradiant-custom-second">
-        Let’s connect
-      </h2>
+      {isContactPage ? (
+        <h1 className="font-bold text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom-second">
+          Let’s connect
+        </h1>
+      ) : (
+        <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom-second">
+          Let’s connect
+        </h2>
+      )}
+
       <p className="text-sm sm:text-lg tracking-tighter pt-2 pb-5 sm:pb-7">
         Let&apos;s align our constellations! Reach out and let the magic of
         collaboration illuminate our skies.

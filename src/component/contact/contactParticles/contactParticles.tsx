@@ -28,6 +28,11 @@ export function ContactParticles() {
               data-aos="fade-left"
               className="w-auto relative hidden lg:inline"
             >
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10 w-full h-full bg-black/30 text-center ">
+                <h2 className="font-bold text-2xl sm:text-4xl lg:text-4xl text-white mt-10 ">
+                  Looking forward to connecting
+                </h2>
+              </div>
               <Image
                 className="rounded-2xl lg:h-[715px] object-cover"
                 src={contactImage}

@@ -66,34 +66,46 @@ import webAppOneJson from "../../../utils/content/boxreveals/webAppOne.json";
 import appleCardsData from "../../../utils/content/appleCardsCarousel/webAppApple.json";
 
 export const metadata: Metadata = {
-  title: "Web Development",
-  description: "Zygobit Website Web Development Page",
+  title: "Web App Development | Zygobit",
+  description:
+    "Zygobit offers expert web application development services tailored to your business. Build fast, secure, and scalable web apps that drive results.",
   keywords:
-    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "Web App Development, Web Application Development Company, Scalable Web Apps, Secure Web Development, Zygobit, Progressive Web Apps, Enterprise Software Solutions, React Development, Node.js, Full-Stack Development",
   openGraph: {
-    title: "Web Development",
-    description: "Zygobit Website Web Development Page",
+    title: "Web App Development | Zygobit",
+    description:
+      "Build powerful, web applications with Zygobit's expert development team. We deliver fast, scalable, and secure solutions for modern businesses.",
     type: "website",
     url: "https://www.zygobit.com/services/web-app-development",
     images: [
       {
-        url: "/images/Logo.png",
+        url: "https://www.zygobit.com/images/Logo.png",
         width: 1200,
         height: 630,
-        alt: "Zygobit Web Development",
+        alt: "Zygobit Web App Development",
       },
     ],
   },
   twitter: {
-    title: "Web Development",
-    description: "Zygobit Website Web Development Page",
+    title: " Web App Development  | Zygobit",
+    description:
+      "Partner with Zygobit for custom web development. We create robust, scalable applications tailored to your business goals.",
     card: "summary_large_image",
     creator: "@Zygobit",
-    images: ["/images/Logo.png"],
+    images: ["https://www.zygobit.com/images/Logo.png"],
   },
   alternates: {
     canonical: "https://www.zygobit.com/services/web-app-development",
   },
+};
+
+const webAppDevelopmentJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Web App Development",
+  url: "https://www.zygobit.com/services/web-app-development",
+  description:
+    "Zygobit offers custom web application development services, delivering scalable, secure, and high-performing digital solutions tailored to your business needs.",
 };
 
 const WebAppDevelopment = () => {
@@ -110,6 +122,15 @@ const WebAppDevelopment = () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webAppDevelopmentJsonLd).replace(
+            /</g,
+            "\\u003c"
+          ),
+        }}
+      />
       <AOSInitializer />
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />

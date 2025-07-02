@@ -43,27 +43,48 @@ import Link from "next/link";
 import WebSliderSecond from "@/component/sevices/Common/WebSliderSecond/WebSliderSecond";
 
 export const metadata: Metadata = {
-  title: "Ecommerce",
-  description: "Zygobit Website Ecommerce Page",
+  title: "Ecommerce App Development | Zygobit",
+  description:
+    "Zygobit offers tailored ecommerce development solutions to boost your online store. We build scalable, high-performance platforms with seamless UX and AI-powered features.",
   keywords:
-    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "Ecommerce Development, Online Store Development, Ecommerce App, Zygobit Ecommerce, AI Ecommerce Solutions, Custom Ecommerce, Web Store, Mobile Commerce, Ecommerce UX Design",
   openGraph: {
-    title: "Ecommerce",
-    description: "Zygobit Website Ecommerce Page",
-    images: ["/images/Logo.png"],
+    title: "Ecommerce App Development | Zygobit",
+    description:
+      "Zygobit's expert ecommerce developers create scalable, high-converting online stores with seamless UX and advanced AI integrations.",
     url: "https://www.zygobit.com/services/ecommerce",
+    type: "website",
+    images: [
+      {
+        url: "https://www.zygobit.com/images/Logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Zygobit Ecommerce Development",
+      },
+    ],
   },
   twitter: {
-    title: "Ecommerce",
-    description: "Zygobit Website Ecommerce Page",
-    images: ["/images/Logo.png"],
+    title: "Ecommerce App Development | Zygobit",
+    description:
+      "Build your online store with Zygobit's ecommerce development services. Custom solutions for scalable, high-performance ecommerce apps.",
     card: "summary_large_image",
-    creator: "Teqexpert",
+    creator: "@Zygobit",
+    images: ["https://www.zygobit.com/images/Logo.png"],
   },
   alternates: {
     canonical: "https://www.zygobit.com/services/ecommerce",
   },
 };
+
+const ecommerceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Ecommerce Development Services",
+  url: "https://www.zygobit.com/services/ecommerce",
+  description:
+    "Zygobit offers tailored ecommerce development services including custom store design, scalable architecture, and seamless integration to boost conversions.",
+};
+
 const Ecommerce = () => {
   const clientHeading = "We Are a Trusted Web App Development Company";
   const clientSaysDetails =
@@ -75,6 +96,12 @@ const Ecommerce = () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(ecommerceJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <AOSInitializer />
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
       <Suspense fallback={<Loader />}>
