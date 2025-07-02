@@ -18,11 +18,11 @@ const nextConfig = {
       "zygobit-images.s3.ap-south-1.amazonaws.com",
     ],
   },
-  // compress: true, // Enables gzip compression
-  swcMinify: true, // Ensures JS minification using SWC (default true)
-  // experimental: {
-  //   optimizeCss: true, // Only if you're using Next 13+ with app directory
-  // },
+  compress: true,
+  swcMinify: true,
+  experimental: {
+    optimizeCss: true,
+  },
 };
 
 export default nextConfig;

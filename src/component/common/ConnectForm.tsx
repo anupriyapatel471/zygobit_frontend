@@ -168,9 +168,9 @@ const ConnectForm = () => {
   };
   return (
     <form onSubmit={handleSubmit} className="w-auto lg:px-0" noValidate>
-      <h1 className="font-bold text-2xl sm:text-4xl lg:text-5xl  text-gradiant-custom-second">
+      <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl  text-gradiant-custom-second">
         Let’s connect
-      </h1>
+      </h2>
       <p className="text-sm sm:text-lg tracking-tighter pt-2 pb-5 sm:pb-7">
         Let&apos;s align our constellations! Reach out and let the magic of
         collaboration illuminate our skies.
