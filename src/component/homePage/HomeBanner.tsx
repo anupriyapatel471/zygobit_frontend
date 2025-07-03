@@ -33,10 +33,11 @@ const HomeBanner = () => {
             <div className="w-full order-2 sm:order-none relative px-2">
               <div className="w-full relative top-7 sm:top-0 h-[250px] sm:h-[420px]">
                 <Image
-                  className="w-full  object-contain"
+                  className="w-full object-contain"
                   fill
                   src="/images/banner_logo.svg"
                   alt="Logo"
+                  priority
                 />
               </div>
               <div className="w-full absolute top-7 sm:top-0 left-0 grid grid-cols-3 gap-y-20 sm:gap-y-0 sm:flex items-end justify-between px-0 lg:px-24 pt-0 sm:pt-7">
