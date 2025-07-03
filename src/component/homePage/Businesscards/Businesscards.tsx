@@ -74,10 +74,12 @@ const BusinessCards = () => {
               <span className="group-hover:border-orange-600 relative border-2 border-white/20 flex items-center justify-center rounded-xl w-14 h-14 sm:w-20 sm:h-20 overflow-hidden">
                 <Image
                   fill
-                  className="group-hover:hidden size-full"
+                  className=" group-hover:hidden size-full "
                   src={solution.img}
+
                   alt="Icon "
                 />
+                
                 <Image
                   width={40}
                   height={40}
