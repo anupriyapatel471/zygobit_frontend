@@ -125,8 +125,8 @@ const ServicesDropdown = () => {
                       <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
                         Machine Learning and AI{" "}
                         <Image
-                        width={24}
-                        height={24}
+                          width={24}
+                          height={24}
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto h-auto sm:h-auto"
                           src="/images/right_icon.png"
                           alt="right icon"
@@ -142,8 +142,8 @@ const ServicesDropdown = () => {
                 <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
                   <div className="  p-2 sm:p-0 w-12 sm:w-[70px] h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
                     <Image
-                    widht={48}
-                    height={48}
+                      width={48}
+                      height={48}
                       className="w-6 h-auto sm:w-auto sm:h-auto"
                       src="/images/ecommerce.svg"
                       alt="ecomerce image"
@@ -158,8 +158,8 @@ const ServicesDropdown = () => {
                       <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
                         E-Commerce{" "}
                         <Image
-                        width={24}
-                        height={24}
+                          width={24}
+                          height={24}
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto h-auto sm:h-auto"
                           src="/images/right_icon.png"
                           alt="right icon"
@@ -180,8 +180,8 @@ const ServicesDropdown = () => {
                   >
                     <div>
                       <Image
-                      width={250}
-                      height={150}
+                        width={250}
+                        height={150}
                         className="w-[250px] h-auto"
                         src="/images/Logo.png"
                         alt="logo"

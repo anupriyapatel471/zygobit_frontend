@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import Image from "next/image";
-=======
-import LazyImage from "../common/LazyImage";
->>>>>>> 936f12d900f0a898afe830ee82d9689b4afd1bb0
 
 /* eslint-disable @next/next/no-img-element */
 const reasons = [
@@ -26,7 +22,7 @@ const reasons = [
   },
 ];
 const WhyChooseUs = () => {
-  const whyChooseImg = "/images/why_choose_us.png"
+  const whyChooseImg = "/images/why_choose_us.png";
   return (
     <section data-aos="fade-up" className="w-full mb-0 sm:mb-20">
       <div className="container remove-bg">
@@ -40,20 +36,16 @@ const WhyChooseUs = () => {
           </p>
         </div>
         <div className="w-full flex flex-wrap lg:flex-nowrap gap-5 lg:gap-10 items-center">
-<<<<<<< HEAD
-          <div className="w-full lg:w-2/5">
-            <Image
-            width={550}
-            height={560}
-=======
           <div className="w-full relative h-[450px] lg:h-[560px] lg:w-2/5">
             {/* <img
->>>>>>> 936f12d900f0a898afe830ee82d9689b4afd1bb0
               className="w-full max-h-[450px] lg:max-h-[560px] rounded-xl object-cover"
               src="/images/why_choose_us.png"
               alt="image"
             /> */}
-            <LazyImage
+
+            <Image
+              width={550}
+              height={560}
               src={whyChooseImg}
               className="w-full h-full rounded-xl object-cover"
               alt="Image"
