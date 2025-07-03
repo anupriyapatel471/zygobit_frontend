@@ -34,19 +34,23 @@ export async function generateMetadata({
   params: { slug: string };
 }) {
   const project = await fetchFeaturedProjects(params.slug);
+  const title = project?.metadata?.title || "Zygobit Featured Projects";
+  const description =
+    project?.metadata?.description || "Zygobit Featured Projects";
+
   return {
-    title: project?.title || "Zygobit Featured Projects",
-    description: project?.description || "Zygobit Featured Projects",
+    title,
+    description,
     openGraph: {
-      title: project?.title || "Zygobit Featured Projects",
-      description: project?.description || "Zygobit Featured Projects",
-      images: project?.image || "/images/Logo.png",
+      title,
+      description,
+      images: "https://www.zygobit.com/images/Logo.png",
       url: `https://www.zygobit.com/portfolio/${params.slug}`,
     },
     twitter: {
-      title: project?.title || "Zygobit Featured Projects",
-      description: project?.description || "Zygobit Featured Projects",
-      images: project?.image || "/images/Logo.png",
+      title,
+      description,
+      images: "https://www.zygobit.com/images/Logo.png",
       card: "summary_large_image",
       creator: "Zygobit",
     },

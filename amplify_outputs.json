@@ -237,6 +237,15 @@
               "type": "String",
               "isRequired": false,
               "attributes": []
+            },
+            "metaData": {
+              "name": "metaData",
+              "isArray": false,
+              "type": {
+                "nonModel": "Metadata"
+              },
+              "isRequired": false,
+              "attributes": []
             }
           },
           "syncable": true,
@@ -471,6 +480,15 @@
               "type": "String",
               "isRequired": false,
               "attributes": []
+            },
+            "metaData": {
+              "name": "metaData",
+              "isArray": false,
+              "type": {
+                "nonModel": "Metadata"
+              },
+              "isRequired": false,
+              "attributes": []
             }
           },
           "syncable": true,
@@ -646,6 +664,25 @@
             },
             "bgGradientTwo": {
               "name": "bgGradientTwo",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            }
+          }
+        },
+        "Metadata": {
+          "name": "Metadata",
+          "fields": {
+            "title": {
+              "name": "title",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "description": {
+              "name": "description",
               "isArray": false,
               "type": "String",
               "isRequired": false,
