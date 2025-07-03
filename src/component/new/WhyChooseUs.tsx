@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 /* eslint-disable @next/next/no-img-element */
 const reasons = [
   {
@@ -34,7 +36,9 @@ const WhyChooseUs = () => {
         </div>
         <div className="w-full flex flex-wrap lg:flex-nowrap gap-5 lg:gap-10 items-center">
           <div className="w-full lg:w-2/5">
-            <img
+            <Image
+            width={550}
+            height={560}
               className="w-full max-h-[450px] lg:max-h-[560px] rounded-xl object-cover"
               src="/images/why_choose_us.png"
               alt="image"

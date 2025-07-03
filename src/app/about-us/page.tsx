@@ -143,7 +143,8 @@ const About = () => {
 
       <section className="w-full  mb-0 sm:mb-10 lg:mb-0 pt-10 pb-10 sm:py-12 lg:py-20 relative">
         <div className="absolute top-0 left-0 w-full h-full -z-10">
-          <img
+          <Image
+          fill
             className="w-full h-full object-cover"
             src="/images/cta_bg.png"
             alt="Cta bg"

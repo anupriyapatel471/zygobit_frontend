@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 // import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import Image from "next/image";
 // import { SliderHoverCards } from "@/component/sevices/MobileAppDevelopment/SliderHoverCards";
 // import { EvervaultCards } from "@/component/common/EvervaultCards/EvervaultCards";
 
@@ -248,7 +249,7 @@ export const Card = ({
         >
           {card.icon.length > 0 && (
             <div className="relative -left-6">
-              <img src={card.icon} alt="card icon" />
+              <Image width={30} height={50} className="w-auto h-auto" src={card.icon} alt="card icon" />
             </div>
           )}
           <motion.p

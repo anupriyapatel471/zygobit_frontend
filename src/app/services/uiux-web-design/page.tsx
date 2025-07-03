@@ -43,6 +43,7 @@ import GridBoxes from "@/component/common/GridBoxes/GridBoxes";
 import cards from "../../../utils/content/gridboxcardsdata/uiuxgrid.json";
 import appleCardsData from "../../../utils/content/appleCardsCarousel/uiUxApple.json";
 import deliveringTailoredData from "../../../utils/content/deliveringTailored/tailoredUiux.json";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "UI/UX Design Services | Zygobit",
@@ -168,7 +169,10 @@ const UiuxWebDesign = () => {
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8 pb-8 sm:mb-12 sm:pb-12 border-b border-white">
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img
+                  <Image
+                    width={65}
+                    height={65}
+                    className="w-16 h-16"
                     src="/images/setting_design_icon.svg"
                     alt="setting design icon"
                   />
@@ -184,7 +188,10 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img
+                  <Image
+                    width={65}
+                    height={65}
+                    className="w-16 h-16"
                     src="/images/user_research_icon.svg"
                     alt="user research icon"
                   />
@@ -199,7 +206,10 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img
+                  <Image
+                    width={65}
+                    height={65}
+                    className="w-16 h-16"
                     src="/images/wireframing_icon.svg"
                     alt="wireframing icon"
                   />
@@ -214,7 +224,13 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/testing_icon.svg" alt="testing icon" />
+                  <Image
+                    width={65}
+                    height={65}
+                    className="w-16 h-16"
+                    src="/images/testing_icon.svg"
+                    alt="testing icon"
+                  />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Usability Testing
@@ -235,7 +251,10 @@ const UiuxWebDesign = () => {
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 ">
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img
+                  <Image
+                    width={65}
+                    height={65}
+                    className="w-16 h-16"
                     src="/images/setting_design_icon.svg"
                     alt="setting design icon"
                   />
@@ -250,7 +269,10 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img
+                  <Image
+                    width={65}
+                    height={65}
+                    className="w-16 h-16"
                     src="/images/user_research_icon.svg"
                     alt="user research icon"
                   />
@@ -265,7 +287,10 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img
+                  <Image
+                    width={65}
+                    height={65}
+                    className="w-16 h-16"
                     src="/images/wireframing_icon.svg"
                     alt="wireframing icon"
                   />
@@ -280,7 +305,13 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/testing_icon.svg" alt="testing icon" />
+                  <Image
+                    width={65}
+                    height={65}
+                    className="w-16 h-16"
+                    src="/images/testing_icon.svg"
+                    alt="testing icon"
+                  />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Design Hand off & implementation
@@ -305,7 +336,8 @@ const UiuxWebDesign = () => {
 
       <section className="w-full  overflow-hidden  py-12 sm:py-16 relative">
         <div className="absolute top-0 left-0 w-full h-full -z-10">
-          <img
+          <Image
+            fill
             className="w-full h-full object-cover"
             src="/images/cta_bg.png"
             alt="cta bg"

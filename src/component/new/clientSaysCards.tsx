@@ -8,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -49,14 +50,21 @@ const ClientSaysCards = () => {
               <div className="p-1">
                 <CardContent className="mt-0 sm:mt-14 w-full h-full flex flex-col justify-center items-center  text-center  p-6 text-white">
                   <div className="ml-1 sm:ml-12 w-fit mr-auto mb-3">
-                    <img className="" src="images/qoutus.svg" alt="image" />
+                    <Image
+                      width={100}
+                      height={100}
+                      className="w-auto h-auto"
+                      src="images/qoutus.svg"
+                      alt="image"
+                    />
                   </div>
                   <p className="font-light sm:font-normal text-sm sm:text-base mb-5 sm:mb-8 max-w-xs mx-auto line-clamp-4">
                     {testimonial.quote}
                   </p>
-                  <div className="w-12 h-12 mx-auto rounded-full overflow-hidden">
-                    <img
-                      className="w-full h-full object-cover mx-auto "
+                  <div className="w-12 h-12 mx-auto relative rounded-full overflow-hidden">
+                    <Image
+                      fill
+                      className="w-full h-full object-cover mx-auto"
                       src={testimonial.src}
                       alt="testimonial image"
                     />

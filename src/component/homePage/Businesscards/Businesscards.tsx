@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { BussinessCardsSlider } from "../BusinessCardsSlider";
 
 /* eslint-disable @next/next/no-img-element */
@@ -70,13 +71,16 @@ const BusinessCards = () => {
               key={solution.id}
               className="w-full hover:bg-white hover:text-black rounded-2xl border-2 border-white/20 p-5 text-white group"
             >
-              <span className="group-hover:border-orange-600 border-2 border-white/20 flex items-center justify-center rounded-xl w-14 h-14 sm:w-20 sm:h-20 overflow-hidden">
-                <img
+              <span className="group-hover:border-orange-600 relative border-2 border-white/20 flex items-center justify-center rounded-xl w-14 h-14 sm:w-20 sm:h-20 overflow-hidden">
+                <Image
+                  fill
                   className="group-hover:hidden size-full"
                   src={solution.img}
                   alt="Icon "
                 />
-                <img
+                <Image
+                  width={40}
+                  height={40}
                   className="hidden group-hover:inline-block w-10 h-10"
                   src={solution.imgTwo}
                   alt="Icon"

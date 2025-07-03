@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -12,8 +13,10 @@ const ServicesDropdown = () => {
               <div className="w-auto grid grid-cols-1 lg:grid-cols-2 gap-7 col-span-2 p-4 lg:p-10">
                 <div className="group flex items-center sm:items-start gap-4 group transition-all duration-500">
                   <div className=" p-2 sm:p-0 w-12 sm:w-[70px] h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                    <img
-                      className="w-6 sm:w-auto"
+                    <Image
+                      width={45}
+                      height={45}
+                      className="w-6 sm:w-auto h-auto sm:h-auto"
                       src="/images/mobile_icon.svg"
                       alt="mobile icon"
                     />
@@ -25,8 +28,10 @@ const ServicesDropdown = () => {
                     >
                       <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
                         Mobile App Development{" "}
-                        <img
-                          className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
+                        <Image
+                          width={24}
+                          height={24}
+                          className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto h-auto sm:h-auto"
                           src="/images/right_icon.png"
                           alt="right icon"
                         />
@@ -39,8 +44,10 @@ const ServicesDropdown = () => {
                 </div>
                 <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
                   <div className="  p-2 sm:p-0 w-12 sm:w-[70px] h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                    <img
-                      className="w-6 sm:w-auto"
+                    <Image
+                      width={48}
+                      height={48}
+                      className="w-6 sm:w-auto h-auto sm:h-auto"
                       src="/images/webdev.svg"
                       alt="webdev image"
                     />
@@ -53,8 +60,10 @@ const ServicesDropdown = () => {
                     >
                       <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
                         Web Development{" "}
-                        <img
-                          className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
+                        <Image
+                          width={24}
+                          height={24}
+                          className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto h-auto sm:h-auto"
                           src="/images/right_icon.png"
                           alt="right icon"
                         />
@@ -67,8 +76,10 @@ const ServicesDropdown = () => {
                 </div>
                 <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
                   <div className="  p-2 sm:p-0 w-12 sm:w-[70px] h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                    <img
-                      className="w-6 sm:w-auto"
+                    <Image
+                      width={48}
+                      height={48}
+                      className="w-6 h-auto sm:w-auto sm:h-auto"
                       src="/images/uiux.svg"
                       alt="uiux icon"
                     />
@@ -81,8 +92,10 @@ const ServicesDropdown = () => {
                     >
                       <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
                         UI/UX Design{" "}
-                        <img
-                          className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
+                        <Image
+                          width={24}
+                          height={24}
+                          className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto h-auto sm:h-auto"
                           src="/images/right_icon.png"
                           alt="right icon"
                         />
@@ -95,8 +108,10 @@ const ServicesDropdown = () => {
                 </div>
                 <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
                   <div className="  p-2 sm:p-0 w-12 sm:w-[70px] h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                    <img
-                      className="w-6 sm:w-auto"
+                    <Image
+                      width={48}
+                      height={48}
+                      className="w-6 sm:w-auto h-auto sm:h-auto"
                       src="/images/machinel.svg"
                       alt="machinel image"
                     />
@@ -109,8 +124,10 @@ const ServicesDropdown = () => {
                     >
                       <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
                         Machine Learning and AI{" "}
-                        <img
-                          className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
+                        <Image
+                        width={24}
+                        height={24}
+                          className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto h-auto sm:h-auto"
                           src="/images/right_icon.png"
                           alt="right icon"
                         />
@@ -124,8 +141,10 @@ const ServicesDropdown = () => {
                 </div>
                 <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
                   <div className="  p-2 sm:p-0 w-12 sm:w-[70px] h-12 sm:h-[70px] flex items-center justify-center bg-[#F15722] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-                    <img
-                      className="w-6 sm:w-auto"
+                    <Image
+                    widht={48}
+                    height={48}
+                      className="w-6 h-auto sm:w-auto sm:h-auto"
                       src="/images/ecommerce.svg"
                       alt="ecomerce image"
                     />
@@ -138,8 +157,10 @@ const ServicesDropdown = () => {
                     >
                       <h3 className="flex gap-2 items-center font-semibold text-base sm:text-lg lg:text-xl">
                         E-Commerce{" "}
-                        <img
-                          className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
+                        <Image
+                        width={24}
+                        height={24}
+                          className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto h-auto sm:h-auto"
                           src="/images/right_icon.png"
                           alt="right icon"
                         />
@@ -158,8 +179,10 @@ const ServicesDropdown = () => {
                     href="/"
                   >
                     <div>
-                      <img
-                        className="w-[250px]"
+                      <Image
+                      width={250}
+                      height={150}
+                        className="w-[250px] h-auto"
                         src="/images/Logo.png"
                         alt="logo"
                       />

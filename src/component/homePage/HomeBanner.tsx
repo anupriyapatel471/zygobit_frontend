@@ -166,39 +166,55 @@ const HomeBanner = () => {
                 </span>
                 <ul className="flex flex-wrap gap-5  sm:gap-10 sm:gap-y-6 mt-4 sm:mt-6 mb-6 sm:mb-9">
                   <li>
-                    <img
-                      className="w-[150px] sm:w-[199px]"
+                    <Image
+                      width={200}
+                      height={200}
+                      className="w-[150px] sm:w-[199px] h-auto sm:h-auto"
                       src="/images/trackday.svg"
                       alt="Trackday logo"
                     />
                   </li>
                   <li>
-                    <img
-                      className="w-[100px] sm:w-auto"
+                    <Image
+                      width={100}
+                      height={100}
+                      className="w-[100px] sm:w-auto h-auto sm:h-auto"
                       src="/images/slick.svg"
                       alt="Slick logo"
                     />
                   </li>
                   <li>
-                    <img src="/images/recovery.svg" alt="Recovery logo" />
+                    <Image
+                      width={66}
+                      height={66}
+                      className="w-auto h-auto"
+                      src="/images/recovery.svg"
+                      alt="Recovery logo"
+                    />
                   </li>
                   <li>
-                    <img
-                      className="w-[70px] sm:w-auto"
+                    <Image
+                      width={100}
+                      height={100}
+                      className="w-[70px] sm:w-auto h-auto sm:h-auto"
                       src="/images/pilot.svg"
                       alt="pilot logo"
                     />
                   </li>
                   <li>
-                    <img
-                      className="w-[110px] sm:w-auto"
+                    <Image
+                      width={150}
+                      height={150}
+                      className="w-[110px] h-auto sm:w-auto sm:h-auto"
                       src="/images/abbsi_new.svg"
                       alt="Abbsi logo"
                     />
                   </li>
                   <li>
-                    <img
-                      className="w-[60px] sm:w-auto"
+                    <Image
+                      width={100}
+                      height={100}
+                      className="w-[60px] h-auto sm:w-auto sm:h-auto"
                       src="/images/residence.svg"
                       alt="Residence logo"
                     />

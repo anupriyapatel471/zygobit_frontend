@@ -4,6 +4,7 @@
 import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
+import Image from "next/image";
 
 type Review = {
   name: string;
@@ -99,14 +100,18 @@ const ReviewCard: React.FC<Pick<Review, "img">> = ({ img }) => (
     <div className="w-full grid grid-cols-1 sm:grid-cols-3 lg:flex justify-between">
       <div className="relative flex justify-center lg:justify-normal items-center lg:h-[300px]">
         <span className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <img
+          <Image
+            width={100}
+            height={200}
             src="/images/line.png"
             alt="Line"
-            className="h-[200px] hidden sm:inline lg:h-[200px]"
+            className="h-[200px] hidden sm:inline lg:h-[200px] w-auto lg:w-auto"
           />
         </span>
         <div className="hover:mt-14 transition-all duration-500 w-20 h-20 sm:w-[100px] sm:h-[100px] shadow-[inset_0_0_15px_2px_#C5C5C552] flex items-center justify-center rounded-full">
-          <img
+          <Image
+            width={48}
+            height={48}
             src={img}
             alt="image"
             className="w-8 h-8 sm:w-12 sm:h-12 brightness-0 invert"

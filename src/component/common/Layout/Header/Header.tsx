@@ -38,11 +38,6 @@ const Header = () => {
                   href="/"
                   className="-m-1.5 p-1.5 w-auto h-auto text-white uppercase font-semibold text-lg"
                 >
-                  {/* <img
-                    className="w-[110px] sm:w-[128px]"
-                    src="/images/Logo.png"
-                    alt=""
-                  /> */}
                   <Image
                     src={Logo}
                     alt="Logo"
@@ -169,7 +164,9 @@ const Header = () => {
               <div className="w-auto grid grid-cols-1 lg:grid-cols-2 gap-7 col-span-2 p-4 lg:p-10">
                 <div className="group flex items-center sm:items-start gap-4 group transition-all duration-500">
                   <div className=" mt-1.5 p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
-                    <img
+                    <Image
+                      width={24}
+                      height={24}
                       className="w-6 sm:w-auto"
                       src="/images/mobile_icon.svg"
                       alt="	Mobile App Icon"
@@ -182,7 +179,9 @@ const Header = () => {
                     >
                       <h3 className="flex gap-2 items-center group-hover:text-themetext font-semibold text-base sm:text-lg lg:text-xl">
                         Mobile App Development{" "}
-                        <img
+                        <Image
+                          width={12}
+                          height={12}
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
                           alt="Arrow Right Icon"
@@ -196,7 +195,9 @@ const Header = () => {
                 </div>
                 <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
                   <div className="  mt-1.5 p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
-                    <img
+                    <Image
+                      width={24}
+                      height={24}
                       className="w-6 sm:w-auto"
                       src="/images/webdev.svg"
                       alt="Web Development Icon"
@@ -210,7 +211,9 @@ const Header = () => {
                     >
                       <h3 className="flex gap-2 items-center group-hover:text-themetext font-semibold text-base sm:text-lg lg:text-xl">
                         Web Development{" "}
-                        <img
+                        <Image
+                          width={12}
+                          height={12}
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
                           alt="Arrow Right Icon"
@@ -224,7 +227,9 @@ const Header = () => {
                 </div>
                 <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
                   <div className="  mt-1.5 p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
-                    <img
+                    <Image
+                      width={24}
+                      height={24}
                       className="w-6 sm:w-auto"
                       src="/images/uiux.svg"
                       alt="UI/UX Design Icon"
@@ -237,7 +242,9 @@ const Header = () => {
                     >
                       <h3 className="flex gap-2 items-center group-hover:text-themetext font-semibold text-base sm:text-lg lg:text-xl">
                         UI/UX Design{" "}
-                        <img
+                        <Image
+                          width={12}
+                          height={12}
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
                           alt="Arrow Right Icon"
@@ -251,7 +258,9 @@ const Header = () => {
                 </div>
                 <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
                   <div className="  mt-1.5 p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
-                    <img
+                    <Image
+                      width={24}
+                      height={24}
                       className="w-6 sm:w-auto"
                       src="/images/machinel.svg"
                       alt="Machine Learning and AI Icon"
@@ -264,7 +273,9 @@ const Header = () => {
                     >
                       <h3 className="flex gap-2 items-center group-hover:text-themetext font-semibold text-base sm:text-lg lg:text-xl">
                         Machine Learning and AI{" "}
-                        <img
+                        <Image
+                          width={12}
+                          height={12}
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
                           alt="Arrow Right Icon"
@@ -279,7 +290,9 @@ const Header = () => {
                 </div>
                 <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
                   <div className="  mt-1.5 p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
-                    <img
+                    <Image
+                      width={24}
+                      height={24}
                       className="w-6 sm:w-auto"
                       src="/images/ecommerce.svg"
                       alt="E-Commerce Icon"
@@ -292,7 +305,9 @@ const Header = () => {
                     >
                       <h3 className="flex gap-2 items-center group-hover:text-themetext font-semibold text-base sm:text-lg lg:text-xl">
                         E-Commerce{" "}
-                        <img
+                        <Image
+                          width={12}
+                          height={12}
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
                           alt="Arrow Right Icon"
@@ -306,7 +321,9 @@ const Header = () => {
                 </div>
                 <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
                   <div className="  mt-1.5 p-2 sm:p-0 w-12 sm:w-10 h-12 sm:h-10 flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-lg">
-                    <img
+                    <Image
+                      width={24}
+                      height={24}
                       className="w-6 sm:w-auto"
                       src="/images/blockchain.svg"
                       alt="Blockchain Icon"
@@ -319,7 +336,9 @@ const Header = () => {
                     >
                       <h3 className="flex gap-2 items-center group-hover:text-themetext font-semibold text-base sm:text-lg lg:text-xl">
                         Blockchain{" "}
-                        <img
+                        <Image
+                          width={12}
+                          height={12}
                           className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
                           src="/images/right_icon.png"
                           alt="Arrow Right Icon"
@@ -340,8 +359,10 @@ const Header = () => {
                     href="/"
                   >
                     <div>
-                      <img
-                        className="w-[250px]"
+                      <Image
+                        width={250}
+                        height={150}
+                        className="w-[250px] h-auto"
                         src="/images/mega_logo.png"
                         alt="meta logo"
                       />
