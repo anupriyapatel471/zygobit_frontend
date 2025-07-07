@@ -9,6 +9,7 @@ import Logo from "../../../../../public/images/Logo.png";
 import { usePathname } from "next/navigation";
 // import { ChatBotBtn } from "@/component/new/ChatBot";
 import { ContactnewForm } from "@/component/new/ContactNewForm";
+import { ContactAKnowledge } from "@/component/new/ContactKnowledge";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

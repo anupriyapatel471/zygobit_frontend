@@ -112,7 +112,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
       >
         <div className="container">
           <div className="w-full flex justify-between ">
-            <div className="w-full lg:w-[520px] flex flex-col gap-4 sm:gap-10 py-6">
+            <div className="w-full lg:w-[550px] flex flex-col gap-4 sm:gap-10 py-6">
               <Button
                 onClick={() => router.back()}
                 className="w-10 h-10 p-0 sm:p-0 sm:w-12 sm:h-12 rounded-full bg-white hover:bg-white"
@@ -139,7 +139,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                   </div>
                 )}
                 <h1
-                  className="font-bold text-3xl sm:text-[35px] lg:text-[45px] w-full lg:w-fit sm:w-fit lg:whitespace-nowrap mt-4 sm:mt-0 "
+                  className="font-bold text-3xl sm:text-[35px] lg:text-[45px] w-full lg:w-fit sm:w-fit lg:leading-[50px] mt-4 sm:mt-0 "
                   style={{ color: projectData?.testColor }}
                 >
                   {projectData?.projectName}
@@ -171,17 +171,28 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                 ))}
               </div>
             </div>
-            {projectData?.mockupImage && (
-              <div className="w-[875px] -right-10 relative hidden lg:inline">
-                <Image
-                  width={875}
-                  height={570}
-                  className="w-full h-full object-cover"
-                  src={projectData?.mockupImage}
-                  alt="mobile image"
-                />
-              </div>
-            )}
+            {projectData?.mockupImage &&
+              (projectData?.category === "Mobile Application" ? (
+                <div className="w-[875px] -right-10 relative hidden lg:inline">
+                  <Image
+                    width={875}
+                    height={570}
+                    className="w-full h-full object-cover"
+                    src={projectData?.mockupImage}
+                    alt="mobile image"
+                  />
+                </div>
+              ) : (
+                <div className="w-[700px] -right-10 h-auto  relative hidden lg:inline">
+                  <Image
+                    width={770.7947998046875}
+                    height={505.0367431640625}
+                    className="w-full h-full object-contain"
+                    src={projectData?.mockupImage}
+                    alt="mobile image"
+                  />
+                </div>
+              ))}
           </div>
         </div>
       </section>

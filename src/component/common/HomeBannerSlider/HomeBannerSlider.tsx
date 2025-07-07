@@ -67,7 +67,7 @@ const ReviewCard = ({ img }: { img: string }) => {
 export default function HomeBannerSlider() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden ">
-      <Marquee pauseOnHover className="[--duration:20s]">
+      <Marquee pauseOnHover className="[--duration:10s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
