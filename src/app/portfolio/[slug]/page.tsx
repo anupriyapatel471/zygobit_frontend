@@ -22,7 +22,6 @@ async function fetchFeaturedProjects(slug?: string) {
     throw error;
   }
 }
-
 export async function generateStaticParams() {
   const projects = await fetchFeaturedProjects();
   return projects.map((project: any) => ({ slug: project.slug.toString() }));
