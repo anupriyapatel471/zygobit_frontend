@@ -36,7 +36,7 @@ export async function generateMetadata({
   const title = project?.metadata?.title || "Zygobit Featured Projects";
   const description =
     project?.metadata?.description || "Zygobit Featured Projects";
-
+ 
   return {
     title,
     description,
