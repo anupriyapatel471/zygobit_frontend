@@ -22,7 +22,6 @@ async function fetchFeaturedProjects(slug?: string) {
     throw error;
   }
 }
-
 export async function generateStaticParams() {
   const projects = await fetchFeaturedProjects();
   return projects.map((project: any) => ({ slug: project.slug.toString() }));
@@ -37,7 +36,7 @@ export async function generateMetadata({
   const title = project?.metadata?.title || "Zygobit Featured Projects";
   const description =
     project?.metadata?.description || "Zygobit Featured Projects";
-
+ 
   return {
     title,
     description,

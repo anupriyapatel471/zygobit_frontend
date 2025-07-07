@@ -221,6 +221,7 @@ const ConnectForm = () => {
               className="absolute left-0 top-0 opacity-0 w-full h-10 md:h-11 lg:h-11"
             />
             <PhoneInput
+              aria-label="Phone Number"
               international
               defaultCountry="IN"
               placeholder="Enter phone number"

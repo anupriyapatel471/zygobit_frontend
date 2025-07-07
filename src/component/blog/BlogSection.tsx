@@ -67,7 +67,7 @@ const BlogSection = () => {
                 {otherBlogs.map((post) => (
                   <Link href={`/blogs/${post.slug}`} key={post.id}>
                     <div className="w-full cursor-pointer flex flex-wrap sm:flex-nowrap gap-4 items-start">
-                      <div className="w-28 h-28 object-cover sm:w-40 sm:h-40 rounded-sm overflow-hidden relative">
+                      <div className="w-full h-28 object-cover sm:w-40 sm:h-40 rounded-sm overflow-hidden relative">
                         <Image
                           className=" object-cover"
                           src={post.image}

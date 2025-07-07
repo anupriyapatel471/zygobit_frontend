@@ -36,7 +36,7 @@ const WhyChooseUs = () => {
           </p>
         </div>
         <div className="w-full flex flex-wrap lg:flex-nowrap gap-5 lg:gap-10 items-center">
-          <div className="w-full relative h-[450px] lg:h-[560px] lg:w-2/5">
+          <div className="w-full relative h-[450px] lg:h-[475px] lg:w-2/5">
             {/* <img
               className="w-full max-h-[450px] lg:max-h-[560px] rounded-xl object-cover"
               src="/images/why_choose_us.png"
