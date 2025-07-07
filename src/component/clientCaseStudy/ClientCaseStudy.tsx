@@ -8,7 +8,6 @@ import { ProjectData } from "@/app/type/projectType";
 
 const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
   const router = useRouter();
-
   const cardData = [
     {
       title: "Client",

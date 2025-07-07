@@ -1,12 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import Rocket from "../../../public/images/rocket.svg";
-import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import toast from "react-hot-toast";
-import PhoneInput from "react-phone-number-input";
-import { parsePhoneNumberFromString } from "libphonenumber-js";
 import { Button } from "@/components/ui/button";
 
 import { validateBudget, validateName, validatePhoneNumber } from "@/lib/utils";
@@ -184,8 +181,12 @@ export function ContactAKnowledge({ formOpen }: { formOpen?: string }) {
             </div>
             <div className="w-full sm:w-3/5 p-6 sm:p-10 sm:pl-0">
               <div className="text-center w-full  sm:w-[400px] mx-auto lg:mt-28">
-                <h2 className="font-bold lg:whitespace-nowrap text-2xl sm:text-[34px] text-black mb-4">Thanks for reaching out!</h2>
-                <p className="text-black text-sm sm:text-base">Our team will get back to you shortly.</p>
+                <h2 className="font-bold lg:whitespace-nowrap text-2xl sm:text-[34px] text-black mb-4">
+                  Thanks for reaching out!
+                </h2>
+                <p className="text-black text-sm sm:text-base">
+                  Our team will get back to you shortly.
+                </p>
                 <p className="text-black text-sm sm:text-base pb-4">
                   We appreciate your interest and look forward to connecting
                   with you.

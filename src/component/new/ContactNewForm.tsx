@@ -162,7 +162,10 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
         ) : (
           <div>
             <div className="">
-              <button className="pulse-button-contact">
+              <button
+                className="pulse-button-contact"
+                aria-label="Open contact form"
+              >
                 <span></span>
               </button>
             </div>

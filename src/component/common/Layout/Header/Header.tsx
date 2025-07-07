@@ -9,8 +9,6 @@ import Logo from "../../../../../public/images/Logo.png";
 import { usePathname } from "next/navigation";
 // import { ChatBotBtn } from "@/component/new/ChatBot";
 import { ContactnewForm } from "@/component/new/ContactNewForm";
-import { ContactAKnowledge } from "@/component/new/ContactKnowledge";
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -61,6 +59,7 @@ const Header = () => {
                 onClick={toggleMenu}
                 type="button"
                 className="open-btn-mobile -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                aria-label="Open menu"
               >
                 <svg
                   className="h-10 w-10 rounded-[5px] p-1 "
