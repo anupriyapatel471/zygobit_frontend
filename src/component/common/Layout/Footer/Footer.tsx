@@ -86,6 +86,7 @@ const Footer = () => {
                 width={160}
                 height={40}
                 className="w-[110px] sm:w-[160px]"
+                priority
               />
             </Link>
             <p className="font-light text-sm text-[#6B6B6B] my-3 sm:my-5">
