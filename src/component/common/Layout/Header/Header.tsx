@@ -53,7 +53,6 @@ const Header = () => {
             <div className="hidden lg:flex xl:gap-x-5">
               <NavigationMenuDemo />
             </div>
-
             <div className="flex lg:hidden">
               <button
                 onClick={toggleMenu}
@@ -91,7 +90,6 @@ const Header = () => {
             </div>
           </div>
         </nav>
-
         <div
           x-show="open"
           className={`${isMenuOpen ? "active" : "hidden"} mobile-view h-screen`}
