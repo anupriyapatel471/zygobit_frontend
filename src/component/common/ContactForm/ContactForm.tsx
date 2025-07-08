@@ -18,7 +18,6 @@ export default function ContactForm() {
             src={contactImage}
             alt="contact image"
             fill
-            priority
           />
         </div>
       </section>

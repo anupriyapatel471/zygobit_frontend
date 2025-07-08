@@ -38,7 +38,6 @@ const BlogSection = () => {
                       src={featuredBlog.image}
                       alt="BlogImg"
                       fill
-                      priority
                     />
                     <div className="w-full absolute bottom-5 left-0 px-4 xl:px-4 z-20">
                       <span className="block w-fit py-1 px-2 rounded-sm bg-gradient-to-b from-orange-600 to-orange-800 text-white font-medium text-[10px]">
