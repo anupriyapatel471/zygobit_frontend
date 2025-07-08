@@ -43,7 +43,6 @@ const reviews = [
 ];
 
 const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
 
 const ReviewCard = ({ img }: { img: string }) => {
   return (
@@ -55,7 +54,7 @@ const ReviewCard = ({ img }: { img: string }) => {
       <div className="flex flex-row items-center gap-2">
         <Image
           src={img}
-          alt="Partner Logo"
+          alt="Logo"
           width={120}
           height={60}
           className="w-auto h-auto  scale-90"
@@ -68,8 +67,8 @@ const ReviewCard = ({ img }: { img: string }) => {
 export default function HomeBannerSlider() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden ">
-      <Marquee pauseOnHover className="[--duration:10s]">
-        {firstRow.map((review) => (
+      <Marquee pauseOnHover className="[--duration:7s]">
+        {reviews.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
