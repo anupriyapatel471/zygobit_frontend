@@ -134,6 +134,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             className="relative z-40 w-10 h-10 sm:h-12 sm:w-12 rounded-full bg-transparent border border-orange-600 flex items-center justify-center disabled:opacity-50"
             onClick={scrollLeft}
             disabled={!canScrollLeft}
+            aria-label="Scroll left"
           >
             <IconArrowNarrowLeft className="h-6 w-6 text-orange-600" />
           </button>
@@ -141,6 +142,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             className="relative z-40 w-10 h-10 sm:h-12 sm:w-12 rounded-full bg-transparent border border-orange-600 flex items-center justify-center disabled:opacity-50"
             onClick={scrollRight}
             disabled={!canScrollRight}
+            aria-label="Scroll right"
           >
             <IconArrowNarrowRight className="h-6 w-6 text-orange-600" />
           </button>
@@ -249,7 +251,13 @@ export const Card = ({
         >
           {card.icon.length > 0 && (
             <div className="relative -left-6">
-              <Image width={30} height={50} className="w-auto h-auto" src={card.icon} alt="card icon" />
+              <Image
+                width={30}
+                height={50}
+                className="w-auto h-auto"
+                src={card.icon}
+                alt="card icon"
+              />
             </div>
           )}
           <motion.p

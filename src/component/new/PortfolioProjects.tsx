@@ -138,6 +138,7 @@ const PortfolioProjects = () => {
                                     fill
                                     src={project.backgroundImage || ""}
                                     alt="image"
+                                    priority
                                   />
                                   <div className="w-full lg:w-[465px] h-[170px] sm:h-[320px] lg:h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                     {project.mobileImage && (
@@ -146,6 +147,7 @@ const PortfolioProjects = () => {
                                         className="w-full h-full object-contain"
                                         src={project.mobileImage}
                                         alt="mobile image"
+                                        priority
                                       />
                                     )}
                                   </div>
@@ -161,14 +163,16 @@ const PortfolioProjects = () => {
                                     fill
                                     src={project.backgroundImage || ""}
                                     alt="image"
+                                    priority
                                   />
                                   <div className="w-full lg:w-[465px] h-[170px] sm:h-[320px] lg:h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                     {project.mobileImage && (
                                       <Image
-                                      fill
+                                        fill
                                         className="w-full h-full object-contain"
                                         src={project.mobileImage}
                                         alt="mobile image"
+                                        priority
                                       />
                                     )}
                                   </div>
