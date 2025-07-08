@@ -39,7 +39,6 @@ const contactPageJsonLd: WithContext<ContactPage> = {
   description:
     "Get in touch with Zygobit for expert software, mobile, and AI development services.",
 };
-
 const Contact = () => {
   const socialLinks = [
     {
