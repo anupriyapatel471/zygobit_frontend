@@ -1,12 +1,3 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//     images: {
-//       domains: ['images.unsplash.com', 'pbs.twimg.com', "assets.aceternity.com"],
-//     },
-//   };
-
-//   export default nextConfig;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -22,6 +13,20 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     optimizeCss: true,
+  },
+  async redirects() {
+    return [
+      {
+        source: "/aboutus",
+        destination: "/about-us",
+        permanent: true,
+      },
+      {
+        source: "/services",
+        destination: "/services/mobile-app-development",
+        permanent: true,
+      },
+    ];
   },
 };
 

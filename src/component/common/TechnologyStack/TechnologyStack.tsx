@@ -30,7 +30,7 @@ const TechnologyStack = () => {
                 <TabsTrigger value="Frontend">Frontend</TabsTrigger>
                 <TabsTrigger value="Backend">Backend</TabsTrigger>
                 <TabsTrigger value="Mobile">Mobile</TabsTrigger>
-                <TabsTrigger value="Microsoft">Microsoft</TabsTrigger>
+                <TabsTrigger value="Microsoft">Technologies</TabsTrigger>
                 <TabsTrigger value="AL & ML">AL & ML</TabsTrigger>
                 <TabsTrigger value="Devops">Devops</TabsTrigger>
               </TabsList>
