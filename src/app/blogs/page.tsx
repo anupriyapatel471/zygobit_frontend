@@ -39,7 +39,6 @@ const blogListingJsonLd = {
 };
 
 export const revalidate = 60;
-
 const BlogPage = () => {
   return (
     <>
