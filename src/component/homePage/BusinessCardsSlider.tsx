@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 interface BusinessCardsProps {
   id: number;
@@ -28,8 +29,9 @@ export function BussinessCardsSlider({
             <CarouselItem key={solution.id}>
               <div className="">
                 <div className="w-full  rounded-2xl border-2 border-white/20 p-4 text-white group">
-                  <span className=" border-2 border-white/20 flex items-center justify-center rounded-xl w-14 h-14 sm:w-20 sm:h-20 overflow-hidden">
-                    <img
+                  <span className=" border-2 relative border-white/20 flex items-center justify-center rounded-xl w-14 h-14 sm:w-20 sm:h-20 overflow-hidden">
+                    <Image
+                      fill
                       className="brightness-0 invert size-full"
                       src="/images/sol_three.png"
                       alt="image"

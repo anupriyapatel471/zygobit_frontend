@@ -34,6 +34,7 @@ import { Metadata } from "next";
 import WhyChooseUs from "@/component/new/WhyChooseUs";
 import AboutCta from "@/component/new/AboutCta";
 import CtaSecond from "@/component/new/CtaSecond";
+import { WebPage, WithContext } from "schema-dts";
 
 export interface project {
   projectInfo: ReactNode;
@@ -47,39 +48,56 @@ export interface project {
 }
 
 export const metadata: Metadata = {
-  title: "Home | Zygobit - Web & Mobile App Development, UI/UX, AI Solutions",
+  title: "Zygobit | Web & Mobile Apps, UI/UX & AI Solutions",
   description:
-    "Partner with Zygobit for innovative web and mobile app development, UI/UX design, and AI-powered solutions. Scalable, custom technology to grow your business.",
+    "Partner with Zygobit for web and mobile app development, UI/UX design, and AI-driven solutions. Scalable, custom tech to grow your business.",
   keywords:
     "Zygobit, Web App Development, Mobile App Development, UI/UX Design, AI Solutions, Machine Learning, Software Development, IT Consulting",
   openGraph: {
     title: "Home | Zygobit - Web & Mobile App Development, UI/UX, AI Solutions",
     description:
       "Explore Zygobit's full-service digital solutions—from custom web and mobile apps to intuitive UI/UX design and intelligent AI tools. Build smarter today.",
-    images: ["/images/Logo.jpg"],
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+    images: ["/images/Logo.png"],
+    url: "https://www.zygobit.com/",
     type: "website",
   },
   twitter: {
     title: "Home | Zygobit - Expert Web, Mobile & AI Solutions",
     description:
       "Web and mobile development, UI/UX design, and AI solutions tailored to grow your business. Discover Zygobit’s custom technology services.",
-    images: ["/images/Logo.jpg"],
+    images: ["/images/Logo.png"],
     card: "summary_large_image",
-    // creator: "@Teqexpert",
   },
   alternates: {
-    canonical: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/",
+    canonical: "https://www.zygobit.com/",
   },
+};
+
+const homePageJsonLd: WithContext<WebPage> = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Zygobit | Web & Mobile App Development Experts",
+  url: "https://www.zygobit.com",
+  description:
+    "Partner with Zygobit for web and mobile app development, UI/UX design, and AI-driven solutions. Scalable, custom tech to grow your business.",
 };
 
 const Home = async () => {
   const clientHeading = "Let’s Hear What Our Clients Say";
+  // const clientSaysDetails =
+  //   "Using the latest technology and industry expertise, we built top-end Android and iOS-based applications that add value to the business and user experience.";
+
   const clientSaysDetails =
-    "Using the latest technology and industry expertise, we built top-end Android and iOS-based applications that add value to the business and user experience.";
+    "By leveraging the latest technologies and expert industry knowledge, we created high-quality Android and iOS apps that deliver real business value and enhanced user experience.";
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homePageJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <AOSInitializer />
 
       <HomeBanner />

@@ -19,6 +19,7 @@ import {
 import { ChevronDown } from "lucide-react";
 
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function NavigationMenuDemo() {
   const [classDynamic, setClassDynamic] = React.useState("top-5 lg:top-full ");
@@ -173,8 +174,10 @@ export default function NavigationMenuDemo() {
                           href="/"
                         >
                           <div>
-                            <img
-                              className="w-[250px]"
+                            <Image
+                              width={250}
+                              height={150}
+                              className="w-[250px] h-auto"
                               src="/images/Logo.png"
                               alt="Logo"
                             />
@@ -254,7 +257,13 @@ const ServiceListItem = ({
 }) => (
   <div className="flex items-center sm:items-start gap-4 group transition-all duration-500">
     <div className="p-2 sm:p-0 w-12 sm:w-20 h-12 sm:h-[70px] flex items-center justify-center bg-[#FFE8E0] shadow-[0_4px_20px_0_#170F4914] rounded-xl">
-      <img className="w-6 sm:w-auto" src={icon} alt="icon" />
+      <Image
+        width={24}
+        height={24}
+        className="w-6 sm:w-auto sm:h-auto"
+        src={icon}
+        alt="icon"
+      />
     </div>
     <ListItem
       href={href}
@@ -287,7 +296,9 @@ const ListItem = React.forwardRef<
         >
           <div className="w-full sm:w-auto flex items-center gap-2 text-base sm:text-lg lg:text-lg font-semibold sm:font-bold leading-none">
             {title}
-            <img
+            <Image
+              width={12}
+              height={12}
               className="w-3 group-hover:ml-5 transition-all duration-500 sm:w-auto"
               src="/images/right_icon.png"
               alt="Right Icon"

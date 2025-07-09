@@ -27,9 +27,9 @@ export function TracingBeams({ blog }: { blog: Blog }) {
           <div className="container remove-bg">
             <div className="w-full antialiased sm:pt-4 relative lg:pl-[60px]">
               <div className="sm:mb-10">
-                <h2 className=" text-white font-medium sm:font-bold text-2xl sm:text-4xl w-fit mb-2  sm:mb-4">
+                <h1 className=" text-white font-medium sm:font-bold text-2xl sm:text-4xl w-fit mb-2  sm:mb-4">
                   {blog.title}
-                </h2>
+                </h1>
                 <b className="font-light sm:font-semibold text-sm block my-3">
                   Tag: {blog.tags && blog.tags.join(", ")}
                 </b>
@@ -60,9 +60,9 @@ export function TracingBeams({ blog }: { blog: Blog }) {
                     <div className="mt-6">
                       {blog.projectInfo.map((project, projIndex) => (
                         <div key={`project-${projIndex}`} className="mb-4">
-                          <h3 className="text-base sm:text-lg font-medium mb-2 sm:mb-0 sm:font-semibold">
+                          <h2 className="text-base sm:text-lg font-medium mb-2 sm:mb-0 sm:font-semibold">
                             {project.SubTitle}
-                          </h3>
+                          </h2>
                           <p className="text-sm font-light sm:font-normal">
                             {project.SubDescription}
                           </p>

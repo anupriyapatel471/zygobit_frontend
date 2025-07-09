@@ -237,6 +237,15 @@
               "type": "String",
               "isRequired": false,
               "attributes": []
+            },
+            "metaData": {
+              "name": "metaData",
+              "isArray": false,
+              "type": {
+                "nonModel": "Metadata"
+              },
+              "isRequired": false,
+              "attributes": []
             }
           },
           "syncable": true,
@@ -303,20 +312,6 @@
               "isRequired": false,
               "attributes": []
             },
-            "androidDownloads": {
-              "name": "androidDownloads",
-              "isArray": false,
-              "type": "Int",
-              "isRequired": false,
-              "attributes": []
-            },
-            "iosDownloads": {
-              "name": "iosDownloads",
-              "isArray": false,
-              "type": "Int",
-              "isRequired": false,
-              "attributes": []
-            },
             "createdAt": {
               "name": "createdAt",
               "isArray": false,
@@ -359,43 +354,8 @@
               "isRequired": false,
               "attributes": []
             },
-            "technologyDescription": {
-              "name": "technologyDescription",
-              "isArray": false,
-              "type": "String",
-              "isRequired": false,
-              "attributes": []
-            },
             "developmentDescription": {
               "name": "developmentDescription",
-              "isArray": false,
-              "type": "String",
-              "isRequired": false,
-              "attributes": []
-            },
-            "evaluationDescription": {
-              "name": "evaluationDescription",
-              "isArray": false,
-              "type": "String",
-              "isRequired": false,
-              "attributes": []
-            },
-            "evaluationImage": {
-              "name": "evaluationImage",
-              "isArray": false,
-              "type": "String",
-              "isRequired": false,
-              "attributes": []
-            },
-            "googlePlayAppLink": {
-              "name": "googlePlayAppLink",
-              "isArray": false,
-              "type": "String",
-              "isRequired": false,
-              "attributes": []
-            },
-            "appStoreAppLink": {
-              "name": "appStoreAppLink",
               "isArray": false,
               "type": "String",
               "isRequired": false,
@@ -420,13 +380,6 @@
             },
             "slug": {
               "name": "slug",
-              "isArray": false,
-              "type": "String",
-              "isRequired": false,
-              "attributes": []
-            },
-            "projectIcon": {
-              "name": "projectIcon",
               "isArray": false,
               "type": "String",
               "isRequired": false,
@@ -525,6 +478,15 @@
               "name": "developmentTime",
               "isArray": false,
               "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "metaData": {
+              "name": "metaData",
+              "isArray": false,
+              "type": {
+                "nonModel": "Metadata"
+              },
               "isRequired": false,
               "attributes": []
             }
@@ -702,6 +664,25 @@
             },
             "bgGradientTwo": {
               "name": "bgGradientTwo",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            }
+          }
+        },
+        "Metadata": {
+          "name": "Metadata",
+          "fields": {
+            "title": {
+              "name": "title",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "description": {
+              "name": "description",
               "isArray": false,
               "type": "String",
               "isRequired": false,

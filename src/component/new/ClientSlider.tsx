@@ -18,7 +18,7 @@ const testimonials = [
     designation: "Total Wireless Tracker",
     src: "/images/clientOne.png",
     videosrc:
-      "https://zygobit-images.s3.ap-south-1.amazonaws.com/Review+videos/alan_review.mp4",
+      "https://zygobit-images.s3.ap-south-1.amazonaws.com/Review+videos/alan.mp4",
   },
 
   {
@@ -137,9 +137,9 @@ export function ClientSlider() {
                         />
                       </div>
                       <div>
-                        <h4 className="font-medium uppercase tracking-wide text-sm text-[#E0E0E0]">
+                        <h5 className="font-medium uppercase tracking-wide text-sm text-[#E0E0E0]">
                           {data.name}
-                        </h4>
+                        </h5>
                         <p className="font-light text-sm">{data.designation}</p>
                       </div>
                     </div>

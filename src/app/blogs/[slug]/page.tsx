@@ -15,8 +15,8 @@ Amplify.configure(outputs);
 const DEFAULT_META = {
   title: "Zygobit Blog",
   description: "Zygobit Blog",
-  images: ["/images/Logo.jpg"],
-  creator: "Teqexpert",
+  images: ["/images/Logo.png"],
+  creator: "Zygobit",
 };
 
 async function fetchBlogBySlug(slug: string) {
@@ -47,9 +47,8 @@ export async function generateMetadata({
   params: { slug: string };
 }) {
   const blog = await fetchBlogBySlug(params.slug);
-
-  const title = blog?.title || DEFAULT_META.title;
-  const description = blog?.description || DEFAULT_META.description;
+  const title = blog?.metadata?.title || DEFAULT_META.title;
+  const description = blog?.metadata?.description || DEFAULT_META.description;
 
   return {
     title,
@@ -58,7 +57,7 @@ export async function generateMetadata({
       title,
       description,
       images: blog?.image,
-      url: `https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/blog/${params.slug}`,
+      url: `https://www.zygobit.com/blogs/${params.slug}`,
     },
     twitter: {
       title,
@@ -67,14 +66,31 @@ export async function generateMetadata({
       card: "summary_large_image",
       creator: DEFAULT_META.creator,
     },
+    alternates: {
+      canonical: `https://www.zygobit.com/blog/${params.slug}`,
+    },
   };
 }
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const blog = await fetchBlogBySlug(params.slug);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    name: blog?.title,
+    url: `https://www.zygobit.com/blogs/${params.slug}`,
+    image: blog?.image,
+    description: blog?.description,
+  };
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <AOSInitializer />
       <TracingBeams blog={blog} />
       <ContactForm />

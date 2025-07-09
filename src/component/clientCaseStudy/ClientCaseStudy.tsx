@@ -8,7 +8,6 @@ import { ProjectData } from "@/app/type/projectType";
 
 const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
   const router = useRouter();
-
   const cardData = [
     {
       title: "Client",
@@ -112,7 +111,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
       >
         <div className="container">
           <div className="w-full flex justify-between ">
-            <div className="w-full lg:w-[520px] flex flex-col gap-4 sm:gap-10 py-6">
+            <div className="w-full lg:w-[550px] flex flex-col gap-4 sm:gap-10 py-6">
               <Button
                 onClick={() => router.back()}
                 className="w-10 h-10 p-0 sm:p-0 sm:w-12 sm:h-12 rounded-full bg-white hover:bg-white"
@@ -138,12 +137,12 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     />
                   </div>
                 )}
-                <h2
-                  className="font-bold text-3xl sm:text-[35px] lg:text-[45px] w-full lg:w-fit sm:w-fit lg:whitespace-nowrap mt-4 sm:mt-0 "
+                <h1
+                  className="font-bold text-3xl sm:text-[35px] lg:text-[45px] w-full lg:w-fit sm:w-fit lg:leading-[50px] mt-4 sm:mt-0 "
                   style={{ color: projectData?.testColor }}
                 >
                   {projectData?.projectName}
-                </h2>
+                </h1>
               </div>
               <p
                 className="text-sm sm:text-base slg:text-lg"
@@ -171,17 +170,28 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                 ))}
               </div>
             </div>
-            {projectData?.mockupImage && (
-              <div className="w-[875px] -right-10 relative hidden lg:inline">
-                <Image
-                  width={875}
-                  height={570}
-                  className="w-full h-full object-cover"
-                  src={projectData?.mockupImage}
-                  alt="mobile image"
-                />
-              </div>
-            )}
+            {projectData?.mockupImage &&
+              (projectData?.category === "Mobile Application" ? (
+                <div className="w-[875px] -right-10 relative hidden lg:inline">
+                  <Image
+                    width={875}
+                    height={570}
+                    className="w-full h-full object-cover"
+                    src={projectData?.mockupImage}
+                    alt="mobile image"
+                  />
+                </div>
+              ) : (
+                <div className="w-[700px] -right-10 h-auto  relative hidden lg:inline">
+                  <Image
+                    width={770.7947998046875}
+                    height={505.0367431640625}
+                    className="w-full h-full object-contain"
+                    src={projectData?.mockupImage}
+                    alt="mobile image"
+                  />
+                </div>
+              ))}
           </div>
         </div>
       </section>
@@ -316,10 +326,10 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
               />
             </div>
 
-            <div className="w-full mt-8 lg:mt-14 grid grid-cols-2 sm:grid-cols-3 sm:flex  xl:grid-cols-6 justify-center items-center gap-y-10 sm:gap-y-0  gap-5 sm:gap-10 lg:gap-14">
+            <div className="w-full mt-8 lg:mt-14 grid grid-cols-2 sm:grid-cols-3 sm:flex xl:grid-cols-6 justify-center items-center gap-y-10 sm:gap-y-0  gap-5 sm:gap-10 lg:gap-14 sm:flex-wrap sm:justify-center">
               {projectData?.technologyImages.map((data, index) => (
                 <div key={index} className="flex flex-col gap-2 sm:gap-5">
-                  <div className="w-full mx-auto sm:w-32 h-32 lg:w-40 lg:h-40 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
+                  <div className="w-full mx-auto sm:w-32 h-32 lg:w-36 lg:h-36 p-5 sm:p-3 rounded-3xl flex items-center justify-center border-[4px] border-white/20 relative">
                     <Image
                       src={data.ImageUrl}
                       alt="Technology"
@@ -360,7 +370,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
             <div className="w-[200px] h-[200px] bg-[#FFE5DD] rounded-full absolute -bottom-12  left-1/2"></div>
             <div className="w-full lg:w-1/2 relative z-10 lg:static">
               <h3 className=" font-bold text-2xl sm:text-3xl lg:text-[38px] text-shadow-2xl mb-3 sm:mb-5">
-                Mobile App
+                {projectData?.category}
               </h3>
               <ul className="list-decimal sm:font-bold text-sm space-y-4 pl-3.5 sm:pl-5">
                 {projectData?.features &&

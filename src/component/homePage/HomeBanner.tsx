@@ -1,6 +1,7 @@
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import HomeBannerSlider from "../common/HomeBannerSlider/HomeBannerSlider";
 
 const HomeBanner = () => {
   return (
@@ -33,10 +34,11 @@ const HomeBanner = () => {
             <div className="w-full order-2 sm:order-none relative px-2">
               <div className="w-full relative top-7 sm:top-0 h-[250px] sm:h-[420px]">
                 <Image
-                  className="w-full  object-contain"
+                  className="w-full object-contain"
                   fill
                   src="/images/banner_logo.svg"
                   alt="Logo"
+                  priority
                 />
               </div>
               <div className="w-full absolute top-7 sm:top-0 left-0 grid grid-cols-3 gap-y-20 sm:gap-y-0 sm:flex items-end justify-between px-0 lg:px-24 pt-0 sm:pt-7">
@@ -163,41 +165,58 @@ const HomeBanner = () => {
                 <span className="font-semibold sm:font-light text-base sm:text-xl">
                   We are Trusted by
                 </span>
-                <ul className="flex flex-wrap gap-5  sm:gap-10 sm:gap-y-6 mt-4 sm:mt-6 mb-6 sm:mb-9">
+                <HomeBannerSlider />
+                <ul className="hidden sm:flex flex-wrap gap-5  sm:gap-10 sm:gap-y-6 mt-4 sm:mt-6 mb-6 sm:mb-9">
                   <li>
-                    <img
-                      className="w-[150px] sm:w-[199px]"
+                    <Image
+                      width={200}
+                      height={200}
+                      className="w-[150px] sm:w-[199px] h-auto sm:h-auto"
                       src="/images/trackday.svg"
                       alt="Trackday logo"
                     />
                   </li>
                   <li>
-                    <img
-                      className="w-[100px] sm:w-auto"
+                    <Image
+                      width={100}
+                      height={100}
+                      className="w-[100px] sm:w-auto h-auto sm:h-auto"
                       src="/images/slick.svg"
                       alt="Slick logo"
                     />
                   </li>
                   <li>
-                    <img src="/images/recovery.svg" alt="Recovery logo" />
+                    <Image
+                      width={66}
+                      height={66}
+                      className="w-auto h-auto"
+                      src="/images/recovery.svg"
+                      alt="Recovery logo"
+                    />
                   </li>
                   <li>
-                    <img
-                      className="w-[70px] sm:w-auto"
+                    <Image
+                      width={100}
+                      height={100}
+                      className="w-[70px] sm:w-auto h-auto sm:h-auto"
                       src="/images/pilot.svg"
                       alt="pilot logo"
                     />
                   </li>
                   <li>
-                    <img
-                      className="w-[110px] sm:w-auto"
+                    <Image
+                      width={150}
+                      height={150}
+                      className="w-[110px] h-auto sm:w-auto sm:h-auto"
                       src="/images/abbsi_new.svg"
                       alt="Abbsi logo"
                     />
                   </li>
                   <li>
-                    <img
-                      className="w-[60px] sm:w-auto"
+                    <Image
+                      width={100}
+                      height={100}
+                      className="w-[60px] h-auto sm:w-auto sm:h-auto"
                       src="/images/residence.svg"
                       alt="Residence logo"
                     />

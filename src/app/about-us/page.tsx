@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { Metadata } from "next";
@@ -23,28 +22,41 @@ const ContactForm = dynamic(
 const ClientSays = dynamic(
   () => import("@/component/common/ClientSays/ClientSays")
 );
+import { WebPage, WithContext } from "schema-dts";
 
 export const metadata: Metadata = {
-  title: "About us",
-  description: "Zygobit Website About Us Page",
+  title: "About Zygobit | Web & Mobile App Development Experts",
+  description:
+    "Discover Zygobit – a cutting-edge software development company offering web and mobile app development, UI/UX design, and AI-driven solutions.",
   keywords:
-    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "Zygobit, About Zygobit, Web Development Company, Mobile App Development, UI/UX Design, AI Solutions, Custom Software Development, Tech Company India",
   openGraph: {
-    title: "About us",
-    description: "Zygobit Website About Us Page",
-    images: ["/images/Logo.jpg"],
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/about-us",
+    title: "About Zygobit | Web & Mobile App Development Experts",
+    description:
+      "Learn more about Zygobit – experts in custom web apps, mobile development, and digital transformation solutions.",
+    images: ["/images/Logo.png"],
+    url: "https://www.zygobit.com/about-us",
   },
   twitter: {
-    title: "About us",
-    description: "Zygobit Website About Us Page",
-    images: ["/images/Logo.jpg"],
+    title: "About Zygobit | Web & Mobile App Development Experts",
+    description:
+      "Get to know Zygobit – your trusted partner for innovative and scalable digital solutions.",
+    images: ["/images/Logo.png"],
     card: "summary_large_image",
-    creator: "Teqexpert",
+    creator: "Zygobit",
   },
   alternates: {
-    canonical: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/about-us",
+    canonical: "https://www.zygobit.com/about-us",
   },
+};
+
+const aboutPageJsonLd: WithContext<WebPage> = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "About Zygobit",
+  url: "https://www.zygobit.com/about-us",
+  description:
+    "Discover Zygobit – a cutting-edge software development company offering web and mobile app development, UI/UX design, and AI-driven solutions.",
 };
 
 const About = () => {
@@ -63,6 +75,12 @@ const About = () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aboutPageJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <AOSInitializer />
 
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
@@ -125,7 +143,8 @@ const About = () => {
 
       <section className="w-full  mb-0 sm:mb-10 lg:mb-0 pt-10 pb-10 sm:py-12 lg:py-20 relative">
         <div className="absolute top-0 left-0 w-full h-full -z-10">
-          <img
+          <Image
+          fill
             className="w-full h-full object-cover"
             src="/images/cta_bg.png"
             alt="Cta bg"

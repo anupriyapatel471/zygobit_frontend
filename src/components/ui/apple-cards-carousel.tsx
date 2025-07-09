@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 // import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import Image from "next/image";
 // import { SliderHoverCards } from "@/component/sevices/MobileAppDevelopment/SliderHoverCards";
 // import { EvervaultCards } from "@/component/common/EvervaultCards/EvervaultCards";
 
@@ -128,10 +129,12 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             ))}
           </div>
         </div>
-<div className="flex justify-end gap-5 mr-0 sm:mr-0 lg:mr-[7rem] 2xl:mr-[12rem] mt-5 lg:mt-9 lg:px-5 ">          <button
+        <div className="flex justify-end gap-5 mr-0 sm:mr-0 lg:mr-[7rem] 2xl:mr-[12rem] mt-5 lg:mt-9 lg:px-5 ">
+          <button
             className="relative z-40 w-10 h-10 sm:h-12 sm:w-12 rounded-full bg-transparent border border-orange-600 flex items-center justify-center disabled:opacity-50"
             onClick={scrollLeft}
             disabled={!canScrollLeft}
+            aria-label="Scroll left"
           >
             <IconArrowNarrowLeft className="h-6 w-6 text-orange-600" />
           </button>
@@ -139,6 +142,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             className="relative z-40 w-10 h-10 sm:h-12 sm:w-12 rounded-full bg-transparent border border-orange-600 flex items-center justify-center disabled:opacity-50"
             onClick={scrollRight}
             disabled={!canScrollRight}
+            aria-label="Scroll right"
           >
             <IconArrowNarrowRight className="h-6 w-6 text-orange-600" />
           </button>
@@ -247,7 +251,13 @@ export const Card = ({
         >
           {card.icon.length > 0 && (
             <div className="relative -left-6">
-              <img src={card.icon} alt="card icon" />
+              <Image
+                width={30}
+                height={50}
+                className="w-auto h-auto"
+                src={card.icon}
+                alt="card icon"
+              />
             </div>
           )}
           <motion.p

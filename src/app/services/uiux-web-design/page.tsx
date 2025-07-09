@@ -43,29 +43,50 @@ import GridBoxes from "@/component/common/GridBoxes/GridBoxes";
 import cards from "../../../utils/content/gridboxcardsdata/uiuxgrid.json";
 import appleCardsData from "../../../utils/content/appleCardsCarousel/uiUxApple.json";
 import deliveringTailoredData from "../../../utils/content/deliveringTailored/tailoredUiux.json";
+import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "UI UX Design",
-  description: "Zygobit Website Uiux Web Design Page",
+  title: "UI/UX Design Services | Zygobit",
+  description:
+    "Enhance user experience with Zygobit's custom UI/UX design services. We craft intuitive, beautiful, and conversion-focused interfaces for web and mobile.",
+
   keywords:
-    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "UI UX Design Services, User Experience Design, User Interface Design, Web UI Design, Mobile UX Design, Zygobit, App Design, UX Research, UI Strategy, UX Consulting",
   openGraph: {
-    title: "UI UX Design",
-    description: "Zygobit Website Uiux Web Design Page",
-    images: ["/images/Logo.jpg"],
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/uiux-web-design",
+    title: "UI/UX Design Services | Zygobit",
+    description:
+      "Boost engagement and conversions with expert UI/UX design by Zygobit. We create user-first digital experiences for web and mobile.",
+    url: "https://www.zygobit.com/services/uiux-web-design",
+    type: "website",
+    images: [
+      {
+        url: "https://www.zygobit.com/images/Logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Zygobit UI/UX Design",
+      },
+    ],
   },
   twitter: {
-    title: "UI UX Design",
-    description: "Zygobit Website Uiux Web Design Page",
-    images: ["/images/Logo.jpg"],
+    title: "UI/UX Design Services | Zygobit",
+    description:
+      "Create intuitive and beautiful digital interfaces with Zygobit's UI/UX design services tailored to your business goals.",
     card: "summary_large_image",
-    creator: "Teqexpert",
+    creator: "@Zygobit",
+    images: ["https://www.zygobit.com/images/Logo.png"],
   },
   alternates: {
-    canonical:
-      "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/uiux-web-design",
+    canonical: "https://www.zygobit.com/services/uiux-web-design",
   },
+};
+
+const uiuxWebDesignJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "UI/UX Design Services",
+  url: "https://www.zygobit.com/services/uiux-web-design",
+  description:
+    "Zygobit's UI/UX design services create user-friendly and high-converting digital experiences. Our expert designers build intuitive, scalable, and visually engaging solutions for web and mobile.",
 };
 const UiuxWebDesign = () => {
   const GridBoxesHeading = " Why Zygobit for UI/UX Design ?";
@@ -90,6 +111,12 @@ const UiuxWebDesign = () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(uiuxWebDesignJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <AOSInitializer />
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
       <Suspense fallback={<Loader />}>
@@ -142,7 +169,10 @@ const UiuxWebDesign = () => {
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8 pb-8 sm:mb-12 sm:pb-12 border-b border-white">
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img
+                  <Image
+                    width={65}
+                    height={65}
+                    className="w-16 h-16"
                     src="/images/setting_design_icon.svg"
                     alt="setting design icon"
                   />
@@ -158,7 +188,10 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img
+                  <Image
+                    width={65}
+                    height={65}
+                    className="w-16 h-16"
                     src="/images/user_research_icon.svg"
                     alt="user research icon"
                   />
@@ -173,7 +206,10 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img
+                  <Image
+                    width={65}
+                    height={65}
+                    className="w-16 h-16"
                     src="/images/wireframing_icon.svg"
                     alt="wireframing icon"
                   />
@@ -188,7 +224,13 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/testing_icon.svg" alt="testing icon" />
+                  <Image
+                    width={65}
+                    height={65}
+                    className="w-16 h-16"
+                    src="/images/testing_icon.svg"
+                    alt="testing icon"
+                  />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Usability Testing
@@ -209,7 +251,10 @@ const UiuxWebDesign = () => {
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 ">
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img
+                  <Image
+                    width={65}
+                    height={65}
+                    className="w-16 h-16"
                     src="/images/setting_design_icon.svg"
                     alt="setting design icon"
                   />
@@ -224,7 +269,10 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img
+                  <Image
+                    width={65}
+                    height={65}
+                    className="w-16 h-16"
                     src="/images/user_research_icon.svg"
                     alt="user research icon"
                   />
@@ -239,7 +287,10 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img
+                  <Image
+                    width={65}
+                    height={65}
+                    className="w-16 h-16"
                     src="/images/wireframing_icon.svg"
                     alt="wireframing icon"
                   />
@@ -254,7 +305,13 @@ const UiuxWebDesign = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/testing_icon.svg" alt="testing icon" />
+                  <Image
+                    width={65}
+                    height={65}
+                    className="w-16 h-16"
+                    src="/images/testing_icon.svg"
+                    alt="testing icon"
+                  />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Design Hand off & implementation
@@ -279,7 +336,8 @@ const UiuxWebDesign = () => {
 
       <section className="w-full  overflow-hidden  py-12 sm:py-16 relative">
         <div className="absolute top-0 left-0 w-full h-full -z-10">
-          <img
+          <Image
+            fill
             className="w-full h-full object-cover"
             src="/images/cta_bg.png"
             alt="cta bg"

@@ -53,27 +53,38 @@ import cards from "../../../utils/content/gridboxcardsdata/gridcardMobile.json";
 import appleCardsData from "../../../utils/content/appleCardsCarousel/mobileAppApple.json";
 
 export const metadata: Metadata = {
-  title: "Mobile App Development",
-  description: "Zygobit Website Mobile App Development Page",
+  title: "Mobile App Development | Zygobit",
+  description:
+    "Get custom mobile app development for iOS & Android. Zygobit builds secure, scalable, high-performance apps tailored to your business goals.",
   keywords:
-    "Zygobit, Web Application Development, Mobile App Development, UI/UX Design, Machine Learning, AI, Web Development, Software Development, IT Solutions, Business Development",
+    "Mobile App Development, iOS App Development, Android App Development, Custom App Development, Cross-Platform App, React Native, Flutter, App Development Company, Zygobit",
   openGraph: {
-    title: "Mobile App Development",
-    description: "Zygobit Website Mobile App Development Page",
-    images: ["/images/Logo.jpg"],
-    url: "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/mobile-app-development",
+    title: "Mobile App Development | Zygobit",
+    description:
+      "Explore Zygobit's expert mobile app development services for scalable, secure, and engaging mobile experiences.",
+    images: ["/images/Logo.png"],
+    url: "https://www.zygobit.com/services/mobile-app-development",
   },
   twitter: {
-    title: "Mobile App Development",
-    description: "Zygobit Website Mobile App Development Page",
-    images: ["/images/Logo.jpg"],
+    title: "Mobile App Development | Zygobit",
+    description:
+      "Get end-to-end custom mobile app development services with Zygobit. Expert solutions for startups and enterprises.",
+    images: ["/images/Logo.png"],
     card: "summary_large_image",
-    creator: "Teqexpert",
+    creator: "Zygobit",
   },
   alternates: {
-    canonical:
-      "https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/services/mobile-app-development",
+    canonical: "https://www.zygobit.com/services/mobile-app-development",
   },
+};
+
+const mobileAppDevelopmentJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Mobile App Development",
+  url: "https://www.zygobit.com/services/mobile-app-development",
+  description:
+    "Explore Zygobit's expert mobile app development services tailored for Android, iOS, and hybrid platforms.",
 };
 
 const MobileAppDevelopment = () => {
@@ -101,14 +112,20 @@ const MobileAppDevelopment = () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(mobileAppDevelopmentJsonLd).replace(
+            /</g,
+            "\\u003c"
+          ),
+        }}
+      />
       <AOSInitializer />
-
       <HeroBanner heroHeading={heroHeading} heroParagraph={heroParagraph} />
-
       <Suspense fallback={<Loader />}>
         <WeDeliver />
       </Suspense>
-
       <section className="w-full relative overflow-hidden  bg-white py-12 sm:py-14 lg:py-20">
         <div className="container remove-bg">
           <div className="w-full flex flex-wrap lg:flex-nowrap gap-5">
@@ -129,7 +146,6 @@ const MobileAppDevelopment = () => {
           </div>
         </div>
       </section>
-
       <section className="w-full pt-12 sm:pt-14 lg:pt-20 inline-block">
         <div className="container remove-bg">
           <div className="w-full  sm:text-center mb-5 sm:mb-10">
@@ -154,9 +170,7 @@ const MobileAppDevelopment = () => {
           </div>
         </div>
       </section>
-
       <CtaSecond content={""} Aurora={""} vortex={""} />
-
       <section className="w-full pb-12 sm:pb-14 lg:pb-20">
         <div className="container remove-bg">
           <div className="w-full flex flex-wrap lg:flex-nowrap gap-6 lg:gap-10">
@@ -184,13 +198,11 @@ const MobileAppDevelopment = () => {
           </div>
         </div>
       </section>
-
       <StebTab
         stebTabData={stebTabMobileData}
         title={stebtabTitle}
         desc={stebtabDesc}
       />
-
       <div className="pt-12 sm:pt-0">
         <GridBoxes
           GridBoxesHeading={GridBoxesHeading}
@@ -198,11 +210,9 @@ const MobileAppDevelopment = () => {
           cards={cards}
         />
       </div>
-
       <Suspense fallback={<Loader />}>
         <TechnologyStack />
       </Suspense>
-
       <Suspense fallback={<Loader />}>
         <section className="w-full  py-10 sm:py-14  overflow-hidden">
           <div className="container remove-bg">
@@ -230,18 +240,14 @@ const MobileAppDevelopment = () => {
           </div>
         </section>
       </Suspense>
-
       <ClientSays
         clientHeading={clientHeading}
         clientSaysDetails={clientSaysDetails}
       />
-
       <Suspense fallback={<Loader />}>
         <Blog />
       </Suspense>
-
       <FaqSection faqData={faqMobileApp} />
-
       <ContactForm />
     </>
   );

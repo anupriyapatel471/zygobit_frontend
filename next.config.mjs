@@ -18,6 +18,11 @@ const nextConfig = {
       "zygobit-images.s3.ap-south-1.amazonaws.com",
     ],
   },
+  compress: true,
+  swcMinify: true,
+  experimental: {
+    optimizeCss: true,
+  },
 };
 
 export default nextConfig;

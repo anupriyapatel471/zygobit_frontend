@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const uiUxDesignProcess = () => {
   return (
     <>
@@ -26,7 +28,7 @@ const uiUxDesignProcess = () => {
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8 pb-8 sm:mb-12 sm:pb-12 border-b border-white">
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/setting_design_icon.svg" alt="icon" />
+                  <Image width={64} height={64} className="w-auto h-auto"  src="/images/setting_design_icon.svg" alt="icon" />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Setting Design Goals
@@ -39,7 +41,7 @@ const uiUxDesignProcess = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/user_research_icon.svg" alt="icon" />
+                  <Image width={64} height={64} className="w-auto h-auto" src="/images/user_research_icon.svg" alt="icon" />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   User research & Analysis
@@ -51,7 +53,7 @@ const uiUxDesignProcess = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/wireframing_icon.svg" alt="icon" />
+                  <Image width={64} height={64} className="w-auto h-auto" src="/images/wireframing_icon.svg" alt="icon" />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Wireframing & Prototyping
@@ -63,7 +65,7 @@ const uiUxDesignProcess = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/testing_icon.svg" alt="icon" />
+                  <Image width={64} height={64} className="w-auto h-auto" src="/images/testing_icon.svg" alt="icon" />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Usability Testing
@@ -84,7 +86,7 @@ const uiUxDesignProcess = () => {
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 ">
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/setting_design_icon.svg" alt="icon" />
+                  <Image width={64} height={64} className="w-auto h-auto" src="/images/setting_design_icon.svg" alt="icon" />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Visual Design & Branding
@@ -96,7 +98,7 @@ const uiUxDesignProcess = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/user_research_icon.svg" alt="icon" />
+                  <Image width={64} height={64} className="w-auto h-auto" src="/images/user_research_icon.svg" alt="icon" />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Interactions & Motion Design
@@ -108,7 +110,7 @@ const uiUxDesignProcess = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/wireframing_icon.svg" alt="icon" />
+                  <Image width={64} height={64} className="w-auto h-auto" src="/images/wireframing_icon.svg" alt="icon" />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Responsive & Adaptive Design
@@ -120,7 +122,7 @@ const uiUxDesignProcess = () => {
               </div>
               <div className="bg-[#D9D9D91A] backdrop-blur-md p-5 rounded-2xl">
                 <div className="relative -left-5">
-                  <img src="/images/testing_icon.svg" alt="icon" />
+                  <Image width={64} height={64} className="w-auto h-auto" src="/images/testing_icon.svg" alt="icon" />
                 </div>
                 <h4 className="my-2.5 font-semibold text-xl">
                   Design Hand off & implementation

@@ -22,7 +22,6 @@ async function fetchFeaturedProjects(slug?: string) {
     throw error;
   }
 }
-
 export async function generateStaticParams() {
   const projects = await fetchFeaturedProjects();
   return projects.map((project: any) => ({ slug: project.slug.toString() }));
@@ -34,28 +33,52 @@ export async function generateMetadata({
   params: { slug: string };
 }) {
   const project = await fetchFeaturedProjects(params.slug);
+  const title = project?.metadata?.title || "Zygobit Featured Projects";
+  const description =
+    project?.metadata?.description || "Zygobit Featured Projects";
+ 
   return {
-    title: project?.title || "Zygobit Featured Projects",
-    description: project?.description || "Zygobit Featured Projects",
+    title,
+    description,
     openGraph: {
-      title: project?.title || "Zygobit Featured Projects",
-      description: project?.description || "Zygobit Featured Projects",
-      images: project?.image || "/images/Logo.jpg",
-      url: `https://aws-amplify.d1qoezcrvjvjht.amplifyapp.com/portfolio/${params.slug}`,
+      title,
+      description,
+      images: "https://www.zygobit.com/images/Logo.png",
+      url: `https://www.zygobit.com/portfolio/${params.slug}`,
     },
     twitter: {
-      title: project?.title || "Zygobit Featured Projects",
-      description: project?.description || "Zygobit Featured Projects",
-      images: project?.image || "/images/Logo.jpg",
+      title,
+      description,
+      images: "https://www.zygobit.com/images/Logo.png",
       card: "summary_large_image",
-      creator: "Teqexpert",
+      creator: "Zygobit",
+    },
+    alternates: {
+      canonical: `https://www.zygobit.com/portfolio/${params.slug}`,
     },
   };
 }
 
 const CaseStudyPage = async ({ params }: { params: { slug: string } }) => {
   const project = await fetchFeaturedProjects(params.slug);
-  return <ClientCaseStudy projectData={project} />;
+  const portfolioJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project?.title,
+    description: project?.description,
+    url: `https://www.zygobit.com/portfolio/${params.slug}`,
+  };
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(portfolioJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      <ClientCaseStudy projectData={project} />;
+    </>
+  );
 };
 
 export default CaseStudyPage;

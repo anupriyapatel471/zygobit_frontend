@@ -73,12 +73,14 @@ export default function FeaturedSlider() {
                         </div>
                         <div className="order-1 sm:order-2 inline w-full sm:w-1/2 lg:w-3/5">
                           <div className="w-full relative h-[250px] sm:h-[400px] lg:h-[450px] ">
-                            <Image
-                              fill
-                              className="w-full h-full rounded-lg object-cover"
-                              src={project.backgroundImage || ""}
-                              alt="image"
-                            />
+                            {project.backgroundImage && (
+                              <Image
+                                fill
+                                className="w-full h-full rounded-lg object-cover"
+                                src={project?.backgroundImage}
+                                alt="image"
+                              />
+                            )}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                               {project.mobileImage && (
                                 <Image
