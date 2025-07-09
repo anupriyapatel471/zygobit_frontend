@@ -125,9 +125,9 @@ const Home = async () => {
                 className="border border-muted-foreground  p-4 pl-0 sm:pl-0 sm:p-0 rounded-lg sm:rounded-none sm:border-none w-auto"
               >
                 <span>{data?.image}</span>
-                <h5 className="pl-4  font-semibold text-base sm:text-lg my-2">
+                <h4 className="pl-4  font-semibold text-base sm:text-lg my-2">
                   {data?.heading}
-                </h5>
+                </h4>
                 <p className="pl-4 text-sm sm:text-base text-muted-foreground">
                   {data?.paragraph}
                 </p>
