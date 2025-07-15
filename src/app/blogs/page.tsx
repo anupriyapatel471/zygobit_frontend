@@ -1,8 +1,5 @@
-import EcommerceTabbing from "@/component/blog/EcommerceTabbing/EcommerceTabbing";
-import ContactForm from "@/component/common/ContactForm/ContactForm";
-import AOSInitializer from "@/component/common/AOSInitializer";
-import BlogSection from "@/component/blog/BlogSection";
 import { Metadata } from "next";
+import BlogClientPage from "@/component/blog/BlogClientPage";
 
 export const metadata: Metadata = {
   title: "Zygobit Blog | Insights on Web, App & AI Development",
@@ -30,6 +27,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const revalidate = 60;
+
 const blogListingJsonLd = {
   "@context": "https://schema.org",
   "@type": "Blog",
@@ -38,7 +37,6 @@ const blogListingJsonLd = {
   description: "Insights on web, app & AI development from Zygobit.",
 };
 
-export const revalidate = 60;
 const BlogPage = () => {
   return (
     <>
@@ -48,16 +46,8 @@ const BlogPage = () => {
           __html: JSON.stringify(blogListingJsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <AOSInitializer />
-      <BlogSection />
-      <section className="w-full mt-9 mb-16">
-        <div className="w-full">
-          <EcommerceTabbing />
-        </div>
-      </section>
-      <ContactForm />
+      <BlogClientPage />
     </>
   );
 };
-
 export default BlogPage;
