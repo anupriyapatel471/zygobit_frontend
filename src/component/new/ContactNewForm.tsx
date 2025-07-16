@@ -108,7 +108,6 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
 
     return true;
   };
-
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!validate()) {
