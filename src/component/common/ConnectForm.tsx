@@ -61,6 +61,8 @@ const ConnectForm = () => {
   const [formData, setFormData] = useState<FormDataType>(initialState);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -151,6 +153,7 @@ const ConnectForm = () => {
         projectDetails: formData.projectDetails,
       });
       setIsSubmitted(true);
+      setIsDialogOpen(true);
     } catch (error) {
       console.error("Error saving data to DynamoDB:", error);
       toast.error("Error saving data to DynamoDB");
@@ -321,6 +324,8 @@ const ConnectForm = () => {
             loading={loading}
             isSubmitted={isSubmitted}
             setIsSubmitted={setIsSubmitted}
+            isDialogOpen={isDialogOpen}
+            setIsDialogOpen={setIsDialogOpen}
           />
         </div>
       </form>

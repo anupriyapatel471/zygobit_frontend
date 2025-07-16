@@ -7,13 +7,26 @@ export function ContactAKnowledge({
   loading,
   isSubmitted,
   setIsSubmitted,
+  isDialogOpen,
+  setIsDialogOpen,
 }: {
   loading: boolean;
   isSubmitted: boolean;
-  setIsSubmitted: any;
+  setIsSubmitted: React.Dispatch<React.SetStateAction<boolean>>;
+  isDialogOpen: boolean;
+  setIsDialogOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
+  const handleDialogChange = (open: boolean) => {
+    if (!open) {
+      setIsSubmitted(false);
+      setIsDialogOpen(false);
+    } else {
+      setIsDialogOpen(true);
+    }
+  };
+
   return (
-    <Dialog>
+    <Dialog open={isDialogOpen} onOpenChange={handleDialogChange}>
       <DialogTrigger asChild>
         <button
           type="submit"
@@ -57,11 +70,9 @@ export function ContactAKnowledge({
                   with you.
                 </p>
                 <button
-                  type="submit"
+                  type="button"
                   className="group bg-orange-600 hover:bg-orange-500 sm:h-12 col-span-1 sm:col-span-2 w-full overflow-hidden font-medium transition-all duration-500 btn-primary text-white relative"
-                  onClick={() => {
-                    setIsSubmitted(false);
-                  }}
+                  onClick={() => handleDialogChange(false)}
                 >
                   Done
                 </button>

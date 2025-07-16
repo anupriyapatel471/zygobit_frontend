@@ -50,6 +50,7 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
   const [formData, setFormData] = useState<FormDataType>(initialState);
   const [loading, setLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -113,8 +114,8 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
     if (!validate()) {
       return;
     }
-    console.log(formData);
     setLoading(true);
+
     try {
       await (client.queries as any).sendEmailContactForm({
         firstName: formData.firstName,
@@ -123,11 +124,12 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
         dialCode: formData.phoneNumber.dialCode,
 
         companyName: formData.companyName,
-
+        companyEmail: formData.companyEmail,
         budget: formData.budget,
         projectDetails: formData.projectDetails,
       });
       setIsSubmitted(true);
+      setIsDialogOpen(true);
     } catch (error) {
       console.error("Error saving data to DynamoDB:", error);
       toast.error("Error saving data to DynamoDB");
@@ -263,6 +265,8 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                       className="bg-black/5 placeholder:text-black/60 text-black border-black/20 text-xs lg:text-xs h-10 sm:h-11 font-normal"
                       placeholder=" "
                       type="email"
+                      value={formData.companyEmail}
+                      onChange={handleChange}
                     />
                     <label htmlFor="companyEmail">Company Email</label>
                   </div>
@@ -309,6 +313,8 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                     loading={loading}
                     isSubmitted={isSubmitted}
                     setIsSubmitted={setIsSubmitted}
+                    isDialogOpen={isDialogOpen}
+                    setIsDialogOpen={setIsDialogOpen}
                   />
                 </div>
               </div>
