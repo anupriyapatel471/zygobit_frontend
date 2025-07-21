@@ -1,16 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { useState, useEffect } from "react";
+
+import { useState, useEffect, useRef } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { generateClient } from "aws-amplify/data";
 import useAmplifyConfig from "@/hooks/useAmplify";
 import Loader from "../common/Loader/Loader";
-import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { ProjectData } from "@/app/type/projectType";
-// import { formatDownloads } from "@/lib/utils";
+import Link from "next/link";
 
 const client = generateClient();
 
@@ -18,6 +18,9 @@ const PortfolioProjects = () => {
   useAmplifyConfig();
   const [data, setData] = useState<ProjectData[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [activeTab, setActiveTab] = useState<string>("");
+
+  const hasRestored = useRef(false);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -32,9 +35,55 @@ const PortfolioProjects = () => {
     };
     fetchProjects();
   }, []);
+
   const categories = Array.from(
     new Set<string>(data.map((project) => project.category || "Uncategorized"))
   );
+  useEffect(() => {
+    if (!categories.length || hasRestored.current) return;
+
+    const state = history.state ?? {};
+    const validTab = categories.includes(state.tab) ? state.tab : categories[0];
+
+    setActiveTab(validTab);
+
+    setTimeout(() => {
+      const y = state.fromDetail ? state.scrollY : 0;
+      window.scrollTo({ top: y, behavior: "auto" });
+    }, 50);
+    history.replaceState({}, "");
+    hasRestored.current = true;
+  }, [categories]);
+
+  useEffect(() => {
+    const onPopState = () => {
+      const state = history.state ?? {};
+      if (!state.fromDetail || !categories.length) return;
+
+      const validTab = categories.includes(state.tab)
+        ? state.tab
+        : categories[0];
+      setActiveTab(validTab);
+
+      setTimeout(() => {
+        window.scrollTo({ top: state.scrollY ?? 0, behavior: "auto" });
+      }, 50);
+    };
+
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, [categories]);
+
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab);
+  };
+
+  const handleProjectClick = (tab: string) => {
+    history.replaceState(
+      { fromDetail: true, scrollY: window.scrollY, tab },
+      ""
+    );
+  };
 
   return loading ? (
     <Loader />
@@ -42,28 +91,34 @@ const PortfolioProjects = () => {
     <section className="w-full relative overflow-hidden mt-10 mb-14 sm:mb-20">
       <div className="container remove-bg">
         <div className="w-full">
-          <Tabs defaultValue={categories[0]} className="w-full">
-            <TabsList className=" gap-5 grid lg:flex lg:justify-center lg:items-center  w-full grid-cols-2 lg:grid-cols-5 h-auto">
+          <Tabs
+            value={activeTab || categories[0]}
+            onValueChange={handleTabChange}
+            className="w-full"
+          >
+            <TabsList className="gap-5 grid lg:flex lg:justify-center lg:items-center w-full grid-cols-2 lg:grid-cols-5 h-auto">
               {categories.map((category) => (
                 <TabsTrigger
                   key={category}
-                  className="justify-center "
+                  className="justify-center"
                   value={category}
                 >
                   {category}
                 </TabsTrigger>
               ))}
             </TabsList>
+
             {categories.map((category) => (
               <TabsContent key={category} value={category}>
                 <div className="w-full grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-10">
                   {data
                     .filter(
-                      (project) =>
+                      (project: ProjectData) =>
                         (project.category || "Uncategorized") === category
                     )
                     .map((project, index) => {
                       const isEven = index % 2 === 1;
+
                       return (
                         <div
                           key={project.id}
@@ -120,17 +175,16 @@ const PortfolioProjects = () => {
                                     </div>
                                   </div> */}
                                 </div>
+
                                 <Link
                                   href={`/portfolio/${project.slug}`}
-                                  className="cursor-pointer"
+                                  onClick={() => handleProjectClick(category)}
+                                  className="w-fit btn-primary text-white font-normal group bg-orange-600 hover:bg-orange-500 duration-500 transition-all"
                                 >
-                                  <button className="w-fit btn-primary text-white font-normal group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
-                                    View Case Study
-                                    <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                                  </button>
+                                  View Case Study
+                                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                                 </Link>
                               </div>
-
                               {/* 55% SECOND */}
                               <div className="order-1 lg:order-none w-full lg:w-[55%] relative">
                                 <div className="relative w-full h-[265px] sm:h-[370px] lg:h-[500px]">
@@ -178,7 +232,6 @@ const PortfolioProjects = () => {
                                   </div>
                                 </div>
                               </div>
-
                               {/* 45% SECOND */}
                               <div className="order-2 lg:order-none w-full lg:w-[45%] flex justify-between items-start flex-col gap-5 sm:gap-5 lg:gap-[126px]">
                                 <div>
@@ -229,12 +282,11 @@ const PortfolioProjects = () => {
                                 </div>
                                 <Link
                                   href={`/portfolio/${project.slug}`}
-                                  className="cursor-pointer"
+                                  onClick={() => handleProjectClick(category)}
+                                  className="w-fit btn-primary text-white font-normal group bg-orange-600 hover:bg-orange-500 duration-500 transition-all"
                                 >
-                                  <button className="w-fit btn-primary text-white font-normal group bg-orange-600 hover:bg-orange-500 duration-500 transition-all">
-                                    View Case Study
-                                    <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                                  </button>
+                                  View Case Study
+                                  <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                                 </Link>
                               </div>
                             </>

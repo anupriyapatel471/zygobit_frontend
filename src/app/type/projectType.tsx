@@ -32,7 +32,7 @@ export interface ProjectData {
   technologyImages: ProjectTechnology[];
 
   category?: string;
-  slug?: string;
+  slug: string;
   backgroundImage?: string;
   adminData?: AdminProjectData;
   themeColor?: ProjectThemeColor;

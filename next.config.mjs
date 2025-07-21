@@ -26,6 +26,31 @@ const nextConfig = {
         destination: "/services/mobile-app-development",
         permanent: true,
       },
+      {
+        source: "/service-detail/mobile-development",
+        destination: "/services/mobile-app-development",
+        permanent: true,
+      },
+      {
+        source: "/service-detail/e-commerce",
+        destination: "/services/e-commerce",
+        permanent: true,
+      },
+      {
+        source: "/service-detail/uiux-designs",
+        destination: "/services/uiux-web-design",
+        permanent: true,
+      },
+      {
+        source: "/service-detail/web-development",
+        destination: "/services/web-app-development",
+        permanent: true,
+      },
+      {
+        source: "/terms-of-service",
+        destination: "/terms-of-services",
+        permanent: true,
+      },
     ];
   },
 };
