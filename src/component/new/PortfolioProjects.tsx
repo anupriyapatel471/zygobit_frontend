@@ -187,12 +187,13 @@ const PortfolioProjects = () => {
                               </div>
                               {/* 55% SECOND */}
                               <div className="order-1 lg:order-none w-full lg:w-[55%] relative">
-                                <div className="relative w-full h-[265px] sm:h-[370px] lg:h-[500px]">
+                                <div className="relative w-full h-[265px] sm:h-[370px] lg:h-[500px] rounded-xl overflow-hidden">
                                   <Image
                                     fill
                                     src={project.backgroundImage || ""}
                                     alt="image"
                                     priority
+                                    className="object-cover"
                                   />
                                   <div className="w-full lg:w-[465px] h-[170px] sm:h-[320px] lg:h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                     {project.mobileImage && (
@@ -212,12 +213,13 @@ const PortfolioProjects = () => {
                             <>
                               {/* 55% FIRST */}
                               <div className="order-1 lg:order-none w-full lg:w-[55%] relative">
-                                <div className="relative w-full h-[265px] sm:h-[370px] lg:h-[500px]">
+                                <div className="relative w-full h-[265px] sm:h-[370px] lg:h-[500px] rounded-xl overflow-hidden">
                                   <Image
                                     fill
                                     src={project.backgroundImage || ""}
                                     alt="image"
                                     priority
+                                    className="object-cover"
                                   />
                                   <div className="w-full lg:w-[465px] h-[170px] sm:h-[320px] lg:h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                     {project.mobileImage && (
