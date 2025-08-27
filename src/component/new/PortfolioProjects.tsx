@@ -19,14 +19,22 @@ const PortfolioProjects = () => {
   const [data, setData] = useState<ProjectData[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [activeTab, setActiveTab] = useState<string>("");
+  const [currentPage, setCurrentPage] = useState<number>(1);
 
   const hasRestored = useRef(false);
+  const perPage = 5;
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
         const response = await (client.models as any).Projects.list();
-        setData(response.data);
+        const sorted = response.data.sort((a: ProjectData, b: ProjectData) => {
+          const dateA = a.updatedAt ? new Date(a.updatedAt).getTime() : 0;
+          const dateB = b.updatedAt ? new Date(b.updatedAt).getTime() : 0;
+          return dateB - dateA;
+        });
+
+        setData(sorted);
       } catch (err) {
         console.error("Error fetching projects:", err);
       } finally {
@@ -46,6 +54,7 @@ const PortfolioProjects = () => {
     const validTab = categories.includes(state.tab) ? state.tab : categories[0];
 
     setActiveTab(validTab);
+    setCurrentPage(state.page ?? 1);
 
     setTimeout(() => {
       const y = state.fromDetail ? state.scrollY : 0;
@@ -56,6 +65,19 @@ const PortfolioProjects = () => {
   }, [categories]);
 
   useEffect(() => {
+    if (!activeTab) return;
+    history.replaceState(
+      {
+        fromDetail: true,
+        scrollY: window.scrollY,
+        tab: activeTab,
+        page: currentPage,
+      },
+      ""
+    );
+  }, [activeTab, currentPage]);
+
+  useEffect(() => {
     const onPopState = () => {
       const state = history.state ?? {};
       if (!state.fromDetail || !categories.length) return;
@@ -64,6 +86,7 @@ const PortfolioProjects = () => {
         ? state.tab
         : categories[0];
       setActiveTab(validTab);
+      setCurrentPage(state.page ?? 1);
 
       setTimeout(() => {
         window.scrollTo({ top: state.scrollY ?? 0, behavior: "auto" });
@@ -76,11 +99,12 @@ const PortfolioProjects = () => {
 
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
+    setCurrentPage(1); // reset when switching tabs
   };
 
   const handleProjectClick = (tab: string) => {
     history.replaceState(
-      { fromDetail: true, scrollY: window.scrollY, tab },
+      { fromDetail: true, scrollY: window.scrollY, tab, page: currentPage },
       ""
     );
   };
@@ -108,17 +132,23 @@ const PortfolioProjects = () => {
               ))}
             </TabsList>
 
-            {categories.map((category) => (
-              <TabsContent key={category} value={category}>
-                <div className="w-full grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-10">
-                  {data
-                    .filter(
-                      (project: ProjectData) =>
-                        (project.category || "Uncategorized") === category
-                    )
-                    .map((project, index) => {
-                      const isEven = index % 2 === 1;
+            {categories.map((category) => {
+              const filteredProjects = data.filter(
+                (project: ProjectData) =>
+                  (project.category || "Uncategorized") === category
+              );
 
+              const totalPages = Math.ceil(filteredProjects.length / perPage);
+              const paginated = filteredProjects.slice(
+                (currentPage - 1) * perPage,
+                currentPage * perPage
+              );
+
+              return (
+                <TabsContent key={category} value={category}>
+                  <div className="w-full grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-10">
+                    {paginated.map((project, index) => {
+                      const isEven = index % 2 === 1;
                       return (
                         <div
                           key={project.id}
@@ -296,9 +326,36 @@ const PortfolioProjects = () => {
                         </div>
                       );
                     })}
-                </div>
-              </TabsContent>
-            ))}
+                  </div>
+
+                  {/* Pagination Controls */}
+                  {totalPages > 1 && (
+                    <div className="flex justify-center items-center gap-4 mt-6">
+                      <button
+                        disabled={currentPage === 1}
+                        onClick={() => setCurrentPage((p) => p - 1)}
+                        className="px-4 py-2 border rounded disabled:opacity-50"
+                      >
+                        &lt;
+                        {/* Prev */}
+                      </button>
+
+                      <span>
+                        Page {currentPage} of {totalPages}
+                      </span>
+                      <button
+                        disabled={currentPage === totalPages}
+                        onClick={() => setCurrentPage((p) => p + 1)}
+                        className="px-4 py-2 border rounded disabled:opacity-50"
+                      >
+                        &gt;
+                        {/* Next */}
+                      </button>
+                    </div>
+                  )}
+                </TabsContent>
+              );
+            })}
           </Tabs>
         </div>
       </div>
