@@ -56,22 +56,7 @@ const Portfolio = () => {
       <AOSInitializer />
 
       {/* Hero banner */}
-      <section className="w-full h-[210px] sm:h-auto relative pt-16 sm:pt-32">
-        <div className="container remove-bg">
-          <div className="w-full h-full absolute z-10 top-0 left-0 ">
-            <BannerGridBg />
-          </div>
-          <div className=" w-full mt-4 sm:mt-0 sm:text-center relative py-10 sm:py-16  lg:py-24">
-            <div className="w-full">
-              <div className="w-full">
-                <h1 className="font-bold relative z-10 text-3xl sm:text-3xl lg:text-[38px] text-shadow-2xl  text-gradiant-custom">
-                  Our Portfolio
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
       <PortfolioProjects />
 
       <ContactForm />
