@@ -172,11 +172,11 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
             </div>
             {projectData?.mockupImage &&
               (projectData?.category === "Mobile Application" ? (
-                <div className="w-[875px] -right-10 relative hidden lg:inline">
+                <div className="w-[960px] -right-10 relative hidden lg:inline">
                   <Image
                     width={875}
                     height={570}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-fill"
                     src={projectData?.mockupImage}
                     alt="mobile image"
                   />

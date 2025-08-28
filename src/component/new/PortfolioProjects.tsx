@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import { useState, useEffect, useRef, useMemo } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { generateClient } from "aws-amplify/data";
 import useAmplifyConfig from "@/hooks/useAmplify";
@@ -22,11 +22,10 @@ const PortfolioProjects = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [activeTab, setActiveTab] = useState<string>("");
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [totalPages, setTotalPages] = useState<number>(1);
 
   const hasRestored = useRef(false);
   const perPage = 5;
-
-  // Fetch projects
   useEffect(() => {
     const fetchProjects = async () => {
       try {
@@ -46,14 +45,8 @@ const PortfolioProjects = () => {
     fetchProjects();
   }, []);
 
-  const categories = useMemo(
-    () =>
-      Array.from(
-        new Set<string>(
-          data.map((project) => project.category || "Uncategorized")
-        )
-      ),
-    [data]
+  const categories = Array.from(
+    new Set<string>(data.map((project) => project.category || "Uncategorized"))
   );
   useEffect(() => {
     if (!categories.length || hasRestored.current) return;
@@ -105,7 +98,6 @@ const PortfolioProjects = () => {
     return () => window.removeEventListener("popstate", onPopState);
   }, [categories]);
 
-  // Handle tab change
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
     setCurrentPage(1);
@@ -117,50 +109,39 @@ const PortfolioProjects = () => {
       ""
     );
   };
-
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentPage]);
 
-  const filteredProjects = useMemo(
-    () =>
-      activeTab
-        ? data.filter(
-            (project) => (project.category || "Uncategorized") === activeTab
-          )
-        : [],
-    [data, activeTab]
-  );
+  useEffect(() => {
+    if (!activeTab) return;
 
-  const totalPages = useMemo(
-    () => Math.ceil(filteredProjects.length / perPage),
-    [filteredProjects]
-  );
+    const filteredProjects = data.filter(
+      (project: ProjectData) =>
+        (project.category || "Uncategorized") === activeTab
+    );
 
-  const paginatedProjects = useMemo(() => {
-    const start = (currentPage - 1) * perPage;
-    return filteredProjects.slice(start, start + perPage);
-  }, [filteredProjects, currentPage]);
+    const pages = Math.ceil(filteredProjects.length / perPage);
+    setTotalPages(pages || 1);
+  }, [activeTab, data]);
 
-  if (loading) return <Loader />;
-
-  return (
+  return loading ? (
+    <Loader />
+  ) : (
     <>
-      <section className="w-full h-[210px] sm:h-auto relative pt-16 sm:pt-20">
+      <section className="w-full h-[210px] sm:h-auto relative pt-16 sm:pt-32">
         <div className="container remove-bg">
-          <div className=" w-full mt-4 sm:mt-0 sm:text-center relative py-10 sm:py-16  lg:py-16">
-            <div className="w-full flex justify-between items-center">
-              <div className="w-full text-left">
+          {/* <div className="w-full h-full absolute z-10 top-0 left-0 ">
+            <BannerGridBg />
+          </div> */}
+          <div className=" w-full mt-4 sm:mt-0 sm:text-center relative pt-5 pb-5 sm:py-16  lg:py-16">
+            <div className="w-full flex justify-center sm:justify-between items-center flex-wrap sm:flex-nowrap">
+              <div className="w-full text-center sm:text-left">
                 <h1 className="font-bold relative z-10 text-3xl sm:text-3xl lg:text-[38px] text-shadow-2xl  text-gradiant-custom">
                   Our Portfolio
                 </h1>
               </div>
-              {/* <PortfolioPagination
-                totalPages={totalPages}
-                currentPage={currentPage}
-                setCurrentPage={setCurrentPage}
-                filteredProjects={filteredProjects}
-              /> */}
+
               <Pagination
                 currentPage={currentPage}
                 totalPages={totalPages}
@@ -170,8 +151,7 @@ const PortfolioProjects = () => {
           </div>
         </div>
       </section>
-
-      <section className="w-full relative overflow-hidden mt-10 mb-14 sm:mb-20">
+      <section className="w-full relative overflow-hidden mt-5 mb-14 sm:mb-20">
         <div className="container remove-bg">
           <div className="w-full">
             <Tabs
@@ -191,135 +171,42 @@ const PortfolioProjects = () => {
                 ))}
               </TabsList>
 
-              <TabsContent key={activeTab} value={activeTab}>
-                <div className="w-full grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-10">
-                  {paginatedProjects.map((project, index) => {
-                    const isEven = index % 2 === 1;
-                    return (
-                      <div
-                        key={project.id}
-                        className="w-full flex flex-wrap lg:flex-nowrap group justify-between items-center gap-4 sm:gap-5 lg:gap-10 p-4 lg:p-10 relative bg-white z-10 rounded-2xl overflow-hidden"
-                      >
-                        {isEven ? (
-                          <>
-                            {/* 45% FIRST */}
-                            {/* 45% SECOND */}
-                            <div className="order-2 lg:order-none w-full lg:w-[45%] flex justify-between items-start flex-col gap-5 sm:gap-5 lg:gap-[126px]">
-                              <div>
-                                <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-2 sm:border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
-                                  {project.projectName}
-                                </div>
-                                <p className="line-clamp-4 sm:line-clamp-5 text-sm  lg:text-lg text-black mt-1 sm:mt-2 lg:mt-3.5">
-                                  {project.description}
-                                </p>
-                                {/* <div className="mt-6 flex gap-5 items-center">
-                                    <div className="w-fit flex flex-col">
-                                      <b className="text-2xl sm:text-3xl text-black">
-                                        {project.androidDownloads &&
-                                          formatDownloads(
-                                            project?.androidDownloads
-                                          )}
-                                      </b>
-                                      <span className="font-light text-base sm:text-lg text-black">
-                                        App downloads
-                                      </span>
-                                    </div>
-                                    <div className="w-[1px] h-20 bg-black"></div>
-                                    <div className="w-fit flex gap-2.5 flex-col">
-                                      <Link
-                                        href={project.googlePlayAppLink}
-                                        target="_blank"
-                                      >
-                                        <Image
-                                          width={100}
-                                          height={29}
-                                          src="/images/playstore.svg"
-                                          alt="image"
-                                        />
-                                      </Link>
-                                      <Link
-                                        href={project?.appStoreAppLink}
-                                        target="_blank"
-                                      >
-                                        <Image
-                                          width={100}
-                                          height={29}
-                                          src="/images/applestore.svg"
-                                          alt="image"
-                                        />
-                                      </Link>
-                                    </div>
-                                  </div> */}
-                              </div>
+              {categories.map((category) => {
+                const filteredProjects = data.filter(
+                  (project: ProjectData) =>
+                    (project.category || "Uncategorized") === category
+                );
 
-                              <Link
-                                href={`/portfolio/${project.slug}`}
-                                onClick={() => handleProjectClick(category)}
-                                className="w-fit btn-primary text-white font-normal group bg-orange-600 hover:bg-orange-500 duration-500 transition-all"
-                              >
-                                View Case Study
-                                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                              </Link>
-                            </div>
-                            {/* 55% SECOND */}
-                            <div className="order-1 lg:order-none w-full lg:w-[55%] relative">
-                              <div className="relative w-full h-[265px] sm:h-[370px] lg:h-[500px] rounded-xl overflow-hidden">
-                                <Image
-                                  fill
-                                  src={project.backgroundImage || ""}
-                                  alt="image"
-                                  priority
-                                  className="object-cover"
-                                />
-                                <div className="w-full lg:w-[465px] h-[170px] sm:h-[320px] lg:h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                  {project.mobileImage && (
-                                    <Image
-                                      fill
-                                      className="w-full h-full object-contain"
-                                      src={project.mobileImage}
-                                      alt="mobile image"
-                                      priority
-                                    />
-                                  )}
-                                </div>
-                              </div>
-                            </div>
-                          </>
-                        ) : (
-                          <>
-                            {/* 55% FIRST */}
-                            <div className="order-1 lg:order-none w-full lg:w-[55%] relative">
-                              <div className="relative w-full h-[265px] sm:h-[370px] lg:h-[500px] rounded-xl overflow-hidden">
-                                <Image
-                                  fill
-                                  src={project.backgroundImage || ""}
-                                  alt="image"
-                                  priority
-                                  className="object-cover"
-                                />
-                                <div className="w-full lg:w-[465px] h-[170px] sm:h-[320px] lg:h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                  {project.mobileImage && (
-                                    <Image
-                                      fill
-                                      className="w-full h-full object-contain"
-                                      src={project.mobileImage}
-                                      alt="mobile image"
-                                      priority
-                                    />
-                                  )}
-                                </div>
-                              </div>
-                            </div>
-                            {/* 45% SECOND */}
-                            <div className="order-2 lg:order-none w-full lg:w-[45%] flex justify-between items-start flex-col gap-5 sm:gap-5 lg:gap-[126px]">
-                              <div>
-                                <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-2 sm:border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
-                                  {project.projectName}
-                                </div>
-                                <p className="line-clamp-4 sm:line-clamp-5 text-sm  lg:text-lg text-black mt-1 sm:mt-2 lg:mt-3.5">
-                                  {project.description}
-                                </p>
-                                {/* <div className="mt-6 flex gap-5 items-center">
+                const totalPages = Math.ceil(filteredProjects.length / perPage);
+                const paginated = filteredProjects.slice(
+                  (currentPage - 1) * perPage,
+                  currentPage * perPage
+                );
+
+                return (
+                  <>
+                    <TabsContent key={category} value={category}>
+                      <div className="w-full grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-10">
+                        {paginated.map((project, index) => {
+                          const isEven = index % 2 === 1;
+                          return (
+                            <div
+                              key={project.id}
+                              className="w-full flex flex-wrap lg:flex-nowrap group justify-between items-center gap-4 sm:gap-5 lg:gap-10 p-4 lg:p-10 relative bg-white z-10 rounded-2xl overflow-hidden"
+                            >
+                              {isEven ? (
+                                <>
+                                  {/* 45% FIRST */}
+                                  {/* 45% SECOND */}
+                                  <div className="order-2 lg:order-none w-full lg:w-[45%] flex justify-between items-start flex-col gap-5 sm:gap-5 lg:gap-[126px]">
+                                    <div>
+                                      <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-2 sm:border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
+                                        {project.projectName}
+                                      </div>
+                                      <p className="line-clamp-4 sm:line-clamp-5 text-sm  lg:text-lg text-black mt-1 sm:mt-2 lg:mt-3.5">
+                                        {project.description}
+                                      </p>
+                                      {/* <div className="mt-6 flex gap-5 items-center">
                                     <div className="w-fit flex flex-col">
                                       <b className="text-2xl sm:text-3xl text-black">
                                         {project.androidDownloads &&
@@ -357,31 +244,145 @@ const PortfolioProjects = () => {
                                       </Link>
                                     </div>
                                   </div> */}
-                              </div>
-                              <Link
-                                href={`/portfolio/${project.slug}`}
-                                onClick={() => handleProjectClick(category)}
-                                className="w-fit btn-primary text-white font-normal group bg-orange-600 hover:bg-orange-500 duration-500 transition-all"
-                              >
-                                View Case Study
-                                <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
-                              </Link>
+                                    </div>
+
+                                    <Link
+                                      href={`/portfolio/${project.slug}`}
+                                      onClick={() =>
+                                        handleProjectClick(category)
+                                      }
+                                      className="w-fit btn-primary text-white font-normal group bg-orange-600 hover:bg-orange-500 duration-500 transition-all"
+                                    >
+                                      View Case Study
+                                      <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                                    </Link>
+                                  </div>
+                                  {/* 55% SECOND */}
+                                  <div className="order-1 lg:order-none w-full lg:w-[55%] relative">
+                                    <div className="relative w-full h-[265px] sm:h-[370px] lg:h-[500px] rounded-xl overflow-hidden">
+                                      <Image
+                                        fill
+                                        src={project.backgroundImage || ""}
+                                        alt="image"
+                                        priority
+                                        className="object-cover"
+                                      />
+                                      <div className="w-full lg:w-[465px] h-[170px] sm:h-[320px] lg:h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        {project.mobileImage && (
+                                          <Image
+                                            fill
+                                            className="w-full h-full object-contain"
+                                            src={project.mobileImage}
+                                            alt="mobile image"
+                                            priority
+                                          />
+                                        )}
+                                      </div>
+                                    </div>
+                                  </div>
+                                </>
+                              ) : (
+                                <>
+                                  {/* 55% FIRST */}
+                                  <div className="order-1 lg:order-none w-full lg:w-[55%] relative">
+                                    <div className="relative w-full h-[265px] sm:h-[370px] lg:h-[500px] rounded-xl overflow-hidden">
+                                      <Image
+                                        fill
+                                        src={project.backgroundImage || ""}
+                                        alt="image"
+                                        priority
+                                        className="object-cover"
+                                      />
+                                      <div className="w-full lg:w-[465px] h-[170px] sm:h-[320px] lg:h-[419px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        {project.mobileImage && (
+                                          <Image
+                                            fill
+                                            className="w-full h-full object-contain"
+                                            src={project.mobileImage}
+                                            alt="mobile image"
+                                            priority
+                                          />
+                                        )}
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {/* 45% SECOND */}
+                                  <div className="order-2 lg:order-none w-full lg:w-[45%] flex justify-between items-start flex-col gap-5 sm:gap-5 lg:gap-[126px]">
+                                    <div>
+                                      <div className="w-fit text-black group-hover:text-[#EA580C] group-hover:border-[#EA580C] border-b-2 sm:border-b-[4px] border-transparent text-2xl sm:text-3xl lg:text-4xl font-bold">
+                                        {project.projectName}
+                                      </div>
+                                      <p className="line-clamp-4 sm:line-clamp-5 text-sm  lg:text-lg text-black mt-1 sm:mt-2 lg:mt-3.5">
+                                        {project.description}
+                                      </p>
+                                      {/* <div className="mt-6 flex gap-5 items-center">
+                                    <div className="w-fit flex flex-col">
+                                      <b className="text-2xl sm:text-3xl text-black">
+                                        {project.androidDownloads &&
+                                          formatDownloads(
+                                            project?.androidDownloads
+                                          )}
+                                      </b>
+                                      <span className="font-light text-base sm:text-lg text-black">
+                                        App downloads
+                                      </span>
+                                    </div>
+                                    <div className="w-[1px] h-20 bg-black"></div>
+                                    <div className="w-fit flex gap-2.5 flex-col">
+                                      <Link
+                                        href={project.googlePlayAppLink}
+                                        target="_blank"
+                                      >
+                                        <Image
+                                          width={100}
+                                          height={29}
+                                          src="/images/playstore.svg"
+                                          alt="image"
+                                        />
+                                      </Link>
+                                      <Link
+                                        href={project?.appStoreAppLink}
+                                        target="_blank"
+                                      >
+                                        <Image
+                                          width={100}
+                                          height={29}
+                                          src="/images/applestore.svg"
+                                          alt="image"
+                                        />
+                                      </Link>
+                                    </div>
+                                  </div> */}
+                                    </div>
+                                    <Link
+                                      href={`/portfolio/${project.slug}`}
+                                      onClick={() =>
+                                        handleProjectClick(category)
+                                      }
+                                      className="w-fit btn-primary text-white font-normal group bg-orange-600 hover:bg-orange-500 duration-500 transition-all"
+                                    >
+                                      View Case Study
+                                      <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
+                                    </Link>
+                                  </div>
+                                </>
+                              )}
                             </div>
-                          </>
-                        )}
+                          );
+                        })}
                       </div>
-                    );
-                  })}
-                </div>
 
-                {/* Pagination Controls */}
-                <PortfolioPagination
-                  totalPages={totalPages}
-                  currentPage={currentPage}
-                  setCurrentPage={setCurrentPage}
-                  filteredProjects={filteredProjects}
-                />
-              </TabsContent>
+                      {/* Pagination Controls */}
+                      <PortfolioPagination
+                        totalPages={totalPages}
+                        currentPage={currentPage}
+                        setCurrentPage={setCurrentPage}
+                        filteredProjects={filteredProjects}
+                      />
+                    </TabsContent>
+                  </>
+                );
+              })}
             </Tabs>
           </div>
         </div>
