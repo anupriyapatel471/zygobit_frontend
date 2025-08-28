@@ -6,7 +6,6 @@ const ContactForm = dynamic(
 );
 
 import { Metadata } from "next";
-import { BannerGridBg } from "@/component/common/HeroBanner/BannerGridBg/BannerGridBg";
 import PortfolioProjects from "@/component/new/PortfolioProjects";
 
 export const metadata: Metadata = {
