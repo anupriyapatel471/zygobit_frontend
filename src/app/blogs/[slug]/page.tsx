@@ -59,6 +59,7 @@ export async function generateMetadata({
       images: blog?.image,
       url: `https://www.zygobit.com/blogs/${params.slug}`,
     },
+
     twitter: {
       title,
       description,
