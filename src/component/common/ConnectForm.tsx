@@ -304,7 +304,7 @@ const ConnectForm = () => {
                 value={formData.budget}
                 onChange={handleChange}
               />
-              <label htmlFor="budget">Budget :</label>
+              <label htmlFor="budget">Budget : Amount in US dollars ($)</label>
             </div>
           </div>
           <div className="w-full">

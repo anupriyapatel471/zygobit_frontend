@@ -30,20 +30,36 @@ const testimonials = [
       "https://zygobit-images.s3.ap-south-1.amazonaws.com/Review+videos/daniel.mp4",
   },
   {
-    quote:
-      "Zygobit’s team delivered a highly effective solution for our app. They ensured a user-friendly interface and smooth functionality, helping us meet our business goals in no time.",
-    name: "Sasson Moulavi",
-    designation: "ABBSI",
-    src: "/images/abbsi_admin.png",
-    // videosrc: "",
-  },
-  {
     quote: "",
     name: "David Hakki",
     designation: "Ascent Above and ClaimEase",
     src: "/images/clientThree.png",
     videosrc:
       "https://zygobit-images.s3.ap-south-1.amazonaws.com/Review+videos/david.mp4",
+  },
+  // {
+  //   quote: "",
+  //   name: "Rakesh",
+  //   designation: "",
+  //   src: "/images/rakesh.png",
+  //   videosrc:
+  //     "https://zygobit-images.s3.ap-south-1.amazonaws.com/Review+videos/rakesh.mp4",
+  // },
+  {
+    quote: "",
+    name: "Ismael",
+    designation: "Rumy",
+    src: "/images/ismael.png",
+    videosrc:
+      "https://zygobit-images.s3.ap-south-1.amazonaws.com/Review+videos/ismael.mp4",
+  },
+  {
+    quote:
+      "Zygobit’s team delivered a highly effective solution for our app. They ensured a user-friendly interface and smooth functionality, helping us meet our business goals in no time.",
+    name: "Sasson Moulavi",
+    designation: "ABBSI",
+    src: "/images/abbsi_admin.png",
+    // videosrc: "",
   },
   {
     quote:

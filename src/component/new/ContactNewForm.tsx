@@ -293,7 +293,9 @@ export function ContactnewForm({ formOpen }: { formOpen?: string }) {
                       value={formData.budget}
                       onChange={handleChange}
                     />
-                    <label htmlFor="budget">Budget :</label>
+                    <label htmlFor="budget">
+                      Budget : Amount in US dollars ($)
+                    </label>
                   </div>
                   <div className="form-item new-form-item col-span-1 sm:col-span-2 relative">
                     <textarea
