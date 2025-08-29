@@ -47,8 +47,8 @@ export async function generateMetadata({
   params: { slug: string };
 }) {
   const blog = await fetchBlogBySlug(params.slug);
-  const title = blog?.metadata?.title || DEFAULT_META.title;
-  const description = blog?.metadata?.description || DEFAULT_META.description;
+  const title = blog?.metaData?.title || DEFAULT_META.title;
+  const description = blog?.metaData?.description || DEFAULT_META.description;
 
   return {
     title,

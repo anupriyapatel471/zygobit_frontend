@@ -33,10 +33,9 @@ export async function generateMetadata({
   params: { slug: string };
 }) {
   const project = await fetchFeaturedProjects(params.slug);
-  const title = project?.metadata?.title || "Zygobit Featured Projects";
+  const title = project?.metaData?.title || "Zygobit Featured Projects";
   const description =
-    project?.metadata?.description || "Zygobit Featured Projects";
- 
+    project?.metaData?.description || "Zygobit Featured Projects";
   return {
     title,
     description,
