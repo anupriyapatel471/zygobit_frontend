@@ -37,14 +37,14 @@ const testimonials = [
     videosrc:
       "https://zygobit-images.s3.ap-south-1.amazonaws.com/Review+videos/david.mp4",
   },
-  // {
-  //   quote: "",
-  //   name: "Rakesh",
-  //   designation: "",
-  //   src: "/images/rakesh.png",
-  //   videosrc:
-  //     "https://zygobit-images.s3.ap-south-1.amazonaws.com/Review+videos/rakesh.mp4",
-  // },
+  {
+    quote: "",
+    name: "Rakesh",
+    designation: "Mitabl",
+    src: "/images/rakesh.png",
+    videosrc:
+      "https://zygobit-images.s3.ap-south-1.amazonaws.com/Review+videos/rakesh.mp4",
+  },
   {
     quote: "",
     name: "Ismael",
