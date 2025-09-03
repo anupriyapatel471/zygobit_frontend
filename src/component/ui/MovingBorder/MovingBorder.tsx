@@ -73,7 +73,6 @@ export function MovingBorders({
       });
     }
   };
-
   return loading ? (
     <Loader />
   ) : (
