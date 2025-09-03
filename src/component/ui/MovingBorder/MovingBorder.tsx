@@ -25,6 +25,10 @@ export function MovingBorders({
 
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
+  const sortedBlogs = [...blogs].sort(
+    (a, b) =>
+      new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
+  );
 
   // Set page from history.state on first render
   useEffect(() => {
@@ -46,10 +50,10 @@ export function MovingBorders({
     return () => window.removeEventListener("popstate", onPopState);
   }, []);
 
-  const totalPages = Math.ceil(blogs.length / postsPerPage);
+  const totalPages = Math.ceil(sortedBlogs.length / postsPerPage);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentBlogs = blogs.slice(indexOfFirstPost, indexOfLastPost);
+  const currentBlogs = sortedBlogs.slice(indexOfFirstPost, indexOfLastPost);
 
   const handlePageChange = (page: number) => {
     // const scrollY = window.scrollY;
