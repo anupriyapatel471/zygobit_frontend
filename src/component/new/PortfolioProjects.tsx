@@ -245,7 +245,6 @@ const PortfolioProjects = () => {
                                     </div>
                                   </div> */}
                                     </div>
-
                                     <Link
                                       href={`/portfolio/${project.slug}`}
                                       onClick={() =>
