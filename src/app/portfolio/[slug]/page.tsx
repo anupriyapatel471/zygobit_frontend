@@ -61,6 +61,7 @@ export async function generateMetadata({
 
 const CaseStudyPage = async ({ params }: { params: { slug: string } }) => {
   const project = await fetchFeaturedProjects(params.slug);
+
   const portfolioJsonLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
