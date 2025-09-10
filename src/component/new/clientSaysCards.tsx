@@ -32,13 +32,13 @@ const testimonials = [
     designation: "Inspired Meadows",
     src: "/images/inspired_admin.jpeg",
   },
-  {
-    quote:
-      "Collaborating with Zygobit was a game-changer. Their innovative development strategies helped us create a robust and feature-rich app that perfectly meets the needs of our users.",
-    name: "Alan",
-    designation: "TIA",
-    src: "/images/tia_admin.png",
-  },
+  // {
+  //   quote:
+  //     "Collaborating with Zygobit was a game-changer. Their innovative development strategies helped us create a robust and feature-rich app that perfectly meets the needs of our users.",
+  //   name: "Alan",
+  //   designation: "TIA",
+  //   src: "/images/tia_admin.png",
+  // },
 ];
 const ClientSaysCards = () => {
   return (
