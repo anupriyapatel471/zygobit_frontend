@@ -6,7 +6,6 @@ import { ourExpertiseData } from "../component/homePage/OurExpertise";
 import React, { ReactNode } from "react";
 import { Amplify } from "aws-amplify";
 import outputs from "../../amplify_outputs.json";
-
 Amplify.configure(outputs);
 const HomeBanner = dynamicImp(() => import("@/component/homePage/HomeBanner"));
 const FeaturedProjects = dynamicImp(
