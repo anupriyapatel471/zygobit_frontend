@@ -99,7 +99,7 @@ const Blockchain = () => {
 
   const clientHeading = "Hear It from Our Happy Clients!";
   const clientSaysDetails =
-    "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions.";
+    "Discover how our clients turned their ideas into thriving businesses with Zygobit’s expert web development services and solutions.";
   const heroHeading = "Blockchain Development Solutions We Deliver";
   const heroParagraph =
     "Empower your business with our advanced blockchain development services, designed to provide secure, scalable, and innovative solutions tailored to your needs.";

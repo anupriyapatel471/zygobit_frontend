@@ -62,14 +62,14 @@ const aboutPageJsonLd: WithContext<WebPage> = {
 const About = () => {
   const clientSaysHeading = " We Are a Trusted Web App Development Company";
   const clientSaysDetails =
-    "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions.";
+    "Discover how our clients turned their ideas into thriving businesses with Zygobit’s expert web development services and solutions.";
   const GridBoxesHeading = "Why Choose Zygobit?";
   const GridBoxesDetail =
     "Choose Zygobit for innovative, reliable, and high-quality solutions that drive your business forward with cutting-edge technology and expert support!";
   const deliveringHeading = "Delivering Tailored Excellence";
   const deliveringPara =
     "We turn your vision into reality with creative, innovative solutions that deliver quality and results.";
-  const heroHeading = "Innovatinng the Digital Future";
+  const heroHeading = "Innovating the Digital Future";
   const heroParagraph =
     "We are a tech-driven company passionate about building cutting-edge mobile and web solutions, helping businesses thrive in a digital-first world.";
 
@@ -144,7 +144,7 @@ const About = () => {
       <section className="w-full  mb-0 sm:mb-10 lg:mb-0 pt-10 pb-10 sm:py-12 lg:py-20 relative">
         <div className="absolute top-0 left-0 w-full h-full -z-10">
           <Image
-          fill
+            fill
             className="w-full h-full object-cover"
             src="/images/cta_bg.png"
             alt="Cta bg"

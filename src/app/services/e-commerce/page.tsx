@@ -88,7 +88,7 @@ const ecommerceJsonLd = {
 const Ecommerce = () => {
   const clientHeading = "We Are a Trusted Web App Development Company";
   const clientSaysDetails =
-    "Hear from our satisfied clients who have transformed their ideas into successful businesses with Apptunix&apos;s expert web development services and solutions";
+    "Discover how our clients turned their ideas into thriving businesses with Zygobit’s expert web development services and solutions.";
   const heroHeading =
     "E-commerce Development Solutions for Seamless and Profitable Stores";
   const heroParagraph =
