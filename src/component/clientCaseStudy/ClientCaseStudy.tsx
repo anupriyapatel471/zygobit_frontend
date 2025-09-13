@@ -242,7 +242,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     width={520}
                     height={400}
                     className="w-full h-[250px] sm:h-[400px] object-cover"
-                    src="/images/project_one.png"
+                    src="/images/detail_img1.png"
                     alt="image"
                   />
                 </div>
@@ -254,7 +254,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     width={520}
                     height={400}
                     className="w-full h-[250px] sm:h-[400px] object-cover"
-                    src="/images/project_two.png"
+                    src="/images/detail_img3.png"
                     alt="image"
                   />
                 </div>
@@ -300,7 +300,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     width={520}
                     height={400}
                     className="w-full  h-[250px] sm:h-[400px] object-cover"
-                    src="/images/project_three.png"
+                    src="/images/detail_img2.png"
                     alt="image"
                   />
                 </div>
