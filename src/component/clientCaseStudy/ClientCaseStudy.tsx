@@ -5,6 +5,7 @@ import ContactForm from "../common/ContactForm/ContactForm";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { ProjectData } from "@/app/type/projectType";
+import Link from "next/link";
 
 const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
   const router = useRouter();
@@ -292,6 +293,26 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                   <p className="text-sm lg:text-base">
                     {projectData?.theSolution}
                   </p>
+
+                  {projectData?.category === "Mobile Application" && (
+                    <div className="flex items-center gap-1 font-medium text-base mt-6 sm:mt-4">
+                      <p>Want a result like this? Explore our</p>
+                      <Link
+                        href="/services/mobile-app-development"
+                        className="relative flex items-center gap-1.5 border-b border-[#EA580C] text-[#EA580C] overflow-hidden"
+                      >
+                        <span className="relative shimmer-text">
+                          Mobile App Development Services
+                        </span>
+                        <Image
+                          src="/images/arrow_icon.svg"
+                          alt="icon"
+                          width={10}
+                          height={10}
+                        />
+                      </Link>
+                    </div>
+                  )}
                 </div>
                 <div className="w-full order-1 sm:order-none sm:w-1/2 lg:w-2/5 relative">
                   <div className="hidden sm:inline absolute -top-20 -right-[120px] sm:-right-[220px] -z-10 w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] rounded-full bg-[#FFC3A466]"></div>

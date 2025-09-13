@@ -14,8 +14,6 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
-
-
 @import "../assets/css/buttonStyle.css";
 
 .bg-gradient-custom {
@@ -642,18 +640,10 @@ input[type="number"]::-webkit-outer-spin-button {
   transition: all 0.3s ease;
 }
 
-.new-form-item
-  input:focus
-  + label, 
-  .new-form-item
-  input:valid
-  + label, 
-  .new-form-item
-  textarea:focus
-  + label, 
-  .new-form-item
-  textarea:valid
-  + label {
+.new-form-item input:focus + label,
+.new-form-item input:valid + label,
+.new-form-item textarea:focus + label,
+.new-form-item textarea:valid + label {
   color: #000 !important;
   font-size: 12px !important;
 }
@@ -732,4 +722,29 @@ input[type="number"]::-webkit-outer-spin-button {
 #_rht_toaster {
   z-index: 99999 !important;
   position: relative;
+}
+
+.shimmer-text {
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    #ea580c 0%,
+    #ffb472 20%,
+    #ea580c 40%,
+    #ea580c 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer-slow 5s linear infinite;
+}
+
+@keyframes shimmer-slow {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
 }
