@@ -5,10 +5,10 @@ import ContactForm from "../common/ContactForm/ContactForm";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { ProjectData } from "@/app/type/projectType";
+import Link from "next/link";
 
 const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
   const router = useRouter();
-
   const cardData = [
     {
       title: "Client",
@@ -112,7 +112,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
       >
         <div className="container">
           <div className="w-full flex justify-between ">
-            <div className="w-full lg:w-[520px] flex flex-col gap-4 sm:gap-10 py-6">
+            <div className="w-full lg:w-[550px] flex flex-col gap-4 sm:gap-10 py-6">
               <Button
                 onClick={() => router.back()}
                 className="w-10 h-10 p-0 sm:p-0 sm:w-12 sm:h-12 rounded-full bg-white hover:bg-white"
@@ -139,7 +139,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                   </div>
                 )}
                 <h1
-                  className="font-bold text-3xl sm:text-[35px] lg:text-[45px] w-full lg:w-fit sm:w-fit lg:whitespace-nowrap mt-4 sm:mt-0 "
+                  className="font-bold text-3xl sm:text-[35px] lg:text-[45px] w-full lg:w-fit sm:w-fit lg:leading-[50px] mt-4 sm:mt-0 "
                   style={{ color: projectData?.testColor }}
                 >
                   {projectData?.projectName}
@@ -171,17 +171,28 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                 ))}
               </div>
             </div>
-            {projectData?.mockupImage && (
-              <div className="w-[875px] -right-10 relative hidden lg:inline">
-                <Image
-                  width={875}
-                  height={570}
-                  className="w-full h-full object-cover"
-                  src={projectData?.mockupImage}
-                  alt="mobile image"
-                />
-              </div>
-            )}
+            {projectData?.mockupImage &&
+              (projectData?.category === "Mobile Application" ? (
+                <div className="w-[960px] -right-10 relative hidden lg:inline">
+                  <Image
+                    width={875}
+                    height={570}
+                    className="w-full h-full object-fill"
+                    src={projectData?.mockupImage}
+                    alt="mobile image"
+                  />
+                </div>
+              ) : (
+                <div className="w-[700px] -right-10 h-auto  relative hidden lg:inline">
+                  <Image
+                    width={770.7947998046875}
+                    height={505.0367431640625}
+                    className="w-full h-full object-contain"
+                    src={projectData?.mockupImage}
+                    alt="mobile image"
+                  />
+                </div>
+              ))}
           </div>
         </div>
       </section>
@@ -227,12 +238,11 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
 
                 <div className="w-full order-1 sm:order-none sm:w-1/2 lg:w-2/5 relative">
                   <div className="hidden sm:inline absolute -top-20  -right-[120px] sm:-right-[220px] -z-10 w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] rounded-full bg-[#FFC3A466]"></div>
-
                   <Image
                     width={520}
                     height={400}
                     className="w-full h-[250px] sm:h-[400px] object-cover"
-                    src="/images/project_one.png"
+                    src="/images/detail_img1.png"
                     alt="image"
                   />
                 </div>
@@ -244,7 +254,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     width={520}
                     height={400}
                     className="w-full h-[250px] sm:h-[400px] object-cover"
-                    src="/images/project_two.png"
+                    src="/images/detail_img3.png"
                     alt="image"
                   />
                 </div>
@@ -283,6 +293,26 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                   <p className="text-sm lg:text-base">
                     {projectData?.theSolution}
                   </p>
+
+                  {projectData?.category === "Mobile Application" && (
+                    <div className="flex items-center gap-1 font-medium text-base mt-6 sm:mt-4">
+                      <p>Want a result like this? Explore our</p>
+                      <Link
+                        href="/services/mobile-app-development"
+                        className="relative flex items-center gap-1.5 border-b border-[#EA580C] text-[#EA580C] overflow-hidden"
+                      >
+                        <span className="relative shimmer-text">
+                          Mobile App Development Services
+                        </span>
+                        <Image
+                          src="/images/arrow_icon.svg"
+                          alt="icon"
+                          width={10}
+                          height={10}
+                        />
+                      </Link>
+                    </div>
+                  )}
                 </div>
                 <div className="w-full order-1 sm:order-none sm:w-1/2 lg:w-2/5 relative">
                   <div className="hidden sm:inline absolute -top-20 -right-[120px] sm:-right-[220px] -z-10 w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] rounded-full bg-[#FFC3A466]"></div>
@@ -290,7 +320,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                     width={520}
                     height={400}
                     className="w-full  h-[250px] sm:h-[400px] object-cover"
-                    src="/images/project_three.png"
+                    src="/images/detail_img2.png"
                     alt="image"
                   />
                 </div>

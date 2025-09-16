@@ -1,0 +1,34 @@
+[
+  {
+    "question": "What technologies do you use for web development?",
+    "answer": "We use a modern tech stack including HTML5, CSS3, JavaScript, React, Next.js, Node.js, Laravel, and more—depending on your project’s needs."
+  },
+  {
+    "question": "Do you build responsive (mobile-friendly) websites?",
+    "answer": "Yes, every website we develop is fully responsive and optimized for desktops, tablets, and smartphones."
+  },
+  {
+    "question": "How long does it take to build a website?",
+    "answer": "It depends on the complexity and features. A basic website may take 2–4 weeks, while custom web applications could take several months."
+  },
+  {
+    "question": "Will I be able to edit content on my own?",
+    "answer": "Absolutely. We can integrate user-friendly CMS platforms like WordPress or provide a custom admin panel so you can manage content without coding."
+  },
+  {
+    "question": "Can you redesign my existing website?",
+    "answer": "Yes, we offer complete website redesign services to improve performance, UX/UI, and modern aesthetics while preserving your brand identity."
+  },
+  {
+    "question": "Do you offer SEO-friendly development?",
+    "answer": "Yes, we follow best practices for on-page SEO, including clean code, fast load times, and mobile optimization."
+  },
+  {
+    "question": "Will my website be secure?",
+    "answer": "We implement essential security measures like HTTPS, firewalls, and secure code practices to protect your data and users."
+  },
+  {
+    "question": "Do you provide post-launch support?",
+    "answer": "Yes, we offer ongoing support and maintenance packages to keep your site updated, secure, and running smoothly."
+  }
+]

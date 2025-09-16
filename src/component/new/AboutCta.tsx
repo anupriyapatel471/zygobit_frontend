@@ -40,7 +40,7 @@ const AboutCta = () => {
             </div>
             <div className="w-full flex items-center justify-center mt-5 sm:mt-10 lg:mt-14">
               <Link href={"/contact"}>
-                <button className=" btn-primary text-white font-normal  group bg-gradient-custom duration-500 transition-all">
+                <button className=" btn-primary text-white font-normal group bg-gradient-custom duration-500 transition-all relative sm:static z-20 ">
                   Build Your Success Story
                   <ChevronRight className="group-hover:left-2 left-0 relative duration-500 transition-all" />
                 </button>

@@ -6,7 +6,6 @@ import { ourExpertiseData } from "../component/homePage/OurExpertise";
 import React, { ReactNode } from "react";
 import { Amplify } from "aws-amplify";
 import outputs from "../../amplify_outputs.json";
-
 Amplify.configure(outputs);
 const HomeBanner = dynamicImp(() => import("@/component/homePage/HomeBanner"));
 const FeaturedProjects = dynamicImp(
@@ -16,7 +15,6 @@ const BusinessCards = dynamicImp(
   () => import("@/component/homePage/Businesscards/Businesscards")
 );
 const Cta = dynamicImp(() => import("@/component/common/Cta/Cta"));
-
 const TechnologyStack = dynamicImp(
   () => import("@/component/common/TechnologyStack/TechnologyStack")
 );
@@ -125,9 +123,9 @@ const Home = async () => {
                 className="border border-muted-foreground  p-4 pl-0 sm:pl-0 sm:p-0 rounded-lg sm:rounded-none sm:border-none w-auto"
               >
                 <span>{data?.image}</span>
-                <h5 className="pl-4  font-semibold text-base sm:text-lg my-2">
+                <h4 className="pl-4  font-semibold text-base sm:text-lg my-2">
                   {data?.heading}
-                </h5>
+                </h4>
                 <p className="pl-4 text-sm sm:text-base text-muted-foreground">
                   {data?.paragraph}
                 </p>

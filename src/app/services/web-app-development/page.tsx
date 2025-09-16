@@ -6,7 +6,7 @@ import Image from "next/image";
 import ApplicationAgeny from "@/component/sevices/Common/ApplicationAgeny/ApplicationAgeny";
 import AOSInitializer from "@/component/common/AOSInitializer";
 
-import faqData from "../../../utils/content/faq/faqEcommerce.json";
+import faqData from "../../../utils/content/faq/faqWebApp.json";
 
 const WeDeliver = dynamic(
   () => import("@/component/common/WeDeliver/WeDeliver")
@@ -115,7 +115,7 @@ const WebAppDevelopment = () => {
     "We specialize in crafting custom web solutions that empower businesses to thrive in today’s digital-first world. From intuitive websites to complex platforms, our development services are aligned with your goals—helping you attract, convert, and grow.";
 
   const heroHeading =
-    "Mobile App Development Solutions for Scalable and Custom Experiences";
+    "Web App Development Services for Secure and High-Performance Platforms";
 
   const heroParagraph =
     "Powering businesses with cutting-edge web development solutions that ensure seamless performance, scalability, and innovation.";

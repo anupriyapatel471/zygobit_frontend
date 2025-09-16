@@ -1,12 +1,3 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//     images: {
-//       domains: ['images.unsplash.com', 'pbs.twimg.com', "assets.aceternity.com"],
-//     },
-//   };
-
-//   export default nextConfig;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -22,6 +13,45 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     optimizeCss: true,
+  },
+  async redirects() {
+    return [
+      {
+        source: "/aboutus",
+        destination: "/about-us",
+        permanent: true,
+      },
+      {
+        source: "/services",
+        destination: "/services/mobile-app-development",
+        permanent: true,
+      },
+      {
+        source: "/service-detail/mobile-development",
+        destination: "/services/mobile-app-development",
+        permanent: true,
+      },
+      {
+        source: "/service-detail/e-commerce",
+        destination: "/services/e-commerce",
+        permanent: true,
+      },
+      {
+        source: "/service-detail/uiux-designs",
+        destination: "/services/uiux-web-design",
+        permanent: true,
+      },
+      {
+        source: "/service-detail/web-development",
+        destination: "/services/web-app-development",
+        permanent: true,
+      },
+      {
+        source: "/terms-of-service",
+        destination: "/terms-of-services",
+        permanent: true,
+      },
+    ];
   },
 };
 

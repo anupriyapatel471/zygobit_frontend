@@ -1,6 +1,7 @@
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import HomeBannerSlider from "../common/HomeBannerSlider/HomeBannerSlider";
 
 const HomeBanner = () => {
   return (
@@ -164,7 +165,8 @@ const HomeBanner = () => {
                 <span className="font-semibold sm:font-light text-base sm:text-xl">
                   We are Trusted by
                 </span>
-                <ul className="flex flex-wrap gap-5  sm:gap-10 sm:gap-y-6 mt-4 sm:mt-6 mb-6 sm:mb-9">
+                <HomeBannerSlider />
+                <ul className="hidden sm:flex flex-wrap gap-5  sm:gap-10 sm:gap-y-6 mt-4 sm:mt-6 mb-6 sm:mb-9">
                   <li>
                     <Image
                       width={200}

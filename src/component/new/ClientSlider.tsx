@@ -30,20 +30,36 @@ const testimonials = [
       "https://zygobit-images.s3.ap-south-1.amazonaws.com/Review+videos/daniel.mp4",
   },
   {
-    quote:
-      "Zygobit’s team delivered a highly effective solution for our app. They ensured a user-friendly interface and smooth functionality, helping us meet our business goals in no time.",
-    name: "Sasson Moulavi",
-    designation: "ABBSI",
-    src: "/images/abbsi_admin.png",
-    // videosrc: "",
-  },
-  {
     quote: "",
     name: "David Hakki",
     designation: "Ascent Above and ClaimEase",
     src: "/images/clientThree.png",
     videosrc:
       "https://zygobit-images.s3.ap-south-1.amazonaws.com/Review+videos/david.mp4",
+  },
+  {
+    quote: "",
+    name: "Rakesh",
+    designation: "Mitabl",
+    src: "/images/rakesh.png",
+    videosrc:
+      "https://zygobit-images.s3.ap-south-1.amazonaws.com/Review+videos/rakesh.mp4",
+  },
+  {
+    quote: "",
+    name: "Ismael",
+    designation: "Rumy",
+    src: "/images/ismael.png",
+    videosrc:
+      "https://zygobit-images.s3.ap-south-1.amazonaws.com/Review+videos/ismael.mp4",
+  },
+  {
+    quote:
+      "Zygobit’s team delivered a highly effective solution for our app. They ensured a user-friendly interface and smooth functionality, helping us meet our business goals in no time.",
+    name: "Sasson Moulavi",
+    designation: "ABBSI",
+    src: "/images/abbsi_admin.png",
+    // videosrc: "",
   },
   {
     quote:
@@ -59,13 +75,13 @@ const testimonials = [
     designation: "Inspired Meadows",
     src: "/images/inspired_admin.jpeg",
   },
-  {
-    quote:
-      "Collaborating with Zygobit was a game-changer. Their innovative development strategies helped us create a robust and feature-rich app that perfectly meets the needs of our users.",
-    name: "Alan",
-    designation: "TIA",
-    src: "/images/tia_admin.png",
-  },
+  // {
+  //   quote:
+  //     "Collaborating with Zygobit was a game-changer. Their innovative development strategies helped us create a robust and feature-rich app that perfectly meets the needs of our users.",
+  //   name: "Alan",
+  //   designation: "TIA",
+  //   src: "/images/tia_admin.png",
+  // },
 ];
 
 export function ClientSlider() {
@@ -137,9 +153,9 @@ export function ClientSlider() {
                         />
                       </div>
                       <div>
-                        <h4 className="font-medium uppercase tracking-wide text-sm text-[#E0E0E0]">
+                        <h5 className="font-medium uppercase tracking-wide text-sm text-[#E0E0E0]">
                           {data.name}
-                        </h4>
+                        </h5>
                         <p className="font-light text-sm">{data.designation}</p>
                       </div>
                     </div>

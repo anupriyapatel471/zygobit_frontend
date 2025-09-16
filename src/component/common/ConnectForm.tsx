@@ -1,8 +1,6 @@
 "use client";
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import Image from "next/image";
 import { Input } from "../../components/ui/input";
-import Rocket from "../../../public/images/contact_btn.svg";
 import { generateClient } from "aws-amplify/data";
 import { useState } from "react";
 import useAmplifyConfig from "@/hooks/useAmplify";
@@ -18,6 +16,7 @@ import PhoneInput from "react-phone-number-input";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
 import { Textarea } from "@/components/ui/textarea";
 import { usePathname } from "next/navigation";
+import { ContactAKnowledge } from "../new/ContactKnowledge";
 
 type phoneNumber = {
   number: string;
@@ -44,7 +43,6 @@ const ConnectForm = () => {
   const isContactPage = pathname === "/contact" || pathname === "/blogs";
 
   const [loading, setLoading] = useState(false);
-
   const initialState = {
     firstName: "",
     lastName: "",
@@ -61,6 +59,9 @@ const ConnectForm = () => {
   };
 
   const [formData, setFormData] = useState<FormDataType>(initialState);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -151,17 +152,8 @@ const ConnectForm = () => {
         budget: formData.budget,
         projectDetails: formData.projectDetails,
       });
-      // const savedRecord = await client.models.ContactRequest.create({
-      //   ...formData,
-      //   id: v4(),
-      //   createdAt: new Date().toISOString(),
-      //   updatedAt: new Date().toISOString(),
-      // });
-      // console.log("Saved record:", savedRecord);
-      // toast.success("Saved record");
-      toast.success(
-        "Thanks for reaching out to us. we will contact contact you shortly!"
-      );
+      setIsSubmitted(true);
+      setIsDialogOpen(true);
     } catch (error) {
       console.error("Error saving data to DynamoDB:", error);
       toast.error("Error saving data to DynamoDB");
@@ -171,189 +163,174 @@ const ConnectForm = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit} className="w-auto lg:px-0" noValidate>
-      {isContactPage ? (
-        <h1 className="font-bold text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom-second">
-          Let’s connect
-        </h1>
-      ) : (
-        <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom-second">
-          Let’s connect
-        </h2>
-      )}
+    <>
+      <form onSubmit={handleSubmit} className="w-auto lg:px-0" noValidate>
+        {isContactPage ? (
+          <h1 className="font-bold text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom-second">
+            Let’s connect
+          </h1>
+        ) : (
+          <h2 className="font-bold text-2xl sm:text-4xl lg:text-5xl text-gradiant-custom-second">
+            Let’s connect
+          </h2>
+        )}
 
-      <p className="text-sm sm:text-lg tracking-tighter pt-2 pb-5 sm:pb-7">
-        Let&apos;s align our constellations! Reach out and let the magic of
-        collaboration illuminate our skies.
-      </p>
-      <div className="w-full grid grid-cols-1 gap-3">
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div className="form-item relative">
-            <Input
-              name="firstName"
-              id="firstName"
-              placeholder=" "
-              className="bg-white/5 h-10 md:h-10  border-white/20"
-              autoComplete="off"
-              type="text"
-              value={formData.firstName}
-              onChange={handleChange}
-            />
-            <label htmlFor="firstName">First Name</label>
+        <p className="text-sm sm:text-lg tracking-tighter pt-2 pb-5 sm:pb-7">
+          Let&apos;s align our constellations! Reach out and let the magic of
+          collaboration illuminate our skies.
+        </p>
+        <div className="w-full grid grid-cols-1 gap-3">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="form-item relative">
+              <Input
+                name="firstName"
+                id="firstName"
+                placeholder=" "
+                className="bg-white/5 h-10 md:h-10  border-white/20"
+                autoComplete="off"
+                type="text"
+                value={formData.firstName}
+                onChange={handleChange}
+              />
+              <label htmlFor="firstName">First Name</label>
+            </div>
+            <div className="form-item relative">
+              <Input
+                name="lastName"
+                id="lastName"
+                className="bg-white/5 h-10 md:h-10 border-white/20"
+                placeholder=" "
+                type="text"
+                value={formData.lastName}
+                onChange={handleChange}
+              />
+              <label htmlFor="lastName">Last Name</label>
+            </div>
           </div>
-          <div className="form-item relative">
-            <Input
-              name="lastName"
-              id="lastName"
-              className="bg-white/5 h-10 md:h-10 border-white/20"
-              placeholder=" "
-              type="text"
-              value={formData.lastName}
-              onChange={handleChange}
-            />
-            <label htmlFor="lastName">Last Name</label>
-          </div>
-        </div>
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div className="relative h-10 sm:h-auto">
-            <Input
-              type="number"
-              className="absolute left-0 top-0 opacity-0 w-full h-10 md:h-11 lg:h-11"
-            />
-            <PhoneInput
-              international
-              defaultCountry="IN"
-              placeholder="Enter phone number"
-              value={
-                formData.phoneNumber?.number && formData.phoneNumber?.dialCode
-                  ? `+${formData.phoneNumber.dialCode}${formData.phoneNumber.number}`
-                  : ""
-              }
-              onChange={(value) => {
-                const phoneNumber = parsePhoneNumberFromString(value || "");
-
-                if (phoneNumber) {
-                  setFormData((prev) => ({
-                    ...prev,
-                    phoneNumber: {
-                      dialCode: phoneNumber.countryCallingCode,
-                      number: phoneNumber.nationalNumber,
-                    },
-                  }));
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="relative h-10 sm:h-auto">
+              <Input
+                type="number"
+                className="absolute left-0 top-0 opacity-0 w-full h-10 md:h-11 lg:h-11"
+              />
+              <PhoneInput
+                international
+                defaultCountry="IN"
+                placeholder="Enter phone number"
+                value={
+                  formData.phoneNumber?.number && formData.phoneNumber?.dialCode
+                    ? `+${formData.phoneNumber.dialCode}${formData.phoneNumber.number}`
+                    : ""
                 }
-              }}
-              className="h-10 md:h-11 lg:h-11 custom-phone-input absolute top-0 left-0 w-full"
-            />
+                onChange={(value) => {
+                  const phoneNumber = parsePhoneNumberFromString(value || "");
+
+                  if (phoneNumber) {
+                    setFormData((prev) => ({
+                      ...prev,
+                      phoneNumber: {
+                        dialCode: phoneNumber.countryCallingCode,
+                        number: phoneNumber.nationalNumber,
+                      },
+                    }));
+                  }
+                }}
+                className="h-10 md:h-11 lg:h-11 custom-phone-input absolute top-0 left-0 w-full"
+              />
+            </div>
+            <div className="form-item relative">
+              <Input
+                name="jobTitle"
+                id="jobTitle"
+                className="bg-white/5 h-10 md:h-10 border-white/20"
+                placeholder=" "
+                type="text"
+                value={formData.jobTitle}
+                onChange={handleChange}
+              />
+              <label htmlFor="jobTitle">Job Title</label>
+            </div>
           </div>
-          <div className="form-item relative">
-            <Input
-              name="jobTitle"
-              id="jobTitle"
-              className="bg-white/5 h-10 md:h-10 border-white/20"
-              placeholder=" "
-              type="text"
-              value={formData.jobTitle}
-              onChange={handleChange}
-            />
-            <label htmlFor="jobTitle">Job Title</label>
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="form-item relative">
+              <Input
+                name="companyName"
+                id="companyName"
+                className="bg-white/5 h-10 md:h-10 border-white/20"
+                placeholder=" "
+                type="text"
+                value={formData.companyName}
+                onChange={handleChange}
+              />
+              <label htmlFor="companyName">Company Name</label>
+            </div>
+            <div className="form-item relative">
+              <Input
+                name="companyEmail"
+                id="companyEmail"
+                placeholder=" "
+                className="bg-white/5 h-10 md:h-10 border-white/20"
+                type="email"
+                value={formData.companyEmail}
+                onChange={handleChange}
+              />
+              <label htmlFor="companyEmail">Company Email</label>
+            </div>
           </div>
-        </div>
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div className="form-item relative">
-            <Input
-              name="companyName"
-              id="companyName"
-              className="bg-white/5 h-10 md:h-10 border-white/20"
-              placeholder=" "
-              type="text"
-              value={formData.companyName}
-              onChange={handleChange}
-            />
-            <label htmlFor="companyName">Company Name</label>
+          <div className="w-full">
+            <div className="form-item relative">
+              <Input
+                className="bg-white/5 h-10 md:h-10 border-white/20"
+                name="launchDate"
+                id="launchDate"
+                placeholder=" "
+                type="text"
+                value={formData.launchDate}
+                onChange={handleChange}
+              />
+              <label htmlFor="launchDate">
+                When do you want to launch a solution?
+              </label>
+            </div>
           </div>
-          <div className="form-item relative">
-            <Input
-              name="companyEmail"
-              id="companyEmail"
-              placeholder=" "
-              className="bg-white/5 h-10 md:h-10 border-white/20"
-              type="email"
-              value={formData.companyEmail}
-              onChange={handleChange}
-            />
-            <label htmlFor="companyEmail">Company Email</label>
+          <div className="w-full">
+            <div className="form-item relative">
+              <Input
+                className="bg-white/5 h-10 md:h-10 border-white/20"
+                name="budget"
+                id="budget"
+                placeholder=" "
+                type="text"
+                value={formData.budget}
+                onChange={handleChange}
+              />
+              <label htmlFor="budget">Budget : Amount in US dollars ($)</label>
+            </div>
           </div>
-        </div>
-        <div className="w-full">
-          <div className="form-item relative">
-            <Input
-              className="bg-white/5 h-10 md:h-10 border-white/20"
-              name="launchDate"
-              id="launchDate"
-              placeholder=" "
-              type="text"
-              value={formData.launchDate}
-              onChange={handleChange}
-            />
-            <label htmlFor="launchDate">
-              When do you want to launch a solution?
-            </label>
+          <div className="w-full">
+            <div className="form-item relative">
+              <Textarea
+                name="projectDetails"
+                placeholder=" "
+                id="projectDetails"
+                className="resize-none w-full bg-white/5  text-sm sm:text-base h-20 md:h-20 lg:h-32 border border-white/20  p-3 rounded-md outline-none"
+                value={formData.projectDetails}
+                onChange={handleChange}
+              />
+              <label htmlFor="projectDetails">About Project</label>
+            </div>
           </div>
-        </div>
-        <div className="w-full">
-          <div className="form-item relative">
-            <Input
-              className="bg-white/5 h-10 md:h-10 border-white/20"
-              name="budget"
-              id="budget"
-              placeholder=" "
-              type="text"
-              value={formData.budget}
-              onChange={handleChange}
-            />
-            <label htmlFor="budget">Budget :</label>
-          </div>
-        </div>
-        <div className="w-full">
-          <div className="form-item relative">
-            <Textarea
-              name="projectDetails"
-              placeholder=" "
-              id="projectDetails"
-              className="resize-none w-full bg-white/5  text-sm sm:text-base h-20 md:h-20 lg:h-32 border border-white/20  p-3 rounded-md outline-none"
-              value={formData.projectDetails}
-              onChange={handleChange}
-            />
-            <label htmlFor="projectDetails">About Project</label>
-          </div>
-        </div>
-        <button
-          type="submit"
-          className="group bg-gradient-custom overflow-hidden font-medium transition-all duration-500 btn-primary text-white relative"
-          disabled={loading}
-        >
-          {loading ? "Submitting..." : "Let’s Build"}
-          <Image
-            className="group-hover:translate-x-5 transition-all duration-1000"
-            src={Rocket}
-            alt="Rocket Icon"
-            width={13.73}
-            height={28.59}
+          <ContactAKnowledge
+            loading={loading}
+            isSubmitted={isSubmitted}
+            setIsSubmitted={setIsSubmitted}
+            isDialogOpen={isDialogOpen}
+            setIsDialogOpen={setIsDialogOpen}
           />
-          <BottomGradient />
-        </button>
-      </div>
-    </form>
+        </div>
+      </form>
+    </>
   );
 };
 
 export default ConnectForm;
-
-const BottomGradient = () => {
-  return (
-    <>
-      <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
-      <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
-    </>
-  );
-};
