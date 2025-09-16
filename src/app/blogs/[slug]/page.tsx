@@ -92,6 +92,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
         }}
       />
       <AOSInitializer />
+
       <TracingBeams blog={blog} />
       <ContactForm />
     </>
