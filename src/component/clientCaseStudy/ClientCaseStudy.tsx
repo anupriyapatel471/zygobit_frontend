@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { ProjectData } from "@/app/type/projectType";
 import Link from "next/link";
+import { ContactnewForm } from "../new/ContactNewForm";
 
 const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
   const router = useRouter();
@@ -295,7 +296,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                   </p>
 
                   {projectData?.category === "Mobile Application" && (
-                    <div className="flex items-center gap-1 font-medium text-base mt-6 sm:mt-4">
+                    <div className="flex flex-wrap sm:flex-nowrap items-center gap-1 font-medium sm:text-base text-sm mt-6 sm:mt-4">
                       <p>Want a result like this? Explore our</p>
                       <Link
                         href="/services/mobile-app-development"
@@ -329,7 +330,141 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
           </div>
         </div>
       </section>
+      {projectData?.category === "Mobile Application" && (
+        <section className="w-full mt-12 sm:mt-14 lg:mt-20">
+          <div className="container">
+            <div
+              className="relative rounded-xl sm:rounded-2xl lg:rounded-[40px] bg-[#fff1ed] p-4 sm:p-8 lg:p-12 min-h-[400px] lg:min-h-[435px] overflow-hidden"
+              data-name="CTA Section"
+            >
+              <div className="absolute right-[-50px] top-[-50px] size-[180px] lg:size-[224px] hidden sm:block">
+                <svg
+                  className="block size-full"
+                  fill="none"
+                  preserveAspectRatio="none"
+                  viewBox="0 0 224 224"
+                >
+                  <circle cx="112" cy="112" fill="#FFE5DD" r="112" />
+                </svg>
+              </div>
+              <div className="absolute right-[40%] bottom-[-50px] size-[120px] lg:size-[176px] hidden lg:block">
+                <svg
+                  className="block size-full"
+                  fill="none"
+                  preserveAspectRatio="none"
+                  viewBox="0 0 176 176"
+                >
+                  <circle cx="88" cy="88" fill="#FFE5DD" r="88" />
+                </svg>
+              </div>
+              <div className="absolute right-[5%] top-[40%] size-[24px] lg:size-[37px] hidden lg:block">
+                <svg
+                  className="block size-full"
+                  fill="none"
+                  preserveAspectRatio="none"
+                  viewBox="0 0 37 37"
+                >
+                  <circle cx="18.5" cy="18.5" fill="#FFE5DD" r="18.5" />
+                </svg>
+              </div>
 
+              <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 relative z-10">
+                <div className="flex-1 max-w-none lg:max-w-[60%]">
+                  <div className="inline-flex bg-[#ffe5dd] items-center justify-center px-3 sm:px-[14px] py-1.5 sm:py-[6px] rounded-[40px] mb-4 sm:mb-6">
+                    <p className=" text-xs sm:text-[14px] text-orange-600 font-bold">
+                      Technical Advisory
+                    </p>
+                  </div>
+
+                  <h2 className=" font-bold text-2xl sm:text-3xl lg:text-[38px] text-black mb-2 sm:mb-4 leading-tight">
+                    Get a Flutter Feasibility Review
+                  </h2>
+
+                  <p className=" text-sm lg:text-[14px] text-black mb-3 sm:mb-6 leading-relaxed max-w-full lg:max-w-[728px]">
+                    In 30 - 45 minutes we&apos;ll assess whether Flutter fits
+                    your app&apos;s roadmap-performance, plugins, team skill,
+                    and long-term costs.
+                  </p>
+
+                  <div className=" text-sm lg:text-[14px] text-black mb-4">
+                    <ul className="list-disc space-y-2">
+                      <li className="ml-5">
+                        <span className="leading-relaxed">
+                          Risk check: performance, animations, native modules
+                        </span>
+                      </li>
+                      <li className="ml-5">
+                        <span className="leading-relaxed">
+                          Migration paths from RN/Native, with gotchas
+                        </span>
+                      </li>
+                      <li className="ml-5">
+                        <span className="leading-relaxed">
+                          Clear next steps (+sample architecture)
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-4 mb-3">
+                    <ContactnewForm formOpen="portfolioDetail" />
+                    <Link
+                      href="/services/mobile-app-development"
+                      className="border hover:bg-orange-600 group hover:text-white border-orange-600 flex items-center justify-center px-5 py-3 sm:py-4 rounded-md sm:rounded-[12px] no-underline text-center"
+                    >
+                      <span className=" sm:font-bold text-sm group-hover:text-white text-orange-600">
+                        Learn about Flutter at Zygobit
+                      </span>
+                    </Link>
+                  </div>
+
+                  <p className=" font-semibold text-xs text-[rgba(60,60,67,0.6)]">
+                    No obligation. NDA available.
+                  </p>
+                </div>
+
+                <div className="w-full hidden xl:inline-block lg:w-auto lg:min-w-[360px] lg:max-w-[400px] bg-white p-5 rounded-[16px] shadow-[0px_0px_10px_0px_rgba(123,123,123,0.25)] lg:self-center">
+                  <p className=" font-medium text-sm text-[rgba(60,60,67,0.6)] mb-2">
+                    Looking for something broader?
+                  </p>
+
+                  <div className="border border-[#e5e5ea] flex flex-col gap-1 p-3.5 rounded-[12px] mb-2 w-full">
+                    <h3 className=" font-bold text-sm text-black">
+                      Mobile App Development Services
+                    </h3>
+                    <div className="flex flex-wrap gap-1.5 items-center">
+                      <span className=" font-medium text-sm text-[rgba(60,60,67,0.6)]">
+                        iOS
+                      </span>
+                      <div className="size-1 bg-[rgba(60,60,67,0.6)] rounded-full"></div>
+                      <span className=" font-medium text-sm text-[rgba(60,60,67,0.6)]">
+                        Android
+                      </span>
+                      <div className="size-1 bg-[rgba(60,60,67,0.6)] rounded-full"></div>
+                      <span className=" font-medium text-sm text-[rgba(60,60,67,0.6)]">
+                        Flutter
+                      </span>
+                      <div className="size-1 bg-[rgba(60,60,67,0.6)] rounded-full"></div>
+                      <span className=" font-medium text-sm text-[rgba(60,60,67,0.6)]">
+                        RN
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="border border-[#e5e5ea] flex flex-col gap-1 p-3.5 rounded-[12px] w-full">
+                    <h3 className="font-bold text-sm text-black">
+                      Related Solution
+                    </h3>
+                    <span className=" font-medium text-sm text-[rgba(60,60,67,0.6)]">
+                      See how we build in this domain
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
       <section className="w-full text-center mb-12 sm:my-20 lg:my-24 overflow-hidden">
         <div className="container remove-bg">
           <div className="w-full">
@@ -433,7 +568,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                 />
               </div>
               <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-12">
-                <div className="w-full flex gap-5 justify-between items-center p-4 bg-white/10 border border-white/25 rounded-xl">
+                <div className="w-full flex gap-5 justify-between items-center p-4 bg-white/10 border border-white/25 rounded-xl relative">
                   <div className=" flex flex-col gap-6">
                     <Image
                       width={36}
@@ -446,11 +581,11 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                       Research
                     </span>
                   </div>
-                  <div className="text-4xl text-white/15 sm:text-[50px] lg:text-[65px]">
+                  <div className="text-4xl text-white/15 sm:text-[50px] lg:text-[65px] absolute sm:static top-3 right-5">
                     1
                   </div>
                 </div>
-                <div className="w-full flex gap-5 justify-between items-center p-4 bg-white/10 border border-white/25 rounded-xl">
+                <div className="w-full flex gap-5 justify-between items-center p-4 bg-white/10 border border-white/25 rounded-xl relative">
                   <div className=" flex flex-col gap-6">
                     <Image
                       width={36}
@@ -463,11 +598,11 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                       UI/UX Design
                     </span>
                   </div>
-                  <div className="text-4xl text-white/15 sm:text-[50px] lg:text-[65px]">
+                  <div className="text-4xl text-white/15 sm:text-[50px] lg:text-[65px] absolute sm:static top-3 right-5">
                     2
                   </div>
                 </div>
-                <div className="w-full flex gap-5 justify-between items-center p-4 pb-4 bg-white/10 border border-white/25 rounded-xl">
+                <div className="w-full flex gap-5 justify-between items-center p-4 pb-4 bg-white/10 border border-white/25 rounded-xl relative">
                   <div className=" flex flex-col text-left gap-6">
                     <Image
                       width={42}
@@ -480,11 +615,11 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                       Development
                     </span>
                   </div>
-                  <div className="text-4xl  text-white/15 sm:text-[50px] lg:text-[65px]">
+                  <div className="text-4xl text-white/15 sm:text-[50px] lg:text-[65px] absolute sm:static top-3 right-5">
                     3
                   </div>
                 </div>
-                <div className="w-full flex gap-5 justify-between items-center p-4 bg-white/10 border border-white/25 rounded-xl">
+                <div className="w-full flex gap-5 justify-between items-center p-4 bg-white/10 border border-white/25 rounded-xl relative">
                   <div className=" flex flex-col gap-6">
                     <Image
                       width={36}
@@ -497,11 +632,11 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                       Deployment
                     </span>
                   </div>
-                  <div className="text-4xl text-white/15 sm:text-[50px] lg:text-[65px]">
+                  <div className="text-4xl text-white/15 sm:text-[50px] lg:text-[65px] absolute sm:static top-3 right-5">
                     4
                   </div>
                 </div>
-                <div className="w-full flex gap-5 justify-between items-center p-4 bg-white/10 border border-white/25 rounded-xl">
+                <div className="w-full flex gap-5 justify-between items-center p-4 bg-white/10 border border-white/25 rounded-xl relative">
                   <div className=" flex flex-col text-left gap-6">
                     <Image
                       width={42}
@@ -514,7 +649,7 @@ const ClientCaseStudy = ({ projectData }: { projectData: ProjectData }) => {
                       Maintenance
                     </span>
                   </div>
-                  <div className="text-4xl  text-white/15 sm:text-[50px] lg:text-[65px]">
+                  <div className="text-4xl text-white/15 sm:text-[50px] lg:text-[65px] absolute sm:static top-3 right-5">
                     5
                   </div>
                 </div>
