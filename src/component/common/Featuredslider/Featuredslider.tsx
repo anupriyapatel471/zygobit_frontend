@@ -35,7 +35,15 @@ export default function FeaturedSlider() {
     });
   }, [api]);
 
-  const projects = Array.isArray(data) ? data.slice(0, 5) : [];
+  const projects = Array.isArray(data)
+    ? [...data]
+        .sort(
+          (a, b) =>
+            new Date(b.createdAt!).getTime() - new Date(a.createdAt!).getTime()
+        )
+        .slice(0, 5)
+    : [];
+
   return loading ? (
     <Loader />
   ) : (
