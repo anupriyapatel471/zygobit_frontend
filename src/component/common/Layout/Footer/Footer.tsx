@@ -89,7 +89,7 @@ const Footer = () => {
               />
             </Link>
             <p className="font-light text-sm text-[#6B6B6B] my-3 sm:my-5">
-              Your Vision, Our Innovation.
+              Transforming ideas into digital solutions.
             </p>
             <ul className="flex items-center gap-5">
               <li>
@@ -217,7 +217,7 @@ const Footer = () => {
 
         <div className="w-full pt-4 pb-8 flex flex-wrap gap-y-5 sm:flex-nowrap border-t border-[#09090B1A] justify-between items-center">
           <p className=" w-full sm:w-auto text-secondaryText text-xs">
-            © 2025 Zygobit All rights reserved.
+            © 2026 Zygobit All rights reserved.
           </p>
           <ul className="w-full sm:w-auto flex gap-5 items-center">
             <li>

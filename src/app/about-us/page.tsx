@@ -95,7 +95,7 @@ const About = () => {
         <div className="container remove-bg">
           <div className="w-full relative flex flex-wrap sm:flex-nowrap sm:gap-[105px] lg:gap-[215px] justify-center sm:justify-between items-center">
             <div className="font-bold order-2 sm:order-none text-[55px] sm:text-[70px] lg:text-[150px] text-themetext sm:absolute sm:top-5 lg:top-10 left-[42%] sm:-translate-x-1/2">
-              2025
+              2026
             </div>
             <div className="w-full order-1 sm:order-none sm:w-[433px]">
               <Image

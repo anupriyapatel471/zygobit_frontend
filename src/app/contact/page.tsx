@@ -151,8 +151,8 @@ const Contact = () => {
                 India
               </div>
               <p className="text-[#1F1F1F] text-xs sm:min-h-12 lg:min-h-fit ">
-                Plot No. C-163, Sector 82, JLPL, Industrial Area, Sahibzada Ajit
-                Singh Nagar, Punjab,140308
+                Office No. A001, Tower-A, Bestech Business Tower, sector 66,
+Mohali, Punjab, 160062
               </p>
             </div>
             <div className="w-full sm:w-1/3 group sm:text-center">
